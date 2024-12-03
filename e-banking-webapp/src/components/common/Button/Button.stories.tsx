@@ -31,7 +31,7 @@ const meta = {
     },
     size: {
       control: 'inline-radio',
-      options: ['default', 'xxs', 'xs', 'sm', 'base', 'xs', 'md', 'lg', 'xl'],
+      options: ['default', 'xxs', 'xs', 'sm', 'base', 'md', 'lg', 'xl'],
     },
     radius: {
       control: 'inline-radio',
