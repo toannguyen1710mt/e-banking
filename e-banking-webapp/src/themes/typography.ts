@@ -3,6 +3,11 @@ export const fontFamily = {
 };
 
 export const fontSize = {
+  xxs: '8px',
   '2xs': '10px',
-  huge: '32px',
+  '3xls': '32px',
+};
+
+export const borderRadius = {
+  '2lg': '10px',
 };
