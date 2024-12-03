@@ -1,7 +1,7 @@
 import { nextui } from '@nextui-org/react';
 
 // Themes
-import { colors, fontFamily } from './src/themes';
+import { colors, fontFamily, fontSize } from './src/themes';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       colors: colors,
       fontFamily: fontFamily,
+      fontSize,
     },
   },
   darkMode: 'class',
