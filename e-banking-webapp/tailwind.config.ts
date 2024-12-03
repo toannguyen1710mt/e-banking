@@ -24,24 +24,25 @@ module.exports = {
           colors: {
             background: {
               100: colors.overlay,
-              200: colors.gray.light,
-              300: colors.blue.dark,
+              200: colors.lightGray,
+              300: colors.navyBlue,
               400: colors.black,
               500: colors.white,
               600: colors.pinPin,
-              700: colors.blue.light,
+              700: colors.dimGray,
             },
             primary: {
-              100: colors.green.dark,
-              200: colors.blue.dark,
+              100: colors.pastelGreen,
+              200: colors.navyBlue,
             },
             foreground: {
               100: colors.black,
               200: colors.white,
-              300: colors.grey.dark,
+              300: colors.neutralGray,
             },
             secondary: {
-              100: colors.gray.dark,
+              100: colors.transparentBlack,
+              200: colors.green,
             },
             success: colors.forestGreen,
             warning: colors.red,
