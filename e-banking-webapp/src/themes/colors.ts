@@ -12,6 +12,7 @@ export const colors = {
   java: '#2A9D8F',
   eastBay: '#475569',
   error: '#FF0080',
+  waring: '#FF0000',
   red: '#C40404',
   pinPin: '#FFE1E1',
   forestGreen: '#32B232',
