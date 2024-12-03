@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { ROUTES } from '@app/constants';
+import { ROUTES } from '@/constants';
 
 export const sitemap = (): MetadataRoute.Sitemap => {
   const paths = Object.values(ROUTES);
