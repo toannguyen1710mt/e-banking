@@ -3,7 +3,7 @@ export const fontFamily = {
 };
 
 export const fontSize = {
-  xxs: '8px',
+  '3xs': '8px',
   '2xs': '10px',
   '3xls': '32px',
 };
