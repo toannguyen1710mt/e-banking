@@ -13,7 +13,7 @@ describe('Button Component', () => {
     const buttonElement = container.querySelector('button');
 
     expect(buttonElement).toHaveClass(
-      'border-transparent text-foreground-200 bg-background-300 w-full max-h-10 py-2.5 text-sm',
+      'border-transparent bg-primary-100 text-foreground-200 w-full max-h-10 py-2.5 text-sm',
     );
     expect(container).toMatchSnapshot();
   });
