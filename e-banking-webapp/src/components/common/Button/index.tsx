@@ -15,7 +15,7 @@ export const Button = extendVariants(ButtonNextUI, {
       primary: 'bg-background-300 text-foreground-200',
       secondary: 'bg-background-400 text-foreground-200',
       outline: 'bg-none',
-      warning: 'bg-background-800 text-foreground-200',
+      tertiary: 'bg-background-800 text-foreground-200',
       danger: 'bg-warning text-foreground-200',
     },
 

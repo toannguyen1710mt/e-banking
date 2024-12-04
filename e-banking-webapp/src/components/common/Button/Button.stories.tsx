@@ -22,7 +22,7 @@ const meta = {
       control: 'inline-radio',
       options: [
         'default',
-        'warning',
+        'tertiary',
         'danger',
         'outline',
         'primary',
@@ -53,11 +53,11 @@ export const Default: Story = {
   },
 };
 
-export const Warning: Story = {
+export const Tertiary: Story = {
   args: {
     children: 'Cancel',
     variant: 'solid',
-    color: 'warning',
+    color: 'tertiary',
     size: 'md',
     radius: 'xs',
   },
