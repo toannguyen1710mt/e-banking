@@ -11,12 +11,12 @@ export const Button = extendVariants(ButtonNextUI, {
     },
 
     color: {
-      default: 'bg-background-300 text-foreground-200',
+      default: 'bg-primary-100 text-foreground-200',
+      primary: 'bg-background-300 text-foreground-200',
+      secondary: 'bg-background-400 text-foreground-200',
+      outline: 'bg-none',
       warning: 'bg-background-800 text-foreground-200',
       danger: 'bg-warning text-foreground-200',
-      outline: 'bg-none',
-      primary: 'bg-primary-100 text-foreground-200',
-      secondary: 'bg-background-400 text-foreground-200',
     },
 
     isIconOnly: {
