@@ -18,7 +18,7 @@ const meta = {
 
     size: {
       control: 'inline-radio',
-      options: ['2xl', 'xl', 'lg', 'base', 'md', 'sm', 'xs', 'xxs'],
+      options: ['2xl', 'xl', 'lg', 'base', 'md', 'sm', 'xs', '2xs'],
     },
   },
 } satisfies Meta<typeof Text>;

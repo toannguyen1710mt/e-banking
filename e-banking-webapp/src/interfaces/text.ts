@@ -6,7 +6,7 @@ export const enum TEXT_SIZE {
   BASE = 'base',
   SM = 'sm',
   XS = 'xs',
-  XXS = 'xxs',
+  '2XS' = '2xs',
 }
 
 export const enum TEXT_VARIANT {
