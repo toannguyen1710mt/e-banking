@@ -27,6 +27,7 @@ const meta = {
         'outline',
         'primary',
         'secondary',
+        'info',
       ],
     },
     size: {

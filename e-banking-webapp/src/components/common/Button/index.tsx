@@ -17,6 +17,7 @@ export const Button = extendVariants(ButtonNextUI, {
       outline: 'bg-none',
       tertiary: 'bg-background-800 text-foreground-200',
       danger: 'bg-warning text-foreground-200',
+      info: 'text-primary-200',
     },
 
     isIconOnly: {
@@ -33,8 +34,8 @@ export const Button = extendVariants(ButtonNextUI, {
     size: {
       default: 'h-6 px-0 py-[3px] text-2xs',
       xxs: 'w-[50px] min-w-[50px] h-[19px] px-0 py-[3px] font-medium !text-xxs',
-      xs: 'w-[87px] h-5 py-1 px-2 text-2xs font-medium text-primary-200',
-      sm: 'w-[77px] h-[33px] py-2 text-sm font-semibold text-primary-200',
+      xs: 'w-[87px] h-5 py-1 px-2 text-2xs font-medium',
+      sm: 'w-[77px] h-[33px] py-2 text-sm font-semibold',
       md: 'w-[69px] h-[35px] py-2.5 text-xs font-semibold',
       base: 'w-[168px] h-10 py-3 text-xs font-semibold',
       lg: 'w-full max-h-10 py-2.5 text-sm',
