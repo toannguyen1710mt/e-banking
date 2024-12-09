@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
-import Text from '.';
+import { Text } from '.';
 
 const meta = {
   title: 'Components/Common/Text',

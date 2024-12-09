@@ -32,7 +32,7 @@ export interface TextProps {
   className?: string;
 }
 
-const Text = ({
+export const Text = ({
   children,
   size = TEXT_SIZE.BASE,
   as: Component = 'p',
@@ -49,5 +49,3 @@ const Text = ({
     </Component>
   );
 };
-
-export default Text;
