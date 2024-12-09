@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
+import { NavbarContent, Navbar as NavbarNextUI } from '@nextui-org/react';
 
 import { Inter } from 'next/font/google';
-import './globals.css';
+
+import { NavbarItem } from '@/mocks';
 
 // Providers
 import Providers from '@/providers';
+
+import { Navbar } from '@/components';
+
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,6 +39,11 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
+          <NavbarNextUI>
+            <NavbarContent className='gap-[59px] font-normal text-transparentBlack'>
+              <Navbar navbarItem={NavbarItem} />
+            </NavbarContent>
+          </NavbarNextUI>
           <main className='container mx-auto'>
             <div>{children}</div>
           </main>
