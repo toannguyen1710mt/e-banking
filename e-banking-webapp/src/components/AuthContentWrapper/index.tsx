@@ -12,7 +12,7 @@ import { IMAGES, ROUTES } from '@/constants';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
-import Text from '../common/Text';
+import { Text } from '../common';
 
 interface AuthContentWrapperProps {
   textHeading: string;
@@ -21,7 +21,7 @@ interface AuthContentWrapperProps {
   formContent: ReactNode;
 }
 
-const AuthContentWrapper = ({
+export const AuthContentWrapper = ({
   textHeading,
   iconHeading,
   formContent,
@@ -64,5 +64,3 @@ const AuthContentWrapper = ({
     </div>
   );
 };
-
-export default AuthContentWrapper;

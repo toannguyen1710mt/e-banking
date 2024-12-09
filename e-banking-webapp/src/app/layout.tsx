@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Providers>
-          <main className='container mx-auto'>
+          <main className='mx-auto'>
             <div>{children}</div>
           </main>
         </Providers>
