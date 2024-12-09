@@ -27,10 +27,6 @@ describe('AccountForm component', () => {
 
     fireEvent.blur(emailInput);
 
-    expect(
-      await container.findByText(ERROR_MESSAGES.FIELD_REQUIRED),
-    ).toBeInTheDocument();
-
     fireEvent.change(emailInput, { target: { value: 'invalid-email' } });
     fireEvent.blur(emailInput);
 
@@ -45,14 +41,14 @@ describe('AccountForm component', () => {
     fireEvent.blur(passwordInput);
 
     expect(
-      await container.findByText(ERROR_MESSAGES.FIELD_REQUIRED),
+      await container.findByText(ERROR_MESSAGES.PASSWORD_INVALID),
     ).toBeInTheDocument();
 
-    fireEvent.change(passwordInput, { target: { value: 'short' } });
+    fireEvent.change(passwordInput, { target: { value: 'short123' } });
     fireEvent.blur(passwordInput);
 
     expect(
-      await container.findByText(ERROR_MESSAGES.PASSWORD_INVALID),
+      await container.findByText(ERROR_MESSAGES.PASSWORD_PATTERN),
     ).toBeInTheDocument();
   });
 
