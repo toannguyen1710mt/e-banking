@@ -39,6 +39,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    navbarItem: NavbarItem, // Pass the `navbarItem` prop as mock data to your component
+    navbarItem: NavbarItem,
   },
 };
