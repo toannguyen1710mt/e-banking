@@ -2,9 +2,10 @@
 
 import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
-import { EMAIL_RULES, PASSWORD_RULES, ERROR_MESSAGES } from '@/constants';
+import { signUpSchema } from '@/constants';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT, TSignUpFormData } from '@/interfaces';
@@ -23,9 +24,9 @@ export const AccountForm = () => {
   const {
     control,
     handleSubmit,
-    watch,
     formState: { isDirty },
   } = useForm<TSignUpFormData>({
+    resolver: zodResolver(signUpSchema),
     defaultValues: {
       email: '',
       password: '',
@@ -34,9 +35,6 @@ export const AccountForm = () => {
     },
     mode: 'onBlur',
   });
-
-  // Watch password to compare with confirmPassword
-  const password = watch('password');
 
   const {
     isOpen: passwordIsOpen,
@@ -84,7 +82,6 @@ export const AccountForm = () => {
         <Controller
           control={control}
           name='email'
-          rules={EMAIL_RULES}
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='email'
@@ -100,7 +97,6 @@ export const AccountForm = () => {
         <Controller
           control={control}
           name='password'
-          rules={PASSWORD_RULES}
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -128,10 +124,6 @@ export const AccountForm = () => {
         <Controller
           control={control}
           name='confirmPassword'
-          rules={{
-            validate: (value) =>
-              value === password || ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
-          }}
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'

@@ -13,6 +13,7 @@
     "prepare": "cd .. && husky e-banking-webapp/.husky"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@nextui-org/react": "^2.4.8",
     "apexcharts": "^4.1.0",
     "autoprefixer": "^10.4.20",

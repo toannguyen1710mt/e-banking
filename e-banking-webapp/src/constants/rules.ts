@@ -1,22 +1,30 @@
-import { ERROR_MESSAGES } from './messages';
+import { z } from 'zod';
+
+// Constants
 import { REGEX } from './regex';
+import { ERROR_MESSAGES } from './messages';
 
-export const EMAIL_RULES = {
-  required: ERROR_MESSAGES.FIELD_REQUIRED,
-  pattern: {
-    value: REGEX.EMAIL,
-    message: ERROR_MESSAGES.EMAIL_INVALID,
-  },
-};
-
-export const PASSWORD_RULES = {
-  required: ERROR_MESSAGES.FIELD_REQUIRED,
-  minLength: {
-    value: 8,
-    message: ERROR_MESSAGES.PASSWORD_INVALID,
-  },
-  pattern: {
-    value: /^(?=.*[A-Z])(?=.*[!@#$%^&*])/,
-    message: ERROR_MESSAGES.PASSWORD_PATTERN,
-  },
-};
+// Define Zod Schema
+export const signUpSchema = z
+  .object({
+    username: z
+      .string()
+      .trim()
+      .min(3, ERROR_MESSAGES.USERNAME_INVALID)
+      .transform((value) => value.trim()), // Trim spaces before validation
+    email: z
+      .string()
+      .trim()
+      .email(ERROR_MESSAGES.EMAIL_INVALID)
+      .transform((value) => value.trim()), // Trim spaces before validation
+    password: z
+      .string()
+      .trim()
+      .min(8, ERROR_MESSAGES.PASSWORD_INVALID)
+      .regex(REGEX.PASSWORD, ERROR_MESSAGES.PASSWORD_PATTERN),
+    confirmPassword: z.string().trim(), // Trim spaces before validation
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
+    path: ['confirmPassword'],
+  });

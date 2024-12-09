@@ -7,7 +7,7 @@ export const ERROR_MESSAGES = {
   PASSWORD_PATTERN:
     'Password must contain at least one uppercase letter and one special character',
   LOGIN_FAILED: 'Incorrect username or password. Please try again.',
-  USERNAME_INVALID: 'Username must not contain any whitespace',
+  USERNAME_INVALID: 'Username must be at least 3 characters long',
   FIELD_NOT_SPACE: 'This field cannot be empty or whitespace',
   PASSWORD_DOES_NOT_MATCH: 'Password does not match',
   SIGN_UP_FAILED: 'Sign up failed. Please try again.',
