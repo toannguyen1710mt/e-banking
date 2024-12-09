@@ -49,7 +49,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   </svg>
                   <input
                     aria-label="username"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                     data-has-start-content="true"
                     data-slot="input"
                     id="react-aria-:r2:"
@@ -105,7 +105,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   </svg>
                   <input
                     aria-label="email"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                     data-has-start-content="true"
                     data-slot="input"
                     id="react-aria-:r7:"
@@ -153,7 +153,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   </svg>
                   <input
                     aria-label="password"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                     data-has-end-content="true"
                     data-has-start-content="true"
                     data-slot="input"
@@ -220,7 +220,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   </svg>
                   <input
                     aria-label="password"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                     data-has-end-content="true"
                     data-has-start-content="true"
                     data-slot="input"
@@ -309,7 +309,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                 </svg>
                 <input
                   aria-label="username"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                   data-has-start-content="true"
                   data-slot="input"
                   id="react-aria-:r2:"
@@ -365,7 +365,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                 </svg>
                 <input
                   aria-label="email"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                   data-has-start-content="true"
                   data-slot="input"
                   id="react-aria-:r7:"
@@ -413,7 +413,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                 </svg>
                 <input
                   aria-label="password"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                   data-has-end-content="true"
                   data-has-start-content="true"
                   data-slot="input"
@@ -480,7 +480,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                 </svg>
                 <input
                   aria-label="password"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-6 px-0 py-[3px] mx-2"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                   data-has-end-content="true"
                   data-has-start-content="true"
                   data-slot="input"
