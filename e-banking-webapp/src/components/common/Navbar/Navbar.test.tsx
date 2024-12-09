@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import { NavbarContent, Navbar as NavbarNextUI } from '@nextui-org/react';
 import '@testing-library/jest-dom';
 import { NavbarItem } from '@/mocks';
-import Navbar from '.';
+import { Navbar } from '.';
 
 describe('Navbar component', () => {
   test('renders with default type', () => {

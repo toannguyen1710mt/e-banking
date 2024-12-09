@@ -1,7 +1,7 @@
 import { NavbarContent, Navbar as NavbarNextUI } from '@nextui-org/react';
 import { Meta, StoryObj } from '@storybook/react';
 import { NavbarItem } from '@/mocks';
-import Navbar from '.';
+import { Navbar } from '.';
 
 const meta: Meta<typeof Navbar> = {
   title: 'Components/Common/Navbar',
