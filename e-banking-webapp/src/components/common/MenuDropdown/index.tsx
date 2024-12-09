@@ -15,7 +15,7 @@ import {
 import { cn } from '@nextui-org/theme';
 
 // Components
-import Text from '../Text';
+import { Text } from '@/components';
 
 export interface Option {
   key: string;
