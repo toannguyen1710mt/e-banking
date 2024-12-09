@@ -1,3 +1,5 @@
 export * from './Button';
+export * from './Text';
+export * from './Input';
 export * from './RadioButton';
-export { default as Navbar } from './Navbar';
+export * from './Navbar';

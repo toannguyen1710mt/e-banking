@@ -1,4 +1,4 @@
-import AuthContentWrapper from '@/components/AuthContentWrapper';
+import { AuthContentWrapper } from '@/components';
 
 const LoginPage = () => (
   <AuthContentWrapper

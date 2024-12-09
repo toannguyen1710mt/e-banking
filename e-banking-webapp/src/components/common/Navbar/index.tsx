@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 interface INavbar {
   navbarItem: { text: string; url: string }[];
 }
-const Navbar = ({ navbarItem }: INavbar) => {
+export const Navbar = ({ navbarItem }: INavbar) => {
   const pathname = usePathname();
 
   return (
@@ -30,4 +30,3 @@ const Navbar = ({ navbarItem }: INavbar) => {
     </>
   );
 };
-export default Navbar;

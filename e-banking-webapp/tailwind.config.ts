@@ -16,6 +16,12 @@ module.exports = {
       fontFamily: fontFamily,
       fontSize,
       borderRadius,
+      translate: {
+        '0': '0%',
+        '100': '-100%',
+        '200': '-200%',
+        '300': '-300%',
+      },
     },
   },
   darkMode: 'class',
@@ -46,6 +52,7 @@ module.exports = {
             secondary: {
               100: colors.transparentBlack,
               200: colors.green,
+              300: colors.java,
             },
             success: colors.forestGreen,
             warning: colors.red,

@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 
 // Components
-import AuthContentWrapper from '..';
+import { AuthContentWrapper } from '..';
 
 describe('AuthContentWrapper component', () => {
   it('Should render snapshot correctly.', () => {

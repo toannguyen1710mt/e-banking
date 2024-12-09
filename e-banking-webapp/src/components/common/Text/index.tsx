@@ -19,6 +19,10 @@ const variants: { [key in TEXT_VARIANT]: string } = {
   [TEXT_VARIANT.PRIMARY]: 'text-primary-200',
   [TEXT_VARIANT.SECONDARY]: 'text-secondary-100',
   [TEXT_VARIANT.TERTIARY]: 'text-foreground-200',
+  [TEXT_VARIANT.INFO]: 'text-foreground-300',
+  [TEXT_VARIANT.DANGER]: 'text-danger-100',
+  [TEXT_VARIANT.SUCCESS]: 'text-success',
+  [TEXT_VARIANT.WARNING]: 'text-warning',
 };
 
 export interface TextProps {
@@ -28,7 +32,7 @@ export interface TextProps {
   className?: string;
 }
 
-const Text = ({
+export const Text = ({
   children,
   size = TEXT_SIZE.BASE,
   as: Component = 'p',
@@ -45,5 +49,3 @@ const Text = ({
     </Component>
   );
 };
-
-export default Text;

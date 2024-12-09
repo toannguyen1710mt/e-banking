@@ -44,7 +44,7 @@ export default function RootLayout({
               <Navbar navbarItem={NavbarItem} />
             </NavbarContent>
           </NavbarNextUI>
-          <main className='container mx-auto'>
+          <main className='mx-auto'>
             <div>{children}</div>
           </main>
         </Providers>

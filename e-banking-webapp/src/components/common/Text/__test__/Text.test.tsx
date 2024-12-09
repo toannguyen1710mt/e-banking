@@ -3,8 +3,8 @@ import { render } from '@testing-library/react';
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
-// Component
-import Text from '..';
+// Components
+import { Text } from '..';
 
 describe('Text component', () => {
   it('renders with default size and variant', () => {
