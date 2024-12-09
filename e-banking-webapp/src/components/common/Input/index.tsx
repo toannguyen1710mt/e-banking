@@ -36,11 +36,17 @@ export const Input = extendVariants(InputNextUI, {
         input: 'text-sm',
       },
     },
+    size: {
+      xs: {
+        input: 'w-full h-10 py-2.5 mx-2',
+      },
+    },
   },
   defaultVariants: {
     color: 'default',
     border: 'default',
     textSize: 'base',
     radius: 'xs',
+    size: 'xs',
   },
 });

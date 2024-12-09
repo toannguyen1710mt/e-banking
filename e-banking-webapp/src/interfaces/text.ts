@@ -14,4 +14,8 @@ export const enum TEXT_VARIANT {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
   TERTIARY = 'tertiary',
+  INFO = 'info',
+  DANGER = 'danger',
+  SUCCESS = 'success',
+  WARNING = 'warning',
 }
