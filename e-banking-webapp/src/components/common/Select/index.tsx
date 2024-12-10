@@ -39,10 +39,8 @@ export const Select = ({
           classNames?.label,
         ),
         value: cn(
-          `text-xs group-data-[invalid=true]:!text-danger-100`,
-          value
-            ? 'text-primary-300 font-medium'
-            : 'text-primary-200 font-medium',
+          `text-xs group-data-[invalid=true]:!text-danger-100 font-medium`,
+          value ? 'text-primary-300 ' : 'text-primary-200',
           classNames?.value,
         ),
         trigger: cn(

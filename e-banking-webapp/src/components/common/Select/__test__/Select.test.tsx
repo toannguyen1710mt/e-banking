@@ -1,34 +1,27 @@
 // Libs
 import { render, screen } from '@testing-library/react';
 
+// Mocks
+import { MOCK_OPTIONS } from '@/mocks';
+
 // Components
 import { Select } from '@/components';
 
-const countries = [
-  {
-    key: 'Kenya',
-    label: 'Kenya',
-  },
-  {
-    key: 'USA',
-    label: 'USA',
-  },
-];
 describe('Select component', () => {
   it('should match snapshot for Select component', () => {
-    const { container } = render(<Select options={countries} />);
+    const { container } = render(<Select options={MOCK_OPTIONS} />);
 
     expect(container).toMatchSnapshot();
   });
 
   it('should display placeholder when no value is selected', () => {
-    render(<Select options={countries} placeholder='Select a country' />);
+    render(<Select options={MOCK_OPTIONS} placeholder='Select a country' />);
 
     expect(screen.getByText('Select a country')).toBeInTheDocument();
   });
 
   it('should display the selected value', () => {
-    render(<Select options={countries} value='USA' />);
+    render(<Select options={MOCK_OPTIONS} value='USA' />);
 
     expect(screen.getByText('USA')).toBeInTheDocument();
   });
@@ -36,7 +29,7 @@ describe('Select component', () => {
   it('should apply correct custom classNames', () => {
     render(
       <Select
-        options={countries}
+        options={MOCK_OPTIONS}
         classNames={{ trigger: 'custom-trigger-class' }}
       />,
     );
