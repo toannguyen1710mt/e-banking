@@ -15,30 +15,32 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { Text } from '../common';
 
 interface AuthContentWrapperProps {
-  textHeading: string;
   textFooter: string;
-  iconHeading?: ReactNode;
+  textHeading: ReactNode;
   formContent: ReactNode;
 }
 
 export const AuthContentWrapper = ({
   textHeading,
-  iconHeading,
   formContent,
   textFooter,
 }: AuthContentWrapperProps) => {
   const pathname = usePathname();
 
+  const isOnSignIn = pathname === ROUTES.SIGN_IN;
+
   const linkDetails = {
-    text: pathname === ROUTES.LOGIN ? 'Register' : 'Login',
-    href: pathname === ROUTES.LOGIN ? ROUTES.REGISTER : ROUTES.LOGIN,
+    text: isOnSignIn ? 'Register' : 'Login',
+    href: isOnSignIn ? ROUTES.SIGN_UP : ROUTES.SIGN_IN,
   };
+
+  const classLogo = isOnSignIn ? 'mt-0 md:mt-[108px]' : '';
 
   return (
     <div className='flex flex-1 flex-col'>
       {/* Logo */}
       <Image
-        className='pb-9'
+        className={`pb-9 ${classLogo}`}
         src={IMAGES.LOGO}
         width={104}
         height={36}
@@ -49,7 +51,6 @@ export const AuthContentWrapper = ({
         <Text as='h1' size={TEXT_SIZE['4XL']} variant={TEXT_VARIANT.DEFAULT}>
           {textHeading}
         </Text>
-        {iconHeading && iconHeading}
       </div>
 
       {/* Form */}

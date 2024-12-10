@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AccountForm component renders match snapshot 1`] = `
+exports[`LoginForm component Should render snapshot correctly 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -9,12 +9,12 @@ exports[`AccountForm component renders match snapshot 1`] = `
         class="mr-0 md:mr-[83px]"
       >
         <div
-          class="mb-10 flex w-full flex-col gap-4 bg-white"
+          class="mb-8 flex w-full flex-col gap-6 bg-white md:gap-4"
         >
           <p
             class="text-foreground-300 text-sm font-normal"
           >
-            Fill the form below to create an account
+            Sign in to your account to continue
           </p>
           <div
             class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
@@ -54,65 +54,9 @@ exports[`AccountForm component renders match snapshot 1`] = `
                     class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                     data-has-start-content="true"
                     data-slot="input"
-                    id="react-aria-:r2:"
+                    id="react-aria-:r1:"
                     name="username"
                     placeholder="Username"
-                    type="text"
-                    value=""
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
-            data-filled="true"
-            data-filled-within="true"
-            data-slot="base"
-          >
-            <div
-              class="h-full flex flex-col"
-              data-slot="main-wrapper"
-            >
-              <div
-                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit rounded-md"
-                data-slot="input-wrapper"
-                style="cursor: text;"
-              >
-                <div
-                  class="inline-flex w-full items-center h-full box-border"
-                  data-slot="inner-wrapper"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.66683 2.66675H13.3335C14.0668 2.66675 14.6668 3.26675 14.6668 4.00008V12.0001C14.6668 12.7334 14.0668 13.3334 13.3335 13.3334H2.66683C1.9335 13.3334 1.3335 12.7334 1.3335 12.0001V4.00008C1.3335 3.26675 1.9335 2.66675 2.66683 2.66675Z"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.33333"
-                    />
-                    <path
-                      d="M14.6668 4L8.00016 8.66667L1.3335 4"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.33333"
-                    />
-                  </svg>
-                  <input
-                    aria-label="email"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
-                    data-has-start-content="true"
-                    data-slot="input"
-                    id="react-aria-:r7:"
-                    name="email"
-                    placeholder="Email"
                     type="text"
                     value=""
                   />
@@ -159,7 +103,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                     data-has-end-content="true"
                     data-has-start-content="true"
                     data-slot="input"
-                    id="react-aria-:rc:"
+                    id="react-aria-:r6:"
                     name="password"
                     placeholder="Password"
                     type="password"
@@ -187,73 +131,13 @@ exports[`AccountForm component renders match snapshot 1`] = `
               </div>
             </div>
           </div>
-          <div
-            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
-            data-filled="true"
-            data-filled-within="true"
-            data-slot="base"
+          <a
+            aria-disabled="true"
+            class="text-right text-sm"
+            href="#"
           >
-            <div
-              class="h-full flex flex-col"
-              data-slot="main-wrapper"
-            >
-              <div
-                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit rounded-md"
-                data-slot="input-wrapper"
-                style="cursor: text;"
-              >
-                <div
-                  class="inline-flex w-full items-center h-full box-border"
-                  data-slot="inner-wrapper"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M10.9998 5.99992V6.33325H11.3332C11.7752 6.33325 12.1991 6.50885 12.5117 6.82141C12.8242 7.13397 12.9998 7.55789 12.9998 7.99992V12.6666C12.9998 13.1086 12.8242 13.5325 12.5117 13.8451C12.1991 14.1577 11.7752 14.3333 11.3332 14.3333H4.6665C4.22448 14.3333 3.80055 14.1577 3.48799 13.8451C3.17543 13.5325 2.99984 13.1086 2.99984 12.6666V7.99992C2.99984 7.55789 3.17543 7.13397 3.48799 6.82141C3.80055 6.50885 4.22448 6.33325 4.6665 6.33325H4.99984V5.99992V4.66659C4.99984 3.87094 5.31591 3.10787 5.87852 2.54526C6.44113 1.98266 7.20419 1.66659 7.99984 1.66659C8.79549 1.66659 9.55855 1.98266 10.1212 2.54526C10.6838 3.10787 10.9998 3.87094 10.9998 4.66659V5.99992ZM9.99984 6.33325H10.3332V5.99992V4.66659C10.3332 4.04775 10.0873 3.45425 9.64975 3.01667C9.21217 2.57908 8.61868 2.33325 7.99984 2.33325C7.381 2.33325 6.78751 2.57908 6.34992 3.01667C5.91234 3.45425 5.6665 4.04775 5.6665 4.66659V5.99992V6.33325H5.99984H9.99984ZM3.9594 13.3737L4.1951 13.138L3.9594 13.3737C4.14693 13.5612 4.40129 13.6666 4.6665 13.6666H11.3332C11.5984 13.6666 11.8527 13.5612 12.0403 13.3737C12.2278 13.1862 12.3332 12.9318 12.3332 12.6666V7.99992C12.3332 7.7347 12.2278 7.48035 12.0403 7.29281C11.8527 7.10528 11.5984 6.99992 11.3332 6.99992H4.6665C4.40129 6.99992 4.14693 7.10528 3.9594 7.29281C3.77186 7.48035 3.6665 7.7347 3.6665 7.99992V12.6666C3.6665 12.9318 3.77186 13.1862 3.9594 13.3737Z"
-                      fill="black"
-                      stroke="currentColor"
-                      stroke-width="0.666667"
-                    />
-                  </svg>
-                  <input
-                    aria-label="password"
-                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
-                    data-has-end-content="true"
-                    data-has-start-content="true"
-                    data-slot="input"
-                    id="react-aria-:rh:"
-                    name="confirmPassword"
-                    placeholder="Confirm Password"
-                    type="password"
-                    value=""
-                  />
-                  <button
-                    aria-label="show password button"
-                    class="text-primary-200"
-                    type="button"
-                  >
-                    <svg
-                      fill="none"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      width="18"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.4402 8.7C14.9252 5.1825 12.0752 3 9.00017 3C5.92517 3 3.07517 5.1825 1.56017 8.7C1.51887 8.79462 1.49756 8.89676 1.49756 9C1.49756 9.10324 1.51887 9.20538 1.56017 9.3C3.07517 12.8175 5.92517 15 9.00017 15C12.0752 15 14.9252 12.8175 16.4402 9.3C16.4815 9.20538 16.5028 9.10324 16.5028 9C16.5028 8.89676 16.4815 8.79462 16.4402 8.7ZM9.00017 13.5C6.62267 13.5 4.37267 11.7825 3.07517 9C4.37267 6.2175 6.62267 4.5 9.00017 4.5C11.3777 4.5 13.6277 6.2175 14.9252 9C13.6277 11.7825 11.3777 13.5 9.00017 13.5ZM9.00017 6C8.40683 6 7.82681 6.17595 7.33346 6.50559C6.84011 6.83524 6.4556 7.30377 6.22853 7.85195C6.00147 8.40013 5.94206 9.00333 6.05782 9.58527C6.17357 10.1672 6.45929 10.7018 6.87885 11.1213C7.29841 11.5409 7.83296 11.8266 8.4149 11.9424C8.99684 12.0581 9.60004 11.9987 10.1482 11.7716C10.6964 11.5446 11.1649 11.1601 11.4946 10.6667C11.8242 10.1734 12.0002 9.59334 12.0002 9C12.0002 8.20435 11.6841 7.44129 11.1215 6.87868C10.5589 6.31607 9.79582 6 9.00017 6ZM9.00017 10.5C8.7035 10.5 8.41349 10.412 8.16682 10.2472C7.92014 10.0824 7.72788 9.84811 7.61435 9.57403C7.50082 9.29994 7.47112 8.99834 7.52899 8.70736C7.58687 8.41639 7.72973 8.14912 7.93951 7.93934C8.14929 7.72956 8.41657 7.5867 8.70754 7.52882C8.99851 7.47094 9.30011 7.50065 9.5742 7.61418C9.84829 7.72771 10.0826 7.91997 10.2474 8.16665C10.4122 8.41332 10.5002 8.70333 10.5002 9C10.5002 9.39782 10.3421 9.77936 10.0608 10.0607C9.77953 10.342 9.398 10.5 9.00017 10.5Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+            Forgot Password?
+          </a>
         </div>
         <button
           class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm"
@@ -261,7 +145,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
           disabled=""
           type="submit"
         >
-          Register
+          Sign In
         </button>
       </form>
     </div>
@@ -271,12 +155,12 @@ exports[`AccountForm component renders match snapshot 1`] = `
       class="mr-0 md:mr-[83px]"
     >
       <div
-        class="mb-10 flex w-full flex-col gap-4 bg-white"
+        class="mb-8 flex w-full flex-col gap-6 bg-white md:gap-4"
       >
         <p
           class="text-foreground-300 text-sm font-normal"
         >
-          Fill the form below to create an account
+          Sign in to your account to continue
         </p>
         <div
           class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
@@ -316,65 +200,9 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
                   data-has-start-content="true"
                   data-slot="input"
-                  id="react-aria-:r2:"
+                  id="react-aria-:r1:"
                   name="username"
                   placeholder="Username"
-                  type="text"
-                  value=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
-          data-filled="true"
-          data-filled-within="true"
-          data-slot="base"
-        >
-          <div
-            class="h-full flex flex-col"
-            data-slot="main-wrapper"
-          >
-            <div
-              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit rounded-md"
-              data-slot="input-wrapper"
-              style="cursor: text;"
-            >
-              <div
-                class="inline-flex w-full items-center h-full box-border"
-                data-slot="inner-wrapper"
-              >
-                <svg
-                  fill="none"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  width="16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M2.66683 2.66675H13.3335C14.0668 2.66675 14.6668 3.26675 14.6668 4.00008V12.0001C14.6668 12.7334 14.0668 13.3334 13.3335 13.3334H2.66683C1.9335 13.3334 1.3335 12.7334 1.3335 12.0001V4.00008C1.3335 3.26675 1.9335 2.66675 2.66683 2.66675Z"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.33333"
-                  />
-                  <path
-                    d="M14.6668 4L8.00016 8.66667L1.3335 4"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.33333"
-                  />
-                </svg>
-                <input
-                  aria-label="email"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
-                  data-has-start-content="true"
-                  data-slot="input"
-                  id="react-aria-:r7:"
-                  name="email"
-                  placeholder="Email"
                   type="text"
                   value=""
                 />
@@ -421,7 +249,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
                   data-has-end-content="true"
                   data-has-start-content="true"
                   data-slot="input"
-                  id="react-aria-:rc:"
+                  id="react-aria-:r6:"
                   name="password"
                   placeholder="Password"
                   type="password"
@@ -449,73 +277,13 @@ exports[`AccountForm component renders match snapshot 1`] = `
             </div>
           </div>
         </div>
-        <div
-          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
-          data-filled="true"
-          data-filled-within="true"
-          data-slot="base"
+        <a
+          aria-disabled="true"
+          class="text-right text-sm"
+          href="#"
         >
-          <div
-            class="h-full flex flex-col"
-            data-slot="main-wrapper"
-          >
-            <div
-              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit rounded-md"
-              data-slot="input-wrapper"
-              style="cursor: text;"
-            >
-              <div
-                class="inline-flex w-full items-center h-full box-border"
-                data-slot="inner-wrapper"
-              >
-                <svg
-                  fill="none"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  width="16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.9998 5.99992V6.33325H11.3332C11.7752 6.33325 12.1991 6.50885 12.5117 6.82141C12.8242 7.13397 12.9998 7.55789 12.9998 7.99992V12.6666C12.9998 13.1086 12.8242 13.5325 12.5117 13.8451C12.1991 14.1577 11.7752 14.3333 11.3332 14.3333H4.6665C4.22448 14.3333 3.80055 14.1577 3.48799 13.8451C3.17543 13.5325 2.99984 13.1086 2.99984 12.6666V7.99992C2.99984 7.55789 3.17543 7.13397 3.48799 6.82141C3.80055 6.50885 4.22448 6.33325 4.6665 6.33325H4.99984V5.99992V4.66659C4.99984 3.87094 5.31591 3.10787 5.87852 2.54526C6.44113 1.98266 7.20419 1.66659 7.99984 1.66659C8.79549 1.66659 9.55855 1.98266 10.1212 2.54526C10.6838 3.10787 10.9998 3.87094 10.9998 4.66659V5.99992ZM9.99984 6.33325H10.3332V5.99992V4.66659C10.3332 4.04775 10.0873 3.45425 9.64975 3.01667C9.21217 2.57908 8.61868 2.33325 7.99984 2.33325C7.381 2.33325 6.78751 2.57908 6.34992 3.01667C5.91234 3.45425 5.6665 4.04775 5.6665 4.66659V5.99992V6.33325H5.99984H9.99984ZM3.9594 13.3737L4.1951 13.138L3.9594 13.3737C4.14693 13.5612 4.40129 13.6666 4.6665 13.6666H11.3332C11.5984 13.6666 11.8527 13.5612 12.0403 13.3737C12.2278 13.1862 12.3332 12.9318 12.3332 12.6666V7.99992C12.3332 7.7347 12.2278 7.48035 12.0403 7.29281C11.8527 7.10528 11.5984 6.99992 11.3332 6.99992H4.6665C4.40129 6.99992 4.14693 7.10528 3.9594 7.29281C3.77186 7.48035 3.6665 7.7347 3.6665 7.99992V12.6666C3.6665 12.9318 3.77186 13.1862 3.9594 13.3737Z"
-                    fill="black"
-                    stroke="currentColor"
-                    stroke-width="0.666667"
-                  />
-                </svg>
-                <input
-                  aria-label="password"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
-                  data-has-end-content="true"
-                  data-has-start-content="true"
-                  data-slot="input"
-                  id="react-aria-:rh:"
-                  name="confirmPassword"
-                  placeholder="Confirm Password"
-                  type="password"
-                  value=""
-                />
-                <button
-                  aria-label="show password button"
-                  class="text-primary-200"
-                  type="button"
-                >
-                  <svg
-                    fill="none"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    width="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M16.4402 8.7C14.9252 5.1825 12.0752 3 9.00017 3C5.92517 3 3.07517 5.1825 1.56017 8.7C1.51887 8.79462 1.49756 8.89676 1.49756 9C1.49756 9.10324 1.51887 9.20538 1.56017 9.3C3.07517 12.8175 5.92517 15 9.00017 15C12.0752 15 14.9252 12.8175 16.4402 9.3C16.4815 9.20538 16.5028 9.10324 16.5028 9C16.5028 8.89676 16.4815 8.79462 16.4402 8.7ZM9.00017 13.5C6.62267 13.5 4.37267 11.7825 3.07517 9C4.37267 6.2175 6.62267 4.5 9.00017 4.5C11.3777 4.5 13.6277 6.2175 14.9252 9C13.6277 11.7825 11.3777 13.5 9.00017 13.5ZM9.00017 6C8.40683 6 7.82681 6.17595 7.33346 6.50559C6.84011 6.83524 6.4556 7.30377 6.22853 7.85195C6.00147 8.40013 5.94206 9.00333 6.05782 9.58527C6.17357 10.1672 6.45929 10.7018 6.87885 11.1213C7.29841 11.5409 7.83296 11.8266 8.4149 11.9424C8.99684 12.0581 9.60004 11.9987 10.1482 11.7716C10.6964 11.5446 11.1649 11.1601 11.4946 10.6667C11.8242 10.1734 12.0002 9.59334 12.0002 9C12.0002 8.20435 11.6841 7.44129 11.1215 6.87868C10.5589 6.31607 9.79582 6 9.00017 6ZM9.00017 10.5C8.7035 10.5 8.41349 10.412 8.16682 10.2472C7.92014 10.0824 7.72788 9.84811 7.61435 9.57403C7.50082 9.29994 7.47112 8.99834 7.52899 8.70736C7.58687 8.41639 7.72973 8.14912 7.93951 7.93934C8.14929 7.72956 8.41657 7.5867 8.70754 7.52882C8.99851 7.47094 9.30011 7.50065 9.5742 7.61418C9.84829 7.72771 10.0826 7.91997 10.2474 8.16665C10.4122 8.41332 10.5002 8.70333 10.5002 9C10.5002 9.39782 10.3421 9.77936 10.0608 10.0607C9.77953 10.342 9.398 10.5 9.00017 10.5Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+          Forgot Password?
+        </a>
       </div>
       <button
         class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm"
@@ -523,7 +291,7 @@ exports[`AccountForm component renders match snapshot 1`] = `
         disabled=""
         type="submit"
       >
-        Register
+        Sign In
       </button>
     </form>
   </div>,

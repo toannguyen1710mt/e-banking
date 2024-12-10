@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { cn } from '@nextui-org/react';
 
 // Constants
 import { SLIDESHOW_DATA } from '@/constants';
@@ -25,13 +26,18 @@ export const Slideshow = ({ onGetStarted }: SlideshowProps) => {
     );
   };
 
-  const translateX = `translate-x-${currentIndex * 100}`;
-
   return (
     <div className='relative h-full w-full overflow-hidden'>
       {/* Slides */}
       <div
-        className={`${translateX} relative flex h-full transition-transform duration-500`}
+        className={cn(
+          'relative flex h-full transition-transform duration-500',
+          {
+            'translate-x-0': currentIndex === 0,
+            'translate-x-100': currentIndex === 1,
+            'translate-x-200': currentIndex === 2,
+          },
+        )}
       >
         {SLIDESHOW_DATA.map((item) => {
           const { id, image, title, description } = item;

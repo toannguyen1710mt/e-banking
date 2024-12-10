@@ -7,3 +7,8 @@ export interface IUserCredentials {
 }
 
 export type TSignUpFormData = Omit<IUserCredentials, 'id'>;
+
+export interface TSignInFormData {
+  username: string;
+  password: string;
+}

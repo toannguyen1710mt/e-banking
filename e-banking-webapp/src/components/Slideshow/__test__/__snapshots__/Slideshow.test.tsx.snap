@@ -9,7 +9,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
         class="relative h-full w-full overflow-hidden"
       >
         <div
-          class="translate-x-0 relative flex h-full transition-transform duration-500"
+          class="relative flex h-full transition-transform duration-500 translate-x-0"
         >
           <div
             class="relative w-full flex-shrink-0 px-6 py-8 text-left"
@@ -1097,7 +1097,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
       class="relative h-full w-full overflow-hidden"
     >
       <div
-        class="translate-x-0 relative flex h-full transition-transform duration-500"
+        class="relative flex h-full transition-transform duration-500 translate-x-0"
       >
         <div
           class="relative w-full flex-shrink-0 px-6 py-8 text-left"

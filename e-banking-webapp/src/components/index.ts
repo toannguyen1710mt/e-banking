@@ -4,3 +4,4 @@ export * from './Error';
 export * from './NotFound';
 export * from './Slideshow';
 export * from './AuthContentWrapper';
+export * from './LoginForm';
