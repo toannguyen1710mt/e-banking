@@ -1,5 +1,1 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-cd e-banking-webapp && pnpm test
-pnpm build
+cd e-banking-webapp && pnpm test && pnpm build
