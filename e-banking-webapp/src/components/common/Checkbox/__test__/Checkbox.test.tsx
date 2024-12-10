@@ -4,7 +4,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 // Components
 import { Checkbox } from '@/components';
 
-describe('Checkbox Component test cases', () => {
+describe('Checkbox Component', () => {
   test('should match snapshot for Checkbox', () => {
     const { container } = render(<Checkbox>Default Checkbox</Checkbox>);
     expect(container).toMatchSnapshot();

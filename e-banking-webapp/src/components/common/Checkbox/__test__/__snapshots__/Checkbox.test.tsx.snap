@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checkbox Component test cases should match snapshot for Checkbox 1`] = `
+exports[`Checkbox Component should match snapshot for Checkbox 1`] = `
 <div>
   <label
     class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
