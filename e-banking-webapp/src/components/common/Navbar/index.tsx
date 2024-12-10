@@ -5,19 +5,19 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 interface INavbar {
-  navbarItem: { text: string; url: string }[];
+  navbarItem: { text: string; path: string }[];
 }
 export const Navbar = ({ navbarItem }: INavbar) => {
   const pathname = usePathname();
 
   return (
     <>
-      {navbarItem.map(({ text, url }) => {
-        const isActive = pathname === url;
+      {navbarItem.map(({ text, path }) => {
+        const isActive = pathname === path;
         return (
           <NavbarItemNextUI key={text}>
             <Link
-              href={url}
+              href={path}
               className={`${
                 isActive ? 'font-bold text-black' : 'text-gray-500'
               }`}

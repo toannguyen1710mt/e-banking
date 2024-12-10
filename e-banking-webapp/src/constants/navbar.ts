@@ -3,14 +3,14 @@ import { ROUTES } from '@/constants';
 export const NavbarItem = [
   {
     text: 'Home',
-    url: ROUTES.HOME,
+    path: ROUTES.HOME,
   },
   {
     text: 'Analytics',
-    url: ROUTES.ANALYTICS,
+    path: ROUTES.ANALYTICS,
   },
   {
     text: 'Transactions',
-    url: ROUTES.TRANSACTIONS,
+    path: ROUTES.TRANSACTIONS,
   },
 ];
