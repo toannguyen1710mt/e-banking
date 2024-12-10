@@ -33,6 +33,7 @@ import {
   MoreVerticalIcon,
   PlusIcon,
   ChevronRightIcon,
+  SignOutIcon,
 } from '@/components';
 import { ArrowDownIcon } from './ArrowDownIcon';
 import { HouseIcon } from './HouseIcon';
@@ -71,6 +72,7 @@ const icons = [
   { component: MoreVerticalIcon, label: 'More Vertical' },
   { component: PlusIcon, label: 'Plus' },
   { component: ChevronRightIcon, label: 'Chevron Right' },
+  { component: SignOutIcon, label: 'Sign Out' },
 ];
 
 const meta: Meta = {
