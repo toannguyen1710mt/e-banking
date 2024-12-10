@@ -3,3 +3,4 @@ export * from './Text';
 export * from './Input';
 export * from './RadioButton';
 export * from './Navbar';
+export * from './MenuDropdown';
