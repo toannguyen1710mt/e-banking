@@ -5,3 +5,4 @@ export * from './RadioButton';
 export * from './Navbar';
 export * from './MenuDropdown';
 export * from './Checkbox';
+export * from './Select';
