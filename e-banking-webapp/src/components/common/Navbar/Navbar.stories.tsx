@@ -1,6 +1,11 @@
+// Libs
 import { NavbarContent, Navbar as NavbarNextUI } from '@nextui-org/react';
 import { Meta, StoryObj } from '@storybook/react';
+
+// Constants
 import { NavbarItem } from '@/constants';
+
+// Components
 import { Navbar } from '.';
 
 const meta: Meta<typeof Navbar> = {

@@ -1,5 +1,6 @@
 'use client';
 
+// Libs
 import { NavbarItem as NavbarItemNextUI } from '@nextui-org/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,16 +15,12 @@ export const Navbar = ({ navbarItem }: INavbar) => {
   return (
     <>
       {navbarItem.map(({ text, path }) => {
-        const isActive = pathname === path;
+        const activeClass =
+          pathname === path ? 'font-bold text-black' : 'text-gray-500';
 
         return (
           <NavbarItemNextUI key={text}>
-            <Link
-              href={path}
-              className={`${
-                isActive ? 'font-bold text-black' : 'text-gray-500'
-              }`}
-            >
+            <Link href={path} className={activeClass}>
               {text}
             </Link>
           </NavbarItemNextUI>
