@@ -1,17 +1,16 @@
 export const ANALYTICS_CARD = [
   {
     title: 'Total Income',
-    arrow: 'up',
+    isPositive: true,
     subtitle: 'Last 30 days income',
   },
   {
     title: 'Total Expense',
-    arrow: 'up',
+    isPositive: true,
     subtitle: 'Last 30 days expenditure',
   },
   {
     title: 'Total Investment',
-    arrow: 'down',
     subtitle: 'Last 30 days investment',
   },
 ];

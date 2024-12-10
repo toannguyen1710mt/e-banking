@@ -12,40 +12,43 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    analyticsCardItems: {
-      description:
-        'Array of items to display on the analytics card with title, subtitle, and arrow direction.',
+    title: {
+      description: 'Title of the analytics card',
       control: {
-        type: 'object',
+        type: 'text',
       },
     },
-    financialData: {
-      description:
-        'Array of financial data with amount and percentage change for each card.',
+    subtitle: {
+      description: 'Subtitle of the analytics card',
       control: {
-        type: 'object',
+        type: 'text',
+      },
+    },
+    isPositive: {
+      description: 'If the card represents a positive change (up arrow)',
+      control: {
+        type: 'boolean',
+      },
+    },
+    amount: {
+      description: 'Amount displayed on the card',
+      control: {
+        type: 'text',
+      },
+    },
+    percentageChange: {
+      description: 'Percentage change displayed on the card',
+      control: {
+        type: 'number',
       },
     },
   },
   args: {
-    analyticsCardItems: [
-      { title: 'Total Income', subtitle: 'Last 30 days income', arrow: 'up' },
-      {
-        title: 'Total Expense',
-        subtitle: 'Last 30 days expenditure',
-        arrow: 'up',
-      },
-      {
-        title: 'Total Investment',
-        subtitle: 'Last 30 days investment',
-        arrow: 'down',
-      },
-    ],
-    financialData: [
-      { amount: '670,000', percentageChange: 8 },
-      { amount: '220,000', percentageChange: 8 },
-      { amount: '170,000', percentageChange: 8 },
-    ],
+    title: 'Total Income',
+    subtitle: 'Last 30 days income',
+    isPositive: true,
+    amount: '670,000',
+    percentageChange: 8,
   },
 } satisfies Meta<typeof AnalyticsCard>;
 
