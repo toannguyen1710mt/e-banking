@@ -16,6 +16,8 @@ const customJestConfig = {
     'src/services/**',
     'src/utils/**',
     '!src/components/**/*.snap',
+    '!src/**/*.stories.ts',
+    '!src/**/*.stories.tsx',
   ],
 };
 
