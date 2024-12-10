@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 interface INavbar {
   navbarItem: { text: string; path: string }[];
 }
+
 export const Navbar = ({ navbarItem }: INavbar) => {
   const pathname = usePathname();
 
@@ -14,6 +15,7 @@ export const Navbar = ({ navbarItem }: INavbar) => {
     <>
       {navbarItem.map(({ text, path }) => {
         const isActive = pathname === path;
+
         return (
           <NavbarItemNextUI key={text}>
             <Link
