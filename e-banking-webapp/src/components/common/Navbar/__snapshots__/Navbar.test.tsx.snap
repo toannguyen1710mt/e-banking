@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders with default type 1`] = `
+<div>
+  <nav
+    class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+    style="--navbar-height: 4rem;"
+  >
+    <header
+      class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center justify-between h-[var(--navbar-height)] max-w-[1024px]"
+    >
+      <ul
+        class="flex h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0 gap-[59px] font-normal text-transparentBlack"
+        data-justify="start"
+      >
+        <li
+          class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"
+        >
+          <a
+            class="text-gray-500"
+            href="/home"
+          >
+            Home
+          </a>
+        </li>
+        <li
+          class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"
+        >
+          <a
+            class="text-gray-500"
+            href="/analytics"
+          >
+            Analytics
+          </a>
+        </li>
+        <li
+          class="text-medium whitespace-nowrap box-border list-none data-[active=true]:font-semibold"
+        >
+          <a
+            class="text-gray-500"
+            href="/transactions"
+          >
+            Transactions
+          </a>
+        </li>
+      </ul>
+    </header>
+  </nav>
+</div>
+`;
