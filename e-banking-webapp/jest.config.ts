@@ -10,6 +10,13 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
+  collectCoverageFrom: [
+    'src/components/**',
+    'src/hooks/**',
+    'src/services/**',
+    'src/utils/**',
+    '!src/components/**/*.snap',
+  ],
 };
 
 export default createJestConfig(customJestConfig);
