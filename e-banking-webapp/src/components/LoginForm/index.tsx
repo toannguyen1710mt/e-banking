@@ -3,35 +3,28 @@
 import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import Link from 'next/link';
 
 // Constants
-import { signUpSchema } from '@/constants';
+import { signInSchema } from '@/constants';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT, TSignUpFormData } from '@/interfaces';
+import { TEXT_SIZE, TEXT_VARIANT, TSignInFormData } from '@/interfaces';
 
 // Components
-import {
-  EmailIcon,
-  EyeIcon,
-  EyeSlashIcon,
-  LockIcon,
-  UserIcon,
-} from '@/components/icons';
+import { EyeIcon, EyeSlashIcon, LockIcon, UserIcon } from '@/components/icons';
 import { Button, Input, Text } from '@/components';
 
-export const AccountForm = () => {
+export const LoginForm = () => {
   const {
     control,
     handleSubmit,
     formState: { isDirty },
-  } = useForm<TSignUpFormData>({
-    resolver: zodResolver(signUpSchema),
+  } = useForm<TSignInFormData>({
+    resolver: zodResolver(signInSchema),
     defaultValues: {
-      email: '',
-      password: '',
-      confirmPassword: '',
       username: '',
+      password: '',
     },
     mode: 'onBlur',
   });
@@ -41,29 +34,24 @@ export const AccountForm = () => {
     onClose: closePassword,
     onOpen: openPassword,
   } = useDisclosure();
-  const {
-    isOpen: confirmPasswordIsOpen,
-    onClose: closeConfirmPassword,
-    onOpen: openConfirmPassword,
-  } = useDisclosure();
 
+  // TODO: handle form submission
   const onSubmit = handleSubmit(async (data) => {
-    // TODO: handle form submission
     console.log('data', data);
   });
 
   return (
     <form onSubmit={onSubmit} className='mr-0 md:mr-[83px]'>
-      <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
+      <div className='mb-8 flex w-full flex-col gap-6 bg-white md:gap-4'>
         <Text
           size={TEXT_SIZE.SM}
           variant={TEXT_VARIANT.INFO}
           className='font-normal'
         >
-          Fill the form below to create an account
+          Sign in to your account to continue
         </Text>
 
-        {/* Sign-in with email */}
+        {/* Sign-in with username */}
         <Controller
           control={control}
           name='username'
@@ -74,21 +62,6 @@ export const AccountForm = () => {
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<UserIcon />}
-              {...field}
-            />
-          )}
-        />
-
-        <Controller
-          control={control}
-          name='email'
-          render={({ field, fieldState: { error } }) => (
-            <Input
-              aria-label='email'
-              placeholder='Email'
-              isInvalid={!!error?.message}
-              errorMessage={error?.message}
-              startContent={<EmailIcon />}
               {...field}
             />
           )}
@@ -121,39 +94,13 @@ export const AccountForm = () => {
           )}
         />
 
-        <Controller
-          control={control}
-          name='confirmPassword'
-          render={({ field, fieldState: { error } }) => (
-            <Input
-              aria-label='password'
-              placeholder='Confirm Password'
-              type={confirmPasswordIsOpen ? 'text' : 'password'}
-              startContent={<LockIcon />}
-              endContent={
-                <button
-                  type='button'
-                  aria-label='show password button'
-                  className='text-primary-200'
-                  onClick={
-                    confirmPasswordIsOpen
-                      ? closeConfirmPassword
-                      : openConfirmPassword
-                  }
-                >
-                  {confirmPasswordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
-                </button>
-              }
-              isInvalid={!!error?.message}
-              errorMessage={error?.message}
-              {...field}
-            />
-          )}
-        />
+        <Link href='#' aria-disabled className='text-right text-sm'>
+          Forgot Password?
+        </Link>
       </div>
 
       <Button isDisabled={!isDirty} type='submit' color='primary'>
-        Register
+        Sign In
       </Button>
     </form>
   );

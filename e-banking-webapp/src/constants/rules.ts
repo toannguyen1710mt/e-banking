@@ -28,3 +28,16 @@ export const signUpSchema = z
     message: ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
     path: ['confirmPassword'],
   });
+
+export const signInSchema = z.object({
+  username: z
+    .string()
+    .trim()
+    .min(3, ERROR_MESSAGES.USERNAME_INVALID)
+    .transform((value) => value.trim()), // Trim spaces before validation
+  password: z
+    .string()
+    .trim()
+    .min(8, ERROR_MESSAGES.PASSWORD_INVALID)
+    .regex(REGEX.PASSWORD, ERROR_MESSAGES.PASSWORD_PATTERN),
+});

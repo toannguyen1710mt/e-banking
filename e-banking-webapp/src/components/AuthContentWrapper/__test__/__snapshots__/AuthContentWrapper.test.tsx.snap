@@ -10,7 +10,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9"
+          class="pb-9 "
           data-nimg="1"
           decoding="async"
           height="36"
@@ -41,7 +41,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
            
           <a
             class="text-primary-200"
-            href="/login"
+            href="/sign-in"
           >
             Login
           </a>
@@ -55,7 +55,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
     >
       <img
         alt="Logo EBanking"
-        class="pb-9"
+        class="pb-9 "
         data-nimg="1"
         decoding="async"
         height="36"
@@ -86,7 +86,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
          
         <a
           class="text-primary-200"
-          href="/login"
+          href="/sign-in"
         >
           Login
         </a>
