@@ -16,4 +16,6 @@ export const colors = {
   red: '#C40404',
   pinPin: '#FFE1E1',
   forestGreen: '#32B232',
+  lightGreen: '#C2EEC2',
+  lightRed: '#F3C9C9',
 };

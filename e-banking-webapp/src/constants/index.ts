@@ -7,3 +7,4 @@ export * from './regex';
 export * from './rules';
 export * from './slideshow';
 export * from './navbar';
+export * from './card';
