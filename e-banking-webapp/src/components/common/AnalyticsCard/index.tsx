@@ -13,9 +13,9 @@ import { ArrowDownIcon, ArrowUpIcon } from '@/components/icons';
 export interface IAnalyticsCardItem {
   title: string;
   subtitle: string;
-  isPositive?: boolean;
   amount: string;
   percentageChange: number;
+  isPositive?: boolean;
 }
 
 export const AnalyticsCard = ({
