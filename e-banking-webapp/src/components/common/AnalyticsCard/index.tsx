@@ -39,10 +39,7 @@ export const AnalyticsCard = ({
         const chipTextColor = isPositive ? 'text-green' : 'text-red';
 
         return (
-          <Card
-            key={title}
-            className='w-full min-w-[192px] pb-[19px] pl-4 pt-[22px]'
-          >
+          <Card key={title} className='w-full min-w-[192px] pl-4 pt-[22px]'>
             <CardHeader className='p-0 text-xs font-medium'>{title}</CardHeader>
             <CardBody className='flex flex-row items-center gap-5 p-0 pt-[21px] font-extrabold'>
               <span className='text-base'>${amount}</span>
@@ -56,7 +53,7 @@ export const AnalyticsCard = ({
                 {percentageChange}%
               </Chip>
             </CardBody>
-            <CardFooter className='p-0 pt-5 text-[10px] font-light text-transparentBlack'>
+            <CardFooter className='p-0 pb-[19px] pt-5 text-[10px] font-light text-transparentBlack'>
               {subtitle}
             </CardFooter>
           </Card>
