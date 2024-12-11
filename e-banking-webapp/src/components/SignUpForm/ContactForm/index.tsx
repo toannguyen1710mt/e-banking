@@ -5,8 +5,11 @@ import { Controller } from 'react-hook-form';
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Context
+import { useWizardFormContext } from '@/context';
+
 // Components
-import { Button, Input, Text, useWizardFormContext } from '@/components';
+import { Button, Input, Text } from '@/components';
 import { GlobalIcon, MailBoxIcon, PhoneIcon } from '@/components/icons';
 
 export const ContactForm = () => {
