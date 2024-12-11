@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import { DailyLimit } from '.';
+import { DailyLimit } from '@/components';
 
 const meta = {
   title: 'Components/Common/DailyLimit',

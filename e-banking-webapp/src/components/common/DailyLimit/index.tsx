@@ -9,7 +9,7 @@ import {
 } from '@nextui-org/react';
 
 // Components
-import { ArrowUpIcon } from '@/components/icons';
+import { ArrowUpIcon } from '@/components';
 
 export const DailyLimit = () => (
   <Card className='w-full px-[6px] pt-[9px]'>
