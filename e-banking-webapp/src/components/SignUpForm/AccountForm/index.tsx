@@ -1,14 +1,13 @@
 'use client';
 
 import { useDisclosure } from '@nextui-org/react';
-import { Controller, useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-
-// Constants
-import { signUpSchema } from '@/constants';
+import { Controller } from 'react-hook-form';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT, TSignUpFormData } from '@/interfaces';
+import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+
+// Context
+import { useWizardFormContext } from '@/context';
 
 // Components
 import {
@@ -22,19 +21,10 @@ import { Button, Input, Text } from '@/components';
 
 export const AccountForm = () => {
   const {
-    control,
-    handleSubmit,
-    formState: { isDirty },
-  } = useForm<TSignUpFormData>({
-    resolver: zodResolver(signUpSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-      confirmPassword: '',
-      username: '',
-    },
-    mode: 'onBlur',
-  });
+    form: { control },
+    nextStep,
+    isStepValid,
+  } = useWizardFormContext();
 
   const {
     isOpen: passwordIsOpen,
@@ -47,13 +37,8 @@ export const AccountForm = () => {
     onOpen: openConfirmPassword,
   } = useDisclosure();
 
-  const onSubmit = handleSubmit(async (data) => {
-    // TODO: handle form submission
-    console.log('data', data);
-  });
-
   return (
-    <form onSubmit={onSubmit} className='mr-0 md:mr-[83px]'>
+    <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
         <Text
           size={TEXT_SIZE.SM}
@@ -66,7 +51,7 @@ export const AccountForm = () => {
         {/* Sign-in with email */}
         <Controller
           control={control}
-          name='username'
+          name='account.username'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='username'
@@ -81,7 +66,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='email'
+          name='account.email'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='email'
@@ -96,7 +81,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='password'
+          name='account.password'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -123,7 +108,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='confirmPassword'
+          name='account.confirmPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -152,9 +137,14 @@ export const AccountForm = () => {
         />
       </div>
 
-      <Button isDisabled={!isDirty} type='submit' color='primary'>
+      <Button
+        isDisabled={!isStepValid}
+        onClick={nextStep}
+        type='button'
+        color='primary'
+      >
         Register
       </Button>
-    </form>
+    </>
   );
 };
