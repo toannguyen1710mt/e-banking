@@ -18,4 +18,5 @@ export const colors = {
   forestGreen: '#32B232',
   lightGreen: '#C2EEC2',
   lightRed: '#F3C9C9',
+  lightAqua: '#D9EAE8',
 };
