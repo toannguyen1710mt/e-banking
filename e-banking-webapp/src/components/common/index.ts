@@ -8,3 +8,4 @@ export * from './Checkbox';
 export * from './AnalyticsCard';
 export * from './Select';
 export * from './DailyLimit';
+export * from './Calendar';
