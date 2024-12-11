@@ -78,7 +78,7 @@ function WizardFormRoot<T extends z.ZodType>({
                   {step}
                 </motion.div>
               </AnimatePresence>
-            ) : undefined;
+            ) : null;
           })}
         </div>
 
