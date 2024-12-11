@@ -25,8 +25,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M134.045 96.7702C133.985 102.355 130.646 105.027 126.518 102.659C122.389 100.352 119.111 93.9168 119.172 88.3316C119.232 82.7464 122.571 80.0752 126.7 82.4428C130.828 84.7498 134.106 91.1849 134.045 96.7702Z'
       fill='#F2C94C'
     />
@@ -46,8 +46,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M431.581 400.558C431.52 406.143 428.181 408.814 424.053 406.447C419.924 404.14 416.646 397.705 416.707 392.119C416.768 386.534 420.107 383.863 424.235 386.231C428.363 388.538 431.641 394.973 431.581 400.558Z'
       fill='#F2C94C'
     />
@@ -102,8 +102,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M294.257 335.417L294.135 302.149L376.76 347.62L376.882 380.889L294.257 335.417Z'
       fill='#F2C94C'
     />
@@ -113,8 +113,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
       fill='url(#paint8_linear_1_20697)'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M0 127.368V101.809L68.1762 141.149V166.707L0 127.368Z'
       fill='#F2994A'
     />
@@ -134,8 +134,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M163.186 205.318C163.186 213.089 167.8 222.013 173.446 225.291C179.092 228.57 183.706 224.927 183.706 217.156C183.706 209.385 179.092 200.461 173.446 197.183C167.8 193.905 163.186 197.547 163.186 205.318Z'
       fill='#F2994A'
     />
@@ -153,8 +153,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='9555.35'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint1_linear_1_20697'
@@ -164,8 +164,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='9858.2'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint2_linear_1_20697'
@@ -175,8 +175,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='13128'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint3_linear_1_20697'
@@ -186,8 +186,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='13147.2'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint4_linear_1_20697'
@@ -197,8 +197,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='15388.4'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint5_linear_1_20697'
@@ -208,8 +208,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='16044.9'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint6_linear_1_20697'
@@ -219,8 +219,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='11122.1'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint7_linear_1_20697'
@@ -230,8 +230,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='9559.42'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint8_linear_1_20697'
@@ -241,8 +241,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='12787.3'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint9_linear_1_20697'
@@ -252,8 +252,8 @@ export const SlideIntegrate = ({ customClass }: CustomClassType) => (
         y2='4542.9'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
     </defs>
   </svg>

@@ -15,8 +15,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
       fill='url(#paint0_linear_1_20760)'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M75.9764 203.977C75.9764 209.005 73.0435 211.309 69.3425 209.215C65.7112 207.12 62.7085 201.324 62.7085 196.296C62.7085 191.268 65.6414 188.963 69.3425 191.058C73.0435 193.153 75.9764 198.949 75.9764 203.977Z'
       fill='#F2C94C'
     />
@@ -51,8 +51,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M196.156 283.515V252.091L273.32 296.643V328.067L196.156 283.515Z'
       fill='#F2994A'
     />
@@ -62,8 +62,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
       fill='url(#paint3_linear_1_20760)'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M407.116 289.52L434.35 305.232V394.337L407.116 378.625V289.52Z'
       fill='#F2C94C'
     />
@@ -88,8 +88,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M165.57 131.841C165.57 140.78 170.877 151.045 177.371 154.816C183.866 158.587 189.173 154.397 189.173 145.458C189.173 136.52 183.866 126.255 177.371 122.484C170.877 118.713 165.57 122.903 165.57 131.841Z'
       fill='#F2994A'
     />
@@ -114,8 +114,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M339.659 428.205C339.659 437.144 334.352 441.333 327.858 437.563C321.363 433.792 316.056 423.526 316.056 414.588C316.056 405.65 321.363 401.46 327.858 405.231C334.352 409.002 339.589 419.267 339.659 428.205Z'
       fill='#F2C94C'
     />
@@ -143,8 +143,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='8657.59'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint1_linear_1_20760'
@@ -154,8 +154,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='22640.9'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint2_linear_1_20760'
@@ -165,8 +165,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='22665.6'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint3_linear_1_20760'
@@ -176,8 +176,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='8387.78'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint4_linear_1_20760'
@@ -187,8 +187,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='14605.4'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint5_linear_1_20760'
@@ -198,8 +198,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='22454.4'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint6_linear_1_20760'
@@ -209,8 +209,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='5239.91'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint7_linear_1_20760'
@@ -220,8 +220,8 @@ export const SlideSecure = ({ customClass }: CustomClassType) => (
         y2='5484.39'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
     </defs>
   </svg>
