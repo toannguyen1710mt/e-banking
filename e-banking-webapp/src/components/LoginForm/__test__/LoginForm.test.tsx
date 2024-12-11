@@ -2,8 +2,25 @@ import { render } from '@testing-library/react';
 
 // Components
 import { LoginForm } from '..';
+import { useRouter } from 'next/navigation';
+
+jest.mock('next/navigation', () => ({
+  useRouter: jest.fn(),
+}));
 
 describe('LoginForm component', () => {
+  const mockPush = jest.fn();
+
+  beforeEach(() => {
+    (useRouter as jest.Mock).mockReturnValue({
+      push: mockPush,
+    });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should render snapshot correctly', () => {
     expect(render(<LoginForm />)).toMatchSnapshot();
   });

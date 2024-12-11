@@ -15,4 +15,14 @@ export const ERROR_MESSAGES = {
     'Sign up successful. Please check your email to verify your account.',
   SIGN_IN_FAILED: 'Sign in failed. Please try again.',
   SIGN_IN_SUCCESS: 'Sign in successful.',
+
+  // Services
+  NETWORK_ERROR: 'Network response was not ok!',
+  GET_ERROR: 'The server does not respond. Retrieving data failed!',
+  POST_ERROR: 'The server does not respond. Please try again!',
+  UPDATE_ERROR: 'Update failed. Please try again!',
+  DELETE_ERROR: 'Delete failed. Please try again!',
+  INVALID_CREDENTIALS: 'Invalid credentials!',
+  INVALID_USER_PERMISSIONS: 'Invalid user permissions!',
+  USERNAME_PASSWORD_INVALID: 'Username or Password is invalid!',
 };

@@ -3,23 +3,29 @@
 import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 // Constants
-import { signInSchema } from '@/constants';
+import { ROUTES, signInSchema } from '@/constants';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT, TSignInFormData } from '@/interfaces';
+
+// Actions
+import { authenticateUser } from '@/actions/auth';
 
 // Components
 import { EyeIcon, EyeSlashIcon, LockIcon, UserIcon } from '@/components/icons';
 import { Button, Input, Text } from '@/components';
 
 export const LoginForm = () => {
+  const router = useRouter();
+
   const {
     control,
     handleSubmit,
-    formState: { isDirty },
+    formState: { isDirty, isValid, isSubmitting },
   } = useForm<TSignInFormData>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
@@ -35,9 +41,16 @@ export const LoginForm = () => {
     onOpen: openPassword,
   } = useDisclosure();
 
-  // TODO: handle form submission
   const onSubmit = handleSubmit(async (data) => {
-    console.log('data', data);
+    const errorMessage = await authenticateUser(data);
+
+    if (errorMessage) {
+      alert(errorMessage);
+      return;
+    }
+
+    router.push(ROUTES.HOME);
+    return;
   });
 
   return (
@@ -99,7 +112,12 @@ export const LoginForm = () => {
         </Link>
       </div>
 
-      <Button isDisabled={!isDirty} type='submit' color='primary'>
+      <Button
+        type='submit'
+        color='primary'
+        isDisabled={!isDirty || !isValid}
+        isLoading={isSubmitting}
+      >
         Sign In
       </Button>
     </form>

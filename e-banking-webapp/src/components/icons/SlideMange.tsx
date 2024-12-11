@@ -35,8 +35,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
       fill='url(#paint4_linear_1_20498)'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M20.6598 186.898C20.6598 191.243 18.0909 193.253 14.8663 191.46C11.6962 189.614 9.07275 184.617 9.07275 180.272C9.07275 175.927 11.6416 173.917 14.8663 175.709C18.0909 177.556 20.6598 182.553 20.6598 186.898Z'
       fill='#F2994A'
     />
@@ -71,8 +71,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M319.353 403.772C319.353 386.446 309.132 366.513 296.561 359.289C283.991 352.065 273.77 360.267 273.77 377.593C273.77 394.919 283.991 414.852 296.561 422.075C309.132 429.299 319.353 421.098 319.353 403.772Z'
       fill='#F2994A'
     />
@@ -97,8 +97,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M192.005 227.633C192.005 210.307 181.785 190.374 169.214 183.15C156.643 175.927 146.422 184.128 146.422 201.454C146.422 218.78 156.643 238.713 169.214 245.937C181.785 253.16 192.005 244.959 192.005 227.633Z'
       fill='#F2C94C'
     />
@@ -108,8 +108,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
       fill='url(#paint9_linear_1_20498)'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M12.0244 289.225V266.359L73.4027 301.554V324.42L12.0244 289.225Z'
       fill='#F2994A'
     />
@@ -129,8 +129,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
       fill='white'
     />
     <path
-      fill-rule='evenodd'
-      clip-rule='evenodd'
+      fillRule='evenodd'
+      clipRule='evenodd'
       d='M158.993 358.963C158.993 365.915 163.147 373.899 168.23 376.832C173.313 379.765 177.467 376.507 177.467 369.554C177.467 362.602 173.313 354.618 168.23 351.685C163.092 348.752 158.939 352.011 158.993 358.963Z'
       fill='#F2994A'
     />
@@ -148,8 +148,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='10019.8'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint1_linear_1_20498'
@@ -159,8 +159,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='9370.19'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint2_linear_1_20498'
@@ -170,8 +170,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='10003.5'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint3_linear_1_20498'
@@ -181,8 +181,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='9353.9'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint4_linear_1_20498'
@@ -192,8 +192,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='7531.3'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint5_linear_1_20498'
@@ -203,8 +203,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='21061.6'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint6_linear_1_20498'
@@ -214,8 +214,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='21075.2'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint7_linear_1_20498'
@@ -225,8 +225,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='20884.9'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint8_linear_1_20498'
@@ -236,8 +236,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='20899.2'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint9_linear_1_20498'
@@ -247,8 +247,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='11658.6'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='paint10_linear_1_20498'
@@ -258,8 +258,8 @@ export const SlideMange = ({ customClass }: CustomClassType) => (
         y2='3912.28'
         gradientUnits='userSpaceOnUse'
       >
-        <stop stop-color='white' />
-        <stop offset='1' stop-color='white' stop-opacity='0' />
+        <stop stopColor='white' />
+        <stop offset='1' stopColor='white' stopOpacity='0' />
       </linearGradient>
     </defs>
   </svg>
