@@ -17,8 +17,22 @@ const meta = {
     },
   },
   tags: ['autodocs'],
-  argTypes: {},
-  args: {},
+  argTypes: {
+    expenses: {
+      control: 'text',
+      description: 'Amount of money used for the day',
+      defaultValue: '50,000',
+    },
+    limit: {
+      control: 'text',
+      description: 'Total daily spending limit',
+      defaultValue: '183,450',
+    },
+  },
+  args: {
+    expenses: '50,000',
+    limit: '183,450',
+  },
 } satisfies Meta<typeof DailyLimit>;
 
 export default meta;

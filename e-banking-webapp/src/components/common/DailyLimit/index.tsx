@@ -11,7 +11,12 @@ import {
 // Components
 import { ArrowUpIcon } from '@/components';
 
-export const DailyLimit = () => (
+interface IDailyLimit {
+  expenses: string;
+  limit: string;
+}
+
+export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
   <Card className='w-full px-[6px] pt-[9px]'>
     <CardHeader className='flex justify-between p-0 text-xs font-semibold'>
       <span>Daily Limit</span>
@@ -27,8 +32,8 @@ export const DailyLimit = () => (
     </CardHeader>
     <CardBody className='p-0 pt-2 text-xs'>
       <div className='flex items-baseline'>
-        <span className='font-bold'>$ 50,000 Used</span>
-        <span className='ml-2 text-3xs font-normal'>from $ 183,450 limit</span>
+        <span className='font-bold'>$ {expenses} Used</span>
+        <span className='ml-2 text-3xs font-normal'>from $ {limit} limit</span>
       </div>
     </CardBody>
     <CardFooter className='p-0 pb-4 pt-[9px]'>

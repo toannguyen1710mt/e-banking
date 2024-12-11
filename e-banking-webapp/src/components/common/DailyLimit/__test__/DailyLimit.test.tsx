@@ -7,7 +7,9 @@ import { DailyLimit } from '@/components';
 
 describe('DailyLimit component', () => {
   test('should match snapshot for DailyLimit', () => {
-    const { container } = render(<DailyLimit />);
+    const { container } = render(
+      <DailyLimit expenses='50,000' limit='183,450' />,
+    );
 
     expect(container).toMatchSnapshot();
   });

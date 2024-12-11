@@ -43,12 +43,16 @@ exports[`DailyLimit component should match snapshot for DailyLimit 1`] = `
         <span
           class="font-bold"
         >
-          $ 50,000 Used
+          $ 
+          50,000
+           Used
         </span>
         <span
           class="ml-2 text-3xs font-normal"
         >
-          from $ 183,450 limit
+          from $ 
+          183,450
+           limit
         </span>
       </div>
     </div>
