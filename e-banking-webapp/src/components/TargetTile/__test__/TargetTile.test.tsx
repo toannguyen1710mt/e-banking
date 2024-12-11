@@ -10,8 +10,8 @@ import { formatNumberWithCommas } from '@/utils';
 const mockProps = {
   icon: GiftIcon,
   title: 'Self Reward',
-  targetAmount: 45000,
-  deposit: 100000,
+  deposit: 45000,
+  targetAmount: 100000,
 };
 describe('TargetTile components', () => {
   it('should match snapshot for TargetTile', () => {
@@ -23,21 +23,22 @@ describe('TargetTile components', () => {
   it('should display the target amount and deposit correctly formatted with commas', () => {
     render(<TargetTile {...mockProps} currencyUnit='$' />);
 
-    const targetAmount = screen.getByText(
-      `$ ${formatNumberWithCommas(mockProps.targetAmount)}`,
-    );
     const deposit = screen.getByText(
-      `/$ ${formatNumberWithCommas(mockProps.deposit)}`,
+      `$ ${formatNumberWithCommas(mockProps.deposit)}`,
     );
 
-    expect(targetAmount).toBeInTheDocument();
+    const targetAmount = screen.getByText(
+      `/$ ${formatNumberWithCommas(mockProps.targetAmount)}`,
+    );
+
     expect(deposit).toBeInTheDocument();
+    expect(targetAmount).toBeInTheDocument();
   });
 
   it('should calculate and display the correct percentage achieved', () => {
     render(<TargetTile {...mockProps} currencyUnit='$' />);
 
-    const percentage = (mockProps.targetAmount / mockProps.deposit) * 100;
+    const percentage = (mockProps.deposit / mockProps.targetAmount) * 100;
     const percentageElement = screen.getByText(`${percentage}%`);
 
     expect(percentageElement).toBeInTheDocument();

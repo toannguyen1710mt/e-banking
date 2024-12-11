@@ -28,8 +28,8 @@ export const TargetTileDefault: Story = {
   args: {
     icon: GiftIcon,
     title: 'Self Reward',
-    targetAmount: 45000,
-    deposit: 100000,
+    deposit: 450000,
+    targetAmount: 100000,
     currencyUnit: '$',
   },
 };

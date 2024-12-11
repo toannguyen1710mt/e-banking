@@ -5,26 +5,24 @@ import { CurrencyUnit } from '@/interfaces';
 import { Text } from '@/components';
 
 // Utils
-import { formatNumberWithCommas } from '@/utils';
+import { calculatePercentage, formatNumberWithCommas } from '@/utils';
 
 interface TargetTileProps {
   icon: () => JSX.Element;
   title: string;
-  targetAmount: number;
   deposit: number;
+  targetAmount: number;
   currencyUnit?: CurrencyUnit;
 }
 
 export const TargetTile = ({
   icon,
   title,
-  targetAmount,
   deposit,
+  targetAmount,
   currencyUnit = '$',
 }: TargetTileProps) => {
   const TargetIcon = icon;
-
-  const percentAchived = (targetAmount / deposit) * 100;
 
   return (
     <div className='flex items-center justify-between border-b border-dimGray p-4'>
@@ -36,18 +34,20 @@ export const TargetTile = ({
           </Text>
           <div className='flex'>
             <Text as='span' className='text-2xs font-semibold text-success'>
-              {currencyUnit} {formatNumberWithCommas(targetAmount)}
+              {currencyUnit} {formatNumberWithCommas(deposit)}
             </Text>
             <Text
               as='span'
               className='text-2xs font-semibold text-foreground-100 opacity-30'
             >
-              /{currencyUnit} {formatNumberWithCommas(deposit)}
+              /{currencyUnit} {formatNumberWithCommas(targetAmount)}
             </Text>
           </div>
         </div>
       </div>
-      <Text className='text-xs text-foreground-100'>{percentAchived}%</Text>
+      <Text className='text-xs text-foreground-100'>
+        {calculatePercentage(deposit, targetAmount)}%
+      </Text>
     </div>
   );
 };
