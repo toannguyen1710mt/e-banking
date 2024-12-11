@@ -17,7 +17,7 @@ exports[`LoginForm component Should render snapshot correctly 1`] = `
             Sign in to your account to continue
           </p>
           <div
-            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
             data-filled="true"
             data-filled-within="true"
             data-slot="base"
@@ -65,7 +65,7 @@ exports[`LoginForm component Should render snapshot correctly 1`] = `
             </div>
           </div>
           <div
-            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end dark:text-foreground-200"
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] dark:text-foreground-200"
             data-filled="true"
             data-filled-within="true"
             data-slot="base"
@@ -163,7 +163,7 @@ exports[`LoginForm component Should render snapshot correctly 1`] = `
           Sign in to your account to continue
         </p>
         <div
-          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end"
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
           data-filled="true"
           data-filled-within="true"
           data-slot="base"
@@ -211,7 +211,7 @@ exports[`LoginForm component Should render snapshot correctly 1`] = `
           </div>
         </div>
         <div
-          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end dark:text-foreground-200"
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] dark:text-foreground-200"
           data-filled="true"
           data-filled-within="true"
           data-slot="base"
