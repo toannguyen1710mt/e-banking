@@ -6,3 +6,4 @@ export * from './Slideshow';
 export * from './AuthContentWrapper';
 export * from './LoginForm';
 export * from './TargetTile';
+export * from './QuickAction';
