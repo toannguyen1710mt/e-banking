@@ -1,11 +1,11 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Constants
+import { QUICK_ACTIONS } from '@/constants';
+
 // Components
 import { QuickAction } from '@/components';
-
-// Mocks
-import { MOCK_ACTIONS } from '@/mocks';
 
 const meta = {
   title: 'Components/QuickAction',
@@ -22,6 +22,6 @@ type Story = StoryObj<typeof QuickAction>;
 
 export const QuickActionDefault: Story = {
   args: {
-    actions: MOCK_ACTIONS,
+    actions: QUICK_ACTIONS,
   },
 };

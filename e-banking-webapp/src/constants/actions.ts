@@ -6,7 +6,7 @@ import {
   TransactionIcon,
 } from '@/components';
 
-export const MOCK_ACTIONS = [
+export const QUICK_ACTIONS = [
   {
     icon: FocusIcon,
     label: 'Top Up',
