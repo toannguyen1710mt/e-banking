@@ -1,3 +1,5 @@
+import logo from '../../public/images/logo.webp';
+
 export const IMAGES = {
-  LOGO: '/images/logo.webp',
+  LOGO: logo,
 };

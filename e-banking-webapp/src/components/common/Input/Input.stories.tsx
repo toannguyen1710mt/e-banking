@@ -61,7 +61,7 @@ export const WithErrorMessage: Story = {
   args: {
     isInvalid: true,
     errorMessage: 'Please enter a valid email address',
-    value: 'Email',
+    defaultValue: 'Email',
   },
 };
 
@@ -69,6 +69,6 @@ export const WithLabel: Story = {
   args: {
     label: 'Cards Holder',
     labelPlacement: 'outside',
-    value: 'Email',
+    defaultValue: 'Email',
   },
 };
