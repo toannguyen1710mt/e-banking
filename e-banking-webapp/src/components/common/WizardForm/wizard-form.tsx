@@ -8,7 +8,6 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import * as PrimitiveForm from '@radix-ui/react-form';
 
 import { Slot, Slottable } from '@radix-ui/react-slot';
 import { Path, UseFormReturn } from 'react-hook-form';
@@ -69,10 +68,7 @@ function WizardFormRoot<T extends z.ZodType>({
 
   return (
     <WizardFormContext.Provider value={wizardFormStep}>
-      <PrimitiveForm.Root
-        onSubmit={form.handleSubmit(onSubmit)}
-        className={className}
-      >
+      <form onSubmit={form.handleSubmit(onSubmit)} className={className}>
         {header}
 
         <div>
@@ -93,7 +89,7 @@ function WizardFormRoot<T extends z.ZodType>({
         </div>
 
         {footer}
-      </PrimitiveForm.Root>
+      </form>
     </WizardFormContext.Provider>
   );
 }
