@@ -98,12 +98,12 @@ const WizardFormStep = React.forwardRef<
     } & HTMLProps<HTMLDivElement>
   >
 >(function WizardFormStep({ children, asChild, ...props }, ref) {
-  const Cmp = asChild ? Slot : 'div';
+  const ElementType = asChild ? Slot : 'div';
 
   return (
-    <Cmp ref={ref} {...props}>
+    <ElementType ref={ref} {...props}>
       <Slottable>{children}</Slottable>
-    </Cmp>
+    </ElementType>
   );
 });
 
@@ -117,12 +117,12 @@ const WizardFormHeader = React.forwardRef<
     } & HTMLProps<HTMLDivElement>
   >
 >(function WizardFormHeader({ children, asChild, ...props }, ref) {
-  const Cmp = asChild ? Slot : 'div';
+  const ElementType = asChild ? Slot : 'div';
 
   return (
-    <Cmp ref={ref} {...props}>
+    <ElementType ref={ref} {...props}>
       <Slottable>{children}</Slottable>
-    </Cmp>
+    </ElementType>
   );
 });
 
@@ -136,12 +136,12 @@ const WizardFormFooter = React.forwardRef<
     } & HTMLProps<HTMLDivElement>
   >
 >(function WizardFormFooter({ children, asChild, ...props }, ref) {
-  const Cmp = asChild ? Slot : 'div';
+  const ElementType = asChild ? Slot : 'div';
 
   return (
-    <Cmp ref={ref} {...props}>
+    <ElementType ref={ref} {...props}>
       <Slottable>{children}</Slottable>
-    </Cmp>
+    </ElementType>
   );
 });
 WizardFormFooter.displayName = 'WizardForm.Footer';
