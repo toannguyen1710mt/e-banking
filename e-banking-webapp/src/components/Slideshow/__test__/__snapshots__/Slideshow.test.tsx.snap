@@ -164,12 +164,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="10019.8"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -181,12 +181,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="9370.19"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -198,12 +198,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="10003.5"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -215,12 +215,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="9353.9"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -232,12 +232,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="7531.3"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -249,12 +249,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="21061.6"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -266,12 +266,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="21075.2"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -283,12 +283,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="20884.9"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -300,12 +300,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="20899.2"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -317,12 +317,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="11658.6"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -334,12 +334,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="3912.28"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                 </defs>
@@ -543,12 +543,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="9555.35"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -560,12 +560,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="9858.2"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -577,12 +577,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="13128"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -594,12 +594,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="13147.2"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -611,12 +611,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="15388.4"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -628,12 +628,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="16044.9"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -645,12 +645,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="11122.1"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -662,12 +662,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="9559.42"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -679,12 +679,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="12787.3"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -696,12 +696,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="4542.9"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                 </defs>
@@ -895,12 +895,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="8657.59"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -912,12 +912,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="22640.9"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -929,12 +929,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="22665.6"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -946,12 +946,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="8387.78"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -963,12 +963,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="14605.4"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -980,12 +980,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="22454.4"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -997,12 +997,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="5239.91"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                   <lineargradient
@@ -1014,12 +1014,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     y2="5484.39"
                   >
                     <stop
-                      stop-color="white"
+                      stopColor="white"
                     />
                     <stop
                       offset="1"
-                      stop-color="white"
-                      stop-opacity="0"
+                      stopColor="white"
+                      stopOpacity="0"
                     />
                   </lineargradient>
                 </defs>
@@ -1252,12 +1252,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="10019.8"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1269,12 +1269,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="9370.19"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1286,12 +1286,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="10003.5"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1303,12 +1303,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="9353.9"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1320,12 +1320,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="7531.3"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1337,12 +1337,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="21061.6"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1354,12 +1354,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="21075.2"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1371,12 +1371,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="20884.9"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1388,12 +1388,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="20899.2"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1405,12 +1405,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="11658.6"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1422,12 +1422,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="3912.28"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
               </defs>
@@ -1631,12 +1631,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="9555.35"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1648,12 +1648,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="9858.2"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1665,12 +1665,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="13128"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1682,12 +1682,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="13147.2"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1699,12 +1699,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="15388.4"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1716,12 +1716,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="16044.9"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1733,12 +1733,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="11122.1"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1750,12 +1750,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="9559.42"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1767,12 +1767,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="12787.3"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -1784,12 +1784,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="4542.9"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
               </defs>
@@ -1983,12 +1983,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="8657.59"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2000,12 +2000,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="22640.9"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2017,12 +2017,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="22665.6"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2034,12 +2034,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="8387.78"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2051,12 +2051,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="14605.4"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2068,12 +2068,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="22454.4"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2085,12 +2085,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="5239.91"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
                 <lineargradient
@@ -2102,12 +2102,12 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   y2="5484.39"
                 >
                   <stop
-                    stop-color="white"
+                    stopColor="white"
                   />
                   <stop
                     offset="1"
-                    stop-color="white"
-                    stop-opacity="0"
+                    stopColor="white"
+                    stopOpacity="0"
                   />
                 </lineargradient>
               </defs>
