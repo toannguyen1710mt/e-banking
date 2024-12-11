@@ -6,6 +6,8 @@ export const ERROR_MESSAGES = {
   PASSWORD_INVALID: 'Password must be at least 8 characters long',
   PASSWORD_PATTERN:
     'Password must contain at least one uppercase letter and one special character',
+  PHONE_INVALID: 'Phone number must be exactly 12 digits',
+  PHONE_PATTERN: 'Phone number must only contain digits',
   LOGIN_FAILED: 'Incorrect username or password. Please try again.',
   USERNAME_INVALID: 'Username must be at least 3 characters long',
   FIELD_NOT_SPACE: 'This field cannot be empty or whitespace',

@@ -37,7 +37,7 @@ export const Input = extendVariants(InputNextUI, {
       },
     },
     size: {
-      xs: {
+      md: {
         input: 'w-full h-10 py-2.5 mx-2',
       },
     },
@@ -47,6 +47,6 @@ export const Input = extendVariants(InputNextUI, {
     border: 'default',
     textSize: 'base',
     radius: 'xs',
-    size: 'xs',
+    size: 'md',
   },
 });

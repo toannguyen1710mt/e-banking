@@ -9,3 +9,4 @@ export * from './AnalyticsCard';
 export * from './Select';
 export * from './DailyLimit';
 export * from './Calendar';
+export * from './WizardForm';
