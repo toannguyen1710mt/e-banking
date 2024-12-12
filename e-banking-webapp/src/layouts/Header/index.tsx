@@ -70,10 +70,18 @@ export const Header = () => {
         </NavbarContent>
       </div>
       <NavbarContent data-justify='end'>
-        <button disabled={true} className='cursor-not-allowed'>
+        <button
+          aria-label='search icon'
+          disabled={true}
+          className='cursor-not-allowed'
+        >
           <SearchIcon />
         </button>
-        <button disabled={true} className='cursor-not-allowed'>
+        <button
+          aria-label='notification icon'
+          disabled={true}
+          className='cursor-not-allowed'
+        >
           <NotificationIcon />
         </button>
         <MenuDropdown

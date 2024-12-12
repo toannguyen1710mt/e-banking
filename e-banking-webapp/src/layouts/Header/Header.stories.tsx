@@ -1,12 +1,12 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Components
+// Constants
 import { NavbarItem } from '@/constants';
 import { MOCK_CUSTOM_OPTIONS } from '@/mocks';
 
-// Components
-import { Header } from '.';
+// Layouts
+import { Header } from '@/layouts';
 
 // Mock Data
 const mockMobileMenuOptions = NavbarItem.map((item) => ({
