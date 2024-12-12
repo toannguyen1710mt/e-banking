@@ -11,9 +11,9 @@ export const SLIDESHOW_DATA = [
   {
     id: 2,
     image: <SlideIntegrate />,
-    title: 'Intergrated Banking',
+    title: 'Integrated Banking',
     description:
-      'Open a bank account that seamlessly intergrates with your payment app.',
+      'Open a bank account that seamlessly integrates with your payment app.',
   },
   {
     id: 3,
