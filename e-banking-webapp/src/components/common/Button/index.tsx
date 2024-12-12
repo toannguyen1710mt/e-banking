@@ -18,6 +18,7 @@ export const Button = extendVariants(ButtonNextUI, {
       tertiary: 'bg-background-800 text-foreground-200',
       danger: 'bg-warning text-foreground-200',
       info: 'text-primary-200',
+      overlay: 'bg-overlay',
     },
 
     isIconOnly: {
@@ -27,6 +28,7 @@ export const Button = extendVariants(ButtonNextUI, {
 
     radius: {
       xs: 'rounded',
+      m: 'rounded-md',
       sm: 'rounded-2xl',
       md: 'rounded-3xl',
     },
