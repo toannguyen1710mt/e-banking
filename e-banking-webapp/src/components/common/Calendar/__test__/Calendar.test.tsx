@@ -12,8 +12,12 @@ class MockResizeObserver {
 }
 
 describe('Calendar component', () => {
+  const mockDate = new Date('2024-01-01T00:00:00Z');
+
   beforeEach(() => {
     window.ResizeObserver = MockResizeObserver;
+
+    jest.spyOn(global.Date, 'now').mockImplementation(() => mockDate.getTime());
   });
 
   it('should match snapshot for Calendar', () => {
