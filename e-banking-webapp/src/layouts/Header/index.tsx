@@ -12,7 +12,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 // Constants
-import { IMAGES, NavbarItem } from '@/constants';
+import { IMAGES, NavbarItem, ROUTES } from '@/constants';
 import { MOCK_CUSTOM_OPTIONS } from '@/mocks';
 
 // Components
@@ -22,6 +22,7 @@ import {
   NotificationIcon,
   SearchIcon,
 } from '@/components';
+import Link from 'next/link';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,12 +53,14 @@ export const Header = () => {
             }
             isDivided={true}
           />
-          <Image
-            src={IMAGES.LOGO}
-            alt='Logo EBanking'
-            width={104}
-            height={36}
-          />
+          <Link href={ROUTES.HOME}>
+            <Image
+              src={IMAGES.LOGO}
+              alt='Logo EBanking'
+              width={104}
+              height={36}
+            />
+          </Link>
         </NavbarBrand>
         <NavbarContent
           className='flex gap-[59px] font-normal text-transparentBlack max-[700px]:hidden'
@@ -67,8 +70,12 @@ export const Header = () => {
         </NavbarContent>
       </div>
       <NavbarContent data-justify='end'>
-        <SearchIcon />
-        <NotificationIcon />
+        <button disabled={true} className='cursor-not-allowed'>
+          <SearchIcon />
+        </button>
+        <button disabled={true} className='cursor-not-allowed'>
+          <NotificationIcon />
+        </button>
         <MenuDropdown
           customTriggerElement={<Avatar className='h-6 w-6 rounded-full' />}
           options={MOCK_CUSTOM_OPTIONS}
