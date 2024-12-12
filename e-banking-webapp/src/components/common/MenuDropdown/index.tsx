@@ -26,6 +26,7 @@ export interface MenuOption extends Option {
   startContent?: JSX.Element;
   isDisabled?: boolean;
   isReadOnly?: boolean;
+  customOptionElement?: ReactNode;
 }
 
 export interface MenuDropdownProps
@@ -82,19 +83,24 @@ export const MenuDropdown = ({
         disabledKeys={disabledKeys}
         onAction={onAction}
       >
-        {options.map(({ key, label, startContent, isReadOnly }, index) => (
-          <DropdownItem
-            key={key}
-            isReadOnly={isReadOnly}
-            startContent={startContent}
-            className='relative'
-          >
-            {label}
-            {isDivided && index < options.length - 1 && (
-              <Divider className='absolute bottom-0 left-0 right-0' />
-            )}
-          </DropdownItem>
-        ))}
+        {options.map(
+          (
+            { key, label, startContent, isReadOnly, customOptionElement },
+            index,
+          ) => (
+            <DropdownItem
+              key={key}
+              isReadOnly={isReadOnly}
+              startContent={startContent}
+              className='relative'
+            >
+              {customOptionElement || label}
+              {isDivided && index < options.length - 1 && (
+                <Divider className='absolute bottom-0 left-0 right-0' />
+              )}
+            </DropdownItem>
+          ),
+        )}
       </DropdownMenu>
     </Dropdown>
   );

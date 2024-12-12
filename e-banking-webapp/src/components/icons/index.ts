@@ -37,3 +37,5 @@ export * from './PlusIcon';
 export * from './ChevronRightIcon';
 export * from './HandIcon';
 export * from './SignOutIcon';
+export * from './SearchIcon';
+export * from './NotificationIcon';

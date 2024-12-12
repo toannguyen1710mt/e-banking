@@ -42,6 +42,21 @@ const readOnlyOptions = [
   },
 ];
 
+const customOptions = [
+  {
+    key: 'User Info',
+    label: '',
+    customOptionElement: (
+      <div className='flex flex-col gap-2'>
+        <span>Pheroxios Yehudi</span>
+        <span>Pheroxios@yehudi.com</span>
+      </div>
+    ),
+    isReadOnly: true,
+  },
+  ...defaultOptions,
+];
+
 const meta = {
   title: 'Components/Common/MenuDropdown',
   tags: ['autodocs'],
@@ -80,6 +95,14 @@ export const DividedOptions: Story = {
   args: {
     label: 'Open Menu',
     options: defaultOptions,
+    isDivided: true,
+  },
+};
+
+export const CustomItemOptions: Story = {
+  args: {
+    label: 'Open Menu',
+    options: customOptions,
     isDivided: true,
   },
 };
