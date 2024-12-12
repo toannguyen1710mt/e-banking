@@ -1,1 +1,2 @@
-export * from './SpendingStatistic';
+export * from './SpendingStatistics';
+export * from './BalanceStatistics';
