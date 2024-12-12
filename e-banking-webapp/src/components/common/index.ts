@@ -10,3 +10,4 @@ export * from './Select';
 export * from './DailyLimit';
 export * from './Calendar';
 export * from './WizardForm';
+export * from './Chip';
