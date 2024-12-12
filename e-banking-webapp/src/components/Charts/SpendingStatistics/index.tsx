@@ -8,23 +8,14 @@ import { ApexOptions } from 'apexcharts';
 // Constants
 import { TITLES } from '@/constants';
 
+// Interfaces
+import { ChartProps } from '@/interfaces';
+
 // Themes
 import { colors } from '@/themes';
 
 // Utils
 import { getDownloadIcon } from '@/utils';
-
-interface ChartSeries {
-  name: string;
-  data: number[];
-}
-
-interface ChartProps {
-  series: ChartSeries[];
-  categories: string[];
-  customOptions?: ApexOptions;
-  className?: string;
-}
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
