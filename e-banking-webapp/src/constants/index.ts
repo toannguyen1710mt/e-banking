@@ -8,3 +8,4 @@ export * from './rules';
 export * from './slideshow';
 export * from './navbar';
 export * from './actions';
+export * from './titles';
