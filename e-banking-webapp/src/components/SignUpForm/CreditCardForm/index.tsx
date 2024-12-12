@@ -17,6 +17,7 @@ import { Button, Input, Text } from '@/components';
 import { CreditCardIcon, UserIcon, WalletIcon } from '@/components/icons';
 
 interface ICreditCard<T extends z.ZodType> {
+  schema: T;
   submitHandler: (data: z.infer<T>) => void;
 }
 
