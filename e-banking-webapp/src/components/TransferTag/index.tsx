@@ -3,6 +3,8 @@
 // Libs
 import { ReactNode } from 'react';
 import { Tab } from '@nextui-org/react';
+
+// components
 import { TabsCustom } from '@/components';
 
 interface ITransferTag {
