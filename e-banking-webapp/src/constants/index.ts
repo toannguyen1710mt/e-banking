@@ -9,3 +9,4 @@ export * from './slideshow';
 export * from './navbar';
 export * from './actions';
 export * from './titles';
+export * from './tag';

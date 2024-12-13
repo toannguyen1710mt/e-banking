@@ -1,7 +1,10 @@
-export const GlobalIcon = () => (
+export const GlobalIcon = ({
+  width = '16',
+  height = '16',
+}: React.SVGProps<HTMLOrSVGElement>) => (
   <svg
-    width='16'
-    height='16'
+    width={width}
+    height={height}
     viewBox='0 0 16 16'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -16,14 +19,14 @@ export const GlobalIcon = () => (
       />
       <path
         d='M1.33325 8H14.6666'
-        stroke='black'
+        stroke='currentColor'
         strokeWidth='1.33333'
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <path
         d='M7.99992 1.33325C9.66744 3.15882 10.6151 5.52794 10.6666 7.99992C10.6151 10.4719 9.66744 12.841 7.99992 14.6666C6.3324 12.841 5.38475 10.4719 5.33325 7.99992C5.38475 5.52794 6.3324 3.15882 7.99992 1.33325V1.33325Z'
-        stroke='black'
+        stroke='currentColor'
         strokeWidth='1.33333'
         strokeLinecap='round'
         strokeLinejoin='round'
@@ -31,7 +34,7 @@ export const GlobalIcon = () => (
     </g>
     <defs>
       <clipPath id='clip0_1_20549'>
-        <rect width='16' height='16' fill='white' />
+        <rect width='16' height='16' fill='currentColor' />
       </clipPath>
     </defs>
   </svg>

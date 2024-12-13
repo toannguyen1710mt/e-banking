@@ -9,3 +9,4 @@ export * from './TargetTile';
 export * from './QuickAction';
 export * from './SignUpForm';
 export * from './Charts';
+export * from './TransferTag';
