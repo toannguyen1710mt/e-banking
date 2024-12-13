@@ -20,4 +20,5 @@ export const colors = {
   lightGreen: '#C2EEC2',
   lightRed: '#F3C9C9',
   lightAqua: '#D9EAE8',
+  semiTransparentDimGray: 'rgba(128, 128, 128, 1)',
 };

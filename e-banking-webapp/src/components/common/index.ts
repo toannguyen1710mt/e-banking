@@ -11,3 +11,4 @@ export * from './DailyLimit';
 export * from './Calendar';
 export * from './WizardForm';
 export * from './Chip';
+export * from './Table';
