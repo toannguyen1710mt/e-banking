@@ -1,6 +1,6 @@
 import { GlobalIcon, UserIcon } from '@/components';
 
-export const TRANSFER_TAG = [
+export const TRANSFER_TABS = [
   {
     keyTab: 'account',
     title: 'To my Account',

@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Constants
-import { TRANSFER_TAG } from '@/constants';
+import { TRANSFER_TABS } from '@/constants';
 
 // Components
 import { TransferTag } from '@/components';
@@ -22,6 +22,6 @@ type Story = StoryObj<typeof TransferTag>;
 
 export const Default: Story = {
   args: {
-    TransferTabs: TRANSFER_TAG,
+    TransferTabs: TRANSFER_TABS,
   },
 };
