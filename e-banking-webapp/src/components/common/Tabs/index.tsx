@@ -1,3 +1,5 @@
+'use client';
+
 // Libs
 import { extendVariants, Tabs as TabsNextUI } from '@nextui-org/react';
 
