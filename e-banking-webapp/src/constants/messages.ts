@@ -27,4 +27,7 @@ export const ERROR_MESSAGES = {
   INVALID_CREDENTIALS: 'Invalid credentials!',
   INVALID_USER_PERMISSIONS: 'Invalid user permissions!',
   USERNAME_PASSWORD_INVALID: 'Username or Password is invalid!',
+
+  // Empty data
+  EMPTY_DATA: 'No data available!',
 };
