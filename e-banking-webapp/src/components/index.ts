@@ -10,3 +10,4 @@ export * from './QuickAction';
 export * from './SignUpForm';
 export * from './Charts';
 export * from './Sidebar';
+export * from './CreditCard';

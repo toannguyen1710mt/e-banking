@@ -10,3 +10,7 @@
 export const formatNumberWithCommas = (number: number): string => {
   return new Intl.NumberFormat('en-US').format(number);
 };
+
+export const formatCardNumber = (cardNumber: string) => {
+  return cardNumber.replace(/(\d{4})(?=\d)/g, '$1 ');
+};

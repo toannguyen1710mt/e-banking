@@ -39,3 +39,6 @@ export * from './HandIcon';
 export * from './SignOutIcon';
 export * from './SearchIcon';
 export * from './NotificationIcon';
+export * from './PayPassIcon';
+export * from './ChipIcon';
+export * from './MastercardIcon';
