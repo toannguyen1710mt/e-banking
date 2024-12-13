@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransferConfirm component renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="flex w-[252px] flex-col items-center text-center"
+  >
+    <span
+      class="text-sm font-semibold text-navyBlue"
+    >
+      Your are about to transfer
+    </span>
+    <span
+      class="mt-3 text-4xl font-bold text-navyBlue"
+    >
+      $
+      1500
+    </span>
+    <span
+      class="mt-3 text-xs font-medium text-transparentBlack"
+    >
+      From your main wallet to your Savings wallet, this action cannot be undone once approved...
+    </span>
+    <div
+      class="mt-10 flex gap-6"
+    >
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-warning text-foreground-200 rounded px-[14px] py-[10px] text-xs font-semibold"
+        type="button"
+      >
+        Cancel
+      </button>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-navyBlue text-white rounded px-[14px] py-[10px] text-xs font-semibold"
+        type="button"
+      >
+        Procced
+      </button>
+    </div>
+  </div>
+</div>
+`;
