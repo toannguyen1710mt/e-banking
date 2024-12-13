@@ -28,7 +28,7 @@ export const Button = extendVariants(ButtonNextUI, {
 
     radius: {
       xs: 'rounded',
-      lg: 'rounded-md',
+      xst: 'rounded-md',
       sm: 'rounded-2xl',
       md: 'rounded-3xl',
     },

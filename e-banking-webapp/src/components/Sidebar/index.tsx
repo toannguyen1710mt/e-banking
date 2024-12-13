@@ -25,7 +25,7 @@ export const Sidebar = ({ sidebarItem }: ISidebar) => {
             <Button
               className='text-black'
               color={buttonColor}
-              radius='lg'
+              radius='xst'
               startContent={icon}
             >
               {label}
