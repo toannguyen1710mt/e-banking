@@ -6,7 +6,7 @@ import { Tab } from '@nextui-org/react';
 import { TabsCustom } from '@/components';
 
 interface ITransferTag {
-  TransferTagItem: {
+  TransferTabs: {
     keyTab: string;
     title: string;
     description: string;
@@ -16,11 +16,11 @@ interface ITransferTag {
   }[];
 }
 
-export const TransferTag = ({ TransferTagItem }: ITransferTag) => (
+export const TransferTag = ({ TransferTabs }: ITransferTag) => (
   <div className='flex h-full flex-col px-4'>
     <div className='flex h-full w-full flex-col'>
       <TabsCustom aria-label='Options' placement='start'>
-        {TransferTagItem.map(
+        {TransferTabs.map(
           ({ keyTab, title, description, icon, content, textClass }) => {
             const appliedTextClass =
               textClass ||

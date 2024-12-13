@@ -22,6 +22,6 @@ type Story = StoryObj<typeof TransferTag>;
 
 export const Default: Story = {
   args: {
-    TransferTagItem: TRANSFER_TAG,
+    TransferTabs: TRANSFER_TAG,
   },
 };
