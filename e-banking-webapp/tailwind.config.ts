@@ -54,6 +54,7 @@ module.exports = {
               100: colors.transparentBlack,
               200: colors.green,
               300: colors.java,
+              400: colors.eastBay,
             },
             success: colors.forestGreen,
             warning: colors.red,

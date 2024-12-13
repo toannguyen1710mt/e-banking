@@ -36,6 +36,9 @@ import {
   SignOutIcon,
   SearchIcon,
   NotificationIcon,
+  ChipIcon,
+  PayPassIcon,
+  MastercardIcon,
 } from '@/components';
 import { ArrowDownIcon } from './ArrowDownIcon';
 import { HouseIcon } from './HouseIcon';
@@ -77,6 +80,9 @@ const icons = [
   { component: SignOutIcon, label: 'Sign Out' },
   { component: SearchIcon, label: 'Search' },
   { component: NotificationIcon, label: 'Notification' },
+  { component: ChipIcon, label: 'Chip' },
+  { component: PayPassIcon, label: 'Pay Pass' },
+  { component: MastercardIcon, label: 'Mastercard' },
 ];
 
 const meta: Meta = {
