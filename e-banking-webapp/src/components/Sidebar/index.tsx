@@ -18,8 +18,7 @@ export const Sidebar = ({ sidebarItem }: ISidebar) => {
   return (
     <aside className='h-screen w-[195px] border-r-1 border-semiTransparentDimGray px-[14px] pt-6'>
       {sidebarItem.map(({ label, href, icon }) => {
-        const isActive = pathname === href;
-        const buttonColor = isActive ? 'overlay' : 'outline';
+        const buttonColor = pathname === href ? 'overlay' : 'outline';
 
         return (
           <Link key={label} href={href}>
