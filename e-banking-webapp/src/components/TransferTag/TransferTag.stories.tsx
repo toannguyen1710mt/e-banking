@@ -1,7 +1,14 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
-import { TransferTag } from './';
-import { GlobalIcon, SettingIcon, SignOutIcon, UserIcon } from '@/components'; // Example icons
+
+// Components
+import {
+  GlobalIcon,
+  SettingIcon,
+  SignOutIcon,
+  UserIcon,
+  TransferTag,
+} from '@/components';
 
 const meta = {
   title: 'Components/TransferTag',
