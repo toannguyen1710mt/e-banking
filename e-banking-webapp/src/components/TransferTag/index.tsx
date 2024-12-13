@@ -23,7 +23,7 @@ export const TransferTag = ({ tabs, classNames }: ITransferTag) => {
           placement='start'
           classNames={{
             panel: cn('pl-[61px]', classNames?.panel),
-            tab: cn('justify-start', classNames?.tab),
+            tab: cn('justify-start bg-white', classNames?.tab),
             tabList: cn('bg-white', classNames?.tabList),
             tabContent: cn(
               'group-data-[selected=true]:text-white text-navyBlue',
