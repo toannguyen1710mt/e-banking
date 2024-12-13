@@ -1,7 +1,6 @@
 'use client';
 
 // Libs
-
 import { ReactNode } from 'react';
 import { Tab } from '@nextui-org/react';
 import { TabsCustom } from '@/components';
