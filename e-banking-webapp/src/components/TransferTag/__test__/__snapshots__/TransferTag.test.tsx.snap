@@ -22,7 +22,7 @@ exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
           <div
             aria-label="Options"
             aria-orientation="horizontal"
-            class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide rounded-medium flex-col bg-white"
+            class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide rounded-medium flex-col bg-lightGraySolid"
             data-slot="tabList"
             id="react-aria-:r0:"
             role="tablist"
@@ -30,7 +30,7 @@ exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
             <button
               aria-controls="react-aria-:r0:-tabpanel-account"
               aria-selected="true"
-              class="z-0 px-3 py-1 flex group relative items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small rounded-small justify-start bg-white h-full w-full"
+              class="z-0 px-3 py-1 flex group relative items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small rounded-small bg-white justify-start h-full w-full"
               data-key="account"
               data-selected="true"
               data-slot="tab"
@@ -41,7 +41,7 @@ exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
               value="account"
             >
               <span
-                class="absolute z-0 inset-0 rounded-small dark:bg-default shadow-small w-full bg-navyBlue"
+                class="absolute z-0 inset-0 rounded-small dark:bg-default shadow-small bg-navyBlue w-full"
                 data-slot="cursor"
               />
               <div
@@ -84,7 +84,7 @@ exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="z-0 px-3 py-1 flex group relative items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small rounded-small justify-start bg-white h-full w-full"
+              class="z-0 px-3 py-1 flex group relative items-center cursor-pointer transition-opacity tap-highlight-transparent data-[disabled=true]:cursor-not-allowed data-[disabled=true]:opacity-30 data-[hover-unselected=true]:opacity-disabled outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small rounded-small bg-white justify-start h-full w-full"
               data-key="global"
               data-slot="tab"
               id="react-aria-:r0:-tab-global"

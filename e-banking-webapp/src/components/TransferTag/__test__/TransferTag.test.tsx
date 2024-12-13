@@ -23,14 +23,13 @@ const mockProps = [
 
 describe('TransferTag Component', () => {
   test('renders correctly and matches snapshot', () => {
-    const { container } = render(<TransferTag tabs={mockProps} />);
+    const { container } = render(<TransferTag TransferTagItem={mockProps} />);
     expect(container).toMatchSnapshot();
   });
 
   test('renders all tabs with correct titles and descriptions', () => {
-    render(<TransferTag tabs={mockProps} />);
+    render(<TransferTag TransferTagItem={mockProps} />);
 
-    // Verify each tab title and description
     mockProps.forEach(({ title, description }) => {
       expect(screen.getByText(title)).toBeInTheDocument();
       expect(screen.getByText(description)).toBeInTheDocument();

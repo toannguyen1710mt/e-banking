@@ -1,58 +1,57 @@
 'use client';
 
 // Libs
-import { cn, Tab, Tabs, TabsProps } from '@nextui-org/react';
-import { ReactNode } from 'react';
 
-interface ITransferTag extends TabsProps {
-  tabs: {
+import { ReactNode } from 'react';
+import { Tab } from '@nextui-org/react';
+import { TabsCustom } from '@/components';
+
+interface ITransferTag {
+  TransferTagItem: {
     keyTab: string;
     title: string;
     description: string;
     icon: ReactNode;
     content: ReactNode;
+    textClass?: string;
   }[];
 }
 
-export const TransferTag = ({ tabs, classNames }: ITransferTag) => (
+export const TransferTag = ({ TransferTagItem }: ITransferTag) => (
   <div className='flex h-full flex-col px-4'>
     <div className='flex h-full w-full flex-col'>
-      <Tabs
-        aria-label='Options'
-        placement='start'
-        classNames={{
-          panel: cn('pl-[61px]', classNames?.panel),
-          tab: cn('justify-start bg-white', classNames?.tab),
-          tabList: cn('bg-white', classNames?.tabList),
-          tabContent: cn(
-            'group-data-[selected=true]:text-white text-navyBlue',
-            classNames?.tabContent,
-          ),
-          cursor: cn('w-full bg-navyBlue', classNames?.cursor),
-          base: classNames?.base,
-        }}
-      >
-        {tabs.map(({ keyTab, title, description, icon, content }) => (
-          <Tab
-            key={keyTab}
-            value={keyTab}
-            className='h-full w-full'
-            title={
-              <div className='flex items-center gap-4 px-8 py-2'>
-                {icon}
-                <div className='flex flex-col text-left'>
-                  <span className='text-sm font-medium'>{title}</span>
-                  <span className='text-[10px] font-normal text-transparentBlack group-data-[selected=true]:text-white'>
-                    {description}
-                  </span>
-                </div>
-              </div>
-            }
-          >
-            {content}
-          </Tab>
-        ))}
-      </Tabs>
+      <TabsCustom aria-label='Options' placement='start'>
+        {TransferTagItem.map(
+          ({ keyTab, title, description, icon, content, textClass }) => {
+            const appliedTextClass =
+              textClass ||
+              'text-transparentBlack group-data-[selected=true]:text-white';
+
+            return (
+              <Tab
+                key={keyTab}
+                value={keyTab}
+                className='h-full w-full'
+                title={
+                  <div className='flex items-center gap-4 px-8 py-2'>
+                    {icon}
+                    <div className='flex flex-col text-left'>
+                      <span className='text-sm font-medium'>{title}</span>
+                      <span
+                        className={`text-[10px] font-normal ${appliedTextClass}`}
+                      >
+                        {description}
+                      </span>
+                    </div>
+                  </div>
+                }
+              >
+                {content}
+              </Tab>
+            );
+          },
+        )}
+      </TabsCustom>
     </div>
   </div>
 );
