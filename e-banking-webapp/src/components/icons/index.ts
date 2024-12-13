@@ -42,3 +42,4 @@ export * from './NotificationIcon';
 export * from './PayPassIcon';
 export * from './ChipIcon';
 export * from './MastercardIcon';
+export * from './CloseIcon';
