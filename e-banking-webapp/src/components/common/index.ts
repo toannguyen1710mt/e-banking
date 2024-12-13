@@ -13,3 +13,4 @@ export * from './WizardForm';
 export * from './Chip';
 export * from './Table';
 export * from './Tabs';
+export * from './Modal';
