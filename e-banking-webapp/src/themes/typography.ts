@@ -9,7 +9,8 @@ export const fontSize = {
   '2xs': '10px',
   xs: '12px',
   sm: '14px',
-  '3xls': '32px',
+  '3xl': '32px',
+  '4xl': '36px',
 };
 
 export const borderRadius = {
