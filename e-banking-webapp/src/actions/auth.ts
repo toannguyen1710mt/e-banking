@@ -26,9 +26,8 @@ export const authenticateUser = async (formData: TSignInFormData) => {
     await signIn('credentials', formData);
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.USERNAME_PASSWORD_INVALID;
+      throw ERROR_MESSAGES.USERNAME_PASSWORD_INVALID;
     }
-    throw error;
   }
 };
 
@@ -41,9 +40,8 @@ export const handleSignUp = async (signUpData: TSignUpPayload) => {
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.SIGN_UP_ERROR;
+      throw ERROR_MESSAGES.SIGN_UP_ERROR;
     }
-    throw error;
   }
 };
 
@@ -53,9 +51,8 @@ export const updateUser = async (id: number, payload: TUpdateInfo) => {
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.SIGN_UP_ERROR;
+      throw ERROR_MESSAGES.SIGN_UP_ERROR;
     }
-    throw error;
   }
 };
 
@@ -68,9 +65,8 @@ export const addAccount = async (payload: IAccountPayload) => {
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.SIGN_UP_ERROR;
+      throw ERROR_MESSAGES.SIGN_UP_ERROR;
     }
-    throw error;
   }
 };
 
@@ -80,8 +76,7 @@ export const addCard = async (payload: ICardPayload) => {
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.SIGN_UP_ERROR;
+      throw ERROR_MESSAGES.SIGN_UP_ERROR;
     }
-    throw error;
   }
 };
