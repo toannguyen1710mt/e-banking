@@ -13,13 +13,12 @@ import { ROUTES } from '@/constants';
 import { Text } from '@/components';
 
 export const SuccessNotify = () => (
-  <div className='flex w-full flex-col gap-4 bg-white'>
+  <div className='flex w-full flex-col items-center gap-4 bg-white'>
     <Image
-      src={'/images/logo.webp'}
+      src={'/images/successful.webp'}
       width={328}
       height={312}
       alt='Illustration of a successful sign-up'
-      className='md:hidden'
     />
     <Text
       size={TEXT_SIZE.SM}
