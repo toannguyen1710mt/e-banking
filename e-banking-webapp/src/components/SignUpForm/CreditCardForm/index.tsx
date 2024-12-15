@@ -2,6 +2,7 @@
 
 import { Controller } from 'react-hook-form';
 import { z } from 'zod';
+import { useState } from 'react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -30,11 +31,17 @@ export const CreditCardForm = <T extends z.ZodType>({
     nextStep,
   } = useWizardFormContext();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const handler = handleSubmit(submitHandler);
-    handler(e);
+    await handler(e);
+
+    setIsLoading(false);
+
     nextStep(e);
   };
 
@@ -51,7 +58,7 @@ export const CreditCardForm = <T extends z.ZodType>({
 
         <Controller
           control={control}
-          name='card.holdersName'
+          name='card.holderName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
@@ -126,6 +133,7 @@ export const CreditCardForm = <T extends z.ZodType>({
         isDisabled={!isStepValid}
         type='button'
         color='primary'
+        isLoading={isLoading}
         onClick={onSubmit}
       >
         Continue

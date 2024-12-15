@@ -60,7 +60,7 @@ export const ContactForm = () => {
 
         <Controller
           control={control}
-          name='user.postalAddress'
+          name='user.postal'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='postalAddress'

@@ -10,6 +10,12 @@ import { SignUpSchema, SIGNUP_FORM_DEFAULT_VALUES } from '@/constants';
 // Context
 import { WizardFormContextProvider } from '@/context';
 
+// Actions
+import { addAccount, addCard, handleSignUp, updateUser } from '@/actions/auth';
+
+// Interfaces
+import { IAccountPayload, ICardPayload } from '@/interfaces';
+
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import { ContactForm } from '@/components/SignUpForm/ContactForm';
@@ -28,9 +34,39 @@ export const SignUpForm = () => {
     mode: 'onBlur',
   });
 
-  //  TODO: add submit handler
-  const submitHandler = (data: FormValues) => {
-    console.log('Form submitted:', data);
+  const submitHandler = async (data: FormValues) => {
+    const { email, password, username, ...rest } = data.user;
+
+    const response = await handleSignUp({
+      email,
+      password,
+      username,
+    });
+
+    if (response?.user) {
+      const payloadAccount: IAccountPayload = {
+        user: response?.user.id,
+        data: {
+          accountNumber: '123456789888',
+          balance: 19800,
+          type: 'Checking',
+          currency: 'KSH',
+          name: 'TpBank',
+        },
+      };
+
+      await updateUser(response.user.id, rest);
+
+      const responseAccount = await addAccount(payloadAccount);
+
+      if (responseAccount) {
+        const payloadCard: ICardPayload = {
+          account: responseAccount.data.id,
+          data: data.card,
+        };
+        await addCard(payloadCard);
+      }
+    }
   };
 
   // Step content to register user
