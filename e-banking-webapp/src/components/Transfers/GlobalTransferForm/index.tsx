@@ -3,7 +3,6 @@
 // Third Party
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm, useWatch } from 'react-hook-form';
-import { useMemo } from 'react';
 
 // Constants
 import {
@@ -46,25 +45,20 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
     name: 'toAccountType',
   });
 
-  const countryCode = useMemo(() => {
-    return (
-      OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
-        (option) => option.key === toAccountTypeValue,
-      )?.label || ''
-    );
-  }, [toAccountTypeValue]);
+  const countryCode = () =>
+    OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
+      (option) => option.key === toAccountTypeValue,
+    )?.label || '';
 
-  const filteredFromAccountOptions = useMemo(() => {
-    return TRANSFER_FORM_GLOBAL_OPTIONS.filter(
+  const filteredFromAccountOptions = () =>
+    TRANSFER_FORM_GLOBAL_OPTIONS.filter(
       (option) => option.key !== toAccountTypeValue,
     );
-  }, [toAccountTypeValue]);
 
-  const filteredToAccountOptions = useMemo(() => {
-    return TRANSFER_FORM_GLOBAL_OPTIONS.filter(
+  const filteredToAccountOptions = () =>
+    TRANSFER_FORM_GLOBAL_OPTIONS.filter(
       (option) => option.key !== fromGlobalTypeValue,
     );
-  }, [fromGlobalTypeValue]);
 
   return (
     <form className='flex flex-col gap-4'>
@@ -82,7 +76,7 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
             <Select
               label='Country'
               labelPlacement='outside'
-              options={filteredToAccountOptions}
+              options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
               errorMessage={errors.toAccountType?.message}
@@ -107,7 +101,7 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
               <Select
                 label='Account'
                 labelPlacement='outside'
-                options={filteredFromAccountOptions}
+                options={filteredFromAccountOptions()}
                 classNames={{ label: 'text-sm' }}
                 value={String(value)}
                 errorMessage={errors.fromAccountType?.message}
@@ -137,7 +131,7 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
-                value={countryCode}
+                value={countryCode()}
                 readOnly
                 classNames={{
                   base: 'w-11',
