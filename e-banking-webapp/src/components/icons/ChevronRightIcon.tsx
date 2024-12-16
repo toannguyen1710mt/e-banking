@@ -16,7 +16,7 @@ export const ChevronRightIcon = () => (
     <path
       d='M4.5 12.75L8.25 9L4.5 5.25'
       stroke='currentColor'
-      stroke-width='2'
+      strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
     />
