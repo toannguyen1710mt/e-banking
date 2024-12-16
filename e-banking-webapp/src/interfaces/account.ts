@@ -1,20 +1,10 @@
 // Interfaces
-import { CurrencyUnit, ICard, Transaction } from '@/interfaces';
+import { CurrencyUnit, ICard, ITransaction } from '@/interfaces';
 
 export enum AccountType {
   MAIN = 'Main',
   SAVINGS = 'Savings',
   CHECKINGS = 'Checkings',
-}
-
-export interface Account {
-  id: string;
-  userId: string;
-  name: string;
-  accountNumber: string;
-  balance: number;
-  type: AccountType;
-  currencyUnit: CurrencyUnit;
 }
 
 export interface IAccount {
@@ -23,9 +13,10 @@ export interface IAccount {
   balance: number;
   type: string;
   currency: string;
-  transactions?: Transaction[];
+  transactions?: ITransaction[];
   cards?: ICard[];
   name: string;
+  currencyUnit?: CurrencyUnit;
 }
 
 export interface IAccountPayloadData

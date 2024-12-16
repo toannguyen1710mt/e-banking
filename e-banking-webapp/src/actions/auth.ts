@@ -38,6 +38,7 @@ export const handleSignUp = async (signUpData: TSignUpPayload) => {
       API_ENDPOINTS.SIGN_UP,
       signUpData,
     );
+
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
@@ -52,6 +53,7 @@ export const updateUser = async (id: number, payload: TUpdateInfo) => {
       `${API_ENDPOINTS.USERS}/${id}`,
       payload,
     );
+
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
@@ -66,6 +68,7 @@ export const addAccount = async (payload: IAccountPayload) => {
       API_ENDPOINTS.ACCOUNTS,
       payload,
     );
+
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
@@ -77,6 +80,7 @@ export const addAccount = async (payload: IAccountPayload) => {
 export const addCard = async (payload: ICardPayload) => {
   try {
     const response = await httpClient.post(API_ENDPOINTS.CARDS, payload);
+
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {

@@ -1,16 +1,16 @@
 // Interfaces
-import { Column, Status, Transaction } from '@/interfaces';
+import { Column, Status, ITransaction } from '@/interfaces';
 
 // Components
 import { Chip, MoreVerticalIcon } from '@/components';
 
-export const MOCK_COLUMNS: Column<Transaction>[] = [
+export const MOCK_COLUMNS: Column<ITransaction>[] = [
   { key: 'transactionId', title: 'Transaction ID' },
   { key: 'transactionDate', title: 'Transaction Date' },
   {
     key: 'status',
     title: 'Status',
-    renderCell: (item: Transaction) => (
+    renderCell: (item: ITransaction) => (
       <Chip
         text={item.status}
         bgColor={
@@ -24,7 +24,7 @@ export const MOCK_COLUMNS: Column<Transaction>[] = [
   {
     key: 'amount',
     title: 'Amount',
-    renderCell: (item: Transaction) => (
+    renderCell: (item: ITransaction) => (
       <>
         {item.currencyUnit} {item.amount}
       </>

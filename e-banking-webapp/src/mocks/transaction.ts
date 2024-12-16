@@ -1,10 +1,10 @@
 // Interfaces
-import { Status, Transaction } from '@/interfaces';
+import { Status, ITransaction } from '@/interfaces';
 
 // Utils
 import { formatDate } from '@/utils';
 
-export const MOCK_TRANSACTIONS: Transaction[] = [
+export const MOCK_TRANSACTIONS: ITransaction[] = [
   {
     id: 'TX12345',
     documentId: 'DOC1001',
