@@ -16,8 +16,6 @@ export const SuccessNotify = () => (
   <div className='flex w-full flex-col items-center gap-4 bg-white'>
     <Image
       src={IMAGES.SUCCESS_IMAGE}
-      width={328}
-      height={312}
       alt='Illustration of a successful sign-up'
     />
     <Text
