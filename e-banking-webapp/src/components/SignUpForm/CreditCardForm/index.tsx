@@ -1,6 +1,7 @@
 'use client';
 
 import { Controller } from 'react-hook-form';
+import { z } from 'zod';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -15,11 +16,27 @@ import { useWizardFormContext } from '@/context';
 import { Button, Input, Text } from '@/components';
 import { CreditCardIcon, UserIcon, WalletIcon } from '@/components/icons';
 
-export const CreditCardForm = () => {
+interface ICreditCard<T extends z.ZodType> {
+  schema: T;
+  submitHandler: (data: z.infer<T>) => void;
+}
+
+export const CreditCardForm = <T extends z.ZodType>({
+  submitHandler,
+}: ICreditCard<T>) => {
   const {
-    form: { control },
+    form: { control, handleSubmit },
     isStepValid,
+    nextStep,
   } = useWizardFormContext();
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const handler = handleSubmit(submitHandler);
+    handler(e);
+    nextStep(e);
+  };
 
   return (
     <>
@@ -105,7 +122,12 @@ export const CreditCardForm = () => {
         </div>
       </div>
 
-      <Button isDisabled={!isStepValid} type='submit' color='primary'>
+      <Button
+        isDisabled={!isStepValid}
+        type='button'
+        color='primary'
+        onClick={onSubmit}
+      >
         Continue
       </Button>
     </>

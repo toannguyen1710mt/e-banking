@@ -713,7 +713,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
               <h2
                 class="text-foreground-200 text-3xls font-medium mb-2"
               >
-                Intergrated Banking
+                Integrated Banking
               </h2>
               <div
                 class="flex items-start gap-6"
@@ -742,7 +742,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                 <p
                   class="text-foreground-200 text-lg font-medium"
                 >
-                  Open a bank account that seamlessly intergrates with your payment app.
+                  Open a bank account that seamlessly integrates with your payment app.
                 </p>
               </div>
             </div>
@@ -1801,7 +1801,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
             <h2
               class="text-foreground-200 text-3xls font-medium mb-2"
             >
-              Intergrated Banking
+              Integrated Banking
             </h2>
             <div
               class="flex items-start gap-6"
@@ -1830,7 +1830,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
               <p
                 class="text-foreground-200 text-lg font-medium"
               >
-                Open a bank account that seamlessly intergrates with your payment app.
+                Open a bank account that seamlessly integrates with your payment app.
               </p>
             </div>
           </div>

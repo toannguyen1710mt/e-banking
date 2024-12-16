@@ -90,7 +90,7 @@ export const Slideshow = ({ onGetStarted }: SlideshowProps) => {
               <div
                 key={index}
                 className={`h-3 rounded-full transition-all duration-300 ${getDotClassName}`}
-              ></div>
+              />
             );
           })}
         </div>

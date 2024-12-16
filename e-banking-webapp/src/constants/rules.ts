@@ -22,7 +22,7 @@ const futureMonth = z.string().refine(
 
 // Grouping the schemas under different steps
 export const SignUpSchema = createStepSchema({
-  account: z
+  user: z
     .object({
       username: z
         .string()
@@ -40,20 +40,18 @@ export const SignUpSchema = createStepSchema({
         .min(8, ERROR_MESSAGES.PASSWORD_INVALID)
         .regex(REGEX.PASSWORD, ERROR_MESSAGES.PASSWORD_PATTERN),
       confirmPassword: z.string().trim(), // Trim spaces before validation
+      phone: z
+        .string()
+        .trim()
+        .length(12, ERROR_MESSAGES.PHONE_INVALID)
+        .regex(/^\d+$/, ERROR_MESSAGES.PHONE_PATTERN),
+      country: z.string().trim(),
+      postalAddress: z.string().trim(),
     })
     .refine((data) => data.password === data.confirmPassword, {
       message: ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
       path: ['confirmPassword'],
     }),
-  contact: z.object({
-    phone: z
-      .string()
-      .trim()
-      .length(12, ERROR_MESSAGES.PHONE_INVALID)
-      .regex(/^\d+$/, ERROR_MESSAGES.PHONE_PATTERN),
-    country: z.string().trim(),
-    postalAddress: z.string().trim(),
-  }),
   card: z.object({
     holdersName: z.string().min(1, 'Holders Name is required'),
     cardNumber: z.string().length(12, 'Card number must be exactly 12 digits'),

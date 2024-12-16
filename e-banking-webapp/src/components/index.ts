@@ -14,3 +14,4 @@ export * from './Sidebar';
 export * from './CreditCard';
 export * from './Transfers';
 export * from './ExpenseAnalysis';
+export * from './StepProgress';
