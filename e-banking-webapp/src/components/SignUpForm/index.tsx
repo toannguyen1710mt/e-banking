@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
-import { SignUpSchema } from '@/constants';
+import { SignUpSchema, SIGNUP_FORM_DEFAULT_VALUES } from '@/constants';
 
 // Context
 import { WizardFormContextProvider } from '@/context';
@@ -23,23 +23,7 @@ type FormValues = z.infer<typeof SignUpSchema>;
 export const SignUpForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(SignUpSchema),
-    defaultValues: {
-      user: {
-        username: 'ngan',
-        email: 'ngan@gmail.com',
-        password: '1234@Abc',
-        confirmPassword: '1234@Abc',
-        phone: '123456789123',
-        country: 'UK',
-        postalAddress: '344',
-      },
-      card: {
-        holdersName: 'ngan',
-        cardNumber: '123456789044',
-        expireAt: '',
-        ccv: '444',
-      },
-    },
+    defaultValues: SIGNUP_FORM_DEFAULT_VALUES,
     reValidateMode: 'onBlur',
     mode: 'onBlur',
   });
