@@ -1,7 +1,7 @@
 'use client';
 
 // Libs
-import { Controller, useForm } from 'react-hook-form';
+import { Controller, useForm, useWatch } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
@@ -20,7 +20,6 @@ export const InternalTransferForm = () => {
   const {
     control,
     formState: { errors, isValid, isDirty },
-    watch,
   } = useForm<InternalTransferFormType>({
     mode: 'all',
     defaultValues: {
@@ -29,6 +28,16 @@ export const InternalTransferForm = () => {
       amount: 0,
     },
     resolver: zodResolver(InternalTransferFormSchema),
+  });
+
+  const fromAccountTypeValue = useWatch({
+    control,
+    name: 'fromAccountType',
+  });
+
+  const toAccountTypeValue = useWatch({
+    control,
+    name: 'toAccountType',
   });
 
   return (
@@ -44,7 +53,7 @@ export const InternalTransferForm = () => {
         name='toAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
           const filteredOptions = TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
-            (option) => option.key !== watch('fromAccountType'),
+            (option) => option.key !== fromAccountTypeValue,
           );
 
           return (
@@ -80,7 +89,7 @@ export const InternalTransferForm = () => {
         name='fromAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
           const filteredOptions = TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
-            (option) => option.key !== watch('toAccountType'),
+            (option) => option.key !== toAccountTypeValue,
           );
 
           return (
