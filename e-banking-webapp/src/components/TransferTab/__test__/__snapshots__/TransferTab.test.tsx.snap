@@ -173,7 +173,9 @@ exports[`TransferTab Component renders correctly and matches snapshot 1`] = `
           role="tabpanel"
           tabindex="0"
         >
-          <p>
+          <p
+            class="text-primary-200 text-base font-medium"
+          >
             Account
           </p>
         </div>

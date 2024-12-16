@@ -1,5 +1,5 @@
 // Components
-import { GlobalIcon, UserIcon } from '@/components';
+import { GlobalIcon, UserIcon, Text } from '@/components';
 
 export const TRANSFER_TABS = [
   {
@@ -7,13 +7,13 @@ export const TRANSFER_TABS = [
     title: 'To my Account',
     description: 'Instant transfer between your own accounts',
     icon: <UserIcon width={32} height={32} />,
-    content: <p>Account</p>,
+    content: <Text>Account</Text>,
   },
   {
     keyTab: 'global',
     title: 'Global Tranfer',
     description: 'Transfer Money across the globe',
     icon: <GlobalIcon width={32} height={32} />,
-    content: <p>Global</p>,
+    content: <Text>Global</Text>,
   },
 ];
