@@ -25,3 +25,5 @@ export const MOCK_BALANCE_STATISTICS_CHART_DATA = {
   ],
   categories: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
 };
+
+export const MOCK_SERIES_EXPENSE_ANALYSIS = [22, 45, 35, 40];
