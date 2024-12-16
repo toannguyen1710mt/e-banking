@@ -10,21 +10,18 @@ import { AccountType, GlobalType } from '@/interfaces';
 const createTransferFormSchema = <T extends Record<string, string>>(
   accountEnum: T,
 ) => {
+  const accountTypeValidator = () =>
+    z
+      .nativeEnum(accountEnum, {
+        errorMap: () => ({ message: ERROR_MESSAGES.FIELD_REQUIRED }),
+      })
+      .refine((val) => val !== undefined, {
+        message: ERROR_MESSAGES.FIELD_REQUIRED,
+      });
+
   return z.object({
-    fromAccountType: z
-      .nativeEnum(accountEnum, {
-        errorMap: () => ({ message: ERROR_MESSAGES.FIELD_REQUIRED }),
-      })
-      .refine((val) => val !== undefined, {
-        message: ERROR_MESSAGES.FIELD_REQUIRED,
-      }),
-    toAccountType: z
-      .nativeEnum(accountEnum, {
-        errorMap: () => ({ message: ERROR_MESSAGES.FIELD_REQUIRED }),
-      })
-      .refine((val) => val !== undefined, {
-        message: ERROR_MESSAGES.FIELD_REQUIRED,
-      }),
+    fromAccountType: accountTypeValidator(),
+    toAccountType: accountTypeValidator(),
     amount: z.coerce
       .string()
       .min(1, ERROR_MESSAGES.FIELD_REQUIRED)
