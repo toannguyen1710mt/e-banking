@@ -17,7 +17,7 @@ export interface ITransaction {
 }
 
 export type TransactionCreateData = Omit<
-  Transaction,
+  ITransaction,
   'id' | 'documentId' | 'createdAt' | 'updatedAt' | 'publishedAt'
 >;
 

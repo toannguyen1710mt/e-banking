@@ -13,6 +13,5 @@ export * from './tab';
 export * from './sidebar';
 export * from './balance';
 export * from './charts';
-export * from './api-routes';
 export * from './form';
 export * from './api';

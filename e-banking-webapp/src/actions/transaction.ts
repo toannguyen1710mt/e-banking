@@ -4,20 +4,20 @@
 import { revalidateTag } from 'next/cache';
 
 // Constants
-import { API_ROUTES } from '@/constants';
 
 // Interfaces
-import { Transaction, TransactionCreateData } from '@/interfaces';
+import { ITransaction, TransactionCreateData } from '@/interfaces';
 
 // Services
 import { httpClient } from '@/services';
+import { API_ENDPOINTS } from '@/constants';
 
 export const createTransaction = async (
   transactionData: TransactionCreateData,
 ) => {
-  await httpClient.post<Transaction>(API_ROUTES.TRANSACTIONS, {
+  await httpClient.post<ITransaction>(API_ENDPOINTS.TRANSACTIONS, {
     body: JSON.stringify({ data: transactionData }),
   });
 
-  revalidateTag(API_ROUTES.TRANSACTIONS);
+  revalidateTag(API_ENDPOINTS.TRANSACTIONS);
 };
