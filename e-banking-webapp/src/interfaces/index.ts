@@ -8,3 +8,4 @@ export * from './chart';
 export * from './transaction';
 export * from './status';
 export * from './table';
+export * from './account';

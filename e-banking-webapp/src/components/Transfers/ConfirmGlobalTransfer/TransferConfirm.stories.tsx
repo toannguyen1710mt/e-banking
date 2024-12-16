@@ -5,22 +5,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TRANSFER_CONFIRM_DATA } from '@/mocks';
 
 // Components
-import { TransferConfirm } from '@/components';
+import { ConfirmGlobalTransfer } from '@/components';
 
 const meta = {
-  title: 'Components/TransferConfirm',
-  component: TransferConfirm,
+  title: 'Components/ConfirmGlobalTransfer',
+  component: ConfirmGlobalTransfer,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof TransferConfirm>;
+} satisfies Meta<typeof ConfirmGlobalTransfer>;
 
 export default meta;
 
-type Story = StoryObj<typeof TransferConfirm>;
+type Story = StoryObj<typeof ConfirmGlobalTransfer>;
 
 export const Default: Story = {
   args: TRANSFER_CONFIRM_DATA,
-  render: (args) => <TransferConfirm {...args} />,
+  render: (args) => <ConfirmGlobalTransfer {...args} />,
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import { extendVariants, Input as InputNextUI } from '@nextui-org/react';
+import { cn, extendVariants, Input as InputNextUI } from '@nextui-org/react';
 
 export const Input = extendVariants(InputNextUI, {
   variants: {
@@ -9,7 +9,10 @@ export const Input = extendVariants(InputNextUI, {
         inputWrapper: ['!bg-inherit'],
         input: ['!text-foreground-100', 'placeholder:text-foreground-100'],
         errorMessage: 'text-warning',
-        label: '!text-primary-200 text-sm font-medium',
+        label: cn(
+          '!text-primary-200 text-sm font-medium opacity-50',
+          'group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100',
+        ),
       },
     },
 
@@ -21,6 +24,7 @@ export const Input = extendVariants(InputNextUI, {
           'group-data-[focus=true]:border-primary-200',
           'data-[hover=true]:border-secondary-200',
           'data-[hover=true]:!bg-inherit',
+          'group-data-[invalid=true]:!border-warning',
         ],
       },
     },
