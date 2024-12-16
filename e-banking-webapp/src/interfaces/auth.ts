@@ -26,9 +26,7 @@ export type AuthResponse = {
   user: IUserCredentials;
 };
 
-export type TUpdateInfo = {
-  phone: string;
-  country: string;
-  avatar?: string;
-  postal: string;
-};
+export type TUpdateInfo = Pick<
+  IUserCredentials,
+  'phone' | 'country' | 'avatar' | 'postal'
+>;
