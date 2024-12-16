@@ -4,7 +4,7 @@ import { signIn } from '@/config/auth';
 import { AuthError } from 'next-auth';
 
 // Constants
-import { ERROR_MESSAGES } from '@/constants';
+import { ERROR_MESSAGES, API_ENDPOINTS } from '@/constants';
 
 // Services
 import { httpClient } from '@/services/http-client';
@@ -35,7 +35,7 @@ export const authenticateUser = async (formData: TSignInFormData) => {
 export const handleSignUp = async (signUpData: TSignUpPayload) => {
   try {
     const response = await httpClient.post<AuthResponse>(
-      '/auth/local/register',
+      API_ENDPOINTS.SIGN_UP,
       signUpData,
     );
     return response.data;
@@ -48,7 +48,10 @@ export const handleSignUp = async (signUpData: TSignUpPayload) => {
 
 export const updateUser = async (id: number, payload: TUpdateInfo) => {
   try {
-    const response = await httpClient.put(`/users/${id}`, payload);
+    const response = await httpClient.put(
+      `${API_ENDPOINTS.USERS}/${id}`,
+      payload,
+    );
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
@@ -60,7 +63,7 @@ export const updateUser = async (id: number, payload: TUpdateInfo) => {
 export const addAccount = async (payload: IAccountPayload) => {
   try {
     const response = await httpClient.post<SuccessResponse<IAccount>>(
-      `/accounts`,
+      API_ENDPOINTS.ACCOUNTS,
       payload,
     );
     return response.data;
@@ -73,7 +76,7 @@ export const addAccount = async (payload: IAccountPayload) => {
 
 export const addCard = async (payload: ICardPayload) => {
   try {
-    const response = await httpClient.post(`/cards`, payload);
+    const response = await httpClient.post(API_ENDPOINTS.CARDS, payload);
     return response.data;
   } catch (error) {
     if (error instanceof AuthError) {
