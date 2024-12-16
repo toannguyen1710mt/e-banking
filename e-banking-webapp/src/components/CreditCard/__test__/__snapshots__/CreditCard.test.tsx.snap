@@ -162,7 +162,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
               </g>
               <defs>
                 <filter
-                  colorInterpolationFilters="sRGB"
+                  color-interpolation-filters="sRGB"
                   filterUnits="userSpaceOnUse"
                   height="26.7826"
                   id="filter0_ii_1_983"
@@ -171,7 +171,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
                   y="0"
                 >
                   <feflood
-                    floodOpacity="0"
+                    flood-opacity="0"
                     result="BackgroundImageFix"
                   />
                   <feblend
@@ -509,7 +509,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
             </g>
             <defs>
               <filter
-                colorInterpolationFilters="sRGB"
+                color-interpolation-filters="sRGB"
                 filterUnits="userSpaceOnUse"
                 height="26.7826"
                 id="filter0_ii_1_983"
@@ -518,7 +518,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
                 y="0"
               >
                 <feflood
-                  floodOpacity="0"
+                  flood-opacity="0"
                   result="BackgroundImageFix"
                 />
                 <feblend

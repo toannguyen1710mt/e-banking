@@ -33,7 +33,7 @@ exports[`Checkbox Component should match snapshot for Checkbox 1`] = `
           stroke-dashoffset="66"
           stroke-linecap="round"
           stroke-linejoin="round"
-          strokeWidth="2"
+          stroke-width="2"
         />
       </svg>
     </span>
