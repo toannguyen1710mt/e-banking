@@ -1,3 +1,4 @@
+// Components
 import { GlobalIcon, UserIcon } from '@/components';
 
 export const TRANSFER_TABS = [

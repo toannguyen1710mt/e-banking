@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
+exports[`TransferTab Component renders correctly and matches snapshot 1`] = `
 <div>
   <div
     class="flex h-full flex-col px-4"
@@ -150,7 +150,7 @@ exports[`TransferTag Component renders correctly and matches snapshot 1`] = `
                     <span
                       class="text-sm font-medium"
                     >
-                      Global Transfer
+                      Global Tranfer
                     </span>
                     <span
                       class="text-[10px] font-normal text-transparentBlack group-data-[selected=true]:text-white"

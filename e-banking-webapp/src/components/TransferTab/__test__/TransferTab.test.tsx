@@ -5,17 +5,17 @@ import { render, screen } from '@testing-library/react';
 import { TRANSFER_TABS } from '@/constants';
 
 // Components
-import { TransferTag } from '@/components';
+import { TransferTab } from '@/components';
 
-describe('TransferTag Component', () => {
+describe('TransferTab Component', () => {
   test('renders correctly and matches snapshot', () => {
-    const { container } = render(<TransferTag TransferTabs={TRANSFER_TABS} />);
+    const { container } = render(<TransferTab TransferTabs={TRANSFER_TABS} />);
 
     expect(container).toMatchSnapshot();
   });
 
   test('renders all tabs with correct titles and descriptions', () => {
-    render(<TransferTag TransferTabs={TRANSFER_TABS} />);
+    render(<TransferTab TransferTabs={TRANSFER_TABS} />);
 
     TRANSFER_TABS.forEach(({ title, description }) => {
       expect(screen.getByText(title)).toBeInTheDocument();
