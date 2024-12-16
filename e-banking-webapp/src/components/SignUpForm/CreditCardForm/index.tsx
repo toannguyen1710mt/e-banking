@@ -2,6 +2,7 @@
 
 import { Controller } from 'react-hook-form';
 import { z } from 'zod';
+import { useTransition } from 'react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -15,7 +16,6 @@ import { useWizardFormContext } from '@/context';
 // Components
 import { Button, Input, Text } from '@/components';
 import { CreditCardIcon, UserIcon, WalletIcon } from '@/components/icons';
-import { useTransition } from 'react';
 
 interface ICreditCard<T extends z.ZodType> {
   schema: T;
