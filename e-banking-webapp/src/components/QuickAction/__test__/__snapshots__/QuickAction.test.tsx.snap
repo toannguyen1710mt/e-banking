@@ -46,25 +46,40 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
         >
           <svg
             fill="none"
-            height="21"
-            viewBox="0 0 20 21"
+            height="20"
+            viewBox="0 0 20 20"
             width="20"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              d="M18.3332 2.2439L9.1665 11.4106"
-              stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
-            <path
-              d="M18.3332 2.2439L12.4998 18.9106L9.1665 11.4106L1.6665 8.07723L18.3332 2.2439Z"
-              stroke="black"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-            />
+            <g
+              clip-path="url(#clip0_1057_534)"
+            >
+              <path
+                d="M18.3337 1.66666L9.16699 10.8333"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_1057_534"
+              >
+                <rect
+                  fill="none"
+                  height="20"
+                  width="20"
+                />
+              </clippath>
+            </defs>
           </svg>
           <span
             class="text-primary-200 font-medium text-2xs"

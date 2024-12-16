@@ -17,6 +17,7 @@ export const ERROR_MESSAGES = {
     'Sign up successful. Please check your email to verify your account.',
   SIGN_IN_FAILED: 'Sign in failed. Please try again.',
   SIGN_IN_SUCCESS: 'Sign in successful.',
+  AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',
