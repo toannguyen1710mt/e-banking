@@ -11,10 +11,8 @@ export const StepProgress: React.FC<StepProgressProps> = ({
     {Array.from({ length: steps }).map((_, index) => (
       <div
         key={index}
-        className={`h-2 w-1/4 rounded-full transition-all ${
-          index === activeStep
-            ? 'bg-secondary-300'
-            : 'bg-secondary-300 opacity-10'
+        className={`h-2 w-1/4 rounded-full bg-secondary-300 transition-all ${
+          index === activeStep ? '' : 'opacity-10'
         }`}
       />
     ))}
