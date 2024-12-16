@@ -18,6 +18,10 @@ export const ERROR_MESSAGES = {
   SIGN_IN_FAILED: 'Sign in failed. Please try again.',
   SIGN_IN_SUCCESS: 'Sign in successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
+  CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
+  CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
+  CCV_INVALID: 'CCV must be exactly 3 digits',
+  EXPIRE_DATE_INVALID: 'Expire date must be in the future.',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',
