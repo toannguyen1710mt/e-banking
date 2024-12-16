@@ -373,7 +373,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -735,7 +735,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -1053,7 +1053,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                       stroke="currentColor"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -1461,7 +1461,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>
@@ -1823,7 +1823,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>
@@ -2141,7 +2141,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>

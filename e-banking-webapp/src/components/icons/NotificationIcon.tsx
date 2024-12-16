@@ -7,7 +7,7 @@ export const NotificationIcon = () => (
     xmlns='http://www.w3.org/2000/svg'
   >
     <g filter='url(#filter0_i_1_1143)'>
-      <circle cx='12' cy='12' r='11.4' stroke='#F5F5F5' stroke-width='1.2' />
+      <circle cx='12' cy='12' r='11.4' stroke='#F5F5F5' strokeWidth='1.2' />
     </g>
     <path
       d='M15 10C15 9.20435 14.6839 8.44129 14.1213 7.87868C13.5587 7.31607 12.7956 7 12 7C11.2044 7 10.4413 7.31607 9.87868 7.87868C9.31607 8.44129 9 9.20435 9 10C9 13.5 7.5 14.5 7.5 14.5H16.5C16.5 14.5 15 13.5 15 10Z'
@@ -25,9 +25,9 @@ export const NotificationIcon = () => (
         width='24'
         height='24'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend
           mode='normal'
           in='SourceGraphic'

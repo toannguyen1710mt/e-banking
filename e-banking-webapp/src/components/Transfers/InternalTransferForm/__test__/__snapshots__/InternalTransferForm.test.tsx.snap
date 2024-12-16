@@ -274,14 +274,14 @@ exports[`InternalTransferForm component should match snapshot for InternalTransf
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             d="M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z"
             stroke="currentColor"
             stroke-linecap="round"
             stroke-linejoin="round"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </g>
         <defs>
