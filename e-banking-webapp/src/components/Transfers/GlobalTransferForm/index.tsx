@@ -50,6 +50,18 @@ export const GlobalTransferForm = () => {
     );
   }, [toAccountTypeValue]);
 
+  const filteredFromAccountOptions = useMemo(() => {
+    return TRANSFER_FORM_GLOBAL_OPTIONS.filter(
+      (option) => option.key !== toAccountTypeValue,
+    );
+  }, [toAccountTypeValue]);
+
+  const filteredToAccountOptions = useMemo(() => {
+    return TRANSFER_FORM_GLOBAL_OPTIONS.filter(
+      (option) => option.key !== fromGlobalTypeValue,
+    );
+  }, [fromGlobalTypeValue]);
+
   return (
     <form className='flex flex-col gap-4'>
       {/* Title */}
@@ -62,15 +74,11 @@ export const GlobalTransferForm = () => {
         control={control}
         name='toAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
-          const filteredOptions = TRANSFER_FORM_GLOBAL_OPTIONS.filter(
-            (option) => option.key !== fromGlobalTypeValue,
-          );
-
           return (
             <Select
               label='Country'
               labelPlacement='outside'
-              options={filteredOptions}
+              options={filteredToAccountOptions}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
               errorMessage={errors.toAccountType?.message}
@@ -90,16 +98,12 @@ export const GlobalTransferForm = () => {
         control={control}
         name='fromAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
-          const filteredOptions = TRANSFER_FORM_GLOBAL_OPTIONS.filter(
-            (option) => option.key !== toAccountTypeValue,
-          );
-
           return (
             <>
               <Select
                 label='Account'
                 labelPlacement='outside'
-                options={filteredOptions}
+                options={filteredFromAccountOptions}
                 classNames={{ label: 'text-sm' }}
                 value={String(value)}
                 errorMessage={errors.fromAccountType?.message}
