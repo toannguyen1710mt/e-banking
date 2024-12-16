@@ -40,6 +40,7 @@ import {
   PayPassIcon,
   MastercardIcon,
   CloseIcon,
+  CheckIcon,
 } from '@/components';
 import { ArrowDownIcon } from './ArrowDownIcon';
 import { HouseIcon } from './HouseIcon';
@@ -85,6 +86,7 @@ const icons = [
   { component: PayPassIcon, label: 'Pay Pass' },
   { component: MastercardIcon, label: 'Mastercard' },
   { component: CloseIcon, label: 'Close' },
+  { component: CheckIcon, label: 'Check' },
 ];
 
 const meta: Meta = {
