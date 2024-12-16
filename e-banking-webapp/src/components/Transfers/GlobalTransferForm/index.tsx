@@ -18,7 +18,11 @@ import { GlobalTransferFormSchema } from '@/schemas';
 // Components
 import { Button, Input, Select, Text, SendIcon } from '@/components';
 
-export const GlobalTransferForm = () => {
+interface IGlobalTransferForm {
+  balanceLabel?: string;
+}
+
+export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
   const {
     control,
     formState: { errors, isValid, isDirty },
@@ -118,7 +122,7 @@ export const GlobalTransferForm = () => {
                 as='span'
                 className='text-xs text-foreground-200 opacity-50'
               >
-                Available Balance:{''}
+                Available Balance:{balanceLabel}
               </Text>
             </>
           );
