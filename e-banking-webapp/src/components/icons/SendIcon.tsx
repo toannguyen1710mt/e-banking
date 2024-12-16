@@ -1,24 +1,31 @@
 export const SendIcon = () => (
   <svg
     width='20'
-    height='21'
-    viewBox='0 0 20 21'
+    height='20'
+    viewBox='0 0 20 20'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
-    <path
-      d='M18.3332 2.2439L9.1665 11.4106'
-      stroke='black'
-      stroke-width='2'
-      stroke-linecap='round'
-      stroke-linejoin='round'
-    />
-    <path
-      d='M18.3332 2.2439L12.4998 18.9106L9.1665 11.4106L1.6665 8.07723L18.3332 2.2439Z'
-      stroke='black'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-    />
+    <g clip-path='url(#clip0_1057_534)'>
+      <path
+        d='M18.3337 1.66666L9.16699 10.8333'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z'
+        stroke='currentColor'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </g>
+    <defs>
+      <clipPath id='clip0_1057_534'>
+        <rect width='20' height='20' fill='none' />
+      </clipPath>
+    </defs>
   </svg>
 );
