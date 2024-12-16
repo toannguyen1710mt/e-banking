@@ -21,4 +21,5 @@ export const colors = {
   lightRed: '#F3C9C9',
   lightAqua: '#D9EAE8',
   semiTransparentDimGray: 'rgba(128, 128, 128, 1)',
+  lightGraySolid: 'rgba(230, 229, 229, 1)',
 };
