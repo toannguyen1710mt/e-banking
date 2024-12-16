@@ -5,7 +5,11 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
-import { SignUpSchema, SIGNUP_FORM_DEFAULT_VALUES } from '@/constants';
+import {
+  SignUpSchema,
+  SIGNUP_FORM_DEFAULT_VALUES,
+  ACCOUNT_DEFAULT_VALUES,
+} from '@/constants';
 
 // Context
 import { WizardFormContextProvider } from '@/context';
@@ -46,13 +50,7 @@ export const SignUpForm = () => {
     if (response?.user) {
       const payloadAccount: IAccountPayload = {
         user: response?.user.id,
-        data: {
-          accountNumber: '123456789888',
-          balance: 19800,
-          type: 'Checking',
-          currency: 'KSH',
-          name: 'TpBank',
-        },
+        data: ACCOUNT_DEFAULT_VALUES,
       };
 
       await updateUser(response.user.id, rest);
