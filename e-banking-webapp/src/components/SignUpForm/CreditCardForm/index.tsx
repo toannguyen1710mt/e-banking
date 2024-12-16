@@ -2,6 +2,7 @@
 
 import { Controller } from 'react-hook-form';
 import { z } from 'zod';
+import { useTransition } from 'react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -30,12 +31,16 @@ export const CreditCardForm = <T extends z.ZodType>({
     nextStep,
   } = useWizardFormContext();
 
-  const onSubmit = (e: React.FormEvent) => {
+  const [isPending, startTransition] = useTransition();
+
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const handler = handleSubmit(submitHandler);
-    handler(e);
-    nextStep(e);
+    startTransition(async () => {
+      const handler = handleSubmit(submitHandler);
+      await handler(e);
+      nextStep(e);
+    });
   };
 
   return (
@@ -51,7 +56,7 @@ export const CreditCardForm = <T extends z.ZodType>({
 
         <Controller
           control={control}
-          name='card.holdersName'
+          name='card.holderName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
@@ -126,6 +131,7 @@ export const CreditCardForm = <T extends z.ZodType>({
         isDisabled={!isStepValid}
         type='button'
         color='primary'
+        isLoading={isPending}
         onClick={onSubmit}
       >
         Continue

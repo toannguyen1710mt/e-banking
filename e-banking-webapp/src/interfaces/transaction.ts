@@ -1,7 +1,7 @@
 // Interfaces
 import { CurrencyUnit, Status, AccountType } from '@/interfaces';
 
-export interface Transaction {
+export interface ITransaction {
   id: string;
   documentId: string;
   currencyUnit?: CurrencyUnit;
@@ -17,11 +17,11 @@ export interface Transaction {
 }
 
 export type TransactionCreateData = Omit<
-  Transaction,
+  ITransaction,
   'id' | 'documentId' | 'createdAt' | 'updatedAt' | 'publishedAt'
 >;
 
 export type InternalTransferForm = Pick<
-  Transaction,
+  ITransaction,
   'fromAccountType' | 'toAccountType' | 'amount'
 >;

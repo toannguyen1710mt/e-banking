@@ -16,7 +16,7 @@ const futureMonth = z.string().refine(
     return inputDate > today;
   },
   {
-    message: 'Expire date must be in the future.',
+    message: ERROR_MESSAGES.EXPIRE_DATE_INVALID,
   },
 );
 
@@ -46,17 +46,17 @@ export const SignUpSchema = createStepSchema({
         .length(12, ERROR_MESSAGES.PHONE_INVALID)
         .regex(/^\d+$/, ERROR_MESSAGES.PHONE_PATTERN),
       country: z.string().trim(),
-      postalAddress: z.string().trim(),
+      postal: z.string().trim(),
     })
     .refine((data) => data.password === data.confirmPassword, {
       message: ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
       path: ['confirmPassword'],
     }),
   card: z.object({
-    holdersName: z.string().min(1, 'Holders Name is required'),
-    cardNumber: z.string().length(12, 'Card number must be exactly 12 digits'),
+    holderName: z.string().min(1, ERROR_MESSAGES.CARD_HOLDER_NAME_REQUIRED),
+    cardNumber: z.string().length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID),
     expireAt: futureMonth,
-    ccv: z.string().regex(/^\d{3}$/, 'CCV must be exactly 3 digits'),
+    ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
   }),
 });
 
