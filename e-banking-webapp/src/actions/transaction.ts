@@ -7,16 +7,13 @@ import { revalidateTag } from 'next/cache';
 import { API_ROUTES } from '@/constants';
 
 // Interfaces
-import { Transaction } from '@/interfaces';
+import { Transaction, TransactionCreateData } from '@/interfaces';
 
 // Services
 import { httpClient } from '@/services';
 
 export const createTransaction = async (
-  transactionData: Omit<
-    Transaction,
-    'id' | 'documentId' | 'createdAt' | 'updatedAt' | 'publishedAt'
-  >,
+  transactionData: TransactionCreateData,
 ) => {
   await httpClient.post<Transaction>(API_ROUTES.TRANSACTIONS, {
     body: JSON.stringify({ data: transactionData }),

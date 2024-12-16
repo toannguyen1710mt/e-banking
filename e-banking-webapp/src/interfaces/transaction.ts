@@ -16,6 +16,11 @@ export interface Transaction {
   publishedAt: string;
 }
 
+export type TransactionCreateData = Omit<
+  Transaction,
+  'id' | 'documentId' | 'createdAt' | 'updatedAt' | 'publishedAt'
+>;
+
 export type InternalTransferForm = Pick<
   Transaction,
   'fromAccountType' | 'toAccountType' | 'amount'
