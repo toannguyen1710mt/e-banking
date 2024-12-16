@@ -6,7 +6,7 @@ export const SendIcon = () => (
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
   >
-    <g clip-path='url(#clip0_1057_534)'>
+    <g clipPath='url(#clip0_1057_534)'>
       <path
         d='M18.3337 1.66666L9.16699 10.8333'
         stroke='currentColor'
