@@ -10,4 +10,3 @@ export * from './navbar';
 export * from './actions';
 export * from './titles';
 export * from './sidebar';
-export * from './transferConfirmData';

@@ -2,8 +2,8 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-// Constants
-import { TRANSFER_CONFIRM_DATA } from '@/constants';
+// Mocks
+import { TRANSFER_CONFIRM_DATA } from '@/mocks';
 
 // Components
 import { TransferConfirm } from '@/components';

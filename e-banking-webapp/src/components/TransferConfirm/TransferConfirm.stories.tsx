@@ -1,8 +1,8 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Constants
-import { TRANSFER_CONFIRM_DATA } from '@/constants';
+// Mocks
+import { TRANSFER_CONFIRM_DATA } from '@/mocks';
 
 // Components
 import { TransferConfirm } from '@/components';
