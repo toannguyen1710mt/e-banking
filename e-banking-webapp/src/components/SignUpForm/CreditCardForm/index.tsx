@@ -2,7 +2,6 @@
 
 import { Controller } from 'react-hook-form';
 import { z } from 'zod';
-import { useState } from 'react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -16,6 +15,7 @@ import { useWizardFormContext } from '@/context';
 // Components
 import { Button, Input, Text } from '@/components';
 import { CreditCardIcon, UserIcon, WalletIcon } from '@/components/icons';
+import { useTransition } from 'react';
 
 interface ICreditCard<T extends z.ZodType> {
   schema: T;
@@ -31,18 +31,16 @@ export const CreditCardForm = <T extends z.ZodType>({
     nextStep,
   } = useWizardFormContext();
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
 
-    const handler = handleSubmit(submitHandler);
-    await handler(e);
-
-    setIsLoading(false);
-
-    nextStep(e);
+    startTransition(async () => {
+      const handler = handleSubmit(submitHandler);
+      await handler(e);
+      nextStep(e);
+    });
   };
 
   return (
@@ -133,7 +131,7 @@ export const CreditCardForm = <T extends z.ZodType>({
         isDisabled={!isStepValid}
         type='button'
         color='primary'
-        isLoading={isLoading}
+        isLoading={isPending}
         onClick={onSubmit}
       >
         Continue
