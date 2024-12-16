@@ -51,7 +51,7 @@ export const AccountForm = () => {
         {/* Sign-in with email */}
         <Controller
           control={control}
-          name='account.username'
+          name='user.username'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='username'
@@ -66,7 +66,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='account.email'
+          name='user.email'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='email'
@@ -81,7 +81,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='account.password'
+          name='user.password'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -108,7 +108,7 @@ export const AccountForm = () => {
 
         <Controller
           control={control}
-          name='account.confirmPassword'
+          name='user.confirmPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'

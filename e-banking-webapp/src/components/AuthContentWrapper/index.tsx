@@ -15,7 +15,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { Text } from '../common';
 
 interface AuthContentWrapperProps {
-  textFooter: string;
+  textFooter?: string;
   textHeading: ReactNode;
   formContent: ReactNode;
 }
@@ -56,12 +56,14 @@ export const AuthContentWrapper = ({
       {/* Form */}
       <div className='mb-[17px]'>{formContent}</div>
 
-      <Text size={TEXT_SIZE.SM} variant={TEXT_VARIANT.DEFAULT}>
-        {textFooter}&nbsp;
-        <Link href={linkDetails.href} className='text-primary-200'>
-          {linkDetails.text}
-        </Link>
-      </Text>
+      {textFooter && (
+        <Text size={TEXT_SIZE.SM} variant={TEXT_VARIANT.DEFAULT}>
+          {textFooter}&nbsp;
+          <Link href={linkDetails.href} className='text-primary-200'>
+            {linkDetails.text}
+          </Link>
+        </Text>
+      )}
     </div>
   );
 };

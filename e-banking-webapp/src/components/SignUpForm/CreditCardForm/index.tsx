@@ -1,6 +1,8 @@
 'use client';
 
 import { Controller } from 'react-hook-form';
+import { z } from 'zod';
+import { useTransition } from 'react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -15,11 +17,31 @@ import { useWizardFormContext } from '@/context';
 import { Button, Input, Text } from '@/components';
 import { CreditCardIcon, UserIcon, WalletIcon } from '@/components/icons';
 
-export const CreditCardForm = () => {
+interface ICreditCard<T extends z.ZodType> {
+  schema: T;
+  submitHandler: (data: z.infer<T>) => void;
+}
+
+export const CreditCardForm = <T extends z.ZodType>({
+  submitHandler,
+}: ICreditCard<T>) => {
   const {
-    form: { control },
+    form: { control, handleSubmit },
     isStepValid,
+    nextStep,
   } = useWizardFormContext();
+
+  const [isPending, startTransition] = useTransition();
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    startTransition(async () => {
+      const handler = handleSubmit(submitHandler);
+      await handler(e);
+      nextStep(e);
+    });
+  };
 
   return (
     <>
@@ -34,7 +56,7 @@ export const CreditCardForm = () => {
 
         <Controller
           control={control}
-          name='card.holdersName'
+          name='card.holderName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
@@ -105,7 +127,13 @@ export const CreditCardForm = () => {
         </div>
       </div>
 
-      <Button isDisabled={!isStepValid} type='submit' color='primary'>
+      <Button
+        isDisabled={!isStepValid}
+        type='button'
+        color='primary'
+        isLoading={isPending}
+        onClick={onSubmit}
+      >
         Continue
       </Button>
     </>

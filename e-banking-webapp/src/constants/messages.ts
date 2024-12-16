@@ -18,6 +18,10 @@ export const ERROR_MESSAGES = {
   SIGN_IN_FAILED: 'Sign in failed. Please try again.',
   SIGN_IN_SUCCESS: 'Sign in successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
+  CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
+  CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
+  CCV_INVALID: 'CCV must be exactly 3 digits',
+  EXPIRE_DATE_INVALID: 'Expire date must be in the future.',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',
@@ -28,6 +32,7 @@ export const ERROR_MESSAGES = {
   INVALID_CREDENTIALS: 'Invalid credentials!',
   INVALID_USER_PERMISSIONS: 'Invalid user permissions!',
   USERNAME_PASSWORD_INVALID: 'Username or Password is invalid!',
+  SIGN_UP_ERROR: 'Failed to sign up. Please try again later.',
 
   // Empty data
   EMPTY_DATA: 'No data available!',

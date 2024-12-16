@@ -18,7 +18,7 @@ import { WizardFormContext } from '@/context';
 interface WizardFormProps<T extends z.ZodType> {
   schema: T;
   form: UseFormReturn<z.infer<T>>;
-  onSubmit: (data: z.infer<T>) => void;
+  onSubmit?: (data: z.infer<T>) => void;
   className?: string;
 }
 
@@ -62,7 +62,10 @@ function WizardFormRoot<T extends z.ZodType>({
 
   return (
     <WizardFormContext.Provider value={wizardFormStep}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className={className}>
+      <form
+        onSubmit={onSubmit ? form.handleSubmit(onSubmit!) : undefined}
+        className={className}
+      >
         {header}
 
         <div>
