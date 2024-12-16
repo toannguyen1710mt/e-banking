@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Constants
-import { ROUTES } from '@/constants';
+import { IMAGES, ROUTES } from '@/constants';
 
 // Components
 import { Text } from '@/components';
@@ -15,7 +15,7 @@ import { Text } from '@/components';
 export const SuccessNotify = () => (
   <div className='flex w-full flex-col items-center gap-4 bg-white'>
     <Image
-      src={'/images/successful.webp'}
+      src={IMAGES.SUCCESS_IMAGE}
       width={328}
       height={312}
       alt='Illustration of a successful sign-up'
