@@ -8,7 +8,7 @@ exports[`TransferConfirm component renders correctly and matches snapshot 1`] = 
     <p
       class="text-primary-200 text-sm font-semibold text-navyBlue"
     >
-      Savings
+      Yehudi Daud
        is about to receive
     </p>
     <p
@@ -24,7 +24,7 @@ exports[`TransferConfirm component renders correctly and matches snapshot 1`] = 
       From your 
       Main
        wallet to your 
-      Savings
+      Yehudi Daud
        wallet, this action cannot be undone once approved...
     </p>
     <div
