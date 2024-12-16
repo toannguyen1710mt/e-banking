@@ -1,3 +1,5 @@
+'use client';
+
 // Interface
 import { AccountType, CurrencyUnit } from '@/interfaces';
 
