@@ -32,3 +32,8 @@ export const ERROR_MESSAGES = {
   // Empty data
   EMPTY_DATA: 'No data available!',
 };
+
+export const DESCRIPTIONS = {
+  EXPENSE_ANALYSIS:
+    'The `ExpenseAnalysis` component is designed to display a credit card interface, showcasing key details such as the card number, cardholder name, expiration date, and associated bank information in a visually structured manner.',
+};
