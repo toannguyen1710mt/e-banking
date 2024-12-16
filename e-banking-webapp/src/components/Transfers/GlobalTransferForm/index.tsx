@@ -3,6 +3,7 @@
 // Third Party
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Controller, useForm, useWatch } from 'react-hook-form';
+import { useMemo } from 'react';
 
 // Constants
 import {
@@ -41,10 +42,13 @@ export const GlobalTransferForm = () => {
     name: 'toAccountType',
   });
 
-  const countryCode =
-    OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
-      (option) => option.key === toAccountTypeValue,
-    )?.label || '';
+  const countryCode = useMemo(() => {
+    return (
+      OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
+        (option) => option.key === toAccountTypeValue,
+      )?.label || ''
+    );
+  }, [toAccountTypeValue]);
 
   return (
     <form className='flex flex-col gap-4'>
