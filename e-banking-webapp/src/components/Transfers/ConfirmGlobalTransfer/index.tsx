@@ -1,7 +1,7 @@
 'use client';
 
 // Interfaces
-import { IAccount, AccountType, CurrencyUnit } from '@/interfaces';
+import { AccountType, CurrencyUnit } from '@/interfaces';
 
 // Components
 import { Button, Text } from '@/components';
@@ -13,7 +13,7 @@ interface IConfirmGlobalTransfer {
   amount: number;
   currencyUnit?: CurrencyUnit;
   fromAccountType: AccountType;
-  userName: IAccount['name'];
+  userName: string;
   onCancel: () => void;
   onProceed: () => void;
 }
