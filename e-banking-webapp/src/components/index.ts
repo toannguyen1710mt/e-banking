@@ -9,7 +9,6 @@ export * from './TargetTile';
 export * from './QuickAction';
 export * from './SignUpForm';
 export * from './Charts';
-export * from './TransferTab';
 export * from './Sidebar';
 export * from './CreditCard';
 export * from './Transfers';

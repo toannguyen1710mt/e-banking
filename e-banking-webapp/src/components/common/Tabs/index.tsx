@@ -16,7 +16,6 @@ export const TabsCustom = extendVariants(TabsNextUI, {
     size: {
       default: {
         tab: 'justify-start',
-        panel: 'pl-[61px]',
         cursor: 'w-full',
       },
     },
