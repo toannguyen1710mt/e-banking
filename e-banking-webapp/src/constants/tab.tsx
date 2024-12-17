@@ -1,5 +1,6 @@
 // Components
 import { GlobalIcon, UserIcon, Text } from '@/components';
+import { InternalTransferForm } from '@/components/Transfers/InternalTransferForm';
 
 export const TRANSFER_TABS = [
   {
@@ -7,7 +8,7 @@ export const TRANSFER_TABS = [
     title: 'To my Account',
     description: 'Instant transfer between your own accounts',
     icon: <UserIcon width={32} height={32} />,
-    content: <Text>Account</Text>,
+    content: <InternalTransferForm />,
   },
   {
     keyTab: 'global',

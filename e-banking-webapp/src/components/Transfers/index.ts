@@ -4,3 +4,5 @@ export * from './ConfirmGlobalTransfer';
 export * from './InternalTransferSuccess';
 export * from './GlobalTransferForm';
 export * from './GlobalTransferSuccess';
+export * from './TransferModal';
+export * from './TransferTab';

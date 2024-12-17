@@ -8,7 +8,7 @@ import { TRANSFER_TABS } from '@/constants';
 import { TransferTab } from '@/components';
 
 const meta = {
-  title: 'Components/TransferTab',
+  title: 'Components/Transfers/TransferTab',
   component: TransferTab,
   parameters: {
     layout: 'centered',
