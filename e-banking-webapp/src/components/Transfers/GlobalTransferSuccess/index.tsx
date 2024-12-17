@@ -1,7 +1,7 @@
 'use client';
 
 // Interface
-import { CurrencyUnit, IAccount } from '@/interfaces';
+import { CurrencyUnit } from '@/interfaces';
 
 // Utils
 import { formatNumberWithCommas } from '@/utils';
@@ -12,7 +12,7 @@ import { Button, CheckIcon, Text } from '@/components';
 interface IGlobalTransferSuccess {
   amount: number;
   currencyUnit?: CurrencyUnit;
-  userName: IAccount['name'];
+  userName: string;
   onClose: () => void;
 }
 
