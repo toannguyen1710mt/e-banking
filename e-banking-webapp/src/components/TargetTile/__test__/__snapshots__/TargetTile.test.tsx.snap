@@ -3,7 +3,7 @@
 exports[`TargetTile components should match snapshot for TargetTile 1`] = `
 <div>
   <div
-    class="flex items-center justify-between border-b border-dimGray p-4"
+    class="mx-[6px] flex items-center justify-between border-b border-dimGray p-4"
   >
     <div
       class="flex items-center gap-4"
@@ -50,7 +50,7 @@ exports[`TargetTile components should match snapshot for TargetTile 1`] = `
       </div>
     </div>
     <p
-      class="text-primary-200 font-medium text-xs text-foreground-100"
+      class="text-primary-200 text-xs font-bold text-foreground-100"
     >
       45
       %

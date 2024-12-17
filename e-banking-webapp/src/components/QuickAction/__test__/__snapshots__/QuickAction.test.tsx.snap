@@ -3,7 +3,8 @@
 exports[`QuickAction component should match snapshot for QuickAction 1`] = `
 <div>
   <div
-    class="flex flex-col gap-2 rounded-md bg-background-500 p-3"
+    class="relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex flex-col gap-2 rounded-md bg-background-500 px-[6px] py-2"
+    tabindex="-1"
   >
     <h3
       class="text-primary-200 text-xs font-semibold"
@@ -11,7 +12,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
       Quick Action
     </h3>
     <ul
-      class="flex rounded-md bg-softWhite"
+      class="flex justify-between rounded-md bg-softWhite"
     >
       <li>
         <button
