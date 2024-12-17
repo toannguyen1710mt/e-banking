@@ -38,7 +38,7 @@ export const CreditCard = ({
   return (
     <Card
       className={cn(
-        'max-w-[290px] rounded-[6px] bg-cover bg-no-repeat',
+        'w-full rounded-[6px] bg-cover bg-no-repeat',
         VARIANT_BACKGROUND[variant],
       )}
     >

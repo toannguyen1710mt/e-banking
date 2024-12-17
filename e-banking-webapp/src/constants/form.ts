@@ -1,18 +1,18 @@
 export const SIGNUP_FORM_DEFAULT_VALUES = {
   user: {
-    username: 'ngan',
-    email: 'ngan@gmail.com',
-    password: '1234@Abc',
-    confirmPassword: '1234@Abc',
-    phone: '123456789123',
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phone: '',
     country: 'UK',
     postalAddress: '344',
   },
   card: {
-    holdersName: 'ngan',
-    cardNumber: '123456789044',
+    holdersName: '',
+    cardNumber: '',
     expireAt: '',
-    ccv: '444',
+    ccv: '',
   },
 };
 

@@ -16,3 +16,4 @@ export * from './ExpenseAnalysis';
 export * from './StepProgress';
 export * from './MyCards';
 export * from './BalanceModal';
+export * from './MyTarget';

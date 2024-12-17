@@ -19,7 +19,7 @@ interface IDailyLimit {
 }
 
 export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
-  <Card className='w-full px-[6px] pt-[9px]'>
+  <Card className='w-full rounded-md px-[6px] pt-[9px]'>
     <CardHeader className='flex justify-between p-0 text-xs font-semibold'>
       <span>Daily Limit</span>
       <Chip
