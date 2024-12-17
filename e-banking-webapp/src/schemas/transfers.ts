@@ -2,7 +2,7 @@
 import { z } from 'zod';
 
 // Constants
-import { ERROR_MESSAGES } from '@/constants';
+import { ERROR_MESSAGES, REGEX } from '@/constants';
 
 // Interfaces
 import { AccountType, GlobalType } from '@/interfaces';
@@ -26,7 +26,7 @@ const createTransferFormSchema = <T extends Record<string, string>>(
       .string()
       .min(12, { message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_EXACT_12_DIGITS })
       .max(12, { message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_EXACT_12_DIGITS })
-      .regex(/^\d{12}$/, {
+      .regex(REGEX.NUMERIC_12_DIGITS, {
         message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_ONLY_NUMBERS,
       }),
     amount: z.coerce
