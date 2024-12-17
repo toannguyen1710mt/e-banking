@@ -1,5 +1,8 @@
 'use client';
 
+// Libs
+import { useSession } from 'next-auth/react';
+
 // Constants
 import { TRANSFER_TABS } from '@/constants';
 
@@ -12,6 +15,8 @@ interface ITransferModalProps {
 }
 
 export const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
+  const { data: session } = useSession();
+
   return (
     <Modal
       isOpen={isOpen}
@@ -24,7 +29,7 @@ export const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
         <Text as='h4' className='text-base font-medium text-primary-200'>
           Good Evening,{' '}
           <Text as='span' className='font-normal'>
-            Pheroxios
+            {session?.user?.name}
           </Text>
         </Text>
         <Text as='h5' className='text-sm font-semibold text-primary-200'>
