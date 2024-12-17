@@ -21,3 +21,21 @@ export const TRANSFER_FORM_ACCOUNT_OPTIONS = [
     label: 'Checkings',
   },
 ];
+
+export const MY_CARDS_ACCOUNTS = [
+  {
+    title: AccountType.MAIN,
+    expireDate: '06/24',
+    numberAccount: '0123456789',
+  },
+  {
+    title: AccountType.SAVINGS,
+    expireDate: '06/24',
+    numberAccount: '0123456789',
+  },
+  {
+    title: AccountType.CHECKINGS,
+    expireDate: '06/24',
+    numberAccount: '0123456789',
+  },
+];

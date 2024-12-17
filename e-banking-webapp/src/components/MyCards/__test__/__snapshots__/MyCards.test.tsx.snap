@@ -1,0 +1,456 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyCards component Should render snapshot correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex gap-[9px]"
+      >
+        <div
+          class="hover:cursor-pointer"
+        >
+          <div
+            class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-secondary-300"
+            tabindex="-1"
+          >
+            <div
+              class="flex gap-3 p-0"
+            >
+              <div
+                class="flex flex-1 items-center justify-between"
+              >
+                <p
+                  class="text-foreground-200 font-medium text-xs"
+                >
+                  Main
+                </p>
+                <svg
+                  class="w-[25px] h-[15px]"
+                  fill="none"
+                  height="35"
+                  viewBox="0 0 59 35"
+                  width="59"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                    fill="#ED0006"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                    fill="#F9A000"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                    fill="#FF5E00"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between"
+            >
+              <p
+                class="text-foreground-200 font-medium text-2xs opacity-100"
+              >
+                .... 
+                6789
+              </p>
+              <p
+                class="text-foreground-200 font-medium text-2xs opacity-100"
+              >
+                06/24
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hover:cursor-pointer"
+        >
+          <div
+            class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-background-500"
+            tabindex="-1"
+          >
+            <div
+              class="flex gap-3 p-0"
+            >
+              <div
+                class="flex flex-1 items-center justify-between"
+              >
+                <p
+                  class="text-foreground-100 font-medium text-xs"
+                >
+                  Savings
+                </p>
+                <svg
+                  class="w-[25px] h-[15px]"
+                  fill="none"
+                  height="35"
+                  viewBox="0 0 59 35"
+                  width="59"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                    fill="#ED0006"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                    fill="#F9A000"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                    fill="#FF5E00"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between"
+            >
+              <p
+                class="text-foreground-100 font-medium text-2xs opacity-50"
+              >
+                .... 
+                6789
+              </p>
+              <p
+                class="text-foreground-100 font-medium text-2xs opacity-50"
+              >
+                06/24
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="hover:cursor-pointer"
+        >
+          <div
+            class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-background-500"
+            tabindex="-1"
+          >
+            <div
+              class="flex gap-3 p-0"
+            >
+              <div
+                class="flex flex-1 items-center justify-between"
+              >
+                <p
+                  class="text-foreground-100 font-medium text-xs"
+                >
+                  Checkings
+                </p>
+                <svg
+                  class="w-[25px] h-[15px]"
+                  fill="none"
+                  height="35"
+                  viewBox="0 0 59 35"
+                  width="59"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                    fill="#ED0006"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                    fill="#F9A000"
+                    fill-rule="evenodd"
+                  />
+                  <path
+                    clip-rule="evenodd"
+                    d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                    fill="#FF5E00"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="flex items-center justify-between"
+            >
+              <p
+                class="text-foreground-100 font-medium text-2xs opacity-50"
+              >
+                .... 
+                6789
+              </p>
+              <p
+                class="text-foreground-100 font-medium text-2xs opacity-50"
+              >
+                06/24
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex gap-[9px]"
+    >
+      <div
+        class="hover:cursor-pointer"
+      >
+        <div
+          class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-secondary-300"
+          tabindex="-1"
+        >
+          <div
+            class="flex gap-3 p-0"
+          >
+            <div
+              class="flex flex-1 items-center justify-between"
+            >
+              <p
+                class="text-foreground-200 font-medium text-xs"
+              >
+                Main
+              </p>
+              <svg
+                class="w-[25px] h-[15px]"
+                fill="none"
+                height="35"
+                viewBox="0 0 59 35"
+                width="59"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                  fill="#ED0006"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                  fill="#F9A000"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                  fill="#FF5E00"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-foreground-200 font-medium text-2xs opacity-100"
+            >
+              .... 
+              6789
+            </p>
+            <p
+              class="text-foreground-200 font-medium text-2xs opacity-100"
+            >
+              06/24
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hover:cursor-pointer"
+      >
+        <div
+          class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-background-500"
+          tabindex="-1"
+        >
+          <div
+            class="flex gap-3 p-0"
+          >
+            <div
+              class="flex flex-1 items-center justify-between"
+            >
+              <p
+                class="text-foreground-100 font-medium text-xs"
+              >
+                Savings
+              </p>
+              <svg
+                class="w-[25px] h-[15px]"
+                fill="none"
+                height="35"
+                viewBox="0 0 59 35"
+                width="59"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                  fill="#ED0006"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                  fill="#F9A000"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                  fill="#FF5E00"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-foreground-100 font-medium text-2xs opacity-50"
+            >
+              .... 
+              6789
+            </p>
+            <p
+              class="text-foreground-100 font-medium text-2xs opacity-50"
+            >
+              06/24
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hover:cursor-pointer"
+      >
+        <div
+          class="relative overflow-hidden text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none flex h-[88px] w-full min-w-[111px] flex-col justify-between rounded-[6px] border-0 p-2 bg-background-500"
+          tabindex="-1"
+        >
+          <div
+            class="flex gap-3 p-0"
+          >
+            <div
+              class="flex flex-1 items-center justify-between"
+            >
+              <p
+                class="text-foreground-100 font-medium text-xs"
+              >
+                Checkings
+              </p>
+              <svg
+                class="w-[25px] h-[15px]"
+                fill="none"
+                height="35"
+                viewBox="0 0 59 35"
+                width="59"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                  fill="#ED0006"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                  fill="#F9A000"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                  fill="#FF5E00"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between"
+          >
+            <p
+              class="text-foreground-100 font-medium text-2xs opacity-50"
+            >
+              .... 
+              6789
+            </p>
+            <p
+              class="text-foreground-100 font-medium text-2xs opacity-50"
+            >
+              06/24
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
