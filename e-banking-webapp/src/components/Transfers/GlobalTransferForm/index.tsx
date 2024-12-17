@@ -30,6 +30,7 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
     defaultValues: {
       fromAccountType: undefined,
       toAccountType: undefined,
+      recipientAccount: undefined,
       amount: 0,
     },
     resolver: zodResolver(GlobalTransferFormSchema),
@@ -97,31 +98,54 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
         name='fromAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
           return (
-            <>
-              <Select
-                label='Account'
-                labelPlacement='outside'
-                options={filteredFromAccountOptions()}
-                classNames={{ label: 'text-sm' }}
-                value={String(value)}
-                errorMessage={errors.fromAccountType?.message}
-                isInvalid={!!errors.fromAccountType}
-                onSelectionChange={(keys) => {
-                  const selectedValue = String(Array.from(keys)[0]);
-                  onChange(selectedValue);
-                }}
-                onClose={onBlur}
-              />
-              <Text
-                as='span'
-                className='text-xs text-foreground-200 opacity-50'
-              >
-                Available Balance:{balanceLabel}
-              </Text>
-            </>
+            <Select
+              label='Account'
+              labelPlacement='outside'
+              options={filteredFromAccountOptions()}
+              classNames={{ label: 'text-sm' }}
+              value={String(value)}
+              errorMessage={errors.fromAccountType?.message}
+              isInvalid={!!errors.fromAccountType}
+              onSelectionChange={(keys) => {
+                const selectedValue = String(Array.from(keys)[0]);
+                onChange(selectedValue);
+              }}
+              onClose={onBlur}
+            />
           );
         }}
       />
+
+      {/* Recipient Account */}
+      {fromGlobalTypeValue && (
+        <Controller
+          control={control}
+          name='recipientAccount'
+          render={({ field: { onChange, onBlur } }) => {
+            return (
+              <Input
+                label='Recipient Account'
+                labelPlacement='outside'
+                placeholder=' '
+                classNames={{
+                  inputWrapper:
+                    'h-10 px-2.5 py-2 rounded-sm border-default box-border',
+                  input: 'm-0 text-xs text-primary-200 font-medium',
+                }}
+                errorMessage={errors.recipientAccount?.message}
+                isInvalid={!!errors.recipientAccount}
+                onChange={onChange}
+                onBlur={onBlur}
+              />
+            );
+          }}
+        />
+      )}
+
+      {/* Available Balance */}
+      <Text as='span' className='text-xs text-foreground-200 opacity-50'>
+        Available Balance:{balanceLabel}
+      </Text>
 
       {/* Amount */}
       <Controller

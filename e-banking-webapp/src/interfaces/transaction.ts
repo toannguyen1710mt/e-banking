@@ -14,6 +14,7 @@ export interface ITransaction {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  recipientAccount?: number;
 }
 
 export type TransactionCreateData = Omit<
@@ -23,5 +24,5 @@ export type TransactionCreateData = Omit<
 
 export type InternalTransferForm = Pick<
   ITransaction,
-  'fromAccountType' | 'toAccountType' | 'amount'
+  'fromAccountType' | 'toAccountType' | 'amount' | 'recipientAccount'
 >;

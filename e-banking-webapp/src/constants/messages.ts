@@ -22,6 +22,9 @@ export const ERROR_MESSAGES = {
   CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
   CCV_INVALID: 'CCV must be exactly 3 digits',
   EXPIRE_DATE_INVALID: 'Expire date must be in the future.',
+  RECIPIENT_ACCOUNT_EXACT_12_DIGITS:
+    'Recipient Account must be exactly 12 digits',
+  RECIPIENT_ACCOUNT_ONLY_NUMBERS: 'Recipient Account must contain only numbers',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',

@@ -6,7 +6,10 @@ const REGEX_PASSWORD = new RegExp(
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/,
 );
 
+const REGEX_NUMERIC_12_DIGITS = new RegExp(/^\d{12}$/);
+
 export const REGEX = {
   EMAIL: REGEX_EMAIL,
   PASSWORD: REGEX_PASSWORD,
+  NUMERIC_12_DIGITS: REGEX_NUMERIC_12_DIGITS,
 };
