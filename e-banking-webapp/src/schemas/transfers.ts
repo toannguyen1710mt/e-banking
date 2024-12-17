@@ -22,6 +22,13 @@ const createTransferFormSchema = <T extends Record<string, string>>(
   return z.object({
     fromAccountType: accountTypeValidator(),
     toAccountType: accountTypeValidator(),
+    recipientAccount: z.coerce
+      .string()
+      .min(12, { message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_EXACT_12_DIGITS })
+      .max(12, { message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_EXACT_12_DIGITS })
+      .regex(/^\d{12}$/, {
+        message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_ONLY_NUMBERS,
+      }),
     amount: z.coerce
       .string()
       .min(1, ERROR_MESSAGES.FIELD_REQUIRED)
