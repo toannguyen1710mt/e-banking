@@ -10,7 +10,7 @@ import { TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { BalanceStatistics, SpendingStatistics } from '@/components/Charts';
-import { AnalyticsCard, Button, Text } from '@/components/common';
+import { AnalyticsCard, Button, MenuDropdown, Text } from '@/components/common';
 import { ChevronDownIcon } from '@/components/icons';
 import { TransactionTable } from '../TransactionTable';
 
@@ -21,16 +21,21 @@ export const MainContent = () => (
       <Text variant={TEXT_VARIANT.DEFAULT} className='font-semibold'>
         My Wallet
       </Text>
-      <Button
-        endContent={<ChevronDownIcon />}
-        variant='bordered'
-        size='default'
-        color='outline'
-        radius='sm'
-        className='w-[118px] cursor-not-allowed'
-      >
-        Select Monthly
-      </Button>
+      <MenuDropdown
+        customTriggerElement={
+          <Button
+            endContent={<ChevronDownIcon />}
+            variant='bordered'
+            size='default'
+            color='outline'
+            radius='sm'
+            className='w-[80px] cursor-not-allowed'
+          >
+            Monthly
+          </Button>
+        }
+        options={[]}
+      />
     </div>
 
     {/* Analytics Cards */}
