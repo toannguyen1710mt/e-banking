@@ -76,10 +76,15 @@ export const MyTarget = () => {
               as='span'
               size={TEXT_SIZE['2XS']}
               className='font-extrabold text-secondary-300'
+              aria-label='current-target-title'
             >
               {TARGET_LIST[currentIndex].title}
             </Text>
-            <button onClick={handleNextTarget}>
+            <button
+              onClick={handleNextTarget}
+              type='button'
+              aria-label='chevron-right-button'
+            >
               <ChevronRightIcon />
             </button>
           </div>
