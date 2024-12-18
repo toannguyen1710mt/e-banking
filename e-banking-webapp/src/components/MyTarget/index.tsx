@@ -11,6 +11,9 @@ import {
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Utils
+import { calculatePercentage } from '@/utils';
+
 // Components
 import { Button, Text, TargetTile } from '@/components';
 import {
@@ -19,7 +22,6 @@ import {
   PlaneIcon,
   PlusIcon,
 } from '@/components/icons';
-import { calculatePercentage } from '@/utils';
 
 // TODO: get data for targets from API
 const targetList = [
@@ -53,6 +55,11 @@ export const MyTarget = () => {
   const handleNextTarget = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % targetList.length);
   };
+
+  const percentage = calculatePercentage(
+    targetList[currentIndex].deposit,
+    targetList[currentIndex].targetAmount,
+  );
 
   return (
     <Card className='rounded-md'>
@@ -115,10 +122,7 @@ export const MyTarget = () => {
               }}
               showValueLabel={true}
               strokeWidth={3}
-              value={calculatePercentage(
-                targetList[currentIndex].deposit,
-                targetList[currentIndex].targetAmount,
-              )}
+              value={percentage}
             />
           </div>
         </div>
