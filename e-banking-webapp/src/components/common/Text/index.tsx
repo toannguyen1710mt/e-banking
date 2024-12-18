@@ -13,7 +13,7 @@ const sizes: { [key in TEXT_SIZE]: string } = {
   [TEXT_SIZE.BASE]: 'text-base font-medium',
   [TEXT_SIZE.SM]: 'text-sm font-medium',
   [TEXT_SIZE.XS]: 'text-xs font-medium',
-  [TEXT_SIZE['2XS']]: 'text-xxs font-light',
+  [TEXT_SIZE['2XS']]: 'text-2xs font-light',
 };
 
 const variants: { [key in TEXT_VARIANT]: string } = {

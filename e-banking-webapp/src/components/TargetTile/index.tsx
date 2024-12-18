@@ -25,7 +25,7 @@ export const TargetTile = ({
   const TargetIcon = icon;
 
   return (
-    <div className='flex items-center justify-between border-b border-dimGray p-4'>
+    <div className='mx-[6px] flex items-center justify-between border-b border-dimGray p-4'>
       <div className='flex items-center gap-4'>
         <TargetIcon />
         <div className='flex flex-col'>
@@ -45,7 +45,7 @@ export const TargetTile = ({
           </div>
         </div>
       </div>
-      <Text className='text-xs text-foreground-100'>
+      <Text className='text-xs font-bold text-foreground-100'>
         {calculatePercentage(deposit, targetAmount)}%
       </Text>
     </div>
