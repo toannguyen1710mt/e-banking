@@ -1,10 +1,7 @@
-'use client';
-
 // Mocks
 import {
   ANALYTICS_DATA,
   MOCK_BALANCE_STATISTICS_CHART_DATA,
-  MOCK_COLUMNS,
   MOCK_SPENDING_STATISTIC_CHART_DATA,
 } from '@/mocks';
 
@@ -13,8 +10,9 @@ import { TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { BalanceStatistics, SpendingStatistics } from '@/components/Charts';
-import { AnalyticsCard, Button, Table, Text } from '@/components/common';
+import { AnalyticsCard, Button, Text } from '@/components/common';
 import { ChevronDownIcon } from '@/components/icons';
+import { TransactionTable } from '../TransactionTable';
 
 export const MainContent = () => (
   <div className='space-y-4'>
@@ -58,6 +56,6 @@ export const MainContent = () => (
     </div>
 
     {/* Table */}
-    <Table columns={MOCK_COLUMNS} data={[]} />
+    <TransactionTable />
   </div>
 );
