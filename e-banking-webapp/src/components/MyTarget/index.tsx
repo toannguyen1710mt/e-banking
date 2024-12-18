@@ -14,51 +14,24 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 // Utils
 import { calculatePercentage } from '@/utils';
 
+// Mocks
+import { TARGET_LIST } from '@/mocks';
+
 // Components
 import { Button, Text, TargetTile } from '@/components';
-import {
-  ChevronRightIcon,
-  GiftIcon,
-  PlaneIcon,
-  PlusIcon,
-} from '@/components/icons';
-
-// TODO: get data for targets from API
-const targetList = [
-  {
-    icon: GiftIcon,
-    title: 'Self Reward',
-    deposit: 45000,
-    targetAmount: 100000,
-    currencyUnit: '$',
-  },
-  {
-    icon: PlaneIcon,
-    title: 'Holiday',
-    deposit: 30000,
-    targetAmount: 200000,
-    currencyUnit: '$',
-  },
-  {
-    icon: GiftIcon,
-    title: 'Christmas',
-    deposit: 35000,
-    targetAmount: 50000,
-    currencyUnit: '$',
-  },
-];
+import { ChevronRightIcon, PlusIcon } from '@/components/icons';
 
 export const MyTarget = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Handle next target for footer
   const handleNextTarget = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % targetList.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % TARGET_LIST.length);
   };
 
   const percentage = calculatePercentage(
-    targetList[currentIndex].deposit,
-    targetList[currentIndex].targetAmount,
+    TARGET_LIST[currentIndex].deposit,
+    TARGET_LIST[currentIndex].targetAmount,
   );
 
   return (
@@ -85,7 +58,7 @@ export const MyTarget = () => {
       </CardHeader>
 
       {/* Target List */}
-      {targetList.map((target, index) => (
+      {TARGET_LIST.map((target, index) => (
         <TargetTile
           key={index}
           icon={target.icon}
@@ -104,7 +77,7 @@ export const MyTarget = () => {
               size={TEXT_SIZE['2XS']}
               className='font-extrabold text-secondary-300'
             >
-              {targetList[currentIndex].title}
+              {TARGET_LIST[currentIndex].title}
             </Text>
             <button onClick={handleNextTarget}>
               <ChevronRightIcon />

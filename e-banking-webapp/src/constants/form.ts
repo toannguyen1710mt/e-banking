@@ -6,7 +6,7 @@ export const SIGNUP_FORM_DEFAULT_VALUES = {
     confirmPassword: '',
     phone: '',
     country: 'UK',
-    postalAddress: '344',
+    postal: '344',
   },
   card: {
     holdersName: '',
