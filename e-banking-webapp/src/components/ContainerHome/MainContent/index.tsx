@@ -2,6 +2,7 @@
 
 // Mocks
 import {
+  ANALYTICS_DATA,
   MOCK_BALANCE_STATISTICS_CHART_DATA,
   MOCK_COLUMNS,
   MOCK_SPENDING_STATISTIC_CHART_DATA,
@@ -9,9 +10,6 @@ import {
 
 // Interfaces
 import { TEXT_VARIANT } from '@/interfaces';
-
-// Constants
-import { ANALYTICS_DATA } from '@/constants';
 
 // Components
 import { BalanceStatistics, SpendingStatistics } from '@/components/Charts';
