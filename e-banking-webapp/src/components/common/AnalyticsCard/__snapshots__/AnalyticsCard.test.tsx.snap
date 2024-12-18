@@ -18,7 +18,7 @@ exports[`AnalyticsCard component renders with correct data 1`] = `
         class="text-base"
       >
         $
-        5000
+        5,000
       </span>
       <div
         class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightGreen text-green py-1 px-[6px] gap-1"
