@@ -1,9 +1,6 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Constants
-import { QUICK_ACTIONS } from '@/constants';
-
 // Components
 import { QuickAction } from '@/components';
 
@@ -20,8 +17,4 @@ export default meta;
 
 type Story = StoryObj<typeof QuickAction>;
 
-export const QuickActionDefault: Story = {
-  args: {
-    actions: QUICK_ACTIONS,
-  },
-};
+export const Default: Story = {};

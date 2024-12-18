@@ -3,7 +3,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { useDisclosure } from '@nextui-org/react';
 
 // Components
-import { Button, SendIcon, Text, TransferModal } from '@/components';
+import { Button, SendIcon, Text } from '@/components';
+import TransferModal from '@/components/Transfers/TransferModal';
 
 const meta = {
   title: 'Components/Transfers/TransferModal',

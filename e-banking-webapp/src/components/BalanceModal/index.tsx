@@ -27,7 +27,7 @@ interface BalanceModalProps {
   onClose: () => void;
 }
 
-export const BalanceModal = ({
+const BalanceModal = ({
   username = '',
   currentBalance = '',
   totalInvestment = '',
@@ -167,3 +167,5 @@ export const BalanceModal = ({
     </Modal>
   );
 };
+
+export default BalanceModal;

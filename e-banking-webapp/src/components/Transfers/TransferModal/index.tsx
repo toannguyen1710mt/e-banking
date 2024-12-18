@@ -14,7 +14,7 @@ interface ITransferModalProps {
   onClose: () => void;
 }
 
-export const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
+const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
   const { data: session } = useSession();
 
   return (
@@ -48,3 +48,5 @@ export const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
     </Modal>
   );
 };
+
+export default TransferModal;

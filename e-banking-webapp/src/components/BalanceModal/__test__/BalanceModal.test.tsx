@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 
 // Components
-import { BalanceModal } from '..';
+import BalanceModal from '@/components/BalanceModal';
 
 jest.mock('react-apexcharts', () => {
   return {
