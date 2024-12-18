@@ -104,9 +104,7 @@ export const BalanceStatistics = ({
   const options = { ...defaultOptions, ...customOptions };
 
   return (
-    <Card
-      className={cn('rounded-md bg-background-500 p-4 shadow-none', className)}
-    >
+    <Card className={cn('w-full rounded-md bg-background-500 p-4', className)}>
       <Chart options={options} series={maxSeries} type='bar' />
     </Card>
   );

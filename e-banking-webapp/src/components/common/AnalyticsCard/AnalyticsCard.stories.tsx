@@ -47,7 +47,7 @@ const meta = {
     title: 'Total Income',
     subtitle: 'Last 30 days income',
     isPositive: true,
-    amount: '670,000',
+    amount: 670000,
     percentageChange: 8,
   },
 } satisfies Meta<typeof AnalyticsCard>;

@@ -9,13 +9,16 @@ import {
   Chip,
 } from '@nextui-org/react';
 
+// Utils
+import { formatNumberWithCommas } from '@/utils';
+
 // Components
 import { ArrowDownIcon, ArrowUpIcon } from '@/components/icons';
 
 export interface IAnalyticsCardItem {
   title: string;
   subtitle: string;
-  amount: string;
+  amount: number;
   percentageChange: number;
   isPositive?: boolean;
 }
@@ -35,7 +38,7 @@ export const AnalyticsCard = ({
     <Card key={title} className='w-full min-w-[192px] pl-4 pt-[22px]'>
       <CardHeader className='p-0 text-xs font-medium'>{title}</CardHeader>
       <CardBody className='flex flex-row items-center gap-5 p-0 pt-[21px] font-extrabold'>
-        <span className='text-base'>${amount}</span>
+        <span className='text-base'>${formatNumberWithCommas(amount)}</span>
         <Chip
           startContent={ArrowComponent}
           classNames={{
