@@ -75,7 +75,7 @@ export const QuickAction = () => {
         <Text as='h3' className='text-xs font-semibold'>
           Quick Action
         </Text>
-        <ul className='flex justify-between rounded-md bg-softWhite'>
+        <ul className='grid grid-cols-4 rounded-md bg-softWhite'>
           {QUICK_ACTIONS.map((action) => {
             const { icon, label, isDisabled, onClick } = action;
 
@@ -84,7 +84,7 @@ export const QuickAction = () => {
             return (
               <li key={label}>
                 <Button
-                  className='flex h-full !max-h-none flex-col gap-2 !bg-transparent text-foreground-100'
+                  className='flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100'
                   isDisabled={isDisabled}
                   onClick={onClick}
                 >
