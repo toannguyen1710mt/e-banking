@@ -1,7 +1,9 @@
 // Libs
 import { render } from '@testing-library/react';
-import { TransferModal } from '@/components/Transfers/TransferModal';
 import { useSession } from 'next-auth/react';
+
+// Components
+import TransferModal from '@/components/Transfers/TransferModal';
 
 jest.mock('next-auth/react', () => ({
   __esModule: true,

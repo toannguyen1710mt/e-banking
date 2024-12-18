@@ -2,17 +2,16 @@
 
 // Libs
 import { Card, useDisclosure } from '@nextui-org/react';
+import dynamic from 'next/dynamic';
 
 // Components
 import {
-  BalanceModal,
   Button,
   FocusIcon,
   RefreshIcon,
   SendIcon,
   Text,
   TransactionIcon,
-  TransferModal,
 } from '@/components';
 
 interface Action {
@@ -21,6 +20,17 @@ interface Action {
   isDisabled?: boolean;
   onClick: () => void;
 }
+
+const TransferModal = dynamic(
+  () => import('@/components/Transfers/TransferModal'),
+  {
+    ssr: false,
+  },
+);
+
+const BalanceModal = dynamic(() => import('@/components/BalanceModal'), {
+  ssr: false,
+});
 
 export const QuickAction = () => {
   const {

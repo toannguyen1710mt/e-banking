@@ -1,9 +1,9 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
+import { useEffect, useState } from 'react';
 
 // Components
-import { BalanceModal } from '.';
-import { useEffect, useState } from 'react';
+import BalanceModal from '.';
 
 const meta = {
   title: 'Components/BalanceModal',
