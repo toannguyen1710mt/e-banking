@@ -22,7 +22,7 @@ const CustomTable = extendVariants(TableNextUI, {
   variants: {
     styles: {
       default: {
-        wrapper: 'rounded-md shadow-md',
+        wrapper: 'rounded-md shadow-md p-0 px-3',
         th: cn('text-xs text-foreground-100 font-medium', 'opacity-50'),
         td: cn('px-4 py-4 text-xs text-foreground-100', 'font-medium'),
       },
