@@ -37,6 +37,7 @@ export const ContactForm = () => {
             <Input
               aria-label='phone'
               placeholder='+2547xxxxx503'
+              maxLength={12}
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<PhoneIcon />}
