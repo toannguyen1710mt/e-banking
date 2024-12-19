@@ -3,6 +3,18 @@ import type { NextAuthConfig } from 'next-auth';
 // Constants
 import { ROUTES } from '@/constants';
 
+// Interfaces
+import { IUser } from '@/interfaces';
+
+declare module 'next-auth' {
+  /**
+   * Returned by `auth`, `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
+   */
+  interface Session {
+    user: IUser;
+  }
+}
+
 export const authConfig = {
   pages: {
     signIn: ROUTES.SIGN_IN,

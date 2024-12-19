@@ -1,5 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Mocks
+import { MOCK_DATA_USER } from '@/mocks';
+
 // Components
 import { MyCards } from '.';
 
@@ -25,6 +28,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: { accounts: MOCK_DATA_USER.accounts, onCardSelect: () => {} },
   render: (args) => <MyCards {...args} />,
 };

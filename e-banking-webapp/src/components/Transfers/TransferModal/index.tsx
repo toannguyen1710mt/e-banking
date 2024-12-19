@@ -29,7 +29,7 @@ const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
         <Text as='h4' className='text-base font-medium text-primary-200'>
           Good Evening,{' '}
           <Text as='span' className='font-normal'>
-            {session?.user?.name}
+            {session?.user?.username}
           </Text>
         </Text>
         <Text as='h5' className='text-sm font-semibold text-primary-200'>

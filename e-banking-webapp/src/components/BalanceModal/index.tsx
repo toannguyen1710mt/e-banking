@@ -1,12 +1,20 @@
 'use client';
 
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { CircularProgress } from '@nextui-org/react';
+import { Session } from 'next-auth';
 
 // Constants
 import { createExpenseAnalysisOptions } from '@/constants';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { IAccount, ICard, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+
+// Utils
+import { formatNumberWithCommas } from '@/utils';
+
+// Services
+import { getBalanceAccount, getCardById } from '@/services';
 
 // Mocks
 import { MOCK_SERIES_EXPENSE_ANALYSIS } from '@/mocks';
@@ -17,26 +25,59 @@ import { MyCards } from '../MyCards';
 import { ExpenseAnalysis } from '../ExpenseAnalysis';
 
 interface BalanceModalProps {
-  username?: string;
-  currentBalance?: string;
-  totalInvestment?: string;
-  totalBalance?: string;
-  totalIncome?: string;
-  percent?: number;
+  session: Session;
   isOpen?: boolean;
+  totalInvestment?: string;
+  totalIncome?: string;
   onClose: () => void;
 }
 
 const BalanceModal = ({
-  username = '',
-  currentBalance = '',
-  totalInvestment = '',
-  totalBalance = '',
-  totalIncome = '',
-  percent = 0,
+  session,
+  totalInvestment = '170,000',
+  totalIncome = '670,000',
   isOpen = false,
   onClose,
 }: BalanceModalProps) => {
+  const [accounts, setAccounts] = useState<IAccount[]>();
+  const [cardData, setCardData] = useState<ICard>();
+  const [selectedAccount, setSelectedAccount] = useState<IAccount>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { user } = await getBalanceAccount(String(session.user.id));
+        setAccounts(user?.accounts || []);
+
+        if (user?.accounts?.length) {
+          setSelectedAccount(user?.accounts[0]);
+          const documentId = user.accounts[0]?.documentId;
+
+          if (documentId) {
+            const { card } = await getCardById(
+              user.accounts[0]?.documentId as string,
+            );
+
+            setCardData(card || {});
+          }
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, [session?.user?.accounts, session?.user?.id]);
+
+  const handleCardSelect = useCallback((account: IAccount) => {
+    setSelectedAccount(account);
+  }, []);
+
+  const totalBalance = useMemo(
+    () => accounts?.reduce((total, account) => total + account.balance, 0),
+    [accounts],
+  );
+
   return (
     <Modal
       isOpen={isOpen}
@@ -53,7 +94,7 @@ const BalanceModal = ({
             variant={TEXT_VARIANT.DEFAULT}
             className='font-normal'
           >
-            {username}
+            {session?.user?.username || ''}
           </Text>
         </Text>
       </div>
@@ -73,11 +114,12 @@ const BalanceModal = ({
                 className='font-extrabold'
                 variant={TEXT_VARIANT.DEFAULT}
               >
-                ${currentBalance}
+                ${formatNumberWithCommas(selectedAccount?.balance || 0)}
                 <Text
                   as='span'
                   size={TEXT_SIZE['XS']}
-                  className='font-semibold text-black/50'
+                  variant={TEXT_VARIANT.DEFAULT}
+                  className='font-semibold opacity-50'
                 >
                   /${totalIncome}
                 </Text>
@@ -111,7 +153,7 @@ const BalanceModal = ({
               }}
               showValueLabel={false}
               strokeWidth={3}
-              value={percent}
+              value={70}
             />
             <div className='absolute flex flex-col items-center'>
               <Text
@@ -125,7 +167,7 @@ const BalanceModal = ({
                 className='text-center font-extrabold'
                 variant={TEXT_VARIANT.DEFAULT}
               >
-                {percent}%
+                70%
               </Text>
             </div>
           </div>
@@ -137,7 +179,11 @@ const BalanceModal = ({
             My Cards
           </Text>
           <div className='my-4'>
-            <MyCards />
+            <MyCards
+              expireDate={cardData?.expireAt}
+              accounts={accounts as IAccount[]}
+              onCardSelect={handleCardSelect}
+            />
           </div>
           <Text
             size={TEXT_SIZE['XS']}
@@ -151,14 +197,16 @@ const BalanceModal = ({
               variant={TEXT_VARIANT.DEFAULT}
               className='font-bold'
             >
-              ${totalBalance}
+              ${formatNumberWithCommas(totalBalance || 0)}
             </Text>{' '}
             available in your wallet
           </Text>
 
           <div className='mt-2.5'>
             <ExpenseAnalysis
-              options={createExpenseAnalysisOptions('220 000')}
+              options={createExpenseAnalysisOptions(
+                formatNumberWithCommas(totalBalance || 0),
+              )}
               series={MOCK_SERIES_EXPENSE_ANALYSIS}
             />
           </div>

@@ -3,6 +3,7 @@
 // Libs
 import { Card, useDisclosure } from '@nextui-org/react';
 import dynamic from 'next/dynamic';
+import { Session } from 'next-auth';
 
 // Components
 import {
@@ -32,7 +33,11 @@ const BalanceModal = dynamic(() => import('@/components/BalanceModal'), {
   ssr: false,
 });
 
-export const QuickAction = () => {
+interface QuickActionProps {
+  session: Session;
+}
+
+export const QuickAction = ({ session }: QuickActionProps) => {
   const {
     isOpen: isOpenTransferModal,
     onOpen: onOpenTransferModal,
@@ -106,6 +111,7 @@ export const QuickAction = () => {
       )}
       {isOpenBalanceModal && (
         <BalanceModal
+          session={session}
           isOpen={isOpenBalanceModal}
           onClose={onCloseBalanceModal}
         />

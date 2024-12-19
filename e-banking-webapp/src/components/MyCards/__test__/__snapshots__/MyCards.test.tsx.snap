@@ -62,13 +62,11 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
                 class="text-foreground-200 font-medium text-2xs opacity-100"
               >
                 .... 
-                6789
+                6666
               </p>
               <p
                 class="text-foreground-200 font-medium text-2xs opacity-100"
-              >
-                06/24
-              </p>
+              />
             </div>
           </div>
         </div>
@@ -126,13 +124,11 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
                 class="text-foreground-100 font-medium text-2xs opacity-50"
               >
                 .... 
-                6789
+                7878
               </p>
               <p
                 class="text-foreground-100 font-medium text-2xs opacity-50"
-              >
-                06/24
-              </p>
+              />
             </div>
           </div>
         </div>
@@ -194,9 +190,7 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
               </p>
               <p
                 class="text-foreground-100 font-medium text-2xs opacity-50"
-              >
-                06/24
-              </p>
+              />
             </div>
           </div>
         </div>
@@ -261,13 +255,11 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
               class="text-foreground-200 font-medium text-2xs opacity-100"
             >
               .... 
-              6789
+              6666
             </p>
             <p
               class="text-foreground-200 font-medium text-2xs opacity-100"
-            >
-              06/24
-            </p>
+            />
           </div>
         </div>
       </div>
@@ -325,13 +317,11 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
               class="text-foreground-100 font-medium text-2xs opacity-50"
             >
               .... 
-              6789
+              7878
             </p>
             <p
               class="text-foreground-100 font-medium text-2xs opacity-50"
-            >
-              06/24
-            </p>
+            />
           </div>
         </div>
       </div>
@@ -393,9 +383,7 @@ exports[`MyCards component Should render snapshot correctly 1`] = `
             </p>
             <p
               class="text-foreground-100 font-medium text-2xs opacity-50"
-            >
-              06/24
-            </p>
+            />
           </div>
         </div>
       </div>
