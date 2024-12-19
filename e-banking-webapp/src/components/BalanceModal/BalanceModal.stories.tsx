@@ -2,6 +2,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
+// Mocks data
+import { MOCK_SESSION_DATA } from '@/mocks';
+
 // Components
 import BalanceModal from '.';
 
@@ -12,11 +15,7 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  args: {
-    currentBalance: '90,000',
-    totalInvestment: '80,000',
-    username: 'Pheroxios',
-  },
+  args: {},
 } satisfies Meta<typeof BalanceModal>;
 
 export default meta;
@@ -26,10 +25,8 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     isOpen: true,
-    currentBalance: '90,000',
     onClose: () => {},
-    totalInvestment: '80,000',
-    username: 'Pheroxios',
+    session: MOCK_SESSION_DATA,
   },
   render: (args) => {
     const [isOpen, setIsOpen] = useState(args.isOpen);

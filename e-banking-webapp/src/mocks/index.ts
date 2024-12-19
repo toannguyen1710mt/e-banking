@@ -6,3 +6,4 @@ export * from './table';
 export * from './transferConfirmData';
 export * from './target';
 export * from './analytics';
+export * from './auth';

@@ -2,6 +2,7 @@ import { render } from '@testing-library/react';
 
 // Components
 import BalanceModal from '@/components/BalanceModal';
+import { MOCK_DATA_USER } from '@/mocks';
 
 jest.mock('react-apexcharts', () => {
   return {
@@ -19,11 +20,9 @@ describe('BalanceModal component', () => {
     expect(
       render(
         <BalanceModal
-          username='Pheroxios'
+          user={MOCK_DATA_USER}
+          onClose={jest.fn()}
           isOpen={true}
-          onClose={() => {}}
-          currentBalance='90,000'
-          totalInvestment='80,000'
         />,
       ),
     ).toMatchSnapshot();
