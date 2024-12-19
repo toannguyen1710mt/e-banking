@@ -81,6 +81,7 @@ export const CreditCardForm = <T extends z.ZodType>({
               aria-label='cardNumber'
               placeholder='Card Number'
               type='text'
+              maxLength={12}
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<CreditCardIcon />}
