@@ -20,7 +20,7 @@ interface ConfirmGlobalTransferProps<T extends z.ZodType> {
 
 export const ConfirmGlobalTransfer = <T extends z.ZodType>({
   submitHandler,
-  amountInUSD
+  amountInUSD,
 }: ConfirmGlobalTransferProps<T>) => {
   const {
     form: { getValues },
@@ -53,11 +53,11 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
         ${amountInUSD}
       </Text>
       <Text className='mt-3 text-xs font-medium text-transparentBlack'>
-        From your {fromAccountType} wallet to your {fromCountryType} wallet, this
-        action cannot be undone once approved...
+        From your {fromAccountType} wallet to your {fromCountryType} wallet,
+        this action cannot be undone once approved...
       </Text>
       <div className='mt-10 flex gap-6'>
-        <Button radius='xs' color='danger' size='xxl' onClick={prevStep}>
+        <Button radius='xs' color='tertiary' size='xxl' onClick={prevStep}>
           Cancel
         </Button>
         <Button
