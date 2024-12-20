@@ -1,5 +1,5 @@
 // Interfaces
-import { Status, ITransaction } from '@/interfaces';
+import { ITransaction } from '@/interfaces';
 
 // Utils
 import { formatDate } from '@/utils';
@@ -12,7 +12,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     fromAccountId: 'CARD001',
     toAccountId: 'CARD002',
     amount: 120,
-    status: Status.SUCCESS,
+    statusTransaction: true,
     createdAt: formatDate('2024-12-01'),
     updatedAt: formatDate('2024-12-01'),
     publishedAt: formatDate('2024-12-01'),
@@ -24,7 +24,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     fromAccountId: 'CARD003',
     toAccountId: 'CARD004',
     amount: 75,
-    status: Status.FAILED,
+    statusTransaction: false,
     createdAt: formatDate('2024-12-02'),
     updatedAt: formatDate('2024-12-02'),
     publishedAt: formatDate('2024-12-02'),
@@ -36,7 +36,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     fromAccountId: 'CARD005',
     toAccountId: 'CARD006',
     amount: 50,
-    status: Status.FAILED,
+    statusTransaction: false,
     createdAt: formatDate('2024-12-03'),
     updatedAt: formatDate('2024-12-03'),
     publishedAt: formatDate('2024-12-03'),
@@ -48,7 +48,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     fromAccountId: 'CARD007',
     toAccountId: 'CARD008',
     amount: 200,
-    status: Status.SUCCESS,
+    statusTransaction: true,
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),

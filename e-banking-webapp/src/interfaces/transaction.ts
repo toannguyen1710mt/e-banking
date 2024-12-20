@@ -1,5 +1,5 @@
 // Interfaces
-import { CurrencyUnit, Status, AccountType, GlobalType } from '@/interfaces';
+import { CurrencyUnit, AccountType, GlobalType } from '@/interfaces';
 
 export interface ITransaction {
   id: string;
@@ -10,7 +10,7 @@ export interface ITransaction {
   fromAccountType?: AccountType | GlobalType;
   toAccountType?: AccountType | GlobalType;
   amount: number;
-  status: Status;
+  statusTransaction: boolean;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;

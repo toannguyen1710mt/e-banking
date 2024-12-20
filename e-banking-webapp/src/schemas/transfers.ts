@@ -35,6 +35,16 @@ const createTransferFormSchema = <T extends Record<string, string>>(
       .refine((val) => val > 0.01, {
         message: ERROR_MESSAGES.AMOUNT_MIN,
       }),
+
+    //Hidden fields
+    fromAccountId: z.string(),
+    toAccountId: z.string(),
+    fromCardName: z.string(),
+    toCardName: z.string(),
+    fromAccountNumber: z.string(),
+    toAccountNumber: z.string(),
+    fromAccountBalance: z.number(),
+    toAccountBalance: z.number(),
   });
 };
 
