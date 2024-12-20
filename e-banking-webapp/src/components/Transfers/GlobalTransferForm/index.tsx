@@ -59,7 +59,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
-  console.log('session.user.id', session.user.id);
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
