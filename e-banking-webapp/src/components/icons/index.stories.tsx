@@ -41,6 +41,7 @@ import {
   MastercardIcon,
   CloseIcon,
   CheckIcon,
+  CameraIcon,
 } from '@/components';
 import { ArrowDownIcon } from './ArrowDownIcon';
 import { HouseIcon } from './HouseIcon';
@@ -87,6 +88,7 @@ const icons = [
   { component: MastercardIcon, label: 'Mastercard' },
   { component: CloseIcon, label: 'Close' },
   { component: CheckIcon, label: 'Check' },
+  { component: CameraIcon, label: 'Camera' },
 ];
 
 const meta: Meta = {

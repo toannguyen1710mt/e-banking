@@ -13,8 +13,11 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { Input, EyeIcon, EyeSlashIcon, Text } from '@/components';
+import { UploadImage } from '../UploadImage';
 
-type FormValues = z.infer<typeof ProfileSchema>;
+type FormValues = z.infer<typeof ProfileSchema> & {
+  avatar: string;
+};
 
 export const ProfileForm = () => {
   const { control } = useForm<FormValues>({
@@ -26,6 +29,7 @@ export const ProfileForm = () => {
         fullName: 'Pheroxios Yehudi',
         password: '1234@Abc',
       },
+      avatar: '',
     },
     mode: 'all',
   });
@@ -37,7 +41,25 @@ export const ProfileForm = () => {
   } = useDisclosure();
 
   return (
-    <form className='flex flex-col gap-4 pl-8 pr-[87px]'>
+    <form className='flex flex-col pr-[87px]'>
+      <div className='mb-10'>
+        <Text
+          variant={TEXT_VARIANT.DEFAULT}
+          size={TEXT_SIZE.SM}
+          className='mb-[11px]'
+        >
+          Profile Picture
+        </Text>
+
+        <Controller
+          control={control}
+          name='avatar'
+          render={({ field: { value, name } }) => {
+            return <UploadImage src={value} alt='Avatar' name={name} />;
+          }}
+        />
+      </div>
+
       <div className='mb-14 flex flex-col gap-8'>
         <div className='flex gap-[107px]'>
           <Controller
@@ -117,15 +139,14 @@ export const ProfileForm = () => {
           <Controller
             control={control}
             name='user.password'
-            render={({ field, fieldState: { error } }) => (
+            render={({ field: { value } }) => (
               <Input
                 label='Password'
                 labelPlacement='outside'
                 aria-label='password'
                 placeholder='Password'
+                value={value}
                 type={passwordIsOpen ? 'text' : 'password'}
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
                 classNames={{
                   inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
                   input: 'm-0 text-sm',
@@ -141,7 +162,6 @@ export const ProfileForm = () => {
                     {passwordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
                   </button>
                 }
-                {...field}
               />
             )}
           />
