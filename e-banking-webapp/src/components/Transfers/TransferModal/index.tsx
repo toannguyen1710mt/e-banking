@@ -10,6 +10,7 @@ import {
   Modal,
   UserIcon,
   GlobalIcon,
+  GlobalTransferSteps,
   InternalTransferSteps,
 } from '@/components';
 
@@ -33,7 +34,7 @@ const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
       title: 'Global Tranfer',
       description: 'Transfer Money across the globe',
       icon: <GlobalIcon width={32} height={32} />,
-      content: <Text>Global</Text>,
+      content: <GlobalTransferSteps session={session} onClose={onClose} />,
     },
   ];
 

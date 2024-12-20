@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { ERROR_MESSAGES, REGEX } from '@/constants';
 
 // Interfaces
-import { AccountType, GlobalType } from '@/interfaces';
+import { AccountType } from '@/interfaces';
 
 const createTransferFormSchema = <T extends Record<string, string>>(
   accountEnum: T,
@@ -49,4 +49,3 @@ const createTransferFormSchema = <T extends Record<string, string>>(
 };
 
 export const InternalTransferFormSchema = createTransferFormSchema(AccountType);
-export const GlobalTransferFormSchema = createTransferFormSchema(GlobalType);

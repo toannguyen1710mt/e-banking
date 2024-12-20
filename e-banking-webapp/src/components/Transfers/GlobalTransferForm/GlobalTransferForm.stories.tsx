@@ -1,8 +1,11 @@
 // Libs
-import type { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 // Components
 import { GlobalTransferForm } from '@/components';
+
+// Mocks
+import { MOCK_SESSION_DATA } from '@/mocks';
 
 const meta = {
   title: 'Components/Transfers/GlobalTransferForm',
@@ -24,4 +27,8 @@ export default meta;
 
 type Story = StoryObj<typeof GlobalTransferForm>;
 
-export const InternalTransferFormDefault: Story = {};
+export const InternalTransferFormDefault: Story = {
+  args: {
+    session: MOCK_SESSION_DATA,
+  },
+};
