@@ -1,14 +1,12 @@
 'use client';
 
 // Libs
-import { Controller, useForm, useWatch } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
+import { Controller, useWatch } from 'react-hook-form';
+
+import { Session } from 'next-auth';
 
 // Constants
 import { TRANSFER_FORM_ACCOUNT_OPTIONS } from '@/constants';
-
-// Interfaces
-import { InternalTransferForm as InternalTransferFormType } from '@/interfaces';
 
 // Components
 import { Button, Input, Select, SendIcon, Text } from '@/components';
@@ -16,19 +14,24 @@ import { Button, Input, Select, SendIcon, Text } from '@/components';
 // Schemas
 import { InternalTransferFormSchema } from '@/schemas';
 
-export const InternalTransferForm = () => {
+// Context
+import { useWizardFormContext } from '@/context';
+
+interface IInternalTransferFormProps {
+  session: Session;
+}
+
+export const InternalTransferForm = ({
+  session,
+}: IInternalTransferFormProps) => {
   const {
-    control,
-    formState: { errors, isValid, isDirty },
-  } = useForm<InternalTransferFormType>({
-    mode: 'all',
-    defaultValues: {
-      fromAccountType: undefined,
-      toAccountType: undefined,
-      amount: 0,
+    form: {
+      control,
+      formState: { errors },
     },
-    resolver: zodResolver(InternalTransferFormSchema),
-  });
+    nextStep,
+    isStepValid,
+  } = useWizardFormContext<typeof InternalTransferFormSchema>();
 
   const fromAccountTypeValue = useWatch({
     control,
@@ -39,6 +42,9 @@ export const InternalTransferForm = () => {
     control,
     name: 'toAccountType',
   });
+
+  // TODO: Handle fetch balance by user ID and account type
+  console.log(session);
 
   return (
     <form className='flex flex-col gap-4'>
@@ -146,7 +152,8 @@ export const InternalTransferForm = () => {
         type='submit'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        isDisabled={!isValid || !isDirty}
+        isDisabled={!isStepValid}
+        onClick={nextStep}
       >
         Transfer Funds
       </Button>

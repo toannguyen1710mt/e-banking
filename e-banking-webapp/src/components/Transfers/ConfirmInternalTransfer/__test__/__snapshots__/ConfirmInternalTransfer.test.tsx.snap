@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConfirmInternalTransfer component should match snapshot for ConfirmInternalTransfer 1`] = `
+exports[`ConfirmInternalTransfer component should match snapshot 1`] = `
 <div>
   <div
     class="flex flex-col items-center justify-center gap-4"

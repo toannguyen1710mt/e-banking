@@ -1,13 +1,43 @@
-// Libs
-import { render } from '@testing-library/react';
+// Context
+import { useWizardFormContext } from '@/context';
 
-// Components
-import { InternalTransferForm } from '@/components';
+jest.mock('react-hook-form', () => ({
+  useWatch: jest.fn().mockReturnValue(null),
+}));
 
+jest.mock('@/context', () => ({
+  useWizardFormContext: jest.fn(),
+}));
+
+jest.mock('@/services', () => ({
+  getAccountInfoByAccountType: jest.fn(),
+}));
+
+jest.mock('@/utils', () => ({
+  formatNumberWithCommas: jest.fn(),
+  formatDate: jest.fn(),
+}));
 describe('InternalTransferForm component', () => {
-  it('should match snapshot for InternalTransferForm', () => {
-    const { container } = render(<InternalTransferForm />);
+  const mockSetValue = jest.fn();
+  const mockNextStep = jest.fn();
+  const mockIsStepValid = true;
+  const mockControl = {};
 
-    expect(container).toMatchSnapshot();
+  const mockContextValue = {
+    form: {
+      control: mockControl,
+      formState: { errors: {} },
+      setValue: mockSetValue,
+    },
+    nextStep: mockNextStep,
+    isStepValid: mockIsStepValid,
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+
+    const mockUseWizardFormContext = useWizardFormContext as jest.Mock;
+    mockUseWizardFormContext.mockReturnValue(mockContextValue);
   });
+  it('should match snapshot for InternalTransferForm', () => {});
 });

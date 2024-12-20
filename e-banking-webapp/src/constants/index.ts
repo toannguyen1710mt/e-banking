@@ -8,7 +8,6 @@ export * from './rules';
 export * from './slideshow';
 export * from './navbar';
 export * from './titles';
-export * from './tab';
 export * from './sidebar';
 export * from './global-transfer';
 export * from './balance';

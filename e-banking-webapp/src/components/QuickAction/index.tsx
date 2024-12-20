@@ -105,6 +105,7 @@ export const QuickAction = ({ session }: QuickActionProps) => {
       </Card>
       {isOpenTransferModal && (
         <TransferModal
+          session={session}
           isOpen={isOpenTransferModal}
           onClose={onCloseTransferModal}
         />
