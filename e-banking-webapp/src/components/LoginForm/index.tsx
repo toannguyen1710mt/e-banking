@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -20,6 +21,7 @@ import { EyeIcon, EyeSlashIcon, LockIcon, UserIcon } from '@/components/icons';
 import { Button, Input, Text } from '@/components';
 
 export const LoginForm = () => {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const router = useRouter();
 
   const {
@@ -45,7 +47,7 @@ export const LoginForm = () => {
     const errorMessage = await authenticateUser(data);
 
     if (errorMessage) {
-      alert(errorMessage);
+      setErrorMessage(errorMessage);
       return;
     }
 
@@ -70,12 +72,16 @@ export const LoginForm = () => {
           name='username'
           render={({ field, fieldState: { error } }) => (
             <Input
+              {...field}
+              onChange={(e) => {
+                field.onChange(e);
+                setErrorMessage(null);
+              }}
               aria-label='username'
               placeholder='Username'
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<UserIcon />}
-              {...field}
             />
           )}
         />
@@ -85,6 +91,11 @@ export const LoginForm = () => {
           name='password'
           render={({ field, fieldState: { error } }) => (
             <Input
+              {...field}
+              onChange={(e) => {
+                field.onChange(e);
+                setErrorMessage(null);
+              }}
               aria-label='password'
               placeholder='Password'
               className='dark:text-foreground-200'
@@ -102,16 +113,21 @@ export const LoginForm = () => {
               }
               isInvalid={!!error?.message}
               errorMessage={error?.message}
-              {...field}
             />
           )}
         />
 
+        {errorMessage && (
+          <Text size={TEXT_SIZE.SM} className='text-warning'>
+            {errorMessage}
+          </Text>
+        )}
         <Link href='#' aria-disabled className='text-right text-sm'>
           Forgot Password?
         </Link>
       </div>
 
+      {/* Display error message below the form */}
       <Button
         type='submit'
         color='primary'
