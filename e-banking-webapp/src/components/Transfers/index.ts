@@ -6,3 +6,4 @@ export * from './GlobalTransferForm';
 export * from './GlobalTransferSuccess';
 export * from './TransferModal';
 export * from './TransferTab';
+export * from './GlobalTransferSteps';

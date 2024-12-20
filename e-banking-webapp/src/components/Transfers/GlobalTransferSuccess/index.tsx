@@ -13,7 +13,7 @@ interface IGlobalTransferSuccess {
   amount: number;
   currencyUnit?: CurrencyUnit;
   userName: string;
-  onClose: () => void;
+  onClose?: () => void;
 }
 
 export const GlobalTransferSuccess = ({

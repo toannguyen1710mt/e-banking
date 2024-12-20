@@ -127,7 +127,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     );
 
   return (
-    <div className='flex flex-col gap-4'>
+    <div className='flex w-full flex-col gap-4'>
       {/* Title */}
       <Text as='h4' className='text-xs font-medium'>
         Send Money Across The Global with Ease

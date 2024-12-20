@@ -45,18 +45,30 @@ export const GlobalTransferSteps = ({
   };
 
   return (
-    <WizardForm.Root schema={GlobalTransferFormSchema} form={form}>
+    <WizardForm.Root
+      schema={GlobalTransferFormSchema}
+      form={form}
+      className='flex grow flex-col'
+    >
       <WizardForm.Step name='transfer' key='transfer'>
         <GlobalTransferForm session={session} />
       </WizardForm.Step>
-      <WizardForm.Step name='confirm' key='confirm'>
+      <WizardForm.Step
+        name='confirm'
+        key='confirm'
+        className='flex grow flex-col items-center justify-center'
+      >
         <ConfirmGlobalTransfer
           {...allFieldValues}
           submitHandler={submitHandler}
           amountInUSD={'1,000'}
         />
       </WizardForm.Step>
-      <WizardForm.Step>
+      <WizardForm.Step
+        name='success'
+        key='success'
+        className='flex grow flex-col items-center justify-center'
+      >
         <GlobalTransferSuccess
           {...allFieldValues}
           onClose={onClose}
