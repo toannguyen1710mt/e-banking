@@ -14,7 +14,7 @@ export const getAccountsByUserId = async (
     `${API_ENDPOINTS.USERS}/${userId}?populate=accounts`,
   );
 
-  if (response && response.data && response.data.accounts) {
+  if (response?.data?.accounts) {
     return response.data.accounts;
   }
 

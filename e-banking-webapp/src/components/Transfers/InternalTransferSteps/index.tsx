@@ -47,35 +47,49 @@ export const InternalTransferSteps = ({
   const allFieldValues = form.watch();
 
   const submitHandler = async (data: FormValues) => {
+    const {
+      fromAccountId,
+      toAccountId,
+      fromAccountType,
+      toAccountType,
+      fromAccountNumber,
+      toAccountNumber,
+      fromAccountBalance,
+      toAccountBalance,
+      fromCardName,
+      toCardName,
+      amount,
+    } = data;
+
     try {
       const transactionData: TransactionCreateData = {
-        fromAccountId: data.fromAccountId,
-        toAccountId: data.toAccountId,
-        fromAccountType: data.fromAccountType,
-        toAccountType: data.toAccountType,
+        fromAccountId,
+        toAccountId,
+        fromAccountType,
+        toAccountType,
         statusTransaction: true,
-        amount: Number(data.amount),
+        amount: Number(amount),
       };
 
       const accountSendData: IAccountPayloadData = {
-        name: data.fromCardName,
-        accountNumber: data.fromAccountNumber,
-        balance: data.fromAccountBalance - Number(data.amount),
-        type: data.fromAccountType,
+        name: fromCardName,
+        accountNumber: fromAccountNumber,
+        balance: fromAccountBalance - Number(amount),
+        type: fromAccountType,
         currency: '$',
       };
 
       const accountReceiveData: IAccountPayloadData = {
-        name: data.toCardName,
-        accountNumber: data.toAccountNumber,
-        balance: data.toAccountBalance + Number(data.amount),
-        type: data.toAccountType,
+        name: toCardName,
+        accountNumber: toAccountNumber,
+        balance: toAccountBalance + Number(amount),
+        type: toAccountType,
         currency: '$',
       };
 
       await createTransaction(transactionData);
-      await updateAccountInfo(data.fromAccountId, accountSendData);
-      await updateAccountInfo(data.toAccountId, accountReceiveData);
+      await updateAccountInfo(fromAccountId, accountSendData);
+      await updateAccountInfo(toAccountId, accountReceiveData);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       // TODO: Handle show error message in toast
