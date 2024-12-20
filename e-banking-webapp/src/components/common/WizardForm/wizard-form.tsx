@@ -68,7 +68,7 @@ function WizardFormRoot<T extends z.ZodType>({
       >
         {header}
 
-        <div>
+        <div className='flex grow flex-col'>
           {steps.map((step, index) => {
             const isActive = index === wizardFormStep.currentStepIndex;
             return isActive ? (
@@ -77,6 +77,7 @@ function WizardFormRoot<T extends z.ZodType>({
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
+                  className='flex grow flex-col'
                 >
                   {step}
                 </motion.div>

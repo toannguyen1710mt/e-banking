@@ -1,21 +1,41 @@
 'use client';
 
 // Libs
-import { useSession } from 'next-auth/react';
-
-// Constants
-import { TRANSFER_TABS } from '@/constants';
+import { Session } from 'next-auth';
 
 // Components
-import { TransferTab, Text, Modal } from '@/components';
+import {
+  TransferTab,
+  Text,
+  Modal,
+  UserIcon,
+  GlobalIcon,
+  InternalTransferSteps,
+} from '@/components';
 
 interface ITransferModalProps {
   isOpen: boolean;
   onClose: () => void;
+  session: Session;
 }
 
-const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
-  const { data: session } = useSession();
+const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
+  const TRANSFER_TABS = [
+    {
+      keyTab: 'account',
+      title: 'To my Account',
+      description: 'Instant transfer between your own accounts',
+      icon: <UserIcon width={32} height={32} />,
+      content: <InternalTransferSteps session={session} onClose={onClose} />,
+    },
+    {
+      keyTab: 'global',
+      title: 'Global Tranfer',
+      description: 'Transfer Money across the globe',
+      icon: <GlobalIcon width={32} height={32} />,
+      content: <Text>Global</Text>,
+    },
+  ];
 
   return (
     <Modal
@@ -29,7 +49,7 @@ const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
         <Text as='h4' className='text-base font-medium text-primary-200'>
           Good Evening,{' '}
           <Text as='span' className='font-normal'>
-            {session?.user?.username}
+            {session.user?.username}
           </Text>
         </Text>
         <Text as='h5' className='text-sm font-semibold text-primary-200'>
@@ -42,7 +62,8 @@ const TransferModal = ({ isOpen, onClose }: ITransferModalProps) => {
         classNames={{
           base: 'px-4 py-24 bg-lightGraySolid flex-1 rounded-xl min-w-[460px]',
           tabList: 'p-0',
-          panel: 'py-8 pl-6 pr-8 min-h-[560px] bg-background-500 rounded-xl',
+          panel:
+            'py-8 pl-6 pr-8 min-h-[560px] bg-background-500 rounded-xl flex',
         }}
       />
     </Modal>
