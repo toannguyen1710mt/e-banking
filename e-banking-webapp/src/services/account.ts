@@ -2,7 +2,7 @@
 import { API_ENDPOINTS } from '@/constants';
 
 // Interfaces
-import { AccountType, IAccount, UserAccounts } from '@/interfaces';
+import { AccountType, IAccount, IUser } from '@/interfaces';
 
 // Services
 import { httpClient } from '@/services';
@@ -10,7 +10,7 @@ import { httpClient } from '@/services';
 export const getAccountsByUserId = async (
   userId: number,
 ): Promise<IAccount[]> => {
-  const response = await httpClient.get<UserAccounts>(
+  const response = await httpClient.get<IUser>(
     `${API_ENDPOINTS.USERS}/${userId}?populate=accounts`,
   );
 

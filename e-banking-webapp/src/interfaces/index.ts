@@ -10,4 +10,3 @@ export * from './table';
 export * from './account';
 export * from './global-transfer';
 export * from './card';
-export * from './user';
