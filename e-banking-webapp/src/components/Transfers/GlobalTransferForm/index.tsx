@@ -202,6 +202,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
                 onBlur={onBlur}
+                maxLength={12}
               />
             );
           }}
