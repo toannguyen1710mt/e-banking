@@ -7,7 +7,7 @@ exports[`Header component matches the snapshot 1`] = `
     style="--navbar-height: 4rem;"
   >
     <header
-      class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center h-[var(--navbar-height)] max-w-full justify-start"
+      class="z-40 flex px-6 gap-4 w-full flex-row relative flex-nowrap items-center h-[var(--navbar-height)] max-w-full justify-start border-b border-foreground-100 border-opacity-25"
     >
       <div
         class="flex items-center gap-[88px]"

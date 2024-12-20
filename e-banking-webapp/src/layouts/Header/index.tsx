@@ -37,7 +37,8 @@ export const Header = () => {
   return (
     <NavbarNextUI
       classNames={{
-        wrapper: 'max-w-full justify-start',
+        wrapper:
+          'max-w-full justify-start border-b border-foreground-100 border-opacity-25',
       }}
       onMenuOpenChange={setIsMenuOpen}
     >

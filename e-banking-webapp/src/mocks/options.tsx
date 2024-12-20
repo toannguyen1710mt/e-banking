@@ -1,3 +1,9 @@
+import Link from 'next/link';
+
+// Constants
+import { ROUTES } from '@/constants';
+
+// Components
 import { SettingIcon, SignOutIcon } from '@/components';
 
 export const MOCK_OPTIONS = [
@@ -28,6 +34,7 @@ export const MOCK_CUSTOM_OPTIONS = [
     key: 'Settings',
     label: 'Settings',
     startContent: <SettingIcon />,
+    customOptionElement: <Link href={ROUTES.SETTINGS}>Settings</Link>,
   },
   {
     key: 'Sign Out',
