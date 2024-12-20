@@ -1,68 +1,133 @@
 'use client';
 
 // Third Party
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Controller, useForm, useWatch } from 'react-hook-form';
+import { Controller, useWatch } from 'react-hook-form';
+import { Session } from 'next-auth';
+import { z } from 'zod';
+import { useEffect, useState } from 'react';
+import { Spinner } from '@nextui-org/react';
 
 // Constants
 import {
   OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL,
+  TRANSFER_FORM_ACCOUNT_OPTIONS,
   TRANSFER_FORM_GLOBAL_OPTIONS,
 } from '@/constants';
 
-// Models
-import { InternalTransferForm as InternalTransferFormType } from '@/interfaces';
+// Interfaces
+import { AccountType, GlobalType } from '@/interfaces';
+
+// API
+import { getAccountInfoByAccountType } from '@/services';
+
+// Helpers / Utils
+import { formatNumberWithCommas } from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
 import { Button, Input, Select, Text, SendIcon } from '@/components';
+import { useWizardFormContext } from '@/context';
 
-interface IGlobalTransferForm {
-  balanceLabel?: string;
-}
+type FormValues = keyof z.infer<typeof GlobalTransferFormSchema>;
 
-export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
+export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const {
-    control,
-    formState: { errors, isValid, isDirty },
-  } = useForm<InternalTransferFormType>({
-    mode: 'all',
-    defaultValues: {
-      fromAccountType: undefined,
-      toAccountType: undefined,
-      recipientAccount: undefined,
-      amount: 0,
-    },
-    resolver: zodResolver(GlobalTransferFormSchema),
-  });
+    form: { control, setValue },
+    nextStep,
+    isStepValid,
+  } = useWizardFormContext<typeof GlobalTransferFormSchema>();
 
-  const fromGlobalTypeValue = useWatch({
+  const hiddenFields: FormValues[] = [
+    'fromAccountId',
+    'fromCardName',
+    'fromAccountNumber',
+    'fromAccountBalance',
+  ];
+
+  const fromAccountTypeValue = useWatch({
     control,
     name: 'fromAccountType',
   });
 
-  const toAccountTypeValue = useWatch({
+  const fromCountryType = useWatch({
     control,
-    name: 'toAccountType',
+    name: 'fromCountryType',
   });
+
+  // States for fetching
+  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
+
+  // States for balances
+  const [balanceSend, setBalanceSend] = useState<number | null>(null);
+  console.log('session.user.id', session.user.id);
+
+  useEffect(() => {
+    const fetchBalanceSend = async () => {
+      if (!fromAccountTypeValue) {
+        setBalanceSend(null);
+        return;
+      }
+
+      try {
+        setIsFetchingBalanceSend(true);
+
+        const balance = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'balance',
+        );
+
+        const accountId = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'documentId',
+        );
+
+        const fromCardName = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'name',
+        );
+
+        const fromAccountNumber = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'accountNumber',
+        );
+
+        setBalanceSend(Number(balance));
+        setValue('fromAccountId', String(accountId));
+        setValue('fromCardName', String(fromCardName));
+        setValue('fromAccountNumber', String(fromAccountNumber));
+        setValue('fromAccountBalance', Number(balance));
+      } catch (error) {
+        console.error('Error fetching balance for send account:', error);
+      } finally {
+        setIsFetchingBalanceSend(false);
+      }
+    };
+
+    fetchBalanceSend();
+  }, [fromAccountTypeValue, session.user.id, setValue]);
 
   const countryCode = () =>
     OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
-      (option) => option.key === toAccountTypeValue,
+      (option) => option.key === fromCountryType,
     )?.label || '';
 
   const filteredFromAccountOptions = () =>
-    TRANSFER_FORM_GLOBAL_OPTIONS.filter(
-      (option) => option.key !== toAccountTypeValue,
+    TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
+      (option) => option.key !== (fromCountryType as unknown as AccountType),
     );
 
   const filteredToAccountOptions = () =>
     TRANSFER_FORM_GLOBAL_OPTIONS.filter(
-      (option) => option.key !== fromGlobalTypeValue,
+      (option) =>
+        option.key !== (fromAccountTypeValue as unknown as GlobalType),
     );
 
   return (
-    <form className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4'>
       {/* Title */}
       <Text as='h4' className='text-xs font-medium'>
         Send Money Across The Global with Ease
@@ -71,8 +136,11 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
       {/* Country */}
       <Controller
         control={control}
-        name='toAccountType'
-        render={({ field: { onChange, onBlur, value } }) => {
+        name='fromCountryType'
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => {
           return (
             <Select
               label='Country'
@@ -80,8 +148,8 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.toAccountType?.message}
-              isInvalid={!!errors.toAccountType}
+              errorMessage={error?.message}
+              isInvalid={!!error?.message}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -96,7 +164,10 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
       <Controller
         control={control}
         name='fromAccountType'
-        render={({ field: { onChange, onBlur, value } }) => {
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => {
           return (
             <Select
               label='Account'
@@ -104,8 +175,9 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
               options={filteredFromAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.fromAccountType?.message}
-              isInvalid={!!errors.fromAccountType}
+              errorMessage={error?.message}
+              isInvalid={!!error?.message}
+              isDisabled={isFetchingBalanceSend}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -117,11 +189,11 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
       />
 
       {/* Recipient Account */}
-      {fromGlobalTypeValue && (
+      {fromAccountTypeValue && (
         <Controller
           control={control}
           name='recipientAccount'
-          render={({ field: { onChange, onBlur } }) => {
+          render={({ field: { onChange, onBlur }, fieldState: { error } }) => {
             return (
               <Input
                 label='Recipient Account'
@@ -132,8 +204,8 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                errorMessage={errors.recipientAccount?.message}
-                isInvalid={!!errors.recipientAccount}
+                errorMessage={error?.message}
+                isInvalid={!!error?.message}
                 onChange={onChange}
                 onBlur={onBlur}
               />
@@ -143,15 +215,27 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
       )}
 
       {/* Available Balance */}
-      <Text as='span' className='text-xs text-foreground-200 opacity-50'>
-        Available Balance:{balanceLabel}
-      </Text>
+      <div className='flex items-center gap-2'>
+        <Text as='span' className='text-xs text-foreground-200 opacity-50'>
+          Available Balance:
+        </Text>
+        <Text as='span' className='text-xs text-foreground-200 opacity-50'>
+          {isFetchingBalanceSend ? (
+            <Spinner size='sm' />
+          ) : (
+            balanceSend && `$${formatNumberWithCommas(balanceSend)}`
+          )}
+        </Text>
+      </div>
 
       {/* Amount */}
       <Controller
         control={control}
         name='amount'
-        render={({ field: { onChange, onBlur, value } }) => {
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -175,8 +259,8 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
                 value={String(value)}
-                errorMessage={errors.amount?.message}
-                isInvalid={!!errors.amount}
+                errorMessage={error?.message}
+                isInvalid={!!error?.message}
                 onChange={onChange}
                 onBlur={onBlur}
               />
@@ -185,14 +269,27 @@ export const GlobalTransferForm = ({ balanceLabel }: IGlobalTransferForm) => {
         }}
       />
 
+      {/* Hidden Fields */}
+      {hiddenFields.map((fieldName) => (
+        <Controller
+          key={fieldName}
+          control={control}
+          name={fieldName}
+          render={({ field: { value } }) => (
+            <Input value={String(value)} className='hidden' />
+          )}
+        />
+      ))}
+
       <Button
         type='submit'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        isDisabled={!isValid || !isDirty}
+        onClick={nextStep}
+        isDisabled={!isStepValid}
       >
         Transfer Funds
       </Button>
-    </form>
+    </div>
   );
 };
