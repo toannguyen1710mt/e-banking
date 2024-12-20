@@ -6,6 +6,16 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 
+// Models
+import { IAccountPayloadData, TransactionCreateData } from '@/interfaces';
+
+// API
+import { createTransaction, updateAccountInfo } from '@/actions';
+
+// Helpers / Utils
+import { GlobalTransferFormSchema } from '@/schemas';
+import { convertToUSD, formatNumberWithCommas } from '@/utils';
+
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import {
@@ -13,9 +23,6 @@ import {
   ConfirmGlobalTransfer,
   GlobalTransferSuccess,
 } from '@/components';
-
-// Schemas
-import { GlobalTransferFormSchema } from '@/schemas';
 
 type FormValues = z.infer<typeof GlobalTransferFormSchema>;
 
@@ -40,8 +47,30 @@ export const GlobalTransferSteps = ({
 
   const allFieldValues = form.watch();
 
+  const amountInUSD = formatNumberWithCommas(
+    convertToUSD(allFieldValues.fromCountryType, allFieldValues.amount),
+  );
+
   const submitHandler = async (data: FormValues) => {
-    console.log('Data: ', data);
+    const transactionData: TransactionCreateData = {
+      fromAccountId: data.fromAccountId,
+      toAccountId: '',
+      fromAccountType: data.fromAccountType,
+      toAccountType: undefined,
+      statusTransaction: true,
+      amount: Number(data.amount),
+    };
+
+    const payload: IAccountPayloadData = {
+      name: data.fromCardName,
+      accountNumber: data.fromAccountNumber,
+      balance: data.fromAccountBalance - Number(data.amount),
+      type: data.fromAccountType,
+      currency: '$',
+    };
+
+    await createTransaction(transactionData);
+    await updateAccountInfo(data.fromAccountId, payload);
   };
 
   return (
@@ -61,7 +90,7 @@ export const GlobalTransferSteps = ({
         <ConfirmGlobalTransfer
           {...allFieldValues}
           submitHandler={submitHandler}
-          amountInUSD={'1,000'}
+          amountInUSD={amountInUSD}
         />
       </WizardForm.Step>
       <WizardForm.Step

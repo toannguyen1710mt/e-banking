@@ -32,7 +32,11 @@ type FormValues = keyof z.infer<typeof GlobalTransferFormSchema>;
 
 export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const {
-    form: { control, setValue },
+    form: {
+      control,
+      formState: { errors, isValid },
+      setValue,
+    },
     nextStep,
     isStepValid,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
@@ -133,10 +137,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='fromCountryType'
-        render={({
-          field: { onChange, onBlur, value },
-          fieldState: { error },
-        }) => {
+        render={({ field: { onChange, onBlur, value } }) => {
           return (
             <Select
               label='Country'
@@ -144,8 +145,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={error?.message}
-              isInvalid={!!error?.message}
+              errorMessage={errors.fromAccountType?.message}
+              isInvalid={!!errors.fromAccountType}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -160,10 +161,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='fromAccountType'
-        render={({
-          field: { onChange, onBlur, value },
-          fieldState: { error },
-        }) => {
+        render={({ field: { onChange, onBlur, value } }) => {
           return (
             <Select
               label='Account'
@@ -171,8 +169,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredFromAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={error?.message}
-              isInvalid={!!error?.message}
+              errorMessage={errors.fromAccountType?.message}
+              isInvalid={!!errors.fromAccountType}
               isDisabled={isPending}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
@@ -189,7 +187,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         <Controller
           control={control}
           name='recipientAccount'
-          render={({ field: { onChange, onBlur }, fieldState: { error } }) => {
+          render={({ field: { onChange, onBlur } }) => {
             return (
               <Input
                 label='Recipient Account'
@@ -200,8 +198,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                errorMessage={error?.message}
-                isInvalid={!!error?.message}
+                errorMessage={errors.recipientAccount?.message}
+                isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
                 onBlur={onBlur}
               />
@@ -228,10 +226,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='amount'
-        render={({
-          field: { onChange, onBlur, value },
-          fieldState: { error },
-        }) => {
+        render={({ field: { onChange, onBlur, value } }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -255,8 +250,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
                 value={String(value)}
-                errorMessage={error?.message}
-                isInvalid={!!error?.message}
+                errorMessage={errors.amount?.message}
+                isInvalid={!!errors.amount}
                 onChange={onChange}
                 onBlur={onBlur}
               />
@@ -282,7 +277,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         onClick={nextStep}
-        isDisabled={!isStepValid}
+        isDisabled={!isStepValid || !isValid}
       >
         Transfer Funds
       </Button>
