@@ -5,9 +5,9 @@ import { render } from '@testing-library/react';
 import { Toast } from '@/components';
 
 // Hooks
-import { useToastContext } from '@/hooks';
+import { useToastContext } from '@/context/';
 
-jest.mock('@/hooks', () => ({
+jest.mock('@/context', () => ({
   useToastContext: jest.fn(),
 }));
 

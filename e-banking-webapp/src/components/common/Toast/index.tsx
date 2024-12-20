@@ -7,7 +7,7 @@ import { Card } from '@nextui-org/react';
 import { Text } from '@/components';
 
 // Hooks
-import { useToastContext } from '@/hooks';
+import { useToastContext } from '@/context';
 
 const TOAST_BACKGROUNDS = {
   success: 'bg-success',
@@ -39,7 +39,7 @@ export const Toast = () => {
             .map((toast) => {
               const { id, type, message } = toast;
 
-              const handleRemoveToast = () => removeToast(toast.id);
+              const handleRemoveToast = () => removeToast(id);
 
               return (
                 <Card

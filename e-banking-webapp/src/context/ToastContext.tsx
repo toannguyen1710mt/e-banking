@@ -1,7 +1,7 @@
 'use client';
 
 // Libs
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode, useContext } from 'react';
 
 // Interfaces
 import { ToastType, Toast, ToastPosition } from '@/interfaces';
@@ -17,9 +17,7 @@ type ToastContextType = {
   removeToast: (id: number) => void;
 };
 
-export const ToastContext = createContext<ToastContextType | undefined>(
-  undefined,
-);
+const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
@@ -44,4 +42,14 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
       {children}
     </ToastContext.Provider>
   );
+};
+
+export const useToastContext = () => {
+  const toastContext = useContext(ToastContext);
+
+  if (!toastContext) {
+    throw new Error('useToast must be used within a ToastProvider');
+  }
+
+  return toastContext;
 };

@@ -6,8 +6,8 @@ import { RadioGroup, Radio } from '@nextui-org/react';
 // Components
 import { Button, Text, Toast } from '@/components';
 
-// Hooks
-import { useToastContext } from '@/hooks';
+// Context
+import { useToastContext } from '@/context';
 
 // Types
 import { ToastType, ToastPosition } from '@/interfaces';
