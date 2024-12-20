@@ -4,7 +4,7 @@
 import { Controller, useWatch } from 'react-hook-form';
 import { Session } from 'next-auth';
 import { z } from 'zod';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { Spinner } from '@nextui-org/react';
 
 // Constants
@@ -54,8 +54,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     name: 'fromCountryType',
   });
 
-  // States for fetching
-  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
@@ -67,47 +66,45 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         return;
       }
 
-      try {
-        setIsFetchingBalanceSend(true);
+      startTransition(async () => {
+        try {
+          const balance = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'balance',
+          );
 
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
+          const accountId = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'documentId',
+          );
 
-        const accountId = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'documentId',
-        );
+          const fromCardName = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'name',
+          );
 
-        const fromCardName = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'name',
-        );
+          const fromAccountNumber = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'accountNumber',
+          );
 
-        const fromAccountNumber = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'accountNumber',
-        );
-
-        setBalanceSend(Number(balance));
-        setValue('fromAccountId', String(accountId));
-        setValue('fromCardName', String(fromCardName));
-        setValue('fromAccountNumber', String(fromAccountNumber));
-        setValue('fromAccountBalance', Number(balance));
-      } catch (error) {
-        console.error('Error fetching balance for send account:', error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
+          setBalanceSend(Number(balance));
+          setValue('fromAccountId', String(accountId));
+          setValue('fromCardName', String(fromCardName));
+          setValue('fromAccountNumber', String(fromAccountNumber));
+          setValue('fromAccountBalance', Number(balance));
+        } catch (error) {
+          console.error('Error fetching balance for send account:', error);
+        }
+      });
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue]);
+  }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
 
   const countryCode = () =>
     OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
@@ -126,7 +123,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     );
 
   return (
-    <div className='flex w-full flex-col gap-4'>
+    <form className='flex w-full flex-col gap-4'>
       {/* Title */}
       <Text as='h4' className='text-xs font-medium'>
         Send Money Across The Global with Ease
@@ -176,7 +173,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               value={String(value)}
               errorMessage={error?.message}
               isInvalid={!!error?.message}
-              isDisabled={isFetchingBalanceSend}
+              isDisabled={isPending}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -219,7 +216,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           Available Balance:
         </Text>
         <Text as='span' className='text-xs text-foreground-200 opacity-50'>
-          {isFetchingBalanceSend ? (
+          {isPending ? (
             <Spinner size='sm' />
           ) : (
             balanceSend && `$${formatNumberWithCommas(balanceSend)}`
@@ -289,6 +286,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       >
         Transfer Funds
       </Button>
-    </div>
+    </form>
   );
 };
