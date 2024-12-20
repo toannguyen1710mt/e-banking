@@ -6,6 +6,9 @@ import { useDisclosure } from '@nextui-org/react';
 import { Button, SendIcon, Text } from '@/components';
 import TransferModal from '@/components/Transfers/TransferModal';
 
+// Mocks
+import { MOCK_SESSION_DATA } from '@/mocks';
+
 const meta = {
   title: 'Components/Transfers/TransferModal',
   tags: ['autodocs'],
@@ -36,7 +39,11 @@ export const Default: Story = {
             Transfers
           </Text>
         </Button>
-        <TransferModal isOpen={isOpen} onClose={onClose} />
+        <TransferModal
+          isOpen={isOpen}
+          onClose={onClose}
+          session={MOCK_SESSION_DATA}
+        />
       </>
     );
   },
