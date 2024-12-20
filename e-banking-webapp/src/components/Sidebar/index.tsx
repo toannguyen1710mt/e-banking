@@ -3,36 +3,36 @@
 // Libs
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ReactNode } from 'react';
 
-// Components
-import { Button } from '@/components';
+// Constants
+import { SIDEBAR_ITEMS } from '@/constants';
 
-interface ISidebar {
-  sidebarItem: { label: string; href: string; icon: ReactNode }[];
-}
-
-export const Sidebar = ({ sidebarItem }: ISidebar) => {
-  const pathname = usePathname();
+export const Sidebar = () => {
+  const pathName = usePathname();
 
   return (
-    <aside className='h-screen w-[195px] border-r-1 border-semiTransparentDimGray px-[14px] pt-6'>
-      {sidebarItem.map(({ label, href, icon }) => {
-        const buttonColor = pathname === href ? 'overlay' : 'outline';
+    <aside className='h-screen w-[195px] border-r-1 border-primary-200 border-opacity-50 px-[14px] pt-4'>
+      <ul className='cursor-pointer'>
+        {SIDEBAR_ITEMS?.map(({ href, label, Icon }) => {
+          const liStyles =
+            pathName === href ? 'mb-3 bg-foreground-300 bg-opacity-10' : '';
 
-        return (
-          <Link key={label} href={href}>
-            <Button
-              className='text-black'
-              color={buttonColor}
-              radius='xst'
-              startContent={icon}
+          return (
+            <li
+              key={label}
+              className={`w-[167px] rounded-[6px] border-none py-2 pl-3 ${liStyles}`}
             >
-              {label}
-            </Button>
-          </Link>
-        );
-      })}
+              <Link
+                href={href}
+                className={`flex w-full items-center justify-start gap-3 border-none text-sm`}
+              >
+                <Icon />
+                <span>{label}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </aside>
   );
 };

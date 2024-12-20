@@ -4,15 +4,15 @@ import { ROUTES } from '@/constants';
 // Components
 import { SettingIcon, UserIcon } from '@/components';
 
-export const SIDEBAR_ITEM = [
+export const SIDEBAR_ITEMS = [
   {
-    label: 'General',
     href: ROUTES.GENERAL,
-    icon: <UserIcon />,
+    label: 'General',
+    Icon: UserIcon,
   },
   {
-    label: 'Account',
     href: ROUTES.ACCOUNT,
-    icon: <SettingIcon />,
+    label: 'Account',
+    Icon: SettingIcon,
   },
 ];
