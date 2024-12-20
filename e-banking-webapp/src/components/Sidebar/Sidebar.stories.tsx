@@ -1,9 +1,6 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Constants
-import { SIDEBAR_ITEM } from '@/constants';
-
 // Components
 import { Sidebar } from '@/components';
 
@@ -23,9 +20,7 @@ const meta = {
       },
     },
   },
-  args: {
-    sidebarItem: SIDEBAR_ITEM,
-  },
+  args: {},
 } satisfies Meta<typeof Sidebar>;
 
 export default meta;

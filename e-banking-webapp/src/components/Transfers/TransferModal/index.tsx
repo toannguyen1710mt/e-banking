@@ -11,6 +11,7 @@ import {
   UserIcon,
   GlobalIcon,
   GlobalTransferSteps,
+  InternalTransferSteps,
 } from '@/components';
 
 interface ITransferModalProps {
@@ -26,7 +27,7 @@ const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
       title: 'To my Account',
       description: 'Instant transfer between your own accounts',
       icon: <UserIcon width={32} height={32} />,
-      content: <Text>Internal</Text>,
+      content: <InternalTransferSteps session={session} onClose={onClose} />,
     },
     {
       keyTab: 'global',

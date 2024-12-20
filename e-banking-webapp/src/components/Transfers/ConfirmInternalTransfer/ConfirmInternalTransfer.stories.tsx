@@ -25,7 +25,5 @@ export const Default: Story = {
     amount: 15000,
     fromAccountType: AccountType.MAIN,
     toAccountType: AccountType.SAVINGS,
-    onCancel: () => {},
-    onConfirm: () => {},
   },
 };

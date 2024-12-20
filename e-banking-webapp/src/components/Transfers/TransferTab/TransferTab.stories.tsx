@@ -1,9 +1,6 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Constants
-import { TRANSFER_TABS } from '@/constants';
-
 // Components
 import { TransferTab } from '@/components';
 
@@ -20,8 +17,4 @@ export default meta;
 
 type Story = StoryObj<typeof TransferTab>;
 
-export const Default: Story = {
-  args: {
-    TransferTabs: TRANSFER_TABS,
-  },
-};
+export const Default: Story = {};
