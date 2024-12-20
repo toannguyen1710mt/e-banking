@@ -1,8 +1,9 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
+import { z } from 'zod';
 
-// Mocks
-import { TRANSFER_CONFIRM_DATA } from '@/mocks';
+// Utils
+import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
 import { ConfirmGlobalTransfer } from '@/components';
@@ -21,6 +22,11 @@ export default meta;
 type Story = StoryObj<typeof ConfirmGlobalTransfer>;
 
 export const Default: Story = {
-  args: TRANSFER_CONFIRM_DATA,
+  args: {
+    submitHandler: (data: z.infer<typeof GlobalTransferFormSchema>) => {
+      console.log('Form submitted:', data);
+    },
+    amountInUSD: '500',
+  },
   render: (args) => <ConfirmGlobalTransfer {...args} />,
 };

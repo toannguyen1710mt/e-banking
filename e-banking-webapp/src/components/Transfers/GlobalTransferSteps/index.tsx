@@ -53,7 +53,7 @@ export const GlobalTransferSteps = ({
         <ConfirmGlobalTransfer
           {...allFieldValues}
           submitHandler={submitHandler}
-          amountInUSD={amountInUSD}
+          amountInUSD={'1,000'}
         />
       </WizardForm.Step>
       <WizardForm.Step>
