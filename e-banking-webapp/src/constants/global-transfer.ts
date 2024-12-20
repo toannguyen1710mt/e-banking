@@ -44,3 +44,10 @@ export const OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL = [
     label: 'GPB',
   },
 ];
+
+export const EXCHANGE_RATES_TO_USD = {
+  [GlobalType.SOUTH_AFRICA]: 18.08,
+  [GlobalType.KENYA]: 100,
+  [GlobalType.GERMANY]: 0.95,
+  [GlobalType.UK]: 0.79,
+};
