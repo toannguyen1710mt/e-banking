@@ -6,6 +6,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 
+// Interfaces
+import { IAccountPayloadData, TransactionCreateData } from '@/interfaces';
+
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import {
@@ -16,6 +19,9 @@ import {
 
 // Schemas
 import { InternalTransferFormSchema } from '@/schemas';
+
+// Actions
+import { createTransaction, updateAccountInfo } from '@/actions';
 
 type FormValues = z.infer<typeof InternalTransferFormSchema>;
 
@@ -40,9 +46,54 @@ export const InternalTransferSteps = ({
 
   const allFieldValues = form.watch();
 
-  const submitHandler = (data: FormValues) => {
-    // TODO: Integrate API for internal transfer
-    console.log(data);
+  const submitHandler = async (data: FormValues) => {
+    const {
+      fromAccountId,
+      toAccountId,
+      fromAccountType,
+      toAccountType,
+      fromAccountNumber,
+      toAccountNumber,
+      fromAccountBalance,
+      toAccountBalance,
+      fromCardName,
+      toCardName,
+      amount,
+    } = data;
+
+    try {
+      const transactionData: TransactionCreateData = {
+        fromAccountId,
+        toAccountId,
+        fromAccountType,
+        toAccountType,
+        statusTransaction: true,
+        amount: Number(amount),
+      };
+
+      const accountSendData: IAccountPayloadData = {
+        name: fromCardName,
+        accountNumber: fromAccountNumber,
+        balance: fromAccountBalance - Number(amount),
+        type: fromAccountType,
+        currency: '$',
+      };
+
+      const accountReceiveData: IAccountPayloadData = {
+        name: toCardName,
+        accountNumber: toAccountNumber,
+        balance: toAccountBalance + Number(amount),
+        type: toAccountType,
+        currency: '$',
+      };
+
+      await createTransaction(transactionData);
+      await updateAccountInfo(fromAccountId, accountSendData);
+      await updateAccountInfo(toAccountId, accountReceiveData);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      // TODO: Handle show error message in toast
+    }
   };
 
   return (
