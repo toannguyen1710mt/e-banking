@@ -6,6 +6,9 @@ import { ThemeProvider } from 'next-themes';
 // Constants
 import { THEMES } from '@/constants';
 
+// Contexts
+import { ToastProvider } from '@/context';
+
 const Providers = ({ children }: React.PropsWithChildren) => {
   return (
     <NextUIProvider>
@@ -15,7 +18,7 @@ const Providers = ({ children }: React.PropsWithChildren) => {
         attribute='class'
         themes={[THEMES.LIGHT, THEMES.DARK]}
       >
-        {children}
+        <ToastProvider>{children}</ToastProvider>
       </ThemeProvider>
     </NextUIProvider>
   );
