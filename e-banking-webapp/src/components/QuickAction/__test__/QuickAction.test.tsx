@@ -34,6 +34,7 @@ const mockQuickActions = [
     onClick: jest.fn(),
   },
 ];
+
 describe('QuickAction component', () => {
   test('should match snapshot for QuickAction', () => {
     const { container } = render(<QuickAction />);
