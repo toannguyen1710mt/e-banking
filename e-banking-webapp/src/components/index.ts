@@ -19,3 +19,4 @@ export * from './BalanceModal';
 export * from './MyTarget';
 export * from './ConnectedAccount';
 export * from './SettingContainer/General';
+export * from './DeleteAccount';

@@ -33,6 +33,9 @@ export const Input = extendVariants(InputNextUI, {
       xs: {
         inputWrapper: 'rounded-md',
       },
+      md: {
+        inputWrapper: 'rounded',
+      },
     },
 
     textSize: {
