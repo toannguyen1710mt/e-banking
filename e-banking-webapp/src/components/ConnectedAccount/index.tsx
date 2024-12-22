@@ -29,7 +29,7 @@ export const ConnectedAccount = () => (
             startContent={<Icon />}
             variant='solid'
             radius='xs'
-            className='mt-6'
+            className='mt-6 h-14'
           >
             {buttonText}
           </Button>
