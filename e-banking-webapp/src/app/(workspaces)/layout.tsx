@@ -1,4 +1,4 @@
-import { Header } from '@/layouts';
+import { HeaderAuth } from '@/layouts';
 
 export default function MainLayout({
   children,
@@ -7,7 +7,7 @@ export default function MainLayout({
 }>) {
   return (
     <div className='flex w-full flex-col'>
-      <Header />
+      <HeaderAuth />
       <div className='w-full'>{children}</div>
     </div>
   );

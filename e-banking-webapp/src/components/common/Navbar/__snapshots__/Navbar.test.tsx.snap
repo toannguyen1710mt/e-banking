@@ -18,7 +18,7 @@ exports[`Navbar component renders with default type 1`] = `
         >
           <a
             class="text-gray-500"
-            href="/home"
+            href="/"
           >
             Home
           </a>
