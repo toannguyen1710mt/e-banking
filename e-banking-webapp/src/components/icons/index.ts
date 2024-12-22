@@ -44,3 +44,7 @@ export * from './ChipIcon';
 export * from './MastercardIcon';
 export * from './CloseIcon';
 export * from './CheckIcon';
+export * from './AttentionIcon';
+export * from './GoogleIcon';
+export * from './AppleIcon';
+export * from './MobileIcon';
