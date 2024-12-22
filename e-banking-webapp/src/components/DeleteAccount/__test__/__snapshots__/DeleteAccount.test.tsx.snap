@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteAccount component should match snapshot for DeleteAccount 1`] = `
+<div>
+  <div>
+    <span
+      class="text-primary-200 text-sm font-semibold text-navyBlue"
+    >
+      Delete Account
+    </span>
+    <div
+      class="mt-[18px] flex gap-4"
+    >
+      <span
+        class="text-primary-200 text-xs font-semibold text-red"
+      >
+        Warning :
+      </span>
+      <span
+        class="text-primary-200 text-xs font-normal"
+      >
+        Deleting Your Account is irreversible , it deletes all your data and information
+      </span>
+    </div>
+    <div
+      class="mt-8"
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col w-[680px]"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded border-semiTransparentNavyBlue"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100 font-normal text-xs !text-black opacity-100"
+              data-slot="label"
+              for="react-aria-:r0:"
+              id="react-aria-:r1:"
+            >
+              Current Password
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-label="Current Password"
+                aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
+                data-slot="input"
+                id="react-aria-:r0:"
+                placeholder=" "
+                title=""
+                type="Password"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-warning text-foreground-200 rounded w-[168px] h-10 py-3 text-xs font-semibold mt-7"
+      type="button"
+    >
+      Delete Account
+    </button>
+  </div>
+</div>
+`;
