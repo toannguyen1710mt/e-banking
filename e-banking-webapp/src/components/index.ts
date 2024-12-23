@@ -21,3 +21,5 @@ export * from './ConnectedAccount';
 export * from './SettingContainer/General';
 export * from './DeleteAccount';
 export * from './ServiceCard';
+export * from './SettingContainer/Account';
+export * from './DueTile';
