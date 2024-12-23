@@ -82,7 +82,6 @@ exports[`ServiceCard component should match snapshot for ServiceCard 1`] = `
         class="text-primary-200 mt-2 text-xs font-normal text-transparentBlack"
       >
         Charged Monthly
-         
       </span>
     </div>
   </div>
