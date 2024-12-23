@@ -17,4 +17,5 @@ export * from './StepProgress';
 export * from './MyCards';
 export * from './BalanceModal';
 export * from './MyTarget';
+export * from './ConnectedAccount';
 export * from './SettingContainer/General';
