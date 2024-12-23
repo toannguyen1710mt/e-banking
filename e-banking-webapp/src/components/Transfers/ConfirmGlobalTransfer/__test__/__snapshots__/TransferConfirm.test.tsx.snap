@@ -8,6 +8,7 @@ exports[`ConfirmInternalTransfer component should match snapshot 1`] = `
     <p
       class="text-primary-200 text-sm font-semibold text-navyBlue"
     >
+      Yehudi Daud
        is about to receive
     </p>
     <p
@@ -21,6 +22,7 @@ exports[`ConfirmInternalTransfer component should match snapshot 1`] = `
     >
       From your 
        wallet to your 
+      Yehudi Daud
        wallet, this action cannot be undone once approved...
     </p>
     <div

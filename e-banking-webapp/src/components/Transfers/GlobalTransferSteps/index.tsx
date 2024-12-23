@@ -6,6 +6,16 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 
+// Models
+import { IAccountPayloadData, TransactionCreateData } from '@/interfaces';
+
+// API
+import { createTransaction, updateAccountInfo } from '@/actions';
+
+// Helpers / Utils
+import { GlobalTransferFormSchema } from '@/schemas';
+import { convertToUSD, formatNumberWithCommas } from '@/utils';
+
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import {
@@ -13,9 +23,6 @@ import {
   ConfirmGlobalTransfer,
   GlobalTransferSuccess,
 } from '@/components';
-
-// Schemas
-import { GlobalTransferFormSchema } from '@/schemas';
 
 type FormValues = z.infer<typeof GlobalTransferFormSchema>;
 
@@ -40,8 +47,37 @@ export const GlobalTransferSteps = ({
 
   const allFieldValues = form.watch();
 
-  const submitHandler = async (data: FormValues) => {
-    console.log('Data: ', data);
+  const amountInUSD = formatNumberWithCommas(
+    convertToUSD(allFieldValues.fromCountryType, allFieldValues.amount),
+  );
+
+  const submitHandler = async ({
+    fromAccountId,
+    fromCardName,
+    fromAccountNumber,
+    fromAccountBalance,
+    fromAccountType,
+    amount,
+  }: FormValues) => {
+    const transactionData: TransactionCreateData = {
+      fromAccountId,
+      toAccountId: allFieldValues.recipientAccount,
+      fromAccountType,
+      toAccountType: undefined,
+      statusTransaction: true,
+      amount: Number(amount),
+    };
+
+    const payload: IAccountPayloadData = {
+      name: fromCardName,
+      accountNumber: fromAccountNumber,
+      balance: fromAccountBalance - Number(amount),
+      type: fromAccountType,
+      currency: '$',
+    };
+
+    await createTransaction(transactionData);
+    await updateAccountInfo(fromAccountId, payload);
   };
 
   return (
@@ -61,7 +97,8 @@ export const GlobalTransferSteps = ({
         <ConfirmGlobalTransfer
           {...allFieldValues}
           submitHandler={submitHandler}
-          amountInUSD={'1,000'}
+          amountInUSD={amountInUSD}
+          userName='Yehudi Daud'
         />
       </WizardForm.Step>
       <WizardForm.Step
@@ -72,7 +109,7 @@ export const GlobalTransferSteps = ({
         <GlobalTransferSuccess
           {...allFieldValues}
           onClose={onClose}
-          userName='mock'
+          userName='Yehudi Daud'
         />
       </WizardForm.Step>
     </WizardForm.Root>

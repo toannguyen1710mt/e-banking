@@ -16,11 +16,13 @@ import { Button, Text } from '@/components';
 interface ConfirmGlobalTransferProps<T extends z.ZodType> {
   submitHandler: (data: z.infer<T>) => void;
   amountInUSD: string;
+  userName: string;
 }
 
 export const ConfirmGlobalTransfer = <T extends z.ZodType>({
   submitHandler,
   amountInUSD,
+  userName,
 }: ConfirmGlobalTransferProps<T>) => {
   const {
     form: { getValues },
@@ -32,7 +34,7 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
 
   const values = getValues();
 
-  const { fromAccountType, fromCountryType } = values || {};
+  const { fromAccountType } = values || {};
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,14 +49,14 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
   return (
     <div className='flex w-[252px] flex-col items-center text-center'>
       <Text className='text-sm font-semibold text-navyBlue'>
-        {fromCountryType} is about to receive
+        {userName} is about to receive
       </Text>
       <Text className='mt-3 text-4xl font-bold text-navyBlue'>
         ${amountInUSD}
       </Text>
       <Text className='mt-3 text-xs font-medium text-transparentBlack'>
-        From your {fromAccountType} wallet to your {fromCountryType} wallet,
-        this action cannot be undone once approved...
+        From your {fromAccountType} wallet to your {userName} wallet, this
+        action cannot be undone once approved...
       </Text>
       <div className='mt-10 flex gap-6'>
         <Button radius='xs' color='tertiary' size='xxl' onClick={prevStep}>
