@@ -54,7 +54,7 @@ export const GlobalTransferSteps = ({
   const submitHandler = async (data: FormValues) => {
     const transactionData: TransactionCreateData = {
       fromAccountId: data.fromAccountId,
-      toAccountId: '',
+      toAccountId: allFieldValues.recipientAccount,
       fromAccountType: data.fromAccountType,
       toAccountType: undefined,
       statusTransaction: true,
