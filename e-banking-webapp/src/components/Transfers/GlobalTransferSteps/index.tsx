@@ -51,26 +51,33 @@ export const GlobalTransferSteps = ({
     convertToUSD(allFieldValues.fromCountryType, allFieldValues.amount),
   );
 
-  const submitHandler = async (data: FormValues) => {
+  const submitHandler = async ({
+    fromAccountId,
+    fromCardName,
+    fromAccountNumber,
+    fromAccountBalance,
+    fromAccountType,
+    amount,
+  }: FormValues) => {
     const transactionData: TransactionCreateData = {
-      fromAccountId: data.fromAccountId,
+      fromAccountId,
       toAccountId: allFieldValues.recipientAccount,
-      fromAccountType: data.fromAccountType,
+      fromAccountType,
       toAccountType: undefined,
       statusTransaction: true,
-      amount: Number(data.amount),
+      amount: Number(amount),
     };
 
     const payload: IAccountPayloadData = {
-      name: data.fromCardName,
-      accountNumber: data.fromAccountNumber,
-      balance: data.fromAccountBalance - Number(data.amount),
-      type: data.fromAccountType,
+      name: fromCardName,
+      accountNumber: fromAccountNumber,
+      balance: fromAccountBalance - Number(amount),
+      type: fromAccountType,
       currency: '$',
     };
 
     await createTransaction(transactionData);
-    await updateAccountInfo(data.fromAccountId, payload);
+    await updateAccountInfo(fromAccountId, payload);
   };
 
   return (
