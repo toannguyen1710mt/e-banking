@@ -110,10 +110,18 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     fetchBalanceSend();
   }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
 
-  const countryCode = () =>
-    OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
-      (option) => option.key === fromCountryType,
-    )?.label || '';
+  const countryCode = () => {
+    const code =
+      OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
+        (option) => option.key === fromCountryType,
+      )?.label || '';
+
+    if (code) {
+      localStorage.setItem('selectedCountryCode', code);
+    }
+
+    return code;
+  };
 
   const filteredFromAccountOptions = () =>
     TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
