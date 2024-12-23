@@ -30,11 +30,8 @@ export const Input = extendVariants(InputNextUI, {
     },
 
     radius: {
-      xs: {
-        inputWrapper: 'rounded-md',
-      },
       md: {
-        inputWrapper: 'rounded',
+        inputWrapper: 'rounded-md',
       },
     },
 
@@ -53,7 +50,7 @@ export const Input = extendVariants(InputNextUI, {
     color: 'default',
     border: 'default',
     textSize: 'base',
-    radius: 'xs',
+    radius: 'md',
     size: 'md',
   },
 });

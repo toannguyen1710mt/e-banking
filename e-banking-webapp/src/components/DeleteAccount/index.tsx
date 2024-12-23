@@ -22,7 +22,6 @@ export const DeleteAccount = () => {
           label='Current Password'
           placeholder=' '
           labelPlacement='outside'
-          radius='md'
           classNames={{
             label: 'font-normal text-xs !text-black opacity-100',
             inputWrapper: 'border-semiTransparentNavyBlue',
