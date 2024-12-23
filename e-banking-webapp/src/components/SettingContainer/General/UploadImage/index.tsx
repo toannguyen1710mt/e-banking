@@ -11,16 +11,16 @@ export interface IUploadImageProps {
   width?: string;
   alt: string;
   src?: string;
+  name: string;
   onChange?: (name: string, url: string) => void;
   onRemove?: (name: string) => void;
-  name: string;
 }
 
 export const UploadImage = ({
   alt,
   src,
-  onRemove,
   name,
+  onRemove,
 }: IUploadImageProps) => {
   const [previewImage, setPreviewImage] = useState(src);
 
