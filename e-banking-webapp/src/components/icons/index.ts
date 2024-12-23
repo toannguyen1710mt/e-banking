@@ -48,3 +48,4 @@ export * from './AttentionIcon';
 export * from './GoogleIcon';
 export * from './AppleIcon';
 export * from './MobileIcon';
+export * from './CameraIcon';

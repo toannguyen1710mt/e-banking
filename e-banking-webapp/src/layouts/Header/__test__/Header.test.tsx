@@ -5,15 +5,26 @@ import '@testing-library/jest-dom';
 // Layouts
 import { Header } from '@/layouts';
 
-describe('Header component', () => {
-  test('matches the snapshot', () => {
-    const { container } = render(<Header />);
+// Contexts
+import { ToastProvider } from '@/context';
 
+// Mocks
+import { MOCK_SESSION_DATA } from '@/mocks';
+
+describe('Header component', () => {
+  const renderWithProviders = (ui: React.ReactNode) => {
+    return render(<ToastProvider>{ui}</ToastProvider>);
+  };
+
+  test('matches the snapshot', () => {
+    const { container } = renderWithProviders(
+      <Header session={MOCK_SESSION_DATA} />,
+    );
     expect(container).toMatchSnapshot();
   });
 
   test('renders the header with logo and menu items', () => {
-    render(<Header />);
+    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
 
     // Check for logo
     const logo = screen.getByAltText('Logo EBanking');
@@ -33,7 +44,7 @@ describe('Header component', () => {
   });
 
   test('toggles the mobile menu on click', () => {
-    render(<Header />);
+    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
 
     // Find menu toggle button
     const menuToggle = screen.getByLabelText('Open menu');
@@ -48,7 +59,7 @@ describe('Header component', () => {
   });
 
   test('disables search and notification buttons', () => {
-    render(<Header />);
+    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
 
     const searchButton = screen.getByRole('button', { name: /search icon/i });
     const notificationButton = screen.getByRole('button', {

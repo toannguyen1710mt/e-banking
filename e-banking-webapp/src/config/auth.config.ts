@@ -25,13 +25,12 @@ export const authConfig = {
       const isPublicPage =
         nextUrl.pathname === ROUTES.SIGN_IN ||
         nextUrl.pathname === ROUTES.SIGN_UP;
-      const isRootRoute = nextUrl.pathname === '/';
 
       if (!isLoggedIn && !isPublicPage) {
         return Response.redirect(new URL(ROUTES.SIGN_IN, nextUrl));
       }
 
-      if (isLoggedIn && (isPublicPage || isRootRoute)) {
+      if (isLoggedIn && isPublicPage) {
         return Response.redirect(new URL(ROUTES.HOME, nextUrl));
       }
 
