@@ -44,3 +44,4 @@ export * from './ChipIcon';
 export * from './MastercardIcon';
 export * from './CloseIcon';
 export * from './CheckIcon';
+export * from './CameraIcon';

@@ -1,3 +1,6 @@
+// Components
+import { General } from '@/components';
+
 export default function GeneralPage() {
-  return <text>General</text>;
+  return <General />;
 }
