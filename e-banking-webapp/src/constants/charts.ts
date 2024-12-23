@@ -36,18 +36,28 @@ export const createExpenseAnalysisOptions = (value: string): ApexOptions => ({
           },
           value: {
             show: true,
-            fontSize: '6px',
+            fontSize: '8px',
             fontWeight: 800,
             color: '#fff',
-            offsetY: 1,
+            offsetY: 3,
           },
           total: {
             show: true,
-            formatter: () => value,
+            formatter: () => {
+              const formattedValue = `${value}`;
+
+              return formattedValue.length > 7
+                ? `${formattedValue.slice(0, 5)}...`
+                : formattedValue;
+            },
           },
         },
       },
     },
   },
+  stroke: {
+    width: 1,
+  },
+
   colors: EXPENSE_VALUE_DATA,
 });
