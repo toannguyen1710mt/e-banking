@@ -22,4 +22,5 @@ export const colors = {
   lightAqua: '#D9EAE8',
   semiTransparentDimGray: 'rgba(128, 128, 128, 1)',
   lightGraySolid: 'rgba(230, 229, 229, 1)',
+  semiTransparentNavyBlue: 'rgba(38, 70, 83, 0.5)',
 };
