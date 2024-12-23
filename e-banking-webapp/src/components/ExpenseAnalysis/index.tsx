@@ -30,8 +30,8 @@ export const ExpenseAnalysis = ({ options, series }: ExpenseAnalysisProps) => (
         options={options}
         series={series}
         type='donut'
-        width='69'
-        height='69'
+        width='81'
+        height='81'
       />
       <div className='grid grid-cols-2 content-center gap-x-5 gap-y-3'>
         {EXPENSE_LABEL_DATA.map((label, index) => (
