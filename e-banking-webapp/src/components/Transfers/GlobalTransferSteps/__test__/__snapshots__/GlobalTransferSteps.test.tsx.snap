@@ -15,7 +15,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
         <div
           name="transfer"
         >
-          <div
+          <form
             class="flex w-full flex-col gap-4"
           >
             <h4
@@ -485,7 +485,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
               </svg>
               Transfer Funds
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
     message: string,
     type: ToastType = 'success',
     position: ToastPosition = 'top-right',
-    timeOut = 5000,
+    timeOut = 3000,
   ) => {
     const id = Date.now();
     setToasts([...toasts, { id, message, type, position }]);

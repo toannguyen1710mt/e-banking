@@ -1,6 +1,6 @@
 'use server';
 
-import { signIn } from '@/config/auth';
+import { signIn, signOut as nextAuthSignOut } from '@/config/auth';
 import { AuthError } from 'next-auth';
 
 // Constants
@@ -46,6 +46,8 @@ export const handleSignUp = async (signUpData: TSignUpPayload) => {
     }
   }
 };
+
+export const signOut = async () => await nextAuthSignOut({ redirect: false });
 
 export const updateUser = async (id: number, payload: TUpdateInfo) => {
   try {

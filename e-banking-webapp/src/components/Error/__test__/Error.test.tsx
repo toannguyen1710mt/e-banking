@@ -1,5 +1,8 @@
 import { render } from '@testing-library/react';
 
+// Constants
+import { ROUTES } from '@/constants';
+
 // Components
 import { Error } from '..';
 
@@ -29,6 +32,6 @@ describe('Error component', () => {
 
   it('renders link to home page with correct href', () => {
     const link = container.getByText('Go to Home Page');
-    expect(link).toHaveAttribute('href', '/home');
+    expect(link).toHaveAttribute('href', ROUTES.HOME);
   });
 });

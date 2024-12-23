@@ -17,6 +17,8 @@ export const ERROR_MESSAGES = {
     'Sign up successful. Please check your email to verify your account.',
   SIGN_IN_FAILED: 'Sign in failed. Please try again.',
   SIGN_IN_SUCCESS: 'Sign in successful.',
+  SIGN_OUT_FAILED: 'Sign out failed. Please try again.',
+  SIGN_OUT_SUCCESS: 'Sign out successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
   CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
   CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',

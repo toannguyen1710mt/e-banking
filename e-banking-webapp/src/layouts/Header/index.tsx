@@ -7,31 +7,107 @@ import {
   NavbarContent,
   NavbarMenuToggle,
   Navbar as NavbarNextUI,
+  Spinner,
 } from '@nextui-org/react';
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { Session } from 'next-auth';
+import { redirect } from 'next/navigation';
 
 // Constants
-import { IMAGES, NavbarItem, ROUTES } from '@/constants';
-import { MOCK_CUSTOM_OPTIONS } from '@/mocks';
+import { ERROR_MESSAGES, IMAGES, NavbarItem, ROUTES } from '@/constants';
 
 // Components
 import {
+  Button,
   MenuDropdown,
   Navbar,
   NotificationIcon,
   SearchIcon,
+  SettingIcon,
+  SignOutIcon,
 } from '@/components';
-import Link from 'next/link';
 
-export const Header = () => {
+// Actions
+import { signOut } from '@/actions';
+
+// Contexts
+import { useToastContext } from '@/context';
+
+interface IHeaderProps {
+  session: Session;
+}
+
+export const Header = ({ session }: IHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSigningOut, setIsSigningOut] = useState(false);
+  const { showToast } = useToastContext();
+
+  const {
+    user: { username, email, avatar },
+  } = session;
 
   const mobileMenuOptions = [
     ...NavbarItem.map((item) => ({
       key: item.path,
       label: item.text,
     })),
+  ];
+
+  const handleSignOut = async () => {
+    setIsSigningOut(true);
+
+    try {
+      await signOut();
+
+      showToast(ERROR_MESSAGES.SIGN_OUT_SUCCESS, 'success', 'top-center');
+    } catch (error) {
+      console.error(error);
+
+      showToast(ERROR_MESSAGES.SIGN_OUT_FAILED, 'error', 'top-center');
+    } finally {
+      setIsSigningOut(false);
+
+      redirect(ROUTES.SIGN_IN);
+    }
+  };
+
+  const dropDownMenuOptions = [
+    {
+      key: username,
+      label: '',
+      customOptionElement: (
+        <div className='flex flex-col gap-2'>
+          <span className='text-xs font-semibold'>{username}</span>
+          <span className='text-3xs font-semibold text-transparentBlack'>
+            {email}
+          </span>
+        </div>
+      ),
+    },
+    {
+      key: 'Settings',
+      label: 'Settings',
+      startContent: <SettingIcon />,
+      customOptionElement: <Link href={ROUTES.SETTINGS}>Settings</Link>,
+    },
+    {
+      key: 'Sign Out',
+      label: 'Sign Out',
+      customOptionElement: (
+        <Button
+          startContent={!isSigningOut && <SignOutIcon />}
+          spinner={<Spinner size='sm' />}
+          isLoading={isSigningOut}
+          isDisabled={isSigningOut}
+          onClick={handleSignOut}
+          className='flex h-full !max-h-none min-w-0 justify-start gap-2 !bg-transparent p-0 text-foreground-100'
+        >
+          Sign out
+        </Button>
+      ),
+    },
   ];
 
   return (
@@ -86,8 +162,10 @@ export const Header = () => {
           <NotificationIcon />
         </button>
         <MenuDropdown
-          customTriggerElement={<Avatar className='h-6 w-6 rounded-full' />}
-          options={MOCK_CUSTOM_OPTIONS}
+          customTriggerElement={
+            <Avatar src={avatar} className='h-6 w-6 rounded-full' />
+          }
+          options={dropDownMenuOptions}
           isDivided={true}
         />
       </NavbarContent>
