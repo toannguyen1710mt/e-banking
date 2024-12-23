@@ -34,11 +34,12 @@ describe('ConfirmInternalTransfer component', () => {
   });
 
   const mockProps = {
-    amountInUSD: '15000', 
+    amountInUSD: '15000',
     currencyUnit: '$' as CurrencyUnit,
     fromAccountType: AccountType.MAIN,
     fromCountryType: 'UK',
     submitHandler: mockSubmitHandler,
+    userName: 'Yehudi Daud',
   };
 
   test('should match snapshot', () => {
