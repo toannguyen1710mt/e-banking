@@ -18,7 +18,7 @@ import { ERROR_MESSAGES } from '@/constants/messages';
 // Interfaces
 import { TableProps } from '@/interfaces';
 
-const CustomTable = extendVariants(TableNextUI, {
+export const CustomTable = extendVariants(TableNextUI, {
   variants: {
     styles: {
       default: {
