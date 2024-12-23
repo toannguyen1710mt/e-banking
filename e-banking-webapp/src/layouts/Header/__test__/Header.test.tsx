@@ -11,7 +11,7 @@ import { ToastProvider } from '@/context';
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
 
-describe('Header session={MOCK_SESSION_DATA} component', () => {
+describe('Header component', () => {
   const renderWithProviders = (ui: React.ReactNode) => {
     return render(<ToastProvider>{ui}</ToastProvider>);
   };
@@ -23,7 +23,7 @@ describe('Header session={MOCK_SESSION_DATA} component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  test('renders the header session={MOCK_SESSION_DATA} with logo and menu items', () => {
+  test('renders the header with logo and menu items', () => {
     renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
 
     // Check for logo
