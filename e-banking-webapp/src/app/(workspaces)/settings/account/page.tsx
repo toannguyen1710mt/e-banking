@@ -1,3 +1,6 @@
+// Components
+import { Account } from '@/components';
+
 export default function AccountPage() {
-  return <text>Account</text>;
+  return <Account />;
 }
