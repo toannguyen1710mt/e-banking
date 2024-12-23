@@ -36,6 +36,7 @@ export const DeleteAccount = () => {
         size='base'
         radius='xs'
         className='mt-7'
+        isDisabled
       >
         Delete Account
       </Button>
