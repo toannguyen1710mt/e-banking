@@ -1,0 +1,798 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calendar component should match snapshot for Calendar 1`] = `
+<div>
+  <div
+    aria-label="January 2024"
+    class="relative max-w-full shadow-small inline-block overflow-y-hidden overflow-x-auto bg-default-50 dark:bg-background w-[calc(var(--visible-months)_*_var(--calendar-width))] rounded-lg"
+    data-slot="base"
+    id="react-aria-:r1:"
+    role="application"
+    style="--visible-months: 1; --calendar-width: 256px;"
+  >
+    <div
+      class="bg-background-300 px-4 pt-2"
+    >
+      <h3
+        class="text-primary-200 text-2xs font-normal !text-foreground-200"
+      >
+        Select date
+      </h3>
+    </div>
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <h2>
+        January 2024
+      </h2>
+    </div>
+    <div>
+      <div
+        class="w-[calc(var(--visible-months)_*_var(--calendar-width))]"
+        data-slot="content"
+      >
+        <div
+          class="px-4 flex items-center justify-between overflow-hidden rtl:flex-row-reverse [&_.chevron-icon]:flex-none after:content-[''] after:bg-content1 origin-top after:w-full after:h-0 after:absolute after:top-0 after:left-0 bg-background-300 py-0 gap-0"
+          data-slot="header-wrapper"
+        >
+          <button
+            aria-label="Previous"
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 rounded-full px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent min-w-8 w-8 h-8 text-medium order-2 text-foreground-200 data-[hover=true]:bg-secondary-300"
+            data-slot="prev-button"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M10 3.33334L6 8.00001L10 12.6667"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+          <header
+            class="flex w-full items-center gap-2 z-10 order-1 justify-start"
+            data-slot="header"
+          >
+            <span
+              aria-hidden="true"
+              class="text-xs text-foreground-200 font-normal"
+              data-slot="title"
+              style="transform: translateX(0%) translateZ(0);"
+            >
+              January 2024
+            </span>
+          </header>
+          <button
+            aria-label="Next"
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 rounded-full px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent min-w-8 w-8 h-8 order-3 text-medium translate-x-3 text-foreground-200 data-[hover=true]:bg-secondary-300"
+            data-slot="next-button"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              fill="none"
+              focusable="false"
+              height="1em"
+              role="presentation"
+              viewBox="0 0 16 16"
+              width="1em"
+            >
+              <path
+                d="M6 3.33334L10 8.00001L6 12.6667"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex max-w-full overflow-hidden pb-2 h-auto relative bg-background-300"
+          data-slot="grid-wrapper"
+        >
+          <table
+            aria-label="January 2024"
+            class="w-full border-collapse z-0"
+            data-slot="grid"
+            id="react-aria-:r4:"
+            role="grid"
+            tabindex="-1"
+          >
+            <thead
+              aria-hidden="true"
+              class="bg-content1 shadow-[0px_20px_20px_0px_rgb(0_0_0/0.05)]"
+              data-slot="grid-header"
+            >
+              <tr
+                class="flex text-default-400 bg-background-300 pb-0 justify-between px-1 pt-2"
+                data-slot="grid-header-row"
+              >
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    S
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    M
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    T
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    W
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    T
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    F
+                  </span>
+                </th>
+                <th
+                  class="flex w-8 justify-center items-center text-2xs text-foreground-200 font-normal"
+                  data-slot="grid-header-cell"
+                >
+                  <span>
+                    S
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody
+              data-slot="grid-body"
+              style="transform: translateX(0%) translateZ(0);"
+            >
+              <tr
+                class="flex items-center first:mt-2 justify-between px-1"
+                data-slot="grid-body-row"
+              >
+                <td
+                  aria-disabled="true"
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-disabled="true"
+                    aria-label="Sunday, December 31, 2023"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    data-disabled="true"
+                    data-outside-month="true"
+                    role="button"
+                  >
+                    <span>
+                      31
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Today, Monday, January 1, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    data-today="true"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <span>
+                      1
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Tuesday, January 2, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      2
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Wednesday, January 3, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      3
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Thursday, January 4, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      4
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Friday, January 5, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      5
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Saturday, January 6, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      6
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="flex items-center first:mt-2 justify-between px-1"
+                data-slot="grid-body-row"
+              >
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Sunday, January 7, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      7
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Monday, January 8, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      8
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Tuesday, January 9, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      9
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Wednesday, January 10, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      10
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Thursday, January 11, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      11
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Friday, January 12, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      12
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Saturday, January 13, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      13
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="flex items-center first:mt-2 justify-between px-1"
+                data-slot="grid-body-row"
+              >
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Sunday, January 14, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      14
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Monday, January 15, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      15
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Tuesday, January 16, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      16
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Wednesday, January 17, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      17
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Thursday, January 18, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      18
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Friday, January 19, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      19
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Saturday, January 20, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      20
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="flex items-center first:mt-2 justify-between px-1"
+                data-slot="grid-body-row"
+              >
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Sunday, January 21, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      21
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Monday, January 22, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      22
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Tuesday, January 23, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      23
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Wednesday, January 24, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      24
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Thursday, January 25, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      25
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Friday, January 26, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      26
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Saturday, January 27, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      27
+                    </span>
+                  </span>
+                </td>
+              </tr>
+              <tr
+                class="flex items-center first:mt-2 justify-between px-1"
+                data-slot="grid-body-row"
+              >
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Sunday, January 28, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      28
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Monday, January 29, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      29
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Tuesday, January 30, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      30
+                    </span>
+                  </span>
+                </td>
+                <td
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-label="Wednesday, January 31, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    role="button"
+                    tabindex="-1"
+                  >
+                    <span>
+                      31
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-disabled="true"
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-disabled="true"
+                    aria-label="Thursday, February 1, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    data-disabled="true"
+                    data-outside-month="true"
+                    role="button"
+                  >
+                    <span>
+                      1
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-disabled="true"
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-disabled="true"
+                    aria-label="Friday, February 2, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    data-disabled="true"
+                    data-outside-month="true"
+                    role="button"
+                  >
+                    <span>
+                      2
+                    </span>
+                  </span>
+                </td>
+                <td
+                  aria-disabled="true"
+                  class="py-0.5 px-0"
+                  data-slot="cell"
+                  role="gridcell"
+                >
+                  <span
+                    aria-disabled="true"
+                    aria-label="Saturday, February 3, 2024"
+                    class="w-8 h-8 flex items-center justify-center rounded-full box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[disabled=true]:text-default-300 data-[disabled=true]:cursor-default data-[readonly=true]:cursor-default data-[disabled=true]:transition-none data-[unavailable=true]:text-default-300 data-[unavailable=true]:cursor-default data-[unavailable=true]:line-through outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:data-[outside-month=true]:opacity-0 shadow-none data-[selected=true]:shadow-none data-[selected=true]:text-primary-foreground data-[hover=true]:bg-primary-50 data-[selected=true]:data-[hover=true]:bg-primary data-[selected=true]:data-[hover=true]:text-primary-foreground text-2xs text-foreground-200 data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300"
+                    data-disabled="true"
+                    data-outside-month="true"
+                    role="button"
+                  >
+                    <span>
+                      3
+                    </span>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+    >
+      <button
+        aria-label="Next"
+        tabindex="-1"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm component Should render snapshot correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        class="mr-0 md:mr-[83px]"
+      >
+        <div
+          class="mb-8 flex w-full flex-col gap-6 bg-white md:gap-4"
+        >
+          <p
+            class="text-foreground-300 text-sm font-normal"
+          >
+            Sign in to your account to continue
+          </p>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+            data-filled="true"
+            data-filled-within="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.65063 8.78268L6.18627 8.56808L5.73278 8.21128C5.13365 7.73991 4.69634 7.09351 4.48169 6.36202C4.26703 5.63054 4.28571 4.85033 4.53513 4.12996C4.78454 3.40958 5.25229 2.78485 5.87329 2.34269C6.49429 1.90053 7.23767 1.66292 8 1.66292C8.76233 1.66292 9.50571 1.90053 10.1267 2.34269C10.7477 2.78485 11.2155 3.40958 11.4649 4.12996C11.7143 4.85033 11.733 5.63054 11.5183 6.36202C11.3037 7.09351 10.8663 7.73991 10.2672 8.21128L10.4733 8.47325L10.3504 8.78308C11.4187 9.20708 12.3516 9.91385 13.0489 10.8276C13.7461 11.7412 14.1815 12.8272 14.3086 13.9693C14.3178 14.0566 14.2923 14.144 14.2374 14.2125C14.1858 14.2771 14.1121 14.32 14.0309 14.3333L13.98 14.3332L13.978 14.3333C13.8956 14.3338 13.8159 14.3037 13.7543 14.2489C13.6928 14.1941 13.6537 14.1185 13.6446 14.0366L13.6446 14.036C13.489 12.6514 12.8288 11.3726 11.79 10.4439C10.7512 9.5153 9.4067 9.00194 8.01333 9.00194C6.61997 9.00194 5.27545 9.5153 4.23665 10.4439C3.19786 11.3726 2.53762 12.6514 2.38208 14.036L2.382 14.0368C2.37221 14.1257 2.3275 14.2071 2.2577 14.2631C2.18789 14.3191 2.09871 14.345 2.00978 14.3353C1.92084 14.3255 1.83944 14.2808 1.78347 14.211C1.75575 14.1764 1.73512 14.1367 1.72274 14.0942C1.71037 14.0517 1.70649 14.0071 1.71132 13.9631C1.83775 12.824 2.27089 11.7406 2.9646 10.8283C3.65835 9.91593 4.58668 9.20894 5.65063 8.78268ZM6.33329 7.82766C6.82663 8.15731 7.40665 8.33325 8 8.33325C8.79565 8.33325 9.55871 8.01718 10.1213 7.45457C10.6839 6.89197 11 6.1289 11 5.33325C11 4.73991 10.8241 4.15989 10.4944 3.66654C10.1648 3.1732 9.69623 2.78868 9.14805 2.56162C8.59987 2.33455 7.99667 2.27514 7.41473 2.3909C6.83278 2.50665 6.29823 2.79238 5.87868 3.21193C5.45912 3.63149 5.1734 4.16604 5.05764 4.74798C4.94189 5.32993 5.0013 5.93313 5.22836 6.4813C5.45542 7.02948 5.83994 7.49802 6.33329 7.82766Z"
+                      fill="black"
+                      stroke="currentColor"
+                      stroke-width="0.666667"
+                    />
+                  </svg>
+                  <input
+                    aria-label="username"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
+                    data-has-start-content="true"
+                    data-slot="input"
+                    id="react-aria-:r1:"
+                    name="username"
+                    placeholder="Username"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] dark:text-foreground-200"
+            data-filled="true"
+            data-filled-within="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M10.9998 5.99992V6.33325H11.3332C11.7752 6.33325 12.1991 6.50885 12.5117 6.82141C12.8242 7.13397 12.9998 7.55789 12.9998 7.99992V12.6666C12.9998 13.1086 12.8242 13.5325 12.5117 13.8451C12.1991 14.1577 11.7752 14.3333 11.3332 14.3333H4.6665C4.22448 14.3333 3.80055 14.1577 3.48799 13.8451C3.17543 13.5325 2.99984 13.1086 2.99984 12.6666V7.99992C2.99984 7.55789 3.17543 7.13397 3.48799 6.82141C3.80055 6.50885 4.22448 6.33325 4.6665 6.33325H4.99984V5.99992V4.66659C4.99984 3.87094 5.31591 3.10787 5.87852 2.54526C6.44113 1.98266 7.20419 1.66659 7.99984 1.66659C8.79549 1.66659 9.55855 1.98266 10.1212 2.54526C10.6838 3.10787 10.9998 3.87094 10.9998 4.66659V5.99992ZM9.99984 6.33325H10.3332V5.99992V4.66659C10.3332 4.04775 10.0873 3.45425 9.64975 3.01667C9.21217 2.57908 8.61868 2.33325 7.99984 2.33325C7.381 2.33325 6.78751 2.57908 6.34992 3.01667C5.91234 3.45425 5.6665 4.04775 5.6665 4.66659V5.99992V6.33325H5.99984H9.99984ZM3.9594 13.3737L4.1951 13.138L3.9594 13.3737C4.14693 13.5612 4.40129 13.6666 4.6665 13.6666H11.3332C11.5984 13.6666 11.8527 13.5612 12.0403 13.3737C12.2278 13.1862 12.3332 12.9318 12.3332 12.6666V7.99992C12.3332 7.7347 12.2278 7.48035 12.0403 7.29281C11.8527 7.10528 11.5984 6.99992 11.3332 6.99992H4.6665C4.40129 6.99992 4.14693 7.10528 3.9594 7.29281C3.77186 7.48035 3.6665 7.7347 3.6665 7.99992V12.6666C3.6665 12.9318 3.77186 13.1862 3.9594 13.3737Z"
+                      fill="black"
+                      stroke="currentColor"
+                      stroke-width="0.666667"
+                    />
+                  </svg>
+                  <input
+                    aria-label="password"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
+                    data-has-end-content="true"
+                    data-has-start-content="true"
+                    data-slot="input"
+                    id="react-aria-:r6:"
+                    name="password"
+                    placeholder="Password"
+                    type="password"
+                    value=""
+                  />
+                  <button
+                    aria-label="show password button"
+                    class="text-primary-200"
+                    type="button"
+                  >
+                    <svg
+                      fill="none"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      width="18"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16.4402 8.7C14.9252 5.1825 12.0752 3 9.00017 3C5.92517 3 3.07517 5.1825 1.56017 8.7C1.51887 8.79462 1.49756 8.89676 1.49756 9C1.49756 9.10324 1.51887 9.20538 1.56017 9.3C3.07517 12.8175 5.92517 15 9.00017 15C12.0752 15 14.9252 12.8175 16.4402 9.3C16.4815 9.20538 16.5028 9.10324 16.5028 9C16.5028 8.89676 16.4815 8.79462 16.4402 8.7ZM9.00017 13.5C6.62267 13.5 4.37267 11.7825 3.07517 9C4.37267 6.2175 6.62267 4.5 9.00017 4.5C11.3777 4.5 13.6277 6.2175 14.9252 9C13.6277 11.7825 11.3777 13.5 9.00017 13.5ZM9.00017 6C8.40683 6 7.82681 6.17595 7.33346 6.50559C6.84011 6.83524 6.4556 7.30377 6.22853 7.85195C6.00147 8.40013 5.94206 9.00333 6.05782 9.58527C6.17357 10.1672 6.45929 10.7018 6.87885 11.1213C7.29841 11.5409 7.83296 11.8266 8.4149 11.9424C8.99684 12.0581 9.60004 11.9987 10.1482 11.7716C10.6964 11.5446 11.1649 11.1601 11.4946 10.6667C11.8242 10.1734 12.0002 9.59334 12.0002 9C12.0002 8.20435 11.6841 7.44129 11.1215 6.87868C10.5589 6.31607 9.79582 6 9.00017 6ZM9.00017 10.5C8.7035 10.5 8.41349 10.412 8.16682 10.2472C7.92014 10.0824 7.72788 9.84811 7.61435 9.57403C7.50082 9.29994 7.47112 8.99834 7.52899 8.70736C7.58687 8.41639 7.72973 8.14912 7.93951 7.93934C8.14929 7.72956 8.41657 7.5867 8.70754 7.52882C8.99851 7.47094 9.30011 7.50065 9.5742 7.61418C9.84829 7.72771 10.0826 7.91997 10.2474 8.16665C10.4122 8.41332 10.5002 8.70333 10.5002 9C10.5002 9.39782 10.3421 9.77936 10.0608 10.0607C9.77953 10.342 9.398 10.5 9.00017 10.5Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            aria-disabled="true"
+            class="text-right text-sm"
+            href="#"
+          >
+            Forgot Password?
+          </a>
+        </div>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm"
+          data-disabled="true"
+          disabled=""
+          type="submit"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      class="mr-0 md:mr-[83px]"
+    >
+      <div
+        class="mb-8 flex w-full flex-col gap-6 bg-white md:gap-4"
+      >
+        <p
+          class="text-foreground-300 text-sm font-normal"
+        >
+          Sign in to your account to continue
+        </p>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+          data-filled="true"
+          data-filled-within="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.65063 8.78268L6.18627 8.56808L5.73278 8.21128C5.13365 7.73991 4.69634 7.09351 4.48169 6.36202C4.26703 5.63054 4.28571 4.85033 4.53513 4.12996C4.78454 3.40958 5.25229 2.78485 5.87329 2.34269C6.49429 1.90053 7.23767 1.66292 8 1.66292C8.76233 1.66292 9.50571 1.90053 10.1267 2.34269C10.7477 2.78485 11.2155 3.40958 11.4649 4.12996C11.7143 4.85033 11.733 5.63054 11.5183 6.36202C11.3037 7.09351 10.8663 7.73991 10.2672 8.21128L10.4733 8.47325L10.3504 8.78308C11.4187 9.20708 12.3516 9.91385 13.0489 10.8276C13.7461 11.7412 14.1815 12.8272 14.3086 13.9693C14.3178 14.0566 14.2923 14.144 14.2374 14.2125C14.1858 14.2771 14.1121 14.32 14.0309 14.3333L13.98 14.3332L13.978 14.3333C13.8956 14.3338 13.8159 14.3037 13.7543 14.2489C13.6928 14.1941 13.6537 14.1185 13.6446 14.0366L13.6446 14.036C13.489 12.6514 12.8288 11.3726 11.79 10.4439C10.7512 9.5153 9.4067 9.00194 8.01333 9.00194C6.61997 9.00194 5.27545 9.5153 4.23665 10.4439C3.19786 11.3726 2.53762 12.6514 2.38208 14.036L2.382 14.0368C2.37221 14.1257 2.3275 14.2071 2.2577 14.2631C2.18789 14.3191 2.09871 14.345 2.00978 14.3353C1.92084 14.3255 1.83944 14.2808 1.78347 14.211C1.75575 14.1764 1.73512 14.1367 1.72274 14.0942C1.71037 14.0517 1.70649 14.0071 1.71132 13.9631C1.83775 12.824 2.27089 11.7406 2.9646 10.8283C3.65835 9.91593 4.58668 9.20894 5.65063 8.78268ZM6.33329 7.82766C6.82663 8.15731 7.40665 8.33325 8 8.33325C8.79565 8.33325 9.55871 8.01718 10.1213 7.45457C10.6839 6.89197 11 6.1289 11 5.33325C11 4.73991 10.8241 4.15989 10.4944 3.66654C10.1648 3.1732 9.69623 2.78868 9.14805 2.56162C8.59987 2.33455 7.99667 2.27514 7.41473 2.3909C6.83278 2.50665 6.29823 2.79238 5.87868 3.21193C5.45912 3.63149 5.1734 4.16604 5.05764 4.74798C4.94189 5.32993 5.0013 5.93313 5.22836 6.4813C5.45542 7.02948 5.83994 7.49802 6.33329 7.82766Z"
+                    fill="black"
+                    stroke="currentColor"
+                    stroke-width="0.666667"
+                  />
+                </svg>
+                <input
+                  aria-label="username"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
+                  data-has-start-content="true"
+                  data-slot="input"
+                  id="react-aria-:r1:"
+                  name="username"
+                  placeholder="Username"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] dark:text-foreground-200"
+          data-filled="true"
+          data-filled-within="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.9998 5.99992V6.33325H11.3332C11.7752 6.33325 12.1991 6.50885 12.5117 6.82141C12.8242 7.13397 12.9998 7.55789 12.9998 7.99992V12.6666C12.9998 13.1086 12.8242 13.5325 12.5117 13.8451C12.1991 14.1577 11.7752 14.3333 11.3332 14.3333H4.6665C4.22448 14.3333 3.80055 14.1577 3.48799 13.8451C3.17543 13.5325 2.99984 13.1086 2.99984 12.6666V7.99992C2.99984 7.55789 3.17543 7.13397 3.48799 6.82141C3.80055 6.50885 4.22448 6.33325 4.6665 6.33325H4.99984V5.99992V4.66659C4.99984 3.87094 5.31591 3.10787 5.87852 2.54526C6.44113 1.98266 7.20419 1.66659 7.99984 1.66659C8.79549 1.66659 9.55855 1.98266 10.1212 2.54526C10.6838 3.10787 10.9998 3.87094 10.9998 4.66659V5.99992ZM9.99984 6.33325H10.3332V5.99992V4.66659C10.3332 4.04775 10.0873 3.45425 9.64975 3.01667C9.21217 2.57908 8.61868 2.33325 7.99984 2.33325C7.381 2.33325 6.78751 2.57908 6.34992 3.01667C5.91234 3.45425 5.6665 4.04775 5.6665 4.66659V5.99992V6.33325H5.99984H9.99984ZM3.9594 13.3737L4.1951 13.138L3.9594 13.3737C4.14693 13.5612 4.40129 13.6666 4.6665 13.6666H11.3332C11.5984 13.6666 11.8527 13.5612 12.0403 13.3737C12.2278 13.1862 12.3332 12.9318 12.3332 12.6666V7.99992C12.3332 7.7347 12.2278 7.48035 12.0403 7.29281C11.8527 7.10528 11.5984 6.99992 11.3332 6.99992H4.6665C4.40129 6.99992 4.14693 7.10528 3.9594 7.29281C3.77186 7.48035 3.6665 7.7347 3.6665 7.99992V12.6666C3.6665 12.9318 3.77186 13.1862 3.9594 13.3737Z"
+                    fill="black"
+                    stroke="currentColor"
+                    stroke-width="0.666667"
+                  />
+                </svg>
+                <input
+                  aria-label="password"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 py-2.5 mx-2"
+                  data-has-end-content="true"
+                  data-has-start-content="true"
+                  data-slot="input"
+                  id="react-aria-:r6:"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+                <button
+                  aria-label="show password button"
+                  class="text-primary-200"
+                  type="button"
+                >
+                  <svg
+                    fill="none"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.4402 8.7C14.9252 5.1825 12.0752 3 9.00017 3C5.92517 3 3.07517 5.1825 1.56017 8.7C1.51887 8.79462 1.49756 8.89676 1.49756 9C1.49756 9.10324 1.51887 9.20538 1.56017 9.3C3.07517 12.8175 5.92517 15 9.00017 15C12.0752 15 14.9252 12.8175 16.4402 9.3C16.4815 9.20538 16.5028 9.10324 16.5028 9C16.5028 8.89676 16.4815 8.79462 16.4402 8.7ZM9.00017 13.5C6.62267 13.5 4.37267 11.7825 3.07517 9C4.37267 6.2175 6.62267 4.5 9.00017 4.5C11.3777 4.5 13.6277 6.2175 14.9252 9C13.6277 11.7825 11.3777 13.5 9.00017 13.5ZM9.00017 6C8.40683 6 7.82681 6.17595 7.33346 6.50559C6.84011 6.83524 6.4556 7.30377 6.22853 7.85195C6.00147 8.40013 5.94206 9.00333 6.05782 9.58527C6.17357 10.1672 6.45929 10.7018 6.87885 11.1213C7.29841 11.5409 7.83296 11.8266 8.4149 11.9424C8.99684 12.0581 9.60004 11.9987 10.1482 11.7716C10.6964 11.5446 11.1649 11.1601 11.4946 10.6667C11.8242 10.1734 12.0002 9.59334 12.0002 9C12.0002 8.20435 11.6841 7.44129 11.1215 6.87868C10.5589 6.31607 9.79582 6 9.00017 6ZM9.00017 10.5C8.7035 10.5 8.41349 10.412 8.16682 10.2472C7.92014 10.0824 7.72788 9.84811 7.61435 9.57403C7.50082 9.29994 7.47112 8.99834 7.52899 8.70736C7.58687 8.41639 7.72973 8.14912 7.93951 7.93934C8.14929 7.72956 8.41657 7.5867 8.70754 7.52882C8.99851 7.47094 9.30011 7.50065 9.5742 7.61418C9.84829 7.72771 10.0826 7.91997 10.2474 8.16665C10.4122 8.41332 10.5002 8.70333 10.5002 9C10.5002 9.39782 10.3421 9.77936 10.0608 10.0607C9.77953 10.342 9.398 10.5 9.00017 10.5Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          aria-disabled="true"
+          class="text-right text-sm"
+          href="#"
+        >
+          Forgot Password?
+        </a>
+      </div>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm"
+        data-disabled="true"
+        disabled=""
+        type="submit"
+      >
+        Sign In
+      </button>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
