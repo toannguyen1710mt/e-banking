@@ -9,6 +9,7 @@ import { MASTERCARD_CHART_MOCK } from '@/mocks';
 
 // Components
 import { MasterCard } from '@/components';
+import { act } from 'react';
 
 jest.mock('react-apexcharts', () => {
   return {
@@ -18,13 +19,17 @@ jest.mock('react-apexcharts', () => {
 });
 
 describe('MasterCard component', () => {
-  test('should match snapshot for MasterCard', () => {
-    const { container } = render(
-      <MasterCard
-        series={MASTERCARD_CHART_MOCK}
-        totalBalance={createExpenseAnalysisOptions('$540,000')}
-      />,
-    );
+  test('should match snapshot for MasterCard', async () => {
+    let container;
+
+    await act(async () => {
+      container = render(
+        <MasterCard
+          series={MASTERCARD_CHART_MOCK}
+          totalBalance={createExpenseAnalysisOptions('$540,000')}
+        />,
+      ).container;
+    });
 
     expect(container).toMatchSnapshot();
   });

@@ -8,6 +8,9 @@ import { ApexOptions } from 'apexcharts';
 // Constants
 import { AVAILABLE_WALLETS, CARD_STATISTICS } from '@/constants';
 
+// Interfaces
+import { CardStatistics } from '@/interfaces';
+
 // Components
 import { Text } from '@/components';
 
@@ -30,11 +33,13 @@ export const MasterCard = ({ totalBalance, series }: ExpenseAnalysisProps) => (
         Available Wallets
       </Text>
       <ol className='flex gap-6 text-[10px] font-normal text-white'>
-        {AVAILABLE_WALLETS.map((label, index) => (
-          <li key={index}>
-            {index + 1}. {label}
-          </li>
-        ))}
+        {Object.values(CardStatistics)
+          .filter((wallet) => AVAILABLE_WALLETS.includes(wallet))
+          .map((wallet, index) => (
+            <li key={wallet}>
+              {index + 1}. {wallet}
+            </li>
+          ))}
       </ol>
     </CardBody>
     <CardFooter className='flex-col items-start px-0 pb-0 pt-4'>
