@@ -6,6 +6,9 @@ import { Checkbox } from '@nextui-org/react';
 // Interfaces
 import { Preferences, TEXT_VARIANT } from '@/interfaces';
 
+// Constants
+import { PREFERENCES } from '@/constants';
+
 // Components
 import { Button, Text } from '@/components/common';
 
@@ -56,15 +59,7 @@ export const EmailTab = () => {
       </div>
 
       <ul className='flex flex-col gap-4 pb-[58px]'>
-        {[
-          { label: 'Announcements', key: 'announcements' },
-          { label: 'Updates', key: 'updates' },
-          { label: 'Feedbacks & Survey', key: 'feedbacksSurvey' },
-          { label: 'Events', key: 'events' },
-          { label: 'General Notification', key: 'generalNotification' },
-          { label: 'Promotions', key: 'promotions' },
-          { label: 'Events Near Me', key: 'eventsNearMe' },
-        ].map(({ label, key }) => (
+        {PREFERENCES.map(({ label, key }) => (
           <Controller
             key={key}
             name={key as keyof Preferences}
