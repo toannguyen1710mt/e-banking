@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, Chip } from '@nextui-org/react';
 
 // Interfaces
