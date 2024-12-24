@@ -24,3 +24,4 @@ export * from './ServiceCard';
 export * from './SettingContainer/Account';
 export * from './DueTile';
 export * from './MasterCard';
+export * from './CardOverview';
