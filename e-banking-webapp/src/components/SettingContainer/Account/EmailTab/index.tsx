@@ -1,23 +1,13 @@
 'use client';
 
 import { Controller, useForm } from 'react-hook-form';
+import { Checkbox } from '@nextui-org/react';
 
 // Interfaces
-import { TEXT_VARIANT } from '@/interfaces';
+import { Preferences, TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { Button, Text } from '@/components/common';
-import { Checkbox } from '@nextui-org/react';
-
-interface Preferences {
-  announcements: boolean;
-  updates: boolean;
-  feedbacksSurvey: boolean;
-  events: boolean;
-  generalNotification: boolean;
-  promotions: boolean;
-  eventsNearMe: boolean;
-}
 
 export const EmailTab = () => {
   const { control, handleSubmit, reset } = useForm<Preferences>({

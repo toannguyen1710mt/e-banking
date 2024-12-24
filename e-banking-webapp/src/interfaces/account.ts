@@ -27,3 +27,13 @@ export interface IAccountPayload {
   user: number;
   data: IAccountPayloadData;
 }
+
+export interface Preferences {
+  announcements: boolean;
+  updates: boolean;
+  feedbacksSurvey: boolean;
+  events: boolean;
+  generalNotification: boolean;
+  promotions: boolean;
+  eventsNearMe: boolean;
+}
