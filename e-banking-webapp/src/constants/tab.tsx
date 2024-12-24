@@ -1,5 +1,6 @@
 // Components
 import { GlobalIcon, UserIcon, Text } from '@/components';
+import { EmailTab } from '@/components/SettingContainer/Account/EmailTab';
 import { PasswordTab } from '@/components/SettingContainer/Account/PasswordTab';
 import { InternalTransferForm } from '@/components/Transfers/InternalTransferForm';
 
@@ -22,7 +23,7 @@ export const TRANSFER_TABS = [
 
 export const ACCOUNT_TABS = [
   { key: 'password', title: 'Change Password', content: <PasswordTab /> },
-  { key: 'email', title: 'Email Settings', content: 'Email content' },
+  { key: 'email', title: 'Email Settings', content: <EmailTab /> },
   {
     key: 'connected',
     title: 'Connected Accounts',
