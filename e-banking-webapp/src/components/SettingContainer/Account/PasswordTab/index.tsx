@@ -36,6 +36,12 @@ export const PasswordTab = () => {
   } = useDisclosure();
 
   const {
+    isOpen: newPasswordIsOpen,
+    onClose: closeNewPassword,
+    onOpen: openNewPassword,
+  } = useDisclosure();
+
+  const {
     isOpen: confirmPasswordIsOpen,
     onClose: closeConfirmPassword,
     onOpen: openConfirmPassword,
@@ -106,7 +112,9 @@ export const PasswordTab = () => {
                   type='button'
                   aria-label='show password button'
                   className='text-primary-200'
-                  onClick={passwordIsOpen ? closePassword : openPassword}
+                  onClick={
+                    newPasswordIsOpen ? closeNewPassword : openNewPassword
+                  }
                 >
                   {passwordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
