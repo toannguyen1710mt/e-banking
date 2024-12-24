@@ -30,7 +30,7 @@ export const PasswordTab = () => {
   });
 
   const {
-    isOpen: passwordIsOpen,
+    isOpen: isOpenPassword,
     onClose: closePassword,
     onOpen: openPassword,
   } = useDisclosure();
@@ -70,7 +70,7 @@ export const PasswordTab = () => {
               placeholder=' '
               label='Current Password'
               labelPlacement='outside'
-              type={passwordIsOpen ? 'text' : 'password'}
+              type={isOpenPassword ? 'text' : 'password'}
               classNames={{
                 input: 'm-0 text-sm',
                 label: 'font-normal text-xs !text-black opacity-100',
@@ -80,9 +80,9 @@ export const PasswordTab = () => {
                   type='button'
                   aria-label='show password button'
                   className='text-primary-200'
-                  onClick={passwordIsOpen ? closePassword : openPassword}
+                  onClick={isOpenPassword ? closePassword : openPassword}
                 >
-                  {passwordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
+                  {isOpenPassword ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
               }
               isInvalid={!!error?.message}
@@ -106,7 +106,7 @@ export const PasswordTab = () => {
                 input: 'm-0 text-sm',
                 label: 'font-normal text-xs !text-black opacity-100',
               }}
-              type={passwordIsOpen ? 'text' : 'password'}
+              type={isOpenPassword ? 'text' : 'password'}
               endContent={
                 <button
                   type='button'
@@ -116,7 +116,7 @@ export const PasswordTab = () => {
                     newPasswordIsOpen ? closeNewPassword : openNewPassword
                   }
                 >
-                  {passwordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
+                  {isOpenPassword ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
               }
               isInvalid={!!error?.message}
