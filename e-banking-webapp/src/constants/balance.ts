@@ -6,3 +6,18 @@ export const EXPENSE_COLOR_CLASSES = [
   'bg-[#F4A261]',
   'bg-[#E9C46A]',
 ];
+export const AVAILABLE_WALLETS = ['Savings', 'Checkings'];
+export const CARD_STATISTICS = [
+  {
+    label: 'Balance',
+    color: 'bg-java',
+  },
+  {
+    label: 'Savings',
+    color: 'bg-pastelYellow',
+  },
+  {
+    label: 'Checkings',
+    color: 'bg-softGreen',
+  },
+];

@@ -23,3 +23,4 @@ export * from './DeleteAccount';
 export * from './ServiceCard';
 export * from './SettingContainer/Account';
 export * from './DueTile';
+export * from './MasterCard';

@@ -27,3 +27,5 @@ export const MOCK_BALANCE_STATISTICS_CHART_DATA = {
 };
 
 export const MOCK_SERIES_EXPENSE_ANALYSIS = [22, 45, 35, 40];
+
+export const MASTERCARD_CHART_MOCK = [65, 20, 15];
