@@ -1,3 +1,5 @@
+'use client';
+
 // Libs
 import dynamic from 'next/dynamic';
 import { Card, CardBody, CardFooter, CardHeader, cn } from '@nextui-org/react';
