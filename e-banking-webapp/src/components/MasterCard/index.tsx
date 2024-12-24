@@ -8,9 +8,6 @@ import { ApexOptions } from 'apexcharts';
 // Constants
 import { AVAILABLE_WALLETS, CARD_STATISTICS } from '@/constants';
 
-// Models
-import { TEXT_VARIANT } from '@/interfaces';
-
 // Components
 import { Text } from '@/components';
 
@@ -24,7 +21,9 @@ interface ExpenseAnalysisProps {
 export const MasterCard = ({ totalBalance, series }: ExpenseAnalysisProps) => (
   <Card className='w-[294px] bg-navyBlue px-4 pb-5 pt-[14px]'>
     <CardHeader className='p-0'>
-      <Text variant={TEXT_VARIANT.TERTIARY}>Monobank MasterCard</Text>
+      <Text as='span' className='text-base font-semibold text-white'>
+        Monobank MasterCard
+      </Text>
     </CardHeader>
     <CardBody className='gap-2 px-0 pb-0 pt-3'>
       <Text as='span' className='text-xs font-normal text-white'>
