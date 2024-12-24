@@ -36,13 +36,13 @@ export const PasswordTab = () => {
   } = useDisclosure();
 
   const {
-    isOpen: newPasswordIsOpen,
+    isOpen: isOpenNewPassword,
     onClose: closeNewPassword,
     onOpen: openNewPassword,
   } = useDisclosure();
 
   const {
-    isOpen: confirmPasswordIsOpen,
+    isOpen: isOpenConfirmPassword,
     onClose: closeConfirmPassword,
     onOpen: openConfirmPassword,
   } = useDisclosure();
@@ -113,7 +113,7 @@ export const PasswordTab = () => {
                   aria-label='show password button'
                   className='text-primary-200'
                   onClick={
-                    newPasswordIsOpen ? closeNewPassword : openNewPassword
+                    isOpenNewPassword ? closeNewPassword : openNewPassword
                   }
                 >
                   {isOpenPassword ? <EyeSlashIcon /> : <EyeIcon />}
@@ -139,19 +139,19 @@ export const PasswordTab = () => {
                 input: 'm-0 text-sm',
                 label: 'font-normal text-xs !text-black opacity-100',
               }}
-              type={confirmPasswordIsOpen ? 'text' : 'password'}
+              type={isOpenConfirmPassword ? 'text' : 'password'}
               endContent={
                 <button
                   type='button'
                   aria-label='show password button'
                   className='text-primary-200'
                   onClick={
-                    confirmPasswordIsOpen
+                    isOpenConfirmPassword
                       ? closeConfirmPassword
                       : openConfirmPassword
                   }
                 >
-                  {confirmPasswordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
+                  {isOpenConfirmPassword ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
               }
               isInvalid={!!error?.message}
