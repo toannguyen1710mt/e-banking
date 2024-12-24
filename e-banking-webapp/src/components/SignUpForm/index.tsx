@@ -6,10 +6,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 // Constants
 import {
-  SignUpSchema,
   SIGNUP_FORM_DEFAULT_VALUES,
   ACCOUNT_DEFAULT_VALUES,
 } from '@/constants';
+import { SignUpSchema } from '@/constants/rules';
 
 // Context
 import { WizardFormContextProvider } from '@/context';

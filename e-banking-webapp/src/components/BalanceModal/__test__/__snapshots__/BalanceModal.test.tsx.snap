@@ -23,14 +23,13 @@ exports[`BalanceModal component Should render snapshot correctly 1`] = `
       <div
         class="flex w-screen fixed inset-0 z-50 overflow-x-auto justify-center h-[--visual-viewport-height] items-start sm:items-start overflow-y-auto [--scale-enter:100%] [--scale-exit:100%] [--slide-enter:0px] [--slide-exit:80px] sm:[--scale-enter:100%] sm:[--scale-exit:103%] sm:[--slide-enter:0px] sm:[--slide-exit:0px]"
         data-slot="wrapper"
-        style="--visual-viewport-height: 768px; opacity: 0; will-change: transform; transform: translateY(var(--slide-exit)) scale(var(--scale-exit));"
+        style="--visual-viewport-height: 768px; opacity: 0; transform: translateY(var(--slide-exit)) scale(var(--scale-exit));"
       >
         <section
           aria-modal="true"
           class="flex flex-col relative z-50 w-full box-border bg-content1 outline-none mx-1 sm:mx-6 sm:my-16 max-w-4xl shadow-small my-16 !my-auto p-0 rounded-xl"
           data-dismissable="true"
           data-open="true"
-          data-placement="center"
           id=":r0:"
           role="dialog"
           tabindex="-1"
@@ -47,7 +46,7 @@ exports[`BalanceModal component Should render snapshot correctly 1`] = `
           </div>
           <button
             aria-label="Close"
-            class="z-0 group inline-flex items-center box-border whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent max-h-10 text-sm absolute appearance-none select-none top-1 end-1 p-2 rounded-full active:bg-default-200 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 bg-transparent max-h-none min-w-[20px] w-[20x] text-foreground-200 justify-end hover:bg-transparent data-[focus=true]:bg-transparent"
+            class="z-0 group inline-flex items-center box-border whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent max-h-10 text-sm absolute appearance-none select-none top-1 right-1 rtl:left-1 rtl:right-[unset] p-2 rounded-full active:bg-default-200 tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 bg-transparent max-h-none min-w-[20px] w-[20x] text-foreground-200 justify-end hover:bg-transparent data-[focus=true]:bg-transparent"
             role="button"
             type="button"
           >

@@ -30,7 +30,6 @@ exports[`GlobalTransferSuccess component should match snapshot for GlobalTransfe
       class="text-primary-200 max-w-[220px] text-center text-xs font-medium text-primary-200 opacity-50"
     >
       A sum of 
-      $
        
       15,000
        was transferred to 

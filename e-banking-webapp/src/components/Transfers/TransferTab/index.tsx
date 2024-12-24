@@ -20,7 +20,7 @@ interface ITransferTab extends TabsProps {
 
 export const TransferTab = ({ TransferTabs, ...tabProps }: ITransferTab) => (
   <div className='flex h-full w-full flex-col rounded-xl bg-lightGraySolid'>
-    <TabsCustom aria-label='Options' placement='start' {...tabProps}>
+    <TabsCustom aria-label='Options' placement='start' {...{ tabProps }}>
       {TransferTabs.map(
         ({ keyTab, title, description, icon, content, textClass }) => {
           const appliedTextClass =

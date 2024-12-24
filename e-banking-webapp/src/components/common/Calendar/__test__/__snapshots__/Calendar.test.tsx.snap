@@ -68,7 +68,7 @@ exports[`Calendar component should match snapshot for Calendar 1`] = `
               aria-hidden="true"
               class="text-xs text-foreground-200 font-normal"
               data-slot="title"
-              style="transform: none;"
+              style="transform: translateX(0%) translateZ(0);"
             >
               January 2024
             </span>
@@ -180,7 +180,7 @@ exports[`Calendar component should match snapshot for Calendar 1`] = `
             </thead>
             <tbody
               data-slot="grid-body"
-              style="transform: none;"
+              style="transform: translateX(0%) translateZ(0);"
             >
               <tr
                 class="flex items-center first:mt-2 justify-between px-1"

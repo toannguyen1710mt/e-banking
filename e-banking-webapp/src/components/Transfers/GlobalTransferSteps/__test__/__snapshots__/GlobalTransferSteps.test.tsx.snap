@@ -15,7 +15,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
         <div
           name="transfer"
         >
-          <form
+          <div
             class="flex w-full flex-col gap-4"
           >
             <h4
@@ -80,7 +80,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="react-aria-:r8: react-aria-:r4:"
-                  class="relative gap-3 w-full inline-flex flex-row items-center shadow-sm tap-highlight-transparent group-data-[focus=true]:bg-default-50 min-h-10 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-2.5 py-2 h-[46px] rounded-sm bg-background-500 shadow-stack border-1 outline-offset-0 data-[focus=true]:border-1 data-[focus=true]:bg-none data-[hover=true]:bg-default data-[hover=true]:!border-secondary-200 group-data-[invalid=true]:!border-warning"
+                  class="relative gap-3 w-full inline-flex flex-row items-center shadow-sm tap-highlight-transparent group-data-[focus=true]:bg-default-100 min-h-10 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-2.5 py-2 h-[46px] rounded-sm bg-background-500 shadow-stack border-1 outline-offset-0 data-[focus=true]:border-1 data-[focus=true]:bg-none data-[hover=true]:bg-default data-[hover=true]:!border-secondary-200 group-data-[invalid=true]:!border-warning"
                   data-slot="trigger"
                   id="react-aria-:r3:"
                   type="button"
@@ -98,7 +98,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                     data-slot="innerWrapper"
                   >
                     <span
-                      class="w-full text-start truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
+                      class="w-full text-left rtl:text-right truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
                       data-slot="value"
                       id="react-aria-:r8:"
                     >
@@ -172,7 +172,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   aria-expanded="false"
                   aria-haspopup="listbox"
                   aria-labelledby="react-aria-:rg: react-aria-:rc:"
-                  class="relative gap-3 w-full inline-flex flex-row items-center shadow-sm tap-highlight-transparent group-data-[focus=true]:bg-default-50 min-h-10 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-2.5 py-2 h-[46px] rounded-sm bg-background-500 shadow-stack border-1 outline-offset-0 data-[focus=true]:border-1 data-[focus=true]:bg-none data-[hover=true]:bg-default data-[hover=true]:!border-secondary-200 group-data-[invalid=true]:!border-warning"
+                  class="relative gap-3 w-full inline-flex flex-row items-center shadow-sm tap-highlight-transparent group-data-[focus=true]:bg-default-100 min-h-10 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-2.5 py-2 h-[46px] rounded-sm bg-background-500 shadow-stack border-1 outline-offset-0 data-[focus=true]:border-1 data-[focus=true]:bg-none data-[hover=true]:bg-default data-[hover=true]:!border-secondary-200 group-data-[invalid=true]:!border-warning"
                   data-slot="trigger"
                   id="react-aria-:rb:"
                   type="button"
@@ -190,7 +190,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                     data-slot="innerWrapper"
                   >
                     <span
-                      class="w-full text-start truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
+                      class="w-full text-left rtl:text-right truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
                       data-slot="value"
                       id="react-aria-:rg:"
                     >
@@ -237,7 +237,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   data-slot="main-wrapper"
                 >
                   <div
-                    class="relative inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning w-11 h-10 rounded-sm border-default box-border p-0"
+                    class="relative inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning w-11 h-10 rounded-sm border-default box-border p-0"
                     data-slot="input-wrapper"
                     style="cursor: text;"
                   >
@@ -251,7 +251,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                         data-slot="input"
                         id="react-aria-:rh:"
                         readonly=""
-                        title=""
                         type="text"
                         value=""
                       />
@@ -273,12 +272,12 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   data-slot="main-wrapper"
                 >
                   <div
-                    class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning h-10 px-2.5 py-2 rounded-sm border-default box-border is-filled"
+                    class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning h-10 px-2.5 py-2 rounded-sm border-default box-border is-filled"
                     data-slot="input-wrapper"
                     style="cursor: text;"
                   >
                     <label
-                      class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100"
+                      class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100"
                       data-slot="label"
                       for="react-aria-:rm:"
                       id="react-aria-:rn:"
@@ -299,7 +298,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                         id="react-aria-:rm:"
                         inputmode="decimal"
                         placeholder=" "
-                        title=""
                         type="text"
                         value="0"
                       />
@@ -320,7 +318,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                 data-slot="main-wrapper"
               >
                 <div
-                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
                   data-slot="input-wrapper"
                   style="cursor: text;"
                 >
@@ -335,7 +333,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                       data-filled-within="true"
                       data-slot="input"
                       id="react-aria-:rr:"
-                      title=""
                       type="text"
                       value="undefined"
                     />
@@ -355,7 +352,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                 data-slot="main-wrapper"
               >
                 <div
-                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
                   data-slot="input-wrapper"
                   style="cursor: text;"
                 >
@@ -370,7 +367,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                       data-filled-within="true"
                       data-slot="input"
                       id="react-aria-:r10:"
-                      title=""
                       type="text"
                       value="undefined"
                     />
@@ -390,7 +386,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                 data-slot="main-wrapper"
               >
                 <div
-                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
                   data-slot="input-wrapper"
                   style="cursor: text;"
                 >
@@ -405,7 +401,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                       data-filled-within="true"
                       data-slot="input"
                       id="react-aria-:r15:"
-                      title=""
                       type="text"
                       value="undefined"
                     />
@@ -425,7 +420,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                 data-slot="main-wrapper"
               >
                 <div
-                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-50 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md is-filled"
                   data-slot="input-wrapper"
                   style="cursor: text;"
                 >
@@ -440,7 +435,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                       data-filled-within="true"
                       data-slot="input"
                       id="react-aria-:r1a:"
-                      title=""
                       type="text"
                       value="undefined"
                     />
@@ -493,7 +487,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
               </svg>
               Transfer Funds
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>

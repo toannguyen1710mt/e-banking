@@ -8,7 +8,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 // Constants
-import { ROUTES, signInSchema } from '@/constants';
+import { ROUTES } from '@/constants';
+import { signInSchema } from '@/constants/rules';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT, TSignInFormData } from '@/interfaces';
