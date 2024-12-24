@@ -9,11 +9,11 @@ exports[`MasterCard component should match snapshot for MasterCard 1`] = `
     <div
       class="flex z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large p-0"
     >
-      <p
-        class="text-foreground-200 text-base font-medium"
+      <span
+        class="text-primary-200 text-base font-semibold text-white"
       >
         Monobank MasterCard
-      </p>
+      </span>
     </div>
     <div
       class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased gap-2 px-0 pb-0 pt-3"
