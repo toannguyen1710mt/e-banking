@@ -84,10 +84,9 @@ export const EmailTab = () => {
                 id={key}
                 isSelected={field.value}
                 onChange={(isChecked) => field.onChange(isChecked)}
-                color='primary'
                 classNames={{
                   label: 'text-xs text-foreground-100',
-                  wrapper: 'group-data-[selected=true]:bg-primary-200',
+                  wrapper: 'after:bg-primary-200',
                 }}
               >
                 {label}
