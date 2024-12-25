@@ -2,21 +2,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import { DeleteTab } from '@/components';
+import { DeleteAccountTab } from '@/components';
 
 const meta = {
-  title: 'Components/DeleteTab',
-  component: DeleteTab,
+  title: 'Components/DeleteAccountTab',
+  component: DeleteAccountTab,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
   decorators: [],
-} satisfies Meta<typeof DeleteTab>;
+} satisfies Meta<typeof DeleteAccountTab>;
 
 export default meta;
 
-type Story = StoryObj<typeof DeleteTab>;
+type Story = StoryObj<typeof DeleteAccountTab>;
 
 export const Default: Story = {
   args: {},

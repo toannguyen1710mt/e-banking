@@ -4,7 +4,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 // Component
 import { Button, Input, Text } from '@/components';
 
-export const DeleteTab = () => (
+export const DeleteAccountTab = () => (
   <>
     <div className='flex flex-col gap-[18px]'>
       <Text as='span' className='text-sm font-semibold text-navyBlue'>

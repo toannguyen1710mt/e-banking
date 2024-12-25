@@ -7,7 +7,7 @@ import { TEXT_SIZE } from '@/interfaces';
 // Component
 import { Button, Text, AttentionIcon } from '@/components';
 
-export const ConnectedTab = () => (
+export const ConnectedAccountsTab = () => (
   <div className='flex flex-col'>
     <Text as='span' className='mb-[5px] text-sm font-semibold text-navyBlue'>
       Connected Apps &amp; Accounts
