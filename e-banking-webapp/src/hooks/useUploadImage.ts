@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 
-// Services
-import { API_END_POINT } from '@/services';
+// Constants
+import { BASE_URL, END_POINT } from '@/constants';
 
 export const useUploadImage = () => {
   const [uploading, setUploading] = useState(false);
@@ -17,7 +17,7 @@ export const useUploadImage = () => {
       if (selectedFile) {
         const formData = new FormData();
         formData.append('file', selectedFile);
-        uploadResponse = await fetch(`${API_END_POINT}/upload}`, {
+        uploadResponse = await fetch(`${BASE_URL}${END_POINT.UPLOAD}`, {
           method: 'POST',
           body: formData,
         });
@@ -25,6 +25,7 @@ export const useUploadImage = () => {
         result = await uploadResponse.json();
 
         setUploading(false);
+
         return result;
       }
     } catch (error) {
