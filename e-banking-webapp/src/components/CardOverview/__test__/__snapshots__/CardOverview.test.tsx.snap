@@ -314,9 +314,9 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
               </span>
             </div>
             <p
-              class="text-primary-200 text-sm mt-1 text-center font-extrabold tracking-[9px] text-secondary-400"
+              class="text-primary-200 text-sm ml-4 mt-1 font-extrabold tracking-[3px] text-secondary-400"
             >
-              5375 4411 4540 0954
+              5375 4411 4540
             </p>
             <div
               class="mt-2 flex justify-between gap-5"

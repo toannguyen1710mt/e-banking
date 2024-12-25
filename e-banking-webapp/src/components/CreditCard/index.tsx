@@ -67,7 +67,7 @@ export const CreditCard = ({
         </div>
         <Text
           size={TEXT_SIZE['SM']}
-          className='mt-1 text-center font-extrabold tracking-[9px] text-secondary-400'
+          className='ml-4 mt-1 font-extrabold tracking-[3px] text-secondary-400'
         >
           {formatCardNumber(cardNumber)}
         </Text>
