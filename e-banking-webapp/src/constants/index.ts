@@ -16,3 +16,4 @@ export * from './api';
 export * from './tags';
 export * from './payment-methods';
 export * from './settings';
+export * from './tab';
