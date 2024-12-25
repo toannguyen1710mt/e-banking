@@ -32,7 +32,7 @@ export const CardOverview = () => {
             </Button>
           </div>
           <CreditCard
-            cardNumber='5375441145400954'
+            cardNumber='537544114540'
             expireDate='06/24'
             holderName='DONALD FLINCH CORTEZ'
             bankName='Universal Bank'

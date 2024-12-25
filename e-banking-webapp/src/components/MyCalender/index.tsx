@@ -12,11 +12,15 @@ import { Calendar, Text, DueTile } from '@/components';
 export const MyCalender = () => (
   <Card className='h-full py-[14px] pl-[14px] pr-6' radius='sm'>
     <CardHeader className='flex-col items-start gap-6'>
-      <Text as='span'>My Calender</Text>
+      <Text as='span' className='text-xs font-medium !text-black'>
+        My Calender
+      </Text>
       <Calendar classNames={{ base: 'ml-[11px]' }} />
     </CardHeader>
     <CardBody className='gap-5'>
-      <Text>Due This Month</Text>
+      <Text as='span' className='text-lg font-bold !text-black'>
+        Due This Month
+      </Text>
       <div className='flex flex-col gap-4'>
         {DUE_TILE.map(({ icon, title, createAt }, index) => (
           <DueTile key={index} icon={icon} title={title} createAt={createAt} />
