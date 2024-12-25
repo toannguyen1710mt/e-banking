@@ -1,3 +1,5 @@
+import { ContainerAnalytics } from '@/components';
+
 export default function AnalyticsPage() {
-  return <div>Analytics page</div>;
+  return <ContainerAnalytics />;
 }

@@ -49,3 +49,6 @@ export * from './GoogleIcon';
 export * from './AppleIcon';
 export * from './MobileIcon';
 export * from './CameraIcon';
+export * from './NetflixIcon';
+export * from './ElectricIcon';
+export * from './PrimeIcon';

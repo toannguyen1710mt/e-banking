@@ -22,7 +22,7 @@ interface ExpenseAnalysisProps {
 }
 
 export const MasterCard = ({ totalBalance, series }: ExpenseAnalysisProps) => (
-  <Card className='w-[294px] bg-navyBlue px-4 pb-5 pt-[14px]'>
+  <Card className='w-full bg-navyBlue px-4 pb-5 pt-[14px]'>
     <CardHeader className='p-0'>
       <Text as='span' className='text-base font-semibold text-white'>
         Monobank MasterCard

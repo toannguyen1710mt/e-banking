@@ -10,9 +10,12 @@ import { DUE_TILE } from '@/constants';
 import { Calendar, Text, DueTile } from '@/components';
 
 export const MyCalender = () => (
-  <Card className='h-full py-[14px] pl-[14px] pr-6' radius='sm'>
-    <CardHeader className='flex-col items-start gap-6'>
-      <Text as='span' className='text-xs font-medium !text-black'>
+  <Card className='h-full w-full py-[14px] pl-[14px] pr-6' radius='sm'>
+    <CardHeader className='flex-col gap-6'>
+      <Text
+        as='span'
+        className='w-full text-left text-xs font-medium !text-black'
+      >
         My Calender
       </Text>
       <Calendar classNames={{ base: 'ml-[11px]' }} />
