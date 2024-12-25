@@ -9,12 +9,12 @@ export const ContainerAnalytics = () => (
   <section className='mx-auto flex h-full w-full max-w-[1440px] gap-[34px] px-6 py-4'>
     <div className='w-[75%]'>
       <Text as='h2' className='text-2xl font-semibold !text-black'>
-        Good Evening,{' '}
+        Good Evening,
         <Text as='span' className='font-medium !text-black'>
           Pheroxios
         </Text>
       </Text>
-      <div className='flex flex-col gap-6'>
+      <div className='mt-6 flex flex-col gap-6'>
         <BalanceCardList />
         <div className='flex gap-7'>
           <MetricsCardList />
