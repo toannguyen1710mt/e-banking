@@ -80,7 +80,7 @@ export const ProfileForm = () => {
         />
       </div>
 
-      <div className='mb-14 flex flex-col gap-8'>
+      <div className='mb-14 flex max-w-[1024px] flex-col gap-8'>
         <div className='flex gap-[107px]'>
           <Controller
             control={control}
@@ -202,7 +202,7 @@ export const ProfileForm = () => {
         </Text>
       </div>
 
-      <div className='flex gap-[108px]'>
+      <div className='flex max-w-[1024px] gap-[108px]'>
         <Controller
           control={control}
           name='user.email'
