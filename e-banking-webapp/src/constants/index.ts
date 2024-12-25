@@ -19,3 +19,4 @@ export * from './settings';
 export * from './tab';
 export * from './settings';
 export * from './tables';
+export * from './due-tile';
