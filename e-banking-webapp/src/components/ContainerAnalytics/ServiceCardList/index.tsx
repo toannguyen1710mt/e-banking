@@ -1,4 +1,4 @@
-import { ServiceCard } from '@/components/ServiceCard';
+import { ServiceCard } from '@/components';
 import { SERVICE_CARD } from '@/mocks';
 
 export const ServiceCardList = () => (

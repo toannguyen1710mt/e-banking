@@ -1,4 +1,4 @@
-import { MetricsCard } from '@/components/MetricsCard';
+import { MetricsCard } from '@/components';
 import { METRICS_CARD } from '@/mocks';
 
 export const MetricsCardList = () => (
