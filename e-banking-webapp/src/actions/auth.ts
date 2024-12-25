@@ -1,10 +1,11 @@
 'use server';
 
 import { signIn, signOut as nextAuthSignOut } from '@/config/auth';
+import { revalidateTag } from 'next/cache';
 import { AuthError } from 'next-auth';
 
 // Constants
-import { ERROR_MESSAGES, API_ENDPOINTS } from '@/constants';
+import { ERROR_MESSAGES, API_ENDPOINTS, TAGS } from '@/constants';
 
 // Services
 import { httpClient } from '@/services/http-client';
@@ -21,6 +22,7 @@ import {
   SuccessResponse,
   TChangePasswordFormData,
   TChangePasswordSuccessResponse,
+  IUser,
 } from '@/interfaces';
 
 export const authenticateUser = async (formData: TSignInFormData) => {
@@ -108,4 +110,13 @@ export const addCard = async (payload: ICardPayload) => {
       throw ERROR_MESSAGES.SIGN_UP_ERROR;
     }
   }
+};
+
+export const updateEmailSettings = async (
+  userId: number,
+  payload: Partial<IUser>,
+) => {
+  await httpClient.put(`${API_ENDPOINTS.USERS}/${userId}`, payload);
+
+  return revalidateTag(TAGS.USERS);
 };

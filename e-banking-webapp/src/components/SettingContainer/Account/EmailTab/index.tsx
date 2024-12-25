@@ -1,6 +1,7 @@
 'use client';
 
-import { Controller, useForm } from 'react-hook-form';
+import { useMemo } from 'react';
+import { Controller, useForm, useWatch } from 'react-hook-form';
 import { Checkbox } from '@nextui-org/react';
 
 // Interfaces
@@ -12,29 +13,71 @@ import { PREFERENCES } from '@/constants';
 // Components
 import { Button, Text } from '@/components/common';
 
-export const EmailTab = () => {
-  const { control, handleSubmit, reset } = useForm<Preferences>({
-    defaultValues: {
-      announcements: true,
-      updates: true,
-      feedbacksSurvey: true,
-      events: true,
-      generalNotification: true,
-      promotions: true,
-      eventsNearMe: true,
-    },
+interface EmailTabProps {
+  announcements?: boolean;
+  updates?: boolean;
+  feedbacksAndSurvey?: boolean;
+  events?: boolean;
+  generalNotification?: boolean;
+  promotions?: boolean;
+  eventsNearMe?: boolean;
+  onSubmit: (data: Preferences) => void;
+}
+
+export const EmailTab = ({
+  announcements,
+  updates,
+  feedbacksAndSurvey,
+  events,
+  generalNotification,
+  promotions,
+  eventsNearMe,
+  onSubmit,
+}: EmailTabProps) => {
+  const defaultValues = {
+    announcements: announcements || false,
+    updates: updates || false,
+    feedbacksAndSurvey: feedbacksAndSurvey || false,
+    events: events || false,
+    generalNotification: generalNotification || false,
+    promotions: promotions || false,
+    eventsNearMe: eventsNearMe || false,
+  };
+
+  const {
+    control,
+    handleSubmit: submitForm,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<Preferences>({
+    defaultValues,
   });
 
-  const onSubmit = (data: Preferences) => {
-    console.log('Updated Preferences:', data);
-    // Add API call logic here
+  const watchedValues = useWatch({
+    control,
+  });
+
+  const hasChanges = useMemo(
+    () =>
+      Object.keys(watchedValues).some(
+        (key) =>
+          watchedValues[key as keyof Preferences] !==
+          defaultValues[key as keyof Preferences],
+      ),
+    [defaultValues, watchedValues],
+  );
+
+  const isDisabled = !hasChanges || isSubmitting;
+
+  const handleSubmit = (data: Preferences) => {
+    onSubmit(data);
   };
 
   const handleUnsubscribeAll = () => {
     reset({
       announcements: false,
       updates: false,
-      feedbacksSurvey: false,
+      feedbacksAndSurvey: false,
       events: false,
       generalNotification: false,
       promotions: false,
@@ -43,7 +86,7 @@ export const EmailTab = () => {
   };
 
   return (
-    <form className='space-y-5' onSubmit={handleSubmit(onSubmit)}>
+    <form className='space-y-5' onSubmit={submitForm(handleSubmit)}>
       <div className='flex flex-col gap-2.5 pb-[22px]'>
         <Text as='span' className='text-sm font-semibold text-navyBlue'>
           Email/ Notification Settings
@@ -82,7 +125,13 @@ export const EmailTab = () => {
       </ul>
 
       <div className='flex w-full max-w-[680px] flex-col items-start gap-4'>
-        <Button color='navyBlue' radius='xs' type='submit'>
+        <Button
+          color='navyBlue'
+          radius='xs'
+          type='submit'
+          isDisabled={isDisabled}
+          isLoading={isSubmitting}
+        >
           Update Email Preferences
         </Button>
 

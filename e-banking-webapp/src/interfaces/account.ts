@@ -31,7 +31,7 @@ export interface IAccountPayload {
 export interface Preferences {
   announcements: boolean;
   updates: boolean;
-  feedbacksSurvey: boolean;
+  feedbacksAndSurvey: boolean;
   events: boolean;
   generalNotification: boolean;
   promotions: boolean;

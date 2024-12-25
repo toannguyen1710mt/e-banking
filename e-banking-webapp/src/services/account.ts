@@ -45,10 +45,3 @@ export const getAccountInfoByAccountType = async (
 
   return null;
 };
-
-export const updateEmailSettings = async (
-  userId: number,
-  payload: Partial<IUser>,
-) => {
-  return await httpClient.put(`${API_ENDPOINTS.USERS}/${userId}`, payload);
-};
