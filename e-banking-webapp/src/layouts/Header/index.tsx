@@ -90,7 +90,7 @@ export const Header = ({ session }: IHeaderProps) => {
       key: 'Settings',
       label: 'Settings',
       startContent: <SettingIcon />,
-      customOptionElement: <Link href={ROUTES.SETTINGS}>Settings</Link>,
+      customOptionElement: <Link href={ROUTES.GENERAL}>Settings</Link>,
     },
     {
       key: 'Sign Out',
