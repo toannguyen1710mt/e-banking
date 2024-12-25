@@ -20,7 +20,7 @@ type FormValues = z.infer<typeof ProfileSchema> & {
 };
 
 export const ProfileForm = () => {
-  const { control } = useForm<FormValues>({
+  const { control, setValue } = useForm<FormValues>({
     resolver: zodResolver(ProfileSchema),
     defaultValues: {
       user: {
@@ -54,8 +54,28 @@ export const ProfileForm = () => {
         <Controller
           control={control}
           name='avatar'
-          render={({ field: { value, name } }) => {
-            return <UploadImage src={value} alt='Avatar' name={name} />;
+          render={({ field: { value, name }, fieldState: { error } }) => {
+            const handleChangeImage = (url: string) => {
+              setValue(`avatar`, url);
+            };
+
+            const handleRemoveImage = () => {
+              setValue('avatar', '');
+            };
+            return (
+              <div className='flex flex-col'>
+                <UploadImage
+                  src={value}
+                  alt='Avatar'
+                  name={name}
+                  onChange={handleChangeImage}
+                  onRemove={handleRemoveImage}
+                />
+                {!!error?.message && (
+                  <p className='text-red-500 mt-2 text-xs'>{error.message}</p>
+                )}
+              </div>
+            );
           }}
         />
       </div>
