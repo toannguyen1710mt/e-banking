@@ -25,8 +25,6 @@ export const ACCOUNT_DEFAULT_VALUES = {
 };
 
 export const PASSWORD_DEFAULT_VALUES = {
-  user: {
-    password: '',
-    newPassword: '',
-  },
+  password: '',
+  newPassword: '',
 };

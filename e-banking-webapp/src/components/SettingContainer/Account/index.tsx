@@ -1,3 +1,6 @@
+// Libs
+import { Session } from 'next-auth';
+
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
@@ -5,7 +8,11 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { Text } from '@/components/common';
 import { AccountTabs } from './AccountTabs';
 
-export const Account = () => (
+interface IAccountProps {
+  session: Session;
+}
+
+export const Account = async ({ session }: IAccountProps) => (
   <>
     <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8'>
       <Text
@@ -26,7 +33,7 @@ export const Account = () => (
     </div>
 
     <div className='mt-5 pl-8'>
-      <AccountTabs />
+      <AccountTabs session={session} />
     </div>
   </>
 );

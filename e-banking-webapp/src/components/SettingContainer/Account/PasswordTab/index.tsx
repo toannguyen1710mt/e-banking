@@ -4,9 +4,14 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { Session } from 'next-auth';
+import { useState } from 'react';
+
+// Interfaces
+import { TChangePasswordFormData } from '@/interfaces';
 
 // Constants
-import { PASSWORD_DEFAULT_VALUES } from '@/constants';
+import { ERROR_MESSAGES, PASSWORD_DEFAULT_VALUES } from '@/constants';
 
 // Schemas
 import { UpdatePasswordSchema } from '@/schemas';
@@ -15,12 +20,23 @@ import { UpdatePasswordSchema } from '@/schemas';
 import { Button, Input, Text } from '@/components/common';
 import { EyeIcon, EyeSlashIcon } from '@/components/icons';
 
+// Actions
+import { changePassword } from '@/actions';
+
+// Context
+import { useToastContext } from '@/context';
+
 type FormValues = z.infer<typeof UpdatePasswordSchema>;
 
-export const PasswordTab = () => {
+interface IPasswordTabProps {
+  session: Session;
+}
+
+export const PasswordTab = ({ session }: IPasswordTabProps) => {
   const {
     control,
     formState: { isValid, isDirty },
+    setError,
     handleSubmit,
   } = useForm<FormValues>({
     defaultValues: PASSWORD_DEFAULT_VALUES,
@@ -47,10 +63,45 @@ export const PasswordTab = () => {
     onOpen: openConfirmPassword,
   } = useDisclosure();
 
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
+
+  const { showToast } = useToastContext();
+
   const onSubmit = handleSubmit(async (data) => {
-    // TODO: Handle update password
-    console.log('data', data);
-    return;
+    const { currentPassword, newPassword, confirmPassword } = data;
+
+    const changePasswordFormData: TChangePasswordFormData = {
+      currentPassword,
+      password: newPassword,
+      passwordConfirmation: confirmPassword,
+    };
+
+    setIsChangingPassword(true);
+
+    try {
+      const response = await changePassword(
+        changePasswordFormData,
+        session.user.token,
+      );
+
+      if (response.status === 400) {
+        throw response.message;
+      }
+
+      showToast(
+        ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
+        'success',
+        'top-center',
+      );
+    } catch (error) {
+      setError('currentPassword', {
+        message: String(error),
+      });
+
+      showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
+    } finally {
+      setIsChangingPassword(false);
+    }
   });
 
   return (
@@ -63,7 +114,7 @@ export const PasswordTab = () => {
         {/* Current Password */}
         <Controller
           control={control}
-          name='user.password'
+          name='currentPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='current password'
@@ -95,7 +146,7 @@ export const PasswordTab = () => {
         {/* New Password */}
         <Controller
           control={control}
-          name='user.newPassword'
+          name='newPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -128,7 +179,7 @@ export const PasswordTab = () => {
 
         <Controller
           control={control}
-          name='user.confirmPassword'
+          name='confirmPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='password'
@@ -165,7 +216,8 @@ export const PasswordTab = () => {
           color='navyBlue'
           radius='xs'
           type='submit'
-          isDisabled={!isDirty || !isValid}
+          isDisabled={!isDirty || !isValid || isChangingPassword}
+          isLoading={isChangingPassword}
         >
           Change Password
         </Button>

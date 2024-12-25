@@ -4,4 +4,5 @@ export const API_ENDPOINTS = {
   TRANSACTIONS: '/transactions',
   CARDS: '/cards',
   SIGN_UP: '/auth/local/register',
+  CHANGE_PASSWORD: '/auth/change-password',
 };

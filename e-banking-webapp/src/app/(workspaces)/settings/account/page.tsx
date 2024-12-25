@@ -1,6 +1,13 @@
 // Components
 import { Account } from '@/components';
 
-export default function AccountPage() {
-  return <Account />;
+// Configs
+import { auth } from '@/config/auth';
+
+export default async function AccountPage() {
+  const session = await auth();
+
+  if (!session) return;
+
+  return <Account session={session} />;
 }
