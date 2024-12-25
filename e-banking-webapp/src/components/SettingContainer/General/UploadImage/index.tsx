@@ -11,6 +11,7 @@ import { useUploadImage } from '@/hooks';
 
 // Components
 import { Button, CameraIcon, ImageIcon, TrashIcon } from '@/components';
+import { ERROR_MESSAGES } from '@/constants';
 
 export interface IUploadImageProps {
   height?: string;
@@ -49,14 +50,19 @@ export const UploadImage = ({
       file?.type === 'image/jpeg' || file?.type === 'image/png';
 
     if (!isJpgOrPng) {
-      showToast('You can only upload JPG/PNG file!', 'error', 'top-center');
+      showToast(
+        ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
+        'error',
+        'top-center',
+      );
     }
-    const isLt2M = file!.size / 1024 / 1024 < 1;
-    if (!isLt2M) {
-      showToast('Image upload must smaller than 1MB!', 'error', 'top-center');
+    const isLessThan2MB = file!.size / 1024 / 1024 < 1;
+
+    if (!isLessThan2MB) {
+      showToast(ERROR_MESSAGES.UPLOAD_IMAGE_SIZE, 'error', 'top-center');
     }
 
-    if (file && isJpgOrPng && isLt2M) {
+    if (file && isJpgOrPng && isLessThan2MB) {
       const { url } = await handleUploadImage(file);
 
       return url;

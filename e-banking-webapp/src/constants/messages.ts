@@ -30,6 +30,8 @@ export const ERROR_MESSAGES = {
   RECIPIENT_ACCOUNT_EXACT_12_DIGITS:
     'Recipient Account must be exactly 12 digits',
   RECIPIENT_ACCOUNT_ONLY_NUMBERS: 'Recipient Account must contain only numbers',
+  UPLOAD_IMAGE_ONLY_JPG_PNG: 'You can only upload JPG/PNG file!',
+  UPLOAD_IMAGE_SIZE: 'Image upload must smaller than 1MB!',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',
