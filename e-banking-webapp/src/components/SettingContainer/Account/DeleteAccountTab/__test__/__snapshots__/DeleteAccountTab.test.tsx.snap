@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeleteTab component should match snapshot for DeleteTab 1`] = `
+exports[`DeleteAccountTab component should match snapshot for DeleteAccountTab 1`] = `
 <div>
   <div
     class="flex flex-col gap-[18px]"
