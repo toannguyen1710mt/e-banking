@@ -7,7 +7,6 @@ export const ROUTES = {
   BALANCE: '/balance',
   TRANSFER: '/transfer',
   PROFILE: '/profile',
-  SETTINGS: '/settings',
   GENERAL: '/settings/general',
   ACCOUNT: '/settings/account',
 };

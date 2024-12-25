@@ -23,4 +23,6 @@ export const colors = {
   semiTransparentDimGray: 'rgba(128, 128, 128, 1)',
   lightGraySolid: 'rgba(230, 229, 229, 1)',
   semiTransparentNavyBlue: 'rgba(38, 70, 83, 0.5)',
+  pastelYellow: 'rgba(243, 201, 107, 1)',
+  softGreen: 'rgba(158, 201, 127, 1)',
 };

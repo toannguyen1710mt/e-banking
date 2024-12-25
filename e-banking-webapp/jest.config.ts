@@ -25,6 +25,8 @@ const customJestConfig = {
     '!src/**/*.stories.ts',
     '!src/**/*.stories.tsx',
   ],
+  maxWorkers: 7, // Increase the number of workers, or set to "50%" if your machine can handle more parallel tests
+  testRetries: 6, // Increase the number of retries for failed tests
 };
 
 export default createJestConfig(customJestConfig);

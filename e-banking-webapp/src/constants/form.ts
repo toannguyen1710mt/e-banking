@@ -23,3 +23,10 @@ export const ACCOUNT_DEFAULT_VALUES = {
   currency: 'KSH',
   name: 'TpBank',
 };
+
+export const PASSWORD_DEFAULT_VALUES = {
+  user: {
+    password: '',
+    newPassword: '',
+  },
+};

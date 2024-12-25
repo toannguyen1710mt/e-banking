@@ -11,3 +11,4 @@ export * from './account';
 export * from './global-transfer';
 export * from './card';
 export * from './toast';
+export * from './card-statistics';
