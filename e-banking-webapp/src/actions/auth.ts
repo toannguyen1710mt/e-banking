@@ -19,6 +19,8 @@ import {
   IAccountPayload,
   ICardPayload,
   SuccessResponse,
+  TChangePasswordFormData,
+  TChangePasswordSuccessResponse,
 } from '@/interfaces';
 
 export const authenticateUser = async (formData: TSignInFormData) => {
@@ -48,6 +50,23 @@ export const handleSignUp = async (signUpData: TSignUpPayload) => {
 };
 
 export const signOut = async () => await nextAuthSignOut({ redirect: false });
+
+export const changePassword = async (
+  payload: TChangePasswordFormData,
+  jwt: string,
+) => {
+  const response = await httpClient.post<TChangePasswordSuccessResponse>(
+    API_ENDPOINTS.CHANGE_PASSWORD,
+    payload,
+    {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    },
+  );
+
+  return response;
+};
 
 export const updateUser = async (id: number, payload: TUpdateInfo) => {
   try {

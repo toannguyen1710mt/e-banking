@@ -33,6 +33,16 @@ export type TUpdateInfo = Pick<
   'phone' | 'country' | 'avatar' | 'postal'
 >;
 
+export type TChangePasswordFormData = {
+  currentPassword: string;
+  password: string;
+  passwordConfirmation: string;
+};
+
+export type TChangePasswordSuccessResponse = IUser & {
+  jwt: string;
+};
+
 export interface IUser {
   id: number;
   documentId: string;
@@ -48,6 +58,7 @@ export interface IUser {
   phone: string;
   country: string;
   avatar: string;
+  token: string;
   accounts?: IAccount[];
   announcements?: boolean;
   updates?: boolean;

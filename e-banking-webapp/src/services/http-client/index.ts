@@ -36,9 +36,13 @@ class ApiService {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(
-        `${ERROR_MESSAGES.NETWORK_ERROR}: ${response.status} ${response.statusText}`,
-      );
+      if (data.error) {
+        return data.error;
+      } else {
+        throw new Error(
+          `${ERROR_MESSAGES.NETWORK_ERROR}: ${response.status} ${response.statusText}`,
+        );
+      }
     }
 
     return {
@@ -49,35 +53,19 @@ class ApiService {
   }
 
   async get<T>(url: string, options?: RequestInit) {
-    try {
-      return await this.request<T>('GET', url, null, options);
-    } catch (_error) {
-      throw new Error(ERROR_MESSAGES.GET_ERROR);
-    }
+    return await this.request<T>('GET', url, null, options);
   }
 
   async post<T>(url: string, body: unknown, options?: RequestInit) {
-    try {
-      return await this.request<T>('POST', url, body, options);
-    } catch (_error) {
-      throw new Error(ERROR_MESSAGES.POST_ERROR);
-    }
+    return await this.request<T>('POST', url, body, options);
   }
 
   async put<T>(url: string, body: unknown, options?: RequestInit) {
-    try {
-      return await this.request<T>('PUT', url, body, options);
-    } catch (_error) {
-      throw new Error(ERROR_MESSAGES.UPDATE_ERROR);
-    }
+    return await this.request<T>('PUT', url, body, options);
   }
 
   async delete<T>(url: string) {
-    try {
-      return await this.request<T>('DELETE', url);
-    } catch (_error) {
-      throw new Error(ERROR_MESSAGES.DELETE_ERROR);
-    }
+    return await this.request<T>('DELETE', url);
   }
 }
 
