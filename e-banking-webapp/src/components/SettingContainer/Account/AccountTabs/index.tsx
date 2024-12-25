@@ -1,7 +1,23 @@
 'use client';
 
-import { Tab, Tabs } from '@nextui-org/react';
+import { useEffect, useState } from 'react';
 import { Session } from 'next-auth';
+import { Tab, Tabs } from '@nextui-org/react';
+
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
+// Actions
+import { updateEmailSettings } from '@/actions';
+
+// Context
+import { useToastContext } from '@/context';
+
+// Interfaces
+import { Preferences } from '@/interfaces';
+
+// Services
+import { getUserById } from '@/services';
 
 // Components
 import { EmailTab } from '../EmailTab';
@@ -14,13 +30,80 @@ interface IAccountTabsProps {
 }
 
 export const AccountTabs = ({ session }: IAccountTabsProps) => {
+  const { id } = session.user;
+  const { showToast } = useToastContext();
+  const [preferences, setPreferences] = useState<Preferences>(
+    {} as Preferences,
+  );
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const { user } = await getUserById(id);
+        if (user) {
+          const {
+            announcements,
+            updates,
+            feedbacksAndSurvey,
+            events,
+            generalNotification,
+            promotions,
+            eventsNearMe,
+          } = user;
+
+          const newPreferences = {
+            announcements: announcements || false,
+            updates: updates || false,
+            feedbacksAndSurvey: feedbacksAndSurvey || false,
+            events: events || false,
+            generalNotification: generalNotification || false,
+            promotions: promotions || false,
+            eventsNearMe: eventsNearMe || false,
+          };
+
+          setPreferences(newPreferences);
+        }
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [id]);
+
+  const handleUpdateEmailSettings = async (data: Preferences) => {
+    try {
+      await updateEmailSettings(id, data);
+
+      showToast(
+        ERROR_MESSAGES.UPDATE_EMAIL_SETTINGS_SUCCESS,
+        'success',
+        'top-center',
+      );
+      setPreferences(data);
+
+      return;
+    } catch (error) {
+      if (error instanceof Error) {
+        return error.message;
+      }
+      return ERROR_MESSAGES.UPDATE_ERROR;
+    }
+  };
+
   const ACCOUNT_TABS = [
     {
       key: 'password',
       title: 'Change Password',
       content: <PasswordTab session={session} />,
     },
-    { key: 'email', title: 'Email Settings', content: <EmailTab /> },
+    {
+      key: 'email',
+      title: 'Email Settings',
+      content: (
+        <EmailTab {...preferences} onSubmit={handleUpdateEmailSettings} />
+      ),
+    },
     {
       key: 'connected',
       title: 'Connected Accounts',

@@ -2,6 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
 import { AccountTabs } from '.';
+
+// Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
 
 const meta = {
@@ -26,7 +28,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    session: MOCK_SESSION_DATA,
-  },
+  args: { session: MOCK_SESSION_DATA },
+  render: () => <AccountTabs session={MOCK_SESSION_DATA} />,
 };
