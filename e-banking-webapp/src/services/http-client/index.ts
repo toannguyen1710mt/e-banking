@@ -4,7 +4,7 @@ import { ERROR_MESSAGES } from '@/constants';
 // Interfaces
 import { Pagination } from '@/interfaces';
 
-const API_END_POINT = process.env.NEXT_PUBLIC_API_URL || '';
+export const API_END_POINT = process.env.NEXT_PUBLIC_API_URL || '';
 
 class ApiService {
   private _apiName: string;

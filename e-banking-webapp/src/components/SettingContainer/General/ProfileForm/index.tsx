@@ -20,7 +20,7 @@ type FormValues = z.infer<typeof ProfileSchema> & {
 };
 
 export const ProfileForm = () => {
-  const { control } = useForm<FormValues>({
+  const { control, setValue } = useForm<FormValues>({
     resolver: zodResolver(ProfileSchema),
     defaultValues: {
       user: {
@@ -40,6 +40,14 @@ export const ProfileForm = () => {
     onOpen: openPassword,
   } = useDisclosure();
 
+  const handleChangeImage = (url: string) => {
+    setValue(`avatar`, url);
+  };
+
+  const handleRemoveImage = () => {
+    setValue('avatar', '');
+  };
+
   return (
     <form className='flex flex-col pr-[87px]'>
       <div className='mb-10'>
@@ -54,13 +62,26 @@ export const ProfileForm = () => {
         <Controller
           control={control}
           name='avatar'
-          render={({ field: { value, name } }) => {
-            return <UploadImage src={value} alt='Avatar' name={name} />;
+          render={({ field: { value, name }, fieldState: { error } }) => {
+            return (
+              <div className='flex flex-col'>
+                <UploadImage
+                  src={value}
+                  alt='Avatar'
+                  name={name}
+                  onChange={handleChangeImage}
+                  onRemove={handleRemoveImage}
+                />
+                {!!error?.message && (
+                  <p className='text-red-500 mt-2 text-xs'>{error.message}</p>
+                )}
+              </div>
+            );
           }}
         />
       </div>
 
-      <div className='mb-14 flex flex-col gap-8'>
+      <div className='mb-14 flex max-w-[1024px] flex-col gap-8'>
         <div className='flex gap-[107px]'>
           <Controller
             control={control}
@@ -182,7 +203,7 @@ export const ProfileForm = () => {
         </Text>
       </div>
 
-      <div className='flex gap-[108px]'>
+      <div className='flex max-w-[1024px] gap-[108px]'>
         <Controller
           control={control}
           name='user.email'

@@ -52,3 +52,4 @@ export * from './CameraIcon';
 export * from './NetflixIcon';
 export * from './ElectricIcon';
 export * from './PrimeIcon';
+export * from './ImageIcon';

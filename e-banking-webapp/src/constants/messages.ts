@@ -30,6 +30,8 @@ export const ERROR_MESSAGES = {
   RECIPIENT_ACCOUNT_EXACT_12_DIGITS:
     'Recipient Account must be exactly 12 digits',
   RECIPIENT_ACCOUNT_ONLY_NUMBERS: 'Recipient Account must contain only numbers',
+  UPLOAD_IMAGE_ONLY_JPG_PNG: 'You can only upload JPG/PNG file!',
+  UPLOAD_IMAGE_SIZE: 'Image upload must smaller than 1MB!',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',
@@ -41,6 +43,7 @@ export const ERROR_MESSAGES = {
   INVALID_USER_PERMISSIONS: 'Invalid user permissions!',
   USERNAME_PASSWORD_INVALID: 'Username or Password is invalid!',
   SIGN_UP_ERROR: 'Failed to sign up. Please try again later.',
+  INTERNAL_SERVER_ERROR: 'Internal Server Error',
 
   // Empty data
   EMPTY_DATA: 'No data available!',
