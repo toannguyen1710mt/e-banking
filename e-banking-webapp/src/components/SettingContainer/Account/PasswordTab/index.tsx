@@ -5,7 +5,7 @@ import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Session } from 'next-auth';
-import { useState } from 'react';
+import { useTransition } from 'react';
 
 // Interfaces
 import { TChangePasswordFormData } from '@/interfaces';
@@ -63,11 +63,13 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
     onOpen: openConfirmPassword,
   } = useDisclosure();
 
-  const [isChangingPassword, setIsChangingPassword] = useState(false);
+  const [isChangingPassword, startTransition] = useTransition();
+
+  const isButtonDisabled = !isDirty || !isValid || isChangingPassword;
 
   const { showToast } = useToastContext();
 
-  const onSubmit = handleSubmit(async (data) => {
+  const onSubmit = handleSubmit((data) => {
     const { currentPassword, newPassword, confirmPassword } = data;
 
     const changePasswordFormData: TChangePasswordFormData = {
@@ -76,32 +78,30 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
       passwordConfirmation: confirmPassword,
     };
 
-    setIsChangingPassword(true);
+    startTransition(async () => {
+      try {
+        const response = await changePassword(
+          changePasswordFormData,
+          session.user.token,
+        );
 
-    try {
-      const response = await changePassword(
-        changePasswordFormData,
-        session.user.token,
-      );
+        if (response.status === 400) {
+          throw response.message;
+        }
 
-      if (response.status === 400) {
-        throw response.message;
+        showToast(
+          ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
+          'success',
+          'top-center',
+        );
+      } catch (error) {
+        setError('currentPassword', {
+          message: String(error),
+        });
+
+        showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
       }
-
-      showToast(
-        ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
-        'success',
-        'top-center',
-      );
-    } catch (error) {
-      setError('currentPassword', {
-        message: String(error),
-      });
-
-      showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
-    } finally {
-      setIsChangingPassword(false);
-    }
+    });
   });
 
   return (
@@ -216,7 +216,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
           color='navyBlue'
           radius='xs'
           type='submit'
-          isDisabled={!isDirty || !isValid || isChangingPassword}
+          isDisabled={isButtonDisabled}
           isLoading={isChangingPassword}
         >
           Change Password
