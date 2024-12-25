@@ -11,7 +11,7 @@ import { useUploadImage } from '@/hooks';
 
 // Components
 import { Button, CameraIcon, ImageIcon, TrashIcon } from '@/components';
-import { ERROR_MESSAGES } from '@/constants';
+import { ERROR_MESSAGES, IMAGE_TYPES } from '@/constants';
 
 export interface IUploadImageProps {
   height?: string;
@@ -47,7 +47,7 @@ export const UploadImage = ({
     const file = e.target.files?.[0];
 
     const isJpgOrPng =
-      file?.type === 'image/jpeg' || file?.type === 'image/png';
+      file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
 
     if (!isJpgOrPng) {
       showToast(
@@ -56,6 +56,7 @@ export const UploadImage = ({
         'top-center',
       );
     }
+
     const isLessThan2MB = file!.size / 1024 / 1024 < 1;
 
     if (!isLessThan2MB) {

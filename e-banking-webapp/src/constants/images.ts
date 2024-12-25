@@ -5,3 +5,8 @@ export const IMAGES = {
   LOGO: logo,
   SUCCESS_IMAGE: successImage,
 };
+
+export const IMAGE_TYPES = {
+  PNG: 'image/png',
+  JPEG: 'image/jpeg',
+};
