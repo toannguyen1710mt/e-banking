@@ -12,7 +12,7 @@ import { TEXT_VARIANT } from '@/interfaces';
 import { BalanceStatistics, SpendingStatistics } from '@/components/Charts';
 import { AnalyticsCard, Button, MenuDropdown, Text } from '@/components/common';
 import { ChevronDownIcon } from '@/components/icons';
-import { TransactionTable } from '../TransactionTable';
+import { TransactionHistory } from '@/components/ContainerHome/TransactionHistory';
 
 export const MainContent = () => (
   <div className='space-y-4'>
@@ -60,7 +60,7 @@ export const MainContent = () => (
       <SpendingStatistics {...MOCK_SPENDING_STATISTIC_CHART_DATA} />
     </div>
 
-    {/* Table */}
-    <TransactionTable />
+    {/* Transaction History */}
+    <TransactionHistory />
   </div>
 );

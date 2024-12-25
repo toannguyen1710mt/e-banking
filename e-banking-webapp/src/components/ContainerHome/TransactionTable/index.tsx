@@ -1,26 +1,56 @@
 'use client';
 
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
-
-// Mocks
-import { MOCK_COLUMNS } from '@/mocks';
+// Constants
+import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { ITransaction } from '@/interfaces';
 
 // Components
-import { Table, Text } from '@/components';
+import { Button, MoreVerticalIcon, Table } from '@/components';
 
-export const TransactionTable = () => (
-  <Card className='rounded-md'>
-    <CardHeader className='flex justify-between'>
-      <Text size={TEXT_SIZE.XS} variant={TEXT_VARIANT.DEFAULT}>
-        Transactions History
-      </Text>
-    </CardHeader>
+// Utils
+import { formatDate, formatNumberWithCommas } from '@/utils';
 
-    <CardBody className='flex flex-col p-0'>
-      <Table columns={MOCK_COLUMNS} data={[]} />
-    </CardBody>
-  </Card>
-);
+interface ITransactionTableProps {
+  transactions: ITransaction[];
+}
+
+export const TransactionTable = ({ transactions }: ITransactionTableProps) => {
+  const columns = TRANSACTION_TABLE_COLUMNS.map((column) => {
+    switch (column.key) {
+      case 'createdAt':
+        column.renderCell = (item) => <>{formatDate(item.createdAt)}</>;
+        break;
+      case 'status':
+        column.renderCell = (item) => (
+          <span>{item.statusTransaction ? 'Success' : 'Failed'}</span>
+        );
+        break;
+      case 'amount':
+        column.renderCell = (item) => (
+          <>
+            {item.currencyUnit ?? '$'}
+            {formatNumberWithCommas(item.amount)}
+          </>
+        );
+        break;
+      case 'action':
+        column.renderCell = () => (
+          <Button
+            className='h-full !max-h-none min-w-0 !bg-transparent'
+            isIconOnly
+            isDisabled
+          >
+            <MoreVerticalIcon />
+          </Button>
+        );
+        break;
+      default:
+        break;
+    }
+    return column;
+  });
+
+  return <Table columns={columns} data={transactions} />;
+};
