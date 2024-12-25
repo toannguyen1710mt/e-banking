@@ -40,6 +40,14 @@ export const ProfileForm = () => {
     onOpen: openPassword,
   } = useDisclosure();
 
+  const handleChangeImage = (url: string) => {
+    setValue(`avatar`, url);
+  };
+
+  const handleRemoveImage = () => {
+    setValue('avatar', '');
+  };
+
   return (
     <form className='flex flex-col pr-[87px]'>
       <div className='mb-10'>
@@ -55,13 +63,6 @@ export const ProfileForm = () => {
           control={control}
           name='avatar'
           render={({ field: { value, name }, fieldState: { error } }) => {
-            const handleChangeImage = (url: string) => {
-              setValue(`avatar`, url);
-            };
-
-            const handleRemoveImage = () => {
-              setValue('avatar', '');
-            };
             return (
               <div className='flex flex-col'>
                 <UploadImage
