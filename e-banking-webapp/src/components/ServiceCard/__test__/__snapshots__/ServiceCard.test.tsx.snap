@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceCard component should match snapshot for ServiceCard 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none w-40"
+    tabindex="-1"
+  >
+    <div
+      class="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large pb-0"
+    >
+      <svg
+        fill="none"
+        height="27"
+        viewBox="0 0 26 27"
+        width="26"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.42188 14.4932H12.8093V26.9977H5.42188V14.4932Z"
+          fill="#855C52"
+        />
+        <path
+          d="M15.0771 13.8315H22.6937V21.5308H15.0771V13.8315Z"
+          fill="white"
+        />
+        <path
+          d="M24.4728 10.1958L13.6621 0.356141C13.14 -0.118714 12.2848 -0.118714 11.7627 0.356141L0.94971 10.1958C0.427606 10.673 0 11.6393 0 12.3456V25.7148C0 26.4212 0.578804 27 1.28282 27H6.24635V18.1809C6.24635 17.6423 6.68577 17.2029 7.22205 17.2029H11.1343C11.6706 17.2029 12.1123 17.6423 12.1123 18.1809V26.9976H24.1396C24.846 26.9976 25.4248 26.4212 25.4248 25.7125V12.3433C25.4248 11.6393 24.9972 10.6707 24.4728 10.1958ZM18.2713 20.7938H16.8751C16.223 20.7938 15.6868 20.2599 15.6868 19.6055V18.4124H18.2713V20.7938ZM18.2713 17.2785H15.6868V15.6791C15.6868 15.027 16.223 14.4908 16.8751 14.4908H18.2713V17.2785ZM21.9874 19.6055C21.9874 20.2575 21.4535 20.7938 20.7991 20.7938H19.4029V18.4124H21.9874V19.6055ZM21.9874 17.2785H19.4053V14.4931H20.8015C21.1165 14.4937 21.4184 14.6191 21.6411 14.8419C21.8638 15.0646 21.9892 15.3665 21.9898 15.6814V17.2785H21.9874Z"
+          fill="#FCC21B"
+        />
+        <mask
+          height="27"
+          id="mask0_1_19099"
+          maskUnits="userSpaceOnUse"
+          width="26"
+          x="0"
+          y="0"
+        >
+          <path
+            d="M24.4728 10.1958L13.6621 0.356141C13.14 -0.118714 12.2848 -0.118714 11.7627 0.356141L0.94971 10.1958C0.427606 10.673 0 11.6393 0 12.3456V25.7148C0 26.4212 0.578804 27 1.28282 27H6.24635V18.1809C6.24635 17.6423 6.68577 17.2029 7.22205 17.2029H11.1343C11.6706 17.2029 12.1123 17.6423 12.1123 18.1809V26.9976H24.1396C24.846 26.9976 25.4248 26.4212 25.4248 25.7125V12.3433C25.4248 11.6393 24.9972 10.6707 24.4728 10.1958ZM18.2713 20.7938H16.8751C16.223 20.7938 15.6868 20.2599 15.6868 19.6055V18.4124H18.2713V20.7938ZM18.2713 17.2785H15.6868V15.6791C15.6868 15.027 16.223 14.4908 16.8751 14.4908H18.2713V17.2785ZM21.9874 19.6055C21.9874 20.2575 21.4535 20.7938 20.7991 20.7938H19.4029V18.4124H21.9874V19.6055ZM21.9874 17.2785H19.4053V14.4931H20.8015C21.1165 14.4937 21.4184 14.6191 21.6411 14.8419C21.8638 15.0646 21.9892 15.3665 21.9898 15.6814V17.2785H21.9874Z"
+            fill="white"
+          />
+        </mask>
+        <g
+          mask="url(#mask0_1_19099)"
+        >
+          <path
+            d="M12.8827 2.96913L25.6352 14.7791L25.9329 14.7814L26.0676 10.47L12.8827 -1.73926L-0.611729 10.47L-0.696777 14.5003L0.130085 14.5074L12.8827 2.96913Z"
+            fill="#ED6C30"
+          />
+        </g>
+        <path
+          d="M7.71816 23.0525C8.18787 23.0525 8.56865 22.6718 8.56865 22.202C8.56865 21.7323 8.18787 21.3516 7.71816 21.3516C7.24845 21.3516 6.86768 21.7323 6.86768 22.202C6.86768 22.6718 7.24845 23.0525 7.71816 23.0525Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased pb-6 pt-5"
+    >
+      <span
+        class="text-primary-200 text-xs font-semibold"
+      >
+        Mortgage
+      </span>
+      <div
+        class="mt-2 flex gap-1 text-xs"
+      >
+        <span
+          class="text-primary-200 text-base font-medium"
+        >
+          Amount:
+        </span>
+        <span
+          class="text-primary-200 text-base font-bold"
+        >
+          $
+          1100
+        </span>
+      </div>
+      <span
+        class="text-primary-200 mt-2 text-xs font-normal text-transparentBlack"
+      >
+        Charged Monthly
+      </span>
+    </div>
+  </div>
+</div>
+`;
