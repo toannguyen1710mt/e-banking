@@ -6,6 +6,8 @@ import { Session } from 'next-auth';
 // Components
 import { EmailTab } from '../EmailTab';
 import { PasswordTab } from '../PasswordTab';
+import { ConnectedAccountsTab } from '../ConnectedAccountsTab';
+import { DeleteAccountTab } from '../DeleteAccountTab';
 
 interface IAccountTabsProps {
   session: Session;
@@ -22,9 +24,9 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     {
       key: 'connected',
       title: 'Connected Accounts',
-      content: 'Connected content',
+      content: <ConnectedAccountsTab />,
     },
-    { key: 'delete', title: 'Delete Account', content: 'Delete content' },
+    { key: 'delete', title: 'Delete Account', content: <DeleteAccountTab /> },
   ];
 
   return (
