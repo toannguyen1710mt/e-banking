@@ -6,9 +6,9 @@ export default function MainLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex w-full flex-col'>
+    <div className='flex h-full w-full flex-col'>
       <HeaderAuth />
-      <div className='w-full'>{children}</div>
+      <div className='w-full grow'>{children}</div>
     </div>
   );
 }

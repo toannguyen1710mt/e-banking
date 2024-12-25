@@ -14,7 +14,7 @@ interface BalanceCardProps {
 }
 
 export const BalanceCard = ({ amount }: BalanceCardProps) => (
-  <Card className='h-[155px] max-w-[200px] pl-[14px] pr-4 pt-[13px]'>
+  <Card className='h-[155px] w-full pl-[14px] pr-4 pt-[13px]'>
     <div className='mb-10 flex justify-between text-primary-200'>
       <PaymentIcon />
       <ArrowUpRightIcon />

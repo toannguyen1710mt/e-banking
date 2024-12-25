@@ -28,7 +28,7 @@ export const MetricsCard = ({
   const chipTextColor = isPositive ? 'text-primary-200' : 'text-red';
 
   return (
-    <Card className='h-[120px] max-w-[200px] p-[13px]'>
+    <Card className='h-[120px] w-auto p-[13px]'>
       <Text className='font-semibold' variant={TEXT_VARIANT.DEFAULT}>
         {title}
       </Text>

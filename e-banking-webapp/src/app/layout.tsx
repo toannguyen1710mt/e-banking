@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <main className='mx-auto'>
-            <div>{children}</div>
+            <div className='h-screen'>{children}</div>
           </main>
         </Providers>
       </body>

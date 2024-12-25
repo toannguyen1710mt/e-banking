@@ -15,8 +15,8 @@ import { Button, Text, CreditCard, MasterCard } from '@/components';
 export const CardOverview = () => {
   return (
     <Card>
-      <CardBody className='flex flex-row gap-[58px] p-0'>
-        <div className='flex flex-col gap-[14px] pl-4 pt-2'>
+      <CardBody className='flex flex-row justify-between gap-[58px] p-0'>
+        <div className='flex w-full flex-col gap-[14px] pl-4 pt-2'>
           <div className='flex items-center justify-between'>
             <Text as='span' className='text-sm font-semibold text-navyBlue'>
               My Cards

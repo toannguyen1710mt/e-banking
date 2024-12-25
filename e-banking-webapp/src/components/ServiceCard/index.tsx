@@ -14,7 +14,7 @@ interface IServiceCard {
 }
 
 export const ServiceCard = ({ icon, title, amount }: IServiceCard) => (
-  <Card className='w-40'>
+  <Card className='w-full'>
     <CardHeader className='pb-0'>{icon}</CardHeader>
     <CardBody className='pb-6 pt-5'>
       <Text as='span' className='text-xs font-semibold'>
