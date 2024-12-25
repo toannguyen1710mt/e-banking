@@ -1,4 +1,6 @@
 // Components
+import { ConnectedAccountsTab } from '@/components/SettingContainer/Account/ConnectedAccountsTab';
+import { DeleteAccountTab } from '@/components/SettingContainer/Account/DeleteAccountTab';
 import { EmailTab } from '@/components/SettingContainer/Account/EmailTab';
 import { PasswordTab } from '@/components/SettingContainer/Account/PasswordTab';
 
@@ -8,7 +10,7 @@ export const ACCOUNT_TABS = [
   {
     key: 'connected',
     title: 'Connected Accounts',
-    content: 'Connected content',
+    content: <ConnectedAccountsTab />,
   },
-  { key: 'delete', title: 'Delete Account', content: 'Delete content' },
+  { key: 'delete', title: 'Delete Account', content: <DeleteAccountTab /> },
 ];
