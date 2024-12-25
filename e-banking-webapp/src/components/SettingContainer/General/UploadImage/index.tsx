@@ -46,10 +46,10 @@ export const UploadImage = ({
   const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
 
-    const isJpgOrPng =
+    const isValidImage =
       file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
 
-    if (!isJpgOrPng) {
+    if (!isValidImage) {
       showToast(
         ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
         'error',
@@ -63,7 +63,7 @@ export const UploadImage = ({
       showToast(ERROR_MESSAGES.UPLOAD_IMAGE_SIZE, 'error', 'top-center');
     }
 
-    if (file && isJpgOrPng && isLessThan2MB) {
+    if (file && isValidImage && isLessThan2MB) {
       const { url } = await handleUploadImage(file);
 
       return url;
