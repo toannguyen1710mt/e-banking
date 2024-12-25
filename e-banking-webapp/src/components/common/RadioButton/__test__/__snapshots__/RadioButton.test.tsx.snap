@@ -20,18 +20,16 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
           <label
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none gap-[13px] m-0"
           >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-describedby=":r7: react-aria-:r3:"
-                aria-labelledby=":r6:"
-                name="react-aria-:r5:"
-                tabindex="0"
-                type="radio"
-                value="Main Wallet"
-              />
-            </span>
+            <input
+              aria-describedby=":r7: react-aria-:r3:"
+              aria-labelledby=":r6:"
+              class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+              name="react-aria-:r5:"
+              tabindex="0"
+              title=""
+              type="radio"
+              value="Main Wallet"
+            />
             <span
               aria-hidden="true"
               class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[selected=true]:border-primary-200 w-[14px] h-[14px]"
@@ -41,7 +39,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
               />
             </span>
             <div
-              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+              class="flex flex-col ml-1 ms-2"
             >
               <span
                 class="relative select-none transition-colors motion-reduce:transition-none text-2xs text-black"
@@ -71,18 +69,16 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
         <label
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none gap-[13px] m-0"
         >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-describedby=":r7: react-aria-:r3:"
-              aria-labelledby=":r6:"
-              name="react-aria-:r5:"
-              tabindex="0"
-              type="radio"
-              value="Main Wallet"
-            />
-          </span>
+          <input
+            aria-describedby=":r7: react-aria-:r3:"
+            aria-labelledby=":r6:"
+            class="[--cursor-hit-x:8px] font-inherit text-[100%] leading-[1.15] m-0 p-0 overflow-visible box-border absolute top-0 start-[calc(var(--cursor-hit-x)*-1)] w-[calc(100%+var(--cursor-hit-x)*2)] h-full opacity-[0.0001] z-[1] cursor-pointer disabled:cursor-default"
+            name="react-aria-:r5:"
+            tabindex="0"
+            title=""
+            type="radio"
+            value="Main Wallet"
+          />
           <span
             aria-hidden="true"
             class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[selected=true]:border-primary-200 w-[14px] h-[14px]"
@@ -92,7 +88,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
             />
           </span>
           <div
-            class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+            class="flex flex-col ml-1 ms-2"
           >
             <span
               class="relative select-none transition-colors motion-reduce:transition-none text-2xs text-black"
