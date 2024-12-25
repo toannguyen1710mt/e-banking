@@ -49,4 +49,11 @@ export interface IUser {
   country: string;
   avatar: string;
   accounts?: IAccount[];
+  announcements?: boolean;
+  updates?: boolean;
+  feedbacksAndSurvey?: boolean;
+  events?: boolean;
+  generalNotification?: boolean;
+  promotions?: boolean;
+  eventsNearMe?: boolean;
 }
