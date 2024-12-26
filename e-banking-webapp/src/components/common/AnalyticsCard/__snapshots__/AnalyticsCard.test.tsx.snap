@@ -21,7 +21,7 @@ exports[`AnalyticsCard component renders with correct data 1`] = `
         5,000
       </span>
       <div
-        class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightGreen text-green py-1 px-[6px] gap-1"
+        class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap text-tiny rounded-full px-2 py-1 bg-success/10 text-success h-5"
       >
         <svg
           fill="none"
@@ -36,7 +36,7 @@ exports[`AnalyticsCard component renders with correct data 1`] = `
           />
         </svg>
         <span
-          class="flex-1 text-inherit font-extrabold text-[7px] p-0"
+          class="flex-1 text-inherit font-extrabold text-4xs p-0"
         >
           5
           %
