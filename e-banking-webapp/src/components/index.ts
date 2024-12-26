@@ -31,4 +31,4 @@ export * from './MyCalender';
 export * from './ContainerAnalytics';
 export * from './AddCreditCardModal';
 export * from './InformationCard';
-export * from './AddCard/AddCreditCard';
+export * from './AddCreditCardModal/AddCreditCard';

@@ -10,6 +10,7 @@ import { useWizardFormContext } from '@/context';
 
 // Component
 import { Button, Input, Text, CreditCardIcon } from '@/components';
+import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 interface IAddCreditCard<T extends z.ZodType> {
   schema: T;
@@ -41,10 +42,15 @@ export const AddCreditCard = <T extends z.ZodType>({
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
         <div className='flex flex-col gap-2'>
-          <Text as='span' className='text-base font-medium text-black'>
+          <Text as='span' size={TEXT_SIZE.BASE} variant={TEXT_VARIANT.DEFAULT}>
             Add Credit Card
           </Text>
-          <Text as='span' className='text-[10px] font-normal text-black'>
+          <Text
+            as='span'
+            variant={TEXT_VARIANT.DEFAULT}
+            size={TEXT_SIZE['2XS']}
+            className='font-normal'
+          >
             Please fill the details below
           </Text>
         </div>
@@ -54,6 +60,10 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='fullName'
           render={({ field, fieldState: { error } }) => (
             <Input
+              classNames={{
+                inputWrapper: 'px-2',
+                input: 'm-0',
+              }}
               labelPlacement='outside'
               label='Full Name'
               aria-label='Full Name'
@@ -70,6 +80,10 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='cardNumber'
           render={({ field, fieldState: { error } }) => (
             <Input
+              classNames={{
+                inputWrapper: 'px-2',
+                input: 'm-0',
+              }}
               labelPlacement='outside'
               label='Credict Card Number'
               aria-label='cardNumber'
@@ -107,6 +121,10 @@ export const AddCreditCard = <T extends z.ZodType>({
             name='ccv'
             render={({ field, fieldState: { error } }) => (
               <Input
+                classNames={{
+                  inputWrapper: 'px-2',
+                  input: 'm-0',
+                }}
                 labelPlacement='outside'
                 label='CCV'
                 aria-label='ccv'
