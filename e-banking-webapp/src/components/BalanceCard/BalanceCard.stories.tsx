@@ -29,5 +29,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    amount: 12000,
+    title: 'Your total balance',
+  },
 };
