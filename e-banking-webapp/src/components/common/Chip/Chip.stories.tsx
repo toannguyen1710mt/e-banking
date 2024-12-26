@@ -1,8 +1,10 @@
+'use client';
+
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import { ArrowUpIcon, Chip } from '@/components';
+import { Chip } from '.';
 
 const meta = {
   title: 'Components/Common/Chip',
@@ -12,20 +14,29 @@ const meta = {
     docs: {
       description: {
         component:
-          'The `Chip` is a small block of essential information that represent an input, attribute, or action.',
+          'The `Chip` is a small block of essential information that represents an input, attribute, or action. This component supports customizable sizes and colors.',
       },
     },
   },
   tags: ['autodocs'],
   argTypes: {
-    text: {
-      control: { type: 'text' },
-      description: 'The text content of the Chip.',
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+      description: 'Controls the size of the Chip.',
+      defaultValue: 'sm',
     },
-  },
-  args: {
-    startContent: <ArrowUpIcon />,
-    text: '8%',
+    color: {
+      control: 'select',
+      options: ['primary', 'secondary', 'success', 'danger'],
+      description: 'Controls the color of the Chip.',
+      defaultValue: 'primary',
+    },
+    children: {
+      control: 'text',
+      description: 'The content displayed inside the Chip.',
+      defaultValue: 'Chip',
+    },
   },
 } satisfies Meta<typeof Chip>;
 
@@ -33,33 +44,54 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+// Default story
 export const Default: Story = {
   args: {
-    startContent: <ArrowUpIcon />,
-    text: '8%',
-    bgColor: 'bg-lightAqua',
-    fontColor: 'text-primary-200',
-    fontSize: 'text-4xs',
-    fontWeight: 'font-extrabold',
-    customClass: 'h-4',
+    size: 'sm',
+    color: 'primary',
+    children: 'Chip',
   },
-  render: (args) => <Chip {...args} />,
 };
 
-export const Success: Story = {
+// Variants by size
+export const Sizes: Story = {
+  render: (args) => (
+    <div className='flex gap-2'>
+      <Chip {...args} size='sm'>
+        Small
+      </Chip>
+      <Chip {...args} size='md'>
+        Medium
+      </Chip>
+      <Chip {...args} size='lg'>
+        Large
+      </Chip>
+    </div>
+  ),
   args: {
-    ...Default.args,
-    bgColor: 'bg-lightGreen',
-    fontColor: 'text-green',
+    color: 'primary',
   },
-  render: (args) => <Chip {...args} />,
 };
 
-export const Danger: Story = {
+// Variants by color
+export const Colors: Story = {
+  render: (args) => (
+    <div className='flex gap-2'>
+      <Chip {...args} color='primary'>
+        Primary
+      </Chip>
+      <Chip {...args} color='secondary'>
+        Secondary
+      </Chip>
+      <Chip {...args} color='success'>
+        Success
+      </Chip>
+      <Chip {...args} color='danger'>
+        Danger
+      </Chip>
+    </div>
+  ),
   args: {
-    ...Default.args,
-    bgColor: 'bg-lightRed',
-    fontColor: 'text-red',
+    size: 'md',
   },
-  render: (args) => <Chip {...args} />,
 };

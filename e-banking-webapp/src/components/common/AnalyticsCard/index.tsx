@@ -1,19 +1,13 @@
 'use client';
 
 // Libs
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-} from '@nextui-org/react';
+import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 
 // Utils
 import { formatNumberWithCommas } from '@/utils';
 
 // Components
-import { ArrowDownIcon, ArrowUpIcon } from '@/components/icons';
+import { ArrowDownIcon, ArrowUpIcon, Chip } from '@/components';
 
 export interface IAnalyticsCardItem {
   title: string;
@@ -31,8 +25,6 @@ export const AnalyticsCard = ({
   percentageChange,
 }: IAnalyticsCardItem) => {
   const ArrowComponent = isPositive ? <ArrowUpIcon /> : <ArrowDownIcon />;
-  const chipBgColor = isPositive ? 'bg-lightGreen' : 'bg-lightRed';
-  const chipTextColor = isPositive ? 'text-green' : 'text-red';
 
   return (
     <Card key={title} className='w-full min-w-[192px] pl-4 pt-[22px]'>
@@ -41,9 +33,10 @@ export const AnalyticsCard = ({
         <span className='text-base'>${formatNumberWithCommas(amount)}</span>
         <Chip
           startContent={ArrowComponent}
+          color={isPositive ? 'success' : 'danger'}
           classNames={{
-            base: `${chipBgColor} ${chipTextColor} py-1 px-[6px] gap-1`,
-            content: 'font-extrabold text-[7px] p-0',
+            base: 'h-5',
+            content: 'font-extrabold text-4xs p-0',
           }}
         >
           {percentageChange}%

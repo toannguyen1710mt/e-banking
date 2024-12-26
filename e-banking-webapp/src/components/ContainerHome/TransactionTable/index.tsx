@@ -7,7 +7,7 @@ import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
 import { ITransaction } from '@/interfaces';
 
 // Components
-import { Button, MoreVerticalIcon, Table } from '@/components';
+import { Button, Chip, MoreVerticalIcon, Table } from '@/components';
 
 // Utils
 import { formatDate, formatNumberWithCommas } from '@/utils';
@@ -24,7 +24,9 @@ export const TransactionTable = ({ transactions }: ITransactionTableProps) => {
         break;
       case 'status':
         column.renderCell = (item) => (
-          <span>{item.statusTransaction ? 'Success' : 'Failed'}</span>
+          <Chip color={item.statusTransaction ? 'success' : 'danger'}>
+            {item.statusTransaction ? 'Success' : 'Failed'}
+          </Chip>
         );
         break;
       case 'amount':

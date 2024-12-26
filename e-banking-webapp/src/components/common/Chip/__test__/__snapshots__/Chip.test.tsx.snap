@@ -6,25 +6,21 @@ exports[`Chip component Should render snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightAqua text-primary-200 py-[3px] px-[6px] gap-[1px]"
+        class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-primary/10 text-primary"
       >
         <span
-          class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
-        >
-          Success
-        </span>
+          class="flex-1 text-inherit font-normal px-1"
+        />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightAqua text-primary-200 py-[3px] px-[6px] gap-[1px]"
+      class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-primary/10 text-primary"
     >
       <span
-        class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
-      >
-        Success
-      </span>
+        class="flex-1 text-inherit font-normal px-1"
+      />
     </div>
   </div>,
   "debug": [Function],
