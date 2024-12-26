@@ -117,6 +117,7 @@ export const CreditCardForm = <T extends z.ZodType>({
                 label='CCV'
                 aria-label='ccv'
                 placeholder='000'
+                maxLength={3}
                 startContent={<WalletIcon />}
                 type='string'
                 isInvalid={!!error?.message}
