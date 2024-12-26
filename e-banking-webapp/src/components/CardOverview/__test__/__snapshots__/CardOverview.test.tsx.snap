@@ -21,9 +21,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
             My Cards
           </span>
           <button
-            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-24 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none border-[0.2px] bg-none rounded max-h-10 h-auto w-auto border-navyBlue px-2 py-1 text-[10px] font-medium text-navyBlue"
-            data-disabled="true"
-            disabled=""
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-24 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none border-[0.2px] bg-none rounded max-h-10 h-auto w-auto border-navyBlue px-2 py-1 text-[10px] font-medium text-navyBlue"
             type="button"
           >
             Add Card
