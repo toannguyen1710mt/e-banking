@@ -139,10 +139,10 @@ exports[`Table component should match snapshot for Table 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative max-w-fit inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightGreen text-green py-[3px] px-[6px] gap-[1px] min-w-[80]"
+                class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-success/10 text-success"
               >
                 <span
-                  class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
+                  class="flex-1 text-inherit font-normal px-1"
                 >
                   Success
                 </span>
@@ -200,10 +200,10 @@ exports[`Table component should match snapshot for Table 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative max-w-fit inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightRed text-red py-[3px] px-[6px] gap-[1px] min-w-[80]"
+                class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-warning/10 text-warning"
               >
                 <span
-                  class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
+                  class="flex-1 text-inherit font-normal px-1"
                 >
                   Failed
                 </span>
@@ -260,10 +260,10 @@ exports[`Table component should match snapshot for Table 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative max-w-fit inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightRed text-red py-[3px] px-[6px] gap-[1px] min-w-[80]"
+                class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-warning/10 text-warning"
               >
                 <span
-                  class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
+                  class="flex-1 text-inherit font-normal px-1"
                 >
                   Failed
                 </span>
@@ -321,10 +321,10 @@ exports[`Table component should match snapshot for Table 1`] = `
               tabindex="-1"
             >
               <div
-                class="relative max-w-fit inline-flex items-center justify-between box-border whitespace-nowrap h-7 text-small rounded-full bg-lightGreen text-green py-[3px] px-[6px] gap-[1px] min-w-[80]"
+                class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-full px-2 py-1 bg-success/10 text-success"
               >
                 <span
-                  class="flex-1 text-inherit font-extrabold text-4xs p-0 leading-[12px]"
+                  class="flex-1 text-inherit font-normal px-1"
                 >
                   Success
                 </span>

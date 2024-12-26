@@ -5,6 +5,6 @@ import { Chip } from '..';
 
 describe('Chip component', () => {
   it('Should render snapshot correctly', () => {
-    expect(render(<Chip text='Success' />)).toMatchSnapshot();
+    expect(render(<Chip />)).toMatchSnapshot();
   });
 });

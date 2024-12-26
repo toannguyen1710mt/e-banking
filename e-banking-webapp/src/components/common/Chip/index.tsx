@@ -1,56 +1,38 @@
 'use client';
 
 // Libs
-import { ReactNode } from 'react';
-import { Chip as ChipBase, cn } from '@nextui-org/react';
+import { Chip as ChipNextUI, extendVariants } from '@nextui-org/react';
 
-type FontWeightType = 'font-extrabold' | 'font-normal';
-type BGColorType = 'bg-lightAqua' | 'bg-lightGreen' | 'bg-lightRed';
-type TextColorType = 'text-primary-200' | 'text-green' | 'text-red';
-type FontSizeType =
-  | 'text-4xs'
-  | 'text-3xs'
-  | 'text-2xs'
-  | 'text-xs'
-  | 'text-sm';
-
-interface ChipProps {
-  startContent?: ReactNode;
-  text: string;
-  bgColor?: BGColorType;
-  fontColor?: TextColorType;
-  fontSize?: FontSizeType;
-  fontWeight?: FontWeightType;
-  customClass?: string;
-}
-
-export const Chip = ({
-  startContent,
-  text,
-  bgColor = 'bg-lightAqua',
-  fontColor = 'text-primary-200',
-  fontWeight = 'font-extrabold',
-  fontSize = 'text-4xs',
-  customClass,
-}: ChipProps) => {
-  const customClasses = cn(
-    bgColor,
-    fontColor,
-    'py-[3px] px-[6px] gap-[1px]',
-    customClass,
-  );
-
-  const contentClasses = cn(fontWeight, fontSize, 'p-0 leading-[12px]');
-
-  return (
-    <ChipBase
-      startContent={startContent || null}
-      classNames={{
-        base: customClasses,
-        content: contentClasses,
-      }}
-    >
-      {text}
-    </ChipBase>
-  );
-};
+export const Chip = extendVariants(ChipNextUI, {
+  variants: {
+    size: {
+      sm: {
+        base: 'px-2 py-1',
+      },
+      md: {
+        base: 'px-4 py-2',
+      },
+      lg: {
+        base: 'px-6 py-3',
+      },
+    },
+    color: {
+      primary: {
+        base: 'bg-primary/10 text-primary',
+      },
+      secondary: {
+        base: 'bg-secondary/10 text-secondary',
+      },
+      success: {
+        base: 'bg-success/10 text-success',
+      },
+      danger: {
+        base: 'bg-warning/10 text-warning',
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'sm',
+    color: 'primary',
+  },
+});
