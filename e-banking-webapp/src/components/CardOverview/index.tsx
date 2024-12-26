@@ -1,7 +1,7 @@
 'use client';
 
 // Libs
-import { Card, CardBody } from '@nextui-org/react';
+import { Card, CardBody, useDisclosure } from '@nextui-org/react';
 
 // Constants
 import { createExpenseAnalysisOptions } from '@/constants';
@@ -10,39 +10,57 @@ import { createExpenseAnalysisOptions } from '@/constants';
 import { MASTERCARD_CHART_MOCK } from '@/mocks';
 
 // Component
-import { Button, Text, CreditCard, MasterCard } from '@/components';
+import {
+  Button,
+  Text,
+  CreditCard,
+  MasterCard,
+  AddCreditCardModal,
+} from '@/components';
 
 export const CardOverview = () => {
+  const {
+    isOpen: isOpenAddCardModal,
+    onOpen: onOpenAddCardModal,
+    onClose: onCloseAddCardModal,
+  } = useDisclosure();
+
   return (
-    <Card className='w-full'>
-      <CardBody className='flex flex-row justify-between gap-[58px] p-0'>
-        <div className='flex w-full flex-col gap-[14px] pl-4 pt-2'>
-          <div className='flex items-center justify-between'>
-            <Text as='span' className='text-sm font-semibold text-navyBlue'>
-              My Cards
-            </Text>
-            <Button
-              variant='outline'
-              color='outline'
-              radius='xs'
-              className='h-auto w-auto border-navyBlue px-2 py-1 text-[10px] font-medium text-navyBlue'
-              isDisabled
-            >
-              Add Card
-            </Button>
+    <>
+      <Card className='w-full'>
+        <CardBody className='flex flex-row justify-between gap-[58px] p-0'>
+          <div className='flex w-full flex-col gap-[14px] pl-4 pt-2'>
+            <div className='flex items-center justify-between'>
+              <Text as='span' className='text-sm font-semibold text-navyBlue'>
+                My Cards
+              </Text>
+              <Button
+                variant='outline'
+                color='outline'
+                radius='xs'
+                className='h-auto w-auto border-navyBlue px-2 py-1 text-[10px] font-medium text-navyBlue'
+                onClick={onOpenAddCardModal}
+              >
+                Add Card
+              </Button>
+            </div>
+            <CreditCard
+              cardNumber='537544114540'
+              expireDate='06/24'
+              holderName='DONALD FLINCH CORTEZ'
+              bankName='Universal Bank'
+            />
           </div>
-          <CreditCard
-            cardNumber='537544114540'
-            expireDate='06/24'
-            holderName='DONALD FLINCH CORTEZ'
-            bankName='Universal Bank'
+          <MasterCard
+            series={MASTERCARD_CHART_MOCK}
+            totalBalance={createExpenseAnalysisOptions('$540,000')}
           />
-        </div>
-        <MasterCard
-          series={MASTERCARD_CHART_MOCK}
-          totalBalance={createExpenseAnalysisOptions('$540,000')}
-        />
-      </CardBody>
-    </Card>
+        </CardBody>
+      </Card>
+      <AddCreditCardModal
+        isOpen={isOpenAddCardModal}
+        onClose={onCloseAddCardModal}
+      />
+    </>
   );
 };
