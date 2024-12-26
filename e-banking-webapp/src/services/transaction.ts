@@ -35,3 +35,16 @@ export const getTransactions = async (
 
   return [];
 };
+
+export const getTotalTransactions = async (): Promise<number> => {
+  const { pagination } = await httpClient.get<SuccessResponse<ITransaction[]>>(
+    API_ENDPOINTS.TRANSACTIONS,
+    {
+      next: {
+        tags: [API_ENDPOINTS.TRANSACTIONS],
+      },
+    },
+  );
+
+  return pagination.total > 0 ? pagination.total : 0;
+};

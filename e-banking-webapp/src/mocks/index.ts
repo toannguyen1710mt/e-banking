@@ -7,6 +7,4 @@ export * from './transferConfirmData';
 export * from './target';
 export * from './analytics';
 export * from './auth';
-export * from './balanceCard';
-export * from './MetricsCard';
 export * from './ServiceCard';
