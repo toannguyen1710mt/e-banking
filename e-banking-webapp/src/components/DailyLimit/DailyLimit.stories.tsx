@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { DailyLimit } from '@/components';
 
 const meta = {
-  title: 'Components/Common/DailyLimit',
+  title: 'Components/DailyLimit',
   component: DailyLimit,
   parameters: {
     layout: 'centered',

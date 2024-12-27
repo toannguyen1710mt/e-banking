@@ -32,3 +32,5 @@ export * from './ContainerAnalytics';
 export * from './AddCreditCardModal';
 export * from './InformationCard';
 export * from './AddCreditCardModal/AddCreditCard';
+export * from './AnalyticsCard';
+export * from './DailyLimit';

@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AnalyticsCard } from '.';
 
 const meta = {
-  title: 'Components/Common/AnalyticsCard',
+  title: 'Components/AnalyticsCard',
   component: AnalyticsCard,
   parameters: {
     layout: 'centered',

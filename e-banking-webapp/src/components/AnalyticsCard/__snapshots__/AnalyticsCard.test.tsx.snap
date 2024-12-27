@@ -3,19 +3,23 @@
 exports[`AnalyticsCard component renders with correct data 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none w-full min-w-[192px] pl-4 pt-[22px]"
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none w-full gap-4 rounded-md p-0"
     tabindex="-1"
   >
     <div
-      class="flex z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large p-0 text-xs font-medium"
+      class="flex z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large p-4 text-xs font-medium"
     >
-      Total Income
+      <p
+        class="text-primary-200 text-base font-medium"
+      >
+        Total Income
+      </p>
     </div>
     <div
-      class="relative w-full flex-auto place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased flex flex-row items-center gap-5 p-0 pt-[21px] font-extrabold"
+      class="relative w-full flex-auto place-content-inherit align-items-inherit h-auto break-words text-left subpixel-antialiased flex flex-row items-center gap-5 overflow-y-hidden p-4"
     >
       <span
-        class="text-base"
+        class="text-primary-200 text-[2em] font-extrabold"
       >
         $
         5,000
@@ -44,9 +48,13 @@ exports[`AnalyticsCard component renders with correct data 1`] = `
       </div>
     </div>
     <div
-      class="h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large p-0 pb-[19px] pt-5 text-[10px] font-light text-transparentBlack"
+      class="h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-none p-4"
     >
-      Last 30 days income
+      <p
+        class="text-primary-200 text-2xs font-light text-transparentBlack"
+      >
+        Last 30 days income
+      </p>
     </div>
   </div>
 </div>

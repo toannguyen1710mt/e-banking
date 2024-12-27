@@ -10,8 +10,13 @@ import { TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { BalanceStatistics, SpendingStatistics } from '@/components/Charts';
-import { AnalyticsCard, Button, MenuDropdown, Text } from '@/components/common';
-import { ChevronDownIcon } from '@/components/icons';
+import {
+  AnalyticsCard,
+  Button,
+  MenuDropdown,
+  Text,
+  ChevronDownIcon,
+} from '@/components';
 import { TransactionHistory } from '@/components/ContainerHome/TransactionHistory';
 
 export const MainContent = () => (
