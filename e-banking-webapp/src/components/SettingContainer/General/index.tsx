@@ -1,11 +1,15 @@
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import { Text } from '@/components/common';
 import { ProfileForm } from './ProfileForm';
 
-export const General = () => (
+interface GeneralProps {
+  user: IUser;
+}
+
+export const General = ({ user }: GeneralProps) => (
   <>
     <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8'>
       <Text
@@ -26,7 +30,7 @@ export const General = () => (
     </div>
 
     <div className='mt-5 pl-8'>
-      <ProfileForm />
+      <ProfileForm userProfile={user} />
     </div>
   </>
 );

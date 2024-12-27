@@ -10,6 +10,7 @@ export interface IUserCredentials {
   country: string;
   avatar?: string;
   postal: string;
+  fullName?: string;
 }
 
 export type TSignUpPayload = {
@@ -28,9 +29,8 @@ export type AuthResponse = {
   user: IUserCredentials;
 };
 
-export type TUpdateInfo = Pick<
-  IUserCredentials,
-  'phone' | 'country' | 'avatar' | 'postal'
+export type TUpdateInfo = Partial<
+  Pick<IUserCredentials, 'phone' | 'country' | 'avatar' | 'postal'>
 >;
 
 export type TChangePasswordFormData = {

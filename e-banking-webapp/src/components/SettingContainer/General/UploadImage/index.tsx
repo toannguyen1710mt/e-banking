@@ -18,15 +18,14 @@ export interface IUploadImageProps {
   width?: string;
   alt: string;
   src?: string;
-  name: string;
+  name?: string;
   onChange: (url: string) => void;
-  onRemove?: (name: string) => void;
+  onRemove?: () => void;
 }
 
 export const UploadImage = ({
   alt,
   src,
-  name,
   onChange,
   onRemove,
 }: IUploadImageProps) => {
@@ -39,7 +38,7 @@ export const UploadImage = ({
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleRemoveImage = () => {
-    onRemove?.(name);
+    onRemove?.();
     setPreviewImage('');
   };
 
@@ -95,7 +94,11 @@ export const UploadImage = ({
           {uploading ? <ImageIcon /> : <CameraIcon />}
         </button>
       ) : (
-        <Avatar alt={alt} className='mr-[27px] h-[112px] w-[112px]' src={src} />
+        <Avatar
+          alt={alt}
+          className='mr-[27px] h-[112px] w-[112px]'
+          src={previewImage}
+        />
       )}
 
       <label>
@@ -120,9 +123,11 @@ export const UploadImage = ({
         </Button>
       </label>
 
-      <button className='text-primary-200' onClick={handleRemoveImage}>
-        <TrashIcon />
-      </button>
+      {previewImage && (
+        <button className='text-primary-200' onClick={handleRemoveImage}>
+          <TrashIcon />
+        </button>
+      )}
     </div>
   );
 };
