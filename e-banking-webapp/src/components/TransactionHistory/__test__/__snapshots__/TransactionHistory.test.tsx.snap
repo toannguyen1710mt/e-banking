@@ -15,7 +15,9 @@ exports[`TransactionHistory component should match snapshot 1`] = `
           <p
             class="text-primary-200 text-sm font-semibold !text-navyBlue"
           >
-            Transaction History (24)
+            Transaction History (
+            24
+            )
           </p>
           <p
             class="text-primary-200 text-xs font-normal !text-neutralGray"
@@ -44,7 +46,9 @@ exports[`TransactionHistory component should match snapshot 1`] = `
         <p
           class="text-primary-200 text-sm font-semibold !text-navyBlue"
         >
-          Transaction History (24)
+          Transaction History (
+          24
+          )
         </p>
         <p
           class="text-primary-200 text-xs font-normal !text-neutralGray"

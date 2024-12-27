@@ -19,5 +19,7 @@ export default meta;
 type Story = StoryObj<typeof TransactionHistory>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    totalTransaction: 24,
+  },
 };
