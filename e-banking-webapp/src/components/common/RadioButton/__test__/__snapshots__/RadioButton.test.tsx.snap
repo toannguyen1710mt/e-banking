@@ -18,7 +18,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
           role="presentation"
         >
           <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none gap-[13px] m-0"
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
           >
             <input
               aria-describedby=":r7: react-aria-:r3:"
@@ -42,7 +42,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
               class="flex flex-col ml-1 ms-2"
             >
               <span
-                class="relative select-none transition-colors motion-reduce:transition-none text-2xs text-black"
+                class="relative select-none transition-colors motion-reduce:transition-none text-xs text-black"
                 id=":r6:"
               >
                 Main Wallet
@@ -67,7 +67,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
         role="presentation"
       >
         <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 select-none gap-[13px] m-0"
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
         >
           <input
             aria-describedby=":r7: react-aria-:r3:"
@@ -91,7 +91,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
             class="flex flex-col ml-1 ms-2"
           >
             <span
-              class="relative select-none transition-colors motion-reduce:transition-none text-2xs text-black"
+              class="relative select-none transition-colors motion-reduce:transition-none text-xs text-black"
               id=":r6:"
             >
               Main Wallet

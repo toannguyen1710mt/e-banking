@@ -9,14 +9,14 @@ interface RadioButtonProps extends RadioProps {
 
 export const RadioButton = ({ children, ...props }: RadioButtonProps) => (
   <RadioNextUI
-    {...props}
     classNames={{
-      base: 'gap-[13px] m-0',
+      base: 'gap-[5px] m-0 p-0 leading-[26px]',
       wrapper:
         'group-data-[selected=true]:border-primary-200 w-[14px] h-[14px]',
-      label: 'text-2xs text-black',
+      label: 'text-xs text-black',
       control: 'bg-primary-200 w-[7px] h-[7px]',
     }}
+    {...props}
   >
     {children}
   </RadioNextUI>

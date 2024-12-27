@@ -1,6 +1,9 @@
 'use client';
 
-import { Card, CardBody, CardHeader, cn, Divider } from '@nextui-org/react';
+import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
+
+// Constants
+import { MODAL_STYLES_ADD_CREDIT_CARD } from '@/constants';
 
 // Interfaces
 import { TEXT_SIZE } from '@/interfaces';
@@ -16,6 +19,7 @@ type VariantsCard = 'main' | 'saving' | 'checking';
 
 interface CreditCardProps {
   variant?: VariantsCard;
+  isModal?: boolean;
   expireDate: string;
   cardNumber: string;
   holderName: string;
@@ -30,48 +34,63 @@ const VARIANT_BACKGROUND: Record<VariantsCard, string> = {
 
 export const CreditCard = ({
   variant = 'main',
+  isModal = false,
   expireDate,
   cardNumber,
   holderName,
   bankName,
 }: CreditCardProps) => {
+  const {
+    cardMaxWidth,
+    cardHeaderGap,
+    headerContentGap,
+    payPassIcon,
+    cardBody,
+    chipSize,
+    worldTextSize,
+    cardNumberText,
+    detailsGap,
+    expireText,
+    holderNameText,
+    mastercardIconSize,
+  } = MODAL_STYLES_ADD_CREDIT_CARD[isModal.toString() as 'true' | 'false'];
+  const textSize = isModal ? TEXT_SIZE['2XS'] : TEXT_SIZE.BASE;
+
   return (
     <Card
-      className={cn(
-        'w-full min-w-[290px] rounded-[6px] bg-cover bg-no-repeat',
-        VARIANT_BACKGROUND[variant],
-      )}
+      className={`w-full rounded-[6px] bg-cover bg-no-repeat ${cardMaxWidth} ${VARIANT_BACKGROUND[variant]}`}
     >
-      <CardHeader className='flex justify-between gap-2 pb-0'>
-        <div className='flex items-center gap-3'>
-          <Text className='font-extrabold text-white'>E-Banking</Text>
+      <CardHeader className={`flex justify-between pb-0 ${cardHeaderGap}`}>
+        <div className={`flex items-center ${headerContentGap}`}>
+          <Text size={textSize} className='font-extrabold text-white'>
+            E-Banking
+          </Text>
           <Divider
             orientation='vertical'
             className='h-[20px] w-[1px] bg-secondary-400'
           />
-          <Text className='text-xs font-normal text-secondary-400'>
+          <Text size={textSize} className='font-normal text-secondary-400'>
             {bankName}
           </Text>
         </div>
-        <PayPassIcon />
+        <PayPassIcon customClass={payPassIcon} />
       </CardHeader>
-      <CardBody className='mb-[18px] mt-[14px] py-0'>
+      <CardBody className={`py-0 ${cardBody}`}>
         <div className='flex items-end justify-between'>
-          <ChipIcon customClass='mb-[4px]' />
+          <ChipIcon customClass={`mb-[4px] ${chipSize}`} />
           <Text
             as='span'
-            className='mr-[14px] text-right text-2xs text-secondary-400'
+            className={`mr-[14px] text-right text-secondary-400 ${worldTextSize}`}
           >
             world
           </Text>
         </div>
         <Text
-          size={TEXT_SIZE['SM']}
-          className='ml-4 mt-1 font-extrabold tracking-[3px] text-secondary-400'
+          className={`font-extrabold tracking-[3px] text-secondary-400 ${cardNumberText}`}
         >
           {formatCardNumber(cardNumber)}
         </Text>
-        <div className='mt-2 flex justify-between gap-5'>
+        <div className={`flex justify-between ${detailsGap}`}>
           <div className='flex-1'>
             <div className='flex items-center justify-end gap-1'>
               <Text
@@ -82,19 +101,18 @@ export const CreditCard = ({
               </Text>
               <Text
                 as='span'
-                className='text-right text-2xs font-extrabold text-secondary-400'
+                className={`text-right font-extrabold text-secondary-400 ${expireText}`}
               >
                 {expireDate}
               </Text>
             </div>
             <Text
-              size={TEXT_SIZE['XS']}
-              className='mt-[2px] max-w-[185px] overflow-hidden text-ellipsis whitespace-nowrap text-left uppercase tracking-[1px] text-secondary-400'
+              className={`mt-[2px] overflow-hidden text-ellipsis whitespace-nowrap text-left uppercase tracking-[1px] text-secondary-400 ${holderNameText}`}
             >
               {holderName}
             </Text>
           </div>
-          <MastercardIcon />
+          <MastercardIcon customClass={mastercardIconSize} />
         </div>
       </CardBody>
     </Card>
