@@ -60,10 +60,7 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='fullName'
           render={({ field, fieldState: { error } }) => (
             <Input
-              classNames={{
-                inputWrapper: 'px-2',
-                input: 'm-0',
-              }}
+              size='xs'
               labelPlacement='outside'
               label='Full Name'
               aria-label='Full Name'
@@ -80,10 +77,7 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='cardNumber'
           render={({ field, fieldState: { error } }) => (
             <Input
-              classNames={{
-                inputWrapper: 'px-2',
-                input: 'm-0',
-              }}
+              size='xs'
               labelPlacement='outside'
               label='Credit Card Number'
               aria-label='cardNumber'
@@ -121,10 +115,7 @@ export const AddCreditCard = <T extends z.ZodType>({
             name='ccv'
             render={({ field, fieldState: { error } }) => (
               <Input
-                classNames={{
-                  inputWrapper: 'px-2',
-                  input: 'm-0',
-                }}
+                size='xs'
                 labelPlacement='outside'
                 label='CCV'
                 aria-label='ccv'
