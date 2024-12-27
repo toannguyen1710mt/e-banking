@@ -7,7 +7,7 @@ import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 import { formatNumberWithCommas } from '@/utils';
 
 // Components
-import { ArrowDownIcon, ArrowUpIcon, Chip } from '@/components';
+import { ArrowDownIcon, ArrowUpIcon, Chip, Text } from '@/components';
 
 export interface IAnalyticsCardItem {
   title: string;
@@ -27,10 +27,14 @@ export const AnalyticsCard = ({
   const ArrowComponent = isPositive ? <ArrowUpIcon /> : <ArrowDownIcon />;
 
   return (
-    <Card key={title} className='w-full min-w-[192px] pl-4 pt-[22px]'>
-      <CardHeader className='p-0 text-xs font-medium'>{title}</CardHeader>
-      <CardBody className='flex flex-row items-center gap-5 p-0 pt-[21px] font-extrabold'>
-        <span className='text-base'>${formatNumberWithCommas(amount)}</span>
+    <Card key={title} className='w-full gap-4 rounded-md p-0'>
+      <CardHeader className='p-4 text-xs font-medium'>
+        <Text>{title}</Text>
+      </CardHeader>
+      <CardBody className='flex flex-row items-center gap-5 overflow-y-hidden p-4'>
+        <Text as='span' className='text-[2em] font-extrabold'>
+          ${formatNumberWithCommas(amount)}
+        </Text>
         <Chip
           startContent={ArrowComponent}
           color={isPositive ? 'success' : 'danger'}
@@ -42,8 +46,10 @@ export const AnalyticsCard = ({
           {percentageChange}%
         </Chip>
       </CardBody>
-      <CardFooter className='p-0 pb-[19px] pt-5 text-[10px] font-light text-transparentBlack'>
-        {subtitle}
+      <CardFooter className='rounded-none p-4'>
+        <Text className='text-2xs font-light text-transparentBlack'>
+          {subtitle}
+        </Text>
       </CardFooter>
     </Card>
   );
