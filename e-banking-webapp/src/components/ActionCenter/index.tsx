@@ -1,3 +1,5 @@
+'use client';
+
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
 import { Text } from '../common';
 import { MetricsCard } from '../MetricsCard';
