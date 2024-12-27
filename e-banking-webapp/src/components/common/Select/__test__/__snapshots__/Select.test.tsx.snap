@@ -50,7 +50,7 @@ exports[`Select component should match snapshot for Select component 1`] = `
           data-slot="innerWrapper"
         >
           <span
-            class="w-full text-start truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
+            class="w-full text-left rtl:text-right truncate group-data-[has-value=true]:text-default-foreground text-primary-200 text-xs group-data-[invalid=true]:!text-warning font-medium"
             data-slot="value"
             id="react-aria-:r7:"
           >
