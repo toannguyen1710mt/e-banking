@@ -17,7 +17,7 @@ import {
   Text,
   ChevronDownIcon,
 } from '@/components';
-import { TransactionHistory } from '@/components/ContainerHome/TransactionHistory';
+import { TransactionHistoryHome } from '@/components/ContainerHome/TransactionHistoryHome';
 
 export const MainContent = () => (
   <div className='space-y-4'>
@@ -66,6 +66,6 @@ export const MainContent = () => (
     </div>
 
     {/* Transaction History */}
-    <TransactionHistory />
+    <TransactionHistoryHome />
   </div>
 );
