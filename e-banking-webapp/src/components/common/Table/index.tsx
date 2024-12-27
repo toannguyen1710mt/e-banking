@@ -40,7 +40,7 @@ export const Table = <T,>({
   ...tableProps
 }: TableProps<T>) => {
   return (
-    <CustomTable {...{ tableProps }}>
+    <CustomTable {...{ ...tableProps, ref: undefined }}>
       <TableHeader>
         {columns.map((column) => (
           <TableColumn key={column.key}>{column.title}</TableColumn>
