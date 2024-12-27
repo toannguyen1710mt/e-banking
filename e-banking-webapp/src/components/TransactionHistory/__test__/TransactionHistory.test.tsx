@@ -6,7 +6,12 @@ import { TransactionHistory } from '@/components';
 
 describe('TransactionHistory component', () => {
   test('should match snapshot', () => {
-    const container = render(<TransactionHistory totalTransaction={24} />);
+    const container = render(
+      <TransactionHistory
+        totalTransaction={24}
+        table={<div>Transaction Table</div>}
+      />,
+    );
 
     expect(container).toMatchSnapshot();
   });

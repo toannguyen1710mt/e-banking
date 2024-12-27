@@ -21,5 +21,6 @@ type Story = StoryObj<typeof TransactionHistory>;
 export const Default: Story = {
   args: {
     totalTransaction: 24,
+    table: <div>Transaction Table</div>,
   },
 };

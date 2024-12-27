@@ -2,6 +2,7 @@
 
 // Libs
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { ReactNode } from 'react';
 
 // Interfaces
 import { TEXT_SIZE } from '@/interfaces';
@@ -11,10 +12,12 @@ import { Text } from '@/components';
 
 interface ITransactionHistory {
   totalTransaction: number;
+  table: ReactNode;
 }
 
 export const TransactionHistory = ({
   totalTransaction,
+  table,
 }: ITransactionHistory) => {
   return (
     <Card className='gap-5 rounded-md px-[17px] py-[15px]'>
@@ -32,7 +35,7 @@ export const TransactionHistory = ({
 
       <CardBody className='flex flex-col p-0'>
         {/* TODO:  This will be implemented when the TransactionTable component is available.*/}
-        <div>Transaction Table</div>
+        {table}
       </CardBody>
     </Card>
   );
