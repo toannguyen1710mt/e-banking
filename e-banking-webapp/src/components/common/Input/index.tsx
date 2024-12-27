@@ -45,6 +45,9 @@ export const Input = extendVariants(InputNextUI, {
         inputWrapper: 'px-2',
         input: 'm-0',
       },
+      sm: {
+        input: 'w-full h-6 pt-[6px] pb-[9px] mx-[6px]',
+      },
       md: {
         input: 'w-full h-10 py-2.5 mx-2',
       },
