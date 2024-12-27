@@ -85,7 +85,7 @@ export const AddCreditCard = <T extends z.ZodType>({
                 input: 'm-0',
               }}
               labelPlacement='outside'
-              label='Credict Card Number'
+              label='Credit Card Number'
               aria-label='cardNumber'
               placeholder='Card Number'
               type='text'
