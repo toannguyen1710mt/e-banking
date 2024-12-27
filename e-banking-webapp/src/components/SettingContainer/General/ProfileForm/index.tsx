@@ -1,55 +1,32 @@
 'use client';
 
-import { Controller, useForm } from 'react-hook-form';
-import { useDisclosure } from '@nextui-org/react';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-
-// Schemas
-import { ProfileSchema } from '@/schemas';
-
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+
+// Actions
+import { updateUser } from '@/actions';
 
 // Components
-import { Input, EyeIcon, EyeSlashIcon, Text } from '@/components';
-import { UploadImage } from '../UploadImage';
+import { Input, Text } from '@/components';
+import { UploadImage } from '@/components/SettingContainer/General/UploadImage';
 
-type FormValues = z.infer<typeof ProfileSchema> & {
-  avatar: string;
-};
+interface ProfileFormProps {
+  userProfile: IUser;
+}
 
-export const ProfileForm = () => {
-  const { control, setValue } = useForm<FormValues>({
-    resolver: zodResolver(ProfileSchema),
-    defaultValues: {
-      user: {
-        username: 'Pheroxios Yehudi',
-        email: 'pheroxios@yehudi.com',
-        fullName: 'Pheroxios Yehudi',
-        password: '1234@Abc',
-      },
-      avatar: '',
-    },
-    mode: 'all',
-  });
+export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
+  const { username, email, phone, country, avatar } = userProfile;
 
-  const {
-    isOpen: passwordIsOpen,
-    onClose: closePassword,
-    onOpen: openPassword,
-  } = useDisclosure();
-
-  const handleChangeImage = (url: string) => {
-    setValue(`avatar`, url);
+  const handleChangeImage = async (url: string) => {
+    await updateUser(userProfile.id, { avatar: url });
   };
 
-  const handleRemoveImage = () => {
-    setValue('avatar', '');
+  const handleRemoveImage = async () => {
+    await updateUser(userProfile.id, { avatar: '' });
   };
 
   return (
-    <form className='flex flex-col pr-[87px]'>
+    <div className='flex flex-col pr-[87px]'>
       <div className='mb-10'>
         <Text
           variant={TEXT_VARIANT.DEFAULT}
@@ -59,132 +36,68 @@ export const ProfileForm = () => {
           Profile Picture
         </Text>
 
-        <Controller
-          control={control}
-          name='avatar'
-          render={({ field: { value, name }, fieldState: { error } }) => {
-            return (
-              <div className='flex flex-col'>
-                <UploadImage
-                  src={value}
-                  alt='Avatar'
-                  name={name}
-                  onChange={handleChangeImage}
-                  onRemove={handleRemoveImage}
-                />
-                {!!error?.message && (
-                  <p className='text-red-500 mt-2 text-xs'>{error.message}</p>
-                )}
-              </div>
-            );
-          }}
-        />
+        <div className='flex flex-col'>
+          <UploadImage
+            src={avatar}
+            alt='Avatar'
+            onChange={handleChangeImage}
+            onRemove={handleRemoveImage}
+          />
+        </div>
       </div>
 
       <div className='mb-14 flex max-w-[1024px] flex-col gap-8'>
         <div className='flex gap-[107px]'>
-          <Controller
-            control={control}
-            name='user.username'
-            render={({
-              field: { onChange, onBlur, value },
-              fieldState: { error },
-            }) => (
-              <Input
-                label='Username'
-                placeholder=' '
-                labelPlacement='outside'
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
-                classNames={{
-                  inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                  input: 'm-0 text-sm',
-                }}
-                value={String(value)}
-                onChange={onChange}
-                onBlur={onBlur}
-              />
-            )}
+          <Input
+            label='Username'
+            placeholder=' '
+            labelPlacement='outside'
+            classNames={{
+              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+              input: 'm-0 text-sm',
+            }}
+            value={username}
+            readOnly
           />
 
-          <Controller
-            control={control}
-            name='user.fullName'
-            render={({
-              field: { onChange, onBlur, value },
-              fieldState: { error },
-            }) => (
-              <Input
-                label='Full Name'
-                labelPlacement='outside'
-                placeholder=' '
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
-                classNames={{
-                  inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                  input: 'm-0 text-sm font-normal',
-                }}
-                value={value}
-                onChange={onChange}
-                onBlur={onBlur}
-              />
-            )}
+          <Input
+            label='Phone Number'
+            labelPlacement='outside'
+            placeholder=' '
+            classNames={{
+              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+              input: 'm-0 text-sm font-normal',
+            }}
+            value={phone}
+            readOnly
           />
         </div>
 
         <div className='flex gap-[107px]'>
-          <Controller
-            control={control}
-            name='user.email'
-            render={({
-              field: { onChange, onBlur, value },
-              fieldState: { error },
-            }) => (
-              <Input
-                label='Email Address'
-                labelPlacement='outside'
-                placeholder=' '
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
-                classNames={{
-                  inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                  input: 'm-0 text-sm',
-                }}
-                value={value}
-                onChange={onChange}
-                onBlur={onBlur}
-              />
-            )}
+          <Input
+            label='Email'
+            labelPlacement='outside'
+            placeholder=' '
+            classNames={{
+              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+              input: 'm-0 text-sm',
+            }}
+            value={email}
+            readOnly
           />
 
-          <Controller
-            control={control}
-            name='user.password'
-            render={({ field: { value } }) => (
-              <Input
-                label='Password'
-                labelPlacement='outside'
-                aria-label='password'
-                placeholder='Password'
-                value={value}
-                type={passwordIsOpen ? 'text' : 'password'}
-                classNames={{
-                  inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                  input: 'm-0 text-sm',
-                }}
-                readOnly
-                endContent={
-                  <button
-                    type='button'
-                    aria-label='show password button'
-                    className='text-primary-200'
-                    onClick={passwordIsOpen ? closePassword : openPassword}
-                  >
-                    {passwordIsOpen ? <EyeSlashIcon /> : <EyeIcon />}
-                  </button>
-                }
-              />
-            )}
+          <Input
+            label='Address'
+            labelPlacement='outside'
+            aria-label='address'
+            placeholder='Address'
+            value={country}
+            type='text'
+            classNames={{
+              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+              input: 'm-0 text-sm',
+            }}
+            readOnly
           />
         </div>
       </div>
@@ -204,54 +117,30 @@ export const ProfileForm = () => {
       </div>
 
       <div className='flex max-w-[1024px] gap-[108px]'>
-        <Controller
-          control={control}
-          name='user.email'
-          render={({
-            field: { onChange, onBlur, value },
-            fieldState: { error },
-          }) => (
-            <Input
-              label='Paypal'
-              labelPlacement='outside'
-              placeholder=' '
-              isInvalid={!!error?.message}
-              errorMessage={error?.message}
-              classNames={{
-                inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                input: 'm-0 text-sm font-normal',
-              }}
-              value={value}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-          )}
+        <Input
+          label='Paypal'
+          labelPlacement='outside'
+          placeholder=' '
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm font-normal',
+          }}
+          value={email}
+          readOnly
         />
 
-        <Controller
-          control={control}
-          name='user.email'
-          render={({
-            field: { onChange, onBlur, value },
-            fieldState: { error },
-          }) => (
-            <Input
-              label='Google Pay'
-              labelPlacement='outside'
-              placeholder=' '
-              isInvalid={!!error?.message}
-              errorMessage={error?.message}
-              classNames={{
-                inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-                input: 'm-0 text-sm font-normal',
-              }}
-              value={value}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-          )}
+        <Input
+          label='Google Pay'
+          labelPlacement='outside'
+          placeholder=' '
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm font-normal',
+          }}
+          value={email}
+          readOnly
         />
       </div>
-    </form>
+    </div>
   );
 };

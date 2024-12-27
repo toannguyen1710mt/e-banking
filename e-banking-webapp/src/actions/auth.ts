@@ -120,3 +120,15 @@ export const updateEmailSettings = async (
 
   return revalidateTag(TAGS.USERS);
 };
+
+export const getUser = async (id: number): Promise<IUser | undefined> => {
+  try {
+    const response = await httpClient.get(`${API_ENDPOINTS.USERS}/${id}`);
+
+    return response.data;
+  } catch (error) {
+    if (error instanceof AuthError) {
+      throw ERROR_MESSAGES.SIGN_UP_ERROR;
+    }
+  }
+};
