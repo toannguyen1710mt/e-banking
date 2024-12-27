@@ -94,7 +94,11 @@ export const UploadImage = ({
           {uploading ? <ImageIcon /> : <CameraIcon />}
         </button>
       ) : (
-        <Avatar alt={alt} className='mr-[27px] h-[112px] w-[112px]' src={src} />
+        <Avatar
+          alt={alt}
+          className='mr-[27px] h-[112px] w-[112px]'
+          src={previewImage}
+        />
       )}
 
       <label>
