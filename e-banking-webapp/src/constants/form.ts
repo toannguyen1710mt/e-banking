@@ -4,8 +4,10 @@ export const SIGNUP_FORM_DEFAULT_VALUES = {
     email: '',
     password: '',
     confirmPassword: '',
+  },
+  contact: {
     phone: '',
-    country: 'US',
+    country: 'United States',
     postal: '344',
   },
   card: {

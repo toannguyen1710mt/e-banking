@@ -32,7 +32,7 @@ export const ContactForm = () => {
 
         <Controller
           control={control}
-          name='user.phone'
+          name='contact.phone'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='phone'
@@ -48,7 +48,7 @@ export const ContactForm = () => {
 
         <Controller
           control={control}
-          name='user.country'
+          name='contact.country'
           render={({ field }) => (
             <Input
               aria-label='country'
@@ -61,7 +61,7 @@ export const ContactForm = () => {
 
         <Controller
           control={control}
-          name='user.postal'
+          name='contact.postal'
           render={({ field, fieldState: { error } }) => (
             <Input
               aria-label='postalAddress'
@@ -78,7 +78,7 @@ export const ContactForm = () => {
       </div>
 
       <Button
-        isDisabled={!isStepValid}
+        isDisabled={!isStepValid()}
         onClick={nextStep}
         type='button'
         color='primary'

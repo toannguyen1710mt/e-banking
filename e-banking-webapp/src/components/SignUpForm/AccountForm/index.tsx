@@ -138,7 +138,7 @@ export const AccountForm = () => {
       </div>
 
       <Button
-        isDisabled={!isStepValid}
+        isDisabled={!isStepValid()}
         onClick={nextStep}
         type='button'
         color='primary'
