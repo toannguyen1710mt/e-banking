@@ -30,3 +30,4 @@ export * from './Skeletons';
 export * from './MyCalender';
 export * from './ContainerAnalytics';
 export * from './AddCreditCardModal';
+export * from './InformationCard';

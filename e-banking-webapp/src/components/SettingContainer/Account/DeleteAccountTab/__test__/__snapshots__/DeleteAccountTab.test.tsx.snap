@@ -46,7 +46,7 @@ exports[`DeleteAccountTab component should match snapshot for DeleteAccountTab 1
           style="cursor: text;"
         >
           <label
-            class="absolute pointer-events-none origin-top-left flex-shrink-0 rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100 font-normal text-xs !text-black opacity-100"
+            class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100 font-normal text-xs !text-black opacity-100"
             data-slot="label"
             for="react-aria-:r0:"
             id="react-aria-:r1:"
@@ -64,7 +64,6 @@ exports[`DeleteAccountTab component should match snapshot for DeleteAccountTab 1
               data-slot="input"
               id="react-aria-:r0:"
               placeholder=" "
-              title=""
               type="Password"
               value=""
             />
