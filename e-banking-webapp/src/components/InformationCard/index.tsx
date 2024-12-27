@@ -39,6 +39,7 @@ export const InformationCard = () => {
     <>
       <Card className='w-full'>
         <CardBody className='flex flex-row justify-between gap-[58px] p-0'>
+          {/* TODO:  The props of the MasterCard component will be fetched from the API.*/}
           <MasterCard
             series={MASTERCARD_CHART_MOCK}
             totalBalance={createExpenseAnalysisOptions('$540,000')}
