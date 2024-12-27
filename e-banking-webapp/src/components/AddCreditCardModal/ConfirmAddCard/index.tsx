@@ -1,7 +1,7 @@
 'use client';
 
 import { useTransition } from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import { Controller } from 'react-hook-form';
 import { RadioGroup } from '@nextui-org/react';
 import { z } from 'zod';
 
@@ -10,6 +10,9 @@ import { ACCOUNT_TYPES } from '@/constants';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+
+// Context
+import { useWizardFormContext } from '@/context';
 
 // Mocks data
 import { CARD_CREDIT_DATA } from '@/mocks';
@@ -20,13 +23,18 @@ import { CreditCard } from '@/components/CreditCard';
 import { CreditCardIcon } from '@/components/icons';
 
 interface IConfirmAddCard<T extends z.ZodType> {
+  schema: T;
   submitHandler: (data: z.infer<T>) => void;
 }
 
 export const ConfirmAddCard = <T extends z.ZodType>({
   submitHandler,
 }: IConfirmAddCard<T>) => {
-  const { control, handleSubmit } = useForm();
+  const {
+    form: { control, handleSubmit },
+    isStepValid,
+    nextStep,
+  } = useWizardFormContext();
 
   const [isPending, startTransition] = useTransition();
 
@@ -36,6 +44,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
     startTransition(async () => {
       const handler = handleSubmit(submitHandler);
       await handler(e);
+      nextStep(e);
     });
   };
 
@@ -117,6 +126,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
           type='button'
           color='primary'
           className='mx-auto mt-[30px] max-w-[320px]'
+          isDisabled={!isStepValid}
           isLoading={isPending}
           onClick={onSubmit}
         >

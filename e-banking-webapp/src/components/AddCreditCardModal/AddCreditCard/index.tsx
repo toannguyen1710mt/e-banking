@@ -1,42 +1,23 @@
 'use client';
 
 // Libs
-import { useTransition } from 'react';
 import { Controller } from 'react-hook-form';
-import { z } from 'zod';
 
 // Context
 import { useWizardFormContext } from '@/context';
 
-// Component
-import { Button, Input, Text, CreditCardIcon } from '@/components';
+// Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
-interface IAddCreditCard<T extends z.ZodType> {
-  schema: T;
-  submitHandler: (data: z.infer<T>) => void;
-}
+// Component
+import { Button, Input, Text, CreditCardIcon } from '@/components';
 
-export const AddCreditCard = <T extends z.ZodType>({
-  submitHandler,
-}: IAddCreditCard<T>) => {
+export const AddCreditCard = () => {
   const {
-    form: { control, handleSubmit },
-    isStepValid,
+    form: { control },
     nextStep,
+    isStepValid,
   } = useWizardFormContext();
-
-  const [isPending, startTransition] = useTransition();
-
-  const onSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    startTransition(async () => {
-      const handler = handleSubmit(submitHandler);
-      await handler(e);
-      nextStep(e);
-    });
-  };
 
   return (
     <>
@@ -60,7 +41,6 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='fullName'
           render={({ field, fieldState: { error } }) => (
             <Input
-              size='xs'
               labelPlacement='outside'
               label='Full Name'
               aria-label='Full Name'
@@ -77,7 +57,6 @@ export const AddCreditCard = <T extends z.ZodType>({
           name='cardNumber'
           render={({ field, fieldState: { error } }) => (
             <Input
-              size='xs'
               labelPlacement='outside'
               label='Credit Card Number'
               aria-label='cardNumber'
@@ -115,7 +94,6 @@ export const AddCreditCard = <T extends z.ZodType>({
             name='ccv'
             render={({ field, fieldState: { error } }) => (
               <Input
-                size='xs'
                 labelPlacement='outside'
                 label='CCV'
                 aria-label='ccv'
@@ -132,11 +110,10 @@ export const AddCreditCard = <T extends z.ZodType>({
       </div>
 
       <Button
-        isDisabled={!isStepValid}
         type='button'
         color='primary'
-        isLoading={isPending}
-        onClick={onSubmit}
+        isDisabled={!isStepValid}
+        onClick={nextStep}
       >
         Add Card
       </Button>
