@@ -34,3 +34,4 @@ export * from './InformationCard';
 export * from './AddCreditCardModal/AddCreditCard';
 export * from './AnalyticsCard';
 export * from './DailyLimit';
+export * from './TransactionHistory';

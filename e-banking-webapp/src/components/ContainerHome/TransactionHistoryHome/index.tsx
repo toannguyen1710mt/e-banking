@@ -15,7 +15,7 @@ import { TransactionTable } from '@/components/ContainerHome/TransactionTable';
 // Services
 import { getTransactions } from '@/services';
 
-export const TransactionHistory = async () => {
+export const TransactionHistoryHome = async () => {
   const transactions = await getTransactions({
     sort: 'createdAt',
     order: 'desc',
