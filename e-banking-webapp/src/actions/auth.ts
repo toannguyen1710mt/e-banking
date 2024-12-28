@@ -36,19 +36,13 @@ export const authenticateUser = async (formData: TSignInFormData) => {
   }
 };
 
-export const handleSignUp = async (signUpData: TSignUpPayload) => {
-  try {
-    const response = await httpClient.post<AuthResponse>(
-      API_ENDPOINTS.SIGN_UP,
-      signUpData,
-    );
+export const signUp = async (signUpData: TSignUpPayload) => {
+  const response = await httpClient.post<AuthResponse>(
+    API_ENDPOINTS.SIGN_UP,
+    signUpData,
+  );
 
-    return response.data;
-  } catch (error) {
-    if (error instanceof AuthError) {
-      throw ERROR_MESSAGES.SIGN_UP_ERROR;
-    }
-  }
+  return response;
 };
 
 export const signOut = async () => await nextAuthSignOut({ redirect: false });

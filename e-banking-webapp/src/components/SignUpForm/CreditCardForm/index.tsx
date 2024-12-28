@@ -7,11 +7,15 @@ import { useTransition } from 'react';
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+import { SignUpSchema } from '@/constants/rules';
+
 // Styles
 import '@/styles/input.css';
 
 // Context
-import { useWizardFormContext } from '@/context';
+import { useToastContext, useWizardFormContext } from '@/context';
 
 // Components
 import { Button, Input, Text } from '@/components';
@@ -26,10 +30,13 @@ export const CreditCardForm = <T extends z.ZodType>({
   submitHandler,
 }: ICreditCard<T>) => {
   const {
-    form: { control, handleSubmit },
+    form: { control, handleSubmit, setError },
     isStepValid,
     nextStep,
-  } = useWizardFormContext();
+    goToStep,
+  } = useWizardFormContext<typeof SignUpSchema>();
+
+  const { showToast } = useToastContext();
 
   const [isPending, startTransition] = useTransition();
 
@@ -38,8 +45,19 @@ export const CreditCardForm = <T extends z.ZodType>({
 
     startTransition(async () => {
       const handler = handleSubmit(submitHandler);
-      await handler(e);
-      nextStep(e);
+      try {
+        await handler(e);
+        nextStep(e);
+      } catch (error) {
+        setError('user.email', {
+          type: 'validate',
+          message: String(error),
+        });
+
+        showToast(ERROR_MESSAGES.SIGN_UP_FAILED, 'error', 'top-center');
+
+        goToStep(0);
+      }
     });
   };
 

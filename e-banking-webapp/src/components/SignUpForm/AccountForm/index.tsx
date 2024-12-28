@@ -3,6 +3,9 @@
 import { useDisclosure } from '@nextui-org/react';
 import { Controller } from 'react-hook-form';
 
+// Constants
+import { SignUpSchema } from '@/constants/rules';
+
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
@@ -21,10 +24,13 @@ import { Button, Input, Text } from '@/components';
 
 export const AccountForm = () => {
   const {
-    form: { control },
+    form: {
+      control,
+      formState: { errors },
+    },
     nextStep,
     isStepValid,
-  } = useWizardFormContext();
+  } = useWizardFormContext<typeof SignUpSchema>();
 
   const {
     isOpen: passwordIsOpen,
@@ -56,7 +62,9 @@ export const AccountForm = () => {
             <Input
               aria-label='username'
               placeholder='Username'
-              isInvalid={!!error?.message}
+              isInvalid={
+                !!error?.message || errors.user?.email?.type === 'validate'
+              }
               errorMessage={error?.message}
               startContent={<UserIcon />}
               {...field}

@@ -15,7 +15,7 @@ import { SignUpSchema } from '@/constants/rules';
 import { WizardFormContextProvider } from '@/context';
 
 // Actions
-import { addAccount, addCard, handleSignUp, updateUser } from '@/actions/auth';
+import { addAccount, addCard, signUp, updateUser } from '@/actions/auth';
 
 // Interfaces
 import { IAccountPayload, ICardPayload } from '@/interfaces';
@@ -41,11 +41,15 @@ export const SignUpForm = () => {
   const submitHandler = async (data: FormValues) => {
     const { email, password, username, ...rest } = data.user;
 
-    const response = await handleSignUp({
+    const response = await signUp({
       email,
       password,
       username,
     });
+
+    if (response.status === 400) {
+      throw response.message;
+    }
 
     if (response?.user) {
       const payloadAccount: IAccountPayload = {
