@@ -7,7 +7,7 @@ import {
 } from '@/constants';
 
 // Interfaces
-import { ITransaction, TEXT_SIZE } from '@/interfaces';
+import { ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
 
 // Components
 import { Table, Text } from '@/components';
@@ -17,19 +17,19 @@ import { formatNumberWithCommas } from '@/utils';
 
 interface ITransferTableProps {
   transactions: ITransaction[];
-  transferType: 'received' | 'sent';
+  transferType: TransferType;
 }
 
 export const TransferTable = ({
   transactions,
   transferType,
 }: ITransferTableProps) => {
-  const isTransferReceived = transferType === 'received';
+  const isTransferReceived = transferType === TransferType.RECEIVED;
 
   const transferTableTopContent = () => (
     <div className='flex flex-col gap-2'>
       <Text as='h4' size={TEXT_SIZE.SM}>
-        Transfer Requqest {isTransferReceived ? 'Received' : 'Sent'}
+        Transfer Request {isTransferReceived ? 'Received' : 'Sent'}
       </Text>
       <Text size={TEXT_SIZE.XS} className='font-normal'>
         Manage your transfer by approving, decline request

@@ -26,3 +26,8 @@ export type InternalTransferForm = Pick<
   ITransaction,
   'fromAccountType' | 'toAccountType' | 'amount' | 'recipientAccount'
 >;
+
+export enum TransferType {
+  RECEIVED = 'received',
+  SENT = 'sent',
+}
