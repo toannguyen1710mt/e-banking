@@ -14,15 +14,20 @@ export const ActionCenter = () => {
     TransferType.RECEIVED | TransferType.SENT
   >(TransferType.RECEIVED);
 
+  const handleSelectReceived = () => {
+    setSelectedTransferType(TransferType.RECEIVED);
+  };
+
+  const handleSelectSent = () => {
+    setSelectedTransferType(TransferType.SENT);
+  };
+
   return (
     <Card className='gap-6 py-5 pl-5 pr-[38px]'>
       <CardHeader className='flex-col items-start gap-6 p-0'>
         <Text as='span'>Action Center</Text>
         <div className='ml-[50px] flex gap-6'>
-          <div
-            className='cursor-pointer'
-            onClick={() => setSelectedTransferType(TransferType.RECEIVED)}
-          >
+          <div className='cursor-pointer' onClick={handleSelectReceived}>
             <MetricsCard
               // TODO: Props totalTransfers, percentageChange will get data from API
               title='Transfer Received'
@@ -32,10 +37,7 @@ export const ActionCenter = () => {
               isSelected={selectedTransferType === TransferType.RECEIVED}
             />
           </div>
-          <div
-            className='cursor-pointer'
-            onClick={() => setSelectedTransferType(TransferType.SENT)}
-          >
+          <div className='cursor-pointer' onClick={handleSelectSent}>
             <MetricsCard
               // TODO: Props totalTransfers, percentageChange will get data from API
               title='Transfer Sent'
