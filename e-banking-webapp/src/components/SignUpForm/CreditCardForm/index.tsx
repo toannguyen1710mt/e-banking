@@ -120,7 +120,6 @@ export const CreditCardForm = <T extends z.ZodType>({
                 maxLength={3}
                 startContent={<WalletIcon />}
                 type='string'
-                maxLength={3}
                 isInvalid={!!error?.message}
                 errorMessage={error?.message}
                 {...field}
