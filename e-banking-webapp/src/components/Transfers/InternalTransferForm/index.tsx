@@ -40,8 +40,8 @@ export const InternalTransferForm = ({
       formState: { errors },
       setValue,
     },
-    nextStep,
-    isStepValid,
+    onNextStep,
+    validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
 
   const hiddenFields: FormValues[] = [
@@ -314,8 +314,8 @@ export const InternalTransferForm = ({
         type='submit'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        isDisabled={!isStepValid}
-        onClick={nextStep}
+        isDisabled={!validateStep()}
+        onClick={onNextStep}
       >
         Transfer Funds
       </Button>

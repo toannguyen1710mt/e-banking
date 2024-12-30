@@ -150,17 +150,6 @@ const WizardFormFooter = React.forwardRef<
 });
 WizardFormFooter.displayName = 'WizardForm.Footer';
 
-/**
- * @name createStepSchema
- * @description Create a schema for a wizard form
- * @param steps
- */
-export function createStepSchema<T extends Record<string, z.ZodType>>(
-  steps: T,
-) {
-  return z.object(steps);
-}
-
 export {
   WizardFormRoot as Root,
   WizardFormHeader as Header,
