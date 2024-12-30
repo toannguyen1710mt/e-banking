@@ -42,23 +42,21 @@ export const TransferTable = ({
     : TRANSFER_SENT_TABLE_COLUMNS;
 
   const columns = transferTableColumns.map((column) => {
-    switch (column.key) {
-      case 'status':
-        column.renderCell = (item) => (
-          <>{item.statusTransaction ? 'Approved' : 'Declined'}</>
-        );
-        break;
-      case 'amount':
-        column.renderCell = (item) => (
-          <>
-            {item.currencyUnit ?? '$'}
-            {formatNumberWithCommas(item.amount)}
-          </>
-        );
-        break;
-      default:
-        break;
+    if (column.key === 'status') {
+      column.renderCell = (item) => (
+        <>{item.statusTransaction ? 'Approved' : 'Declined'}</>
+      );
     }
+
+    if (column.key === 'amount') {
+      column.renderCell = (item) => (
+        <>
+          {item.currencyUnit ?? '$'}
+          {formatNumberWithCommas(item.amount)}
+        </>
+      );
+    }
+
     return column;
   });
 

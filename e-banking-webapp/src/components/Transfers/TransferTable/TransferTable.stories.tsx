@@ -1,6 +1,9 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Interfaces
+import { TransferType } from '@/interfaces';
+
 // Mocks
 import { MOCK_TRANSACTIONS } from '@/mocks';
 
@@ -13,6 +16,16 @@ const meta = {
   component: TransferTable,
   parameters: {
     layout: 'centered',
+  },
+  argTypes: {
+    transferType: {
+      control: 'radio',
+      options: [TransferType.RECEIVED, TransferType.SENT],
+      mapping: {
+        [TransferType.RECEIVED]: TransferType.RECEIVED,
+        [TransferType.SENT]: TransferType.SENT,
+      },
+    },
   },
 } satisfies Meta<typeof TransferTable>;
 
