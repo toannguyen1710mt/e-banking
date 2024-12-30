@@ -34,7 +34,7 @@ export const TransactionHistoryHome = async () => {
         <Suspense
           fallback={<SkeletonTable columns={TRANSACTION_TABLE_COLUMNS} />}
         >
-          <TransactionTable transactions={transactions} />
+          <TransactionTable transactions={transactions.data} />
         </Suspense>
       </CardBody>
     </Card>

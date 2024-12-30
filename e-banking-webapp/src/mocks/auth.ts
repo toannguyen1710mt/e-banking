@@ -1,6 +1,13 @@
-export const MOCK_DATA_USER = {
+// Libs
+import { Session } from 'next-auth';
+
+// Interfaces
+import { IUser } from '@/interfaces';
+
+export const MOCK_DATA_USER: IUser = {
   accounts: [
     {
+      documentId: '123',
       accountNumber: '123455556666',
       balance: 38000,
       currency: '$',
@@ -9,6 +16,7 @@ export const MOCK_DATA_USER = {
       type: 'Main',
     },
     {
+      documentId: '234',
       accountNumber: '123455557878',
       balance: 33000,
       currency: '$',
@@ -17,6 +25,7 @@ export const MOCK_DATA_USER = {
       type: 'Savings',
     },
     {
+      documentId: '345',
       accountNumber: '123455556789',
       balance: 35000,
       currency: '$',
@@ -31,6 +40,7 @@ export const MOCK_DATA_USER = {
   id: 43,
   phone: '123456789000',
   postal: '226',
+  token: '123456',
   username: 'thong',
   documentId: '',
   provider: '',
@@ -41,10 +51,9 @@ export const MOCK_DATA_USER = {
   publishedAt: '',
 };
 
-export const MOCK_SESSION_DATA = {
+export const MOCK_SESSION_DATA: Session = {
   user: {
     email: 'thong+1@gmail.com',
-    sub: '43',
     id: 43,
     documentId: 'c61o0tyzgnguwig7kpr62n8t',
     username: 'thong',
@@ -60,9 +69,6 @@ export const MOCK_SESSION_DATA = {
     avatar: 'https://i.ibb.co/SKHPQYq/avatar-default.webp',
     token:
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDMsImlhdCI6MTczNDU5OTk2MCwiZXhwIjoxNzM3MTkxOTYwfQ.',
-    iat: 1734603386,
-    exp: 1734689786,
-    jti: '228cc28c-4094-4bd6-9fb0-2aab0efcab54',
   },
   expires: '2024-12-20T10:17:30.214Z',
 };

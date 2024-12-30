@@ -14,7 +14,12 @@ export type ResponseDataWithPagination<T> = ResponseData<T> & {
 };
 
 export type MetaResponse = {
-  // TODO: Add meta response ( example: timestamp, version, pagination,... )
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  };
 };
 
 export type SuccessResponse<T> = {

@@ -9,7 +9,7 @@ export enum AccountType {
 
 export interface IAccount {
   id: number;
-  documentId?: string;
+  documentId: string;
   accountNumber: string;
   balance: number;
   type: string;
@@ -21,7 +21,7 @@ export interface IAccount {
 }
 
 export interface IAccountPayloadData
-  extends Omit<IAccount, 'id' | 'transactions' | 'cards'> {}
+  extends Omit<IAccount, 'id' | 'documentId' | 'transactions' | 'cards'> {}
 
 export interface IAccountPayload {
   user: number;
