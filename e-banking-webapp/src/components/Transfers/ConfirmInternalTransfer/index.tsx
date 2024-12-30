@@ -36,8 +36,8 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
 }: IConfirmInternalTransferProps<T>) => {
   const {
     form: { getValues },
-    prevStep,
-    nextStep,
+    onPrevStep,
+    onNextStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
 
   const [isPending, startTransition] = useTransition();
@@ -48,7 +48,7 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
     startTransition(() => {
       const data = getValues();
       submitHandler(data);
-      nextStep(e);
+      onNextStep(e);
     });
   };
 
@@ -65,7 +65,7 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
         action cannot be undone once approved...
       </Text>
       <div className='mt-8 flex gap-8'>
-        <Button color='tertiary' radius='xs' size='md' onClick={prevStep}>
+        <Button color='tertiary' radius='xs' size='md' onClick={onPrevStep}>
           Cancel
         </Button>
         <Button

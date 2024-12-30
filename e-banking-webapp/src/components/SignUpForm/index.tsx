@@ -115,9 +115,9 @@ export const SignUpForm = () => {
 
       <WizardForm.Footer>
         <WizardFormContextProvider>
-          {({ currentStepIndex, prevStep }) => (
+          {({ currentStepIndex, onPrevStep }) => (
             <StepProgress
-              onPrevStep={prevStep}
+              onPrevStep={onPrevStep}
               steps={4}
               activeStep={currentStepIndex}
             />

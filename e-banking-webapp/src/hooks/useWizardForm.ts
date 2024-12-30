@@ -40,7 +40,7 @@ export function useWizardForm<Schema extends z.ZodType>(
     throw new Error(`Unsupported schema type: ${schema.constructor.name}`);
   }, [schema, form, stepNames, currentStepIndex]);
 
-  const nextStep = useCallback(
+  const onNextStep = useCallback(
     <Ev extends React.SyntheticEvent>(e: Ev) => {
       // prevent form submission when the user presses Enter
       // or if the user forgets [type="button"] on the button
@@ -80,7 +80,7 @@ export function useWizardForm<Schema extends z.ZodType>(
     [validateStep, currentStepIndex, stepNames, schema, form],
   );
 
-  const prevStep = useCallback(
+  const onPrevStep = useCallback(
     <Ev extends React.SyntheticEvent>(e: Ev) => {
       // prevent form submission when the user presses Enter
       // or if the user forgets [type="button"] on the button
@@ -115,8 +115,8 @@ export function useWizardForm<Schema extends z.ZodType>(
       totalSteps: stepNames.length,
       isFirstStep: currentStepIndex === 0,
       isLastStep: currentStepIndex === stepNames.length - 1,
-      nextStep,
-      prevStep,
+      onNextStep,
+      onPrevStep,
       goToStep,
       direction,
       validateStep,
@@ -127,8 +127,8 @@ export function useWizardForm<Schema extends z.ZodType>(
       form,
       stepNames,
       currentStepIndex,
-      nextStep,
-      prevStep,
+      onNextStep,
+      onPrevStep,
       goToStep,
       direction,
       validateStep,

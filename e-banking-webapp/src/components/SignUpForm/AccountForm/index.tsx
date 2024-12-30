@@ -22,7 +22,7 @@ import { Button, Input, Text } from '@/components';
 export const AccountForm = () => {
   const {
     form: { control },
-    nextStep,
+    onNextStep,
     validateStep,
   } = useWizardFormContext();
 
@@ -139,7 +139,7 @@ export const AccountForm = () => {
 
       <Button
         isDisabled={!validateStep()}
-        onClick={nextStep}
+        onClick={onNextStep}
         type='button'
         color='primary'
       >
