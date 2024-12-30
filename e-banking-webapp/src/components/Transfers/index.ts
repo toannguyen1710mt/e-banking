@@ -8,3 +8,4 @@ export * from './TransferModal';
 export * from './TransferTab';
 export * from './GlobalTransferSteps';
 export * from './InternalTransferSteps';
+export * from './TransferTable';

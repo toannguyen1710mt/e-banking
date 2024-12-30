@@ -1,5 +1,5 @@
 // Interfaces
-import { CurrencyUnit, AccountType, GlobalType } from '@/interfaces';
+import { CurrencyUnit, AccountType } from '@/interfaces';
 
 export interface ITransaction {
   id: string;
@@ -7,8 +7,8 @@ export interface ITransaction {
   currencyUnit?: CurrencyUnit;
   fromAccountId: string;
   toAccountId: string;
-  fromAccountType?: AccountType | GlobalType;
-  toAccountType?: AccountType | GlobalType;
+  fromAccountType?: AccountType;
+  toAccountType?: AccountType;
   amount: number;
   statusTransaction: boolean;
   createdAt: string;
@@ -26,3 +26,8 @@ export type InternalTransferForm = Pick<
   ITransaction,
   'fromAccountType' | 'toAccountType' | 'amount' | 'recipientAccount'
 >;
+
+export enum TransferType {
+  RECEIVED = 'received',
+  SENT = 'sent',
+}

@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransferTable component should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-col relative gap-4 w-full"
+  >
+    <div
+      class="flex flex-col gap-2"
+    >
+      <h4
+        class="text-primary-200 text-sm font-medium"
+      >
+        Transfer Request 
+        Received
+      </h4>
+      <p
+        class="text-primary-200 text-xs font-normal"
+      >
+        Manage your transfer by approving, decline request
+      </p>
+    </div>
+    <table
+      aria-describedby=""
+      class="min-w-full h-auto table-auto w-full"
+      id="react-aria-:r0:"
+      role="grid"
+      tabindex="0"
+    >
+      <thead
+        class="[&>tr]:first:rounded-lg translate-y-1"
+        role="rowgroup"
+      >
+        <tr
+          class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+          role="row"
+        >
+          <th
+            class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+            data-key="id"
+            id="react-aria-:r0:-id"
+            role="columnheader"
+            tabindex="-1"
+          >
+            Transaction ID
+          </th>
+          <th
+            class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+            data-key="createdAt"
+            id="react-aria-:r0:-createdAt"
+            role="columnheader"
+            tabindex="-1"
+          >
+            Transaction Date
+          </th>
+          <th
+            class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+            data-key="fromAccountType"
+            id="react-aria-:r0:-fromAccountType"
+            role="columnheader"
+            tabindex="-1"
+          >
+            From
+          </th>
+          <th
+            class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+            data-key="amount"
+            id="react-aria-:r0:-amount"
+            role="columnheader"
+            tabindex="-1"
+          >
+            Amount
+          </th>
+        </tr>
+        <tr
+          aria-hidden="true"
+          class="w-px h-px block"
+          style="margin-left: 0.25rem; margin-top: 0.25rem;"
+          tabindex="-1"
+        />
+      </thead>
+      <tbody
+        class="divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue"
+        role="rowgroup"
+      >
+        <tr
+          aria-labelledby="react-aria-:r0:-0-id"
+          class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+          data-first="true"
+          data-key="0"
+          role="row"
+          tabindex="-1"
+        >
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="id"
+            id="react-aria-:r0:-0-id"
+            role="rowheader"
+            tabindex="-1"
+          >
+            <span>
+              TX12345
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="createdAt"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              01/12/2024
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="fromAccountType"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              Main
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="amount"
+            role="gridcell"
+            tabindex="-1"
+          >
+            $
+            120
+          </td>
+        </tr>
+        <tr
+          aria-labelledby="react-aria-:r0:-1-id"
+          class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+          data-key="1"
+          data-middle="true"
+          data-odd="true"
+          role="row"
+          tabindex="-1"
+        >
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="id"
+            id="react-aria-:r0:-1-id"
+            role="rowheader"
+            tabindex="-1"
+          >
+            <span>
+              TX12346
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="createdAt"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              02/12/2024
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="fromAccountType"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              Main
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="amount"
+            role="gridcell"
+            tabindex="-1"
+          >
+            $
+            75
+          </td>
+        </tr>
+        <tr
+          aria-labelledby="react-aria-:r0:-2-id"
+          class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+          data-key="2"
+          data-middle="true"
+          role="row"
+          tabindex="-1"
+        >
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="id"
+            id="react-aria-:r0:-2-id"
+            role="rowheader"
+            tabindex="-1"
+          >
+            <span>
+              TX12347
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="createdAt"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              03/12/2024
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="fromAccountType"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              Savings
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="amount"
+            role="gridcell"
+            tabindex="-1"
+          >
+            $
+            50
+          </td>
+        </tr>
+        <tr
+          aria-labelledby="react-aria-:r0:-3-id"
+          class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+          data-key="3"
+          data-last="true"
+          data-odd="true"
+          role="row"
+          tabindex="-1"
+        >
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="id"
+            id="react-aria-:r0:-3-id"
+            role="rowheader"
+            tabindex="-1"
+          >
+            <span>
+              TX12348
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="createdAt"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              04/12/2024
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="fromAccountType"
+            role="gridcell"
+            tabindex="-1"
+          >
+            <span>
+              Checkings
+            </span>
+          </td>
+          <td
+            class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]/tr:text-foreground-300 group-data-[disabled=true]/tr:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
+            data-key="amount"
+            role="gridcell"
+            tabindex="-1"
+          >
+            $
+            200
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
