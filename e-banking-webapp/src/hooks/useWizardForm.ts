@@ -17,7 +17,7 @@ export function useWizardForm<Schema extends z.ZodType>(
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [direction, setDirection] = useState<'forward' | 'backward'>();
 
-  const isStepValid = useCallback(() => {
+  const validateStep = useCallback(() => {
     const currentStepName = stepNames[currentStepIndex] as Path<
       z.TypeOf<Schema>
     >;
@@ -46,7 +46,7 @@ export function useWizardForm<Schema extends z.ZodType>(
       // or if the user forgets [type="button"] on the button
       e.preventDefault();
 
-      const isValid = isStepValid();
+      const isValid = validateStep();
 
       if (!isValid) {
         const currentStepName = stepNames[currentStepIndex] as Path<
@@ -77,7 +77,7 @@ export function useWizardForm<Schema extends z.ZodType>(
         setCurrentStepIndex((prev) => prev + 1);
       }
     },
-    [isStepValid, currentStepIndex, stepNames, schema, form],
+    [validateStep, currentStepIndex, stepNames, schema, form],
   );
 
   const prevStep = useCallback(
@@ -96,12 +96,12 @@ export function useWizardForm<Schema extends z.ZodType>(
 
   const goToStep = useCallback(
     (index: number) => {
-      if (index >= 0 && index < stepNames.length && isStepValid()) {
+      if (index >= 0 && index < stepNames.length && validateStep()) {
         setDirection(index > currentStepIndex ? 'forward' : 'backward');
         setCurrentStepIndex(index);
       }
     },
-    [isStepValid, stepNames.length, currentStepIndex],
+    [validateStep, stepNames.length, currentStepIndex],
   );
 
   const isValid = form.formState.isValid;
@@ -119,7 +119,7 @@ export function useWizardForm<Schema extends z.ZodType>(
       prevStep,
       goToStep,
       direction,
-      isStepValid,
+      validateStep,
       isValid,
       errors,
     }),
@@ -131,7 +131,7 @@ export function useWizardForm<Schema extends z.ZodType>(
       prevStep,
       goToStep,
       direction,
-      isStepValid,
+      validateStep,
       isValid,
       errors,
     ],

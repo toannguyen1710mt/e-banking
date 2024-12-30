@@ -23,7 +23,7 @@ export const AccountForm = () => {
   const {
     form: { control },
     nextStep,
-    isStepValid,
+    validateStep,
   } = useWizardFormContext();
 
   const {
@@ -138,7 +138,7 @@ export const AccountForm = () => {
       </div>
 
       <Button
-        isDisabled={!isStepValid()}
+        isDisabled={!validateStep()}
         onClick={nextStep}
         type='button'
         color='primary'

@@ -16,7 +16,7 @@ export const AddCreditCard = () => {
   const {
     form: { control },
     nextStep,
-    isStepValid,
+    validateStep,
   } = useWizardFormContext();
 
   return (
@@ -112,7 +112,7 @@ export const AddCreditCard = () => {
       <Button
         type='button'
         color='primary'
-        isDisabled={!isStepValid}
+        isDisabled={!validateStep()}
         onClick={nextStep}
       >
         Add Card
