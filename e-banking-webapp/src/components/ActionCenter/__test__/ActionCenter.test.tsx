@@ -7,7 +7,7 @@ import { ActionCenter } from '@/components';
 
 describe('ActionCenter component', () => {
   test('renders with correct data', () => {
-    const { container } = render(<ActionCenter table={<div>Table</div>} />);
+    const { container } = render(<ActionCenter />);
 
     expect(container).toMatchSnapshot();
   });

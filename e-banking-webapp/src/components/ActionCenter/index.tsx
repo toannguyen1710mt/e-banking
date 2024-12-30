@@ -1,19 +1,15 @@
 'use client';
 
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 // Interfaces
 import { TransferType } from '@/interfaces';
 
 // Components
-import { MetricsCard, Text } from '@/components';
+import { MetricsCard, Text, TransferTable } from '@/components';
 
-interface IActionCenter {
-  table: ReactNode;
-}
-
-export const ActionCenter = ({ table }: IActionCenter) => {
+export const ActionCenter = () => {
   const [selectedTransferType, setSelectedTransferType] = useState<
     TransferType.RECEIVED | TransferType.SENT
   >(TransferType.RECEIVED);
@@ -52,8 +48,8 @@ export const ActionCenter = ({ table }: IActionCenter) => {
         </div>
       </CardHeader>
       <CardBody>
-        {/* TODO: Will be passed in from the TransferTable component */}
-        {table}
+        {/* TODO: Prop transactions will get data from API */}
+        <TransferTable transactions={[]} transferType={selectedTransferType} />
       </CardBody>
     </Card>
   );
