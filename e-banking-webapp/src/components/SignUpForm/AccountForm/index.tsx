@@ -28,8 +28,8 @@ export const AccountForm = () => {
       control,
       formState: { errors },
     },
-    nextStep,
-    isStepValid,
+    onNextStep,
+    validateStep,
   } = useWizardFormContext<typeof SignUpSchema>();
 
   const {
@@ -146,8 +146,8 @@ export const AccountForm = () => {
       </div>
 
       <Button
-        isDisabled={!isStepValid}
-        onClick={nextStep}
+        isDisabled={!validateStep()}
+        onClick={onNextStep}
         type='button'
         color='primary'
       >

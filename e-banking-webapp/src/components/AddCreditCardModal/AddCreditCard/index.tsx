@@ -15,8 +15,8 @@ import { Button, Input, Text, CreditCardIcon } from '@/components';
 export const AddCreditCard = () => {
   const {
     form: { control },
-    nextStep,
-    isStepValid,
+    onNextStep,
+    validateStep,
   } = useWizardFormContext();
 
   return (
@@ -112,8 +112,8 @@ export const AddCreditCard = () => {
       <Button
         type='button'
         color='primary'
-        isDisabled={!isStepValid}
-        onClick={nextStep}
+        isDisabled={!validateStep()}
+        onClick={onNextStep}
       >
         Add Card
       </Button>

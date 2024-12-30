@@ -1,12 +1,18 @@
-'use client';
-
 import { z } from 'zod';
 
 // Constants
 import { REGEX, ERROR_MESSAGES } from '@/constants';
 
-// Components
-import { createStepSchema } from '@/components';
+/**
+ * @name createStepSchema
+ * @description Create a schema for a wizard form
+ * @param steps
+ */
+export function createStepSchema<T extends Record<string, z.ZodType>>(
+  steps: T,
+) {
+  return z.object(steps);
+}
 
 const futureMonth = z.string().refine(
   (value) => {
@@ -40,18 +46,20 @@ export const SignUpSchema = createStepSchema({
         .min(8, ERROR_MESSAGES.PASSWORD_INVALID)
         .regex(REGEX.PASSWORD, ERROR_MESSAGES.PASSWORD_PATTERN),
       confirmPassword: z.string().trim(), // Trim spaces before validation
-      phone: z
-        .string()
-        .trim()
-        .length(12, ERROR_MESSAGES.PHONE_INVALID)
-        .regex(/^\d+$/, ERROR_MESSAGES.PHONE_PATTERN),
-      country: z.string().trim(),
-      postal: z.string().trim(),
     })
     .refine((data) => data.password === data.confirmPassword, {
       message: ERROR_MESSAGES.PASSWORD_DOES_NOT_MATCH,
       path: ['confirmPassword'],
     }),
+  contact: z.object({
+    phone: z
+      .string()
+      .trim()
+      .length(12, ERROR_MESSAGES.PHONE_INVALID)
+      .regex(/^\d+$/, ERROR_MESSAGES.PHONE_PATTERN),
+    country: z.string().trim(),
+    postal: z.string().trim(),
+  }),
   card: z.object({
     holderName: z.string().min(1, ERROR_MESSAGES.CARD_HOLDER_NAME_REQUIRED),
     cardNumber: z.string().length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID),

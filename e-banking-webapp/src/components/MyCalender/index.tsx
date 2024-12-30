@@ -3,11 +3,33 @@
 // Libs
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
 
-// Constants
-import { DUE_TILE } from '@/constants';
-
 // Component
 import { Calendar, Text, DueTile } from '@/components';
+
+import { AmazonIcon, CarIcon, HomeIcon, WifiRouterIcon } from '@/components';
+
+export const DUE_TILE = [
+  {
+    icon: <HomeIcon />,
+    title: 'Pay Rent',
+    createAt: 'Aug 21 at 3:00 pm',
+  },
+  {
+    icon: <CarIcon />,
+    title: 'New Car Target Payment',
+    createAt: 'Aug 21 at 3:00 pm',
+  },
+  {
+    icon: <WifiRouterIcon />,
+    title: 'Wifi Subscription',
+    createAt: 'Aug 21 at 3:00 pm',
+  },
+  {
+    icon: <AmazonIcon />,
+    title: 'Pay Amazon Prime',
+    createAt: 'Aug 21 at 3:00 pm',
+  },
+];
 
 export const MyCalender = () => (
   <Card className='h-full w-full py-[14px] pl-[14px] pr-6' radius='sm'>

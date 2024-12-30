@@ -32,8 +32,8 @@ export const ConfirmAddCard = <T extends z.ZodType>({
 }: IConfirmAddCard<T>) => {
   const {
     form: { control, handleSubmit },
-    isStepValid,
-    nextStep,
+    validateStep,
+    onNextStep,
   } = useWizardFormContext();
 
   const [isPending, startTransition] = useTransition();
@@ -44,7 +44,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
     startTransition(async () => {
       const handler = handleSubmit(submitHandler);
       await handler(e);
-      nextStep(e);
+      onNextStep(e);
     });
   };
 
@@ -126,7 +126,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
           type='button'
           color='primary'
           className='mx-auto mt-[30px] max-w-[320px]'
-          isDisabled={!isStepValid}
+          isDisabled={!validateStep()}
           isLoading={isPending}
           onClick={onSubmit}
         >

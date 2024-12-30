@@ -31,8 +31,8 @@ export const CreditCardForm = <T extends z.ZodType>({
 }: ICreditCard<T>) => {
   const {
     form: { control, handleSubmit, setError },
-    isStepValid,
-    nextStep,
+    validateStep,
+    onNextStep,
     goToStep,
   } = useWizardFormContext<typeof SignUpSchema>();
 
@@ -47,7 +47,7 @@ export const CreditCardForm = <T extends z.ZodType>({
       const handler = handleSubmit(submitHandler);
       try {
         await handler(e);
-        nextStep(e);
+        onNextStep(e);
       } catch (error) {
         setError('user.email', {
           type: 'validate',
@@ -148,7 +148,7 @@ export const CreditCardForm = <T extends z.ZodType>({
       </div>
 
       <Button
-        isDisabled={!isStepValid}
+        isDisabled={!validateStep()}
         type='button'
         color='primary'
         isLoading={isPending}

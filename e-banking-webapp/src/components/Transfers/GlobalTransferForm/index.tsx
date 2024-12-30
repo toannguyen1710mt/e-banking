@@ -37,8 +37,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       formState: { errors, isValid },
       setValue,
     },
-    nextStep,
-    isStepValid,
+    onNextStep,
+    validateStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
 
   const hiddenFields: FormValues[] = [
@@ -285,8 +285,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         type='submit'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        onClick={nextStep}
-        isDisabled={!isStepValid || !isValid}
+        onClick={onNextStep}
+        isDisabled={!validateStep() || !isValid}
       >
         Transfer Funds
       </Button>
