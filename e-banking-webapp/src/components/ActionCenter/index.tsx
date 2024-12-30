@@ -1,42 +1,59 @@
 'use client';
 
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
-import { Text } from '../common';
-import { MetricsCard } from '../MetricsCard';
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { ReactNode, useState } from 'react';
 
-export const ActionCenter = () => {
+// Interfaces
+import { TransferType } from '@/interfaces';
+
+// Components
+import { MetricsCard, Text } from '@/components';
+
+interface IActionCenter {
+  table: ReactNode;
+}
+
+export const ActionCenter = ({ table }: IActionCenter) => {
+  const [selectedTransferType, setSelectedTransferType] = useState<
+    TransferType.RECEIVED | TransferType.SENT
+  >(TransferType.RECEIVED);
+
   return (
     <Card className='gap-6 py-5 pl-5 pr-[38px]'>
       <CardHeader className='flex-col items-start gap-6 p-0'>
         <Text as='span'>Action Center</Text>
         <div className='ml-[50px] flex gap-6'>
-          <MetricsCard
-            title='Transfer Received'
-            totalTransfers={54}
-            isPositive={true}
-            percentageChange={8}
-          />
-          <MetricsCard
-            title='Transfer Sent'
-            totalTransfers={14}
-            isPositive={true}
-            percentageChange={8}
-          />
+          <div
+            className='cursor-pointer'
+            onClick={() => setSelectedTransferType(TransferType.RECEIVED)}
+          >
+            <MetricsCard
+              // TODO: Props totalTransfers, percentageChange will get data from API
+              title='Transfer Received'
+              totalTransfers={54}
+              isPositive={true}
+              percentageChange={8}
+              isSelected={selectedTransferType === TransferType.RECEIVED}
+            />
+          </div>
+          <div
+            className='cursor-pointer'
+            onClick={() => setSelectedTransferType(TransferType.SENT)}
+          >
+            <MetricsCard
+              // TODO: Props totalTransfers, percentageChange will get data from API
+              title='Transfer Sent'
+              totalTransfers={14}
+              isPositive={true}
+              percentageChange={8}
+              isSelected={selectedTransferType === TransferType.SENT}
+            />
+          </div>
         </div>
       </CardHeader>
       <CardBody>
-        <Text variant={TEXT_VARIANT.DEFAULT} size={TEXT_SIZE.SM} as='span'>
-          Transfer Received
-        </Text>
-        <Text
-          as='span'
-          variant={TEXT_VARIANT.DEFAULT}
-          size={TEXT_SIZE.XS}
-          className='font-normal'
-        >
-          Manage your transfer by approving, decline request
-        </Text>
+        {/* TODO: Will be passed in from the TransferTable component */}
+        {table}
       </CardBody>
     </Card>
   );
