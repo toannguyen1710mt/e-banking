@@ -13,7 +13,7 @@ interface IMetricsCardProps {
   totalTransfers: number;
   isPositive: boolean;
   percentageChange: number;
-  isSelected: boolean;
+  isSelected?: boolean;
 }
 
 export const MetricsCard = ({
