@@ -27,7 +27,7 @@ export const CreditCardForm = <T extends z.ZodType>({
 }: ICreditCard<T>) => {
   const {
     form: { control, handleSubmit },
-    isStepValid,
+    validateStep,
     nextStep,
   } = useWizardFormContext();
 
@@ -130,7 +130,7 @@ export const CreditCardForm = <T extends z.ZodType>({
       </div>
 
       <Button
-        isDisabled={!isStepValid}
+        isDisabled={!validateStep()}
         type='button'
         color='primary'
         isLoading={isPending}

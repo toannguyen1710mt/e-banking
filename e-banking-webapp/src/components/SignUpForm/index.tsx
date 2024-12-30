@@ -34,12 +34,13 @@ export const SignUpForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: SIGNUP_FORM_DEFAULT_VALUES,
-    reValidateMode: 'onBlur',
-    mode: 'onBlur',
+    mode: 'all',
   });
 
   const submitHandler = async (data: FormValues) => {
-    const { email, password, username, ...rest } = data.user;
+    const { email, password, username } = data.user;
+
+    const { phone, country, postal } = data.contact;
 
     const response = await handleSignUp({
       email,
@@ -53,7 +54,7 @@ export const SignUpForm = () => {
         data: ACCOUNT_DEFAULT_VALUES,
       };
 
-      await updateUser(response.user.id, rest);
+      await updateUser(response.user.id, { phone, country, postal });
 
       const responseAccount = await addAccount(payloadAccount);
 
@@ -70,7 +71,7 @@ export const SignUpForm = () => {
   // Step content to register user
   const steps = [
     {
-      name: 'account',
+      name: 'user',
       formContent: <AccountForm />,
       textHeading: 'Control Your Finances, Join Us Today!',
       textFooter: 'Already have an account?',
