@@ -15,7 +15,7 @@ import { GlobalIcon, MailBoxIcon, PhoneIcon } from '@/components/icons';
 export const ContactForm = () => {
   const {
     form: { control },
-    nextStep,
+    onNextStep,
     validateStep,
   } = useWizardFormContext();
 
@@ -79,7 +79,7 @@ export const ContactForm = () => {
 
       <Button
         isDisabled={!validateStep()}
-        onClick={nextStep}
+        onClick={onNextStep}
         type='button'
         color='primary'
       >

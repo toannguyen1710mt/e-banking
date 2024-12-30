@@ -26,8 +26,8 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
 }: ConfirmGlobalTransferProps<T>) => {
   const {
     form: { getValues },
-    prevStep,
-    nextStep,
+    onPrevStep,
+    onNextStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
 
   const [isPending, startTransition] = useTransition();
@@ -42,7 +42,7 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
     startTransition(() => {
       const data = getValues();
       submitHandler(data);
-      nextStep(e);
+      onNextStep(e);
     });
   };
 
@@ -59,7 +59,7 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
         action cannot be undone once approved...
       </Text>
       <div className='mt-10 flex gap-6'>
-        <Button radius='xs' color='tertiary' size='xxl' onClick={prevStep}>
+        <Button radius='xs' color='tertiary' size='xxl' onClick={onPrevStep}>
           Cancel
         </Button>
         <Button

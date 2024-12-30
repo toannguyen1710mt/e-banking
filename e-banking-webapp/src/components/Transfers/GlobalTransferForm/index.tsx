@@ -37,7 +37,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       formState: { errors, isValid },
       setValue,
     },
-    nextStep,
+    onNextStep,
     validateStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
 
@@ -285,7 +285,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         type='submit'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        onClick={nextStep}
+        onClick={onNextStep}
         isDisabled={!validateStep() || !isValid}
       >
         Transfer Funds

@@ -5,13 +5,13 @@ jest.mock('@/context', () => ({
 describe('ConfirmInternalTransfer component', () => {
   // const mockGetValues = jest.fn();
   // const mockPrevStep = jest.fn();
-  // const mockNextStep = jest.fn();
+  // const mockOnNextStep = jest.fn();
   // const mockSubmitHandler = jest.fn();
 
   // const mockContextValue = {
   //   form: { getValues: mockGetValues },
   //   prevStep: mockPrevStep,
-  //   nextStep: mockNextStep,
+  //   onNextStep: mockOnNextStep,
   // };
 
   // beforeEach(() => {
@@ -42,13 +42,13 @@ describe('ConfirmInternalTransfer component', () => {
     // expect(mockPrevStep).toHaveBeenCalled();
   });
 
-  test('should call submitHandler and nextStep when Proceed button is clicked', () => {
+  test('should call submitHandler and onNextStep when Proceed button is clicked', () => {
     // mockGetValues.mockReturnValue({ someField: 'someValue' });
     // render(<ConfirmGlobalTransfer {...mockProps} />);
     // const proceedButton = screen.getByText('Proceed');
     // fireEvent.click(proceedButton);
     // expect(mockGetValues).toHaveBeenCalled();
     // expect(mockSubmitHandler).toHaveBeenCalledWith({ someField: 'someValue' });
-    // expect(mockNextStep).toHaveBeenCalled();
+    // expect(mockOnNextStep).toHaveBeenCalled();
   });
 });

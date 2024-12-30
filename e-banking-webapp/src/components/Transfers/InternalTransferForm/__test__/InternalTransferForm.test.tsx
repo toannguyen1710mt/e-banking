@@ -19,7 +19,7 @@ jest.mock('@/utils', () => ({
 }));
 describe('InternalTransferForm component', () => {
   const mockSetValue = jest.fn();
-  const mockNextStep = jest.fn();
+  const mockOnNextStep = jest.fn();
   const mockValidateStep = true;
   const mockControl = {};
 
@@ -29,7 +29,7 @@ describe('InternalTransferForm component', () => {
       formState: { errors: {} },
       setValue: mockSetValue,
     },
-    nextStep: mockNextStep,
+    onNextStep: mockOnNextStep,
     validateStep: mockValidateStep,
   };
 

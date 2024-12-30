@@ -33,7 +33,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
   const {
     form: { control, handleSubmit },
     validateStep,
-    nextStep,
+    onNextStep,
   } = useWizardFormContext();
 
   const [isPending, startTransition] = useTransition();
@@ -44,7 +44,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
     startTransition(async () => {
       const handler = handleSubmit(submitHandler);
       await handler(e);
-      nextStep(e);
+      onNextStep(e);
     });
   };
 
