@@ -49,7 +49,7 @@ export const authConfig = {
   },
   session: {
     strategy: 'jwt',
-    maxAge: 60 * 60 * 24,
+    maxAge: 60 * 15,
   },
 
   trustHost: true,
