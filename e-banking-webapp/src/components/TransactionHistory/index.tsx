@@ -50,6 +50,7 @@ export const TransactionHistory = ({
         );
         break;
       default:
+        column.renderCell = null;
         break;
     }
 
