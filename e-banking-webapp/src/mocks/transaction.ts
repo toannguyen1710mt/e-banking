@@ -11,7 +11,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     currencyUnit: '$',
     fromAccountId: 'CARD001',
     toAccountId: 'CARD002',
-    amount: 120,
+    amount: 120000,
     statusTransaction: true,
     createdAt: formatDate('2024-12-01'),
     updatedAt: formatDate('2024-12-01'),
