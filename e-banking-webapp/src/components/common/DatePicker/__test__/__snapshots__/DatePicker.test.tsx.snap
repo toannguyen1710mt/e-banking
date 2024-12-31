@@ -6,7 +6,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col"
+        class="flex flex-col w-full"
       >
         <div
           class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
@@ -88,7 +88,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col"
+      class="flex flex-col w-full"
     >
       <div
         class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"

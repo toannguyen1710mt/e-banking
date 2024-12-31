@@ -3,6 +3,9 @@ import { z } from 'zod';
 // Constants
 import { REGEX, ERROR_MESSAGES } from '@/constants';
 
+// Utils
+import { futureMonth } from '@/utils';
+
 /**
  * @name createStepSchema
  * @description Create a schema for a wizard form
@@ -13,18 +16,6 @@ export function createStepSchema<T extends Record<string, z.ZodType>>(
 ) {
   return z.object(steps);
 }
-
-const futureMonth = z.string().refine(
-  (value) => {
-    const [year, month] = value.split('-').map(Number);
-    const today = new Date();
-    const inputDate = new Date(year, month - 1);
-    return inputDate > today;
-  },
-  {
-    message: ERROR_MESSAGES.EXPIRE_DATE_INVALID,
-  },
-);
 
 // Grouping the schemas under different steps
 export const SignUpSchema = createStepSchema({

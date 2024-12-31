@@ -84,7 +84,7 @@ export const DatePicker = (props: DatePickerProps) => {
   }, [value]);
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex w-full flex-col'>
       <Input
         startContent={
           <Button
