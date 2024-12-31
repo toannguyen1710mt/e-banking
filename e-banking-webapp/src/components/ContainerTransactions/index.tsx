@@ -34,7 +34,7 @@ export const ContainerTransactions = ({
         </Text>
       </Text>
 
-      <div className='mb-[23px]'>
+      <div className='mb-[23px] max-w-[659px]'>
         <InformationCard />
       </div>
 

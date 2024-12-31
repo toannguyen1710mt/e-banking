@@ -33,7 +33,7 @@ export const TransferManager = ({
 
   return (
     <>
-      <div className='mb-[23px] ml-[50px] flex gap-6'>
+      <div className='mb-[23px] ml-[50px] flex justify-center gap-6'>
         <div className='cursor-pointer' onClick={handleSelectReceived}>
           <MetricsCard
             title='Transfer Received'
