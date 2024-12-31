@@ -4,3 +4,4 @@ export * from './chart';
 export * from './date';
 export * from './convertToUSD';
 export * from './query-params';
+export * from './futureMonth';

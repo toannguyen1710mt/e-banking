@@ -8,10 +8,15 @@ import { today, getLocalTimeZone } from '@internationalized/date';
 // Component
 import { CalendarIcon, Button, Input, Calendar } from '@/components';
 
-export const DatePicker = (props: InputProps) => {
-  const { onChange, ...rest } = props;
+interface DatePickerProps extends Omit<InputProps, 'onChange'> {
+  value?: string;
+  onChange?: (value: string) => void;
+}
+
+export const DatePicker = (props: DatePickerProps) => {
+  const { value = '', onChange, ...rest } = props;
   const [openCalendar, setOpenCalendar] = useState(false);
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>(value || '');
   const calendarRef = useRef<HTMLDivElement>(null);
 
   const toggleCalendar = () => {
@@ -19,32 +24,36 @@ export const DatePicker = (props: InputProps) => {
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value.replace(/\D/g, '');
-    if (value.length === 4) {
-      value += '/';
-    } else if (value.length > 4) {
-      value = `${value.slice(0, 4)}/${value.slice(4, 6)}`;
+    let newValue = e.target.value.replace(/\D/g, '');
+    if (newValue.length === 4) {
+      newValue += '/';
+    } else if (newValue.length > 4) {
+      newValue = `${newValue.slice(0, 4)}/${newValue.slice(4, 6)}`;
     }
 
-    if (value.length === 7) {
-      const month = parseInt(value.slice(5, 7), 10);
+    if (newValue.length === 7) {
+      const month = parseInt(newValue.slice(5, 7), 10);
       if (month < 1 || month > 12) {
-        value = value.slice(0, 5);
+        newValue = newValue.slice(0, 5);
       }
     }
 
-    setInputValue(value);
-
+    setInputValue(newValue);
     if (onChange) {
-      onChange(e);
+      onChange(newValue);
     }
   };
 
   const handleDateChange = (date: DateValue) => {
     const year = date.year.toString();
     const month = date.month.toString().padStart(2, '0');
-    setInputValue(`${year}/${month}`);
+    const formattedDate = `${year}/${month}`;
+    setInputValue(formattedDate);
     setOpenCalendar(false);
+
+    if (onChange) {
+      onChange(formattedDate);
+    }
   };
 
   useEffect(() => {
@@ -68,6 +77,12 @@ export const DatePicker = (props: InputProps) => {
     };
   }, [openCalendar]);
 
+  useEffect(() => {
+    if (value !== inputValue) {
+      setInputValue(value || '');
+    }
+  }, [value]);
+
   return (
     <div className='flex flex-col'>
       <Input
@@ -81,7 +96,7 @@ export const DatePicker = (props: InputProps) => {
           </Button>
         }
         classNames={{
-          input: 'm-0 ml-3',
+          input: 'm-0 p-0 !pl-3',
         }}
         placeholder='YYYY/MM'
         value={inputValue}

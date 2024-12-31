@@ -10,7 +10,7 @@ import { useWizardFormContext } from '@/context';
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Component
-import { Button, Input, Text, CreditCardIcon } from '@/components';
+import { Button, Input, Text, CreditCardIcon, DatePicker } from '@/components';
 
 export const AddCreditCard = () => {
   const {
@@ -76,12 +76,10 @@ export const AddCreditCard = () => {
             control={control}
             name='expireAt'
             render={({ field, fieldState: { error } }) => (
-              <Input
+              <DatePicker
                 labelPlacement='outside'
                 label='Expire Date'
                 aria-label='expireAt'
-                type='month'
-                placeholder='DD/MM'
                 isInvalid={!!error?.message}
                 errorMessage={error?.message}
                 {...field}
