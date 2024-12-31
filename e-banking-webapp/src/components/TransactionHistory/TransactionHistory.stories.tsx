@@ -1,6 +1,9 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Mocks
+import { MOCK_TRANSACTIONS } from '@/mocks';
+
 // Components
 import { TransactionHistory } from '@/components';
 
@@ -21,6 +24,6 @@ type Story = StoryObj<typeof TransactionHistory>;
 export const Default: Story = {
   args: {
     totalTransaction: 24,
-    table: <div>Transaction Table</div>,
+    transactionHistory: MOCK_TRANSACTIONS,
   },
 };
