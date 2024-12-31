@@ -1,6 +1,9 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Mocks
+import { MOCK_SESSION_DATA } from '@/mocks';
+
 // Components
 import { CardOverview } from '@/components';
 
@@ -19,5 +22,5 @@ export default meta;
 type Story = StoryObj<typeof CardOverview>;
 
 export const Default: Story = {
-  args: {},
+  args: { session: MOCK_SESSION_DATA },
 };

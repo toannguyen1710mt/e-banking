@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Session } from 'next-auth';
+import { AuthError, Session } from 'next-auth';
+
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
 
 // Interfaces
 import { IAccount } from '@/interfaces';
@@ -34,7 +37,9 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
         setTotalTransfer(total);
         setAccounts(user?.accounts || []);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        if (error instanceof AuthError) {
+          throw ERROR_MESSAGES.GET_ERROR;
+        }
       }
     };
 
@@ -54,7 +59,7 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
           <BalanceCardList accounts={accounts} />
           <div className='flex gap-7'>
             <MetricsCardList totalTransfer={totalTransfer} />
-            <CardOverview />
+            <CardOverview session={session} />
           </div>
           <div className='flex flex-col gap-8'>
             <Text as='span'>My Services</Text>

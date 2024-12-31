@@ -17,8 +17,13 @@ import {
   MasterCard,
   AddCreditCardModal,
 } from '@/components';
+import { Session } from 'next-auth';
 
-export const CardOverview = () => {
+interface ICardOverviewProps {
+  session: Session;
+}
+
+export const CardOverview = ({ session }: ICardOverviewProps) => {
   const {
     isOpen: isOpenAddCardModal,
     onOpen: onOpenAddCardModal,
@@ -58,6 +63,7 @@ export const CardOverview = () => {
         </CardBody>
       </Card>
       <AddCreditCardModal
+        session={session}
         isOpen={isOpenAddCardModal}
         onClose={onCloseAddCardModal}
       />

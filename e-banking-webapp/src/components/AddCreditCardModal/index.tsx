@@ -1,13 +1,29 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { AuthError, Session } from 'next-auth';
 
 // Constants
-import { IMAGES } from '@/constants';
+import { ERROR_MESSAGES, IMAGES } from '@/constants';
+
+// Interfaces
+import { IAccount } from '@/interfaces';
+
+// Actions
+import { addNewCardByAccountId } from '@/actions';
 
 // Schemas
 import { CreditCardSchema } from '@/schemas';
+
+// Services
+import { getBalanceAccount } from '@/services';
+
+// Context
+import { useToastContext } from '@/context';
 
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
@@ -16,6 +32,7 @@ import { AddCreditCard } from './AddCreditCard';
 import { ConfirmAddCard } from './ConfirmAddCard';
 
 interface IAddCreditCardModalProps {
+  session: Session;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -24,8 +41,12 @@ type FormValues = z.infer<typeof CreditCardSchema>;
 
 export const AddCreditCardModal = ({
   isOpen,
+  session,
   onClose,
 }: IAddCreditCardModalProps) => {
+  const [accounts, setAccounts] = useState<IAccount[]>([]);
+  const { showToast } = useToastContext();
+
   const form = useForm<FormValues>({
     resolver: zodResolver(CreditCardSchema),
     defaultValues: {
@@ -33,14 +54,42 @@ export const AddCreditCardModal = ({
       cardNumber: '',
       expireAt: '',
       ccv: '',
+      holderName: '',
     },
     reValidateMode: 'onBlur',
     mode: 'onBlur',
   });
 
-  // TODO: Will integrating api later
-  const submitHandler = async () => {
-    return;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { user } = await getBalanceAccount(String(session.user.id));
+
+        setAccounts(user?.accounts || []);
+      } catch (error) {
+        if (error instanceof AuthError) {
+          throw ERROR_MESSAGES.GET_ERROR;
+        }
+      }
+    };
+
+    fetchData();
+  }, [session.user.id]);
+
+  const submitHandler = async (accountId: string, data: FormValues) => {
+    try {
+      await addNewCardByAccountId(accountId, data);
+
+      showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
+
+      return onClose();
+    } catch (error) {
+      showToast(ERROR_MESSAGES.ADD_CARD_FAILED, 'error', 'top-center');
+
+      if (error instanceof AuthError) {
+        throw ERROR_MESSAGES.ADD_CARD_FAILED;
+      }
+    }
   };
 
   return (
@@ -72,6 +121,7 @@ export const AddCreditCardModal = ({
             </WizardForm.Step>
             <WizardForm.Step name='addCreditCard' key='addCreditCard'>
               <ConfirmAddCard
+                accounts={accounts}
                 schema={CreditCardSchema}
                 submitHandler={submitHandler}
               />

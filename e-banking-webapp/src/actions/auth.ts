@@ -23,6 +23,7 @@ import {
   TChangePasswordFormData,
   TChangePasswordSuccessResponse,
   IUser,
+  ICard,
 } from '@/interfaces';
 
 export const authenticateUser = async (formData: TSignInFormData) => {
@@ -123,6 +124,30 @@ export const getUser = async (id: number): Promise<IUser | undefined> => {
   } catch (error) {
     if (error instanceof AuthError) {
       throw ERROR_MESSAGES.SIGN_UP_ERROR;
+    }
+  }
+};
+
+export const addNewCardByAccountId = async (
+  accountId: string,
+  payload: Omit<ICard, 'id'>,
+) => {
+  try {
+    const response = await httpClient.post(API_ENDPOINTS.CARDS, {
+      data: {
+        ...payload,
+        account: {
+          connect: [accountId],
+        },
+      },
+    });
+
+    revalidateTag(TAGS.CARD);
+
+    return response.data;
+  } catch (error) {
+    if (error instanceof AuthError) {
+      throw ERROR_MESSAGES.ADD_CARD_FAILED;
     }
   }
 };

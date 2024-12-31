@@ -1,49 +1,60 @@
 'use client';
 
-import { useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { Controller } from 'react-hook-form';
 import { RadioGroup } from '@nextui-org/react';
 import { z } from 'zod';
 
-// Constants
-import { ACCOUNT_TYPES } from '@/constants';
-
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { AccountType, IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Context
 import { useWizardFormContext } from '@/context';
 
-// Mocks data
-import { CARD_CREDIT_DATA } from '@/mocks';
+// Utils
+import { formatYearMonthToShortDate } from '@/utils';
 
 // Components
 import { Button, Input, RadioButton, Text } from '@/components/common';
-import { CreditCard } from '@/components/CreditCard';
+import { CreditCard, VariantsCard } from '@/components/CreditCard';
 import { CreditCardIcon } from '@/components/icons';
 
 interface IConfirmAddCard<T extends z.ZodType> {
   schema: T;
-  submitHandler: (data: z.infer<T>) => void;
+  accounts?: IAccount[];
+  submitHandler: (id: string, data: z.infer<T>) => void;
 }
 
 export const ConfirmAddCard = <T extends z.ZodType>({
+  accounts = [],
   submitHandler,
 }: IConfirmAddCard<T>) => {
   const {
-    form: { control, handleSubmit },
+    form: { control, handleSubmit, getValues },
     validateStep,
     onNextStep,
   } = useWizardFormContext();
 
+  const values = getValues();
+  const { fullName, cardNumber, expireAt } = values;
   const [isPending, startTransition] = useTransition();
+  const [selectedType, setSelectedType] = useState<string>(
+    accounts[0]?.type || AccountType.MAIN,
+  );
 
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    startTransition(async () => {
-      const handler = handleSubmit(submitHandler);
-      await handler(e);
+    startTransition(() => {
+      const handler = handleSubmit((formData) => {
+        const selectedAccount = accounts.find(
+          (account) => account.type === selectedType,
+        );
+
+        submitHandler(selectedAccount?.documentId as string, formData);
+      });
+
+      handler(e);
       onNextStep(e);
     });
   };
@@ -55,13 +66,18 @@ export const ConfirmAddCard = <T extends z.ZodType>({
       </Text>
       <div className='mt-[10px] flex flex-col justify-between'>
         <div className='flex w-full items-center justify-between gap-[19px]'>
-          {/* TODO: Will integrating api later */}
-          <CreditCard {...CARD_CREDIT_DATA[0]} isModal={true} />
+          <CreditCard
+            cardNumber={cardNumber}
+            holderName={fullName}
+            isModal={true}
+            expireDate={formatYearMonthToShortDate(expireAt)}
+            variant={selectedType.toLowerCase() as VariantsCard}
+          />
 
           <div className='flex flex-1 flex-col gap-[15px]'>
             <Controller
               control={control}
-              name='fullName'
+              name='holderName'
               render={({ field, fieldState: { error } }) => (
                 <Input
                   labelPlacement='outside'
@@ -99,6 +115,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
                   isInvalid={!!error?.message}
                   errorMessage={error?.message}
                   endContent={<CreditCardIcon />}
+                  isDisabled
                   {...field}
                 />
               )}
@@ -113,13 +130,29 @@ export const ConfirmAddCard = <T extends z.ZodType>({
             Please note that all cards must have a main wallet
           </Text>
 
-          <RadioGroup className='mt-[20px]'>
-            {Object.entries(ACCOUNT_TYPES).map(([key, label]) => (
-              <RadioButton key={key} value={label}>
-                {label}
-              </RadioButton>
-            ))}
-          </RadioGroup>
+          <Controller
+            control={control}
+            name='walletType'
+            render={({ field }) => (
+              <RadioGroup
+                defaultValue={selectedType}
+                onChange={(event) => {
+                  const value = event.target.value;
+                  field.onChange(value);
+                  setSelectedType(value);
+                }}
+                className='mt-[20px]'
+              >
+                {accounts.map((account) => (
+                  <RadioButton key={account.id} value={account.type}>
+                    {account.type === AccountType.MAIN
+                      ? `${account.type} Wallet`
+                      : account.type}
+                  </RadioButton>
+                ))}
+              </RadioGroup>
+            )}
+          />
         </div>
 
         <Button
