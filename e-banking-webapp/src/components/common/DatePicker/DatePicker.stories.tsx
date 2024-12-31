@@ -1,20 +1,22 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
-import { Test } from '.';
+
+// Component
+import { DatePicker } from '@/components';
 
 const meta = {
-  title: 'Components/Test01',
-  component: Test,
+  title: 'Components/Common/DatePicker',
+  component: DatePicker,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
   decorators: [],
-} satisfies Meta<typeof Test>;
+} satisfies Meta<typeof DatePicker>;
 
 export default meta;
 
-type Story = StoryObj<typeof Test>;
+type Story = StoryObj<typeof DatePicker>;
 
 export const Default: Story = {
   args: {},

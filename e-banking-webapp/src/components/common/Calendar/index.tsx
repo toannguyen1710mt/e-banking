@@ -23,6 +23,8 @@ export const Calendar = ({ classNames, ...rest }: CalendarProps) => {
     gridHeaderCell,
     gridBodyRow,
     cellButton,
+    pickerHighlight,
+    pickerItem,
   } = classNames || {};
 
   return (
@@ -67,6 +69,8 @@ export const Calendar = ({ classNames, ...rest }: CalendarProps) => {
           'data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300',
           cellButton,
         ),
+        pickerHighlight: cn('bg-red', pickerHighlight),
+        pickerItem: cn('text-white', pickerItem),
       }}
     />
   );
