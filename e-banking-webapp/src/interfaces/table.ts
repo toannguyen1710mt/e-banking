@@ -5,7 +5,7 @@ import { TableProps as TablePropsNextUI } from '@nextui-org/react';
 export type Column<T> = {
   key: string;
   title: string | ReactNode;
-  renderCell?: (item: T) => ReactNode;
+  renderCell?: ((item: T) => ReactNode) | null;
 };
 
 export interface TableProps<T> extends TablePropsNextUI {

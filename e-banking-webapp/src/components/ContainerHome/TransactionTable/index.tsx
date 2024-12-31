@@ -1,7 +1,7 @@
 'use client';
 
 // Constants
-import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
+import { TRANSACTION_HOME_TABLE_COLUMNS } from '@/constants';
 
 // Interfaces
 import { ITransaction } from '@/interfaces';
@@ -17,7 +17,7 @@ interface ITransactionTableProps {
 }
 
 export const TransactionTable = ({ transactions }: ITransactionTableProps) => {
-  const columns = TRANSACTION_TABLE_COLUMNS.map((column) => {
+  const columns = TRANSACTION_HOME_TABLE_COLUMNS.map((column) => {
     switch (column.key) {
       case 'createdAt':
         column.renderCell = (item) => <>{formatDate(item.createdAt)}</>;

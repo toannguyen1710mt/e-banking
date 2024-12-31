@@ -14,8 +14,12 @@ exports[`ActionCenter component renders with correct data 1`] = `
       >
         Action Center
       </span>
+    </div>
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
+    >
       <div
-        class="ml-[50px] flex gap-6"
+        class="mb-[23px] ml-[50px] flex justify-center gap-6"
       >
         <div
           class="cursor-pointer"
@@ -35,7 +39,7 @@ exports[`ActionCenter component renders with correct data 1`] = `
               <span
                 class="text-primary-200 text-[52px] font-bold text-white"
               >
-                54
+                0
               </span>
               <div
                 class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-small px-2 py-1 text-primary bg-background-500/10"
@@ -85,7 +89,7 @@ exports[`ActionCenter component renders with correct data 1`] = `
               <span
                 class="text-primary-200 text-[52px] font-bold text-primary-200"
               >
-                14
+                0
               </span>
               <div
                 class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-small px-2 py-1 text-primary bg-primary-200 bg-opacity-10"
@@ -118,10 +122,6 @@ exports[`ActionCenter component renders with correct data 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased"
-    >
       <div
         class="flex flex-col relative gap-4 w-full"
       >

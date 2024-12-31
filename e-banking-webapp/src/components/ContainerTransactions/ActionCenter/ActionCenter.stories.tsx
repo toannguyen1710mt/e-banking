@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import { ActionCenter } from '@/components';
+import { ActionCenter } from '.';
 
 const meta = {
   title: 'Components/ActionCenter',
