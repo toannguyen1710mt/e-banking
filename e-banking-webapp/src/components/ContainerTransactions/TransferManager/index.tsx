@@ -30,6 +30,7 @@ export const TransferManager = ({
   const handleSelectSent = () => {
     setSelectedTransferType(TransferType.SENT);
   };
+
   return (
     <>
       <div className='mb-[23px] ml-[50px] flex gap-6'>

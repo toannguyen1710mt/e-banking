@@ -52,6 +52,7 @@ export const TransactionHistory = ({
       default:
         break;
     }
+
     return column;
   });
 
