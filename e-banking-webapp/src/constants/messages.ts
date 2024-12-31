@@ -19,6 +19,8 @@ export const ERROR_MESSAGES = {
   SIGN_IN_SUCCESS: 'Sign in successful.',
   SIGN_OUT_FAILED: 'Sign out failed. Please try again.',
   SIGN_OUT_SUCCESS: 'Sign out successful.',
+  ADD_CARD_SUCCESS: 'Add card successful.',
+  ADD_CARD_FAILED: 'Add card failed. Please try again.',
   CHANGE_PASSWORD_FAILED: 'Change password failed. Please try again.',
   CHANGE_PASSWORD_SUCCESS: 'Change password successful.',
   UPDATE_EMAIL_SETTINGS_SUCCESS: 'Update options email settings successful.',

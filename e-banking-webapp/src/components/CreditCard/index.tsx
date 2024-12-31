@@ -15,7 +15,7 @@ import { formatCardNumber } from '@/utils';
 import { ChipIcon, MastercardIcon, PayPassIcon } from '../icons';
 import { Text } from '../common';
 
-type VariantsCard = 'main' | 'saving' | 'checking';
+export type VariantsCard = 'main' | 'savings' | 'checkings';
 
 interface CreditCardProps {
   variant?: VariantsCard;
@@ -23,22 +23,22 @@ interface CreditCardProps {
   expireDate: string;
   cardNumber: string;
   holderName: string;
-  bankName: string;
+  bankName?: string;
 }
 
 const VARIANT_BACKGROUND: Record<VariantsCard, string> = {
   main: 'bg-gradient-to-r from-black to-[#101e24]',
-  saving: 'bg-gradient-to-t from-[#885DF5] to-[#29ABE2]',
-  checking: 'bg-gradient-to-t from-[#02CAFD] to-[#83F8A6]',
+  savings: 'bg-gradient-to-t from-[#885DF5] to-[#29ABE2]',
+  checkings: 'bg-gradient-to-t from-[#02CAFD] to-[#83F8A6]',
 };
 
 export const CreditCard = ({
   variant = 'main',
   isModal = false,
+  bankName = 'Universal Bank',
   expireDate,
   cardNumber,
   holderName,
-  bankName,
 }: CreditCardProps) => {
   const {
     cardMaxWidth,

@@ -152,11 +152,11 @@ exports[`ActionCenter component renders with correct data 1`] = `
             role="rowgroup"
           >
             <tr
-              class="group outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
+              class="group/tr outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2"
               role="row"
             >
               <th
-                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
                 data-key="id"
                 id="react-aria-:r0:-id"
                 role="columnheader"
@@ -165,7 +165,7 @@ exports[`ActionCenter component renders with correct data 1`] = `
                 Transaction ID
               </th>
               <th
-                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
                 data-key="createdAt"
                 id="react-aria-:r0:-createdAt"
                 role="columnheader"
@@ -174,7 +174,7 @@ exports[`ActionCenter component renders with correct data 1`] = `
                 Transaction Date
               </th>
               <th
-                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
                 data-key="fromAccountType"
                 id="react-aria-:r0:-fromAccountType"
                 role="columnheader"
@@ -183,7 +183,7 @@ exports[`ActionCenter component renders with correct data 1`] = `
                 From
               </th>
               <th
-                class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
+                class="group/th px-3 h-10 align-middle bg-default-100 whitespace-nowrap data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 last:rounded-none first:rounded-none text-primary-200 font-semibold"
                 data-key="amount"
                 id="react-aria-:r0:-amount"
                 role="columnheader"
