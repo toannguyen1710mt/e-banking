@@ -6,7 +6,7 @@ exports[`LoadingIndicator component Should render snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex h-[80vh] items-center justify-center text-center"
+        class="flex h-full w-full items-center justify-center text-center"
       >
         <div
           aria-label="Loading"
@@ -28,7 +28,7 @@ exports[`LoadingIndicator component Should render snapshot correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex h-[80vh] items-center justify-center text-center"
+      class="flex h-full w-full items-center justify-center text-center"
     >
       <div
         aria-label="Loading"

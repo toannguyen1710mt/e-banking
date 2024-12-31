@@ -7,13 +7,13 @@ import {
 } from '@/constants';
 
 // Interfaces
-import { ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
+import { ITransaction, TransferType } from '@/interfaces';
 
 // Components
-import { Table, Text } from '@/components';
+import { Table } from '@/components';
 
 // Utils
-import { formatNumberWithCommas } from '@/utils';
+import { formatDate, formatNumberWithCommas } from '@/utils';
 
 interface ITransferTableProps {
   transactions: ITransaction[];
@@ -26,53 +26,49 @@ export const TransferTable = ({
 }: ITransferTableProps) => {
   const isTransferReceived = transferType === TransferType.RECEIVED;
 
-  const transferTableTopContent = () => (
-    <div className='flex flex-col gap-2'>
-      <Text as='h4' size={TEXT_SIZE.SM}>
-        Transfer Request {isTransferReceived ? 'Received' : 'Sent'}
-      </Text>
-      <Text size={TEXT_SIZE.XS} className='font-normal'>
-        Manage your transfer by approving, decline request
-      </Text>
-    </div>
-  );
-
   const transferTableColumns = isTransferReceived
     ? TRANSFER_RECEIVED_TABLE_COLUMNS
     : TRANSFER_SENT_TABLE_COLUMNS;
 
   const columns = transferTableColumns.map((column) => {
-    if (column.key === 'status') {
-      column.renderCell = (item) => (
-        <>{item.statusTransaction ? 'Approved' : 'Declined'}</>
-      );
+    switch (column.key) {
+      case 'createdAt':
+        column.renderCell = (item) => <>{formatDate(item.createdAt)}</>;
+        break;
+      case 'status':
+        column.renderCell = (item) => (
+          <>{item.statusTransaction ? 'Approved' : 'Declined'}</>
+        );
+        break;
+      case 'amount':
+        column.renderCell = (item) => (
+          <>
+            {item.currencyUnit ?? '$'}
+            {formatNumberWithCommas(item.amount)}
+          </>
+        );
+        break;
+      default:
+        column.renderCell = null;
+        break;
     }
-
-    if (column.key === 'amount') {
-      column.renderCell = (item) => (
-        <>
-          {item.currencyUnit ?? '$'}
-          {formatNumberWithCommas(item.amount)}
-        </>
-      );
-    }
-
     return column;
   });
 
   return (
-    <Table
-      topContent={transferTableTopContent()}
-      columns={columns}
-      data={transactions}
-      removeWrapper
-      radius='none'
-      classNames={{
-        tbody:
-          'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
-        th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
-        thead: 'translate-y-1',
-      }}
-    />
+    <div className='[&::-webkit-scrollbar-thumb]:rounded-xxs [&::-webkit-scrollbar-thumb]:bg-lineBg max-h-[360px] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:w-1'>
+      <Table
+        columns={columns}
+        data={transactions}
+        removeWrapper
+        radius='none'
+        classNames={{
+          tbody:
+            'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
+          th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
+          thead: 'sticky top-0 z-10',
+        }}
+      />
+    </div>
   );
 };
