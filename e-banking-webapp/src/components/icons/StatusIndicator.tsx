@@ -1,6 +1,6 @@
 import { CustomClassType } from '@/interfaces';
 
-export const DotStatus = ({ customClass }: CustomClassType) => (
+export const StatusIndicator = ({ customClass }: CustomClassType) => (
   <svg
     width='6'
     height='6'

@@ -53,4 +53,4 @@ export * from './NetflixIcon';
 export * from './ElectricIcon';
 export * from './PrimeIcon';
 export * from './ImageIcon';
-export * from './DotStatus';
+export * from './StatusIndicator';

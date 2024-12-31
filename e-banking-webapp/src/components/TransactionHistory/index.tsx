@@ -13,7 +13,7 @@ import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
 import { formatDate, formatNumberWithCommas } from '@/utils';
 
 // Components
-import { DotStatus, Table, Text } from '@/components';
+import { StatusIndicator, Table, Text } from '@/components';
 
 interface ITransactionHistory {
   totalTransaction: number;
@@ -34,7 +34,7 @@ export const TransactionHistory = ({
           <div
             className={`flex items-center gap-[4px] ${item.statusTransaction ? 'text-success' : 'text-danger'}`}
           >
-            <DotStatus />
+            <StatusIndicator />
             <Text variant={TEXT_VARIANT.DEFAULT} size={TEXT_SIZE['2XS']}>
               {item.statusTransaction ? 'Success' : 'Failed'}
             </Text>
