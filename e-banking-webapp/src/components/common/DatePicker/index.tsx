@@ -15,12 +15,12 @@ interface DatePickerProps extends Omit<InputProps, 'onChange'> {
 
 export const DatePicker = (props: DatePickerProps) => {
   const { value = '', onChange, ...rest } = props;
-  const [openCalendar, setOpenCalendar] = useState(false);
+  const [isOpenCalendar, setIsOpenCalendar] = useState(false);
   const [inputValue, setInputValue] = useState<string>(value || '');
   const calendarRef = useRef<HTMLDivElement>(null);
 
   const toggleCalendar = () => {
-    setOpenCalendar((prev) => !prev);
+    setIsOpenCalendar((prev) => !prev);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +49,7 @@ export const DatePicker = (props: DatePickerProps) => {
     const month = date.month.toString().padStart(2, '0');
     const formattedDate = `${year}/${month}`;
     setInputValue(formattedDate);
-    setOpenCalendar(false);
+    setIsOpenCalendar(false);
 
     if (onChange) {
       onChange(formattedDate);
@@ -62,11 +62,11 @@ export const DatePicker = (props: DatePickerProps) => {
         calendarRef.current &&
         !calendarRef.current.contains(event.target as Node)
       ) {
-        setOpenCalendar(false);
+        setIsOpenCalendar(false);
       }
     };
 
-    if (openCalendar) {
+    if (isOpenCalendar) {
       document.addEventListener('mousedown', handleClickOutside);
     } else {
       document.removeEventListener('mousedown', handleClickOutside);
@@ -75,7 +75,7 @@ export const DatePicker = (props: DatePickerProps) => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [openCalendar]);
+  }, [isOpenCalendar]);
 
   useEffect(() => {
     if (value !== inputValue) {
@@ -104,7 +104,7 @@ export const DatePicker = (props: DatePickerProps) => {
         maxLength={7}
         {...rest}
       />
-      {openCalendar && (
+      {isOpenCalendar && (
         <div ref={calendarRef}>
           <Calendar
             showMonthAndYearPickers
