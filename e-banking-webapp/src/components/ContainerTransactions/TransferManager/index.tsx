@@ -1,19 +1,14 @@
 'use client';
 
-import { useEffect, useState, useTransition } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { Session } from 'next-auth';
-
-// Constants
-import {
-  TRANSFER_RECEIVED_TABLE_COLUMNS,
-  TRANSFER_SENT_TABLE_COLUMNS,
-} from '@/constants';
+import { Spinner } from '@nextui-org/react';
 
 // Interfaces
-import { ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
+import { IAccount, ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
 
 // Components
-import { MetricsCard, SkeletonTable, Text, TransferTable } from '@/components';
+import { MetricsCard, Text, TransferTable } from '@/components';
 
 // Services
 import { getAccountsByUserId, getTransactions } from '@/services';
@@ -33,37 +28,104 @@ export const TransferManager = ({
     TransferType.RECEIVED | TransferType.SENT
   >(TransferType.RECEIVED);
   const [transactions, setTransactions] = useState<ITransaction[]>([]);
-  const [isFetchingTransactions, startTransition] = useTransition();
+  const [accounts, setAccounts] = useState<IAccount[]>([]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [isInitialFetch, setIsInitialFetch] = useState(true);
+
+  const observerRef = useRef<HTMLDivElement>(null);
 
   const handleSelectReceived = () => {
     setSelectedTransferType(TransferType.RECEIVED);
+    setIsInitialFetch(true);
+    setHasMore(true);
   };
 
   const handleSelectSent = () => {
     setSelectedTransferType(TransferType.SENT);
+    setIsInitialFetch(true);
+    setHasMore(true);
   };
 
   useEffect(() => {
-    startTransition(async () => {
+    const fetchAccountsByUserId = async () => {
       const accounts = await getAccountsByUserId(session.user.id);
+      setAccounts(accounts);
+    };
+
+    fetchAccountsByUserId();
+  }, [session.user.id]);
+
+  const fetchTransactions = useCallback(
+    async (transferType: TransferType, isInitialFetch: boolean) => {
+      const nextPage = isInitialFetch ? 1 : currentPage + 1;
 
       const documentIds = accounts.map((account) => account.documentId);
 
       const filters =
-        selectedTransferType === TransferType.RECEIVED
+        transferType === TransferType.RECEIVED
           ? { toAccountId: { $in: documentIds } }
           : { toAccountId: { $notIn: documentIds } };
 
-      const { data } = await getTransactions({
+      const { data: transaction, meta } = await getTransactions({
         filters,
         sort: 'createdAt',
         order: 'desc',
-        pagination: { pageSize: 6 },
+        pagination: { page: nextPage },
       });
 
-      setTransactions(data);
+      setTransactions((prev) =>
+        isInitialFetch ? transaction : [...prev, ...transaction],
+      );
+      setCurrentPage(nextPage);
+      setIsInitialFetch(false);
+
+      if (meta.pagination.page >= meta.pagination.pageCount) {
+        setHasMore(false);
+      }
+    },
+    [accounts, currentPage],
+  );
+
+  const fetchMoreTransactions = useCallback(() => {
+    fetchTransactions(selectedTransferType, false);
+  }, [fetchTransactions, selectedTransferType]);
+
+  const handleObserver = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const [target] = entries;
+
+      if (target.isIntersecting && hasMore) {
+        fetchMoreTransactions();
+      }
+    },
+    [fetchMoreTransactions, hasMore],
+  );
+
+  useEffect(() => {
+    const element = observerRef.current;
+
+    const observer = new IntersectionObserver(handleObserver, {
+      threshold: 1,
     });
-  }, [session.user.id, selectedTransferType]);
+
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, [handleObserver]);
+
+  useEffect(() => {
+    if (isInitialFetch) {
+      fetchTransactions(selectedTransferType, true);
+    }
+  }, [selectedTransferType, fetchTransactions, isInitialFetch]);
 
   return (
     <>
@@ -94,32 +156,21 @@ export const TransferManager = ({
           {selectedTransferType === TransferType.RECEIVED ? 'Received' : 'Sent'}
         </Text>
         <Text size={TEXT_SIZE.XS} className='font-normal'>
-          Manage your transfer by approving, decline request
+          Manage your transfer by approving, declining request
         </Text>
       </div>
 
-      {isFetchingTransactions ? (
-        <SkeletonTable
-          columns={
-            selectedTransferType === TransferType.RECEIVED
-              ? TRANSFER_RECEIVED_TABLE_COLUMNS
-              : TRANSFER_SENT_TABLE_COLUMNS
-          }
-          numberOfRows={6}
-          removeWrapper
-          radius='none'
-          classNames={{
-            tbody:
-              'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
-            th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
-            thead: 'translate-y-1',
-          }}
-        />
-      ) : (
-        <TransferTable
-          transactions={transactions}
-          transferType={selectedTransferType}
-        />
+      <TransferTable
+        transactions={transactions}
+        transferType={selectedTransferType}
+      />
+      {hasMore && (
+        <div
+          className='mt-8 flex items-center justify-center text-center'
+          ref={observerRef}
+        >
+          <Spinner color='success' size='sm' />
+        </div>
       )}
     </>
   );

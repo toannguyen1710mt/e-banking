@@ -56,19 +56,16 @@ export const TransferTable = ({
   });
 
   return (
-    <div className='[&::-webkit-scrollbar-thumb]:rounded-xxs [&::-webkit-scrollbar-thumb]:bg-lineBg max-h-[360px] overflow-y-auto overflow-x-hidden [&::-webkit-scrollbar]:w-1'>
-      <Table
-        columns={columns}
-        data={transactions}
-        removeWrapper
-        radius='none'
-        classNames={{
-          tbody:
-            'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
-          th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
-          thead: 'sticky top-0 z-10',
-        }}
-      />
-    </div>
+    <Table
+      columns={columns}
+      data={transactions}
+      removeWrapper
+      radius='none'
+      classNames={{
+        tbody:
+          'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
+        th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
+      }}
+    />
   );
 };
