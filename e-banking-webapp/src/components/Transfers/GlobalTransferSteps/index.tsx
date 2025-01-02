@@ -109,7 +109,7 @@ export const GlobalTransferSteps = ({
         <GlobalTransferSuccess
           {...allFieldValues}
           onClose={onClose}
-          amountInUSD={amountInUSD}
+          amount={amountInUSD}
           userName='Yehudi Daud'
         />
       </WizardForm.Step>

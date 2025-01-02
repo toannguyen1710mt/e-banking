@@ -4,13 +4,13 @@
 import { Button, CheckIcon, Text } from '@/components';
 
 interface IGlobalTransferSuccess {
-  amountInUSD: string;
+  amount: string;
   userName: string;
   onClose?: () => void;
 }
 
 export const GlobalTransferSuccess = ({
-  amountInUSD,
+  amount,
   userName,
   onClose,
 }: IGlobalTransferSuccess) => {
@@ -23,7 +23,7 @@ export const GlobalTransferSuccess = ({
         Transaction was Successful
       </Text>
       <Text className='max-w-[220px] text-center text-xs font-medium text-primary-200 opacity-50'>
-        A sum of ${amountInUSD} was transferred to {userName}
+        A sum of ${amount} was transferred to {userName}
       </Text>
 
       <Button

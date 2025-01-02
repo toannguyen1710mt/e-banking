@@ -21,7 +21,7 @@ import { AccountType, GlobalType } from '@/interfaces';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Helpers / Utils
-import { formatNumberWithCommas, handleInputChange } from '@/utils';
+import { formatNumberWithCommas } from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
@@ -129,6 +129,18 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       (option) =>
         option.key !== (fromAccountTypeValue as unknown as GlobalType),
     );
+
+  const handleInputChange = (
+    value: string,
+    setRawValue: (value: string) => void,
+    onChange: (value: string) => void,
+  ) => {
+    const inputValue = value.replace(/,/g, '');
+    if (/^\d*\.?\d*$/.test(inputValue)) {
+      setRawValue(inputValue);
+      onChange(inputValue);
+    }
+  };
 
   return (
     <div className='flex w-full flex-col gap-4'>
