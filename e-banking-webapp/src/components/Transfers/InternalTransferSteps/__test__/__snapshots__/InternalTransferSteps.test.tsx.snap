@@ -82,7 +82,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   value="undefined"
                 >
                   <label
-                    class="block absolute subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-primary-200 font-medium opacity-50 group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100 group-data-[filled=true]:text-primary-200 after:text-primary-200 text-sm"
+                    class="block absolute subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-primary-200 font-medium opacity-50 group-data-[invalid=true]:!text-primary-200 group-data-[filled=true]:text-primary-200 after:text-primary-200 text-sm"
                     data-slot="label"
                     id="react-aria-:r4:"
                   >
@@ -186,7 +186,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                   value="undefined"
                 >
                   <label
-                    class="block absolute subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-primary-200 font-medium opacity-50 group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100 group-data-[filled=true]:text-primary-200 after:text-primary-200 text-sm"
+                    class="block absolute subpixel-antialiased pointer-events-none will-change-auto origin-top-left rtl:origin-top-right !duration-200 !ease-out transition-[transform,color,left,opacity] motion-reduce:transition-none pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled=true]:start-0 start-3 group-data-[filled=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden text-primary-200 font-medium opacity-50 group-data-[invalid=true]:!text-primary-200 group-data-[filled=true]:text-primary-200 after:text-primary-200 text-sm"
                     data-slot="label"
                     id="react-aria-:rc:"
                   >
@@ -232,12 +232,11 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
               />
             </div>
             <div
-              class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+              class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
               data-filled="true"
               data-filled-within="true"
               data-has-elements="true"
               data-has-label="true"
-              data-has-value="true"
               data-slot="base"
             >
               <div
@@ -245,12 +244,12 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                 data-slot="main-wrapper"
               >
                 <div
-                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default"
                   data-slot="input-wrapper"
                   style="cursor: text;"
                 >
                   <label
-                    class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100"
+                    class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
                     data-slot="label"
                     for="react-aria-:rh:"
                     id="react-aria-:ri:"
@@ -264,15 +263,13 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
                     <input
                       aria-label="Amount"
                       aria-labelledby="react-aria-:rh: react-aria-:ri:"
-                      class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-xs text-primary-200 font-medium is-filled"
-                      data-filled="true"
-                      data-filled-within="true"
+                      class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-xs text-primary-200 font-medium"
                       data-slot="input"
                       id="react-aria-:rh:"
                       inputmode="decimal"
                       placeholder=" "
                       type="text"
-                      value="0"
+                      value=""
                     />
                   </div>
                 </div>
