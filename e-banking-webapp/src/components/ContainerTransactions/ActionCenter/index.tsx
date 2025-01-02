@@ -4,18 +4,18 @@ import { Session } from 'next-auth';
 // Components
 import { Text } from '@/components';
 import { TransferManager } from '../TransferManager';
-import { getTotalTransferReceived, getTotalTransferSent } from '@/services';
 
 interface IActionCenterProps {
   session: Session;
+  totalTransfersSent: number;
+  totalTransfersReceived: number;
 }
 
-export const ActionCenter = async ({ session }: IActionCenterProps) => {
-  const totalTransferSent = await getTotalTransferSent(session.user.id);
-  const totalTransfersReceived = await getTotalTransferReceived(
-    session.user.id,
-  );
-
+export const ActionCenter = ({
+  session,
+  totalTransfersSent,
+  totalTransfersReceived,
+}: IActionCenterProps) => {
   return (
     <Card className='h-full gap-6 py-5 pl-5 pr-[38px]'>
       <CardHeader className='flex-col items-start gap-6 p-0'>
@@ -24,7 +24,7 @@ export const ActionCenter = async ({ session }: IActionCenterProps) => {
 
       <CardBody>
         <TransferManager
-          totalTransfersSent={totalTransferSent}
+          totalTransfersSent={totalTransfersSent}
           totalTransfersReceived={totalTransfersReceived}
           session={session}
         />
