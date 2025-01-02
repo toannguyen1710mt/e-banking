@@ -1,6 +1,8 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
-import { AnalyticsCardSkeleton } from '.';
+
+// Components
+import { AnalyticsCardSkeleton } from '@/components';
 
 const meta = {
   title: 'Components/Skeletons/AnalyticsCardSkeleton',

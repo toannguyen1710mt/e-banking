@@ -2,21 +2,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 // Components
-import { CreditCardSkeleton } from '@/components';
+import { ChartsSkeleton } from '@/components';
 
 const meta = {
-  title: 'Components/Skeletons/CreditCardSkeleton',
-  component: CreditCardSkeleton,
+  title: 'Components/Skeletons/ChartsSkeleton',
+  component: ChartsSkeleton,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
   decorators: [],
-} satisfies Meta<typeof CreditCardSkeleton>;
+} satisfies Meta<typeof ChartsSkeleton>;
 
 export default meta;
 
-type Story = StoryObj<typeof CreditCardSkeleton>;
+type Story = StoryObj<typeof ChartsSkeleton>;
 
 export const Default: Story = {
   args: {},

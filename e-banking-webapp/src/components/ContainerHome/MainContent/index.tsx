@@ -20,6 +20,7 @@ import {
   Text,
   ChevronDownIcon,
   AnalyticsCardSkeleton,
+  ChartsSkeleton,
 } from '@/components';
 import { TransactionHistoryHome } from '@/components/ContainerHome/TransactionHistoryHome';
 
@@ -74,8 +75,12 @@ export const MainContent = () => (
 
     {/* Charts */}
     <div className='flex gap-5'>
-      <BalanceStatistics {...MOCK_BALANCE_STATISTICS_CHART_DATA} />
-      <SpendingStatistics {...MOCK_SPENDING_STATISTIC_CHART_DATA} />
+      <Suspense fallback={<ChartsSkeleton />}>
+        <BalanceStatistics {...MOCK_BALANCE_STATISTICS_CHART_DATA} />
+      </Suspense>
+      <Suspense fallback={<ChartsSkeleton />}>
+        <SpendingStatistics {...MOCK_SPENDING_STATISTIC_CHART_DATA} />
+      </Suspense>
     </div>
 
     {/* Transaction History */}
