@@ -11,7 +11,7 @@ export const Input = extendVariants(InputNextUI, {
         errorMessage: 'text-warning',
         label: cn(
           '!text-primary-200 text-sm font-medium opacity-50',
-          'group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100',
+          'group-data-[invalid=true]:!text-primary-200',
         ),
       },
     },

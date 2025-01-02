@@ -21,7 +21,7 @@ import { AccountType, GlobalType } from '@/interfaces';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Helpers / Utils
-import { formatNumberWithCommas } from '@/utils';
+import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
@@ -135,10 +135,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     setRawValue: (value: string) => void,
     onChange: (value: string) => void,
   ) => {
-    const inputValue = value.replace(/,/g, '');
-    if (/^\d*\.?\d*$/.test(inputValue)) {
-      setRawValue(inputValue);
-      onChange(inputValue);
+    const sanitizedValue = sanitizeNumber(value);
+    if (isValidNumber(sanitizedValue)) {
+      setRawValue(sanitizedValue);
+      onChange(sanitizedValue);
     }
   };
 
@@ -161,8 +161,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.fromAccountType?.message}
-              isInvalid={!!errors.fromAccountType}
+              errorMessage={errors.fromCountryType?.message}
+              isInvalid={!!errors.fromCountryType}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);

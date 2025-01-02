@@ -24,7 +24,7 @@ import { useWizardFormContext } from '@/context';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Utils
-import { formatNumberWithCommas } from '@/utils';
+import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
 
 type FormValues = keyof z.infer<typeof InternalTransferFormSchema>;
 
@@ -40,6 +40,7 @@ export const InternalTransferForm = ({
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
+  const [rawAmount, setRawAmount] = useState<string>('');
 
   const hiddenFields: FormValues[] = [
     'fromAccountId',
@@ -168,6 +169,18 @@ export const InternalTransferForm = ({
     fetchBalanceReceive();
   }, [toAccountTypeValue, session.user.id, setValue]);
 
+  const handleInputChange = (
+    value: string,
+    setRawValue: (value: string) => void,
+    onChange: (value: string) => void,
+  ) => {
+    const sanitizedValue = sanitizeNumber(value);
+    if (isValidNumber(sanitizedValue)) {
+      setRawValue(sanitizedValue);
+      onChange(sanitizedValue);
+    }
+  };
+
   return (
     <div className='flex flex-col gap-4'>
       {/* Title */}
@@ -282,10 +295,7 @@ export const InternalTransferForm = ({
       <Controller
         control={control}
         name='internalTransfer.amount'
-        render={({
-          field: { onChange, onBlur, value },
-          fieldState: { error },
-        }) => (
+        render={({ field: { onChange, onBlur }, fieldState: { error } }) => (
           <Input
             inputMode='decimal'
             label='Amount'
@@ -295,10 +305,12 @@ export const InternalTransferForm = ({
               inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
-            value={String(value)}
+            value={rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''}
             errorMessage={error?.message}
             isInvalid={!!error?.message}
-            onChange={onChange}
+            onChange={(e) =>
+              handleInputChange(e.target.value, setRawAmount, onChange)
+            }
             onBlur={onBlur}
           />
         )}

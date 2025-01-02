@@ -35,7 +35,7 @@ export const Select = ({
         base: classNames?.base,
         label: cn(
           'text-primary-200 text-xs font-medium opacity-50',
-          'group-data-[invalid=true]:!text-warning group-data-[invalid=true]:opacity-100',
+          'group-data-[invalid=true]:!text-primary-200',
           'group-data-[filled=true]:text-primary-200 after:text-primary-200',
           classNames?.label,
         ),
