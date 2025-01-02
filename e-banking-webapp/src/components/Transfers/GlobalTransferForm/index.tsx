@@ -62,6 +62,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
+  const [rawAmount, setRawAmount] = useState<string>('');
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
@@ -235,7 +236,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='amount'
-        render={({ field: { onChange, onBlur, value } }) => {
+        render={({ field: { onChange, onBlur } }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -258,10 +259,18 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                value={String(value)}
+                value={formatNumberWithCommas(
+                  rawAmount ? Number(rawAmount) : 0,
+                )}
+                onChange={(e) => {
+                  const inputValue = e.target.value.replace(/,/g, '');
+                  if (/^\d*\.?\d*$/.test(inputValue)) {
+                    setRawAmount(inputValue);
+                    onChange(inputValue);
+                  }
+                }}
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
-                onChange={onChange}
                 onBlur={onBlur}
               />
             </div>
