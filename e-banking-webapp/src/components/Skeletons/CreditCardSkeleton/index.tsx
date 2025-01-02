@@ -1,7 +1,8 @@
+// Libs
 import { Card, Skeleton } from '@nextui-org/react';
 
 export const CreditCardSkeleton = () => (
-  <Card className='w-[290px] space-y-5 p-4' radius='lg'>
+  <Card className='w-[290px] space-y-5 p-4' radius='sm'>
     <Skeleton className='rounded-lg'>
       <div className='h-4 rounded-lg bg-default-300' />
     </Skeleton>
