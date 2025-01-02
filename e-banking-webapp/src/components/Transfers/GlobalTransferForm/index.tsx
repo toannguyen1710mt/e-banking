@@ -161,8 +161,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.fromAccountType?.message}
-              isInvalid={!!errors.fromAccountType}
+              errorMessage={errors.fromCountryType?.message}
+              isInvalid={!!errors.fromCountryType}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
