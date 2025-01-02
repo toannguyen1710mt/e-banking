@@ -1,3 +1,6 @@
+// Libs
+import { Suspense } from 'react';
+
 // Mocks
 import {
   ANALYTICS_DATA,
@@ -16,6 +19,7 @@ import {
   MenuDropdown,
   Text,
   ChevronDownIcon,
+  AnalyticsCardSkeleton,
 } from '@/components';
 import { TransactionHistoryHome } from '@/components/ContainerHome/TransactionHistoryHome';
 
@@ -45,18 +49,27 @@ export const MainContent = () => (
 
     {/* Analytics Cards */}
     <div className='flex gap-4'>
-      {ANALYTICS_DATA.map(
-        ({ title, subtitle, isPositive, amount, percentageChange }, index) => (
-          <AnalyticsCard
-            key={index}
-            title={title}
-            subtitle={subtitle}
-            isPositive={isPositive}
-            amount={amount}
-            percentageChange={percentageChange}
-          />
-        ),
-      )}
+      <Suspense
+        fallback={ANALYTICS_DATA.map((_, index) => (
+          <AnalyticsCardSkeleton key={`skeleton-${index}`} />
+        ))}
+      >
+        {ANALYTICS_DATA.map(
+          (
+            { title, subtitle, isPositive, amount, percentageChange },
+            index,
+          ) => (
+            <AnalyticsCard
+              key={index}
+              title={title}
+              subtitle={subtitle}
+              isPositive={isPositive}
+              amount={amount}
+              percentageChange={percentageChange}
+            />
+          ),
+        )}
+      </Suspense>
     </div>
 
     {/* Charts */}
