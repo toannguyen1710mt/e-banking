@@ -53,12 +53,11 @@ export const TransactionHistory = ({
         column.renderCell = null;
         break;
     }
-
     return column;
   });
 
   return (
-    <Card className='gap-5 rounded-md px-[17px] pt-[15px]'>
+    <Card className='grow gap-5 rounded-md px-[17px] pt-[15px]'>
       <CardHeader className='flex flex-col items-start gap-1 p-0'>
         <Text size={TEXT_SIZE.SM} className='font-semibold !text-navyBlue'>
           Transaction History ({totalTransaction})

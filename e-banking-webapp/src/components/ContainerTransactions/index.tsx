@@ -15,8 +15,8 @@ interface IContainerTransactionsProps {
 export const ContainerTransactions = ({
   session,
 }: IContainerTransactionsProps) => (
-  <div className='flex w-full gap-[38px] px-[34px]'>
-    <div className='w-2/3 pt-[17px]'>
+  <div className='flex w-full gap-8'>
+    <div className='flex w-2/3 flex-col'>
       <Text
         as='h4'
         variant={TEXT_VARIANT.DEFAULT}
@@ -44,8 +44,8 @@ export const ContainerTransactions = ({
       />
     </div>
 
-    <div className='w-1/3 pt-6'>
-      <ActionCenter />
+    <div className='w-1/3'>
+      <ActionCenter session={session} />
     </div>
   </div>
 );

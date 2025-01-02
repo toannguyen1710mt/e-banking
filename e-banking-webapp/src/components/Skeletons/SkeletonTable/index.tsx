@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
   Skeleton,
+  TableProps,
 } from '@nextui-org/react';
 
 // Components
@@ -16,7 +17,7 @@ import { CustomTable } from '@/components';
 // Interfaces
 import { Column } from '@/interfaces';
 
-interface ISkeletonTableProps<T> {
+interface ISkeletonTableProps<T> extends TableProps {
   columns: Column<T>[];
   numberOfRows?: number;
 }
@@ -24,9 +25,10 @@ interface ISkeletonTableProps<T> {
 export const SkeletonTable = <T,>({
   columns,
   numberOfRows = 10,
+  ...tableProps
 }: ISkeletonTableProps<T>) => {
   return (
-    <CustomTable aria-label='Skeleton Table'>
+    <CustomTable aria-label='Skeleton Table' {...tableProps}>
       <TableHeader>
         {columns.map((column) => (
           <TableColumn key={column.key}>{column.title}</TableColumn>

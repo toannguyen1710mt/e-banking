@@ -5,21 +5,6 @@ exports[`TransferTable component should match snapshot 1`] = `
   <div
     class="flex flex-col relative gap-4 w-full"
   >
-    <div
-      class="flex flex-col gap-2"
-    >
-      <h4
-        class="text-primary-200 text-sm font-medium"
-      >
-        Transfer Request 
-        Received
-      </h4>
-      <p
-        class="text-primary-200 text-xs font-normal"
-      >
-        Manage your transfer by approving, decline request
-      </p>
-    </div>
     <table
       aria-describedby=""
       class="min-w-full h-auto table-auto w-full"
@@ -28,7 +13,7 @@ exports[`TransferTable component should match snapshot 1`] = `
       tabindex="0"
     >
       <thead
-        class="[&>tr]:first:rounded-lg translate-y-1"
+        class="[&>tr]:first:rounded-lg"
         role="rowgroup"
       >
         <tr
@@ -108,9 +93,7 @@ exports[`TransferTable component should match snapshot 1`] = `
             role="gridcell"
             tabindex="-1"
           >
-            <span>
-              01/12/2024
-            </span>
+            12/01/2024
           </td>
           <td
             class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
@@ -158,9 +141,7 @@ exports[`TransferTable component should match snapshot 1`] = `
             role="gridcell"
             tabindex="-1"
           >
-            <span>
-              02/12/2024
-            </span>
+            12/02/2024
           </td>
           <td
             class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
@@ -207,9 +188,7 @@ exports[`TransferTable component should match snapshot 1`] = `
             role="gridcell"
             tabindex="-1"
           >
-            <span>
-              03/12/2024
-            </span>
+            12/03/2024
           </td>
           <td
             class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
@@ -257,9 +236,7 @@ exports[`TransferTable component should match snapshot 1`] = `
             role="gridcell"
             tabindex="-1"
           >
-            <span>
-              04/12/2024
-            </span>
+            12/04/2024
           </td>
           <td
             class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-xs text-foreground-100 font-medium"
