@@ -43,7 +43,7 @@ export const Button = extendVariants(ButtonNextUI, {
       base: 'w-[168px] h-10 py-3 text-xs font-semibold',
       lg: 'w-full max-h-10 py-2.5 text-sm',
       xl: 'w-[271px] h-14 py-4 font-medium',
-      xxl: 'px-[14px] py-[10px] text-xs font-semibold',
+      '2xl': 'px-[14px] py-[10px] text-xs font-semibold',
     },
   },
   defaultVariants: {
