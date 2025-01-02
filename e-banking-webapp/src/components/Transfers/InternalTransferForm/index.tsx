@@ -27,6 +27,7 @@ import { getAccountInfoByAccountType } from '@/services';
 import { formatNumberWithCommas } from '@/utils';
 
 type FormValues = keyof z.infer<typeof InternalTransferFormSchema>;
+
 interface IInternalTransferFormProps {
   session: Session;
 }
@@ -35,11 +36,7 @@ export const InternalTransferForm = ({
   session,
 }: IInternalTransferFormProps) => {
   const {
-    form: {
-      control,
-      formState: { errors },
-      setValue,
-    },
+    form: { control, setValue },
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
@@ -57,12 +54,12 @@ export const InternalTransferForm = ({
 
   const fromAccountTypeValue = useWatch({
     control,
-    name: 'fromAccountType',
+    name: 'internalTransfer.fromAccountType',
   });
 
   const toAccountTypeValue = useWatch({
     control,
-    name: 'toAccountType',
+    name: 'internalTransfer.toAccountType',
   });
 
   // States for fetching
@@ -172,7 +169,7 @@ export const InternalTransferForm = ({
   }, [toAccountTypeValue, session.user.id, setValue]);
 
   return (
-    <form className='flex flex-col gap-4'>
+    <div className='flex flex-col gap-4'>
       {/* Title */}
       <Text as='h4' className='text-xs font-medium'>
         Send Money Across Your eWallet Accounts
@@ -181,8 +178,11 @@ export const InternalTransferForm = ({
       {/* Account receive */}
       <Controller
         control={control}
-        name='toAccountType'
-        render={({ field: { onChange, onBlur, value } }) => {
+        name='internalTransfer.toAccountType'
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => {
           const filteredOptions = TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
             (option) => option.key !== fromAccountTypeValue,
           );
@@ -195,8 +195,8 @@ export const InternalTransferForm = ({
                 options={filteredOptions}
                 classNames={{ label: 'text-sm' }}
                 value={String(value)}
-                errorMessage={errors.toAccountType?.message}
-                isInvalid={!!errors.toAccountType}
+                errorMessage={error?.message}
+                isInvalid={!!error?.message}
                 onSelectionChange={(keys) => {
                   const selectedValue = String(Array.from(keys)[0]);
                   onChange(selectedValue);
@@ -230,8 +230,11 @@ export const InternalTransferForm = ({
       {/* Account send */}
       <Controller
         control={control}
-        name='fromAccountType'
-        render={({ field: { onChange, onBlur, value } }) => {
+        name='internalTransfer.fromAccountType'
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => {
           const filteredOptions = TRANSFER_FORM_ACCOUNT_OPTIONS.filter(
             (option) => option.key !== toAccountTypeValue,
           );
@@ -244,8 +247,8 @@ export const InternalTransferForm = ({
                 options={filteredOptions}
                 classNames={{ label: 'text-sm' }}
                 value={String(value)}
-                errorMessage={errors.fromAccountType?.message}
-                isInvalid={!!errors.fromAccountType}
+                errorMessage={error?.message}
+                isInvalid={!!error?.message}
                 onSelectionChange={(keys) => {
                   const selectedValue = String(Array.from(keys)[0]);
                   onChange(selectedValue);
@@ -278,8 +281,11 @@ export const InternalTransferForm = ({
       {/* Amount */}
       <Controller
         control={control}
-        name='amount'
-        render={({ field: { onChange, onBlur, value } }) => (
+        name='internalTransfer.amount'
+        render={({
+          field: { onChange, onBlur, value },
+          fieldState: { error },
+        }) => (
           <Input
             inputMode='decimal'
             label='Amount'
@@ -290,8 +296,8 @@ export const InternalTransferForm = ({
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
             value={String(value)}
-            errorMessage={errors.amount?.message}
-            isInvalid={!!errors.amount}
+            errorMessage={error?.message}
+            isInvalid={!!error?.message}
             onChange={onChange}
             onBlur={onBlur}
           />
@@ -311,7 +317,7 @@ export const InternalTransferForm = ({
       ))}
 
       <Button
-        type='submit'
+        type='button'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         isDisabled={!validateStep()}
@@ -319,6 +325,6 @@ export const InternalTransferForm = ({
       >
         Transfer Funds
       </Button>
-    </form>
+    </div>
   );
 };
