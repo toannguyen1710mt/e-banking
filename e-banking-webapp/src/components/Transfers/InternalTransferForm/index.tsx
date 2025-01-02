@@ -40,6 +40,7 @@ export const InternalTransferForm = ({
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
+  const [rawAmount, setRawAmount] = useState<string>('');
 
   const hiddenFields: FormValues[] = [
     'fromAccountId',
@@ -168,6 +169,18 @@ export const InternalTransferForm = ({
     fetchBalanceReceive();
   }, [toAccountTypeValue, session.user.id, setValue]);
 
+  const handleInputChange = (
+    value: string,
+    setRawValue: (value: string) => void,
+    onChange: (value: string) => void,
+  ) => {
+    const inputValue = value.replace(/,/g, '');
+    if (/^\d*\.?\d*$/.test(inputValue)) {
+      setRawValue(inputValue);
+      onChange(inputValue);
+    }
+  };
+
   return (
     <div className='flex flex-col gap-4'>
       {/* Title */}
@@ -283,7 +296,7 @@ export const InternalTransferForm = ({
         control={control}
         name='internalTransfer.amount'
         render={({
-          field: { onChange, onBlur, value },
+          field: { onChange, onBlur },
           fieldState: { error },
         }) => (
           <Input
@@ -295,10 +308,12 @@ export const InternalTransferForm = ({
               inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
-            value={String(value)}
+            value={rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''}
             errorMessage={error?.message}
             isInvalid={!!error?.message}
-            onChange={onChange}
+            onChange={(e) =>
+              handleInputChange(e.target.value, setRawAmount, onChange)
+            }
             onBlur={onBlur}
           />
         )}
