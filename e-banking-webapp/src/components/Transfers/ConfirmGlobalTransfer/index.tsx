@@ -67,7 +67,7 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
           color='navyBlue'
           size='xxl'
           onClick={onSubmit}
-          isDisabled={isPending}
+          isLoading={isPending}
         >
           Proceed
         </Button>

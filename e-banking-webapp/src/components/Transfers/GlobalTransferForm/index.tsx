@@ -62,6 +62,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
+  const [rawAmount, setRawAmount] = useState<string>('');
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
@@ -111,16 +112,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
 
   const countryCode = () => {
-    const code =
+    return (
       OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
         (option) => option.key === fromCountryType,
-      )?.label || '';
-
-    if (code) {
-      localStorage.setItem('selectedCountryCode', code);
-    }
-
-    return code;
+      )?.label || ''
+    );
   };
 
   const filteredFromAccountOptions = () =>
@@ -133,6 +129,18 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       (option) =>
         option.key !== (fromAccountTypeValue as unknown as GlobalType),
     );
+
+  const handleInputChange = (
+    value: string,
+    setRawValue: (value: string) => void,
+    onChange: (value: string) => void,
+  ) => {
+    const inputValue = value.replace(/,/g, '');
+    if (/^\d*\.?\d*$/.test(inputValue)) {
+      setRawValue(inputValue);
+      onChange(inputValue);
+    }
+  };
 
   return (
     <div className='flex w-full flex-col gap-4'>
@@ -235,7 +243,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='amount'
-        render={({ field: { onChange, onBlur, value } }) => {
+        render={({ field: { onChange, onBlur } }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -258,10 +266,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                value={String(value)}
+                value={
+                  rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''
+                }
+                onChange={(e) =>
+                  handleInputChange(e.target.value, setRawAmount, onChange)
+                }
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
-                onChange={onChange}
                 onBlur={onBlur}
               />
             </div>

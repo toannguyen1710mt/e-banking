@@ -41,7 +41,7 @@ export const OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL = [
   },
   {
     key: GlobalType.UK,
-    label: 'GPB',
+    label: 'GBP',
   },
 ];
 

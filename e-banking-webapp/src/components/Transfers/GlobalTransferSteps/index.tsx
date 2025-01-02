@@ -71,7 +71,7 @@ export const GlobalTransferSteps = ({
     const payload: IAccountPayloadData = {
       name: fromCardName,
       accountNumber: fromAccountNumber,
-      balance: fromAccountBalance - Number(amount),
+      balance: fromAccountBalance - Number(amountInUSD),
       type: fromAccountType,
       currency: '$',
     };
@@ -109,6 +109,7 @@ export const GlobalTransferSteps = ({
         <GlobalTransferSuccess
           {...allFieldValues}
           onClose={onClose}
+          amount={amountInUSD}
           userName='Yehudi Daud'
         />
       </WizardForm.Step>
