@@ -27,6 +27,8 @@ export const ContainerTransactions = async ({
   );
 
   const transactionHistory = await getTransactionsByUserId(session.user.id, {
+    sort: 'createdAt',
+    order: 'desc',
     pagination: {
       pageSize: 6,
     },

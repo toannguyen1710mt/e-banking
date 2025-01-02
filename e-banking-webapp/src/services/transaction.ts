@@ -57,7 +57,7 @@ export const getTransactionsByUserId = async (
   const baseEndpoint = `${API_ENDPOINTS.TRANSACTIONS}?populate=account&[filters][account][documentId][$containsi]=${documentIds[0]}&[filters][account][documentId][$containsi]=${documentIds[1]}&[filters][account][documentId][$containsi]=${documentIds[2]}`;
 
   const requestEndpoint = queryString
-    ? `${baseEndpoint}?${queryString}`
+    ? `${baseEndpoint}&${queryString}`
     : baseEndpoint;
 
   const { data } = await httpClient.get<SuccessResponse<ITransaction[]>>(
