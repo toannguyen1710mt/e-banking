@@ -1,9 +1,6 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
 
-// Interfaces
-import { AccountType } from '@/interfaces';
-
 // Components
 import { InternalTransferSuccess } from '@/components';
 
@@ -22,9 +19,6 @@ type Story = StoryObj<typeof InternalTransferSuccess>;
 
 export const Default: Story = {
   args: {
-    amount: 15000,
-    fromAccountType: AccountType.MAIN,
-    toAccountType: AccountType.SAVINGS,
     onClose: () => {},
   },
 };

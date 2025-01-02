@@ -5,7 +5,7 @@ import { useTransition } from 'react';
 import { z } from 'zod';
 
 // Interfaces
-import { AccountType, CurrencyUnit } from '@/interfaces';
+import { CurrencyUnit } from '@/interfaces';
 
 // Components
 import { Button, Text } from '@/components';
@@ -20,18 +20,12 @@ import { useWizardFormContext } from '@/context';
 import { InternalTransferFormSchema } from '@/schemas';
 
 interface IConfirmInternalTransferProps<T extends z.ZodType> {
-  amount: number;
   currencyUnit?: CurrencyUnit;
-  fromAccountType: AccountType;
-  toAccountType: AccountType;
   submitHandler: (data: z.infer<T>) => void;
 }
 
 export const ConfirmInternalTransfer = <T extends z.ZodType>({
-  amount,
   currencyUnit = '$',
-  fromAccountType,
-  toAccountType,
   submitHandler,
 }: IConfirmInternalTransferProps<T>) => {
   const {
@@ -41,6 +35,8 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
 
   const [isPending, startTransition] = useTransition();
+
+  const values = getValues();
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,11 +54,12 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
         You are about to transfer
       </Text>
       <Text as='span' className='text-4xl font-bold'>
-        {currencyUnit} {formatNumberWithCommas(amount)}
+        {currencyUnit} {formatNumberWithCommas(values.internalTransfer.amount)}
       </Text>
       <Text className='max-w-[250px] text-center text-xs font-medium text-primary-200 opacity-50'>
-        From your {fromAccountType} wallet to your {toAccountType} wallet, this
-        action cannot be undone once approved...
+        From your {values.internalTransfer.fromAccountType} wallet to your&nbsp;
+        {values.internalTransfer.toAccountType} wallet, this action cannot be
+        undone once approved...
       </Text>
       <div className='mt-8 flex gap-8'>
         <Button color='tertiary' radius='xs' size='md' onClick={onPrevStep}>

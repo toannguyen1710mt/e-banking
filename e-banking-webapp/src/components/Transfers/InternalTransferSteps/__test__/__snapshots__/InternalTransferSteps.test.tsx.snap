@@ -13,9 +13,9 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
         style="opacity: 0;"
       >
         <div
-          name="transfer"
+          name="internalTransfer"
         >
-          <form
+          <div
             class="flex flex-col gap-4"
           >
             <h4
@@ -551,8 +551,10 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
               </div>
             </div>
             <button
-              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent rounded-3xl w-full max-h-10 py-2.5 text-sm bg-primary-200 font-semibold text-foreground-200"
-              type="submit"
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent rounded-3xl w-full max-h-10 py-2.5 text-sm bg-primary-200 font-semibold text-foreground-200"
+              data-disabled="true"
+              disabled=""
+              type="button"
             >
               <svg
                 fill="none"
@@ -593,7 +595,7 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
               </svg>
               Transfer Funds
             </button>
-          </form>
+          </div>
         </div>
       </div>
     </div>

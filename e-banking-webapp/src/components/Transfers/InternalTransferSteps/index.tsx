@@ -37,28 +37,26 @@ export const InternalTransferSteps = ({
   const form = useForm<FormValues>({
     mode: 'onBlur',
     defaultValues: {
-      fromAccountType: undefined,
-      toAccountType: undefined,
-      amount: 0,
+      internalTransfer: {
+        fromAccountType: undefined,
+        toAccountType: undefined,
+        amount: 0,
+      },
     },
     resolver: zodResolver(InternalTransferFormSchema),
   });
 
-  const allFieldValues = form.watch();
-
   const submitHandler = async (data: FormValues) => {
     const {
+      internalTransfer: { fromAccountType, toAccountType, amount },
       fromAccountId,
       toAccountId,
-      fromAccountType,
-      toAccountType,
       fromAccountNumber,
       toAccountNumber,
       fromAccountBalance,
       toAccountBalance,
       fromCardName,
       toCardName,
-      amount,
     } = data;
 
     try {
@@ -102,7 +100,7 @@ export const InternalTransferSteps = ({
       form={form}
       className='flex grow flex-col'
     >
-      <WizardForm.Step name='transfer' key='transfer'>
+      <WizardForm.Step name='internalTransfer' key='internalTransfer'>
         <InternalTransferForm session={session} />
       </WizardForm.Step>
 
@@ -111,10 +109,7 @@ export const InternalTransferSteps = ({
         key='confirm'
         className='flex grow flex-col items-center justify-center'
       >
-        <ConfirmInternalTransfer
-          {...allFieldValues}
-          submitHandler={submitHandler}
-        />
+        <ConfirmInternalTransfer submitHandler={submitHandler} />
       </WizardForm.Step>
 
       <WizardForm.Step
@@ -122,7 +117,7 @@ export const InternalTransferSteps = ({
         key='success'
         className='flex grow flex-col items-center justify-center'
       >
-        <InternalTransferSuccess {...allFieldValues} onClose={onClose} />
+        <InternalTransferSuccess onClose={onClose} />
       </WizardForm.Step>
     </WizardForm.Root>
   );
