@@ -21,7 +21,7 @@ import { AccountType, GlobalType } from '@/interfaces';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Helpers / Utils
-import { formatNumberWithCommas } from '@/utils';
+import { formatNumberWithCommas, handleInputChange } from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
@@ -112,16 +112,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
 
   const countryCode = () => {
-    const code =
+    return (
       OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL.find(
         (option) => option.key === fromCountryType,
-      )?.label || '';
-
-    if (code) {
-      localStorage.setItem('selectedCountryCode', code);
-    }
-
-    return code;
+      )?.label || ''
+    );
   };
 
   const filteredFromAccountOptions = () =>
@@ -259,16 +254,12 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                value={formatNumberWithCommas(
-                  rawAmount ? Number(rawAmount) : 0,
-                )}
-                onChange={(e) => {
-                  const inputValue = e.target.value.replace(/,/g, '');
-                  if (/^\d*\.?\d*$/.test(inputValue)) {
-                    setRawAmount(inputValue);
-                    onChange(inputValue);
-                  }
-                }}
+                value={
+                  rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''
+                }
+                onChange={(e) =>
+                  handleInputChange(e.target.value, setRawAmount, onChange)
+                }
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
                 onBlur={onBlur}
