@@ -1,3 +1,6 @@
+// Libs
+import { Suspense } from 'react';
+
 // Mocks
 import {
   ANALYTICS_DATA,
@@ -16,6 +19,8 @@ import {
   MenuDropdown,
   Text,
   ChevronDownIcon,
+  AnalyticsCardSkeleton,
+  ChartsSkeleton,
 } from '@/components';
 import { TransactionHistoryHome } from '@/components/ContainerHome/TransactionHistoryHome';
 
@@ -45,24 +50,37 @@ export const MainContent = () => (
 
     {/* Analytics Cards */}
     <div className='flex gap-4'>
-      {ANALYTICS_DATA.map(
-        ({ title, subtitle, isPositive, amount, percentageChange }, index) => (
-          <AnalyticsCard
-            key={index}
-            title={title}
-            subtitle={subtitle}
-            isPositive={isPositive}
-            amount={amount}
-            percentageChange={percentageChange}
-          />
-        ),
-      )}
+      <Suspense
+        fallback={ANALYTICS_DATA.map((_, index) => (
+          <AnalyticsCardSkeleton key={`skeleton-${index}`} />
+        ))}
+      >
+        {ANALYTICS_DATA.map(
+          (
+            { title, subtitle, isPositive, amount, percentageChange },
+            index,
+          ) => (
+            <AnalyticsCard
+              key={index}
+              title={title}
+              subtitle={subtitle}
+              isPositive={isPositive}
+              amount={amount}
+              percentageChange={percentageChange}
+            />
+          ),
+        )}
+      </Suspense>
     </div>
 
     {/* Charts */}
     <div className='flex gap-5'>
-      <BalanceStatistics {...MOCK_BALANCE_STATISTICS_CHART_DATA} />
-      <SpendingStatistics {...MOCK_SPENDING_STATISTIC_CHART_DATA} />
+      <Suspense fallback={<ChartsSkeleton />}>
+        <BalanceStatistics {...MOCK_BALANCE_STATISTICS_CHART_DATA} />
+      </Suspense>
+      <Suspense fallback={<ChartsSkeleton />}>
+        <SpendingStatistics {...MOCK_SPENDING_STATISTIC_CHART_DATA} />
+      </Suspense>
     </div>
 
     {/* Transaction History */}
