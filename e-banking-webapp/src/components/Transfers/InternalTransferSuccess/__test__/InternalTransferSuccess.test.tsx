@@ -1,16 +1,24 @@
 // Libs
 import { render } from '@testing-library/react';
 
-// Interfaces
-import { AccountType } from '@/interfaces';
-
 // Components
 import { InternalTransferSuccess } from '@/components';
 
+jest.mock('@/context', () => ({
+  useWizardFormContext: jest.fn().mockReturnValue({
+    form: {
+      getValues: jest.fn().mockReturnValue({
+        internalTransfer: {
+          amount: 100,
+          fromAccountType: 'Main',
+          toAccountType: 'Savings',
+        },
+      }),
+    },
+  }),
+}));
+
 const mockProps = {
-  amount: 15000,
-  fromAccountType: AccountType.MAIN,
-  toAccountType: AccountType.SAVINGS,
   onClose: jest.fn(),
 };
 
