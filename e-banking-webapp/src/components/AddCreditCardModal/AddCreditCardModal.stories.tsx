@@ -2,6 +2,9 @@
 import { useEffect, useState } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 
+// Mocks
+import { MOCK_SESSION_DATA } from '@/mocks';
+
 // Components
 import { AddCreditCardModal } from '@/components';
 
@@ -21,6 +24,7 @@ type Story = StoryObj<typeof AddCreditCardModal>;
 
 export const Default: Story = {
   args: {
+    session: MOCK_SESSION_DATA,
     isOpen: true,
     onClose: () => {},
   },
