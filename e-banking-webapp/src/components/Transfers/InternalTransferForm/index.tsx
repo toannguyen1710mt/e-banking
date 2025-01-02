@@ -24,7 +24,7 @@ import { useWizardFormContext } from '@/context';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Utils
-import { formatNumberWithCommas, isValidNumber } from '@/utils';
+import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
 
 type FormValues = keyof z.infer<typeof InternalTransferFormSchema>;
 
@@ -174,8 +174,8 @@ export const InternalTransferForm = ({
     setRawValue: (value: string) => void,
     onChange: (value: string) => void,
   ) => {
-    if (isValidNumber(value)) {
-      const sanitizedValue = value.replace(/,/g, '');
+    const sanitizedValue = sanitizeNumber(value);
+    if (isValidNumber(sanitizedValue)) {
       setRawValue(sanitizedValue);
       onChange(sanitizedValue);
     }

@@ -21,7 +21,7 @@ import { AccountType, GlobalType } from '@/interfaces';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Helpers / Utils
-import { formatNumberWithCommas, isValidNumber } from '@/utils';
+import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
@@ -135,8 +135,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     setRawValue: (value: string) => void,
     onChange: (value: string) => void,
   ) => {
-    if (isValidNumber(value)) {
-      const sanitizedValue = value.replace(/,/g, '');
+    const sanitizedValue = sanitizeNumber(value);
+    if (isValidNumber(sanitizedValue)) {
       setRawValue(sanitizedValue);
       onChange(sanitizedValue);
     }
