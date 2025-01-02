@@ -35,7 +35,7 @@ export const ContainerTransactions = ({
       </Text>
 
       <div className='mb-[23px] max-w-[659px]'>
-        <InformationCard />
+        <InformationCard session={session} />
       </div>
 
       <TransactionHistory

@@ -20,9 +20,9 @@ export type VariantsCard = 'main' | 'savings' | 'checkings';
 interface CreditCardProps {
   variant?: VariantsCard;
   isModal?: boolean;
-  expireDate: string;
-  cardNumber: string;
-  holderName: string;
+  expireDate?: string;
+  cardNumber?: string;
+  holderName?: string;
   bankName?: string;
 }
 
@@ -36,9 +36,9 @@ export const CreditCard = ({
   variant = 'main',
   isModal = false,
   bankName = 'Universal Bank',
-  expireDate,
-  cardNumber,
-  holderName,
+  expireDate = '--/--',
+  cardNumber = '',
+  holderName = '',
 }: CreditCardProps) => {
   const {
     cardMaxWidth,
