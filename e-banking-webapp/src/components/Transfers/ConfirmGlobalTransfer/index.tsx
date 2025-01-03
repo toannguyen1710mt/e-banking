@@ -59,13 +59,13 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
         action cannot be undone once approved...
       </Text>
       <div className='mt-10 flex gap-6'>
-        <Button radius='xs' color='tertiary' size='2xl' onClick={onPrevStep}>
+        <Button radius='xs' color='tertiary' size='md' onClick={onPrevStep}>
           Cancel
         </Button>
         <Button
           radius='xs'
           color='navyBlue'
-          size='2xl'
+          size='md'
           onClick={onSubmit}
           isLoading={isPending}
         >

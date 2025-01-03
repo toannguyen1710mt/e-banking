@@ -132,12 +132,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const handleInputChange = (
     value: string,
-    setRawValue: (value: string) => void,
     onChange: (value: string) => void,
   ) => {
     const sanitizedValue = sanitizeNumber(value);
     if (isValidNumber(sanitizedValue)) {
-      setRawValue(sanitizedValue);
+      setRawAmount(sanitizedValue);
       onChange(sanitizedValue);
     }
   };
@@ -269,9 +268,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 value={
                   rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''
                 }
-                onChange={(e) =>
-                  handleInputChange(e.target.value, setRawAmount, onChange)
-                }
+                onChange={(e) => handleInputChange(e.target.value, onChange)}
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
                 onBlur={onBlur}
