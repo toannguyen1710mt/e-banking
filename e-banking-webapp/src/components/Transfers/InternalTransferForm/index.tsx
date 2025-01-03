@@ -185,6 +185,19 @@ export const InternalTransferForm = ({
     }
   };
 
+  const handleBlurAmountInput = () => {
+    if (balanceSend) {
+      if (amountValue > balanceSend) {
+        setError('internalTransfer.amount', {
+          type: 'validate',
+          message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
+        });
+      } else {
+        clearErrors('internalTransfer.amount');
+      }
+    }
+  };
+
   return (
     <div className='flex flex-col gap-4'>
       {/* Title */}
@@ -321,18 +334,7 @@ export const InternalTransferForm = ({
             onChange={(e) =>
               handleInputChange(e.target.value.replace(/^\$/, ''), onChange)
             }
-            onBlur={() => {
-              if (balanceSend) {
-                if (amountValue > balanceSend) {
-                  setError('internalTransfer.amount', {
-                    type: 'validate',
-                    message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
-                  });
-                } else {
-                  clearErrors('internalTransfer.amount');
-                }
-              }
-            }}
+            onBlur={handleBlurAmountInput}
           />
         )}
       />

@@ -159,6 +159,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     }
   };
 
+  const handleBlurAmountInput = () => {
+    if (balanceSend) {
+      if (amountValueInUSD > balanceSend) {
+        setError('amount', {
+          type: 'validate',
+          message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
+        });
+      } else {
+        clearErrors('amount');
+      }
+    }
+  };
+
   return (
     <div className='flex w-full flex-col gap-4'>
       {/* Title */}
@@ -294,18 +307,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 onChange={(e) => handleInputChange(e.target.value, onChange)}
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
-                onBlur={() => {
-                  if (balanceSend) {
-                    if (amountValueInUSD > balanceSend) {
-                      setError('amount', {
-                        type: 'validate',
-                        message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
-                      });
-                    } else {
-                      clearErrors('amount');
-                    }
-                  }
-                }}
+                onBlur={handleBlurAmountInput}
               />
             </div>
           );
