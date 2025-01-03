@@ -47,19 +47,14 @@ export const AuthContentWrapper = ({
         alt='Logo EBanking'
       />
 
-      <div className='mb-7'>
-        <Text
-          as='h1'
-          size={TEXT_SIZE['4XL']}
-          variant={TEXT_VARIANT.DEFAULT}
-          className='leading-[50px]'
-        >
+      <div className='mb-7 max-w-[406px]'>
+        <Text as='h1' size={TEXT_SIZE['4XL']} variant={TEXT_VARIANT.DEFAULT}>
           {textHeading}
         </Text>
       </div>
 
       {/* Form */}
-      <div className='mb-[17px]'>{formContent}</div>
+      <div className='mb-[17px] max-w-[325px]'>{formContent}</div>
 
       {textFooter && (
         <Text
