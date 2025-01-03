@@ -22,22 +22,21 @@ export function useWizardForm<Schema extends z.ZodType>(
       z.TypeOf<Schema>
     >;
 
+    // Check for schema validation
     if (schema instanceof z.ZodObject) {
       const currentStepSchema = schema.shape[currentStepName] as z.ZodType;
 
-      // the user may not want to validate the current step
-      // or the step doesn't contain any form field
-      if (!currentStepSchema) {
-        return true;
-      }
+      if (!currentStepSchema) return true;
 
       const currentStepData = form.getValues(currentStepName) ?? {};
       const result = currentStepSchema.safeParse(currentStepData);
 
-      return result.success;
+      if (!result.success) return false;
     }
 
-    throw new Error(`Unsupported schema type: ${schema.constructor.name}`);
+    // Additionally check if there are any errors in the form
+    const formErrors = Object.keys(form.formState.errors);
+    return formErrors.length === 0;
   }, [schema, form, stepNames, currentStepIndex]);
 
   const onNextStep = useCallback(

@@ -9,6 +9,7 @@ import { Spinner } from '@nextui-org/react';
 
 // Constants
 import {
+  ERROR_MESSAGES,
   OPTIONS_COUNTRY_CODE_CONVERT_GLOBAL,
   TRANSFER_FORM_ACCOUNT_OPTIONS,
   TRANSFER_FORM_GLOBAL_OPTIONS,
@@ -21,11 +22,18 @@ import { AccountType, GlobalType } from '@/interfaces';
 import { getAccountInfoByAccountType } from '@/services';
 
 // Helpers / Utils
-import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
+import {
+  convertToUSD,
+  formatNumberWithCommas,
+  isValidNumber,
+  sanitizeNumber,
+} from '@/utils';
 import { GlobalTransferFormSchema } from '@/schemas';
 
 // Components
 import { Button, Input, Select, Text, SendIcon } from '@/components';
+
+// Contexts
 import { useWizardFormContext } from '@/context';
 
 type FormValues = keyof z.infer<typeof GlobalTransferFormSchema>;
@@ -34,8 +42,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const {
     form: {
       control,
-      formState: { errors, isValid },
+      formState: { errors },
       setValue,
+      getValues,
+      setError,
+      clearErrors,
     },
     onNextStep,
     validateStep,
@@ -57,6 +68,13 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     control,
     name: 'fromCountryType',
   });
+
+  const allFieldValues = getValues();
+
+  const amountValueInUSD = convertToUSD(
+    allFieldValues.fromCountryType,
+    allFieldValues.amount,
+  );
 
   const [isPending, startTransition] = useTransition();
 
@@ -162,6 +180,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               value={String(value)}
               errorMessage={errors.fromCountryType?.message}
               isInvalid={!!errors.fromCountryType}
+              selectedKeys={value ? [String(value)] : []}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -187,6 +206,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               errorMessage={errors.fromAccountType?.message}
               isInvalid={!!errors.fromAccountType}
               isDisabled={isPending}
+              selectedKeys={value ? [String(value)] : []}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
                 onChange(selectedValue);
@@ -202,7 +222,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         <Controller
           control={control}
           name='recipientAccount'
-          render={({ field: { onChange, onBlur } }) => {
+          render={({ field: { value, onChange, onBlur } }) => {
             return (
               <Input
                 label='Recipient Account'
@@ -213,6 +233,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
+                value={value}
                 errorMessage={errors.recipientAccount?.message}
                 isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
@@ -242,7 +263,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='amount'
-        render={({ field: { onChange, onBlur } }) => {
+        render={({ field: { value, onChange } }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -266,12 +287,25 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
                 value={
-                  rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''
+                  rawAmount
+                    ? formatNumberWithCommas(Number(rawAmount))
+                    : formatNumberWithCommas(value)
                 }
                 onChange={(e) => handleInputChange(e.target.value, onChange)}
                 errorMessage={errors.amount?.message}
                 isInvalid={!!errors.amount}
-                onBlur={onBlur}
+                onBlur={() => {
+                  if (balanceSend) {
+                    if (amountValueInUSD > balanceSend) {
+                      setError('amount', {
+                        type: 'validate',
+                        message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
+                      });
+                    } else {
+                      clearErrors('amount');
+                    }
+                  }
+                }}
               />
             </div>
           );
@@ -295,7 +329,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         onClick={onNextStep}
-        isDisabled={!validateStep() || !isValid}
+        isDisabled={!validateStep()}
       >
         Transfer Funds
       </Button>

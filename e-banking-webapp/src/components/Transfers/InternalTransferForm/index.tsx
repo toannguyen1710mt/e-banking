@@ -9,7 +9,7 @@ import { Spinner } from '@nextui-org/react';
 import { Session } from 'next-auth';
 
 // Constants
-import { TRANSFER_FORM_ACCOUNT_OPTIONS } from '@/constants';
+import { ERROR_MESSAGES, TRANSFER_FORM_ACCOUNT_OPTIONS } from '@/constants';
 
 // Components
 import { Button, Input, Select, SendIcon, Text } from '@/components';
@@ -36,7 +36,7 @@ export const InternalTransferForm = ({
   session,
 }: IInternalTransferFormProps) => {
   const {
-    form: { control, setValue },
+    form: { control, setValue, setError, clearErrors },
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
@@ -61,6 +61,11 @@ export const InternalTransferForm = ({
   const toAccountTypeValue = useWatch({
     control,
     name: 'internalTransfer.toAccountType',
+  });
+
+  const amountValue = useWatch({
+    control,
+    name: 'internalTransfer.amount',
   });
 
   // States for fetching
@@ -209,6 +214,7 @@ export const InternalTransferForm = ({
                 value={String(value)}
                 errorMessage={error?.message}
                 isInvalid={!!error?.message}
+                selectedKeys={value ? [String(value)] : []}
                 onSelectionChange={(keys) => {
                   const selectedValue = String(Array.from(keys)[0]);
                   onChange(selectedValue);
@@ -261,6 +267,7 @@ export const InternalTransferForm = ({
                 value={String(value)}
                 errorMessage={error?.message}
                 isInvalid={!!error?.message}
+                selectedKeys={value ? [String(value)] : []}
                 onSelectionChange={(keys) => {
                   const selectedValue = String(Array.from(keys)[0]);
                   onChange(selectedValue);
@@ -294,7 +301,7 @@ export const InternalTransferForm = ({
       <Controller
         control={control}
         name='internalTransfer.amount'
-        render={({ field: { onChange, onBlur }, fieldState: { error } }) => (
+        render={({ field: { value, onChange }, fieldState: { error } }) => (
           <Input
             inputMode='decimal'
             label='Amount'
@@ -305,14 +312,27 @@ export const InternalTransferForm = ({
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
             value={
-              rawAmount ? `$${formatNumberWithCommas(Number(rawAmount))}` : ''
+              rawAmount
+                ? formatNumberWithCommas(Number(rawAmount))
+                : formatNumberWithCommas(value)
             }
             errorMessage={error?.message}
             isInvalid={!!error?.message}
             onChange={(e) =>
               handleInputChange(e.target.value.replace(/^\$/, ''), onChange)
             }
-            onBlur={onBlur}
+            onBlur={() => {
+              if (balanceSend) {
+                if (amountValue > balanceSend) {
+                  setError('internalTransfer.amount', {
+                    type: 'validate',
+                    message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
+                  });
+                } else {
+                  clearErrors('internalTransfer.amount');
+                }
+              }
+            }}
           />
         )}
       />
