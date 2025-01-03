@@ -11,6 +11,9 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { ERROR_MESSAGES } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
 
+// Helpers
+import { formatCardNumber } from '@/utils';
+
 // Styles
 import '@/styles/input.css';
 
@@ -27,7 +30,6 @@ import {
   UserIcon,
   WalletIcon,
 } from '@/components';
-import { formatCardNumber } from '@/utils';
 
 interface ICreditCard<T extends z.ZodType> {
   schema: T;

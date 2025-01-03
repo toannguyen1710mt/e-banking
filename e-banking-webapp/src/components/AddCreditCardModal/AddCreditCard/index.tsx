@@ -11,10 +11,11 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Schemas
 import { CreditCardSchema } from '@/schemas';
+// Helpers
+import { formatCardNumber } from '@/utils';
 
 // Component
 import { Button, Input, Text, CreditCardIcon, DatePicker } from '@/components';
-import { formatCardNumber } from '@/utils';
 
 export const AddCreditCard = () => {
   const {

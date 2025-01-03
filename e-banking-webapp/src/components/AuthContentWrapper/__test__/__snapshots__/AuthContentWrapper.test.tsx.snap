@@ -24,7 +24,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           class="mb-7 max-w-[406px]"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold leading-[50px]"
+            class="text-foreground-100 text-4xl font-semibold"
           >
             Good To See You Again!
           </h1>
@@ -69,7 +69,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         class="mb-7 max-w-[406px]"
       >
         <h1
-          class="text-foreground-100 text-4xl font-semibold leading-[50px]"
+          class="text-foreground-100 text-4xl font-semibold"
         >
           Good To See You Again!
         </h1>
