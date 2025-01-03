@@ -171,12 +171,11 @@ export const InternalTransferForm = ({
 
   const handleInputChange = (
     value: string,
-    setRawValue: (value: string) => void,
     onChange: (value: string) => void,
   ) => {
     const sanitizedValue = sanitizeNumber(value);
     if (isValidNumber(sanitizedValue)) {
-      setRawValue(sanitizedValue);
+      setRawAmount(sanitizedValue);
       onChange(sanitizedValue);
     }
   };
@@ -311,11 +310,7 @@ export const InternalTransferForm = ({
             errorMessage={error?.message}
             isInvalid={!!error?.message}
             onChange={(e) =>
-              handleInputChange(
-                e.target.value.replace(/^\$/, ''),
-                setRawAmount,
-                onChange,
-              )
+              handleInputChange(e.target.value.replace(/^\$/, ''), onChange)
             }
             onBlur={onBlur}
           />
