@@ -30,7 +30,7 @@ export const AuthContentWrapper = ({
   const isOnSignIn = pathname === ROUTES.SIGN_IN;
 
   const linkDetails = {
-    text: isOnSignIn ? 'Register' : 'Login',
+    text: isOnSignIn ? 'Register' : 'Sign In',
     href: isOnSignIn ? ROUTES.SIGN_UP : ROUTES.SIGN_IN,
   };
 
