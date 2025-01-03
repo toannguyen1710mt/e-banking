@@ -46,7 +46,7 @@ export const Table = <T,>({
           <TableColumn key={column.key}>{column.title}</TableColumn>
         ))}
       </TableHeader>
-      <TableBody emptyContent={!data && emptyContent}>
+      <TableBody emptyContent={emptyContent}>
         {data.map((item, rowIndex) => (
           <TableRow key={rowIndex}>
             {columns.map((column) => (
