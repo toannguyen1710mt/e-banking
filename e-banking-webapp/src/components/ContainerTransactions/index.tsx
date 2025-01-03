@@ -59,8 +59,8 @@ export const ContainerTransactions = async ({
         </div>
 
         <TransactionHistory
-          totalTransaction={transactionHistory.meta.pagination.total}
-          transactionHistory={transactionHistory.data}
+          totalTransaction={transactionHistory?.meta?.pagination?.total || 0}
+          transactionHistory={transactionHistory?.data || []}
         />
       </div>
 
