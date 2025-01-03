@@ -305,11 +305,17 @@ export const InternalTransferForm = ({
               inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
-            value={rawAmount ? formatNumberWithCommas(Number(rawAmount)) : ''}
+            value={
+              rawAmount ? `$${formatNumberWithCommas(Number(rawAmount))}` : ''
+            }
             errorMessage={error?.message}
             isInvalid={!!error?.message}
             onChange={(e) =>
-              handleInputChange(e.target.value, setRawAmount, onChange)
+              handleInputChange(
+                e.target.value.replace(/^\$/, ''),
+                setRawAmount,
+                onChange,
+              )
             }
             onBlur={onBlur}
           />
