@@ -77,9 +77,8 @@ export const Slideshow = ({ onGetStarted }: SlideshowProps) => {
               <div className='absolute bottom-[113px] left-0 lg:bottom-10'>
                 <Text
                   as='h2'
-                  size={TEXT_SIZE['3XLS']}
                   variant={TEXT_VARIANT.TERTIARY}
-                  className='mb-2'
+                  className='mb-[27px] text-3xl leading-[39px]'
                 >
                   {title}
                 </Text>
@@ -91,7 +90,11 @@ export const Slideshow = ({ onGetStarted }: SlideshowProps) => {
                   >
                     <ArrowRightIcon customClass='w-[20px] h-[22px]' />
                   </Button>
-                  <Text size={TEXT_SIZE['LG']} variant={TEXT_VARIANT.TERTIARY}>
+                  <Text
+                    size={TEXT_SIZE['LG']}
+                    variant={TEXT_VARIANT.TERTIARY}
+                    className='leading-[22px]'
+                  >
                     {description}
                   </Text>
                 </div>

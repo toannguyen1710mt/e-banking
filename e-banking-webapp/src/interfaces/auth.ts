@@ -20,7 +20,7 @@ export type TSignUpPayload = {
 };
 
 export interface TSignInFormData {
-  username: string;
+  identifier: string;
   password: string;
 }
 
