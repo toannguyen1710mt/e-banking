@@ -37,7 +37,7 @@ export const AuthContentWrapper = ({
   const classLogo = isOnSignIn ? 'mt-0 md:mt-[108px]' : '';
 
   return (
-    <div className='mx-auto flex w-full max-w-lg flex-1 flex-col'>
+    <div className='mx-auto flex flex-1 flex-col'>
       {/* Logo */}
       <Image
         className={`pb-9 ${classLogo}`}
