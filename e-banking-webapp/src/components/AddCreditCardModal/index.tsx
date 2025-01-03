@@ -93,15 +93,15 @@ export const AddCreditCardModal = ({
     );
 
     try {
-      startTransition(async () => {
-        await addNewCardByAccountId(selectedAccount?.documentId as string, {
-          fullName,
-          cardNumber,
-          expireAt,
-          ccv,
-          holderName,
-        });
+      await addNewCardByAccountId(selectedAccount?.documentId as string, {
+        fullName,
+        cardNumber,
+        expireAt,
+        ccv,
+        holderName,
+      });
 
+      startTransition(() => {
         showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
 
         return onClose();
