@@ -7,7 +7,7 @@ import { Controller } from 'react-hook-form';
 import { SignUpSchema } from '@/constants/rules';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { TEXT_VARIANT } from '@/interfaces';
 
 // Context
 import { useWizardFormContext } from '@/context';
@@ -47,9 +47,8 @@ export const AccountForm = () => {
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
         <Text
-          size={TEXT_SIZE.SM}
           variant={TEXT_VARIANT.INFO}
-          className='font-normal'
+          className='font-normal leading-[22px]'
         >
           Fill the form below to create an account
         </Text>

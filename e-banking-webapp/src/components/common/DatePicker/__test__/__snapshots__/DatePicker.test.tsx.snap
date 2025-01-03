@@ -28,7 +28,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
                 data-slot="inner-wrapper"
               >
                 <button
-                  class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm inline-block w-4 min-w-4 border-none p-0 text-current"
+                  class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm leading-[20px] inline-block w-4 min-w-4 border-none p-0 text-current"
                   type="button"
                 >
                   <svg
@@ -70,7 +70,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
                 </button>
                 <input
                   aria-label="YYYY/MM"
-                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 m-0 p-0 !pl-3"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 m-0 p-0 !pl-3"
                   data-has-start-content="true"
                   data-slot="input"
                   id="react-aria-:r0:"
@@ -110,7 +110,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
               data-slot="inner-wrapper"
             >
               <button
-                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm inline-block w-4 min-w-4 border-none p-0 text-current"
+                class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm leading-[20px] inline-block w-4 min-w-4 border-none p-0 text-current"
                 type="button"
               >
                 <svg
@@ -152,7 +152,7 @@ exports[`DatePicker component Should render snapshot correctly 1`] = `
               </button>
               <input
                 aria-label="YYYY/MM"
-                class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm w-full h-10 m-0 p-0 !pl-3"
+                class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 m-0 p-0 !pl-3"
                 data-has-start-content="true"
                 data-slot="input"
                 id="react-aria-:r0:"

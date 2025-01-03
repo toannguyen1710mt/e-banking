@@ -32,7 +32,7 @@ export const LoginForm = () => {
   } = useForm<TSignInFormData>({
     resolver: zodResolver(signInSchema),
     defaultValues: {
-      username: '',
+      identifier: '',
       password: '',
     },
     mode: 'onBlur',
@@ -60,17 +60,16 @@ export const LoginForm = () => {
     <form onSubmit={onSubmit} className='mr-0 md:mr-[83px]'>
       <div className='mb-8 flex w-full flex-col gap-6 bg-white md:gap-4'>
         <Text
-          size={TEXT_SIZE.SM}
           variant={TEXT_VARIANT.INFO}
-          className='font-normal'
+          className='font-normal leading-[22px]'
         >
           Sign in to your account to continue
         </Text>
 
-        {/* Sign-in with username */}
+        {/* Sign-in with username or email */}
         <Controller
           control={control}
-          name='username'
+          name='identifier'
           render={({ field, fieldState: { error } }) => (
             <Input
               {...field}
@@ -78,8 +77,8 @@ export const LoginForm = () => {
                 field.onChange(e);
                 setErrorMessage(null);
               }}
-              aria-label='username'
-              placeholder='Username'
+              aria-label='identifier'
+              placeholder='Username or Email address'
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<UserIcon />}
@@ -123,7 +122,11 @@ export const LoginForm = () => {
             {errorMessage}
           </Text>
         )}
-        <Link href='#' aria-disabled className='text-right text-sm'>
+        <Link
+          href='#'
+          aria-disabled
+          className='text-right text-sm leading-[20px]'
+        >
           Forgot Password?
         </Link>
       </div>

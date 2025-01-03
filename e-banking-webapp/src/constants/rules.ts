@@ -60,10 +60,10 @@ export const SignUpSchema = createStepSchema({
 });
 
 export const signInSchema = z.object({
-  username: z
+  identifier: z
     .string()
     .trim()
-    .min(3, ERROR_MESSAGES.USERNAME_INVALID)
+    .min(3, ERROR_MESSAGES.IDENTIFIER_INVALID)
     .transform((value) => value.trim()), // Trim spaces before validation
   password: z
     .string()

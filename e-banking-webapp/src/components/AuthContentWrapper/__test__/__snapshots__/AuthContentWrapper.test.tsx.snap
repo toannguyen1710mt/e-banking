@@ -24,7 +24,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           class="mb-7"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold"
+            class="text-foreground-100 text-4xl font-semibold leading-[50px]"
           >
             Good To See You Again!
           </h1>
@@ -35,12 +35,12 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           Form
         </div>
         <p
-          class="text-foreground-100 text-sm font-medium"
+          class="text-foreground-100 text-sm font-medium leading-[20px]"
         >
           Don’t have an account?
            
           <a
-            class="text-primary-200"
+            class="leading-[20px] text-primary-200"
             href="/sign-in"
           >
             Login
@@ -69,7 +69,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         class="mb-7"
       >
         <h1
-          class="text-foreground-100 text-4xl font-semibold"
+          class="text-foreground-100 text-4xl font-semibold leading-[50px]"
         >
           Good To See You Again!
         </h1>
@@ -80,12 +80,12 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         Form
       </div>
       <p
-        class="text-foreground-100 text-sm font-medium"
+        class="text-foreground-100 text-sm font-medium leading-[20px]"
       >
         Don’t have an account?
          
         <a
-          class="text-primary-200"
+          class="leading-[20px] text-primary-200"
           href="/sign-in"
         >
           Login

@@ -48,7 +48,12 @@ export const AuthContentWrapper = ({
       />
 
       <div className='mb-7'>
-        <Text as='h1' size={TEXT_SIZE['4XL']} variant={TEXT_VARIANT.DEFAULT}>
+        <Text
+          as='h1'
+          size={TEXT_SIZE['4XL']}
+          variant={TEXT_VARIANT.DEFAULT}
+          className='leading-[50px]'
+        >
           {textHeading}
         </Text>
       </div>
@@ -57,9 +62,16 @@ export const AuthContentWrapper = ({
       <div className='mb-[17px]'>{formContent}</div>
 
       {textFooter && (
-        <Text size={TEXT_SIZE.SM} variant={TEXT_VARIANT.DEFAULT}>
+        <Text
+          size={TEXT_SIZE.SM}
+          variant={TEXT_VARIANT.DEFAULT}
+          className='leading-[20px]'
+        >
           {textFooter}&nbsp;
-          <Link href={linkDetails.href} className='text-primary-200'>
+          <Link
+            href={linkDetails.href}
+            className='leading-[20px] text-primary-200'
+          >
             {linkDetails.text}
           </Link>
         </Text>

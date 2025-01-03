@@ -349,7 +349,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
               class="absolute bottom-[113px] left-0 lg:bottom-10"
             >
               <h2
-                class="text-foreground-200 text-3xls font-medium mb-2"
+                class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
               >
                 Banking Made Easier!
               </h2>
@@ -378,7 +378,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   </svg>
                 </button>
                 <p
-                  class="text-foreground-200 text-lg font-medium"
+                  class="text-foreground-200 text-lg font-medium leading-[22px]"
                 >
                   Manage your finances, anywhere, anytime. Transfer money, pay bills and monitor your cards with ease
                 </p>
@@ -711,7 +711,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
               class="absolute bottom-[113px] left-0 lg:bottom-10"
             >
               <h2
-                class="text-foreground-200 text-3xls font-medium mb-2"
+                class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
               >
                 Integrated Banking
               </h2>
@@ -740,7 +740,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   </svg>
                 </button>
                 <p
-                  class="text-foreground-200 text-lg font-medium"
+                  class="text-foreground-200 text-lg font-medium leading-[22px]"
                 >
                   Open a bank account that seamlessly integrates with your payment app.
                 </p>
@@ -1029,7 +1029,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
               class="absolute bottom-[113px] left-0 lg:bottom-10"
             >
               <h2
-                class="text-foreground-200 text-3xls font-medium mb-2"
+                class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
               >
                 Secure Your Future
               </h2>
@@ -1058,7 +1058,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   </svg>
                 </button>
                 <p
-                  class="text-foreground-200 text-lg font-medium"
+                  class="text-foreground-200 text-lg font-medium leading-[22px]"
                 >
                   Secure your financial future with our easy to use tools and plan for financial freedom
                 </p>
@@ -1083,7 +1083,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
             />
           </div>
           <button
-            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-none max-h-10 text-sm h-[34px] w-[120px] min-w-[120px] rounded-[24px] border-[0.5px] border-white p-0 font-medium text-white lg:hidden"
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-none max-h-10 text-sm leading-[20px] h-[34px] w-[120px] min-w-[120px] rounded-[24px] border-[0.5px] border-white p-0 font-medium text-white lg:hidden"
             type="button"
           >
             Get Started
@@ -1437,7 +1437,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
             class="absolute bottom-[113px] left-0 lg:bottom-10"
           >
             <h2
-              class="text-foreground-200 text-3xls font-medium mb-2"
+              class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
             >
               Banking Made Easier!
             </h2>
@@ -1466,7 +1466,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                 </svg>
               </button>
               <p
-                class="text-foreground-200 text-lg font-medium"
+                class="text-foreground-200 text-lg font-medium leading-[22px]"
               >
                 Manage your finances, anywhere, anytime. Transfer money, pay bills and monitor your cards with ease
               </p>
@@ -1799,7 +1799,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
             class="absolute bottom-[113px] left-0 lg:bottom-10"
           >
             <h2
-              class="text-foreground-200 text-3xls font-medium mb-2"
+              class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
             >
               Integrated Banking
             </h2>
@@ -1828,7 +1828,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                 </svg>
               </button>
               <p
-                class="text-foreground-200 text-lg font-medium"
+                class="text-foreground-200 text-lg font-medium leading-[22px]"
               >
                 Open a bank account that seamlessly integrates with your payment app.
               </p>
@@ -2117,7 +2117,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
             class="absolute bottom-[113px] left-0 lg:bottom-10"
           >
             <h2
-              class="text-foreground-200 text-3xls font-medium mb-2"
+              class="text-foreground-200 font-medium mb-[27px] text-3xl leading-[39px]"
             >
               Secure Your Future
             </h2>
@@ -2146,7 +2146,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                 </svg>
               </button>
               <p
-                class="text-foreground-200 text-lg font-medium"
+                class="text-foreground-200 text-lg font-medium leading-[22px]"
               >
                 Secure your financial future with our easy to use tools and plan for financial freedom
               </p>
@@ -2171,7 +2171,7 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
           />
         </div>
         <button
-          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-none max-h-10 text-sm h-[34px] w-[120px] min-w-[120px] rounded-[24px] border-[0.5px] border-white p-0 font-medium text-white lg:hidden"
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-none max-h-10 text-sm leading-[20px] h-[34px] w-[120px] min-w-[120px] rounded-[24px] border-[0.5px] border-white p-0 font-medium text-white lg:hidden"
           type="button"
         >
           Get Started

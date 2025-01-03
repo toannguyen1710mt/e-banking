@@ -16,7 +16,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
     >
       <li>
         <button
-          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
           data-disabled="true"
           disabled=""
           type="button"
@@ -42,7 +42,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
       </li>
       <li>
         <button
-          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
           type="button"
         >
           <svg
@@ -91,7 +91,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
       </li>
       <li>
         <button
-          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
           data-disabled="true"
           disabled=""
           type="button"
@@ -150,7 +150,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
       </li>
       <li>
         <button
-          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100"
           type="button"
         >
           <svg

@@ -37,7 +37,7 @@ export const Input = extendVariants(InputNextUI, {
 
     textSize: {
       base: {
-        input: 'text-sm',
+        input: 'text-sm leading-[20px]',
       },
     },
     size: {

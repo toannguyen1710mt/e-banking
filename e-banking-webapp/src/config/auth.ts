@@ -15,7 +15,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     Credentials({
       name: 'Credentials',
       credentials: {
-        username: { placeholder: 'Username', type: 'text' },
+        identifier: { placeholder: 'Username or Email address', type: 'text' },
         password: { placeholder: 'Password', type: 'password' },
       },
       async authorize(credentials) {
@@ -24,14 +24,14 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         }
 
         const parsedCredentials = z
-          .object({ username: z.string(), password: z.string().min(6) })
+          .object({ identifier: z.string(), password: z.string().min(6) })
           .safeParse(credentials);
 
         if (!parsedCredentials.success) {
           return ERROR_MESSAGES.INVALID_CREDENTIALS;
         }
 
-        const { username, password } = parsedCredentials.data;
+        const { identifier, password } = parsedCredentials.data;
 
         // Check user permission from Strapi api
         const response = await fetch(
@@ -40,7 +40,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              identifier: username,
+              identifier,
               password,
             }),
           },
