@@ -62,11 +62,14 @@ export const CardOverview = ({ session }: ICardOverviewProps) => {
           />
         </CardBody>
       </Card>
-      <AddCreditCardModal
-        session={session}
-        isOpen={isOpenAddCardModal}
-        onClose={onCloseAddCardModal}
-      />
+
+      {isOpenAddCardModal && (
+        <AddCreditCardModal
+          session={session}
+          isOpen={isOpenAddCardModal}
+          onClose={onCloseAddCardModal}
+        />
+      )}
     </>
   );
 };

@@ -8,9 +8,21 @@ import { ERROR_MESSAGES } from '@/constants';
 import { futureMonth } from '@/utils';
 
 export const CreditCardSchema = z.object({
-  fullName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
-  cardNumber: z.string().length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID),
-  expireAt: futureMonth,
-  ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
-  holderName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
+  cardInfo: z.object({
+    fullName: z
+      .string()
+      .trim()
+      .min(3, ERROR_MESSAGES.USERNAME_INVALID)
+      .transform((value) => value.trim()), // Trim spaces before validation
+    cardNumber: z
+      .string()
+      .length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID)
+      .regex(/^\d{12}$/, ERROR_MESSAGES.CARD_NUMBER_INVALID),
+    expireAt: futureMonth,
+    ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
+  }),
+  confirmationDetails: z.object({
+    holderName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
+  }),
+  walletType: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
 });
