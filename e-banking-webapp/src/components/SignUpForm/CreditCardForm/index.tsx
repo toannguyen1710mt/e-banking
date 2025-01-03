@@ -27,6 +27,7 @@ import {
   UserIcon,
   WalletIcon,
 } from '@/components';
+import { formatCardNumber } from '@/utils';
 
 interface ICreditCard<T extends z.ZodType> {
   schema: T;
@@ -106,11 +107,16 @@ export const CreditCardForm = <T extends z.ZodType>({
               aria-label='cardNumber'
               placeholder='Card Number'
               type='text'
-              maxLength={12}
+              maxLength={14}
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<CreditCardIcon />}
               {...field}
+              onChange={(e) => {
+                const formattedValue = formatCardNumber(e.target.value);
+                field.onChange(formattedValue);
+              }}
+              value={formatCardNumber(field.value || '')}
             />
           )}
         />
