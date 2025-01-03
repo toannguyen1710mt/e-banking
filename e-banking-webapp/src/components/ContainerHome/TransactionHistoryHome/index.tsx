@@ -8,15 +8,20 @@ import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Configs
+import { auth } from '@/config/auth';
+
 // Components
 import { Text, SkeletonTable } from '@/components';
 import { TransactionTable } from '@/components/ContainerHome/TransactionTable';
 
 // Services
-import { getTransactions } from '@/services';
+import { getTransactionsByUserId } from '@/services';
 
 export const TransactionHistoryHome = async () => {
-  const transactions = await getTransactions({
+  const session = await auth();
+
+  const transactions = await getTransactionsByUserId(Number(session?.user.id), {
     sort: 'createdAt',
     order: 'desc',
     pagination: { page: 1, pageSize: 10 },
@@ -34,7 +39,7 @@ export const TransactionHistoryHome = async () => {
         <Suspense
           fallback={<SkeletonTable columns={TRANSACTION_TABLE_COLUMNS} />}
         >
-          <TransactionTable transactions={transactions.data} />
+          <TransactionTable transactions={transactions?.data || []} />
         </Suspense>
       </CardBody>
     </Card>
