@@ -7,14 +7,14 @@ import { TransferManager } from '../TransferManager';
 
 interface IActionCenterProps {
   session: Session;
-  totalTransfersSent: number;
-  totalTransfersReceived: number;
+  totalTransferSent: number;
+  totalTransferReceived: number;
 }
 
 export const ActionCenter = ({
   session,
-  totalTransfersSent,
-  totalTransfersReceived,
+  totalTransferSent,
+  totalTransferReceived,
 }: IActionCenterProps) => {
   return (
     <Card className='h-full gap-6 py-5 pl-5 pr-[38px]'>
@@ -24,8 +24,8 @@ export const ActionCenter = ({
 
       <CardBody>
         <TransferManager
-          totalTransfersSent={totalTransfersSent}
-          totalTransfersReceived={totalTransfersReceived}
+          totalTransferSent={totalTransferSent}
+          totalTransferReceived={totalTransferReceived}
           session={session}
         />
       </CardBody>

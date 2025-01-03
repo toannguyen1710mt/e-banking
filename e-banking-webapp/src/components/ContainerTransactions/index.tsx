@@ -21,10 +21,8 @@ interface IContainerTransactionsProps {
 export const ContainerTransactions = async ({
   session,
 }: IContainerTransactionsProps) => {
-  const totalTransfersSent = await getTotalTransferSent(session.user.id);
-  const totalTransfersReceived = await getTotalTransferReceived(
-    session.user.id,
-  );
+  const totalTransferSent = await getTotalTransferSent(session.user.id);
+  const totalTransferReceived = await getTotalTransferReceived(session.user.id);
 
   const transactionHistory = await getTransactionsByUserId(session.user.id, {
     sort: 'createdAt',
@@ -67,8 +65,8 @@ export const ContainerTransactions = async ({
       <div className='w-1/3'>
         <ActionCenter
           session={session}
-          totalTransfersSent={totalTransfersSent}
-          totalTransfersReceived={totalTransfersReceived}
+          totalTransferSent={totalTransferSent}
+          totalTransferReceived={totalTransferReceived}
         />
       </div>
     </div>

@@ -14,14 +14,14 @@ import { MetricsCard, Text, TransferTable } from '@/components';
 import { getAccountsByUserId, getTransactions } from '@/services';
 
 interface ITransferManagerProps {
-  totalTransfersSent: number;
-  totalTransfersReceived: number;
+  totalTransferSent: number;
+  totalTransferReceived: number;
   session: Session;
 }
 
 export const TransferManager = ({
-  totalTransfersSent,
-  totalTransfersReceived,
+  totalTransferSent,
+  totalTransferReceived,
   session,
 }: ITransferManagerProps) => {
   const [selectedTransferType, setSelectedTransferType] = useState<
@@ -133,7 +133,7 @@ export const TransferManager = ({
         <div className='cursor-pointer' onClick={handleSelectReceived}>
           <MetricsCard
             title='Transfer Received'
-            totalTransfers={totalTransfersReceived}
+            totalTransfers={totalTransferReceived}
             isPositive={true}
             percentageChange={8}
             isSelected={selectedTransferType === TransferType.RECEIVED}
@@ -142,7 +142,7 @@ export const TransferManager = ({
         <div className='cursor-pointer' onClick={handleSelectSent}>
           <MetricsCard
             title='Transfer Sent'
-            totalTransfers={totalTransfersSent}
+            totalTransfers={totalTransferSent}
             isPositive={true}
             percentageChange={8}
             isSelected={selectedTransferType === TransferType.SENT}
