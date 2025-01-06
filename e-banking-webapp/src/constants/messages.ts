@@ -24,6 +24,9 @@ export const ERROR_MESSAGES = {
   ADD_CARD_FAILED: 'Add card failed. Please try again.',
   CHANGE_PASSWORD_FAILED: 'Change password failed. Please try again.',
   CHANGE_PASSWORD_SUCCESS: 'Change password successful.',
+  INVALID_CURRENT_PASSWORD: 'The provided current password is invalid',
+  NEW_PASSWORD_SAME_AS_OLD:
+    'Your new password must be different than your current password',
   UPDATE_EMAIL_SETTINGS_SUCCESS: 'Update options email settings successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
   AMOUNT_EXCEEDED_BALANCE: 'Amount has exceeded the current balance',

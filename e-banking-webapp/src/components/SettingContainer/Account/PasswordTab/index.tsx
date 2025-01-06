@@ -38,6 +38,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
     formState: { isValid, isDirty },
     setError,
     handleSubmit,
+    reset,
   } = useForm<FormValues>({
     defaultValues: PASSWORD_DEFAULT_VALUES,
     mode: 'onBlur',
@@ -69,7 +70,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
 
   const { showToast } = useToastContext();
 
-  const onSubmit = handleSubmit((data) => {
+  const onSubmit = handleSubmit(async (data) => {
     const { currentPassword, newPassword, confirmPassword } = data;
 
     const changePasswordFormData: TChangePasswordFormData = {
@@ -89,17 +90,35 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
           throw response.message;
         }
 
-        showToast(
-          ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
-          'success',
-          'top-center',
-        );
-      } catch (error) {
-        setError('currentPassword', {
-          message: String(error),
-        });
+        startTransition(() => {
+          showToast(
+            ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
+            'success',
+            'top-center',
+          );
 
-        showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
+          reset();
+        });
+      } catch (error) {
+        startTransition(() => {
+          if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
+            setError('currentPassword', {
+              message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
+            });
+          }
+
+          if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
+            setError('newPassword', {
+              message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
+            });
+          }
+
+          showToast(
+            ERROR_MESSAGES.CHANGE_PASSWORD_FAILED,
+            'error',
+            'top-center',
+          );
+        });
       }
     });
   });
@@ -157,7 +176,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
                 input: 'm-0 text-sm',
                 label: 'font-normal text-xs !text-black opacity-100',
               }}
-              type={isOpenPassword ? 'text' : 'password'}
+              type={isOpenNewPassword ? 'text' : 'password'}
               endContent={
                 <button
                   type='button'
@@ -167,7 +186,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
                     isOpenNewPassword ? closeNewPassword : openNewPassword
                   }
                 >
-                  {isOpenPassword ? <EyeSlashIcon /> : <EyeIcon />}
+                  {isOpenNewPassword ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
               }
               isInvalid={!!error?.message}
