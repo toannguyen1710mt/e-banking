@@ -51,8 +51,8 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
       <div className='w-[75%]'>
         <Text as='h2' className='text-2xl font-semibold !text-black'>
           Good Evening,
-          <Text as='span' className='font-medium !text-black'>
-            Pheroxios
+          <Text as='span' className='ml-1 font-medium !text-black'>
+            {session?.user?.username || ''}
           </Text>
         </Text>
         <div className='mt-6 flex flex-col gap-6'>
