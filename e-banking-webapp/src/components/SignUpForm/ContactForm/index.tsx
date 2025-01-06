@@ -23,7 +23,7 @@ export const ContactForm = () => {
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
         <Text
-          size={TEXT_SIZE.SM}
+          size={TEXT_SIZE.BASE}
           variant={TEXT_VARIANT.INFO}
           className='font-normal'
         >
