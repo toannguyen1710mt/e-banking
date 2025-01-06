@@ -86,7 +86,7 @@ export const CreditCardForm = <T extends z.ZodType>({
             <Input
               labelPlacement='outside'
               label='Holders Name'
-              aria-label='holdersName'
+              aria-label='holderName'
               placeholder='Holders Name'
               isInvalid={!!error?.message}
               errorMessage={error?.message}
