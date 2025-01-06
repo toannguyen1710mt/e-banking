@@ -168,7 +168,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
                 input: 'm-0 text-sm',
                 label: 'font-normal text-xs !text-black opacity-100',
               }}
-              type={isOpenPassword ? 'text' : 'password'}
+              type={isOpenNewPassword ? 'text' : 'password'}
               endContent={
                 <button
                   type='button'
@@ -178,7 +178,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
                     isOpenNewPassword ? closeNewPassword : openNewPassword
                   }
                 >
-                  {isOpenPassword ? <EyeSlashIcon /> : <EyeIcon />}
+                  {isOpenNewPassword ? <EyeSlashIcon /> : <EyeIcon />}
                 </button>
               }
               isInvalid={!!error?.message}
