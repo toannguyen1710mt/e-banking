@@ -34,7 +34,7 @@ export const SignUpForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: SIGNUP_FORM_DEFAULT_VALUES,
-    mode: 'all',
+    mode: 'onBlur',
   });
 
   const submitHandler = async (data: FormValues) => {

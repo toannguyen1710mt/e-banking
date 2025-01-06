@@ -64,7 +64,7 @@ export const AddCreditCardModal = ({
       walletType: 'Main',
     },
     reValidateMode: 'onBlur',
-    mode: 'all',
+    mode: 'onBlur',
   });
 
   useEffect(() => {
