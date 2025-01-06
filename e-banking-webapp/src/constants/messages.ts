@@ -29,7 +29,7 @@ export const ERROR_MESSAGES = {
     'Your new password must be different than your current password',
   UPDATE_EMAIL_SETTINGS_SUCCESS: 'Update options email settings successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
-  AMOUNT_EXCEEDED_BALANCE: 'Amount has exceeded the current balance',
+  AMOUNT_EXCEEDED_BALANCE: 'Amount cannot exceed available balance of',
   CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
   CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
   CCV_INVALID: 'CCV must be exactly 3 digits',
@@ -39,6 +39,7 @@ export const ERROR_MESSAGES = {
   RECIPIENT_ACCOUNT_ONLY_NUMBERS: 'Recipient Account must contain only numbers',
   UPLOAD_IMAGE_ONLY_JPG_PNG: 'You can only upload JPG/PNG file!',
   UPLOAD_IMAGE_SIZE: 'Image upload must smaller than 1MB!',
+  GET_BALANCE_FOR_ACCOUNT: 'Error fetching balance for send account:',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',

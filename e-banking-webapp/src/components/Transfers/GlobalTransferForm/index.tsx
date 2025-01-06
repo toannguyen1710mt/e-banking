@@ -45,8 +45,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       formState: { errors },
       setValue,
       getValues,
-      setError,
-      clearErrors,
     },
     onNextStep,
     validateStep,
@@ -73,7 +71,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const amountValueInUSD = convertToUSD(
     allFieldValues.fromCountryType,
-    allFieldValues.amount,
+    Number(allFieldValues.amount),
   );
 
   const [isPending, startTransition] = useTransition();
@@ -81,6 +79,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [rawAmount, setRawAmount] = useState<string>('');
+  const [amountError, setAmountError] = useState<string | null>(null);
+  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
@@ -121,7 +121,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           setValue('fromAccountNumber', String(fromAccountNumber));
           setValue('fromAccountBalance', Number(balance));
         } catch (error) {
-          console.error('Error fetching balance for send account:', error);
+          console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
         }
       });
     };
@@ -153,24 +153,63 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     onChange: (value: string) => void,
   ) => {
     const sanitizedValue = sanitizeNumber(value);
+
     if (isValidNumber(sanitizedValue)) {
       setRawAmount(sanitizedValue);
+
+      if (balanceSend && amountValueInUSD > balanceSend) {
+        setAmountError(
+          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
+        );
+      } else {
+        setAmountError(null);
+      }
+
       onChange(sanitizedValue);
     }
   };
 
-  const handleBlurAmountInput = () => {
-    if (balanceSend) {
-      if (amountValueInUSD > balanceSend) {
-        setError('amount', {
-          type: 'validate',
-          message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
-        });
-      } else {
-        clearErrors('amount');
-      }
+  const getFormattedAmount = (
+    rawAmount: string,
+    value: string | number,
+  ): string => {
+    if (rawAmount) {
+      return formatNumberWithCommas(Number(rawAmount));
     }
+
+    if (String(value) !== '') {
+      return formatNumberWithCommas(Number(value));
+    }
+
+    return '';
   };
+
+  useEffect(() => {
+    const fetchBalanceSend = async () => {
+      if (!fromAccountTypeValue) {
+        setBalanceSend(null);
+        return;
+      }
+
+      try {
+        setIsFetchingBalanceSend(true);
+
+        const balance = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'balance',
+        );
+
+        setBalanceSend(Number(balance));
+      } catch (error) {
+        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
+      } finally {
+        setIsFetchingBalanceSend(false);
+      }
+    };
+
+    fetchBalanceSend();
+  }, [fromAccountTypeValue, session.user.id]);
 
   return (
     <div className='flex w-full flex-col gap-4'>
@@ -264,7 +303,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           Available Balance:
         </Text>
         <Text as='span' className='text-xs text-foreground-200 opacity-50'>
-          {isPending ? (
+          {isFetchingBalanceSend ? (
             <Spinner size='sm' />
           ) : (
             balanceSend && `$${formatNumberWithCommas(balanceSend)}`
@@ -276,7 +315,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       <Controller
         control={control}
         name='amount'
-        render={({ field: { value, onChange } }) => {
+        render={({
+          field: { onBlur, value, onChange },
+          fieldState: { error },
+        }) => {
           return (
             <div className='flex items-baseline gap-[15px]'>
               <Input
@@ -299,15 +341,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                     'h-10 px-2.5 py-2 rounded-sm border-default box-border',
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
-                value={
-                  rawAmount
-                    ? formatNumberWithCommas(Number(rawAmount))
-                    : formatNumberWithCommas(value)
-                }
+                value={getFormattedAmount(rawAmount, value)}
                 onChange={(e) => handleInputChange(e.target.value, onChange)}
-                errorMessage={errors.amount?.message}
-                isInvalid={!!errors.amount}
-                onBlur={handleBlurAmountInput}
+                errorMessage={amountError || error?.message}
+                isInvalid={!!amountError || !!error?.message}
+                onBlur={onBlur}
               />
             </div>
           );

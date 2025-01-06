@@ -28,13 +28,19 @@ export const GlobalTransferFormSchema = z.object({
     .regex(REGEX.NUMERIC_12_DIGITS, {
       message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_ONLY_NUMBERS,
     }),
-  amount: z.coerce
+  amount: z
     .string()
     .min(1, ERROR_MESSAGES.FIELD_REQUIRED)
-    .transform((val) => parseFloat(val))
-    .refine((val) => val > 0.01, {
-      message: ERROR_MESSAGES.AMOUNT_MIN,
-    }),
+    .refine(
+      (val) => {
+        const parsedValue = parseFloat(val);
+        return !isNaN(parsedValue) && parsedValue > 0.01;
+      },
+      {
+        message: ERROR_MESSAGES.AMOUNT_MIN,
+      },
+    )
+    .transform((val) => val),
 
   //Hidden fields
   fromAccountId: z.string(),

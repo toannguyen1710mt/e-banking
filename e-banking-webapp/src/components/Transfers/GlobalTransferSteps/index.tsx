@@ -40,7 +40,7 @@ export const GlobalTransferSteps = ({
     defaultValues: {
       fromAccountType: undefined,
       fromCountryType: undefined,
-      amount: 0,
+      amount: '',
     },
     resolver: zodResolver(GlobalTransferFormSchema),
   });
@@ -48,7 +48,7 @@ export const GlobalTransferSteps = ({
   const allFieldValues = form.watch();
 
   const amountInUSD = formatNumberWithCommas(
-    convertToUSD(allFieldValues.fromCountryType, allFieldValues.amount),
+    convertToUSD(allFieldValues.fromCountryType, Number(allFieldValues.amount)),
   );
 
   const submitHandler = async ({
