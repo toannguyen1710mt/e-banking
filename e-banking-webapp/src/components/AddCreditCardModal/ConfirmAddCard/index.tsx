@@ -61,7 +61,7 @@ export const ConfirmAddCard = ({
           <div className='flex flex-1 flex-col gap-[15px]'>
             <Controller
               control={control}
-              name='confirmationDetails.holderName'
+              name='confirmationDetails.holdersName'
               render={({ field, fieldState: { error } }) => (
                 <Input
                   labelPlacement='outside'
