@@ -76,7 +76,7 @@ export const CreditCardForm = <T extends z.ZodType>({
           variant={TEXT_VARIANT.INFO}
           className='font-normal'
         >
-          Please provide your phone and contact info
+          Please provide your Credit Card information
         </Text>
 
         <Controller
