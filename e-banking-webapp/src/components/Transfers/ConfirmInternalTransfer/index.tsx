@@ -54,7 +54,7 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
         You are about to transfer
       </Text>
       <Text as='span' className='text-4xl font-bold'>
-        {currencyUnit}{' '}
+        {currencyUnit}
         {formatNumberWithCommas(Number(values.internalTransfer.amount))}
       </Text>
       <Text className='max-w-[250px] text-center text-xs font-medium text-primary-200 opacity-50'>

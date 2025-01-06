@@ -39,7 +39,7 @@ export const InternalTransferSuccess = ({
       </Text>
       <Text className='max-w-[220px] text-center text-xs font-medium text-primary-200 opacity-50'>
         A sum of {currencyUnit} {formatNumberWithCommas(Number(amount))} was
-        transferred from your {fromAccountType} wallet to your {toAccountType}{' '}
+        transferred from your {fromAccountType} wallet to your {toAccountType}
         wallet
       </Text>
 
