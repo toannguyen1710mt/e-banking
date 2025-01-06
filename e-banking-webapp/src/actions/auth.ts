@@ -43,7 +43,7 @@ export const signUp = async (signUpData: TSignUpPayload) => {
     signUpData,
   );
 
-  return response;
+  return response.data;
 };
 
 export const signOut = async () => await nextAuthSignOut({ redirect: false });

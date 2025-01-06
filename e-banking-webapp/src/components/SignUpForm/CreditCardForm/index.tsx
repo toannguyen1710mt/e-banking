@@ -81,7 +81,7 @@ export const CreditCardForm = <T extends z.ZodType>({
 
         <Controller
           control={control}
-          name='card.holderName'
+          name='card.holdersName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
