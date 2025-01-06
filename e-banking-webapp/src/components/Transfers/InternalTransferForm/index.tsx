@@ -5,7 +5,6 @@ import { z } from 'zod';
 import { useEffect, useState } from 'react';
 import { Controller, useWatch } from 'react-hook-form';
 import { Spinner } from '@nextui-org/react';
-
 import { Session } from 'next-auth';
 
 // Constants
@@ -36,11 +35,12 @@ export const InternalTransferForm = ({
   session,
 }: IInternalTransferFormProps) => {
   const {
-    form: { control, setValue, setError, clearErrors },
+    form: { control, setValue },
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
   const [rawAmount, setRawAmount] = useState<string>('');
+  const [amountError, setAmountError] = useState<string | null>(null);
 
   const hiddenFields: FormValues[] = [
     'fromAccountId',
@@ -61,11 +61,6 @@ export const InternalTransferForm = ({
   const toAccountTypeValue = useWatch({
     control,
     name: 'internalTransfer.toAccountType',
-  });
-
-  const amountValue = useWatch({
-    control,
-    name: 'internalTransfer.amount',
   });
 
   // States for fetching
@@ -117,7 +112,7 @@ export const InternalTransferForm = ({
         setValue('fromAccountNumber', String(fromAccountNumber));
         setValue('fromAccountBalance', Number(balance));
       } catch (error) {
-        console.error('Error fetching balance for send account:', error);
+        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
       } finally {
         setIsFetchingBalanceSend(false);
       }
@@ -130,8 +125,10 @@ export const InternalTransferForm = ({
     const fetchBalanceReceive = async () => {
       if (!toAccountTypeValue) {
         setBalanceReceive(null);
+
         return;
       }
+
       try {
         setIsFetchingBalanceReceive(true);
 
@@ -181,22 +178,62 @@ export const InternalTransferForm = ({
     const sanitizedValue = sanitizeNumber(value);
     if (isValidNumber(sanitizedValue)) {
       setRawAmount(sanitizedValue);
+
+      const amount = Number(sanitizedValue);
+
+      if (balanceSend && amount > balanceSend) {
+        setAmountError(
+          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
+        );
+      } else {
+        setAmountError(null);
+      }
+
       onChange(sanitizedValue);
     }
   };
 
-  const handleBlurAmountInput = () => {
-    if (balanceSend) {
-      if (amountValue > balanceSend) {
-        setError('internalTransfer.amount', {
-          type: 'validate',
-          message: ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE,
-        });
-      } else {
-        clearErrors('internalTransfer.amount');
-      }
+  const getFormattedAmount = (
+    rawAmount: string,
+    value: string | number,
+  ): string => {
+    if (rawAmount) {
+      return `$${formatNumberWithCommas(Number(rawAmount))}`;
     }
+
+    if (String(value) !== '') {
+      return `$${formatNumberWithCommas(Number(value))}`;
+    }
+
+    return '';
   };
+
+  useEffect(() => {
+    const fetchBalanceSend = async () => {
+      if (!fromAccountTypeValue) {
+        setBalanceSend(null);
+        return;
+      }
+
+      try {
+        setIsFetchingBalanceSend(true);
+
+        const balance = await getAccountInfoByAccountType(
+          session.user.id,
+          fromAccountTypeValue,
+          'balance',
+        );
+
+        setBalanceSend(Number(balance));
+      } catch (error) {
+        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
+      } finally {
+        setIsFetchingBalanceSend(false);
+      }
+    };
+
+    fetchBalanceSend();
+  }, [fromAccountTypeValue, session.user.id]);
 
   return (
     <div className='flex flex-col gap-4'>
@@ -314,7 +351,10 @@ export const InternalTransferForm = ({
       <Controller
         control={control}
         name='internalTransfer.amount'
-        render={({ field: { value, onChange }, fieldState: { error } }) => (
+        render={({
+          field: { onBlur, value, onChange },
+          fieldState: { error },
+        }) => (
           <Input
             inputMode='decimal'
             label='Amount'
@@ -324,17 +364,13 @@ export const InternalTransferForm = ({
               inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
               input: 'm-0 text-xs text-primary-200 font-medium',
             }}
-            value={
-              rawAmount
-                ? formatNumberWithCommas(Number(rawAmount))
-                : formatNumberWithCommas(value)
-            }
-            errorMessage={error?.message}
-            isInvalid={!!error?.message}
+            value={getFormattedAmount(rawAmount, value)}
+            errorMessage={amountError || error?.message}
+            isInvalid={!!amountError || !!error?.message}
             onChange={(e) =>
               handleInputChange(e.target.value.replace(/^\$/, ''), onChange)
             }
-            onBlur={handleBlurAmountInput}
+            onBlur={onBlur}
           />
         )}
       />

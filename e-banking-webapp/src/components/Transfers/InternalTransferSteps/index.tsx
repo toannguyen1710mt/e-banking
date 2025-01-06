@@ -40,7 +40,7 @@ export const InternalTransferSteps = ({
       internalTransfer: {
         fromAccountType: undefined,
         toAccountType: undefined,
-        amount: 0,
+        amount: '',
       },
     },
     resolver: zodResolver(InternalTransferFormSchema),
