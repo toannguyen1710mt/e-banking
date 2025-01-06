@@ -38,7 +38,7 @@ export const MyCalender = () => (
         as='span'
         className='w-full text-left text-xs font-medium !text-black'
       >
-        My Calender
+        My Calendar
       </Text>
       <Calendar classNames={{ base: 'ml-[11px]' }} />
     </CardHeader>
