@@ -53,13 +53,10 @@ export const AddCreditCardModal = ({
     resolver: zodResolver(CreditCardSchema),
     defaultValues: {
       cardInfo: {
-        fullName: '',
+        holderName: '',
         cardNumber: '',
         expireAt: '',
         ccv: '',
-      },
-      confirmationDetails: {
-        holderName: '',
       },
       walletType: 'Main',
     },
@@ -84,9 +81,7 @@ export const AddCreditCardModal = ({
   }, [session.user.id]);
 
   const onSubmit = async (data: FormValues) => {
-    const { fullName, cardNumber, expireAt, ccv } = data.cardInfo;
-
-    const { holderName } = data.confirmationDetails;
+    const { holderName, cardNumber, expireAt, ccv } = data.cardInfo;
 
     const selectedAccount = accounts.find(
       (account) => account.type === data?.walletType,
@@ -94,11 +89,10 @@ export const AddCreditCardModal = ({
 
     try {
       await addNewCardByAccountId(selectedAccount?.documentId as string, {
-        fullName,
+        holderName,
         cardNumber,
         expireAt,
         ccv,
-        holderName,
       });
 
       startTransition(() => {

@@ -9,7 +9,7 @@ import { futureMonth } from '@/utils';
 
 export const CreditCardSchema = z.object({
   cardInfo: z.object({
-    fullName: z
+    holderName: z
       .string()
       .trim()
       .min(3, ERROR_MESSAGES.USERNAME_INVALID)
@@ -20,9 +20,6 @@ export const CreditCardSchema = z.object({
       .regex(/^\d{12}$/, ERROR_MESSAGES.CARD_NUMBER_INVALID),
     expireAt: futureMonth,
     ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
-  }),
-  confirmationDetails: z.object({
-    holderName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
   }),
   walletType: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
 });
