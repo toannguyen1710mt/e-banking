@@ -41,7 +41,7 @@ export const AddCreditCard = () => {
 
         <Controller
           control={control}
-          name='cardInfo.fullName'
+          name='cardInfo.holderName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'

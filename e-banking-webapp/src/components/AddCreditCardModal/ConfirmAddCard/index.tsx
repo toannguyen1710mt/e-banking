@@ -36,7 +36,7 @@ export const ConfirmAddCard = ({
   } = useWizardFormContext<typeof CreditCardSchema>();
 
   const values = getValues();
-  const { fullName, cardNumber, expireAt } = values.cardInfo;
+  const { holderName, cardNumber, expireAt } = values.cardInfo;
 
   const [selectedType, setSelectedType] = useState<string>(
     accounts[0]?.type || AccountType.MAIN,
@@ -52,7 +52,7 @@ export const ConfirmAddCard = ({
         <div className='flex w-full items-center justify-between gap-[19px]'>
           <CreditCard
             cardNumber={cardNumber}
-            holderName={fullName}
+            holderName={holderName}
             isModal={true}
             expireDate={formatYearMonthToShortDate(expireAt)}
             variant={selectedType.toLowerCase() as VariantsCard}
@@ -61,8 +61,8 @@ export const ConfirmAddCard = ({
           <div className='flex flex-1 flex-col gap-[15px]'>
             <Controller
               control={control}
-              name='confirmationDetails.holderName'
-              render={({ field, fieldState: { error } }) => (
+              name='cardInfo.holderName'
+              render={({ field }) => (
                 <Input
                   labelPlacement='outside'
                   label='Holder’s Name'
@@ -73,9 +73,8 @@ export const ConfirmAddCard = ({
                     input: 'm-0 text-2xs p-0 font-bold',
                     label: 'text-xs !text-black',
                   }}
-                  isInvalid={!!error?.message}
-                  errorMessage={error?.message}
                   {...field}
+                  readOnly
                 />
               )}
             />
