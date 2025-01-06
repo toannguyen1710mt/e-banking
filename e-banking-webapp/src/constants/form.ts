@@ -27,6 +27,7 @@ export const ACCOUNT_DEFAULT_VALUES = {
 };
 
 export const PASSWORD_DEFAULT_VALUES = {
-  password: '',
+  currentPassword: '',
   newPassword: '',
+  confirmPassword: '',
 };

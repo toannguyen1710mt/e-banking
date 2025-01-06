@@ -38,6 +38,7 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
     formState: { isValid, isDirty },
     setError,
     handleSubmit,
+    reset,
   } = useForm<FormValues>({
     defaultValues: PASSWORD_DEFAULT_VALUES,
     mode: 'onBlur',
@@ -94,10 +95,20 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
           'success',
           'top-center',
         );
+
+        reset();
       } catch (error) {
-        setError('currentPassword', {
-          message: String(error),
-        });
+        if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
+          setError('currentPassword', {
+            message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
+          });
+        }
+
+        if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
+          setError('newPassword', {
+            message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
+          });
+        }
 
         showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
       }
