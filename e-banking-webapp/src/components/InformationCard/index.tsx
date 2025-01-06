@@ -81,7 +81,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
                 type: account.type,
                 error: true,
                 cardNumber: '',
-                holdersName: '',
+                holderName: '',
                 ccv: '',
                 expireAt: '',
               });
@@ -152,7 +152,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
                 cards[currentCardIndex]?.type.toLowerCase() as VariantsCard
               }
               cardNumber={cards[currentCardIndex]?.cardNumber}
-              holderName={cards[currentCardIndex]?.holdersName}
+              holderName={cards[currentCardIndex]?.holderName}
               expireDate={formatYearMonthToShortDate(
                 cards[currentCardIndex]?.expireAt,
               )}

@@ -81,12 +81,12 @@ export const CreditCardForm = <T extends z.ZodType>({
 
         <Controller
           control={control}
-          name='card.holdersName'
+          name='card.holderName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
               label='Holders Name'
-              aria-label='holdersName'
+              aria-label='holderName'
               placeholder='Holders Name'
               isInvalid={!!error?.message}
               errorMessage={error?.message}

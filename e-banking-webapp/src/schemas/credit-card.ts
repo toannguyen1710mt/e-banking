@@ -22,7 +22,7 @@ export const CreditCardSchema = z.object({
     ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
   }),
   confirmationDetails: z.object({
-    holdersName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
+    holderName: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
   }),
   walletType: z.string().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
 });

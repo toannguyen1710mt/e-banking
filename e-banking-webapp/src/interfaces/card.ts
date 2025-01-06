@@ -2,7 +2,7 @@ export interface ICard {
   id: number;
   fullName?: string;
   cardNumber: string;
-  holdersName: string;
+  holderName: string;
   ccv: string;
   expireAt: string;
 }

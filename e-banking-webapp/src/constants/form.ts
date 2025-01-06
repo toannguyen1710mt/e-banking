@@ -11,7 +11,7 @@ export const SIGNUP_FORM_DEFAULT_VALUES = {
     postal: '344',
   },
   card: {
-    holdersName: '',
+    holderName: '',
     cardNumber: '',
     expireAt: '',
     ccv: '',
