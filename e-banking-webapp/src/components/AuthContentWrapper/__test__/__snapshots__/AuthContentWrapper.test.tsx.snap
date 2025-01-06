@@ -6,7 +6,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-1 flex-col"
+        class="mx-auto flex flex-1 flex-col"
       >
         <img
           alt="Logo EBanking"
@@ -21,16 +21,16 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           width="104"
         />
         <div
-          class="mb-7"
+          class="mb-7 max-w-[406px]"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold leading-[50px]"
+            class="text-foreground-100 text-4xl font-semibold"
           >
             Good To See You Again!
           </h1>
         </div>
         <div
-          class="mb-[17px]"
+          class="mb-[17px] max-w-[325px]"
         >
           Form
         </div>
@@ -43,7 +43,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
             class="leading-[20px] text-primary-200"
             href="/sign-in"
           >
-            Login
+            Sign In
           </a>
         </p>
       </div>
@@ -51,7 +51,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-1 flex-col"
+      class="mx-auto flex flex-1 flex-col"
     >
       <img
         alt="Logo EBanking"
@@ -66,16 +66,16 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         width="104"
       />
       <div
-        class="mb-7"
+        class="mb-7 max-w-[406px]"
       >
         <h1
-          class="text-foreground-100 text-4xl font-semibold leading-[50px]"
+          class="text-foreground-100 text-4xl font-semibold"
         >
           Good To See You Again!
         </h1>
       </div>
       <div
-        class="mb-[17px]"
+        class="mb-[17px] max-w-[325px]"
       >
         Form
       </div>
@@ -88,7 +88,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           class="leading-[20px] text-primary-200"
           href="/sign-in"
         >
-          Login
+          Sign In
         </a>
       </p>
     </div>

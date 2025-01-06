@@ -22,7 +22,7 @@ const AuthLayout = ({
   return (
     <div className='flex h-screen flex-row'>
       <div
-        className={`flex flex-1 flex-col pb-[83px] pl-4 pr-4 pt-[27px] transition-all duration-300 md:pb-10 md:pl-[151px] md:pr-[83px] md:pt-[87px] ${
+        className={`flex flex-1 flex-col pb-[83px] pl-4 pr-4 pt-[27px] transition-all duration-300 md:px-6 md:pb-10 md:pt-[87px] ${
           contentClass
         }`}
       >

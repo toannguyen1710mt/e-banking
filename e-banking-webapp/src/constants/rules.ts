@@ -53,7 +53,7 @@ export const SignUpSchema = createStepSchema({
   }),
   card: z.object({
     holderName: z.string().min(1, ERROR_MESSAGES.CARD_HOLDER_NAME_REQUIRED),
-    cardNumber: z.string().length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID),
+    cardNumber: z.string().length(14, ERROR_MESSAGES.CARD_NUMBER_INVALID),
     expireAt: futureMonth,
     ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
   }),

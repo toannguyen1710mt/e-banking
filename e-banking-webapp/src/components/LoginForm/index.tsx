@@ -57,7 +57,7 @@ export const LoginForm = () => {
   });
 
   return (
-    <form onSubmit={onSubmit} className='mr-0 md:mr-[83px]'>
+    <form onSubmit={onSubmit} className='mr-0'>
       <div className='mb-8 flex w-full flex-col gap-6 bg-white md:gap-4'>
         <Text
           variant={TEXT_VARIANT.INFO}

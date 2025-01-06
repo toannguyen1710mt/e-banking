@@ -11,6 +11,9 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { ERROR_MESSAGES } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
 
+// Helpers
+import { formatCardNumber } from '@/utils';
+
 // Styles
 import '@/styles/input.css';
 
@@ -106,11 +109,16 @@ export const CreditCardForm = <T extends z.ZodType>({
               aria-label='cardNumber'
               placeholder='Card Number'
               type='text'
-              maxLength={12}
+              maxLength={14}
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               startContent={<CreditCardIcon />}
               {...field}
+              onChange={(e) => {
+                const formattedValue = formatCardNumber(e.target.value);
+                field.onChange(formattedValue);
+              }}
+              value={formatCardNumber(field.value || '')}
             />
           )}
         />

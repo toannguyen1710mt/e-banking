@@ -26,19 +26,19 @@ export const DatePicker = (props: DatePickerProps) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let newValue = e.target.value.replace(/\D/g, '');
 
-    if (newValue.length >= 4) {
-      newValue = `${newValue.slice(0, 4)}/${newValue.slice(4, 6)}`;
+    if (newValue.length >= 2) {
+      newValue = `${newValue.slice(0, 2)}/${newValue.slice(2, 4)}`;
     }
 
-    if (newValue.length > 7) {
-      newValue = newValue.slice(0, 7);
+    if (newValue.length > 5) {
+      newValue = newValue.slice(0, 5);
     }
 
-    if (newValue.length === 7) {
-      const month = parseInt(newValue.slice(5, 7), 10);
+    if (newValue.length === 5) {
+      const month = parseInt(newValue.slice(0, 2), 10);
 
       if (month < 1 || month > 12) {
-        newValue = newValue.slice(0, 5);
+        newValue = newValue.slice(3);
       }
     }
 
@@ -47,9 +47,9 @@ export const DatePicker = (props: DatePickerProps) => {
   };
 
   const handleDateChange = (date: DateValue) => {
-    const year = date.year.toString();
     const month = date.month.toString().padStart(2, '0');
-    const formattedDate = `${year}/${month}`;
+    const year = date.year.toString().slice(-2);
+    const formattedDate = `${month}/${year}`;
 
     setInputValue(formattedDate);
     setIsOpenCalendar(false);
@@ -98,7 +98,7 @@ export const DatePicker = (props: DatePickerProps) => {
         classNames={{
           input: 'm-0 p-0 !pl-3',
         }}
-        placeholder='YYYY/MM'
+        placeholder='MM/YY'
         value={inputValue}
         onChange={handleInputChange}
         maxLength={7}

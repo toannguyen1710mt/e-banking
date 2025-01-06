@@ -11,6 +11,8 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Schemas
 import { CreditCardSchema } from '@/schemas';
+// Helpers
+import { formatCardNumber } from '@/utils';
 
 // Component
 import { Button, Input, Text, CreditCardIcon, DatePicker } from '@/components';
@@ -65,11 +67,16 @@ export const AddCreditCard = () => {
               aria-label='cardNumber'
               placeholder='Card Number'
               type='text'
-              maxLength={12}
+              maxLength={14}
               isInvalid={!!error?.message}
               errorMessage={error?.message}
               endContent={<CreditCardIcon />}
               {...field}
+              onChange={(e) => {
+                const formattedValue = formatCardNumber(e.target.value);
+                field.onChange(formattedValue);
+              }}
+              value={formatCardNumber(field.value || '')}
             />
           )}
         />
