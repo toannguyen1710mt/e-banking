@@ -26,6 +26,7 @@ export const ERROR_MESSAGES = {
   CHANGE_PASSWORD_SUCCESS: 'Change password successful.',
   UPDATE_EMAIL_SETTINGS_SUCCESS: 'Update options email settings successful.',
   AMOUNT_MIN: 'Amount must be equal or greater than 0.01',
+  AMOUNT_EXCEEDED_BALANCE: 'Amount has exceeded the current balance',
   CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
   CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
   CCV_INVALID: 'CCV must be exactly 3 digits',
