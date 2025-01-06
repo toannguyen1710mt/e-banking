@@ -2,11 +2,18 @@
 
 // Libs
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { getLocalTimeZone, today } from '@internationalized/date';
 
 // Component
-import { Calendar, Text, DueTile } from '@/components';
-
-import { AmazonIcon, CarIcon, HomeIcon, WifiRouterIcon } from '@/components';
+import {
+  Calendar,
+  Text,
+  DueTile,
+  AmazonIcon,
+  CarIcon,
+  HomeIcon,
+  WifiRouterIcon,
+} from '@/components';
 
 export const DUE_TILE = [
   {
@@ -38,9 +45,12 @@ export const MyCalender = () => (
         as='span'
         className='w-full text-left text-xs font-medium !text-black'
       >
-        My Calender
+        My Calendar
       </Text>
-      <Calendar classNames={{ base: 'ml-[11px]' }} />
+      <Calendar
+        classNames={{ base: 'ml-[11px]' }}
+        value={today(getLocalTimeZone())}
+      />
     </CardHeader>
     <CardBody className='gap-5'>
       <Text as='span' className='text-lg font-bold !text-black'>

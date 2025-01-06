@@ -14,10 +14,7 @@ export const CreditCardSchema = z.object({
       .trim()
       .min(3, ERROR_MESSAGES.USERNAME_INVALID)
       .transform((value) => value.trim()), // Trim spaces before validation
-    cardNumber: z
-      .string()
-      .length(12, ERROR_MESSAGES.CARD_NUMBER_INVALID)
-      .regex(/^\d{12}$/, ERROR_MESSAGES.CARD_NUMBER_INVALID),
+    cardNumber: z.string().length(14, ERROR_MESSAGES.CARD_NUMBER_INVALID),
     expireAt: futureMonth,
     ccv: z.string().regex(/^\d{3}$/, ERROR_MESSAGES.CCV_INVALID),
   }),
