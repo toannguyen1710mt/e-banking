@@ -9,6 +9,9 @@ import { useWizardFormContext } from '@/context';
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Schemas
+import { CreditCardSchema } from '@/schemas';
+
 // Component
 import { Button, Input, Text, CreditCardIcon, DatePicker } from '@/components';
 
@@ -17,7 +20,7 @@ export const AddCreditCard = () => {
     form: { control },
     onNextStep,
     validateStep,
-  } = useWizardFormContext();
+  } = useWizardFormContext<typeof CreditCardSchema>();
 
   return (
     <>
@@ -38,7 +41,7 @@ export const AddCreditCard = () => {
 
         <Controller
           control={control}
-          name='fullName'
+          name='cardInfo.fullName'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
@@ -54,7 +57,7 @@ export const AddCreditCard = () => {
 
         <Controller
           control={control}
-          name='cardNumber'
+          name='cardInfo.cardNumber'
           render={({ field, fieldState: { error } }) => (
             <Input
               labelPlacement='outside'
@@ -74,7 +77,7 @@ export const AddCreditCard = () => {
         <div className='flex gap-5'>
           <Controller
             control={control}
-            name='expireAt'
+            name='cardInfo.expireAt'
             render={({ field, fieldState: { error } }) => (
               <DatePicker
                 labelPlacement='outside'
@@ -89,7 +92,7 @@ export const AddCreditCard = () => {
 
           <Controller
             control={control}
-            name='ccv'
+            name='cardInfo.ccv'
             render={({ field, fieldState: { error } }) => (
               <Input
                 labelPlacement='outside'

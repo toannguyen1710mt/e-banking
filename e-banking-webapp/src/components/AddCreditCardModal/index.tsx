@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import Image from 'next/image';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -47,17 +47,24 @@ export const AddCreditCardModal = ({
   const [accounts, setAccounts] = useState<IAccount[]>([]);
   const { showToast } = useToastContext();
 
+  const [isPending, startTransition] = useTransition();
+
   const form = useForm<FormValues>({
     resolver: zodResolver(CreditCardSchema),
     defaultValues: {
-      fullName: '',
-      cardNumber: '',
-      expireAt: '',
-      ccv: '',
-      holderName: '',
+      cardInfo: {
+        fullName: '',
+        cardNumber: '',
+        expireAt: '',
+        ccv: '',
+      },
+      confirmationDetails: {
+        holderName: '',
+      },
+      walletType: 'Main',
     },
     reValidateMode: 'onBlur',
-    mode: 'onBlur',
+    mode: 'all',
   });
 
   useEffect(() => {
@@ -76,13 +83,29 @@ export const AddCreditCardModal = ({
     fetchData();
   }, [session.user.id]);
 
-  const submitHandler = async (accountId: string, data: FormValues) => {
+  const onSubmit = async (data: FormValues) => {
+    const { fullName, cardNumber, expireAt, ccv } = data.cardInfo;
+
+    const { holderName } = data.confirmationDetails;
+
+    const selectedAccount = accounts.find(
+      (account) => account.type === data?.walletType,
+    );
+
     try {
-      await addNewCardByAccountId(accountId, data);
+      await addNewCardByAccountId(selectedAccount?.documentId as string, {
+        fullName,
+        cardNumber,
+        expireAt,
+        ccv,
+        holderName,
+      });
 
-      showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
+      startTransition(() => {
+        showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
 
-      return onClose();
+        return onClose();
+      });
     } catch (error) {
       showToast(ERROR_MESSAGES.ADD_CARD_FAILED, 'error', 'top-center');
 
@@ -110,21 +133,23 @@ export const AddCreditCardModal = ({
           height={280}
           alt='Add Credit Card'
         />
+
         <div className='min-h-[500px] flex-1 rounded-xl bg-white px-4 py-8'>
           <WizardForm.Root
             schema={CreditCardSchema}
             form={form}
             className='flex grow flex-col'
+            onSubmit={onSubmit}
           >
-            <WizardForm.Step name='addCreditCard' key='addCreditCard'>
+            <WizardForm.Step name='cardInfo' key='cardInfo'>
               <AddCreditCard />
             </WizardForm.Step>
-            <WizardForm.Step name='addCreditCard' key='addCreditCard'>
-              <ConfirmAddCard
-                accounts={accounts}
-                schema={CreditCardSchema}
-                submitHandler={submitHandler}
-              />
+
+            <WizardForm.Step
+              name='confirmationDetails'
+              key='confirmationDetails'
+            >
+              <ConfirmAddCard accounts={accounts} isPending={isPending} />
             </WizardForm.Step>
           </WizardForm.Root>
         </div>

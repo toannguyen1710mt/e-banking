@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useState } from 'react';
 import { Controller } from 'react-hook-form';
 import { RadioGroup } from '@nextui-org/react';
-import { z } from 'zod';
 
 // Interfaces
 import { AccountType, IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -14,56 +13,41 @@ import { useWizardFormContext } from '@/context';
 // Utils
 import { formatYearMonthToShortDate } from '@/utils';
 
+// Schemas
+import { CreditCardSchema } from '@/schemas';
+
 // Components
 import { Button, Input, RadioButton, Text } from '@/components/common';
 import { CreditCard, VariantsCard } from '@/components/CreditCard';
 import { CreditCardIcon } from '@/components/icons';
 
-interface IConfirmAddCard<T extends z.ZodType> {
-  schema: T;
+interface IConfirmAddCard {
   accounts?: IAccount[];
-  submitHandler: (id: string, data: z.infer<T>) => void;
+  isPending: boolean;
 }
 
-export const ConfirmAddCard = <T extends z.ZodType>({
+export const ConfirmAddCard = ({
   accounts = [],
-  submitHandler,
-}: IConfirmAddCard<T>) => {
+  isPending,
+}: IConfirmAddCard) => {
   const {
-    form: { control, handleSubmit, getValues },
+    form: { control, getValues },
     validateStep,
-    onNextStep,
-  } = useWizardFormContext();
+  } = useWizardFormContext<typeof CreditCardSchema>();
 
   const values = getValues();
-  const { fullName, cardNumber, expireAt } = values;
-  const [isPending, startTransition] = useTransition();
+  const { fullName, cardNumber, expireAt } = values.cardInfo;
+
   const [selectedType, setSelectedType] = useState<string>(
     accounts[0]?.type || AccountType.MAIN,
   );
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    startTransition(() => {
-      const handler = handleSubmit((formData) => {
-        const selectedAccount = accounts.find(
-          (account) => account.type === selectedType,
-        );
-
-        submitHandler(selectedAccount?.documentId as string, formData);
-      });
-
-      handler(e);
-      onNextStep(e);
-    });
-  };
 
   return (
     <>
       <Text as='h2' variant={TEXT_VARIANT.DEFAULT}>
         Credit Card
       </Text>
+
       <div className='mt-[10px] flex flex-col justify-between'>
         <div className='flex w-full items-center justify-between gap-[19px]'>
           <CreditCard
@@ -77,7 +61,7 @@ export const ConfirmAddCard = <T extends z.ZodType>({
           <div className='flex flex-1 flex-col gap-[15px]'>
             <Controller
               control={control}
-              name='holderName'
+              name='confirmationDetails.holderName'
               render={({ field, fieldState: { error } }) => (
                 <Input
                   labelPlacement='outside'
@@ -96,32 +80,25 @@ export const ConfirmAddCard = <T extends z.ZodType>({
               )}
             />
 
-            <Controller
-              control={control}
-              name='cardNumber'
-              render={({ field, fieldState: { error } }) => (
-                <Input
-                  labelPlacement='outside'
-                  label='Credit Card Number'
-                  aria-label='credit-card-number'
-                  placeholder='Card Number'
-                  classNames={{
-                    input: 'm-0 text-2xs p-0 font-bold',
-                    label: 'text-xs !text-black',
-                  }}
-                  size='sm'
-                  type='text'
-                  maxLength={12}
-                  isInvalid={!!error?.message}
-                  errorMessage={error?.message}
-                  endContent={<CreditCardIcon />}
-                  isDisabled
-                  {...field}
-                />
-              )}
+            <Input
+              labelPlacement='outside'
+              label='Credit Card Number'
+              aria-label='credit-card-number'
+              placeholder='Card Number'
+              classNames={{
+                input: 'm-0 text-2xs p-0 font-bold',
+                label: 'text-xs !text-black',
+              }}
+              value={cardNumber}
+              size='sm'
+              type='text'
+              maxLength={12}
+              endContent={<CreditCardIcon />}
+              readOnly
             />
           </div>
         </div>
+
         <div className='mt-[19px]'>
           <Text variant={TEXT_VARIANT.DEFAULT} size={TEXT_SIZE.XS}>
             How may wallets will your Card have
@@ -156,12 +133,11 @@ export const ConfirmAddCard = <T extends z.ZodType>({
         </div>
 
         <Button
-          type='button'
+          type='submit'
           color='primary'
           className='mx-auto mt-[30px] max-w-[320px]'
           isDisabled={!validateStep()}
           isLoading={isPending}
-          onClick={onSubmit}
         >
           Confirm
         </Button>
