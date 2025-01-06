@@ -72,10 +72,18 @@ export const InternalTransferForm = ({
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [balanceReceive, setBalanceReceive] = useState<number | null>(null);
 
+  // Cached balance data
+  const [fetchedBalances, setFetchedBalances] = useState<{
+    [key: string]: number;
+  }>({});
+
   useEffect(() => {
     const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
+      if (
+        !fromAccountTypeValue ||
+        fetchedBalances[fromAccountTypeValue] !== undefined
+      ) {
+        setBalanceSend(fetchedBalances[fromAccountTypeValue] || null);
         return;
       }
 
@@ -107,6 +115,11 @@ export const InternalTransferForm = ({
         );
 
         setBalanceSend(Number(balance));
+        setFetchedBalances((prev) => ({
+          ...prev,
+          [fromAccountTypeValue]: Number(balance),
+        }));
+
         setValue('fromAccountId', String(accountId));
         setValue('fromCardName', String(fromCardName));
         setValue('fromAccountNumber', String(fromAccountNumber));
@@ -119,13 +132,15 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue]);
+  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
 
   useEffect(() => {
     const fetchBalanceReceive = async () => {
-      if (!toAccountTypeValue) {
-        setBalanceReceive(null);
-
+      if (
+        !toAccountTypeValue ||
+        fetchedBalances[toAccountTypeValue] !== undefined
+      ) {
+        setBalanceReceive(fetchedBalances[toAccountTypeValue] || null);
         return;
       }
 
@@ -157,6 +172,11 @@ export const InternalTransferForm = ({
         );
 
         setBalanceReceive(Number(balance));
+        setFetchedBalances((prev) => ({
+          ...prev,
+          [toAccountTypeValue]: Number(balance),
+        }));
+
         setValue('toAccountId', String(documentId));
         setValue('toCardName', String(toCardName));
         setValue('toAccountNumber', String(toAccountNumber));
@@ -169,7 +189,7 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceReceive();
-  }, [toAccountTypeValue, session.user.id, setValue]);
+  }, [toAccountTypeValue, session.user.id, setValue, fetchedBalances]);
 
   const handleInputChange = (
     value: string,
@@ -183,7 +203,9 @@ export const InternalTransferForm = ({
 
       if (balanceSend && amount > balanceSend) {
         setAmountError(
-          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
+          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
+            balanceSend,
+          )}`,
         );
       } else {
         setAmountError(null);
@@ -207,33 +229,6 @@ export const InternalTransferForm = ({
 
     return '';
   };
-
-  useEffect(() => {
-    const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
-        return;
-      }
-
-      try {
-        setIsFetchingBalanceSend(true);
-
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
-
-        setBalanceSend(Number(balance));
-      } catch (error) {
-        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
-    };
-
-    fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id]);
 
   return (
     <div className='flex flex-col gap-4'>
