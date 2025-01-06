@@ -2,7 +2,7 @@
 import { API_ENDPOINTS, TAGS } from '@/constants';
 
 // Interfaces
-import { ICard, SuccessResponse } from '@/interfaces';
+import { ICard, ICardsPayloadByAccount, SuccessResponse } from '@/interfaces';
 
 // Services
 import { httpClient } from './http-client';
@@ -22,7 +22,7 @@ export const getCardById = async (id: string) => {
 
 export const getTotalCardsByAccounts = async (query: string) => {
   const { data: result, ...rest } = await httpClient.get<
-    SuccessResponse<ICard[]>
+    SuccessResponse<ICardsPayloadByAccount[]>
   >(
     `${query ? `${API_ENDPOINTS.CARDS}?populate=account&${query}&sort=createdAt:desc` : ''}`,
     {
@@ -31,7 +31,7 @@ export const getTotalCardsByAccounts = async (query: string) => {
   );
 
   return {
-    totalCard: result?.data as ICard[],
+    totalCard: result?.data as ICardsPayloadByAccount[],
     ...rest,
   };
 };

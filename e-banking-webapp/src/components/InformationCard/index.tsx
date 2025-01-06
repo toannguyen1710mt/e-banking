@@ -12,7 +12,7 @@ import { createExpenseAnalysisOptions, ERROR_MESSAGES } from '@/constants';
 import { MASTERCARD_CHART_MOCK } from '@/mocks';
 
 // Interfaces
-import { IAccount, ICard } from '@/interfaces';
+import { IAccount, ICardsPayloadByAccount } from '@/interfaces';
 
 // Services
 import { getBalanceAccount, getTotalCardsByAccounts } from '@/services';
@@ -41,7 +41,7 @@ interface IInformationCardProps {
 export const InformationCard = ({ session }: IInformationCardProps) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [accounts, setAccounts] = useState<IAccount[]>([]);
-  const [cards, setCards] = useState<ICard[]>([]);
+  const [cards, setCards] = useState<ICardsPayloadByAccount[]>([]);
 
   const handleNextCard = () => {
     setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
