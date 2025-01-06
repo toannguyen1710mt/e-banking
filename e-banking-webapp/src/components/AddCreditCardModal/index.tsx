@@ -59,7 +59,7 @@ export const AddCreditCardModal = ({
         ccv: '',
       },
       confirmationDetails: {
-        holderName: '',
+        holdersName: '',
       },
       walletType: 'Main',
     },
@@ -86,7 +86,7 @@ export const AddCreditCardModal = ({
   const onSubmit = async (data: FormValues) => {
     const { fullName, cardNumber, expireAt, ccv } = data.cardInfo;
 
-    const { holderName } = data.confirmationDetails;
+    const { holdersName } = data.confirmationDetails;
 
     const selectedAccount = accounts.find(
       (account) => account.type === data?.walletType,
@@ -98,7 +98,7 @@ export const AddCreditCardModal = ({
         cardNumber,
         expireAt,
         ccv,
-        holderName,
+        holdersName,
       });
 
       startTransition(() => {
