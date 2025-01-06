@@ -44,6 +44,7 @@ module.exports = {
               900: colors.mistGray,
             },
             primary: {
+              DEFAULT: colors.navyBlue,
               100: colors.pastelGreen,
               200: colors.navyBlue,
             },
