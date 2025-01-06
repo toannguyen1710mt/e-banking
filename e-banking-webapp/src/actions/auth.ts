@@ -31,7 +31,7 @@ export const authenticateUser = async (formData: TSignInFormData) => {
     await signIn('credentials', formData);
   } catch (error) {
     if (error instanceof AuthError) {
-      return ERROR_MESSAGES.USERNAME_PASSWORD_INVALID;
+      return ERROR_MESSAGES.ACCOUNT_AND_PASSWORD_INVALID;
     }
     throw error;
   }
