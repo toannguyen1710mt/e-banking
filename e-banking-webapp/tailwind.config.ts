@@ -41,6 +41,7 @@ module.exports = {
               600: colors.pinPin,
               700: colors.dimGray,
               800: colors.waring,
+              900: colors.mistGray,
             },
             primary: {
               100: colors.pastelGreen,

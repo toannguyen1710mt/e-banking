@@ -20,6 +20,7 @@ export const colors = {
   lightGreen: '#C2EEC2',
   lightRed: '#F3C9C9',
   lightAqua: '#D9EAE8',
+  mistGray: '#E6E5E5',
   semiTransparentDimGray: 'rgba(128, 128, 128, 1)',
   lightGraySolid: 'rgba(230, 229, 229, 1)',
   semiTransparentNavyBlue: 'rgba(38, 70, 83, 0.5)',

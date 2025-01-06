@@ -1,4 +1,4 @@
-import { HeaderAuth } from '@/layouts';
+import { HeaderAuth, WrapperWorkspaces } from '@/layouts';
 
 export default function MainLayout({
   children,
@@ -8,7 +8,7 @@ export default function MainLayout({
   return (
     <div className='flex h-full w-full flex-col'>
       <HeaderAuth />
-      <div className='flex grow p-8'>{children}</div>
+      <WrapperWorkspaces>{children}</WrapperWorkspaces>
     </div>
   );
 }

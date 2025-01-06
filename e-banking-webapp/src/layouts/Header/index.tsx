@@ -13,10 +13,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Session } from 'next-auth';
-import { redirect } from 'next/navigation';
+import { redirect, usePathname } from 'next/navigation';
 
 // Constants
-import { ERROR_MESSAGES, IMAGES, NavbarItem, ROUTES } from '@/constants';
+import { ERROR_MESSAGES, IMAGES, NavbarItem, REGEX, ROUTES } from '@/constants';
 
 // Components
 import {
@@ -43,6 +43,9 @@ export const Header = ({ session }: IHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
   const { showToast } = useToastContext();
+  const pathname = usePathname();
+
+  const isSettingsUrl = REGEX.SETTINGS.test(pathname);
 
   const {
     user: { username, email, avatar },
@@ -113,8 +116,7 @@ export const Header = ({ session }: IHeaderProps) => {
   return (
     <NavbarNextUI
       classNames={{
-        wrapper:
-          'max-w-full justify-start border-b border-foreground-100 border-opacity-25',
+        wrapper: `max-w-full justify-start border-b border-foreground-100 border-opacity-25 ${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'}`,
       }}
       onMenuOpenChange={setIsMenuOpen}
     >
