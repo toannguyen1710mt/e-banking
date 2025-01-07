@@ -34,7 +34,7 @@ import { GlobalTransferFormSchema } from '@/schemas';
 import { Button, Input, Select, Text, SendIcon } from '@/components';
 
 // Contexts
-import { useWizardFormContext } from '@/context';
+import { useFetchedBalances, useWizardFormContext } from '@/context';
 
 type FormValues = keyof z.infer<typeof GlobalTransferFormSchema>;
 
@@ -47,7 +47,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       getValues,
     },
     onNextStep,
-    validateStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
 
   const hiddenFields: FormValues[] = [
@@ -80,12 +79,17 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [rawAmount, setRawAmount] = useState<string>('');
   const [amountError, setAmountError] = useState<string | null>(null);
-  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
+
+  // Cached balance data
+  const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
+      if (
+        !fromAccountTypeValue ||
+        fetchedBalances[fromAccountTypeValue] !== undefined
+      ) {
+        setBalanceSend(fetchedBalances[fromAccountTypeValue] || null);
         return;
       }
 
@@ -115,11 +119,17 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
             'accountNumber',
           );
 
-          setBalanceSend(Number(balance));
-          setValue('fromAccountId', String(accountId));
-          setValue('fromCardName', String(fromCardName));
-          setValue('fromAccountNumber', String(fromAccountNumber));
-          setValue('fromAccountBalance', Number(balance));
+          startTransition(() => {
+            setBalanceSend(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [fromAccountTypeValue]: Number(balance),
+            }));
+            setValue('fromAccountId', String(accountId));
+            setValue('fromCardName', String(fromCardName));
+            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountBalance', Number(balance));
+          });
         } catch (error) {
           console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
         }
@@ -127,7 +137,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
+  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
 
   const countryCode = () => {
     return (
@@ -184,32 +194,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     return '';
   };
 
-  useEffect(() => {
-    const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
-        return;
-      }
-
-      try {
-        setIsFetchingBalanceSend(true);
-
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
-
-        setBalanceSend(Number(balance));
-      } catch (error) {
-        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
-    };
-
-    fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id]);
+  const disableButtonSubmit =
+    !fromAccountTypeValue ||
+    !balanceSend ||
+    !allFieldValues.amount ||
+    !!amountError;
 
   return (
     <div className='flex w-full flex-col gap-4'>
@@ -257,7 +246,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               value={String(value)}
               errorMessage={errors.fromAccountType?.message}
               isInvalid={!!errors.fromAccountType}
-              isDisabled={isPending}
               selectedKeys={value ? [String(value)] : []}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
@@ -303,7 +291,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           Available Balance:
         </Text>
         <Text as='span' className='text-xs text-foreground-200 opacity-50'>
-          {isFetchingBalanceSend ? (
+          {isPending ? (
             <Spinner size='sm' />
           ) : (
             balanceSend && `$${formatNumberWithCommas(balanceSend)}`
@@ -369,7 +357,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         onClick={onNextStep}
-        isDisabled={!validateStep()}
+        isDisabled={disableButtonSubmit}
       >
         Transfer Funds
       </Button>

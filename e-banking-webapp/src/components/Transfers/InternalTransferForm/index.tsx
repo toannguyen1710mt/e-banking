@@ -2,7 +2,7 @@
 
 // Libs
 import { z } from 'zod';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { Controller, useWatch } from 'react-hook-form';
 import { Spinner } from '@nextui-org/react';
 import { Session } from 'next-auth';
@@ -17,7 +17,7 @@ import { Button, Input, Select, SendIcon, Text } from '@/components';
 import { InternalTransferFormSchema } from '@/schemas';
 
 // Context
-import { useWizardFormContext } from '@/context';
+import { useWizardFormContext, useFetchedBalances } from '@/context';
 
 // Services
 import { getAccountInfoByAccountType } from '@/services';
@@ -63,113 +63,127 @@ export const InternalTransferForm = ({
     name: 'internalTransfer.toAccountType',
   });
 
-  // States for fetching
-  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
-  const [isFetchingBalanceReceive, setIsFetchingBalanceReceive] =
-    useState(false);
+  const [isPendingFrom, startTransitionFrom] = useTransition();
+  const [isPendingTo, startTransitionTo] = useTransition();
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [balanceReceive, setBalanceReceive] = useState<number | null>(null);
 
+  // Cached balance data
+  const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
+
   useEffect(() => {
     const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
+      if (
+        !fromAccountTypeValue ||
+        fetchedBalances[fromAccountTypeValue] !== undefined
+      ) {
+        setBalanceSend(fetchedBalances[fromAccountTypeValue] || null);
         return;
       }
 
-      try {
-        setIsFetchingBalanceSend(true);
+      startTransitionFrom(async () => {
+        try {
+          const balance = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'balance',
+          );
 
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
+          const accountId = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'documentId',
+          );
 
-        const accountId = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'documentId',
-        );
+          const fromCardName = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'name',
+          );
 
-        const fromCardName = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'name',
-        );
+          const fromAccountNumber = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'accountNumber',
+          );
 
-        const fromAccountNumber = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'accountNumber',
-        );
-
-        setBalanceSend(Number(balance));
-        setValue('fromAccountId', String(accountId));
-        setValue('fromCardName', String(fromCardName));
-        setValue('fromAccountNumber', String(fromAccountNumber));
-        setValue('fromAccountBalance', Number(balance));
-      } catch (error) {
-        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
+          startTransitionFrom(() => {
+            setBalanceSend(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [fromAccountTypeValue]: Number(balance),
+            }));
+            setValue('fromAccountId', String(accountId));
+            setValue('fromCardName', String(fromCardName));
+            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountBalance', Number(balance));
+          });
+        } catch (error) {
+          console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
+        }
+      });
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue]);
+  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
 
   useEffect(() => {
     const fetchBalanceReceive = async () => {
-      if (!toAccountTypeValue) {
-        setBalanceReceive(null);
-
+      if (
+        !toAccountTypeValue ||
+        fetchedBalances[toAccountTypeValue] !== undefined
+      ) {
+        setBalanceReceive(fetchedBalances[toAccountTypeValue] || null);
         return;
       }
 
-      try {
-        setIsFetchingBalanceReceive(true);
+      startTransitionTo(async () => {
+        try {
+          const balance = await getAccountInfoByAccountType(
+            session.user.id,
+            toAccountTypeValue,
+            'balance',
+          );
 
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          toAccountTypeValue,
-          'balance',
-        );
+          const documentId = await getAccountInfoByAccountType(
+            session.user.id,
+            toAccountTypeValue,
+            'documentId',
+          );
 
-        const documentId = await getAccountInfoByAccountType(
-          session.user.id,
-          toAccountTypeValue,
-          'documentId',
-        );
+          const toCardName = await getAccountInfoByAccountType(
+            session.user.id,
+            toAccountTypeValue,
+            'name',
+          );
 
-        const toCardName = await getAccountInfoByAccountType(
-          session.user.id,
-          toAccountTypeValue,
-          'name',
-        );
+          const toAccountNumber = await getAccountInfoByAccountType(
+            session.user.id,
+            toAccountTypeValue,
+            'accountNumber',
+          );
 
-        const toAccountNumber = await getAccountInfoByAccountType(
-          session.user.id,
-          toAccountTypeValue,
-          'accountNumber',
-        );
-
-        setBalanceReceive(Number(balance));
-        setValue('toAccountId', String(documentId));
-        setValue('toCardName', String(toCardName));
-        setValue('toAccountNumber', String(toAccountNumber));
-        setValue('toAccountBalance', Number(balance));
-      } catch (error) {
-        console.error('Error fetching balance for receive account:', error);
-      } finally {
-        setIsFetchingBalanceReceive(false);
-      }
+          startTransitionTo(() => {
+            setBalanceReceive(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [toAccountTypeValue]: Number(balance),
+            }));
+            setValue('toAccountId', String(documentId));
+            setValue('toCardName', String(toCardName));
+            setValue('toAccountNumber', String(toAccountNumber));
+            setValue('toAccountBalance', Number(balance));
+          });
+        } catch (error) {
+          console.error('Error fetching balance for receive account:', error);
+        }
+      });
     };
 
     fetchBalanceReceive();
-  }, [toAccountTypeValue, session.user.id, setValue]);
+  }, [toAccountTypeValue, session.user.id, setValue, fetchedBalances]);
 
   const handleInputChange = (
     value: string,
@@ -183,7 +197,9 @@ export const InternalTransferForm = ({
 
       if (balanceSend && amount > balanceSend) {
         setAmountError(
-          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
+          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
+            balanceSend,
+          )}`,
         );
       } else {
         setAmountError(null);
@@ -207,33 +223,6 @@ export const InternalTransferForm = ({
 
     return '';
   };
-
-  useEffect(() => {
-    const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
-        return;
-      }
-
-      try {
-        setIsFetchingBalanceSend(true);
-
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
-
-        setBalanceSend(Number(balance));
-      } catch (error) {
-        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
-    };
-
-    fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id]);
 
   return (
     <div className='flex flex-col gap-4'>
@@ -282,7 +271,7 @@ export const InternalTransferForm = ({
                   as='span'
                   className='text-xs text-foreground-200 opacity-50'
                 >
-                  {isFetchingBalanceReceive ? (
+                  {isPendingTo ? (
                     <Spinner size='sm' />
                   ) : (
                     balanceReceive &&
@@ -335,7 +324,7 @@ export const InternalTransferForm = ({
                   as='span'
                   className='text-xs text-foreground-200 opacity-50'
                 >
-                  {isFetchingBalanceSend ? (
+                  {isPendingFrom ? (
                     <Spinner size='sm' />
                   ) : (
                     balanceSend && `$${formatNumberWithCommas(balanceSend)}`

@@ -23,6 +23,7 @@ import {
   ConfirmGlobalTransfer,
   GlobalTransferSuccess,
 } from '@/components';
+import { FetchedBalancesProvider } from '@/context';
 
 type FormValues = z.infer<typeof GlobalTransferFormSchema>;
 
@@ -81,38 +82,40 @@ export const GlobalTransferSteps = ({
   };
 
   return (
-    <WizardForm.Root
-      schema={GlobalTransferFormSchema}
-      form={form}
-      className='flex grow flex-col'
-    >
-      <WizardForm.Step name='transfer' key='transfer'>
-        <GlobalTransferForm session={session} />
-      </WizardForm.Step>
-      <WizardForm.Step
-        name='confirm'
-        key='confirm'
-        className='flex grow flex-col items-center justify-center'
+    <FetchedBalancesProvider>
+      <WizardForm.Root
+        schema={GlobalTransferFormSchema}
+        form={form}
+        className='flex grow flex-col'
       >
-        <ConfirmGlobalTransfer
-          {...allFieldValues}
-          submitHandler={submitHandler}
-          amountInUSD={amountInUSD}
-          userName='Yehudi Daud'
-        />
-      </WizardForm.Step>
-      <WizardForm.Step
-        name='success'
-        key='success'
-        className='flex grow flex-col items-center justify-center'
-      >
-        <GlobalTransferSuccess
-          {...allFieldValues}
-          onClose={onClose}
-          amount={amountInUSD}
-          userName='Yehudi Daud'
-        />
-      </WizardForm.Step>
-    </WizardForm.Root>
+        <WizardForm.Step name='transfer' key='transfer'>
+          <GlobalTransferForm session={session} />
+        </WizardForm.Step>
+        <WizardForm.Step
+          name='confirm'
+          key='confirm'
+          className='flex grow flex-col items-center justify-center'
+        >
+          <ConfirmGlobalTransfer
+            {...allFieldValues}
+            submitHandler={submitHandler}
+            amountInUSD={amountInUSD}
+            userName='Yehudi Daud'
+          />
+        </WizardForm.Step>
+        <WizardForm.Step
+          name='success'
+          key='success'
+          className='flex grow flex-col items-center justify-center'
+        >
+          <GlobalTransferSuccess
+            {...allFieldValues}
+            onClose={onClose}
+            amount={amountInUSD}
+            userName='Yehudi Daud'
+          />
+        </WizardForm.Step>
+      </WizardForm.Root>
+    </FetchedBalancesProvider>
   );
 };
