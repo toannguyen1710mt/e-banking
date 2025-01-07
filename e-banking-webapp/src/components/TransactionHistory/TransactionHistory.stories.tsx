@@ -23,7 +23,9 @@ type Story = StoryObj<typeof TransactionHistory>;
 
 export const Default: Story = {
   args: {
-    totalTransaction: 24,
-    transactionHistory: MOCK_TRANSACTIONS,
+    currentPage: 1,
+    totalPage: 2,
+    totalTransaction: 14,
+    transactions: MOCK_TRANSACTIONS,
   },
 };

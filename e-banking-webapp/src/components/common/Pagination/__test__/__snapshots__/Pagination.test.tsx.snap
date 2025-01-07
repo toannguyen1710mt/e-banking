@@ -29,7 +29,7 @@ exports[`Pagination component should match snapshot 1`] = `
       <li
         aria-disabled="true"
         aria-label="previous page button"
-        class="flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small bg-background-500 text-foreground-100"
+        class="flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small bg-background-500 text-foreground-100 shadow-md"
         data-disabled="true"
         data-slot="prev"
         role="button"
@@ -56,7 +56,7 @@ exports[`Pagination component should match snapshot 1`] = `
       <li
         aria-current="true"
         aria-label="pagination item 1 active"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-active="true"
         data-slot="item"
         role="button"
@@ -66,7 +66,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="pagination item 2"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -75,7 +75,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="pagination item 3"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -84,7 +84,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="pagination item 4"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -93,7 +93,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="pagination item 5"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -102,7 +102,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="dots element"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25 group"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25 group"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -163,7 +163,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="pagination item 100"
-        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 hover:bg-opacity-25"
+        class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25"
         data-slot="item"
         role="button"
         tabindex="0"
@@ -172,7 +172,7 @@ exports[`Pagination component should match snapshot 1`] = `
       </li>
       <li
         aria-label="next page button"
-        class="flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small bg-background-500 text-foreground-100"
+        class="flex flex-wrap truncate box-border items-center justify-center outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-small bg-background-500 text-foreground-100 shadow-md"
         data-slot="next"
         role="button"
         tabindex="0"

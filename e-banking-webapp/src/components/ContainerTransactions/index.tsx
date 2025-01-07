@@ -1,10 +1,16 @@
+import { Suspense } from 'react';
 import { Session } from 'next-auth';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
-import { InformationCard, Text, TransactionHistory } from '@/components';
+import {
+  InformationCard,
+  LoadingIndicator,
+  Text,
+  TransactionHistory,
+} from '@/components';
 import { ActionCenter } from './ActionCenter';
 
 // Services
@@ -16,19 +22,27 @@ import {
 
 interface IContainerTransactionsProps {
   session: Session;
+  currentPage: number;
 }
 
 export const ContainerTransactions = async ({
   session,
+  currentPage,
 }: IContainerTransactionsProps) => {
   const totalTransferSent = await getTotalTransferSent(session.user.id);
   const totalTransferReceived = await getTotalTransferReceived(session.user.id);
 
-  const transactionHistory = await getTransactionsByUserId(session.user.id, {
+  const {
+    data: transactions,
+    meta: {
+      pagination: { pageCount, total },
+    },
+  } = await getTransactionsByUserId(session.user.id, {
     sort: 'createdAt',
     order: 'desc',
     pagination: {
-      pageSize: 6,
+      page: currentPage,
+      pageSize: 10,
     },
   });
 
@@ -56,10 +70,15 @@ export const ContainerTransactions = async ({
           <InformationCard session={session} />
         </div>
 
-        <TransactionHistory
-          totalTransaction={transactionHistory?.meta?.pagination?.total || 0}
-          transactionHistory={transactionHistory?.data || []}
-        />
+        {/* Todo: Implement Skeleton for Transaction History */}
+        <Suspense key={currentPage} fallback={<LoadingIndicator />}>
+          <TransactionHistory
+            currentPage={currentPage}
+            totalPage={pageCount}
+            totalTransaction={total}
+            transactions={transactions}
+          />
+        </Suspense>
       </div>
 
       <div className='w-1/3'>

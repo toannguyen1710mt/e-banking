@@ -13,16 +13,20 @@ import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
 import { formatDate, formatNumberWithCommas } from '@/utils';
 
 // Components
-import { StatusIndicator, Table, Text } from '@/components';
+import { Pagination, StatusIndicator, Table, Text } from '@/components';
 
 interface ITransactionHistory {
+  currentPage: number;
+  totalPage: number;
   totalTransaction: number;
-  transactionHistory: ITransaction[];
+  transactions: ITransaction[];
 }
 
 export const TransactionHistory = ({
+  currentPage,
+  totalPage,
   totalTransaction,
-  transactionHistory,
+  transactions,
 }: ITransactionHistory) => {
   const columns = TRANSACTION_TABLE_COLUMNS.map((column) => {
     switch (column.key) {
@@ -57,7 +61,7 @@ export const TransactionHistory = ({
   });
 
   return (
-    <Card className='grow gap-5 rounded-md px-[17px] pt-[15px]'>
+    <Card className='grow gap-5 rounded-md p-4'>
       <CardHeader className='flex flex-col items-start gap-1 p-0'>
         <Text size={TEXT_SIZE.SM} className='font-semibold !text-navyBlue'>
           Transaction History ({totalTransaction})
@@ -70,15 +74,19 @@ export const TransactionHistory = ({
       <CardBody className='flex flex-col p-0'>
         <Table
           classNames={{
-            base: 'rounded-lg border-t-[0.2px] border-r-[0.2px] border-l-[0.2px]',
-            th: 'text-primary-200 font-semibold',
-            td: 'font-light text-2xs',
-            tbody: 'divide-y',
+            base: 'overflow-hidden py-2',
+            table:
+              'border-separate border-spacing-0 rounded-lg border-[0.2px] border-semiTransparentNavyBlue',
+            thead: '[&>tr:last-child]:hidden',
+            th: 'text-primary-200 font-semibold border-semiTransparentNavyBlue first:rounded-bl-none last:rounded-br-none',
+            td: 'font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue',
           }}
           columns={columns}
-          data={transactionHistory}
+          data={transactions}
           removeWrapper
-          radius='none'
+          bottomContent={
+            <Pagination currentPage={currentPage} totalPage={totalPage} />
+          }
         />
       </CardBody>
     </Card>

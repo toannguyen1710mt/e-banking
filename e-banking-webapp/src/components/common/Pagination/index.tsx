@@ -15,10 +15,9 @@ export const CustomPagination = extendVariants(PaginationNextUI, {
     styles: {
       primary: {
         wrapper: 'gap-2',
-        prev: 'bg-background-500 text-foreground-100',
-        next: 'bg-background-500 text-foreground-100',
-        item: 'text-foreground-100 bg-background-500 hover:bg-opacity-25',
-        itemActive: 'bg-background-300',
+        prev: 'bg-background-500 text-foreground-100 shadow-md',
+        next: 'bg-background-500 text-foreground-100 shadow-md',
+        item: 'text-foreground-100 bg-background-500 shadow-md hover:bg-opacity-25',
       },
     },
   },
