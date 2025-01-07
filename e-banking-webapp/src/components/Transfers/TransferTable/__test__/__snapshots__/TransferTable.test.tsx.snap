@@ -13,7 +13,7 @@ exports[`TransferTable component should match snapshot 1`] = `
       tabindex="0"
     >
       <thead
-        class="[&>tr]:first:rounded-lg"
+        class="[&>tr]:first:rounded-lg [&>tr:last-child]:hidden"
         role="rowgroup"
       >
         <tr

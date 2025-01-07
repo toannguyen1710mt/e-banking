@@ -64,6 +64,7 @@ export const TransferTable = ({
       classNames={{
         tbody:
           'divide-y divide-semiTransparentNavyBlue border-[0.2px] border-semiTransparentNavyBlue ',
+        thead: '[&>tr:last-child]:hidden',
         th: 'last:rounded-none first:rounded-none text-primary-200 font-semibold',
       }}
     />

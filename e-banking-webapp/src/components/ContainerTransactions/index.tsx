@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Session } from 'next-auth';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
+import { QueryParams, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import {
@@ -14,11 +14,7 @@ import {
 import { ActionCenter } from './ActionCenter';
 
 // Services
-import {
-  getTotalTransferReceived,
-  getTotalTransferSent,
-  getTransactionsByUserId,
-} from '@/services';
+import { getTransactionsByUserId } from '@/services';
 
 interface IContainerTransactionsProps {
   session: Session;
@@ -29,22 +25,52 @@ export const ContainerTransactions = async ({
   session,
   currentPage,
 }: IContainerTransactionsProps) => {
-  const totalTransferSent = await getTotalTransferSent(session.user.id);
-  const totalTransferReceived = await getTotalTransferReceived(session.user.id);
-
-  const {
-    data: transactions,
-    meta: {
-      pagination: { pageCount, total },
-    },
-  } = await getTransactionsByUserId(session.user.id, {
+  const defaultQueryParams: QueryParams = {
     sort: 'createdAt',
     order: 'desc',
     pagination: {
       page: currentPage,
       pageSize: 10,
     },
+  };
+
+  // Get transfers received
+  const {
+    data: transactionsReceived,
+    meta: {
+      pagination: { total: totalTransferReceived },
+    },
+  } = await getTransactionsByUserId(session.user.id, {
+    ...defaultQueryParams,
+    filters: {
+      toAccountType: {
+        $notNull: undefined,
+      },
+    },
   });
+
+  // Get transfers sent
+  const {
+    data: transactionsSent,
+    meta: {
+      pagination: { total: totalTransferSent },
+    },
+  } = await getTransactionsByUserId(session.user.id, {
+    ...defaultQueryParams,
+    filters: {
+      toAccountType: {
+        $null: undefined,
+      },
+    },
+  });
+
+  // Get all transfers
+  const {
+    data: transactions,
+    meta: {
+      pagination: { pageCount, total },
+    },
+  } = await getTransactionsByUserId(session.user.id, defaultQueryParams);
 
   return (
     <div className='flex w-full gap-8 px-[22px] pt-1'>
@@ -81,12 +107,16 @@ export const ContainerTransactions = async ({
         </Suspense>
       </div>
 
-      <div className='mt-2 w-1/3'>
-        <ActionCenter
-          session={session}
-          totalTransferSent={totalTransferSent}
-          totalTransferReceived={totalTransferReceived}
-        />
+      <div className='w-1/3'>
+        {/* Todo: Implement Skeleton for Action Center */}
+        <Suspense key={currentPage} fallback={<LoadingIndicator />}>
+          <ActionCenter
+            totalTransferReceived={totalTransferReceived}
+            totalTransferSent={totalTransferSent}
+            transactionsReceived={transactionsReceived}
+            transactionsSent={transactionsSent}
+          />
+        </Suspense>
       </div>
     </div>
   );
