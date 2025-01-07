@@ -4,7 +4,7 @@
 import { Controller, useWatch } from 'react-hook-form';
 import { Session } from 'next-auth';
 import { z } from 'zod';
-import { startTransition, useEffect, useState } from 'react';
+import { useEffect, useState, useTransition } from 'react';
 import { Spinner } from '@nextui-org/react';
 
 // Constants
@@ -73,11 +73,12 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     Number(allFieldValues.amount),
   );
 
+  const [isPending, startTransition] = useTransition();
+
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [rawAmount, setRawAmount] = useState<string>('');
   const [amountError, setAmountError] = useState<string | null>(null);
-  const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
 
   // Cached balance data
   const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
@@ -92,34 +93,32 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         return;
       }
 
-      try {
-        setIsFetchingBalanceSend(true);
+      startTransition(async () => {
+        try {
+          const balance = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'balance',
+          );
 
-        const balance = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'balance',
-        );
+          const accountId = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'documentId',
+          );
 
-        const accountId = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'documentId',
-        );
+          const fromCardName = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'name',
+          );
 
-        const fromCardName = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'name',
-        );
+          const fromAccountNumber = await getAccountInfoByAccountType(
+            session.user.id,
+            fromAccountTypeValue,
+            'accountNumber',
+          );
 
-        const fromAccountNumber = await getAccountInfoByAccountType(
-          session.user.id,
-          fromAccountTypeValue,
-          'accountNumber',
-        );
-
-        startTransition(() => {
           setBalanceSend(Number(balance));
           setFetchedBalances((prev) => ({
             ...prev,
@@ -129,12 +128,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           setValue('fromCardName', String(fromCardName));
           setValue('fromAccountNumber', String(fromAccountNumber));
           setValue('fromAccountBalance', Number(balance));
-        });
-      } catch (error) {
-        console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
-      } finally {
-        setIsFetchingBalanceSend(false);
-      }
+        } catch (error) {
+          console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
+        }
+      });
     };
 
     fetchBalanceSend();
@@ -292,7 +289,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           Available Balance:
         </Text>
         <Text as='span' className='text-xs text-foreground-200 opacity-50'>
-          {isFetchingBalanceSend ? (
+          {isPending ? (
             <Spinner size='sm' />
           ) : (
             balanceSend && `$${formatNumberWithCommas(balanceSend)}`
