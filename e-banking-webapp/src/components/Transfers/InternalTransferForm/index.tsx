@@ -109,15 +109,17 @@ export const InternalTransferForm = ({
             'accountNumber',
           );
 
-          setBalanceSend(Number(balance));
-          setFetchedBalances((prev) => ({
-            ...prev,
-            [fromAccountTypeValue]: Number(balance),
-          }));
-          setValue('fromAccountId', String(accountId));
-          setValue('fromCardName', String(fromCardName));
-          setValue('fromAccountNumber', String(fromAccountNumber));
-          setValue('fromAccountBalance', Number(balance));
+          startTransitionFrom(() => {
+            setBalanceSend(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [fromAccountTypeValue]: Number(balance),
+            }));
+            setValue('fromAccountId', String(accountId));
+            setValue('fromCardName', String(fromCardName));
+            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountBalance', Number(balance));
+          });
         } catch (error) {
           console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
         }
@@ -163,15 +165,17 @@ export const InternalTransferForm = ({
             'accountNumber',
           );
 
-          setBalanceReceive(Number(balance));
-          setFetchedBalances((prev) => ({
-            ...prev,
-            [toAccountTypeValue]: Number(balance),
-          }));
-          setValue('toAccountId', String(documentId));
-          setValue('toCardName', String(toCardName));
-          setValue('toAccountNumber', String(toAccountNumber));
-          setValue('toAccountBalance', Number(balance));
+          startTransitionTo(() => {
+            setBalanceReceive(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [toAccountTypeValue]: Number(balance),
+            }));
+            setValue('toAccountId', String(documentId));
+            setValue('toCardName', String(toCardName));
+            setValue('toAccountNumber', String(toAccountNumber));
+            setValue('toAccountBalance', Number(balance));
+          });
         } catch (error) {
           console.error('Error fetching balance for receive account:', error);
         }

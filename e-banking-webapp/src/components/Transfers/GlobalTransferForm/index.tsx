@@ -119,15 +119,17 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
             'accountNumber',
           );
 
-          setBalanceSend(Number(balance));
-          setFetchedBalances((prev) => ({
-            ...prev,
-            [fromAccountTypeValue]: Number(balance),
-          }));
-          setValue('fromAccountId', String(accountId));
-          setValue('fromCardName', String(fromCardName));
-          setValue('fromAccountNumber', String(fromAccountNumber));
-          setValue('fromAccountBalance', Number(balance));
+          startTransition(() => {
+            setBalanceSend(Number(balance));
+            setFetchedBalances((prev) => ({
+              ...prev,
+              [fromAccountTypeValue]: Number(balance),
+            }));
+            setValue('fromAccountId', String(accountId));
+            setValue('fromCardName', String(fromCardName));
+            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountBalance', Number(balance));
+          });
         } catch (error) {
           console.error(ERROR_MESSAGES.GET_BALANCE_FOR_ACCOUNT, error);
         }
