@@ -17,7 +17,7 @@ import { Button, Input, Select, SendIcon, Text } from '@/components';
 import { InternalTransferFormSchema } from '@/schemas';
 
 // Context
-import { useWizardFormContext } from '@/context';
+import { useWizardFormContext, useFetchedBalances } from '@/context';
 
 // Services
 import { getAccountInfoByAccountType } from '@/services';
@@ -73,9 +73,7 @@ export const InternalTransferForm = ({
   const [balanceReceive, setBalanceReceive] = useState<number | null>(null);
 
   // Cached balance data
-  const [fetchedBalances, setFetchedBalances] = useState<{
-    [key: string]: number;
-  }>({});
+  const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
 
   useEffect(() => {
     const fetchBalanceSend = async () => {

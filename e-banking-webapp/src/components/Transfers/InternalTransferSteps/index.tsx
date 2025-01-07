@@ -23,6 +23,8 @@ import { InternalTransferFormSchema } from '@/schemas';
 // Actions
 import { createTransaction, updateAccountInfo } from '@/actions';
 
+import { FetchedBalancesProvider } from '@/context/FetchedBalancesContext';
+
 type FormValues = z.infer<typeof InternalTransferFormSchema>;
 
 interface IInternalTransferStepsProps {
@@ -95,30 +97,32 @@ export const InternalTransferSteps = ({
   };
 
   return (
-    <WizardForm.Root
-      schema={InternalTransferFormSchema}
-      form={form}
-      className='flex grow flex-col'
-    >
-      <WizardForm.Step name='internalTransfer' key='internalTransfer'>
-        <InternalTransferForm session={session} />
-      </WizardForm.Step>
-
-      <WizardForm.Step
-        name='confirm'
-        key='confirm'
-        className='flex grow flex-col items-center justify-center'
+    <FetchedBalancesProvider>
+      <WizardForm.Root
+        schema={InternalTransferFormSchema}
+        form={form}
+        className='flex grow flex-col'
       >
-        <ConfirmInternalTransfer submitHandler={submitHandler} />
-      </WizardForm.Step>
+        <WizardForm.Step name='internalTransfer' key='internalTransfer'>
+          <InternalTransferForm session={session} />
+        </WizardForm.Step>
 
-      <WizardForm.Step
-        name='success'
-        key='success'
-        className='flex grow flex-col items-center justify-center'
-      >
-        <InternalTransferSuccess onClose={onClose} />
-      </WizardForm.Step>
-    </WizardForm.Root>
+        <WizardForm.Step
+          name='confirm'
+          key='confirm'
+          className='flex grow flex-col items-center justify-center'
+        >
+          <ConfirmInternalTransfer submitHandler={submitHandler} />
+        </WizardForm.Step>
+
+        <WizardForm.Step
+          name='success'
+          key='success'
+          className='flex grow flex-col items-center justify-center'
+        >
+          <InternalTransferSuccess onClose={onClose} />
+        </WizardForm.Step>
+      </WizardForm.Root>
+    </FetchedBalancesProvider>
   );
 };
