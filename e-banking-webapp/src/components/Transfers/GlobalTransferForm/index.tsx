@@ -34,7 +34,7 @@ import { GlobalTransferFormSchema } from '@/schemas';
 import { Button, Input, Select, Text, SendIcon } from '@/components';
 
 // Contexts
-import { useWizardFormContext } from '@/context';
+import { useFetchedBalances, useWizardFormContext } from '@/context';
 
 type FormValues = keyof z.infer<typeof GlobalTransferFormSchema>;
 
@@ -82,10 +82,16 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const [amountError, setAmountError] = useState<string | null>(null);
   const [isFetchingBalanceSend, setIsFetchingBalanceSend] = useState(false);
 
+  // Cached balance data
+  const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
+
   useEffect(() => {
     const fetchBalanceSend = async () => {
-      if (!fromAccountTypeValue) {
-        setBalanceSend(null);
+      if (
+        !fromAccountTypeValue ||
+        fetchedBalances[fromAccountTypeValue] !== undefined
+      ) {
+        setBalanceSend(fetchedBalances[fromAccountTypeValue] || null);
         return;
       }
 
@@ -116,6 +122,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           );
 
           setBalanceSend(Number(balance));
+          setFetchedBalances((prev) => ({
+            ...prev,
+            [fromAccountTypeValue]: Number(balance),
+          }));
           setValue('fromAccountId', String(accountId));
           setValue('fromCardName', String(fromCardName));
           setValue('fromAccountNumber', String(fromAccountNumber));
@@ -127,7 +137,13 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue, startTransition]);
+  }, [
+    fromAccountTypeValue,
+    session.user.id,
+    setValue,
+    startTransition,
+    fetchedBalances,
+  ]);
 
   const countryCode = () => {
     return (

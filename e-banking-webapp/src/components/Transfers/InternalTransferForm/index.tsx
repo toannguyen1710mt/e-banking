@@ -117,7 +117,6 @@ export const InternalTransferForm = ({
           ...prev,
           [fromAccountTypeValue]: Number(balance),
         }));
-
         setValue('fromAccountId', String(accountId));
         setValue('fromCardName', String(fromCardName));
         setValue('fromAccountNumber', String(fromAccountNumber));
@@ -174,7 +173,6 @@ export const InternalTransferForm = ({
           ...prev,
           [toAccountTypeValue]: Number(balance),
         }));
-
         setValue('toAccountId', String(documentId));
         setValue('toCardName', String(toCardName));
         setValue('toAccountNumber', String(toAccountNumber));
