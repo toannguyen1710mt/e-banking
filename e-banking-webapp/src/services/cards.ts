@@ -19,3 +19,19 @@ export const getCardById = async (id: string) => {
     ...rest,
   };
 };
+
+export const getTotalCardsByAccounts = async (query: string) => {
+  const { data: result, ...rest } = await httpClient.get<
+    SuccessResponse<ICard[]>
+  >(
+    `${query ? `${API_ENDPOINTS.CARDS}?populate=account&${query}&sort=createdAt:desc` : ''}`,
+    {
+      next: { tags: [TAGS.CARD] },
+    },
+  );
+
+  return {
+    totalCard: result?.data as ICard[],
+    ...rest,
+  };
+};

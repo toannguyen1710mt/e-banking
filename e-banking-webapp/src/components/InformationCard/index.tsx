@@ -15,10 +15,14 @@ import { MASTERCARD_CHART_MOCK } from '@/mocks';
 import { IAccount, ICard } from '@/interfaces';
 
 // Services
-import { getBalanceAccount, getCardById } from '@/services';
+import { getBalanceAccount, getTotalCardsByAccounts } from '@/services';
 
 // Utils
-import { formatNumberWithCommas, formatYearMonthToShortDate } from '@/utils';
+import {
+  formatNumberWithCommas,
+  formatQueryParamsFromAccounts,
+  formatYearMonthToShortDate,
+} from '@/utils';
 
 // Component
 import {
@@ -34,15 +38,10 @@ interface IInformationCardProps {
   session: Session;
 }
 
-interface ICardWithState extends ICard {
-  type: string;
-  error?: boolean;
-}
-
 export const InformationCard = ({ session }: IInformationCardProps) => {
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
   const [accounts, setAccounts] = useState<IAccount[]>([]);
-  const [cards, setCards] = useState<ICardWithState[]>([]);
+  const [cards, setCards] = useState<ICard[]>([]);
 
   const handleNextCard = () => {
     setCurrentCardIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -62,33 +61,15 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
         setAccounts(user?.accounts || []);
 
         if (user?.accounts?.length) {
-          const listCard: ICardWithState[] = [];
+          const queryString = formatQueryParamsFromAccounts(user?.accounts);
 
-          for (const account of user.accounts) {
-            try {
-              const { card } = await getCardById(account.documentId);
+          try {
+            const { totalCard } = await getTotalCardsByAccounts(queryString);
 
-              const enrichedCards = card.cards.map((card: ICard) => ({
-                ...card,
-                type: account.type,
-                error: false,
-              }));
-
-              listCard.push(...enrichedCards);
-            } catch (_error) {
-              listCard.push({
-                id: account.documentId,
-                type: account.type,
-                error: true,
-                cardNumber: '',
-                holderName: '',
-                ccv: '',
-                expireAt: '',
-              });
-            }
+            setCards(totalCard);
+          } catch (_error) {
+            setCards([]);
           }
-
-          setCards(listCard);
         }
       } catch (error) {
         if (error instanceof AuthError) {
@@ -149,7 +130,9 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
 
             <CreditCard
               variant={
-                cards[currentCardIndex]?.type.toLowerCase() as VariantsCard
+                cards[
+                  currentCardIndex
+                ]?.account?.type.toLowerCase() as VariantsCard
               }
               cardNumber={cards[currentCardIndex]?.cardNumber}
               holderName={cards[currentCardIndex]?.holderName}
