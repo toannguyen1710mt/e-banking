@@ -489,5 +489,6 @@ exports[`InternalTransferSteps component shout match snapshot for InternalTransf
       </div>
     </div>
   </form>
+  ,
 </div>
 `;

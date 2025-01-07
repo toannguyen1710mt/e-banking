@@ -40,6 +40,7 @@ export const ERROR_MESSAGES = {
   UPLOAD_IMAGE_ONLY_JPG_PNG: 'You can only upload JPG/PNG file!',
   UPLOAD_IMAGE_SIZE: 'Image upload must smaller than 1MB!',
   GET_BALANCE_FOR_ACCOUNT: 'Error fetching balance for send account:',
+  TRANSFER_FAILED: 'Transfer failed. Please try again!',
 
   // Services
   NETWORK_ERROR: 'Network response was not ok!',

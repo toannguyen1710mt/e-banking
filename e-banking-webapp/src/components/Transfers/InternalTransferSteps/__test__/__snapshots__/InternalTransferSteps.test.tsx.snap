@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InternalTransferSteps component shout match snapshot for InternalTransferSteps 1`] = `
+exports[`InternalTransferSteps component should match snapshot for InternalTransferSteps 1`] = `
 <div>
   <form
     class="flex grow flex-col"
