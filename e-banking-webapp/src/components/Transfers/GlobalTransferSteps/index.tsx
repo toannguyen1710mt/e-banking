@@ -6,6 +6,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
 // Models
 import { IAccountPayloadData, TransactionCreateData } from '@/interfaces';
 
@@ -24,6 +27,9 @@ import {
   GlobalTransferSuccess,
 } from '@/components';
 import { FetchedBalancesProvider } from '@/context';
+
+// Contexts
+import { useToastContext } from '@/context';
 
 type FormValues = z.infer<typeof GlobalTransferFormSchema>;
 
@@ -52,6 +58,8 @@ export const GlobalTransferSteps = ({
     convertToUSD(allFieldValues.fromCountryType, Number(allFieldValues.amount)),
   );
 
+  const { showToast } = useToastContext();
+
   const submitHandler = async ({
     fromAccountId,
     fromCardName,
@@ -77,8 +85,13 @@ export const GlobalTransferSteps = ({
       currency: '$',
     };
 
-    await createTransaction(transactionData);
-    await updateAccountInfo(fromAccountId, payload);
+    try {
+      await createTransaction(fromAccountId, transactionData);
+      await updateAccountInfo(fromAccountId, payload);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      showToast(ERROR_MESSAGES.TRANSFER_FAILED);
+    }
   };
 
   return (

@@ -13,10 +13,16 @@ import { ITransaction, TransactionCreateData } from '@/interfaces';
 import { httpClient } from '@/services';
 
 export const createTransaction = async (
+  accountId: string,
   transactionData: TransactionCreateData,
 ) => {
   await httpClient.post<ITransaction>(API_ENDPOINTS.TRANSACTIONS, {
-    data: transactionData,
+    data: {
+      ...transactionData,
+      account: {
+        connect: [accountId],
+      },
+    },
   });
 
   revalidateTag(API_ENDPOINTS.TRANSACTIONS);

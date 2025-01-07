@@ -6,6 +6,9 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Session } from 'next-auth';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
 // Interfaces
 import { IAccountPayloadData, TransactionCreateData } from '@/interfaces';
 
@@ -23,7 +26,9 @@ import { InternalTransferFormSchema } from '@/schemas';
 // Actions
 import { createTransaction, updateAccountInfo } from '@/actions';
 
+// Context
 import { FetchedBalancesProvider } from '@/context/FetchedBalancesContext';
+import { useToastContext } from '@/context';
 
 type FormValues = z.infer<typeof InternalTransferFormSchema>;
 
@@ -48,6 +53,8 @@ export const InternalTransferSteps = ({
     resolver: zodResolver(InternalTransferFormSchema),
   });
 
+  const { showToast } = useToastContext();
+
   const submitHandler = async (data: FormValues) => {
     const {
       internalTransfer: { fromAccountType, toAccountType, amount },
@@ -61,38 +68,38 @@ export const InternalTransferSteps = ({
       toCardName,
     } = data;
 
+    const transactionData: TransactionCreateData = {
+      fromAccountId,
+      toAccountId,
+      fromAccountType,
+      toAccountType,
+      statusTransaction: true,
+      amount: Number(amount),
+    };
+
+    const accountSendData: IAccountPayloadData = {
+      name: fromCardName,
+      accountNumber: fromAccountNumber,
+      balance: fromAccountBalance - Number(amount),
+      type: fromAccountType,
+      currency: '$',
+    };
+
+    const accountReceiveData: IAccountPayloadData = {
+      name: toCardName,
+      accountNumber: toAccountNumber,
+      balance: toAccountBalance + Number(amount),
+      type: toAccountType,
+      currency: '$',
+    };
+
     try {
-      const transactionData: TransactionCreateData = {
-        fromAccountId,
-        toAccountId,
-        fromAccountType,
-        toAccountType,
-        statusTransaction: true,
-        amount: Number(amount),
-      };
-
-      const accountSendData: IAccountPayloadData = {
-        name: fromCardName,
-        accountNumber: fromAccountNumber,
-        balance: fromAccountBalance - Number(amount),
-        type: fromAccountType,
-        currency: '$',
-      };
-
-      const accountReceiveData: IAccountPayloadData = {
-        name: toCardName,
-        accountNumber: toAccountNumber,
-        balance: toAccountBalance + Number(amount),
-        type: toAccountType,
-        currency: '$',
-      };
-
-      await createTransaction(transactionData);
+      await createTransaction(fromAccountId, transactionData);
       await updateAccountInfo(fromAccountId, accountSendData);
       await updateAccountInfo(toAccountId, accountReceiveData);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      // TODO: Handle show error message in toast
+      showToast(ERROR_MESSAGES.TRANSFER_FAILED);
     }
   };
 

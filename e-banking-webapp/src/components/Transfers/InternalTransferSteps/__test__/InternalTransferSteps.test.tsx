@@ -7,10 +7,18 @@ import { InternalTransferSteps } from '@/components';
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
 
+// Contexts
+import { ToastProvider } from '@/context';
+
 describe('InternalTransferSteps component', () => {
-  it('shout match snapshot for InternalTransferSteps', () => {
+  it('should match snapshot for InternalTransferSteps', () => {
     const { container } = render(
-      <InternalTransferSteps session={MOCK_SESSION_DATA} onClose={jest.fn()} />,
+      <ToastProvider>
+        <InternalTransferSteps
+          session={MOCK_SESSION_DATA}
+          onClose={jest.fn()}
+        />
+      </ToastProvider>,
     );
 
     expect(container).toMatchSnapshot();
