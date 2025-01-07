@@ -24,6 +24,9 @@ module.exports = {
         '200': '-200%',
         '300': '-300%',
       },
+      boxShadow: {
+        md: '0px 1px 4px 0px rgba(0, 0, 0, 0.25)',
+      },
     },
   },
   darkMode: 'class',
@@ -44,6 +47,7 @@ module.exports = {
               900: colors.mistGray,
             },
             primary: {
+              DEFAULT: colors.navyBlue,
               100: colors.pastelGreen,
               200: colors.navyBlue,
             },

@@ -1,11 +1,8 @@
 // Libs
 import { render } from '@testing-library/react';
 
-// Mocks
-import { MOCK_TRANSACTIONS } from '@/mocks';
-
 // Components
-import { TransactionHistory } from '@/components';
+import { Pagination } from '@/components';
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/mock-path'),
@@ -19,14 +16,11 @@ jest.mock('next/navigation', () => ({
 
 const mockProps = {
   currentPage: 1,
-  totalPage: 2,
-  totalTransaction: 14,
-  transactions: MOCK_TRANSACTIONS,
+  totalPage: 100,
 };
-
-describe('TransactionHistory component', () => {
-  test('should match snapshot', () => {
-    const container = render(<TransactionHistory {...mockProps} />);
+describe('Pagination component', () => {
+  it('should match snapshot', () => {
+    const { container } = render(<Pagination {...mockProps} />);
 
     expect(container).toMatchSnapshot();
   });
