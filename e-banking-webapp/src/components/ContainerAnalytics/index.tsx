@@ -10,7 +10,7 @@ import { ERROR_MESSAGES } from '@/constants';
 import { IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Services
-import { getBalanceAccount, getTotalTransactions } from '@/services';
+import { getAccountsByUserId, getTotalTransactions } from '@/services';
 
 // Components
 import { CardOverview } from '../CardOverview';
@@ -32,10 +32,10 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
     const fetchData = async () => {
       try {
         const total = await getTotalTransactions();
-        const { user } = await getBalanceAccount(String(session.user.id));
+        const result = await getAccountsByUserId(session.user.id);
 
         setTotalTransfer(total);
-        setAccounts(user?.accounts || []);
+        setAccounts(result || []);
       } catch (error) {
         if (error instanceof AuthError) {
           throw ERROR_MESSAGES.GET_ERROR;

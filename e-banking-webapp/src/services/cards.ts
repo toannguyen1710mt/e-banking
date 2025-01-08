@@ -6,16 +6,17 @@ import { ICard, ICardsPayloadByAccount, SuccessResponse } from '@/interfaces';
 
 // Services
 import { httpClient } from './http-client';
+import { getAccountsByUserId } from './account';
 
-export const getCardById = async (id: string) => {
+export const getListCardByAccountId = async (accountId: string) => {
   const { data: cardResult, ...rest } = await httpClient.get<
-    SuccessResponse<ICard>
-  >(`${API_ENDPOINTS.ACCOUNTS}/${id}?populate=cards`, {
+    SuccessResponse<ICard[]>
+  >(`${API_ENDPOINTS.ACCOUNTS}/${accountId}?populate=cards`, {
     next: { tags: [TAGS.CARD] },
   });
 
   return {
-    card: cardResult?.data as ICard,
+    cards: cardResult?.data.cards || [],
     ...rest,
   };
 };
@@ -31,7 +32,42 @@ export const getTotalCardsByAccounts = async (query: string) => {
   );
 
   return {
-    totalCard: result?.data as ICardsPayloadByAccount[],
+    totalCard: result?.data || [],
     ...rest,
   };
+};
+
+/**
+ * Fetches the Main account of a user.
+ * @param userId - The ID of the user.
+ * @returns A Main card.
+ */
+export const getMainCardByUserId = async (userId: number) => {
+  const accounts = await getAccountsByUserId(userId);
+
+  const mainAccount = accounts.find((account) => account.type === 'Main');
+
+  const requestEndpoint = `${API_ENDPOINTS.ACCOUNTS}/${mainAccount?.documentId}?populate=cards`;
+
+  const { data } = await httpClient.get<SuccessResponse<ICard>>(
+    requestEndpoint,
+    {
+      next: {
+        tags: [API_ENDPOINTS.CARDS],
+      },
+    },
+  );
+
+  if (data?.data?.cards) {
+    const result = data.data.cards.sort(
+      (
+        a: { createdAt: string | number | Date },
+        b: { createdAt: string | number | Date },
+      ) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+    );
+
+    return result[0];
+  }
+
+  return {};
 };

@@ -15,7 +15,7 @@ import { MASTERCARD_CHART_MOCK } from '@/mocks';
 import { IAccount, ICardsPayloadByAccount } from '@/interfaces';
 
 // Services
-import { getBalanceAccount, getTotalCardsByAccounts } from '@/services';
+import { getAccountsByUserId, getTotalCardsByAccounts } from '@/services';
 
 // Utils
 import {
@@ -56,12 +56,11 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { user } = await getBalanceAccount(String(session.user.id));
+        const result = await getAccountsByUserId(session.user.id);
 
-        setAccounts(user?.accounts || []);
-
-        if (user?.accounts?.length) {
-          const queryString = formatQueryParamsFromAccounts(user?.accounts);
+        if (result?.length) {
+          setAccounts(result);
+          const queryString = formatQueryParamsFromAccounts(result);
 
           try {
             const { totalCard } = await getTotalCardsByAccounts(queryString);
