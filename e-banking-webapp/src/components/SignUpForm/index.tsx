@@ -34,6 +34,7 @@ export const SignUpForm = () => {
   const form = useForm<FormValues>({
     resolver: zodResolver(SignUpSchema),
     defaultValues: SIGNUP_FORM_DEFAULT_VALUES,
+    reValidateMode: 'onBlur',
     mode: 'onBlur',
   });
 
@@ -53,19 +54,27 @@ export const SignUpForm = () => {
     }
 
     if (response?.user) {
-      const payloadAccount: IAccountPayload = {
-        user: response?.user.id,
-        data: ACCOUNT_DEFAULT_VALUES,
-      };
-
       await updateUser(response.user.id, { phone, country, postal });
 
-      const responseAccount = await addAccount(payloadAccount);
+      const accountPayloads: IAccountPayload[] = ACCOUNT_DEFAULT_VALUES.map(
+        (account) => ({
+          data: {
+            ...account,
+            user: response?.user.id,
+          },
+        }),
+      );
 
-      if (responseAccount) {
+      const responseAccounts = await Promise.all(
+        accountPayloads.map((payload) => addAccount(payload)),
+      );
+
+      if (responseAccounts) {
         const payloadCard: ICardPayload = {
-          account: responseAccount.data.id,
-          data: data.card,
+          data: {
+            ...data.card,
+            account: responseAccounts[0].data.id,
+          },
         };
         await addCard(payloadCard);
       }

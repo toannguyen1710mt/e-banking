@@ -18,13 +18,13 @@ export interface IAccount {
   cards?: ICard[];
   name: string;
   currencyUnit?: CurrencyUnit;
+  user?: number;
 }
 
 export interface IAccountPayloadData
   extends Omit<IAccount, 'id' | 'documentId' | 'transactions' | 'cards'> {}
 
 export interface IAccountPayload {
-  user: number;
   data: IAccountPayloadData;
 }
 

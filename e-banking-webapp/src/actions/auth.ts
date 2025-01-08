@@ -130,7 +130,7 @@ export const getUser = async (id: number): Promise<IUser | undefined> => {
 
 export const addNewCardByAccountId = async (
   accountId: string,
-  payload: Omit<ICard, 'id' | 'fullName'>,
+  payload: Omit<ICard, 'id' | 'fullName' | 'account'>,
 ) => {
   try {
     const response = await httpClient.post(API_ENDPOINTS.CARDS, {
