@@ -21,13 +21,16 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           width="104"
         />
         <div
-          class="mb-7 max-w-[406px]"
+          class="mb-4 max-w-[406px]"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold"
+            class="text-foreground-100 text-4xl font-semibold mb-7"
           >
             Good To See You Again!
           </h1>
+          <p
+            class="text-foreground-300 text-base font-normal leading-[22px]"
+          />
         </div>
         <div
           class="mb-[17px] max-w-[325px]"
@@ -66,13 +69,16 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         width="104"
       />
       <div
-        class="mb-7 max-w-[406px]"
+        class="mb-4 max-w-[406px]"
       >
         <h1
-          class="text-foreground-100 text-4xl font-semibold"
+          class="text-foreground-100 text-4xl font-semibold mb-7"
         >
           Good To See You Again!
         </h1>
+        <p
+          class="text-foreground-300 text-base font-normal leading-[22px]"
+        />
       </div>
       <div
         class="mb-[17px] max-w-[325px]"
