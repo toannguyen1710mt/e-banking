@@ -135,12 +135,14 @@ export const EmailTab = ({
           Update Email Preferences
         </Button>
 
-        <button
+        <Button
           onClick={handleUnsubscribeAll}
-          className='text-xs text-foreground-300 underline hover:text-primary-200'
+          type='button'
+          color='outline'
+          className='h-auto w-auto p-0 text-xs text-foreground-300 underline hover:text-primary-200'
         >
           Unsubscribe from all
-        </button>
+        </Button>
       </div>
     </form>
   );
