@@ -17,7 +17,7 @@ import { createTransaction, updateAccountInfo } from '@/actions';
 
 // Helpers / Utils
 import { GlobalTransferFormSchema } from '@/schemas';
-import { convertToUSD, formatNumberWithCommas } from '@/utils';
+import { convertToUSD, formatNumberWithCommas, sanitizeAmount } from '@/utils';
 
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
@@ -59,8 +59,8 @@ export const GlobalTransferSteps = ({
   );
 
   const { showToast } = useToastContext();
-  
-  const sanitizedAmountInUSD = parseFloat(amountInUSD.replace(/,/g, ''));
+
+  const sanitizedAmountInUSD = sanitizeAmount(amountInUSD);
 
   const submitHandler = async ({
     fromAccountId,
@@ -76,7 +76,7 @@ export const GlobalTransferSteps = ({
       fromAccountType,
       toAccountType: undefined,
       statusTransaction: true,
-      amount: Number(
+      amount: sanitizeAmount(
         formatNumberWithCommas(
           convertToUSD(allFieldValues.fromCountryType, Number(amount)),
         ),
@@ -90,6 +90,7 @@ export const GlobalTransferSteps = ({
       type: fromAccountType,
       currency: '$',
     };
+    console.log(amount);
 
     try {
       await createTransaction(fromAccountId, transactionData);
