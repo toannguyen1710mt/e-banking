@@ -1,10 +1,18 @@
 'use client';
 
 // Libs
+import { useEffect, useState } from 'react';
 import { Card, CardBody, useDisclosure } from '@nextui-org/react';
+import { AuthError, Session } from 'next-auth';
 
 // Constants
-import { createExpenseAnalysisOptions } from '@/constants';
+import { createExpenseAnalysisOptions, ERROR_MESSAGES } from '@/constants';
+
+// Interface
+import { ICard } from '@/interfaces';
+
+// Services
+import { getMainCardByUserId } from '@/services';
 
 // Mocks
 import { MASTERCARD_CHART_MOCK } from '@/mocks';
@@ -17,18 +25,36 @@ import {
   MasterCard,
   AddCreditCardModal,
 } from '@/components';
-import { Session } from 'next-auth';
 
 interface ICardOverviewProps {
   session: Session;
 }
 
 export const CardOverview = ({ session }: ICardOverviewProps) => {
+  const [card, setCard] = useState<ICard>({} as ICard);
   const {
     isOpen: isOpenAddCardModal,
     onOpen: onOpenAddCardModal,
     onClose: onCloseAddCardModal,
   } = useDisclosure();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const card = await getMainCardByUserId(Number(session?.user.id));
+
+        setCard(card);
+      } catch (error) {
+        if (error instanceof AuthError) {
+          throw ERROR_MESSAGES.GET_ERROR;
+        }
+      }
+    };
+
+    fetchData();
+  }, [session?.user?.id]);
+
+  const { cardNumber, expireAt, holderName } = card;
 
   return (
     <>
@@ -50,9 +76,9 @@ export const CardOverview = ({ session }: ICardOverviewProps) => {
               </Button>
             </div>
             <CreditCard
-              cardNumber='537544114540'
-              expireDate='06/24'
-              holderName='DONALD FLINCH CORTEZ'
+              cardNumber={cardNumber}
+              expireDate={expireAt}
+              holderName={holderName}
               bankName='Universal Bank'
             />
           </div>

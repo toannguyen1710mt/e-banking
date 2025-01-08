@@ -14,7 +14,7 @@ import { IAccount, ICard, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { formatNumberWithCommas } from '@/utils';
 
 // Services
-import { getBalanceAccount, getCardById } from '@/services';
+import { getAccountsByUserId, getListCardByAccountId } from '@/services';
 
 // Mocks
 import { MOCK_SERIES_EXPENSE_ANALYSIS } from '@/mocks';
@@ -39,26 +39,28 @@ const BalanceModal = ({
   isOpen = false,
   onClose,
 }: BalanceModalProps) => {
-  const [accounts, setAccounts] = useState<IAccount[]>();
-  const [cardData, setCardData] = useState<ICard>();
-  const [selectedAccount, setSelectedAccount] = useState<IAccount>();
+  const [accounts, setAccounts] = useState<IAccount[]>([]);
+  const [cardData, setCardData] = useState<ICard>({} as ICard);
+  const [selectedAccount, setSelectedAccount] = useState<IAccount>(
+    {} as IAccount,
+  );
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { user } = await getBalanceAccount(String(session.user.id));
-        setAccounts(user?.accounts || []);
+        const result = await getAccountsByUserId(session.user.id);
 
-        if (user?.accounts?.length) {
-          setSelectedAccount(user?.accounts[0]);
-          const documentId = user.accounts[0]?.documentId;
+        if (result?.length) {
+          setAccounts(result);
+          setSelectedAccount(result[0]);
+          const documentId = result[0]?.documentId;
 
           if (documentId) {
-            const { card } = await getCardById(
-              user.accounts[0]?.documentId as string,
+            const { cards } = await getListCardByAccountId(
+              documentId as string,
             );
 
-            setCardData(card || {});
+            setCardData(cards[0] || {});
           }
         }
       } catch (error) {

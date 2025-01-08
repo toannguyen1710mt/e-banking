@@ -20,7 +20,7 @@ import { addNewCardByAccountId } from '@/actions';
 import { CreditCardSchema } from '@/schemas';
 
 // Services
-import { getBalanceAccount } from '@/services';
+import { getAccountsByUserId } from '@/services';
 
 // Context
 import { useToastContext } from '@/context';
@@ -67,9 +67,9 @@ export const AddCreditCardModal = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { user } = await getBalanceAccount(String(session.user.id));
+        const result = await getAccountsByUserId(session.user.id);
 
-        setAccounts(user?.accounts || []);
+        setAccounts(result || []);
       } catch (error) {
         if (error instanceof AuthError) {
           throw ERROR_MESSAGES.GET_ERROR;

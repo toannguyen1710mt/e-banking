@@ -1,13 +1,22 @@
+import { auth } from '@/config/auth';
+
+// Services
+import { getMainCardByUserId } from '@/services';
+
 // Components
 import { CreditCard } from '@/components';
 
 export const ContainerCreditCard = async () => {
-  // TODO: call API to get credit card data
+  const session = await auth();
+  const card = await getMainCardByUserId(Number(session?.user.id));
+
+  const { cardNumber, expireAt, holderName } = card;
+
   return (
     <CreditCard
-      cardNumber='537544114540'
-      expireDate='06/28'
-      holderName='DONALD FLINCH CORTEZ'
+      cardNumber={cardNumber}
+      expireDate={expireAt}
+      holderName={holderName}
       bankName='Universal Bank'
     />
   );

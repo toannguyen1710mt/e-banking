@@ -314,9 +314,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
             </div>
             <p
               class="text-primary-200 font-extrabold tracking-[3px] text-secondary-400 ml-4 mt-1 text-sm"
-            >
-              5375 4411 4540
-            </p>
+            />
             <div
               class="flex justify-between mt-2 gap-5"
             >
@@ -334,14 +332,12 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
                   <span
                     class="text-primary-200 text-right font-extrabold text-secondary-400 text-2xs"
                   >
-                    06/24
+                    --/--
                   </span>
                 </div>
                 <p
                   class="text-primary-200 font-medium mt-[2px] overflow-hidden text-ellipsis whitespace-nowrap text-left uppercase tracking-[1px] text-secondary-400 max-w-[185px] text-xs"
-                >
-                  DONALD FLINCH CORTEZ
-                </p>
+                />
               </div>
               <svg
                 class="unset"
