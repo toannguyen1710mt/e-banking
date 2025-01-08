@@ -52,13 +52,13 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
   return (
     <section className='mx-auto flex h-full w-full flex-col gap-6 lg:flex-row'>
       <div className='lg:w-3/4'>
-        <Text as='h2' className='text-2xl font-semibold !text-black'>
+        <Text as='h2' className='text-2xl font-semibold leading-[29px] !text-black'>
           {getGreeting()},
           <Text
             as='span'
             variant={TEXT_VARIANT.DEFAULT}
             size={TEXT_SIZE['2XL']}
-            className='ml-1 font-medium'
+            className='ml-1 font-medium leading-[29px]'
           >
             {session?.user?.username || ''}
           </Text>
