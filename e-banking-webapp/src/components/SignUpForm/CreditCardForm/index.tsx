@@ -4,9 +4,6 @@ import { Controller } from 'react-hook-form';
 import { z } from 'zod';
 import { useTransition } from 'react';
 
-// Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
-
 // Constants
 import { ERROR_MESSAGES } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
@@ -25,7 +22,6 @@ import {
   Button,
   DatePicker,
   Input,
-  Text,
   CreditCardIcon,
   UserIcon,
   WalletIcon,
@@ -74,14 +70,6 @@ export const CreditCardForm = <T extends z.ZodType>({
   return (
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
-        <Text
-          size={TEXT_SIZE.SM}
-          variant={TEXT_VARIANT.INFO}
-          className='font-normal'
-        >
-          Please provide your Credit Card information
-        </Text>
-
         <Controller
           control={control}
           name='card.holderName'

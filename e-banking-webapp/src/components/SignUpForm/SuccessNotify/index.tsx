@@ -17,9 +17,9 @@ export const SuccessNotify = () => (
       alt='Illustration of a successful sign-up'
     />
     <Text
-      size={TEXT_SIZE.SM}
+      size={TEXT_SIZE.BASE}
       variant={TEXT_VARIANT.INFO}
-      className='mb-10 font-normal'
+      className='mb-10 font-normal leading-[22px]'
     >
       Head back to login page to access your account
     </Text>
