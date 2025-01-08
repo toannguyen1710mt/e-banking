@@ -14,7 +14,7 @@ export interface ITransaction {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  recipientAccount?: number;
+  recipientName?: string;
 }
 
 export type TransactionCreateData = Omit<
@@ -24,7 +24,7 @@ export type TransactionCreateData = Omit<
 
 export type InternalTransferForm = Pick<
   ITransaction,
-  'fromAccountType' | 'toAccountType' | 'amount' | 'recipientAccount'
+  'fromAccountType' | 'toAccountType' | 'amount' | 'recipientName'
 >;
 
 export enum TransferType {

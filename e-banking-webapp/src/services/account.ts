@@ -2,7 +2,13 @@
 import { API_ENDPOINTS } from '@/constants';
 
 // Interfaces
-import { AccountType, IAccount, IUser } from '@/interfaces';
+import {
+  AccountType,
+  GlobalAccount,
+  IAccount,
+  IUser,
+  SuccessResponse,
+} from '@/interfaces';
 
 // Services
 import { httpClient } from '@/services';
@@ -44,4 +50,14 @@ export const getAccountInfoByAccountType = async (
   }
 
   return null;
+};
+
+export const getGlobalAccounts = async (): Promise<
+  SuccessResponse<GlobalAccount[]>
+> => {
+  const response = await httpClient.get<GlobalAccount[]>(
+    API_ENDPOINTS.GLOBAL_ACCOUNTS,
+  );
+
+  return response.data;
 };

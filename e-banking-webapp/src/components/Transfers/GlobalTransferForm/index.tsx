@@ -16,10 +16,10 @@ import {
 } from '@/constants';
 
 // Interfaces
-import { AccountType, GlobalType } from '@/interfaces';
+import { AccountType, GlobalAccount, GlobalType } from '@/interfaces';
 
 // API
-import { getAccountInfoByAccountType } from '@/services';
+import { getAccountInfoByAccountType, getGlobalAccounts } from '@/services';
 
 // Helpers / Utils
 import {
@@ -45,6 +45,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       formState: { errors },
       setValue,
       getValues,
+      setError,
+      clearErrors,
     },
     onNextStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
@@ -54,6 +56,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     'fromCardName',
     'fromAccountNumber',
     'fromAccountBalance',
+    'recipientName',
   ];
 
   const fromAccountTypeValue = useWatch({
@@ -75,6 +78,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const [isPending, startTransition] = useTransition();
 
+  // States for global accounts
+  const [globalAccounts, setGlobalAccounts] = useState<GlobalAccount[]>([]);
+  const [selectedGlobalAccount, setSelectedGlobalAccount] =
+    useState<GlobalAccount | null>(null);
+
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
   const [rawAmount, setRawAmount] = useState<string>('');
@@ -82,6 +90,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   // Cached balance data
   const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
+
+  useEffect(() => {
+    const fetchGlobalAccounts = async () => {
+      try {
+        const response = await getGlobalAccounts();
+        setGlobalAccounts(response.data);
+      } catch (error) {
+        console.error('Failed to fetch global accounts: ', error);
+      }
+    };
+
+    fetchGlobalAccounts();
+  }, []);
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
@@ -137,7 +158,13 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
+  }, [
+    fromAccountTypeValue,
+    session.user.id,
+    setValue,
+    fetchedBalances,
+    setFetchedBalances,
+  ]);
 
   const countryCode = () => {
     return (
@@ -193,6 +220,28 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
     return '';
   };
+
+  const validateRecipientAccount = (value: string) => {
+    const accountMatch = globalAccounts.find(
+      (account) =>
+        account.accountNumber === value && account.currency === countryCode(),
+    );
+
+    if (accountMatch) {
+      setSelectedGlobalAccount(accountMatch);
+      clearErrors('recipientAccount');
+    } else {
+      setError('recipientAccount', {
+        message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (selectedGlobalAccount) {
+      setValue('recipientName', selectedGlobalAccount.name);
+    }
+  }, [selectedGlobalAccount, setValue]);
 
   const disableButtonSubmit =
     !fromAccountTypeValue ||
@@ -263,7 +312,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         <Controller
           control={control}
           name='recipientAccount'
-          render={({ field: { value, onChange, onBlur } }) => {
+          render={({ field: { value, onChange } }) => {
             return (
               <Input
                 label='Recipient Account'
@@ -278,7 +327,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 errorMessage={errors.recipientAccount?.message}
                 isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
-                onBlur={onBlur}
+                onBlur={() => validateRecipientAccount(value)}
                 maxLength={12}
               />
             );
@@ -348,7 +397,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           control={control}
           name={fieldName}
           render={({ field: { value } }) => (
-            <Input value={String(value)} className='hidden' />
+            <Input
+              value={
+                fieldName === 'recipientName'
+                  ? getValues('recipientName')
+                  : String(value)
+              }
+              className='hidden'
+            />
           )}
         />
       ))}

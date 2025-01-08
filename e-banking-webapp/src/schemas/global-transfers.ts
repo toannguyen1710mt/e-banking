@@ -47,4 +47,5 @@ export const GlobalTransferFormSchema = z.object({
   fromCardName: z.string(),
   fromAccountNumber: z.string(),
   fromAccountBalance: z.number(),
+  recipientName: z.string(),
 });

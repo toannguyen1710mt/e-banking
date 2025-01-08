@@ -1,6 +1,7 @@
 export const API_ENDPOINTS = {
   USERS: '/users',
   ACCOUNTS: '/accounts',
+  GLOBAL_ACCOUNTS: '/global-accounts',
   TRANSACTIONS: '/transactions',
   CARDS: '/cards',
   SIGN_UP: '/auth/local/register',

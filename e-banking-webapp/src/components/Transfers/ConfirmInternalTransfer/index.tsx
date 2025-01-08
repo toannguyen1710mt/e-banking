@@ -4,9 +4,6 @@
 import { useTransition } from 'react';
 import { z } from 'zod';
 
-// Interfaces
-import { CurrencyUnit } from '@/interfaces';
-
 // Components
 import { Button, Text } from '@/components';
 
@@ -20,12 +17,10 @@ import { useWizardFormContext } from '@/context';
 import { InternalTransferFormSchema } from '@/schemas';
 
 interface IConfirmInternalTransferProps<T extends z.ZodType> {
-  currencyUnit?: CurrencyUnit;
   submitHandler: (data: z.infer<T>) => void;
 }
 
 export const ConfirmInternalTransfer = <T extends z.ZodType>({
-  currencyUnit = '$',
   submitHandler,
 }: IConfirmInternalTransferProps<T>) => {
   const {
@@ -54,8 +49,7 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
         You are about to transfer
       </Text>
       <Text as='span' className='text-4xl font-bold'>
-        {currencyUnit}
-        {formatNumberWithCommas(Number(values.internalTransfer.amount))}
+        ${formatNumberWithCommas(Number(values.internalTransfer.amount))}
       </Text>
       <Text className='max-w-[250px] text-center text-xs font-medium text-primary-200 opacity-50'>
         From your {values.internalTransfer.fromAccountType} wallet to your&nbsp;

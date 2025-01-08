@@ -19,8 +19,6 @@ type Story = StoryObj<typeof GlobalTransferSuccess>;
 
 export const Default: Story = {
   args: {
-    amount: '15,000',
-    userName: 'Yehudi Daud',
     onClose: () => {},
   },
 };

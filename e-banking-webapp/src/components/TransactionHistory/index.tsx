@@ -33,6 +33,11 @@ export const TransactionHistory = ({
       case 'createdAt':
         column.renderCell = (item) => <>{formatDate(item.createdAt)}</>;
         break;
+      case 'to':
+        column.renderCell = (item) => (
+          <>{item.recipientName || item.toAccountType}</>
+        );
+        break;
       case 'status':
         column.renderCell = (item) => (
           <div

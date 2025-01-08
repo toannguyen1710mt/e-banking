@@ -64,7 +64,7 @@ export const TRANSACTION_TABLE_COLUMNS: Column<ITransaction>[] = [
     title: 'From',
   },
   {
-    key: 'toAccountType',
+    key: 'to',
     title: 'To',
   },
   {

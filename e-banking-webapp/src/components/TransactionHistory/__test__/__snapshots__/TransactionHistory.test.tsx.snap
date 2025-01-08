@@ -75,8 +75,8 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </th>
                   <th
                     class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 text-primary-200 font-semibold border-semiTransparentNavyBlue first:rounded-bl-none last:rounded-br-none"
-                    data-key="toAccountType"
-                    id="react-aria-:r0:-toAccountType"
+                    data-key="to"
+                    id="react-aria-:r0:-to"
                     role="columnheader"
                     tabindex="-1"
                   >
@@ -150,13 +150,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Checkings
-                    </span>
+                    Checkings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -238,13 +236,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -325,13 +321,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Checkings
-                    </span>
+                    Checkings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -413,13 +407,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -500,13 +492,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -588,13 +578,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -675,13 +663,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -763,13 +749,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -850,13 +834,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -938,13 +920,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1025,13 +1005,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1113,13 +1091,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1200,13 +1176,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1288,13 +1262,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                    data-key="toAccountType"
+                    data-key="to"
                     role="gridcell"
                     tabindex="-1"
                   >
-                    <span>
-                      Savings
-                    </span>
+                    Savings
                   </td>
                   <td
                     class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1513,8 +1485,8 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </th>
                 <th
                   class="group px-3 h-10 align-middle bg-default-100 whitespace-nowrap first:rounded-s-lg last:rounded-e-lg data-[sortable=true]:cursor-pointer data-[hover=true]:text-foreground-400 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-start text-xs opacity-50 text-primary-200 font-semibold border-semiTransparentNavyBlue first:rounded-bl-none last:rounded-br-none"
-                  data-key="toAccountType"
-                  id="react-aria-:r0:-toAccountType"
+                  data-key="to"
+                  id="react-aria-:r0:-to"
                   role="columnheader"
                   tabindex="-1"
                 >
@@ -1588,13 +1560,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Checkings
-                  </span>
+                  Checkings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1676,13 +1646,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1763,13 +1731,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Checkings
-                  </span>
+                  Checkings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1851,13 +1817,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -1938,13 +1902,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2026,13 +1988,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2113,13 +2073,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2201,13 +2159,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2288,13 +2244,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2376,13 +2330,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2463,13 +2415,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2551,13 +2501,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2638,13 +2586,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
@@ -2726,13 +2672,11 @@ exports[`TransactionHistory component should match snapshot 1`] = `
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
-                  data-key="toAccountType"
+                  data-key="to"
                   role="gridcell"
                   tabindex="-1"
                 >
-                  <span>
-                    Savings
-                  </span>
+                  Savings
                 </td>
                 <td
                   class="relative align-middle whitespace-normal [&>*]:z-1 [&>*]:relative outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 before:content-[''] before:absolute before:z-0 before:inset-0 before:opacity-0 data-[selected=true]:before:opacity-100 group-data-[disabled=true]:text-foreground-300 group-data-[disabled=true]:cursor-not-allowed before:bg-default/60 data-[selected=true]:text-default-foreground first:before:rounded-s-lg last:before:rounded-e-lg text-start px-4 py-4 text-foreground-100 font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue"
