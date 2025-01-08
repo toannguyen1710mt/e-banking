@@ -47,7 +47,7 @@ export const ContainerTransactions = async ({
   });
 
   return (
-    <div className='flex w-full gap-8'>
+    <div className='flex w-full gap-8 px-[22px] pt-1'>
       <div className='flex w-2/3 flex-col'>
         <Text
           as='h4'
@@ -60,7 +60,7 @@ export const ContainerTransactions = async ({
             as='span'
             variant={TEXT_VARIANT.DEFAULT}
             size={TEXT_SIZE['2XL']}
-            className='font-normal'
+            className='font-medium'
           >
             {session?.user?.username || ''}
           </Text>
@@ -81,7 +81,7 @@ export const ContainerTransactions = async ({
         </Suspense>
       </div>
 
-      <div className='w-1/3'>
+      <div className='mt-2 w-1/3'>
         <ActionCenter
           session={session}
           totalTransferSent={totalTransferSent}

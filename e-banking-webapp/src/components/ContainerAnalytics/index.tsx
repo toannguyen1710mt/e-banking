@@ -7,7 +7,7 @@ import { AuthError, Session } from 'next-auth';
 import { ERROR_MESSAGES } from '@/constants';
 
 // Interfaces
-import { IAccount } from '@/interfaces';
+import { IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Services
 import { getBalanceAccount, getTotalTransactions } from '@/services';
@@ -47,11 +47,16 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
   }, [session?.user?.accounts, session?.user?.id]);
 
   return (
-    <section className='mx-auto flex h-full w-full max-w-[1440px] gap-[34px] px-6 py-4'>
+    <section className='mx-auto flex h-full w-full gap-[34px] px-[22px] pt-1'>
       <div className='w-[75%]'>
         <Text as='h2' className='text-2xl font-semibold !text-black'>
           Good Evening,
-          <Text as='span' className='ml-1 font-medium !text-black'>
+          <Text
+            as='span'
+            variant={TEXT_VARIANT.DEFAULT}
+            size={TEXT_SIZE['2XL']}
+            className='ml-1 font-medium'
+          >
             {session?.user?.username || ''}
           </Text>
         </Text>

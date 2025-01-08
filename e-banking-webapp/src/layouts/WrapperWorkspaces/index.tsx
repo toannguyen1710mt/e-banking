@@ -16,7 +16,7 @@ export const WrapperWorkspaces = ({
 
   return (
     <div
-      className={`${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'} flex grow p-8`}
+      className={`${isSettingsUrl ? 'bg-background-500 p-0' : 'bg-background-900 p-3'} flex grow`}
     >
       {children}
     </div>
