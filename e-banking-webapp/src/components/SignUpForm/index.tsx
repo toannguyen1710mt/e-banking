@@ -88,12 +88,14 @@ export const SignUpForm = () => {
       formContent: <AccountForm />,
       textHeading: 'Control Your Finances, Join Us Today!',
       textFooter: 'Already have an account?',
+      subheading: 'Fill the form below to create an account',
     },
     {
       name: 'contact',
       formContent: <ContactForm />,
       textHeading: 'Control Your Finances, Join Us Today!',
       textFooter: 'Already have an account?',
+      subheading: 'Please provide your phone and contact info',
     },
     {
       name: 'card',
@@ -102,6 +104,7 @@ export const SignUpForm = () => {
       ),
       textHeading: 'Control Your Finances, Join Us Today!',
       textFooter: 'Already have an account?',
+      subheading: 'Please provide your Credit Card  information',
     },
     {
       name: 'success',
@@ -116,15 +119,18 @@ export const SignUpForm = () => {
       form={form}
       className='relative bottom-0 mx-auto h-full'
     >
-      {steps.map(({ name, formContent, textHeading, textFooter }) => (
-        <WizardForm.Step name={name} key={name}>
-          <AuthContentWrapper
-            formContent={formContent}
-            textHeading={textHeading}
-            textFooter={textFooter}
-          />
-        </WizardForm.Step>
-      ))}
+      {steps.map(
+        ({ name, formContent, textHeading, textFooter, subheading }) => (
+          <WizardForm.Step name={name} key={name}>
+            <AuthContentWrapper
+              formContent={formContent}
+              textHeading={textHeading}
+              textFooter={textFooter}
+              subheading={subheading}
+            />
+          </WizardForm.Step>
+        ),
+      )}
 
       <WizardForm.Footer>
         <WizardFormContextProvider>

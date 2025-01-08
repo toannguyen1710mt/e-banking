@@ -2,14 +2,11 @@
 
 import { Controller } from 'react-hook-form';
 
-// Interfaces
-import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
-
 // Context
 import { useWizardFormContext } from '@/context';
 
 // Components
-import { Button, Input, Text } from '@/components';
+import { Button, Input } from '@/components';
 import { GlobalIcon, MailBoxIcon, PhoneIcon } from '@/components/icons';
 
 export const ContactForm = () => {
@@ -22,14 +19,6 @@ export const ContactForm = () => {
   return (
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
-        <Text
-          size={TEXT_SIZE.BASE}
-          variant={TEXT_VARIANT.INFO}
-          className='font-normal'
-        >
-          Please provide your phone and contact info
-        </Text>
-
         <Controller
           control={control}
           name='contact.phone'

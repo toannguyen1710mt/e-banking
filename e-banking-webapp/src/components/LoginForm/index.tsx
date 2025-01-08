@@ -12,7 +12,7 @@ import { ROUTES } from '@/constants';
 import { signInSchema } from '@/constants/rules';
 
 // Interfaces
-import { TEXT_SIZE, TEXT_VARIANT, TSignInFormData } from '@/interfaces';
+import { TEXT_SIZE, TSignInFormData } from '@/interfaces';
 
 // Actions
 import { authenticateUser } from '@/actions/auth';
@@ -59,13 +59,6 @@ export const LoginForm = () => {
   return (
     <form onSubmit={onSubmit} className='mr-0'>
       <div className='mb-8 flex w-full flex-col gap-6 bg-white md:gap-4'>
-        <Text
-          variant={TEXT_VARIANT.INFO}
-          className='font-normal leading-[22px]'
-        >
-          Sign in to your account to continue
-        </Text>
-
         {/* Sign-in with username or email */}
         <Controller
           control={control}

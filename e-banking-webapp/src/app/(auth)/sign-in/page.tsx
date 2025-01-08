@@ -17,6 +17,7 @@ const SignInPage = () => {
       formContent={<LoginForm />}
       textHeading={headingContent}
       textFooter='Don’t have an account?'
+      subheading='Sign in to your account to continue'
     />
   );
 };

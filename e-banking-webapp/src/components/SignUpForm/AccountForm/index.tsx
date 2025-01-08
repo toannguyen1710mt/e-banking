@@ -6,9 +6,6 @@ import { Controller } from 'react-hook-form';
 // Constants
 import { SignUpSchema } from '@/constants/rules';
 
-// Interfaces
-import { TEXT_VARIANT } from '@/interfaces';
-
 // Context
 import { useWizardFormContext } from '@/context';
 
@@ -20,7 +17,7 @@ import {
   LockIcon,
   UserIcon,
 } from '@/components/icons';
-import { Button, Input, Text } from '@/components';
+import { Button, Input } from '@/components';
 
 export const AccountForm = () => {
   const {
@@ -46,13 +43,6 @@ export const AccountForm = () => {
   return (
     <>
       <div className='mb-10 flex w-full flex-col gap-4 bg-white'>
-        <Text
-          variant={TEXT_VARIANT.INFO}
-          className='font-normal leading-[22px]'
-        >
-          Fill the form below to create an account
-        </Text>
-
         {/* Sign-in with email */}
         <Controller
           control={control}
