@@ -74,7 +74,11 @@ export const GlobalTransferSteps = ({
       fromAccountType,
       toAccountType: undefined,
       statusTransaction: true,
-      amount: Number(amount),
+      amount: Number(
+        formatNumberWithCommas(
+          convertToUSD(allFieldValues.fromCountryType, Number(amount)),
+        ),
+      ),
     };
 
     const payload: IAccountPayloadData = {
