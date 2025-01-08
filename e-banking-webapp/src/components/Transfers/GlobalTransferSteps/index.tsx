@@ -59,6 +59,8 @@ export const GlobalTransferSteps = ({
   );
 
   const { showToast } = useToastContext();
+  
+  const sanitizedAmountInUSD = parseFloat(amountInUSD.replace(/,/g, ''));
 
   const submitHandler = async ({
     fromAccountId,
@@ -84,7 +86,7 @@ export const GlobalTransferSteps = ({
     const payload: IAccountPayloadData = {
       name: fromCardName,
       accountNumber: fromAccountNumber,
-      balance: fromAccountBalance - Number(amountInUSD),
+      balance: fromAccountBalance - sanitizedAmountInUSD,
       type: fromAccountType,
       currency: '$',
     };
