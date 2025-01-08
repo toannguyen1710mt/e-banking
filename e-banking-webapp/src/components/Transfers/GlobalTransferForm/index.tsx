@@ -196,9 +196,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const disableButtonSubmit =
     !fromAccountTypeValue ||
-    !balanceSend ||
+    !fromCountryType ||
+    !allFieldValues.recipientAccount ||
     !allFieldValues.amount ||
-    !!amountError;
+    !!errors.recipientAccount;
 
   return (
     <div className='flex w-full flex-col gap-4'>
