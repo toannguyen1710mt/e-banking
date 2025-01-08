@@ -31,7 +31,7 @@ export function useWizardForm<Schema extends z.ZodType>(
       const currentStepData = form.getValues(currentStepName) ?? {};
       const result = currentStepSchema.safeParse(currentStepData);
 
-      if (!result.success) return false;
+      return result.success;
     }
 
     // Additionally check if there are any errors in the form

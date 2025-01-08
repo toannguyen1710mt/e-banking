@@ -53,14 +53,14 @@ export const SignUpForm = () => {
       throw response.message;
     }
 
-    if (response?.user) {
-      await updateUser(response.user.id, { phone, country, postal });
+    if (response.data.user) {
+      await updateUser(response.data.user.id, { phone, country, postal });
 
       const accountPayloads: IAccountPayload[] = ACCOUNT_DEFAULT_VALUES.map(
         (account) => ({
           data: {
             ...account,
-            user: response?.user.id,
+            user: response.data.user.id,
           },
         }),
       );
