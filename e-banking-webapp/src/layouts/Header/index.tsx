@@ -116,7 +116,7 @@ export const Header = ({ session }: IHeaderProps) => {
   return (
     <NavbarNextUI
       classNames={{
-        wrapper: `max-w-full justify-start border-b border-foreground-100 border-opacity-25 ${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'}`,
+        wrapper: `max-w-full justify-start border-b border-foreground-100 border-opacity-25 px-3 ${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'}`,
       }}
       onMenuOpenChange={setIsMenuOpen}
     >
