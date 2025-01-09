@@ -227,12 +227,18 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         account.accountNumber === value && account.currency === countryCode(),
     );
 
-    if (accountMatch) {
-      setSelectedGlobalAccount(accountMatch);
-      clearErrors('recipientAccount');
+    if (value) {
+      if (accountMatch) {
+        setSelectedGlobalAccount(accountMatch);
+        clearErrors('recipientAccount');
+      } else {
+        setError('recipientAccount', {
+          message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+        });
+      }
     } else {
       setError('recipientAccount', {
-        message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+        message: ERROR_MESSAGES.FIELD_REQUIRED,
       });
     }
   };
