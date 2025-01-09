@@ -64,7 +64,7 @@ const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
           base: 'px-4 py-24 bg-lightGraySolid flex-1 rounded-xl min-w-[460px]',
           tabList: 'p-0',
           panel:
-            'py-8 pl-6 pr-8 min-h-[560px] bg-background-500 rounded-xl flex',
+            'relative py-8 pl-6 pr-8 min-h-[560px] bg-background-500 rounded-xl flex',
         }}
       />
     </Modal>

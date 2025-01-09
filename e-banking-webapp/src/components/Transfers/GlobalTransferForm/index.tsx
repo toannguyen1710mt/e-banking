@@ -79,6 +79,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const [isPending, startTransition] = useTransition();
 
   // States for global accounts
+  const [isFetchingGlobalAccounts, setIsFetchingGlobalAccounts] =
+    useState(false);
   const [globalAccounts, setGlobalAccounts] = useState<GlobalAccount[]>([]);
   const [selectedGlobalAccount, setSelectedGlobalAccount] =
     useState<GlobalAccount | null>(null);
@@ -90,19 +92,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   // Cached balance data
   const { fetchedBalances, setFetchedBalances } = useFetchedBalances();
-
-  useEffect(() => {
-    const fetchGlobalAccounts = async () => {
-      try {
-        const response = await getGlobalAccounts();
-        setGlobalAccounts(response.data);
-      } catch (error) {
-        console.error('Failed to fetch global accounts: ', error);
-      }
-    };
-
-    fetchGlobalAccounts();
-  }, []);
 
   useEffect(() => {
     const fetchBalanceSend = async () => {
@@ -221,6 +210,25 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     return '';
   };
 
+  const fetchGlobalAccounts = async (value: string) => {
+    if (!value) {
+      setGlobalAccounts([]);
+      setSelectedGlobalAccount(null);
+      return;
+    }
+
+    setIsFetchingGlobalAccounts(true);
+    try {
+      const response = await getGlobalAccounts();
+      setGlobalAccounts(response.data);
+      validateRecipientAccount(value); // Validate after fetch
+    } catch (error) {
+      console.error('Failed to fetch global accounts:', error);
+    } finally {
+      setIsFetchingGlobalAccounts(false);
+    }
+  };
+
   const validateRecipientAccount = (value: string) => {
     const accountMatch = globalAccounts.find(
       (account) =>
@@ -333,7 +341,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 errorMessage={errors.recipientAccount?.message}
                 isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
-                onBlur={() => validateRecipientAccount(value)}
+                onBlur={() => {
+                  fetchGlobalAccounts(value);
+                  validateRecipientAccount(value);
+                }}
                 maxLength={12}
               />
             );
@@ -424,6 +435,12 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       >
         Transfer Funds
       </Button>
+
+      {isFetchingGlobalAccounts && (
+        <div className='absolute inset-0 z-50 flex items-center justify-center rounded-xl bg-background-400/30'>
+          <Spinner size='sm' color='success' />
+        </div>
+      )}
     </div>
   );
 };
