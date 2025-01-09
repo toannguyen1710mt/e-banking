@@ -437,7 +437,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       </Button>
 
       {isFetchingGlobalAccounts && (
-        <div className='absolute inset-0 z-50 flex items-center justify-center rounded-xl bg-background-400/30'>
+        <div className='absolute inset-0 z-40 flex items-center justify-center rounded-xl bg-background-400/30'>
           <Spinner size='sm' color='success' />
         </div>
       )}
