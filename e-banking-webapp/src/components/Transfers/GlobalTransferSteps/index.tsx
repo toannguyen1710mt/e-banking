@@ -81,6 +81,7 @@ export const GlobalTransferSteps = ({
           convertToUSD(allFieldValues.fromCountryType, Number(amount)),
         ),
       ),
+      recipientName: allFieldValues.recipientName,
     };
 
     const payload: IAccountPayloadData = {
@@ -90,7 +91,6 @@ export const GlobalTransferSteps = ({
       type: fromAccountType,
       currency: '$',
     };
-    console.log(amount);
 
     try {
       await createTransaction(fromAccountId, transactionData);
@@ -120,7 +120,6 @@ export const GlobalTransferSteps = ({
             {...allFieldValues}
             submitHandler={submitHandler}
             amountInUSD={amountInUSD}
-            userName='Yehudi Daud'
           />
         </WizardForm.Step>
         <WizardForm.Step
@@ -128,12 +127,7 @@ export const GlobalTransferSteps = ({
           key='success'
           className='flex grow flex-col items-center justify-center'
         >
-          <GlobalTransferSuccess
-            {...allFieldValues}
-            onClose={onClose}
-            amount={amountInUSD}
-            userName='Yehudi Daud'
-          />
+          <GlobalTransferSuccess {...allFieldValues} onClose={onClose} />
         </WizardForm.Step>
       </WizardForm.Root>
     </FetchedBalancesProvider>

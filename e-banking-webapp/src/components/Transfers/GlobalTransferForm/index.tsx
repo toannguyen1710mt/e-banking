@@ -16,10 +16,10 @@ import {
 } from '@/constants';
 
 // Interfaces
-import { AccountType, GlobalType } from '@/interfaces';
+import { AccountType, GlobalAccount, GlobalType } from '@/interfaces';
 
 // API
-import { getAccountInfoByAccountType } from '@/services';
+import { getAccountInfoByAccountType, getGlobalAccounts } from '@/services';
 
 // Helpers / Utils
 import {
@@ -45,6 +45,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       formState: { errors },
       setValue,
       getValues,
+      setError,
+      clearErrors,
     },
     onNextStep,
   } = useWizardFormContext<typeof GlobalTransferFormSchema>();
@@ -54,6 +56,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     'fromCardName',
     'fromAccountNumber',
     'fromAccountBalance',
+    'recipientName',
   ];
 
   const fromAccountTypeValue = useWatch({
@@ -74,6 +77,13 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   );
 
   const [isPending, startTransition] = useTransition();
+
+  // States for global accounts
+  const [isFetchingGlobalAccounts, setIsFetchingGlobalAccounts] =
+    useState(false);
+  const [globalAccounts, setGlobalAccounts] = useState<GlobalAccount[]>([]);
+  const [selectedGlobalAccount, setSelectedGlobalAccount] =
+    useState<GlobalAccount | null>(null);
 
   // States for balances
   const [balanceSend, setBalanceSend] = useState<number | null>(null);
@@ -137,7 +147,13 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
+  }, [
+    fromAccountTypeValue,
+    session.user.id,
+    setValue,
+    fetchedBalances,
+    setFetchedBalances,
+  ]);
 
   const countryCode = () => {
     return (
@@ -193,6 +209,53 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
     return '';
   };
+
+  const fetchGlobalAccounts = async (value: string) => {
+    if (!value) {
+      setGlobalAccounts([]);
+      setSelectedGlobalAccount(null);
+      return;
+    }
+
+    setIsFetchingGlobalAccounts(true);
+    try {
+      const response = await getGlobalAccounts();
+      setGlobalAccounts(response.data);
+      validateRecipientAccount(value); // Validate after fetch
+    } catch (error) {
+      console.error('Failed to fetch global accounts:', error);
+    } finally {
+      setIsFetchingGlobalAccounts(false);
+    }
+  };
+
+  const validateRecipientAccount = (value: string) => {
+    const accountMatch = globalAccounts.find(
+      (account) =>
+        account.accountNumber === value && account.currency === countryCode(),
+    );
+
+    if (value) {
+      if (accountMatch) {
+        setSelectedGlobalAccount(accountMatch);
+        clearErrors('recipientAccount');
+      } else {
+        setError('recipientAccount', {
+          message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+        });
+      }
+    } else {
+      setError('recipientAccount', {
+        message: ERROR_MESSAGES.FIELD_REQUIRED,
+      });
+    }
+  };
+
+  useEffect(() => {
+    if (selectedGlobalAccount) {
+      setValue('recipientName', selectedGlobalAccount.name);
+    }
+  }, [selectedGlobalAccount, setValue]);
 
   const disableButtonSubmit =
     !fromAccountTypeValue ||
@@ -263,7 +326,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         <Controller
           control={control}
           name='recipientAccount'
-          render={({ field: { value, onChange, onBlur } }) => {
+          render={({ field: { value, onChange } }) => {
             return (
               <Input
                 label='Recipient Account'
@@ -278,7 +341,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 errorMessage={errors.recipientAccount?.message}
                 isInvalid={!!errors.recipientAccount}
                 onChange={onChange}
-                onBlur={onBlur}
+                onBlur={() => {
+                  fetchGlobalAccounts(value);
+                  validateRecipientAccount(value);
+                }}
                 maxLength={12}
               />
             );
@@ -348,7 +414,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           control={control}
           name={fieldName}
           render={({ field: { value } }) => (
-            <Input value={String(value)} className='hidden' />
+            <Input
+              value={
+                fieldName === 'recipientName'
+                  ? getValues('recipientName')
+                  : String(value)
+              }
+              className='hidden'
+            />
           )}
         />
       ))}
@@ -362,6 +435,12 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       >
         Transfer Funds
       </Button>
+
+      {isFetchingGlobalAccounts && (
+        <div className='absolute inset-0 z-40 flex items-center justify-center rounded-xl bg-background-400/30'>
+          <Spinner size='sm' color='success' />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,3 +1,6 @@
+// Interfaces
+import { CurrencyUnit } from '@/interfaces';
+
 export const SIGNUP_FORM_DEFAULT_VALUES = {
   user: {
     username: '',
@@ -23,21 +26,21 @@ export const ACCOUNT_DEFAULT_VALUES = [
     accountNumber: '123456789208',
     balance: 3438800,
     type: 'Main',
-    currency: '$',
+    currency: '$' as CurrencyUnit,
     name: 'OCB',
   },
   {
     accountNumber: '999332289888',
     balance: 84438800,
     type: 'Checkings',
-    currency: '$',
+    currency: '$' as CurrencyUnit,
     name: 'ACB',
   },
   {
     accountNumber: '106868929357',
     balance: 9238800,
     type: 'Savings',
-    currency: '$',
+    currency: '$' as CurrencyUnit,
     name: 'VID',
   },
 ];

@@ -13,13 +13,14 @@ export interface IAccount {
   accountNumber: string;
   balance: number;
   type: string;
-  currency: string;
+  currency: CurrencyUnit;
   transactions?: ITransaction[];
   cards?: ICard[];
   name: string;
-  currencyUnit?: CurrencyUnit;
   user?: number;
 }
+
+export type GlobalAccount = Omit<IAccount, 'type'>;
 
 export interface IAccountPayloadData
   extends Omit<IAccount, 'id' | 'documentId' | 'transactions' | 'cards'> {}

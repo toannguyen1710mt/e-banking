@@ -36,6 +36,7 @@ export const ERROR_MESSAGES = {
   EXPIRE_DATE_INVALID: 'Expire date must be in the future.',
   RECIPIENT_ACCOUNT_EXACT_12_DIGITS:
     'Recipient Account must be exactly 12 digits',
+  RECIPIENT_ACCOUNT_INVALID: 'Recipient Account does not exist',
   RECIPIENT_ACCOUNT_ONLY_NUMBERS: 'Recipient Account must contain only numbers',
   UPLOAD_IMAGE_ONLY_JPG_PNG: 'You can only upload JPG/PNG file!',
   UPLOAD_IMAGE_SIZE: 'Image upload must smaller than 1MB!',
