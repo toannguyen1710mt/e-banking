@@ -130,6 +130,7 @@ export const LoginForm = () => {
         color='primary'
         isDisabled={!isDirty || !isValid}
         isLoading={isSubmitting}
+        className='[&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
       >
         Sign In
       </Button>

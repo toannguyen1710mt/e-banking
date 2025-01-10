@@ -130,6 +130,7 @@ export const EmailTab = ({
           radius='xs'
           type='submit'
           isDisabled={isDisabled}
+          className='[&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
           isLoading={isSubmitting}
         >
           Update Email Preferences

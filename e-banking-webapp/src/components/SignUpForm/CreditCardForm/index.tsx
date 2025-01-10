@@ -152,6 +152,7 @@ export const CreditCardForm = <T extends z.ZodType>({
         isDisabled={!validateStep()}
         type='button'
         color='primary'
+        className='[&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
         isLoading={isPending}
         onClick={onSubmit}
       >

@@ -134,7 +134,7 @@ export const ConfirmAddCard = ({
         <Button
           type='submit'
           color='primary'
-          className='mx-auto mt-[30px] max-w-[320px]'
+          className='mx-auto mt-[30px] max-w-[320px] [&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
           isDisabled={!validateStep()}
           isLoading={isPending}
         >
