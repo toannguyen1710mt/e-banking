@@ -15,3 +15,4 @@ export * from './tags';
 export * from './settings';
 export * from './tables';
 export * from './cards';
+export * from './date';

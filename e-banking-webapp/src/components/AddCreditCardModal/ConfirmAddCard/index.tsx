@@ -10,9 +10,6 @@ import { AccountType, IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 // Context
 import { useWizardFormContext } from '@/context';
 
-// Utils
-import { formatYearMonthToShortDate } from '@/utils';
-
 // Schemas
 import { CreditCardSchema } from '@/schemas';
 
@@ -54,7 +51,7 @@ export const ConfirmAddCard = ({
             cardNumber={cardNumber}
             holderName={holderName}
             isModal={true}
-            expireDate={formatYearMonthToShortDate(expireAt)}
+            expireDate={expireAt}
             variant={selectedType.toLowerCase() as VariantsCard}
           />
 

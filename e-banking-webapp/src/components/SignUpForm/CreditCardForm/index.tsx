@@ -20,11 +20,11 @@ import { useToastContext, useWizardFormContext } from '@/context';
 // Components
 import {
   Button,
-  DatePicker,
   Input,
   CreditCardIcon,
   UserIcon,
   WalletIcon,
+  MonthYearPicker,
 } from '@/components';
 
 interface ICreditCard<T extends z.ZodType> {
@@ -115,13 +115,13 @@ export const CreditCardForm = <T extends z.ZodType>({
           <Controller
             control={control}
             name='card.expireAt'
-            render={({ field, fieldState: { error } }) => (
-              <DatePicker
-                labelPlacement='outside'
+            render={({ field }) => (
+              <MonthYearPicker
+                customClass='w-[50%]'
                 label='Expire Date'
-                aria-label='expireAt'
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
+                // TODO: Will update later
+                // isInvalid={!!error?.message}
+                // errorMessage={error?.message}
                 {...field}
               />
             )}
@@ -139,6 +139,7 @@ export const CreditCardForm = <T extends z.ZodType>({
                 maxLength={3}
                 startContent={<WalletIcon />}
                 type='string'
+                className='w-[50%]'
                 isInvalid={!!error?.message}
                 errorMessage={error?.message}
                 {...field}
