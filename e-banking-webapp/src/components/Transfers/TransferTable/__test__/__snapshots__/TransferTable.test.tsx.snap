@@ -3,7 +3,7 @@
 exports[`TransferTable component should match snapshot 1`] = `
 <div>
   <div
-    class="flex flex-col relative gap-4 w-full"
+    class="flex flex-col relative gap-4 w-full max-h-[672px] overflow-y-auto [&::-webkit-scrollbar]:w-0"
   >
     <table
       aria-describedby=""
@@ -13,7 +13,7 @@ exports[`TransferTable component should match snapshot 1`] = `
       tabindex="0"
     >
       <thead
-        class="[&>tr]:first:rounded-lg"
+        class="sticky top-0 z-20 [&>tr]:first:shadow-small [&>tr]:first:rounded-none [&>tr:last-child]:hidden bg-background-900"
         role="rowgroup"
       >
         <tr

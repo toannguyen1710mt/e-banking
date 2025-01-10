@@ -5,30 +5,30 @@ import { Session } from 'next-auth';
 import { Spinner } from '@nextui-org/react';
 
 // Interfaces
-import { IAccount, ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
+import { ITransaction, TEXT_SIZE, TransferType } from '@/interfaces';
 
 // Components
 import { MetricsCard, Text, TransferTable } from '@/components';
 
 // Services
-import { getAccountsByUserId, getTransactions } from '@/services';
+import { getTransactionsByUserId } from '@/services';
 
 interface ITransferManagerProps {
-  totalTransferSent: number;
   totalTransferReceived: number;
+  totalTransferSent: number;
   session: Session;
 }
 
 export const TransferManager = ({
-  totalTransferSent,
   totalTransferReceived,
+  totalTransferSent,
   session,
 }: ITransferManagerProps) => {
   const [selectedTransferType, setSelectedTransferType] = useState<
     TransferType.RECEIVED | TransferType.SENT
   >(TransferType.RECEIVED);
+
   const [transactions, setTransactions] = useState<ITransaction[]>([]);
-  const [accounts, setAccounts] = useState<IAccount[]>([]);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
@@ -36,48 +36,37 @@ export const TransferManager = ({
 
   const observerRef = useRef<HTMLDivElement>(null);
 
-  const handleSelectReceived = () => {
-    setSelectedTransferType(TransferType.RECEIVED);
+  const handleSelectTransfer = (transferType: TransferType) => {
+    setSelectedTransferType(transferType);
     setIsInitialFetch(true);
     setHasMore(true);
   };
-
-  const handleSelectSent = () => {
-    setSelectedTransferType(TransferType.SENT);
-    setIsInitialFetch(true);
-    setHasMore(true);
-  };
-
-  useEffect(() => {
-    const fetchAccountsByUserId = async () => {
-      const accounts = await getAccountsByUserId(session.user.id);
-      setAccounts(accounts);
-    };
-
-    fetchAccountsByUserId();
-  }, [session.user.id]);
 
   const fetchTransactions = useCallback(
     async (transferType: TransferType, isInitialFetch: boolean) => {
       const nextPage = isInitialFetch ? 1 : currentPage + 1;
 
-      const documentIds = accounts.map((account) => account.documentId);
-
       const filters =
         transferType === TransferType.RECEIVED
-          ? { toAccountId: { $in: documentIds } }
-          : { toAccountId: { $notIn: documentIds } };
+          ? {
+              toAccountType: {
+                $notNull: undefined,
+              },
+            }
+          : {
+              toAccountType: {
+                $null: undefined,
+              },
+            };
 
-      const { data: transaction, meta } = await getTransactions({
-        filters,
+      const { data, meta } = await getTransactionsByUserId(session.user.id, {
         sort: 'createdAt',
         order: 'desc',
+        filters,
         pagination: { page: nextPage },
       });
 
-      setTransactions((prev) =>
-        isInitialFetch ? transaction : [...prev, ...transaction],
-      );
+      setTransactions((prev) => (isInitialFetch ? data : [...prev, ...data]));
       setCurrentPage(nextPage);
       setIsInitialFetch(false);
 
@@ -85,7 +74,7 @@ export const TransferManager = ({
         setHasMore(false);
       }
     },
-    [accounts, currentPage],
+    [currentPage, session.user.id],
   );
 
   const fetchMoreTransactions = useCallback(() => {
@@ -130,7 +119,10 @@ export const TransferManager = ({
   return (
     <>
       <div className='mb-[23px] ml-[50px] flex justify-center gap-6'>
-        <div className='cursor-pointer' onClick={handleSelectReceived}>
+        <div
+          className='cursor-pointer'
+          onClick={() => handleSelectTransfer(TransferType.RECEIVED)}
+        >
           <MetricsCard
             title='Transfer Received'
             totalTransfers={totalTransferReceived}
@@ -139,7 +131,10 @@ export const TransferManager = ({
             isSelected={selectedTransferType === TransferType.RECEIVED}
           />
         </div>
-        <div className='cursor-pointer' onClick={handleSelectSent}>
+        <div
+          className='cursor-pointer'
+          onClick={() => handleSelectTransfer(TransferType.SENT)}
+        >
           <MetricsCard
             title='Transfer Sent'
             totalTransfers={totalTransferSent}
@@ -163,6 +158,7 @@ export const TransferManager = ({
       <TransferTable
         transactions={transactions}
         transferType={selectedTransferType}
+        isFetchingMore={hasMore}
       />
       {hasMore && (
         <div
