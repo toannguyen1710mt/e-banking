@@ -15,7 +15,13 @@ import { CreditCardSchema } from '@/schemas';
 import { formatCardNumber } from '@/utils';
 
 // Component
-import { Button, Input, Text, CreditCardIcon, DatePicker } from '@/components';
+import {
+  Button,
+  Input,
+  Text,
+  CreditCardIcon,
+  MonthYearPicker,
+} from '@/components';
 
 export const AddCreditCard = () => {
   const {
@@ -85,13 +91,13 @@ export const AddCreditCard = () => {
           <Controller
             control={control}
             name='cardInfo.expireAt'
-            render={({ field, fieldState: { error } }) => (
-              <DatePicker
-                labelPlacement='outside'
+            render={({ field }) => (
+              <MonthYearPicker
+                customClass='w-[50%]'
                 label='Expire Date'
-                aria-label='expireAt'
-                isInvalid={!!error?.message}
-                errorMessage={error?.message}
+                // TODO: Will update later
+                // isInvalid={!!error?.message}
+                // errorMessage={error?.message}
                 {...field}
               />
             )}
@@ -107,6 +113,7 @@ export const AddCreditCard = () => {
                 aria-label='ccv'
                 placeholder='000'
                 type='string'
+                className='w-[50%]'
                 isInvalid={!!error?.message}
                 errorMessage={error?.message}
                 maxLength={3}

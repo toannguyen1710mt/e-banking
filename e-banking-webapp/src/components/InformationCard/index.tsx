@@ -18,11 +18,7 @@ import { IAccount, ICardsPayloadByAccount } from '@/interfaces';
 import { getAccountsByUserId, getTotalCardsByAccounts } from '@/services';
 
 // Utils
-import {
-  formatNumberWithCommas,
-  formatQueryParamsFromAccounts,
-  formatYearMonthToShortDate,
-} from '@/utils';
+import { formatNumberWithCommas, formatQueryParamsFromAccounts } from '@/utils';
 
 // Component
 import {
@@ -135,9 +131,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
               }
               cardNumber={cards[currentCardIndex]?.cardNumber}
               holderName={cards[currentCardIndex]?.holderName}
-              expireDate={formatYearMonthToShortDate(
-                cards[currentCardIndex]?.expireAt,
-              )}
+              expireDate={cards[currentCardIndex]?.expireAt}
             />
           </div>
         </CardBody>
