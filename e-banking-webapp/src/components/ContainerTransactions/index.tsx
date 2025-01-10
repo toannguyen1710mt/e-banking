@@ -36,12 +36,15 @@ export const ContainerTransactions = async ({
 
   // Get transfers received
   const {
-    data: transactionsReceived,
     meta: {
       pagination: { total: totalTransferReceived },
     },
   } = await getTransactionsByUserId(session.user.id, {
     ...defaultQueryParams,
+    pagination: {
+      page: currentPage,
+      pageSize: 10,
+    },
     filters: {
       toAccountType: {
         $notNull: undefined,
@@ -51,12 +54,15 @@ export const ContainerTransactions = async ({
 
   // Get transfers sent
   const {
-    data: transactionsSent,
     meta: {
       pagination: { total: totalTransferSent },
     },
   } = await getTransactionsByUserId(session.user.id, {
     ...defaultQueryParams,
+    pagination: {
+      page: currentPage,
+      pageSize: 10,
+    },
     filters: {
       toAccountType: {
         $null: undefined,
@@ -113,8 +119,7 @@ export const ContainerTransactions = async ({
           <ActionCenter
             totalTransferReceived={totalTransferReceived}
             totalTransferSent={totalTransferSent}
-            transactionsReceived={transactionsReceived}
-            transactionsSent={transactionsSent}
+            session={session}
           />
         </Suspense>
       </div>

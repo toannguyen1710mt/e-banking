@@ -1,7 +1,5 @@
 import { Card, CardBody, CardHeader } from '@nextui-org/react';
-
-// Interfaces
-import { ITransaction } from '@/interfaces';
+import { Session } from 'next-auth';
 
 // Components
 import { Text } from '@/components';
@@ -10,15 +8,13 @@ import { TransferManager } from '../TransferManager';
 interface IActionCenterProps {
   totalTransferReceived: number;
   totalTransferSent: number;
-  transactionsReceived: ITransaction[];
-  transactionsSent: ITransaction[];
+  session: Session;
 }
 
 export const ActionCenter = ({
   totalTransferReceived,
   totalTransferSent,
-  transactionsReceived,
-  transactionsSent,
+  session,
 }: IActionCenterProps) => {
   return (
     <Card className='h-full gap-6 py-5 pl-5 pr-[38px]'>
@@ -29,8 +25,7 @@ export const ActionCenter = ({
         <TransferManager
           totalTransferSent={totalTransferSent}
           totalTransferReceived={totalTransferReceived}
-          transactionsReceived={transactionsReceived}
-          transactionsSent={transactionsSent}
+          session={session}
         />
       </CardBody>
     </Card>
