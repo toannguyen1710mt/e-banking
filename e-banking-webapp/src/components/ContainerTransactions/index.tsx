@@ -70,14 +70,6 @@ export const ContainerTransactions = async ({
     },
   });
 
-  // Get all transfers
-  const {
-    data: transactions,
-    meta: {
-      pagination: { pageCount, total },
-    },
-  } = await getTransactionsByUserId(session.user.id, defaultQueryParams);
-
   return (
     <div className='flex w-full gap-8 px-[22px] pt-1'>
       <div className='flex w-2/3 flex-col'>
@@ -104,12 +96,7 @@ export const ContainerTransactions = async ({
 
         {/* Todo: Implement Skeleton for Transaction History */}
         <Suspense key={currentPage} fallback={<LoadingIndicator />}>
-          <TransactionHistory
-            currentPage={currentPage}
-            totalPage={pageCount}
-            totalTransaction={total}
-            transactions={transactions}
-          />
+          <TransactionHistory currentPage={currentPage} session={session} />
         </Suspense>
       </div>
 
