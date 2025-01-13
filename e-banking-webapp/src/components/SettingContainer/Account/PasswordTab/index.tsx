@@ -5,13 +5,13 @@ import { useDisclosure } from '@nextui-org/react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { Session } from 'next-auth';
-import { useTransition } from 'react';
+import { useEffect, useTransition } from 'react';
 
 // Interfaces
 import { TChangePasswordFormData } from '@/interfaces';
 
 // Constants
-import { ERROR_MESSAGES, PASSWORD_DEFAULT_VALUES } from '@/constants';
+import { ERROR_MESSAGES, MESSAGE, PASSWORD_DEFAULT_VALUES } from '@/constants';
 
 // Schemas
 import { UpdatePasswordSchema } from '@/schemas';
@@ -30,9 +30,13 @@ type FormValues = z.infer<typeof UpdatePasswordSchema>;
 
 interface IPasswordTabProps {
   session: Session;
+  onUnsavedChanges: (hasUnsavedChanges: boolean) => void;
 }
 
-export const PasswordTab = ({ session }: IPasswordTabProps) => {
+export const PasswordTab = ({
+  session,
+  onUnsavedChanges,
+}: IPasswordTabProps) => {
   const {
     control,
     formState: { isValid, isDirty },
@@ -45,6 +49,50 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
     reValidateMode: 'onBlur',
     resolver: zodResolver(UpdatePasswordSchema),
   });
+
+  useEffect(() => {
+    onUnsavedChanges?.(isDirty);
+  }, [isDirty, onUnsavedChanges]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      if (isDirty) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
+        event.returnValue = confirmationMessage;
+
+        return confirmationMessage;
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [isDirty]);
+
+  useEffect(() => {
+    const handleLinkClick = (event: MouseEvent) => {
+      if (isDirty) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
+        if (!window.confirm(confirmationMessage)) {
+          event.preventDefault();
+        }
+      }
+    };
+
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', handleLinkClick);
+    });
+
+    return () => {
+      document.querySelectorAll('a').forEach((link) => {
+        link.removeEventListener('click', handleLinkClick);
+      });
+    };
+  }, [isDirty]);
 
   const {
     isOpen: isOpenPassword,
@@ -90,35 +138,27 @@ export const PasswordTab = ({ session }: IPasswordTabProps) => {
           throw response.message;
         }
 
-        startTransition(() => {
-          showToast(
-            ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
-            'success',
-            'top-center',
-          );
+        showToast(
+          ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
+          'success',
+          'top-center',
+        );
 
-          reset();
-        });
+        reset();
       } catch (error) {
-        startTransition(() => {
-          if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
-            setError('currentPassword', {
-              message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
-            });
-          }
+        if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
+          setError('currentPassword', {
+            message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
+          });
+        }
 
-          if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
-            setError('newPassword', {
-              message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
-            });
-          }
+        if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
+          setError('newPassword', {
+            message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
+          });
+        }
 
-          showToast(
-            ERROR_MESSAGES.CHANGE_PASSWORD_FAILED,
-            'error',
-            'top-center',
-          );
-        });
+        showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
       }
     });
   });
