@@ -138,27 +138,35 @@ export const PasswordTab = ({
           throw response.message;
         }
 
-        showToast(
-          ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
-          'success',
-          'top-center',
-        );
+        startTransition(() => {
+          showToast(
+            ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
+            'success',
+            'top-center',
+          );
+        });
 
         reset();
       } catch (error) {
-        if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
-          setError('currentPassword', {
-            message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
-          });
-        }
+        startTransition(() => {
+          if (String(error) === ERROR_MESSAGES.INVALID_CURRENT_PASSWORD) {
+            setError('currentPassword', {
+              message: ERROR_MESSAGES.INVALID_CURRENT_PASSWORD,
+            });
+          }
 
-        if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
-          setError('newPassword', {
-            message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
-          });
-        }
+          if (String(error) === ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD) {
+            setError('newPassword', {
+              message: ERROR_MESSAGES.NEW_PASSWORD_SAME_AS_OLD,
+            });
+          }
 
-        showToast(ERROR_MESSAGES.CHANGE_PASSWORD_FAILED, 'error', 'top-center');
+          showToast(
+            ERROR_MESSAGES.CHANGE_PASSWORD_FAILED,
+            'error',
+            'top-center',
+          );
+        });
       }
     });
   });
