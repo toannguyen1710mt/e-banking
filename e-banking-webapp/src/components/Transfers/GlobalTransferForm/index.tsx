@@ -209,6 +209,17 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     return '';
   };
 
+  const handleAccountErrors = (accountMatch: GlobalAccount | undefined) => {
+    if (accountMatch) {
+      setSelectedGlobalAccount(accountMatch);
+      clearErrors('globalTransfer.recipientAccount');
+    } else {
+      setError('globalTransfer.recipientAccount', {
+        message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+      });
+    }
+  };
+
   const validateRecipientAccount = async (value: string) => {
     if (!value) {
       setSelectedGlobalAccount(null);
@@ -225,14 +236,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       );
 
       if (value) {
-        if (accountMatch) {
-          setSelectedGlobalAccount(accountMatch);
-          clearErrors('globalTransfer.recipientAccount');
-        } else {
-          setError('globalTransfer.recipientAccount', {
-            message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
-          });
-        }
+        handleAccountErrors(accountMatch);
       } else {
         setError('globalTransfer.recipientAccount', {
           message: ERROR_MESSAGES.FIELD_REQUIRED,
