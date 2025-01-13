@@ -81,7 +81,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   // States for global accounts
   const [isFetchingGlobalAccounts, setIsFetchingGlobalAccounts] =
     useState(false);
-  const [globalAccounts, setGlobalAccounts] = useState<GlobalAccount[]>([]);
   const [selectedGlobalAccount, setSelectedGlobalAccount] =
     useState<GlobalAccount | null>(null);
 
@@ -210,9 +209,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     return '';
   };
 
-  const fetchGlobalAccounts = async (value: string) => {
+  const handleAccountErrors = (accountMatch: GlobalAccount | undefined) => {
+    if (accountMatch) {
+      setSelectedGlobalAccount(accountMatch);
+      clearErrors('globalTransfer.recipientAccount');
+    } else {
+      setError('globalTransfer.recipientAccount', {
+        message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
+      });
+    }
+  };
+
+  const validateRecipientAccount = async (value: string) => {
     if (!value) {
-      setGlobalAccounts([]);
       setSelectedGlobalAccount(null);
       return;
     }
@@ -220,8 +229,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     setIsFetchingGlobalAccounts(true);
     try {
       const response = await getGlobalAccounts();
-      setGlobalAccounts(response.data);
-      validateRecipientAccount(value); // Validate after fetch
+
+      const accountMatch = response.data.find(
+        (account) =>
+          account.accountNumber === value && account.currency === countryCode(),
+      );
+
+      if (value) {
+        handleAccountErrors(accountMatch);
+      } else {
+        setError('globalTransfer.recipientAccount', {
+          message: ERROR_MESSAGES.FIELD_REQUIRED,
+        });
+      }
     } catch (error) {
       console.error('Failed to fetch global accounts:', error);
     } finally {
@@ -229,27 +249,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     }
   };
 
-  const validateRecipientAccount = (value: string) => {
-    const accountMatch = globalAccounts.find(
-      (account) =>
-        account.accountNumber === value && account.currency === countryCode(),
-    );
-
-    if (value) {
-      if (accountMatch) {
-        setSelectedGlobalAccount(accountMatch);
-        clearErrors('globalTransfer.recipientAccount');
-      } else {
-        setError('globalTransfer.recipientAccount', {
-          message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
-        });
-      }
-    } else {
-      setError('globalTransfer.recipientAccount', {
-        message: ERROR_MESSAGES.FIELD_REQUIRED,
-      });
+  useEffect(() => {
+    if (fromCountryType && getValues('globalTransfer.recipientAccount')) {
+      validateRecipientAccount(getValues('globalTransfer.recipientAccount'));
     }
-  };
+  }, [fromCountryType]);
 
   useEffect(() => {
     if (selectedGlobalAccount) {
@@ -262,7 +266,9 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     !fromCountryType ||
     !allFieldValues.globalTransfer.recipientAccount ||
     !allFieldValues.globalTransfer.amount ||
-    !!errors.globalTransfer?.recipientAccount;
+    !!errors.globalTransfer?.recipientAccount ||
+    !!errors.globalTransfer?.amount ||
+    !!amountError;
 
   return (
     <div className='flex w-full flex-col gap-4'>
@@ -342,7 +348,6 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                 isInvalid={!!errors.globalTransfer?.recipientAccount}
                 onChange={onChange}
                 onBlur={() => {
-                  fetchGlobalAccounts(value);
                   validateRecipientAccount(value);
                 }}
                 maxLength={12}
@@ -397,7 +402,9 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
                 value={getFormattedAmount(rawAmount, value)}
-                onChange={(e) => handleInputChange(e.target.value, onChange)}
+                onChange={(e) =>
+                  handleInputChange(e.target.value.replace(/^\$/, ''), onChange)
+                }
                 errorMessage={amountError || error?.message}
                 isInvalid={!!amountError || !!error?.message}
                 onBlur={onBlur}
