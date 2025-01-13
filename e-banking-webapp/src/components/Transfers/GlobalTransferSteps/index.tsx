@@ -45,9 +45,11 @@ export const GlobalTransferSteps = ({
   const form = useForm<FormValues>({
     mode: 'onBlur',
     defaultValues: {
-      fromAccountType: undefined,
-      fromCountryType: undefined,
-      amount: '',
+      globalTransfer: {
+        fromAccountType: undefined,
+        fromCountryType: undefined,
+        amount: '',
+      },
     },
     resolver: zodResolver(GlobalTransferFormSchema),
   });
@@ -55,30 +57,37 @@ export const GlobalTransferSteps = ({
   const allFieldValues = form.watch();
 
   const amountInUSD = formatNumberWithCommas(
-    convertToUSD(allFieldValues.fromCountryType, Number(allFieldValues.amount)),
+    convertToUSD(
+      allFieldValues.globalTransfer.fromCountryType,
+      Number(allFieldValues.globalTransfer.amount),
+    ),
   );
 
   const { showToast } = useToastContext();
 
   const sanitizedAmountInUSD = sanitizeAmount(amountInUSD);
 
-  const submitHandler = async ({
-    fromAccountId,
-    fromCardName,
-    fromAccountNumber,
-    fromAccountBalance,
-    fromAccountType,
-    amount,
-  }: FormValues) => {
+  const submitHandler = async (data: FormValues) => {
+    const {
+      fromAccountId,
+      fromCardName,
+      fromAccountNumber,
+      fromAccountBalance,
+      globalTransfer: { fromAccountType, amount },
+    } = data;
+
     const transactionData: TransactionCreateData = {
       fromAccountId,
-      toAccountId: allFieldValues.recipientAccount,
+      toAccountId: allFieldValues.globalTransfer.recipientAccount,
       fromAccountType,
       toAccountType: undefined,
       statusTransaction: true,
       amount: sanitizeAmount(
         formatNumberWithCommas(
-          convertToUSD(allFieldValues.fromCountryType, Number(amount)),
+          convertToUSD(
+            allFieldValues.globalTransfer.fromCountryType,
+            Number(amount),
+          ),
         ),
       ),
       recipientName: allFieldValues.recipientName,
