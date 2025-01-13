@@ -35,7 +35,7 @@ export const InternalTransferForm = ({
   session,
 }: IInternalTransferFormProps) => {
   const {
-    form: { control, setValue },
+    form: { control, setValue, getValues },
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof InternalTransferFormSchema>();
@@ -127,7 +127,13 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceSend();
-  }, [fromAccountTypeValue, session.user.id, setValue, fetchedBalances]);
+  }, [
+    fromAccountTypeValue,
+    session.user.id,
+    setValue,
+    fetchedBalances,
+    setFetchedBalances,
+  ]);
 
   useEffect(() => {
     const fetchBalanceReceive = async () => {
@@ -183,31 +189,51 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceReceive();
-  }, [toAccountTypeValue, session.user.id, setValue, fetchedBalances]);
+  }, [
+    toAccountTypeValue,
+    session.user.id,
+    setValue,
+    fetchedBalances,
+    setFetchedBalances,
+  ]);
+
+  const handleAmountErrors = (balanceSend: number | null, amount: number) => {
+    if (balanceSend && amount > balanceSend) {
+      setAmountError(
+        `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
+          balanceSend,
+        )}`,
+      );
+    } else {
+      setAmountError(null);
+    }
+  };
 
   const handleInputChange = (
     value: string,
     onChange: (value: string) => void,
   ) => {
     const sanitizedValue = sanitizeNumber(value);
+
     if (isValidNumber(sanitizedValue)) {
       setRawAmount(sanitizedValue);
 
       const amount = Number(sanitizedValue);
 
-      if (balanceSend && amount > balanceSend) {
-        setAmountError(
-          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
-            balanceSend,
-          )}`,
-        );
-      } else {
-        setAmountError(null);
-      }
+      handleAmountErrors(balanceSend, amount);
 
       onChange(sanitizedValue);
     }
   };
+
+  useEffect(() => {
+    if (fromAccountTypeValue && getValues('internalTransfer.amount')) {
+      handleAmountErrors(
+        balanceSend,
+        Number(getValues('internalTransfer.amount')),
+      );
+    }
+  }, [balanceSend, fromAccountTypeValue, getValues]);
 
   const getFormattedAmount = (
     rawAmount: string,
@@ -380,7 +406,7 @@ export const InternalTransferForm = ({
         type='button'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
-        isDisabled={!validateStep()}
+        isDisabled={!validateStep() || !!amountError}
         onClick={onNextStep}
       >
         Transfer Funds
