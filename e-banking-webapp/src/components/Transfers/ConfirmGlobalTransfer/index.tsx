@@ -32,7 +32,10 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
 
   const values = getValues();
 
-  const { fromAccountType, recipientName } = values || {};
+  const {
+    globalTransfer: { fromAccountType },
+    recipientName,
+  } = values || {};
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -61,19 +61,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const fromAccountTypeValue = useWatch({
     control,
-    name: 'fromAccountType',
+    name: 'globalTransfer.fromAccountType',
   });
 
   const fromCountryType = useWatch({
     control,
-    name: 'fromCountryType',
+    name: 'globalTransfer.fromCountryType',
   });
 
   const allFieldValues = getValues();
 
   const amountValueInUSD = convertToUSD(
-    allFieldValues.fromCountryType,
-    Number(allFieldValues.amount),
+    allFieldValues.globalTransfer.fromCountryType,
+    Number(allFieldValues.globalTransfer.amount),
   );
 
   const [isPending, startTransition] = useTransition();
@@ -238,14 +238,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     if (value) {
       if (accountMatch) {
         setSelectedGlobalAccount(accountMatch);
-        clearErrors('recipientAccount');
+        clearErrors('globalTransfer.recipientAccount');
       } else {
-        setError('recipientAccount', {
+        setError('globalTransfer.recipientAccount', {
           message: ERROR_MESSAGES.RECIPIENT_ACCOUNT_INVALID,
         });
       }
     } else {
-      setError('recipientAccount', {
+      setError('globalTransfer.recipientAccount', {
         message: ERROR_MESSAGES.FIELD_REQUIRED,
       });
     }
@@ -260,9 +260,9 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const disableButtonSubmit =
     !fromAccountTypeValue ||
     !fromCountryType ||
-    !allFieldValues.recipientAccount ||
-    !allFieldValues.amount ||
-    !!errors.recipientAccount;
+    !allFieldValues.globalTransfer.recipientAccount ||
+    !allFieldValues.globalTransfer.amount ||
+    !!errors.globalTransfer?.recipientAccount;
 
   return (
     <div className='flex w-full flex-col gap-4'>
@@ -274,7 +274,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       {/* Country */}
       <Controller
         control={control}
-        name='fromCountryType'
+        name='globalTransfer.fromCountryType'
         render={({ field: { onChange, onBlur, value } }) => {
           return (
             <Select
@@ -283,8 +283,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.fromCountryType?.message}
-              isInvalid={!!errors.fromCountryType}
+              errorMessage={errors.globalTransfer?.fromCountryType?.message}
+              isInvalid={!!errors.globalTransfer?.fromCountryType}
               selectedKeys={value ? [String(value)] : []}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
@@ -299,7 +299,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       {/* Account */}
       <Controller
         control={control}
-        name='fromAccountType'
+        name='globalTransfer.fromAccountType'
         render={({ field: { onChange, onBlur, value } }) => {
           return (
             <Select
@@ -308,8 +308,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               options={filteredFromAccountOptions()}
               classNames={{ label: 'text-sm' }}
               value={String(value)}
-              errorMessage={errors.fromAccountType?.message}
-              isInvalid={!!errors.fromAccountType}
+              errorMessage={errors.globalTransfer?.fromAccountType?.message}
+              isInvalid={!!errors.globalTransfer?.fromAccountType}
               selectedKeys={value ? [String(value)] : []}
               onSelectionChange={(keys) => {
                 const selectedValue = String(Array.from(keys)[0]);
@@ -325,7 +325,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       {fromAccountTypeValue && (
         <Controller
           control={control}
-          name='recipientAccount'
+          name='globalTransfer.recipientAccount'
           render={({ field: { value, onChange } }) => {
             return (
               <Input
@@ -338,8 +338,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
                   input: 'm-0 text-xs text-primary-200 font-medium',
                 }}
                 value={value}
-                errorMessage={errors.recipientAccount?.message}
-                isInvalid={!!errors.recipientAccount}
+                errorMessage={errors.globalTransfer?.recipientAccount?.message}
+                isInvalid={!!errors.globalTransfer?.recipientAccount}
                 onChange={onChange}
                 onBlur={() => {
                   fetchGlobalAccounts(value);
@@ -369,7 +369,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
       {/* Amount */}
       <Controller
         control={control}
-        name='amount'
+        name='globalTransfer.amount'
         render={({
           field: { onBlur, value, onChange },
           fieldState: { error },

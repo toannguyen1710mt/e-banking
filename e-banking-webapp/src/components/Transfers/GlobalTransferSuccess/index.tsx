@@ -17,7 +17,10 @@ export const GlobalTransferSuccess = ({ onClose }: IGlobalTransferSuccess) => {
   const { form } = useWizardFormContext<typeof GlobalTransferFormSchema>();
   const values = form.getValues();
 
-  const { amount, recipientName } = values;
+  const {
+    globalTransfer: { amount },
+    recipientName,
+  } = values;
 
   return (
     <div className='flex flex-col items-center gap-4'>
