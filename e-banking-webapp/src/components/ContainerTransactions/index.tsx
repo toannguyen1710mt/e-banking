@@ -10,6 +10,7 @@ import {
   LoadingIndicator,
   Text,
   TransactionHistory,
+  TransactionHistorySkeleton,
 } from '@/components';
 import { ActionCenter } from './ActionCenter';
 
@@ -95,7 +96,7 @@ export const ContainerTransactions = async ({
         </div>
 
         {/* Todo: Implement Skeleton for Transaction History */}
-        <Suspense key={currentPage} fallback={<LoadingIndicator />}>
+        <Suspense key={currentPage} fallback={<TransactionHistorySkeleton />}>
           <TransactionHistory currentPage={currentPage} session={session} />
         </Suspense>
       </div>
