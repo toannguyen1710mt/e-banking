@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Key, useEffect, useState } from 'react';
 import { Session } from 'next-auth';
 import { Tab, Tabs } from '@nextui-org/react';
 
@@ -30,11 +30,13 @@ interface IAccountTabsProps {
 }
 
 export const AccountTabs = ({ session }: IAccountTabsProps) => {
-  const { id } = session.user;
-  const { showToast } = useToastContext();
+  const [unsavedChanges, setUnsavedChanges] = useState(false);
+  const [activeTab, setActiveTab] = useState('password');
   const [preferences, setPreferences] = useState<Preferences>(
     {} as Preferences,
   );
+  const { showToast } = useToastContext();
+  const { id } = session.user;
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -91,11 +93,37 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     }
   };
 
+  const confirmNavigation = (nextTab: string) => {
+    const userConfirmed = window.confirm(
+      'The entered data will not be saved. Do you want to leave?',
+    );
+
+    if (userConfirmed) {
+      setUnsavedChanges(false);
+      setActiveTab(nextTab);
+    }
+  };
+
+  const handleTabChange = (nextTab: Key) => {
+    const nextTabKey = String(nextTab);
+
+    if (unsavedChanges) {
+      confirmNavigation(nextTabKey);
+    } else {
+      setActiveTab(nextTabKey);
+    }
+  };
+
   const ACCOUNT_TABS = [
     {
       key: 'password',
       title: 'Change Password',
-      content: <PasswordTab session={session} />,
+      content: (
+        <PasswordTab
+          session={session}
+          onUnsavedChanges={(hasChanges) => setUnsavedChanges(hasChanges)}
+        />
+      ),
     },
     {
       key: 'email',
@@ -122,6 +150,8 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
           'group-data-[selected=true]:text-sm group-data-[selected=true]:font-semibold group-data-[selected=true]:text-primary-200 group-data-[selected=true]:border-none',
       }}
       variant='light'
+      selectedKey={activeTab}
+      onSelectionChange={handleTabChange}
     >
       {ACCOUNT_TABS.map(({ key, title, content }) => (
         <Tab key={key} title={<span>{title}</span>}>
