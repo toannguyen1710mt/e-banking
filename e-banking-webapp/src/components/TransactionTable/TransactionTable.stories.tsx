@@ -5,21 +5,21 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { MOCK_TRANSACTIONS } from '@/mocks';
 
 // Components
-import { TransactionHistory } from '@/components';
+import { TransactionTable } from '@/components';
 
 const meta = {
-  title: 'Components/TransactionHistory',
-  component: TransactionHistory,
+  title: 'Components/TransactionTable',
+  component: TransactionTable,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
   decorators: [],
-} satisfies Meta<typeof TransactionHistory>;
+} satisfies Meta<typeof TransactionTable>;
 
 export default meta;
 
-type Story = StoryObj<typeof TransactionHistory>;
+type Story = StoryObj<typeof TransactionTable>;
 
 export const Default: Story = {
   args: {
