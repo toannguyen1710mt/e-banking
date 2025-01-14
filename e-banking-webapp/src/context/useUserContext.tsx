@@ -1,5 +1,8 @@
 import React, { createContext, useState, useContext, ReactNode } from 'react';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
 interface SessionContextType {
   avatar: string;
   updateSession: (url: string) => void;
@@ -33,7 +36,7 @@ export const useUserContext = (): SessionContextType => {
   const context = useContext(UserContext);
 
   if (!context) {
-    throw new Error('useSession must be used within a SessionProvider');
+    throw new Error(ERROR_MESSAGES.USE_USER_CONTEXT);
   }
   return context;
 };
