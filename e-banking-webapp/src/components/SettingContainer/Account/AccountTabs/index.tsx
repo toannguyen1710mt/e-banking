@@ -143,6 +143,7 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
   return (
     <Tabs
       classNames={{
+        base: 'block',
         tabList: 'gap-8 w-full',
         cursor: 'w-full shadow-none',
         tab: 'max-w-fit text-[13px] font-normal p-0',
@@ -155,7 +156,9 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     >
       {ACCOUNT_TABS.map(({ key, title, content }) => (
         <Tab key={key} title={<span>{title}</span>}>
-          <div className='pl-[105px] pt-16'>{content}</div>
+          <div className='pl-[105px] pr-6 pt-16 max-[700px]:pl-0'>
+            {content}
+          </div>
         </Tab>
       ))}
     </Tabs>
