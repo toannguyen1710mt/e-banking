@@ -30,6 +30,8 @@ export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
 
   const handleRemoveImage = async () => {
     await updateUser(userProfile.id, { avatar: '' });
+
+    updateSession('');
   };
 
   return (
