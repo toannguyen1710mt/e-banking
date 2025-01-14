@@ -50,6 +50,7 @@ export const BalanceStatistics = ({
         tools: {
           download: getDownloadIcon(),
         },
+        show: false,
       },
       zoom: {
         enabled: false,
@@ -96,6 +97,9 @@ export const BalanceStatistics = ({
       stepSize: 100,
       axisBorder: {
         show: true,
+      },
+      labels: {
+        formatter: (value: number) => (value + 'K').toString(),
       },
     },
   };

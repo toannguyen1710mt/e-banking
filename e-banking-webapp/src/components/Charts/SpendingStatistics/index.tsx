@@ -32,6 +32,7 @@ export const SpendingStatistics = ({
         tools: {
           download: getDownloadIcon(),
         },
+        show: false,
       },
       zoom: {
         enabled: false,
