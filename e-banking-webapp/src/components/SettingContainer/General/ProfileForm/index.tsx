@@ -7,7 +7,7 @@ import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { updateUser } from '@/actions';
 
 // Context
-import { useUser } from '@/context';
+import { useUserContext } from '@/context';
 
 // Components
 import { Input, Text } from '@/components';
@@ -20,7 +20,7 @@ interface ProfileFormProps {
 export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
   const { username, email, phone, country, avatar } = userProfile;
 
-  const { updateSession } = useUser();
+  const { updateSession } = useUserContext();
 
   const handleChangeImage = async (url: string) => {
     const { avatar } = await updateUser(userProfile.id, { avatar: url });

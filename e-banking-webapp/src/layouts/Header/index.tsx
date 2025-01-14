@@ -33,7 +33,7 @@ import {
 import { signOut } from '@/actions';
 
 // Contexts
-import { useToastContext, useUser } from '@/context';
+import { useToastContext, useUserContext } from '@/context';
 
 interface IHeaderProps {
   session: Session;
@@ -45,7 +45,7 @@ export const Header = ({ session }: IHeaderProps) => {
   const { showToast } = useToastContext();
   const pathname = usePathname();
 
-  const { avatar } = useUser();
+  const { avatar } = useUserContext();
 
   const isSettingsUrl = REGEX.SETTINGS.test(pathname);
 

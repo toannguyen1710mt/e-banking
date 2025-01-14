@@ -29,7 +29,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({
   );
 };
 
-export const useUser = (): SessionContextType => {
+export const useUserContext = (): SessionContextType => {
   const context = useContext(UserContext);
 
   if (!context) {

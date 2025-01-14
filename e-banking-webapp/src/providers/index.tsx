@@ -11,7 +11,7 @@ import { Toast } from '@/components';
 
 // Contexts
 import { ToastProvider } from '@/context';
-import { UserProvider } from '@/context/useUser';
+import { UserProvider } from '@/context/useUserContext';
 
 interface IProvidersProps {
   children: React.ReactNode;
