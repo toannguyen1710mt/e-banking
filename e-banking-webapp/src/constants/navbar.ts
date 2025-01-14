@@ -1,6 +1,6 @@
 import { ROUTES } from '@/constants';
 
-export const NavbarItem = [
+export const NavbarList = [
   {
     text: 'Home',
     path: ROUTES.HOME,

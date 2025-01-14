@@ -6,7 +6,7 @@ exports[`SubMenu component Should render snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <nav
-        class="border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:block hidden"
+        class="hidden border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:block"
       >
         <ul
           class="flex gap-8"
@@ -67,7 +67,7 @@ exports[`SubMenu component Should render snapshot correctly 1`] = `
   </body>,
   "container": <div>
     <nav
-      class="border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:block hidden"
+      class="hidden border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:block"
     >
       <ul
         class="flex gap-8"

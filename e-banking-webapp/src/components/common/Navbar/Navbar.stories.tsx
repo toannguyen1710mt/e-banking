@@ -3,7 +3,7 @@ import { NavbarContent, Navbar as NavbarNextUI } from '@nextui-org/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 // Constants
-import { NavbarItem } from '@/constants';
+import { NavbarList } from '@/constants';
 
 // Components
 import { Navbar } from '.';
@@ -34,7 +34,7 @@ const meta: Meta<typeof Navbar> = {
     },
   },
   args: {
-    navbarItem: NavbarItem,
+    navbarItem: NavbarList,
   },
 };
 
@@ -44,6 +44,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    navbarItem: NavbarItem,
+    navbarItem: NavbarList,
   },
 };
