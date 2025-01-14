@@ -27,7 +27,7 @@ export const Sidebar = () => {
   const pathName = usePathname();
 
   return (
-    <aside className='h-screen w-[195px] border-r-1 border-primary-200 border-opacity-50 px-[14px] pt-3'>
+    <aside className='h-screen w-[195px] border-r-1 border-primary-200 border-opacity-50 px-[14px] pt-3 max-[700px]:hidden'>
       <ul className='cursor-pointer'>
         {SIDEBAR_ITEMS?.map(({ href, label, Icon }) => {
           const liStyles =

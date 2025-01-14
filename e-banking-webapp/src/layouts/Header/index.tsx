@@ -16,7 +16,14 @@ import { Session } from 'next-auth';
 import { redirect, usePathname } from 'next/navigation';
 
 // Constants
-import { ERROR_MESSAGES, IMAGES, NavbarItem, REGEX, ROUTES } from '@/constants';
+import {
+  ERROR_MESSAGES,
+  IMAGES,
+  NavbarItem,
+  NavbarItemMobile,
+  REGEX,
+  ROUTES,
+} from '@/constants';
 
 // Components
 import {
@@ -50,13 +57,6 @@ export const Header = ({ session }: IHeaderProps) => {
   const {
     user: { username, email, avatar },
   } = session;
-
-  const mobileMenuOptions = [
-    ...NavbarItem.map((item) => ({
-      key: item.path,
-      label: item.text,
-    })),
-  ];
 
   const handleSignOut = async () => {
     setIsSigningOut(true);
@@ -123,7 +123,7 @@ export const Header = ({ session }: IHeaderProps) => {
       <div className='flex items-center gap-[88px]'>
         <NavbarBrand className='gap-5'>
           <MenuDropdown
-            options={mobileMenuOptions}
+            options={NavbarItemMobile}
             customTriggerElement={
               <NavbarMenuToggle
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}

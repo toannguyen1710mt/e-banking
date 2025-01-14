@@ -3,7 +3,7 @@
 exports[`Sidebar component renders correctly with sidebar items 1`] = `
 <div>
   <aside
-    class="h-screen w-[195px] border-r-1 border-primary-200 border-opacity-50 px-[14px] pt-3"
+    class="h-screen w-[195px] border-r-1 border-primary-200 border-opacity-50 px-[14px] pt-3  max-[700px]:hidden"
   >
     <ul
       class="cursor-pointer"
