@@ -5,11 +5,11 @@ import { render } from '@testing-library/react';
 import { MOCK_COLUMNS } from '@/mocks';
 
 // Components
-import { SkeletonTable } from '@/components';
+import { TableSkeleton } from '@/components';
 
-describe('SkeletonTable component', () => {
+describe('TableSkeleton component', () => {
   it('should match snapshot', () => {
-    const container = render(<SkeletonTable columns={MOCK_COLUMNS} />);
+    const container = render(<TableSkeleton columns={MOCK_COLUMNS} />);
 
     expect(container).toMatchSnapshot();
   });

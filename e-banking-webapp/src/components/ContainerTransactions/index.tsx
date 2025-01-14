@@ -6,8 +6,8 @@ import { QueryParams, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Components
 import {
+  ActionCenterSkeleton,
   InformationCard,
-  LoadingIndicator,
   Text,
   TransactionHistory,
   TransactionHistorySkeleton,
@@ -103,7 +103,7 @@ export const ContainerTransactions = async ({
 
       <div className='w-1/3'>
         {/* Todo: Implement Skeleton for Action Center */}
-        <Suspense key={currentPage} fallback={<LoadingIndicator />}>
+        <Suspense key={currentPage} fallback={<ActionCenterSkeleton />}>
           <ActionCenter
             totalTransferReceived={totalTransferReceived}
             totalTransferSent={totalTransferSent}

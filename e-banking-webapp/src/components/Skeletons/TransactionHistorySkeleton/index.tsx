@@ -1,6 +1,11 @@
+// Libs
 import { Card, Skeleton } from '@nextui-org/react';
-import { SkeletonTable } from '../SkeletonTable';
+
+// Constants
 import { TRANSACTION_TABLE_COLUMNS } from '@/constants';
+
+// Components
+import { TableSkeleton } from '@/components';
 
 export const TransactionHistorySkeleton = () => (
   <Card className='h-full w-full min-w-[300px] space-y-5 p-4' radius='sm'>
@@ -12,6 +17,6 @@ export const TransactionHistorySkeleton = () => (
         <div className='h-4 w-2/5 rounded-lg bg-default-200' />
       </Skeleton>
     </div>
-    <SkeletonTable columns={TRANSACTION_TABLE_COLUMNS} />
+    <TableSkeleton columns={TRANSACTION_TABLE_COLUMNS} />
   </Card>
 );

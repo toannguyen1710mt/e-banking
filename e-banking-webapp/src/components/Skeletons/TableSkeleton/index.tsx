@@ -22,7 +22,7 @@ interface ISkeletonTableProps<T> extends TableProps {
   numberOfRows?: number;
 }
 
-export const SkeletonTable = <T,>({
+export const TableSkeleton = <T,>({
   columns,
   numberOfRows = 10,
   ...tableProps
