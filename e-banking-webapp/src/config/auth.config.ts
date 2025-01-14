@@ -38,11 +38,15 @@ export const authConfig = {
     },
 
     async session({ session, token }) {
+      if (session?.user) Object?.assign(token, session?.user);
+
       Object?.assign(session.user, token);
       return session;
     },
 
-    async jwt({ token, user }) {
+    async jwt({ token, user, session }) {
+      if (session?.user) Object?.assign(token, session.user);
+
       if (token) Object?.assign(token, user);
       return token;
     },

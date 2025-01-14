@@ -6,6 +6,9 @@ import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 // Actions
 import { updateUser } from '@/actions';
 
+// Context
+import { useUser } from '@/context';
+
 // Components
 import { Input, Text } from '@/components';
 import { UploadImage } from '@/components/SettingContainer/General/UploadImage';
@@ -17,8 +20,12 @@ interface ProfileFormProps {
 export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
   const { username, email, phone, country, avatar } = userProfile;
 
+  const { updateSession } = useUser();
+
   const handleChangeImage = async (url: string) => {
-    await updateUser(userProfile.id, { avatar: url });
+    const { avatar } = await updateUser(userProfile.id, { avatar: url });
+
+    updateSession(avatar);
   };
 
   const handleRemoveImage = async () => {

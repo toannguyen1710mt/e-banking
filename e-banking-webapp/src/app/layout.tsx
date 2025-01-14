@@ -6,6 +6,9 @@ import './globals.css';
 // Providers
 import Providers from '@/providers';
 
+// Configs
+import { auth } from '@/config/auth';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -24,15 +27,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth();
+  const avatar = session?.user.avatar;
+
   return (
     <html lang='en' suppressHydrationWarning={true}>
       <body className={inter.className}>
-        <Providers>
+        <Providers avatar={avatar || ''}>
           <main className='mx-auto'>
             <div className='h-screen'>{children}</div>
           </main>

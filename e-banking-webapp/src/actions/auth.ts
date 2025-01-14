@@ -1,6 +1,10 @@
 'use server';
 
-import { signIn, signOut as nextAuthSignOut } from '@/config/auth';
+import {
+  signIn,
+  signOut as nextAuthSignOut,
+  unstable_update,
+} from '@/config/auth';
 import { revalidateTag } from 'next/cache';
 import { AuthError } from 'next-auth';
 
@@ -71,6 +75,8 @@ export const updateUser = async (id: number, payload: TUpdateInfo) => {
       `${API_ENDPOINTS.USERS}/${id}`,
       payload,
     );
+
+    await unstable_update({ user: response.data });
 
     return response.data;
   } catch (error) {

@@ -33,7 +33,7 @@ import {
 import { signOut } from '@/actions';
 
 // Contexts
-import { useToastContext } from '@/context';
+import { useToastContext, useUser } from '@/context';
 
 interface IHeaderProps {
   session: Session;
@@ -45,10 +45,12 @@ export const Header = ({ session }: IHeaderProps) => {
   const { showToast } = useToastContext();
   const pathname = usePathname();
 
+  const { avatar } = useUser();
+
   const isSettingsUrl = REGEX.SETTINGS.test(pathname);
 
   const {
-    user: { username, email, avatar },
+    user: { username, email },
   } = session;
 
   const mobileMenuOptions = [
