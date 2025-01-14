@@ -1,7 +1,7 @@
 'use client';
 
 // Libs
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Card, CardBody } from '@nextui-org/react';
 import { AuthError, Session } from 'next-auth';
 
@@ -28,6 +28,7 @@ import {
   MasterCard,
   ChevronRightIcon,
   VariantsCard,
+  CreditCardSkeleton,
 } from '@/components';
 
 interface IInformationCardProps {
@@ -81,10 +82,17 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
     0,
   );
 
+  const {
+    account: { type } = {},
+    cardNumber,
+    holderName,
+    expireAt,
+  } = cards[currentCardIndex] || {};
+
   return (
     <>
       <Card className='w-full'>
-        <CardBody className='flex flex-row justify-between gap-[58px] p-0'>
+        <CardBody className='flex flex-row justify-between gap-[53px] p-0'>
           <MasterCard
             series={MASTERCARD_CHART_MOCK}
             totalBalance={createExpenseAnalysisOptions(
@@ -123,16 +131,14 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
               </Text>
             </div>
 
-            <CreditCard
-              variant={
-                cards[
-                  currentCardIndex
-                ]?.account?.type.toLowerCase() as VariantsCard
-              }
-              cardNumber={cards[currentCardIndex]?.cardNumber}
-              holderName={cards[currentCardIndex]?.holderName}
-              expireDate={cards[currentCardIndex]?.expireAt}
-            />
+            <Suspense fallback={<CreditCardSkeleton />}>
+              <CreditCard
+                variant={type?.toLowerCase() as VariantsCard}
+                cardNumber={cardNumber}
+                holderName={holderName}
+                expireDate={expireAt}
+              />
+            </Suspense>
           </div>
         </CardBody>
       </Card>

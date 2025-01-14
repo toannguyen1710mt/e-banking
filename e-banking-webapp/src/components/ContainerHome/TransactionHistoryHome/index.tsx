@@ -12,7 +12,7 @@ import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { auth } from '@/config/auth';
 
 // Components
-import { Text, SkeletonTable } from '@/components';
+import { Text, TableSkeleton } from '@/components';
 import { TransactionTable } from '@/components/ContainerHome/TransactionTable';
 
 // Services
@@ -37,7 +37,7 @@ export const TransactionHistoryHome = async () => {
 
       <CardBody className='flex flex-col p-0'>
         <Suspense
-          fallback={<SkeletonTable columns={TRANSACTION_TABLE_COLUMNS} />}
+          fallback={<TableSkeleton columns={TRANSACTION_TABLE_COLUMNS} />}
         >
           <TransactionTable transactions={transactions?.data || []} />
         </Suspense>

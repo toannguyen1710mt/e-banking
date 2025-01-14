@@ -8,20 +8,20 @@ import { TableProps } from '@/interfaces';
 import { MOCK_COLUMNS } from '@/mocks';
 
 // Components
-import { SkeletonTable } from '@/components';
+import { TableSkeleton } from '@/components';
 
 const meta = {
-  title: 'Components/Skeletons/SkeletonTable',
-  component: SkeletonTable,
+  title: 'Components/Skeletons/TableSkeleton',
+  component: TableSkeleton,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
-} satisfies Meta<typeof SkeletonTable>;
+} satisfies Meta<typeof TableSkeleton>;
 
 export default meta;
 
-type Story = StoryObj<typeof SkeletonTable>;
+type Story = StoryObj<typeof TableSkeleton>;
 
 export const Default: Story = {
   args: {
