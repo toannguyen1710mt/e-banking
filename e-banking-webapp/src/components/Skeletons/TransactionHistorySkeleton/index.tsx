@@ -14,7 +14,7 @@ export const TransactionHistorySkeleton = () => (
         <div className='h-4 w-2/5 rounded-lg bg-default-300' />
       </Skeleton>
       <Skeleton className='w-2/5 rounded-lg'>
-        <div className='h-4 w-2/5 rounded-lg bg-default-200' />
+        <div className='h-3 w-2/5 rounded-lg bg-default-200' />
       </Skeleton>
     </div>
     <TableSkeleton columns={TRANSACTION_TABLE_COLUMNS} />

@@ -95,14 +95,12 @@ export const ContainerTransactions = async ({
           <InformationCard session={session} />
         </div>
 
-        {/* Todo: Implement Skeleton for Transaction History */}
         <Suspense key={currentPage} fallback={<TransactionHistorySkeleton />}>
           <TransactionHistory currentPage={currentPage} session={session} />
         </Suspense>
       </div>
 
       <div className='w-1/3'>
-        {/* Todo: Implement Skeleton for Action Center */}
         <Suspense key={currentPage} fallback={<ActionCenterSkeleton />}>
           <ActionCenter
             totalTransferReceived={totalTransferReceived}
