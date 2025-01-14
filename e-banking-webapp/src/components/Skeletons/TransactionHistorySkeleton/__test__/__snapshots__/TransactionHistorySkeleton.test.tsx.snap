@@ -30,7 +30,7 @@ exports[`TransactionHistorySkeleton component should match snapshot 1`] = `
               class="opacity-0 group-data-[loaded=true]:opacity-100 transition-opacity motion-reduce:transition-none !duration-300"
             >
               <div
-                class="h-4 w-2/5 rounded-lg bg-default-200"
+                class="h-3 w-2/5 rounded-lg bg-default-200"
               />
             </div>
           </div>
@@ -1100,7 +1100,7 @@ exports[`TransactionHistorySkeleton component should match snapshot 1`] = `
             class="opacity-0 group-data-[loaded=true]:opacity-100 transition-opacity motion-reduce:transition-none !duration-300"
           >
             <div
-              class="h-4 w-2/5 rounded-lg bg-default-200"
+              class="h-3 w-2/5 rounded-lg bg-default-200"
             />
           </div>
         </div>
