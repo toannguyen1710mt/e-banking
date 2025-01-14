@@ -63,6 +63,8 @@ export const InternalTransferForm = ({
     name: 'internalTransfer.toAccountType',
   });
 
+  const amountValue = getValues('internalTransfer.amount');
+
   const [isPendingFrom, startTransitionFrom] = useTransition();
   const [isPendingTo, startTransitionTo] = useTransition();
 
@@ -127,13 +129,7 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceSend();
-  }, [
-    fromAccountTypeValue,
-    session.user.id,
-    setValue,
-    fetchedBalances,
-    setFetchedBalances,
-  ]);
+  }, [fromAccountTypeValue, session.user.id, fetchedBalances]);
 
   useEffect(() => {
     const fetchBalanceReceive = async () => {
@@ -189,24 +185,16 @@ export const InternalTransferForm = ({
     };
 
     fetchBalanceReceive();
-  }, [
-    toAccountTypeValue,
-    session.user.id,
-    setValue,
-    fetchedBalances,
-    setFetchedBalances,
-  ]);
+  }, [toAccountTypeValue, session.user.id, fetchedBalances]);
 
   const handleAmountErrors = (balanceSend: number | null, amount: number) => {
-    if (balanceSend && amount > balanceSend) {
-      setAmountError(
-        `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
-          balanceSend,
-        )}`,
-      );
-    } else {
-      setAmountError(null);
-    }
+    setAmountError(
+      balanceSend && amount > balanceSend
+        ? `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(
+            balanceSend,
+          )}`
+        : null,
+    );
   };
 
   const handleInputChange = (
@@ -227,13 +215,10 @@ export const InternalTransferForm = ({
   };
 
   useEffect(() => {
-    if (fromAccountTypeValue && getValues('internalTransfer.amount')) {
-      handleAmountErrors(
-        balanceSend,
-        Number(getValues('internalTransfer.amount')),
-      );
+    if (fromAccountTypeValue && amountValue) {
+      handleAmountErrors(balanceSend, Number(amountValue));
     }
-  }, [balanceSend, fromAccountTypeValue, getValues]);
+  }, [amountValue, balanceSend, fromAccountTypeValue]);
 
   const getFormattedAmount = (
     rawAmount: string,

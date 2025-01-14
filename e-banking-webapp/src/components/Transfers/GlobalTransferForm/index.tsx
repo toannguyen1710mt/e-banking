@@ -71,6 +71,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const allFieldValues = getValues();
 
+  const amountValue = allFieldValues.globalTransfer.amount;
+
   const amountValueInUSD = convertToUSD(
     allFieldValues.globalTransfer.fromCountryType,
     Number(allFieldValues.globalTransfer.amount),
@@ -174,13 +176,11 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     );
 
   const handleAmountErrors = (balanceSend: number | null, amount: number) => {
-    if (balanceSend && amount > balanceSend) {
-      setAmountError(
-        `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
-      );
-    } else {
-      setAmountError(null);
-    }
+    setAmountError(
+      balanceSend && amount > balanceSend
+        ? `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`
+        : null,
+    );
   };
 
   const handleInputChange = (
@@ -251,10 +251,10 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   };
 
   useEffect(() => {
-    if (fromAccountTypeValue && getValues('globalTransfer.amount')) {
+    if (fromAccountTypeValue && amountValue) {
       handleAmountErrors(balanceSend, amountValueInUSD);
     }
-  }, [amountValueInUSD, balanceSend, fromAccountTypeValue, getValues]);
+  }, [amountValueInUSD, balanceSend, fromAccountTypeValue, amountValue]);
 
   useEffect(() => {
     if (fromCountryType && getValues('globalTransfer.recipientAccount')) {
