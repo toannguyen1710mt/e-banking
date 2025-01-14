@@ -28,15 +28,11 @@ export function useWizardForm<Schema extends z.ZodType>(
 
       if (!currentStepSchema) return true;
 
-      const currentStepData = form.getValues(currentStepName) ?? {};
+      const currentStepData = form.watch(currentStepName) ?? {};
       const result = currentStepSchema.safeParse(currentStepData);
 
       return result.success;
     }
-
-    // Additionally check if there are any errors in the form
-    const formErrors = Object.keys(form.formState.errors);
-    return formErrors.length === 0;
   }, [schema, form, stepNames, currentStepIndex]);
 
   const onNextStep = useCallback(
