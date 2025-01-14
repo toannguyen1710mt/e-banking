@@ -40,6 +40,7 @@ export const MainContent = () => (
             color='outline'
             radius='sm'
             className='w-[80px] cursor-not-allowed'
+            isDisabled
           >
             Monthly
           </Button>

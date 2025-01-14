@@ -12,6 +12,9 @@ import { IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 // Services
 import { getAccountsByUserId, getTotalTransactions } from '@/services';
 
+// Utils
+import { getGreeting } from '@/utils';
+
 // Components
 import { CardOverview } from '../CardOverview';
 import { Text } from '../common';
@@ -50,7 +53,7 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
     <section className='mx-auto flex h-full w-full gap-[34px] px-[22px] pt-1'>
       <div className='w-[75%]'>
         <Text as='h2' className='text-2xl font-semibold !text-black'>
-          Good Evening,
+          {getGreeting()},
           <Text
             as='span'
             variant={TEXT_VARIANT.DEFAULT}
