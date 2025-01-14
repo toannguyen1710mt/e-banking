@@ -16,3 +16,4 @@ export * from './Toast';
 export * from './LoadingIndicator';
 export * from './DatePicker';
 export * from './Pagination';
+export * from './SubMenu';
