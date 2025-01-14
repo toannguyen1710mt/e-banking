@@ -39,7 +39,7 @@ export const ConnectedAccountsTab = () => (
       </Text>
     </div>
 
-    <div className='ml-3 grid max-w-[680px] grid-cols-2 gap-[54px]'>
+    <div className='grid max-w-[680px] grid-cols-2 gap-[54px] px-3 max-[950px]:grid-cols-1 max-[800px]:grid-cols-2 max-[650px]:grid-cols-1 max-[650px]:justify-items-center max-[650px]:gap-6'>
       {PAYMENT_METHODS?.map(({ label, icon: Icon, buttonText }) => (
         <div key={label} className='flex flex-col gap-6'>
           <Text as='label' size={TEXT_SIZE.SM}>

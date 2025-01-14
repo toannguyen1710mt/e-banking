@@ -156,7 +156,7 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     >
       {ACCOUNT_TABS.map(({ key, title, content }) => (
         <Tab key={key} title={<span>{title}</span>}>
-          <div className='pl-[105px] pr-6 pt-16 max-[700px]:pl-0'>
+          <div className='pl-[105px] pr-6 pt-16 max-[800px]:pl-0'>
             {content}
           </div>
         </Tab>
