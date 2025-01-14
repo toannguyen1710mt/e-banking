@@ -71,6 +71,8 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
   const allFieldValues = getValues();
 
+  const amountValue = allFieldValues.globalTransfer.amount;
+
   const amountValueInUSD = convertToUSD(
     allFieldValues.globalTransfer.fromCountryType,
     Number(allFieldValues.globalTransfer.amount),
@@ -173,6 +175,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
         option.key !== (fromAccountTypeValue as unknown as GlobalType),
     );
 
+  const handleAmountErrors = (balanceSend: number | null, amount: number) => {
+    setAmountError(
+      balanceSend && amount > balanceSend
+        ? `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`
+        : null,
+    );
+  };
+
   const handleInputChange = (
     value: string,
     onChange: (value: string) => void,
@@ -182,13 +192,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
     if (isValidNumber(sanitizedValue)) {
       setRawAmount(sanitizedValue);
 
-      if (balanceSend && amountValueInUSD > balanceSend) {
-        setAmountError(
-          `${ERROR_MESSAGES.AMOUNT_EXCEEDED_BALANCE} $${formatNumberWithCommas(balanceSend)}`,
-        );
-      } else {
-        setAmountError(null);
-      }
+      handleAmountErrors(balanceSend, amountValueInUSD);
 
       onChange(sanitizedValue);
     }
@@ -223,6 +227,9 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
   const validateRecipientAccount = async (value: string) => {
     if (!value) {
       setSelectedGlobalAccount(null);
+      setError('globalTransfer.recipientAccount', {
+        message: ERROR_MESSAGES.FIELD_REQUIRED,
+      });
       return;
     }
 
@@ -235,19 +242,19 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           account.accountNumber === value && account.currency === countryCode(),
       );
 
-      if (value) {
-        handleAccountErrors(accountMatch);
-      } else {
-        setError('globalTransfer.recipientAccount', {
-          message: ERROR_MESSAGES.FIELD_REQUIRED,
-        });
-      }
+      handleAccountErrors(accountMatch);
     } catch (error) {
       console.error('Failed to fetch global accounts:', error);
     } finally {
       setIsFetchingGlobalAccounts(false);
     }
   };
+
+  useEffect(() => {
+    if (fromAccountTypeValue && amountValue) {
+      handleAmountErrors(balanceSend, amountValueInUSD);
+    }
+  }, [amountValueInUSD, balanceSend, fromAccountTypeValue, amountValue]);
 
   useEffect(() => {
     if (fromCountryType && getValues('globalTransfer.recipientAccount')) {
