@@ -82,6 +82,13 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
     0,
   );
 
+  const {
+    account: { type } = {},
+    cardNumber,
+    holderName,
+    expireAt,
+  } = cards[currentCardIndex] || {};
+
   return (
     <>
       <Card className='w-full'>
@@ -126,14 +133,10 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
 
             <Suspense fallback={<CreditCardSkeleton />}>
               <CreditCard
-                variant={
-                  cards[
-                    currentCardIndex
-                  ]?.account?.type.toLowerCase() as VariantsCard
-                }
-                cardNumber={cards[currentCardIndex]?.cardNumber}
-                holderName={cards[currentCardIndex]?.holderName}
-                expireDate={cards[currentCardIndex]?.expireAt}
+                variant={type?.toLowerCase() as VariantsCard}
+                cardNumber={cardNumber}
+                holderName={holderName}
+                expireDate={expireAt}
               />
             </Suspense>
           </div>
