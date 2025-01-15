@@ -13,9 +13,9 @@ describe('MetricsCard component', () => {
   };
 
   it('renders match snapshot', () => {
-    render(<MetricsCard {...defaultProps} />);
+    const container = render(<MetricsCard {...defaultProps} />);
 
-    expect(screen).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('applies correct styles when isSelected is true', () => {

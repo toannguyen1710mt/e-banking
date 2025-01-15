@@ -2,6 +2,105 @@
 
 exports[`MetricsCard component renders match snapshot 1`] = `
 {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none min-w-[180px] cursor-pointer p-4 bg-white"
+        tabindex="-1"
+      >
+        <p
+          class="text-foreground-100 text-base font-semibold text-primary-200"
+        >
+          Test Title
+        </p>
+        <div
+          class="flex items-center justify-between gap-4"
+        >
+          <span
+            class="text-primary-200 text-[52px] font-bold text-primary-200"
+          >
+            1234
+          </span>
+          <div
+            class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-small px-2 py-1 text-primary bg-primary-200 bg-opacity-10"
+          >
+            <div
+              class="max-h-[80%] text-primary-200"
+            >
+              <svg
+                class="w-[25px] h-4"
+                fill="none"
+                height="10"
+                viewBox="0 0 11 10"
+                width="11"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.66832 4.70416L5.51315 2.62083C5.47215 2.5829 5.42381 2.55316 5.3709 2.53333C5.26596 2.49166 5.14826 2.49166 5.04332 2.53333C4.99041 2.55316 4.94207 2.5829 4.90108 2.62083L2.7459 4.70416C2.70572 4.74301 2.67384 4.78913 2.65209 4.83989C2.63034 4.89065 2.61914 4.94506 2.61914 5C2.61914 5.11096 2.66474 5.21737 2.7459 5.29583C2.82707 5.37429 2.93715 5.41837 3.05194 5.41837C3.16672 5.41837 3.27681 5.37429 3.35797 5.29583L4.77608 3.92083V7.08333C4.77608 7.19384 4.82149 7.29982 4.90232 7.37796C4.98316 7.4561 5.09279 7.5 5.20711 7.5C5.32143 7.5 5.43106 7.4561 5.5119 7.37796C5.59273 7.29982 5.63815 7.19384 5.63815 7.08333V3.92083L7.05625 5.29583C7.09632 5.33488 7.14399 5.36588 7.19652 5.38704C7.24904 5.40819 7.30538 5.41908 7.36228 5.41908C7.41919 5.41908 7.47552 5.40819 7.52805 5.38704C7.58057 5.36588 7.62825 5.33488 7.66832 5.29583C7.70872 5.2571 7.74079 5.21101 7.76267 5.16024C7.78455 5.10946 7.79582 5.055 7.79582 5C7.79582 4.94499 7.78455 4.89053 7.76267 4.83976C7.74079 4.78898 7.70872 4.7429 7.66832 4.70416Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <span
+              class="flex-1 font-extrabold text-xs p-0 text-primary-200"
+            >
+              12
+              %
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none min-w-[180px] cursor-pointer p-4 bg-white"
+      tabindex="-1"
+    >
+      <p
+        class="text-foreground-100 text-base font-semibold text-primary-200"
+      >
+        Test Title
+      </p>
+      <div
+        class="flex items-center justify-between gap-4"
+      >
+        <span
+          class="text-primary-200 text-[52px] font-bold text-primary-200"
+        >
+          1234
+        </span>
+        <div
+          class="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap h-6 text-tiny rounded-small px-2 py-1 text-primary bg-primary-200 bg-opacity-10"
+        >
+          <div
+            class="max-h-[80%] text-primary-200"
+          >
+            <svg
+              class="w-[25px] h-4"
+              fill="none"
+              height="10"
+              viewBox="0 0 11 10"
+              width="11"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.66832 4.70416L5.51315 2.62083C5.47215 2.5829 5.42381 2.55316 5.3709 2.53333C5.26596 2.49166 5.14826 2.49166 5.04332 2.53333C4.99041 2.55316 4.94207 2.5829 4.90108 2.62083L2.7459 4.70416C2.70572 4.74301 2.67384 4.78913 2.65209 4.83989C2.63034 4.89065 2.61914 4.94506 2.61914 5C2.61914 5.11096 2.66474 5.21737 2.7459 5.29583C2.82707 5.37429 2.93715 5.41837 3.05194 5.41837C3.16672 5.41837 3.27681 5.37429 3.35797 5.29583L4.77608 3.92083V7.08333C4.77608 7.19384 4.82149 7.29982 4.90232 7.37796C4.98316 7.4561 5.09279 7.5 5.20711 7.5C5.32143 7.5 5.43106 7.4561 5.5119 7.37796C5.59273 7.29982 5.63815 7.19384 5.63815 7.08333V3.92083L7.05625 5.29583C7.09632 5.33488 7.14399 5.36588 7.19652 5.38704C7.24904 5.40819 7.30538 5.41908 7.36228 5.41908C7.41919 5.41908 7.47552 5.40819 7.52805 5.38704C7.58057 5.36588 7.62825 5.33488 7.66832 5.29583C7.70872 5.2571 7.74079 5.21101 7.76267 5.16024C7.78455 5.10946 7.79582 5.055 7.79582 5C7.79582 4.94499 7.78455 4.89053 7.76267 4.83976C7.74079 4.78898 7.70872 4.7429 7.66832 4.70416Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <span
+            class="flex-1 font-extrabold text-xs p-0 text-primary-200"
+          >
+            12
+            %
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
@@ -35,7 +134,6 @@ exports[`MetricsCard component renders match snapshot 1`] = `
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "logTestingPlaygroundURL": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
@@ -52,5 +150,7 @@ exports[`MetricsCard component renders match snapshot 1`] = `
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
 }
 `;
