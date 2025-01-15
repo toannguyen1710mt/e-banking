@@ -14,13 +14,12 @@ export const futureMonth = z.string().refine(
 
     const fullYear = year + 2000;
 
-    const today = new Date();
-    const inputDate = new Date(fullYear, month - 1);
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth() + 1;
 
     return (
-      inputDate.getFullYear() > today.getFullYear() ||
-      (inputDate.getFullYear() === today.getFullYear() &&
-        inputDate.getMonth() >= today.getMonth())
+      fullYear > currentYear ||
+      (fullYear === currentYear && month > currentMonth)
     );
   },
   {

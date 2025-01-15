@@ -25,7 +25,7 @@ import {
 
 export const AddCreditCard = () => {
   const {
-    form: { control },
+    form: { control, trigger },
     onNextStep,
     validateStep,
   } = useWizardFormContext<typeof CreditCardSchema>();
@@ -91,14 +91,17 @@ export const AddCreditCard = () => {
           <Controller
             control={control}
             name='cardInfo.expireAt'
-            render={({ field }) => (
+            render={({ field, fieldState: { error } }) => (
               <MonthYearPicker
                 customClass='w-[50%]'
                 label='Expire Date'
-                // TODO: Will update later
-                // isInvalid={!!error?.message}
-                // errorMessage={error?.message}
+                isInvalid={!!error?.message}
+                errorMessage={error?.message}
                 {...field}
+                onChange={(date: string) => {
+                  field.onChange(date);
+                  trigger('cardInfo.expireAt');
+                }}
               />
             )}
           />

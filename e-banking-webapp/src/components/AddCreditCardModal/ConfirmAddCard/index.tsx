@@ -28,7 +28,11 @@ export const ConfirmAddCard = ({
   isPending,
 }: IConfirmAddCard) => {
   const {
-    form: { control, getValues },
+    form: {
+      control,
+      getValues,
+      formState: { isSubmitting },
+    },
     validateStep,
   } = useWizardFormContext<typeof CreditCardSchema>();
 
@@ -133,7 +137,7 @@ export const ConfirmAddCard = ({
           color='primary'
           className='mx-auto mt-[30px] max-w-[320px] [&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
           isDisabled={!validateStep()}
-          isLoading={isPending}
+          isLoading={isPending || isSubmitting}
         >
           Confirm
         </Button>
