@@ -92,14 +92,14 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
   return (
     <>
       <Card className='w-full'>
-        <CardBody className='flex flex-row justify-between gap-[53px] p-0'>
+        <CardBody className='flex flex-col-reverse justify-between gap-[30px] p-0 md:flex-row'>
           <MasterCard
             series={MASTERCARD_CHART_MOCK}
             totalBalance={createExpenseAnalysisOptions(
               formatNumberWithCommas(totalBalance || 0),
             )}
           />
-          <div className='flex w-full flex-col gap-[14px] pb-5 pr-[22px] pt-2'>
+          <div className='flex w-full flex-col gap-[14px] px-[22px] pb-5 pt-2'>
             <div className='flex flex-col gap-[11px]'>
               <div className='flex items-center justify-between'>
                 <Text as='span' className='text-sm font-semibold text-navyBlue'>

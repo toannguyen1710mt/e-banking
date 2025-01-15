@@ -118,7 +118,7 @@ export const TransferManager = ({
 
   return (
     <>
-      <div className='mb-[23px] ml-[50px] flex justify-center gap-6'>
+      <div className='mx-auto mb-[23px] flex flex-col justify-center gap-6 md:flex-row'>
         <div
           className='cursor-pointer'
           onClick={() => handleSelectTransfer(TransferType.RECEIVED)}

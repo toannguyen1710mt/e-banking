@@ -8,7 +8,7 @@ export const createExpenseAnalysisOptions = (value: string): ApexOptions => ({
   labels: EXPENSE_LABEL_DATA,
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 320,
       options: {
         chart: {
           width: '100%',
