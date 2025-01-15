@@ -7,7 +7,7 @@ exports[`QuickAction component should match snapshot for QuickAction 1`] = `
     tabindex="-1"
   >
     <h3
-      class="text-primary-200 text-xs font-semibold lg:text-lg xl:text-xs"
+      class="text-primary-200 text-xs font-semibold lg:text-xl xl:text-xs"
     >
       Quick Action
     </h3>

@@ -10,8 +10,8 @@ export const fontSize = {
   xs: '12px',
   sm: '14px',
   md: '16px',
-  '2md': '18px',
-  lg: '20px',
+  lg: '18px',
+  xl: '20px',
   '3xl': '32px',
   '4xl': '36px',
 };

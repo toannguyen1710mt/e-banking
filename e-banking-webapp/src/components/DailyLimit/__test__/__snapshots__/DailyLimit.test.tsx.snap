@@ -10,7 +10,7 @@ exports[`DailyLimit component should match snapshot for DailyLimit 1`] = `
       class="z-10 w-full items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large flex justify-between p-0 text-xs font-semibold"
     >
       <span
-        class="text-xs lg:text-lg xl:text-xs"
+        class="text-xs lg:text-xl xl:text-xs"
       >
         Daily Limit
       </span>
