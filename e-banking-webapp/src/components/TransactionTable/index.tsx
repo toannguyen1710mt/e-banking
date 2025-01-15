@@ -79,7 +79,7 @@ export const TransactionTable = ({
       <CardBody className='flex flex-col p-0'>
         <Table
           classNames={{
-            base: 'overflow-hidden py-2',
+            base: 'overflow-auto xl:overflow-hidden py-2',
             table:
               'border-separate border-spacing-0 rounded-lg border-[0.2px] border-semiTransparentNavyBlue',
             thead: '[&>tr:last-child]:hidden',

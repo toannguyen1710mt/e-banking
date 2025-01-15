@@ -72,8 +72,8 @@ export const ContainerTransactions = async ({
   });
 
   return (
-    <div className='flex w-full gap-8 px-[22px] pt-1'>
-      <div className='flex w-2/3 flex-col'>
+    <div className='flex w-full flex-col gap-8 px-0 pt-1 lg:px-[22px] xl:flex-row'>
+      <div className='flex w-full flex-col xl:w-[55%]'>
         <Text
           as='h4'
           variant={TEXT_VARIANT.DEFAULT}
@@ -91,7 +91,7 @@ export const ContainerTransactions = async ({
           </Text>
         </Text>
 
-        <div className='mb-[23px] max-w-[659px]'>
+        <div className='mx-auto mb-[23px] max-w-full md:max-w-[659px] lg:mx-[unset]'>
           <InformationCard session={session} />
         </div>
 
@@ -100,7 +100,7 @@ export const ContainerTransactions = async ({
         </Suspense>
       </div>
 
-      <div className='w-1/3'>
+      <div className='w-full xl:w-[45%]'>
         <Suspense key={currentPage} fallback={<ActionCenterSkeleton />}>
           <ActionCenter
             totalTransferReceived={totalTransferReceived}
