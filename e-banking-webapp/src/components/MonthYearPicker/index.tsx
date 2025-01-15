@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { InputProps } from '@nextui-org/react';
 
 // Constants
 import { MONTHS } from '@/constants';
@@ -18,21 +19,22 @@ import { formatMonthYear, formatYearMonthToShortDate } from '@/utils';
 import { Button, Input, Text } from '../common';
 import { CalendarIcon } from '../icons';
 
-interface IMonthYearPicker {
-  onChange: (date: string) => void;
+interface IMonthYearPicker extends Omit<InputProps, 'onChange' | 'label'> {
   customClass?: string;
   label?: string;
+  onChange: (date: string) => void;
 }
 
 export const MonthYearPicker = ({
   customClass,
   label,
   onChange,
+  ...rest
 }: IMonthYearPicker) => {
   const [year, setYear] = useState<number | null>(null);
   const [month, setMonth] = useState<number | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const dateMonthPickerRef = useRef(null);
+  const dateMonthPickerRef = useRef<HTMLDivElement>(null);
   const newYear = year ?? new Date().getFullYear();
   const newMonth = month ?? new Date().getMonth() + 1;
 
@@ -107,6 +109,7 @@ export const MonthYearPicker = ({
             : 'MM/YY'
         }
         readOnly
+        {...rest}
       />
       {isOpen && (
         <div

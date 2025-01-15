@@ -36,7 +36,7 @@ export const CreditCardForm = <T extends z.ZodType>({
   submitHandler,
 }: ICreditCard<T>) => {
   const {
-    form: { control, handleSubmit, setError },
+    form: { control, handleSubmit, setError, trigger },
     validateStep,
     onNextStep,
     goToStep,
@@ -115,14 +115,17 @@ export const CreditCardForm = <T extends z.ZodType>({
           <Controller
             control={control}
             name='card.expireAt'
-            render={({ field }) => (
+            render={({ field, fieldState: { error } }) => (
               <MonthYearPicker
                 customClass='w-[50%]'
                 label='Expire Date'
-                // TODO: Will update later
-                // isInvalid={!!error?.message}
-                // errorMessage={error?.message}
+                isInvalid={!!error?.message}
+                errorMessage={error?.message}
                 {...field}
+                onChange={(date: string) => {
+                  field.onChange(date);
+                  trigger('card.expireAt');
+                }}
               />
             )}
           />
