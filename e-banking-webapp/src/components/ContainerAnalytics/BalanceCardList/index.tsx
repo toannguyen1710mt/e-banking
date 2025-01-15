@@ -43,7 +43,7 @@ export const BalanceCardList = ({ accounts }: IBalanceCardListProps) => {
   ];
 
   return (
-    <div className='flex h-auto w-full justify-between gap-7'>
+    <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4'>
       {BALANCE_CARD.map(({ amount, title }, index) => (
         <BalanceCard key={index} amount={amount} title={title} />
       ))}

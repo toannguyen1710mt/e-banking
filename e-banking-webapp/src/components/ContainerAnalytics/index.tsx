@@ -47,8 +47,8 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
   }, [session?.user?.accounts, session?.user?.id]);
 
   return (
-    <section className='mx-auto flex h-full w-full gap-[34px] px-[22px] pt-1'>
-      <div className='w-[75%]'>
+    <section className='mx-auto flex h-full w-full flex-col gap-6 lg:flex-row'>
+      <div className='lg:w-3/4'>
         <Text as='h2' className='text-2xl font-semibold !text-black'>
           Good Evening,
           <Text
@@ -62,17 +62,17 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
         </Text>
         <div className='mt-6 flex flex-col gap-6'>
           <BalanceCardList accounts={accounts} />
-          <div className='flex gap-7'>
+          <div className='grid grid-cols-1 gap-y-6 xl:grid-cols-4 xl:gap-x-6'>
             <MetricsCardList totalTransfer={totalTransfer} />
             <CardOverview session={session} />
           </div>
-          <div className='flex flex-col gap-8'>
+          <div className='flex flex-col gap-6'>
             <Text as='span'>My Services</Text>
             <ServiceCardList />
           </div>
         </div>
       </div>
-      <div className='w-[25%]'>
+      <div className='lg:w-1/4'>
         <MyCalender />
       </div>
     </section>

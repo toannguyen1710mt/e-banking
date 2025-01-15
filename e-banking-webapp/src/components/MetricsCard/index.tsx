@@ -40,7 +40,9 @@ export const MetricsCard = ({
   const textColor = isSelected ? 'text-white' : 'text-primary-200';
 
   return (
-    <Card className={`min-w-[180px] cursor-pointer p-4 ${cardBgColor}`}>
+    <Card
+      className={`min-w-[180px] cursor-pointer p-4 sm:basis-1/2 ${cardBgColor}`}
+    >
       <Text
         className={`font-semibold ${textColor}`}
         variant={TEXT_VARIANT.DEFAULT}

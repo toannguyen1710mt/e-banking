@@ -21,7 +21,7 @@ export const MetricsCardList = ({ totalTransfer }: IMetricsCardListProps) => {
   ];
 
   return (
-    <div className='flex flex-col gap-[10px]'>
+    <div className='flex flex-col gap-6 sm:flex-row xl:flex-col xl:gap-3'>
       {METRICS_CARD.map(
         ({ title, totalTransfers, isPositive, percentageChange }, index) => (
           <MetricsCard
