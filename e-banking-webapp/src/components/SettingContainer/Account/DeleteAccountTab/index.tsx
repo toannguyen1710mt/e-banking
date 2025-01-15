@@ -12,7 +12,10 @@ export const DeleteAccountTab = () => (
       </Text>
 
       <div className='mb-8 flex gap-4'>
-        <Text as='span' className='text-xs font-semibold text-red'>
+        <Text
+          as='span'
+          className='whitespace-nowrap text-xs font-semibold text-red'
+        >
           Warning :
         </Text>
         <Text
