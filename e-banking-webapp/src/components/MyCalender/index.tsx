@@ -39,8 +39,8 @@ export const DUE_TILE = [
 ];
 
 export const MyCalender = () => (
-  <Card className='h-full w-full py-[14px] pl-[14px] pr-6' radius='sm'>
-    <CardHeader className='flex-col gap-6'>
+  <Card className='h-full w-full gap-6 p-4 sm:flex-row lg:flex-col' radius='sm'>
+    <CardHeader className='w-auto flex-col gap-6 p-0 sm:basis-1/2 lg:basis-0'>
       <Text
         as='span'
         className='w-full text-left text-xs font-medium !text-black'
@@ -48,11 +48,11 @@ export const MyCalender = () => (
         My Calendar
       </Text>
       <Calendar
-        classNames={{ base: 'ml-[11px]' }}
         value={today(getLocalTimeZone())}
+        classNames={{ cell: 'p-0' }}
       />
     </CardHeader>
-    <CardBody className='gap-5'>
+    <CardBody className='gap-5 p-0 sm:basis-1/2 lg:basis-0'>
       <Text as='span' className='text-lg font-bold !text-black'>
         Due This Month
       </Text>
