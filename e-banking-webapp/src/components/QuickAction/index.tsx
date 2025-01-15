@@ -76,11 +76,11 @@ export const QuickAction = ({ session }: QuickActionProps) => {
 
   return (
     <>
-      <Card className='flex flex-col gap-2 rounded-md bg-background-500 px-[6px] py-2'>
-        <Text as='h3' className='text-xs font-semibold'>
+      <Card className='flex basis-1/2 flex-col justify-between gap-2 rounded-md bg-background-500 px-2 py-3'>
+        <Text as='h3' className='text-xs font-semibold lg:text-lg xl:text-xs'>
           Quick Action
         </Text>
-        <ul className='grid grid-cols-4 rounded-md bg-softWhite'>
+        <ul className='grid grid-cols-4 gap-1 rounded-md bg-softWhite md:grid-cols-2 md:py-2 lg:grid-cols-4'>
           {QUICK_ACTIONS.map((action) => {
             const { icon, label, isDisabled, onClick } = action;
 
@@ -89,7 +89,7 @@ export const QuickAction = ({ session }: QuickActionProps) => {
             return (
               <li key={label}>
                 <Button
-                  className='flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100'
+                  className='flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100 md:py-0'
                   isDisabled={isDisabled}
                   onClick={onClick}
                 >

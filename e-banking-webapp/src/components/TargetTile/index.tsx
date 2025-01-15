@@ -25,7 +25,7 @@ export const TargetTile = ({
   const TargetIcon = icon;
 
   return (
-    <div className='mx-[6px] flex items-center justify-between border-b border-dimGray p-4'>
+    <div className='flex items-center justify-between border-b border-dimGray p-4'>
       <div className='flex items-center gap-4'>
         <TargetIcon />
         <div className='flex flex-col'>

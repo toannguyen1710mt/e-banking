@@ -3,7 +3,7 @@
 exports[`TargetTile components should match snapshot for TargetTile 1`] = `
 <div>
   <div
-    class="mx-[6px] flex items-center justify-between border-b border-dimGray p-4"
+    class="flex items-center justify-between border-b border-dimGray p-4"
   >
     <div
       class="flex items-center gap-4"

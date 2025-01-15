@@ -2,9 +2,9 @@ import { MainContent } from './MainContent';
 import { Sidebar } from './Sidebar';
 
 export const ContainerHomepage = () => (
-  <div className='mt-3 flex w-full gap-8'>
-    <div className='w-[290px]'>
-      <div className='top-5.5 fixed h-screen w-[290px]'>
+  <div className='flex w-full flex-col gap-8 xl:flex-row'>
+    <div className='xl:w-[290px]'>
+      <div className='xl:top-5.5 xl:fixed xl:h-screen xl:w-[290px]'>
         <Sidebar />
       </div>
     </div>

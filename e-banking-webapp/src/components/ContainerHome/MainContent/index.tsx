@@ -49,7 +49,7 @@ export const MainContent = () => (
     </div>
 
     {/* Analytics Cards */}
-    <div className='flex gap-4'>
+    <div className='flex flex-col gap-4 sm:flex-row'>
       <Suspense
         fallback={ANALYTICS_DATA.map((_, index) => (
           <AnalyticsCardSkeleton key={`skeleton-${index}`} />
@@ -74,7 +74,7 @@ export const MainContent = () => (
     </div>
 
     {/* Charts */}
-    <div className='flex gap-5'>
+    <div className='flex flex-col gap-4 sm:flex-row'>
       <Suspense fallback={<ChartsSkeleton />}>
         <BalanceStatistics {...MOCK_BALANCE_STATISTICS_CHART_DATA} />
       </Suspense>

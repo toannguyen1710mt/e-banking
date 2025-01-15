@@ -19,9 +19,9 @@ interface IDailyLimit {
 }
 
 export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
-  <Card className='w-full rounded-md px-[6px] pt-[9px]'>
+  <Card className='w-full basis-1/2 gap-4 rounded-md px-2 py-3'>
     <CardHeader className='flex justify-between p-0 text-xs font-semibold'>
-      <span>Daily Limit</span>
+      <span className='text-xs lg:text-lg xl:text-xs'>Daily Limit</span>
       <Chip
         startContent={<ArrowUpIcon />}
         classNames={{
@@ -32,13 +32,15 @@ export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
         8%
       </Chip>
     </CardHeader>
-    <CardBody className='p-0 pt-2 text-xs'>
+    <CardBody className='overflow-hidden p-0 text-xs'>
       <div className='flex items-baseline'>
-        <span className='font-bold'>$ {expenses} Used</span>
+        <span className='text-xs font-bold lg:text-base xl:text-xs'>
+          $ {expenses} Used
+        </span>
         <span className='ml-2 text-3xs font-normal'>from $ {limit} limit</span>
       </div>
     </CardBody>
-    <CardFooter className='p-0 pb-4 pt-[9px]'>
+    <CardFooter className='p-0 pb-2'>
       <Progress
         aria-label='Loading...'
         classNames={{
