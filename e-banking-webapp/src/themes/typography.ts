@@ -9,6 +9,9 @@ export const fontSize = {
   '2xs': '10px',
   xs: '12px',
   sm: '14px',
+  md: '16px',
+  lg: '18px',
+  xl: '20px',
   '3xl': '32px',
   '4xl': '36px',
 };

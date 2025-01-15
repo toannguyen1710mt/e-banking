@@ -8,11 +8,13 @@ import { CreditCardSkeleton } from '@/components/Skeletons';
 
 export const Sidebar = () => (
   <div className='flex flex-col gap-4'>
-    <Suspense fallback={<CreditCardSkeleton />}>
-      <ContainerCreditCard />
-    </Suspense>
+    <div className='flex flex-col gap-4 sm:flex-row xl:flex-col'>
+      <Suspense fallback={<CreditCardSkeleton />}>
+        <ContainerCreditCard />
+      </Suspense>
 
-    <SidebarActions />
+      <SidebarActions />
+    </div>
 
     <MyTarget />
   </div>

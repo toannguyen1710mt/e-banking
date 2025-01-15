@@ -3,13 +3,15 @@
 exports[`DailyLimit component should match snapshot for DailyLimit 1`] = `
 <div>
   <div
-    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none w-full rounded-md px-[6px] pt-[9px]"
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none w-full basis-1/2 gap-4 rounded-md px-2 py-3"
     tabindex="-1"
   >
     <div
       class="z-10 w-full items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large flex justify-between p-0 text-xs font-semibold"
     >
-      <span>
+      <span
+        class="text-xs lg:text-xl xl:text-xs"
+      >
         Daily Limit
       </span>
       <div
@@ -35,13 +37,13 @@ exports[`DailyLimit component should match snapshot for DailyLimit 1`] = `
       </div>
     </div>
     <div
-      class="relative flex w-full flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased p-0 pt-2 text-xs"
+      class="relative flex w-full flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left subpixel-antialiased overflow-hidden p-0 text-xs"
     >
       <div
         class="flex items-baseline"
       >
         <span
-          class="font-bold"
+          class="text-xs font-bold lg:text-base xl:text-xs"
         >
           $ 
           50,000
@@ -57,7 +59,7 @@ exports[`DailyLimit component should match snapshot for DailyLimit 1`] = `
       </div>
     </div>
     <div
-      class="h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large p-0 pb-4 pt-[9px]"
+      class="h-auto flex w-full items-center overflow-hidden color-inherit subpixel-antialiased rounded-b-large p-0 pb-2"
     >
       <div
         aria-label="Loading..."

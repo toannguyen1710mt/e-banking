@@ -1,12 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  CircularProgress,
-} from '@nextui-org/react';
+import { Card, CircularProgress } from '@nextui-org/react';
 
 // Interfaces
 import { TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
@@ -35,41 +30,42 @@ export const MyTarget = () => {
   );
 
   return (
-    <Card className='rounded-md'>
-      {/* Header */}
-      <CardHeader className='flex justify-between px-[6px]'>
-        <Text
-          as='span'
-          size={TEXT_SIZE.XS}
-          variant={TEXT_VARIANT.DEFAULT}
-          className='font-semibold'
-        >
-          My Targets
-        </Text>
-        <Button
-          startContent={<PlusIcon />}
-          radius='xs'
-          size='xxs'
-          className='min-w-0 text-3xs'
-          isDisabled
-        >
-          New
-        </Button>
-      </CardHeader>
+    <Card className='gap-4 rounded-md px-2 py-3 sm:flex-row xl:flex-col'>
+      <div className='sm:basis-1/2'>
+        <div className='flex justify-between'>
+          <Text
+            as='span'
+            size={TEXT_SIZE.XS}
+            variant={TEXT_VARIANT.DEFAULT}
+            className='font-semibold'
+          >
+            My Targets
+          </Text>
+          <Button
+            startContent={<PlusIcon />}
+            radius='xs'
+            size='xxs'
+            className='min-w-0 text-3xs'
+            isDisabled
+          >
+            New
+          </Button>
+        </div>
 
-      {/* Target List */}
-      {TARGET_LIST.map((target, index) => (
-        <TargetTile
-          key={index}
-          icon={target.icon}
-          title={target.title}
-          deposit={target.deposit}
-          targetAmount={target.targetAmount}
-        />
-      ))}
+        {/* Target List */}
+        {TARGET_LIST.map((target, index) => (
+          <TargetTile
+            key={index}
+            icon={target.icon}
+            title={target.title}
+            deposit={target.deposit}
+            targetAmount={target.targetAmount}
+          />
+        ))}
+      </div>
 
       {/* Footer - Changes only when clicking chevron right icon */}
-      <CardFooter>
+      <div className='sm:basis-1/2'>
         <div className='flex w-full flex-col gap-5'>
           <div className='flex justify-between text-secondary-300'>
             <Text
@@ -104,7 +100,7 @@ export const MyTarget = () => {
             />
           </div>
         </div>
-      </CardFooter>
+      </div>
     </Card>
   );
 };
