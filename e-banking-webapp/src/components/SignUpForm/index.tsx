@@ -117,7 +117,7 @@ export const SignUpForm = () => {
     <WizardForm.Root
       schema={SignUpSchema}
       form={form}
-      className='relative bottom-0 mx-auto h-full'
+      className='relative bottom-0 mx-auto h-full px-10'
     >
       {steps.map(
         ({ name, formContent, textHeading, textFooter, subheading }) => (

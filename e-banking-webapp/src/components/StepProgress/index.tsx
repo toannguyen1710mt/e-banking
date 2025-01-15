@@ -13,7 +13,7 @@ export const StepProgress: React.FC<StepProgressProps> = ({
   activeStep,
   onPrevStep,
 }) => (
-  <div className='absolute bottom-0 flex w-full items-center justify-between gap-2'>
+  <div className='absolute -left-10 bottom-0 flex w-full items-center justify-between gap-2'>
     {Array.from({ length: steps }).map((_, index) => {
       const handleClick = (e: React.FormEvent) => {
         if (index < activeStep && activeStep !== steps - 1) {

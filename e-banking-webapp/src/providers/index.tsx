@@ -11,8 +11,14 @@ import { Toast } from '@/components';
 
 // Contexts
 import { ToastProvider } from '@/context';
+import { UserProvider } from '@/context/useUserContext';
 
-const Providers = ({ children }: React.PropsWithChildren) => {
+interface IProvidersProps {
+  children: React.ReactNode;
+  avatar: string;
+}
+
+const Providers = ({ children, avatar }: IProvidersProps) => {
   return (
     <NextUIProvider>
       <ThemeProvider
@@ -21,10 +27,12 @@ const Providers = ({ children }: React.PropsWithChildren) => {
         attribute='class'
         themes={[THEMES.LIGHT, THEMES.DARK]}
       >
-        <ToastProvider>
-          {children}
-          <Toast />
-        </ToastProvider>
+        <UserProvider avatar={avatar}>
+          <ToastProvider>
+            {children}
+            <Toast />
+          </ToastProvider>
+        </UserProvider>
       </ThemeProvider>
     </NextUIProvider>
   );

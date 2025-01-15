@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import RootLayout from '../layout';
 
 jest.mock('@/providers', () => ({
@@ -12,6 +12,6 @@ describe('RootLayout', () => {
   it('renders children', () => {
     const children = <div>Hello World!</div>;
     const { getByText } = render(<RootLayout>{children}</RootLayout>);
-    expect(getByText('Hello World!')).toBeInTheDocument();
+    waitFor(() => expect(getByText('Hello World!')).toBeInTheDocument());
   });
 });

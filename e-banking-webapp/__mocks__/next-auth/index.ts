@@ -1,3 +1,5 @@
+import { NextRequest } from 'next/server';
+
 export class AuthError extends Error {
   type: string;
   constructor(type: string) {
@@ -7,13 +9,13 @@ export class AuthError extends Error {
 }
 
 const NextAuth = () => ({
-  auth: jest.fn(),
-  signIn: jest.fn(),
-  signOut: jest.fn(),
   handlers: {
-    GET: jest.fn(),
-    POST: jest.fn(),
+    GET: (_: NextRequest) => Promise<Response>,
+    POST: (_: NextRequest) => Promise<Response>,
   },
+  signIn: async () => {},
+  signOut: async () => {},
+  auth: async () => {},
   AuthError: AuthError,
 });
 
