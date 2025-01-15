@@ -1,8 +1,8 @@
 'use client';
 
 // Libs
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
-import { getLocalTimeZone, today } from '@internationalized/date';
+import { Card, CardBody, CardHeader, DateValue } from '@nextui-org/react';
+import { useState } from 'react';
 
 // Component
 import {
@@ -38,29 +38,42 @@ export const DUE_TILE = [
   },
 ];
 
-export const MyCalender = () => (
-  <Card className='h-full w-full gap-6 p-4 sm:flex-row lg:flex-col' radius='sm'>
-    <CardHeader className='w-auto flex-col gap-6 p-0 sm:basis-1/2 lg:basis-0'>
-      <Text
-        as='span'
-        className='w-full text-left text-xs font-medium !text-black'
-      >
-        My Calendar
-      </Text>
-      <Calendar
-        value={today(getLocalTimeZone())}
-        classNames={{ cell: 'p-0' }}
-      />
-    </CardHeader>
-    <CardBody className='gap-5 p-0 sm:basis-1/2 lg:basis-0'>
-      <Text as='span' className='text-lg font-bold !text-black'>
-        Due This Month
-      </Text>
-      <div className='flex flex-col gap-4'>
-        {DUE_TILE.map(({ icon, title, createAt }, index) => (
-          <DueTile key={index} icon={icon} title={title} createAt={createAt} />
-        ))}
-      </div>
-    </CardBody>
-  </Card>
-);
+export const MyCalender = () => {
+  const [dateSelect, setDateSelect] = useState<DateValue | unknown>(null);
+  const changeDate = (date: DateValue) => {
+    setDateSelect(date);
+  };
+
+  return (
+    <Card className='h-full w-full py-[14px] pl-[14px] pr-6' radius='sm'>
+      <CardHeader className='flex-col gap-6'>
+        <Text
+          as='span'
+          className='w-full text-left text-xs font-medium !text-black'
+        >
+          My Calendar
+        </Text>
+        <Calendar
+          classNames={{ base: 'ml-[11px]' }}
+          value={dateSelect as DateValue}
+          onChange={changeDate}
+        />
+      </CardHeader>
+      <CardBody className='gap-5'>
+        <Text as='span' className='text-lg font-bold !text-black'>
+          Due This Month
+        </Text>
+        <div className='flex flex-col gap-4'>
+          {DUE_TILE.map(({ icon, title, createAt }, index) => (
+            <DueTile
+              key={index}
+              icon={icon}
+              title={title}
+              createAt={createAt}
+            />
+          ))}
+        </div>
+      </CardBody>
+    </Card>
+  );
+};
