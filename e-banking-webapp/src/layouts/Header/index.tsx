@@ -16,7 +16,7 @@ import { Session } from 'next-auth';
 import { redirect, usePathname } from 'next/navigation';
 
 // Constants
-import { ERROR_MESSAGES, IMAGES, NavbarItem, REGEX, ROUTES } from '@/constants';
+import { ERROR_MESSAGES, IMAGES, NavbarList, REGEX, ROUTES } from '@/constants';
 
 // Components
 import {
@@ -52,7 +52,7 @@ export const Header = ({ session }: IHeaderProps) => {
   } = session;
 
   const mobileMenuOptions = [
-    ...NavbarItem.map((item) => ({
+    ...NavbarList.map((item) => ({
       key: item.path,
       label: item.text,
     })),
@@ -145,7 +145,7 @@ export const Header = ({ session }: IHeaderProps) => {
           className='flex gap-[59px] font-normal text-transparentBlack max-[700px]:hidden'
           data-justify='center'
         >
-          <Navbar navbarItem={NavbarItem} />
+          <Navbar navbarItem={NavbarList} />
         </NavbarContent>
       </div>
       <NavbarContent data-justify='end'>

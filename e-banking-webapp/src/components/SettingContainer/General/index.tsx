@@ -11,7 +11,7 @@ interface GeneralProps {
 
 export const General = ({ user }: GeneralProps) => (
   <>
-    <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8'>
+    <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:pt-6'>
       <Text
         as='h4'
         variant={TEXT_VARIANT.DEFAULT}

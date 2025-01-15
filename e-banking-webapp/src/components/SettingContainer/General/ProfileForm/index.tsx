@@ -26,7 +26,7 @@ export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
   };
 
   return (
-    <div className='flex flex-col pr-[87px]'>
+    <div className='flex flex-col pr-8 lg:pr-[87px]'>
       <div className='mb-10'>
         <Text
           variant={TEXT_VARIANT.DEFAULT}
@@ -46,60 +46,56 @@ export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
         </div>
       </div>
 
-      <div className='mb-14 flex max-w-[1024px] flex-col gap-8'>
-        <div className='flex gap-[107px]'>
-          <Input
-            label='Username'
-            placeholder=' '
-            labelPlacement='outside'
-            classNames={{
-              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-              input: 'm-0 text-sm',
-            }}
-            value={username}
-            readOnly
-          />
+      <div className='mb-14 grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 lg:gap-x-[108px]'>
+        <Input
+          label='Username'
+          placeholder=' '
+          labelPlacement='outside'
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm',
+          }}
+          value={username}
+          readOnly
+        />
 
-          <Input
-            label='Phone Number'
-            labelPlacement='outside'
-            placeholder=' '
-            classNames={{
-              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-              input: 'm-0 text-sm font-normal',
-            }}
-            value={phone}
-            readOnly
-          />
-        </div>
+        <Input
+          label='Phone Number'
+          labelPlacement='outside'
+          placeholder=' '
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm font-normal',
+          }}
+          value={phone}
+          readOnly
+        />
 
-        <div className='flex gap-[107px]'>
-          <Input
-            label='Email'
-            labelPlacement='outside'
-            placeholder=' '
-            classNames={{
-              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-              input: 'm-0 text-sm',
-            }}
-            value={email}
-            readOnly
-          />
+        <Input
+          label='Email'
+          labelPlacement='outside'
+          placeholder=' '
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm',
+          }}
+          value={email}
+          readOnly
+        />
 
-          <Input
-            label='Address'
-            labelPlacement='outside'
-            aria-label='address'
-            placeholder='Address'
-            value={country}
-            type='text'
-            classNames={{
-              inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
-              input: 'm-0 text-sm',
-            }}
-            readOnly
-          />
-        </div>
+        <Input
+          label='Address'
+          labelPlacement='outside'
+          aria-label='address'
+          placeholder='Address'
+          value={country}
+          type='text'
+          classNames={{
+            inputWrapper: 'px-2.5 py-2 rounded-sm border-default',
+            input: 'm-0 text-sm',
+          }}
+          readOnly
+        />
       </div>
 
       <div className='mb-5 flex flex-col gap-2.5'>
@@ -116,7 +112,7 @@ export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
         </Text>
       </div>
 
-      <div className='flex max-w-[1024px] gap-[108px]'>
+      <div className='grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 max-[700px]:pb-5 lg:gap-x-[108px]'>
         <Input
           label='Paypal'
           labelPlacement='outside'
