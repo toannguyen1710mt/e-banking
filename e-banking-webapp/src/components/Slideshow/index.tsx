@@ -84,6 +84,7 @@ export const Slideshow = ({ onGetStarted }: SlideshowProps) => {
                 </Text>
                 <div className='flex items-start gap-6'>
                   <Button
+                    aria-label='Next'
                     onClick={handleNext}
                     size='default'
                     className='m-0 w-0 min-w-5 border-none bg-transparent p-0'
