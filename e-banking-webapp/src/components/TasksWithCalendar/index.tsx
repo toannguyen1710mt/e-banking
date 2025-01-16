@@ -38,7 +38,7 @@ export const DUE_TILE = [
   },
 ];
 
-export const MyCalender = () => {
+export const TasksWithCalendar = () => {
   const [dateSelect, setDateSelect] = useState<DateValue | unknown>(null);
 
   const changeDate = (date: DateValue) => {
