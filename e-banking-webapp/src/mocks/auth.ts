@@ -51,6 +51,53 @@ export const MOCK_DATA_USER: IUser = {
   publishedAt: '',
 };
 
+export const MOCK_DATA_USER_EMPTY_PROPS: IUser = {
+  accounts: [
+    {
+      documentId: '11',
+      accountNumber: '',
+      balance: 0,
+      currency: '$',
+      id: 36,
+      name: '',
+      type: '',
+    },
+    {
+      documentId: '12',
+      accountNumber: '',
+      balance: 0,
+      currency: '$',
+      id: 37,
+      name: '',
+      type: '',
+    },
+    {
+      documentId: '12',
+      accountNumber: '',
+      balance: 0,
+      currency: '$',
+      id: 38,
+      name: '',
+      type: '',
+    },
+  ],
+  avatar: 'https://i.ibb.co/SKHPQYq/avatar-default.webp',
+  country: 'UK',
+  email: 'thong+1@gmail.com',
+  id: 43,
+  phone: '123456789000',
+  postal: '226',
+  token: '123456',
+  username: 'thong',
+  documentId: '',
+  provider: '',
+  confirmed: false,
+  blocked: false,
+  createdAt: '',
+  updatedAt: '',
+  publishedAt: '',
+};
+
 export const MOCK_SESSION_DATA: Session = {
   user: {
     email: 'thong+1@gmail.com',
