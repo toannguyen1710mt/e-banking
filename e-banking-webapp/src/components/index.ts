@@ -27,7 +27,7 @@ export * from './MasterCard';
 export * from './CardOverview';
 export * from './MetricsCard';
 export * from './Skeletons';
-export * from './MyCalender';
+export * from './TasksWithCalendar';
 export * from './ContainerAnalytics';
 export * from './AddCreditCardModal';
 export * from './InformationCard';

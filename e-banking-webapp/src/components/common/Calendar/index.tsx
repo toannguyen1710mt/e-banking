@@ -65,8 +65,10 @@ export const Calendar = ({ classNames, ...rest }: CalendarProps) => {
         ),
         gridBodyRow: cn('justify-between px-1', gridBodyRow),
         cellButton: cn(
-          'text-2xs text-foreground-200',
-          'data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200 data-[selected=true]:border data-[selected=true]:border-secondary-300 data-[selected=true]:bg-background-300',
+          'text-2xs text-foreground-200 user-select: all',
+          'data-[hover=true]:!bg-secondary-300 data-[hover=true]:text-foreground-200',
+          'data-[selected=true]:!bg-secondary-300 data-[selected=true]:text-foreground-200',
+          'data-[today=true]:border data-[today=true]:border-secondary-300 data-[today=true]:bg-background-300',
           cellButton,
         ),
         pickerHighlight: cn('bg-red', pickerHighlight),
