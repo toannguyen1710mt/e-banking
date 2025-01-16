@@ -45,6 +45,7 @@ export const MyCards = ({
         return (
           <div
             key={index}
+            aria-label={`card-item-${index}`}
             className='hover:cursor-pointer'
             onClick={() => handleOnClick(index)}
           >
