@@ -15,10 +15,10 @@ import { MASTERCARD_CHART_MOCK } from '@/mocks';
 import { IAccount, ICardsPayloadByAccount } from '@/interfaces';
 
 // Services
-import { getAccountsByUserId, getTotalCardsByAccounts } from '@/services';
+import { getAccountsByUserId, getTotalCardsByUser } from '@/services';
 
 // Utils
-import { formatNumberWithCommas, formatQueryParamsFromAccounts } from '@/utils';
+import { formatNumberWithCommas } from '@/utils';
 
 // Component
 import {
@@ -57,10 +57,9 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
 
         if (result?.length) {
           setAccounts(result);
-          const queryString = formatQueryParamsFromAccounts(result);
 
           try {
-            const { totalCard } = await getTotalCardsByAccounts(queryString);
+            const totalCard = await getTotalCardsByUser(session.user.token);
 
             setCards(totalCard);
           } catch (_error) {
@@ -82,12 +81,8 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
     0,
   );
 
-  const {
-    account: { type } = {},
-    cardNumber,
-    holderName,
-    expireAt,
-  } = cards[currentCardIndex] || {};
+  const { accountType, cardNumber, holderName, expireAt } =
+    cards[currentCardIndex] || {};
 
   return (
     <>
@@ -133,7 +128,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
 
             <Suspense fallback={<CreditCardSkeleton />}>
               <CreditCard
-                variant={type?.toLowerCase() as VariantsCard}
+                variant={accountType?.toLowerCase() as VariantsCard}
                 cardNumber={cardNumber}
                 holderName={holderName}
                 expireDate={expireAt}
