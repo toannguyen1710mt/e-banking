@@ -1,5 +1,3 @@
-import { IAccount } from './account';
-
 export interface ICard {
   id: number;
   cardNumber: string;
@@ -7,10 +5,11 @@ export interface ICard {
   ccv: string;
   expireAt: string;
   account?: number;
+  createdAt?: string;
 }
 
 export interface ICardsPayloadByAccount extends Omit<ICard, 'account'> {
-  account?: IAccount;
+  accountType?: string;
 }
 
 export interface ICardPayloadData extends Omit<ICard, 'id'> {}

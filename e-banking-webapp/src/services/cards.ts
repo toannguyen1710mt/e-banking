@@ -2,7 +2,13 @@
 import { API_ENDPOINTS, TAGS } from '@/constants';
 
 // Interfaces
-import { ICard, ICardsPayloadByAccount, SuccessResponse } from '@/interfaces';
+import {
+  ICard,
+  ICardsPayloadByAccount,
+  IUser,
+  ResponseData,
+  SuccessResponse,
+} from '@/interfaces';
 
 // Services
 import { httpClient } from './http-client';
@@ -21,20 +27,45 @@ export const getListCardByAccountId = async (accountId: string) => {
   };
 };
 
-export const getTotalCardsByAccounts = async (query: string) => {
-  const { data: result, ...rest } = await httpClient.get<
-    SuccessResponse<ICardsPayloadByAccount[]>
-  >(
-    `${query ? `${API_ENDPOINTS.CARDS}?populate=account&${query}&sort=createdAt:desc` : ''}`,
-    {
-      next: { tags: [TAGS.CARD] },
-    },
-  );
+/**
+ * Fetches the list all card by token of user.
+ * @param jwt - The token of the user.
+ * @returns A list all card.
+ */
+export const getTotalCardsByUser = async (
+  jwt: string,
+): Promise<ResponseData<ICardsPayloadByAccount[]>> => {
+  const requestEndpoint = `${API_ENDPOINTS.USERS}/me?populate[accounts][populate]=cards`;
 
-  return {
-    totalCard: result?.data || [],
-    ...rest,
-  };
+  const { data } = await httpClient.get<ResponseData<IUser>>(requestEndpoint, {
+    headers: {
+      Authorization: `Bearer ${jwt}`,
+    },
+  });
+
+  if (!data) {
+    return [];
+  }
+
+  const accounts = data?.accounts || [];
+
+  if (accounts.length) {
+    const sortedCards = accounts
+      .flatMap((account: { cards: ICard[]; type: string }) =>
+        account.cards.map((card) => ({
+          ...card,
+          accountType: account.type,
+        })),
+      )
+      .sort(
+        (a: { createdAt: string }, b: { createdAt: string }) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      );
+
+    return sortedCards;
+  }
+
+  return [];
 };
 
 /**
@@ -60,10 +91,8 @@ export const getMainCardByUserId = async (userId: number) => {
 
   if (data?.data?.cards) {
     const result = data.data.cards.sort(
-      (
-        a: { createdAt: string | number | Date },
-        b: { createdAt: string | number | Date },
-      ) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+      (a: { createdAt: string }, b: { createdAt: string }) =>
+        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
     );
 
     return result[0];

@@ -1,5 +1,5 @@
 // Interfaces
-import { IAccount, QueryParams } from '@/interfaces';
+import { QueryParams } from '@/interfaces';
 
 /**
  * Handlers to process specific keys in query parameters.
@@ -99,16 +99,3 @@ export const formatQueryParams = (queryParams?: QueryParams): string => {
 
   return queryString.toString();
 };
-
-/**
- * Formats account ids into a query string suitable for Strapi v4.
- * @param accounts - An array of Ids to format.
- * @returns - A formatted query string.
- */
-export const formatQueryParamsFromAccounts = (accounts: IAccount[]) =>
-  accounts
-    ?.map(
-      (account: { documentId: string }) =>
-        `[filters][account][documentId][$containsi]=${account.documentId}`,
-    )
-    .join('&');
