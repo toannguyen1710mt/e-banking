@@ -15,7 +15,7 @@ import {
   WifiRouterIcon,
 } from '@/components';
 
-export const DUE_TILE = [
+export const DUE_TILES = [
   {
     icon: <HomeIcon />,
     title: 'Pay Rent',
@@ -65,7 +65,7 @@ export const TasksWithCalendar = () => {
           Due This Month
         </Text>
         <div className='flex flex-col gap-4'>
-          {DUE_TILE.map(({ icon, title, createAt }, index) => (
+          {DUE_TILES.map(({ icon, title, createAt }, index) => (
             <DueTile
               key={index}
               icon={icon}
