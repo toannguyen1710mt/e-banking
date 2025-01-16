@@ -94,6 +94,7 @@ export const MonthYearPicker = ({
       <Input
         startContent={
           <Button
+            aria-label='Toggle Date Month Picker'
             color='outline'
             className='inline-block w-4 min-w-4 border-none p-0 text-current'
             onClick={toggleDropdown}
