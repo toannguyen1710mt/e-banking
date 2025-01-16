@@ -1,5 +1,5 @@
 // Libs
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 // Components
@@ -26,5 +26,16 @@ describe('Modal component', () => {
   it('should render the modal content when isOpen is true', () => {
     renderModal(true);
     expect(screen.getByText('Modal Content')).toBeInTheDocument();
+  });
+
+  it('should call onClose when close button is clicked', () => {
+    const mockOnClose = jest.fn();
+
+    renderModal(true, <div>Modal Content</div>, mockOnClose);
+
+    const closeButton = screen.getByLabelText('Close');
+    fireEvent.click(closeButton);
+
+    expect(mockOnClose).toHaveBeenCalled();
   });
 });
