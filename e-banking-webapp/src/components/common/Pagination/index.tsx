@@ -10,7 +10,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 // Utils
 import { updateSearchParams } from '@/utils';
 
-export const CustomPagination = extendVariants(PaginationNextUI, {
+const CustomPagination = extendVariants(PaginationNextUI, {
   variants: {
     styles: {
       primary: {
