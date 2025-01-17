@@ -15,7 +15,7 @@ import {
   WifiRouterIcon,
 } from '@/components';
 
-export const DUE_TILES = [
+const DUE_TILES = [
   {
     icon: <HomeIcon />,
     title: 'Pay Rent',
