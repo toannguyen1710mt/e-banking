@@ -91,194 +91,199 @@ exports[`Header component matches the snapshot 1`] = `
           class="flex gap-4 h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0"
           data-justify="end"
         >
-          <button
-            aria-label="search icon"
-            class="cursor-not-allowed"
-            disabled=""
+          <li
+            class="flex justify-end gap-4"
           >
-            <svg
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g
-                filter="url(#filter0_i_1_958)"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="11.4"
-                  stroke="#F5F5F5"
-                  stroke-width="1.2"
-                />
-              </g>
-              <path
-                d="M16.8552 16.145L15.0002 14.305C15.7202 13.4072 16.0689 12.2676 15.9746 11.1206C15.8803 9.9736 15.35 8.90634 14.493 8.13827C13.6359 7.37021 12.5171 6.95971 11.3667 6.99119C10.2162 7.02267 9.12156 7.49373 8.30777 8.30752C7.49398 9.12131 7.02291 10.216 6.99143 11.3664C6.95995 12.5169 7.37045 13.6356 8.13852 14.4927C8.90659 15.3498 9.97385 15.88 11.1208 15.9744C12.2678 16.0687 13.4074 15.72 14.3052 15L16.1452 16.84C16.1917 16.8868 16.247 16.924 16.3079 16.9494C16.3688 16.9748 16.4342 16.9879 16.5002 16.9879C16.5662 16.9879 16.6316 16.9748 16.6925 16.9494C16.7534 16.924 16.8087 16.8868 16.8552 16.84C16.9453 16.7467 16.9957 16.6221 16.9957 16.4925C16.9957 16.3628 16.9453 16.2382 16.8552 16.145ZM11.5002 15C10.808 15 10.1313 14.7947 9.5557 14.4101C8.98013 14.0255 8.53152 13.4789 8.26662 12.8393C8.00171 12.1998 7.9324 11.4961 8.06745 10.8171C8.2025 10.1382 8.53584 9.51456 9.02532 9.02508C9.51481 8.53559 10.1384 8.20225 10.8174 8.0672C11.4963 7.93216 12.2 8.00147 12.8396 8.26637C13.4791 8.53128 14.0258 8.97988 14.4103 9.55546C14.7949 10.131 15.0002 10.8077 15.0002 11.5C15.0002 12.4282 14.6314 13.3184 13.9751 13.9748C13.3187 14.6312 12.4285 15 11.5002 15Z"
-                fill="#808080"
-              />
-              <defs>
-                <filter
-                  color-interpolation-filters="sRGB"
-                  filterUnits="userSpaceOnUse"
-                  height="24"
-                  id="filter0_i_1_958"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <feflood
-                    flood-opacity="0"
-                    result="BackgroundImageFix"
-                  />
-                  <feblend
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    mode="normal"
-                    result="shape"
-                  />
-                  <fecolormatrix
-                    in="SourceAlpha"
-                    result="hardAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  />
-                  <feoffset />
-                  <fegaussianblur
-                    stdDeviation="1"
-                  />
-                  <fecomposite
-                    in2="hardAlpha"
-                    k2="-1"
-                    k3="1"
-                    operator="arithmetic"
-                  />
-                  <fecolormatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
-                  />
-                  <feblend
-                    in2="shape"
-                    mode="normal"
-                    result="effect1_innerShadow_1_958"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </button>
-          <button
-            aria-label="notification icon"
-            class="cursor-not-allowed"
-            disabled=""
-          >
-            <svg
-              fill="none"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g
-                filter="url(#filter0_i_1_1143)"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="11.4"
-                  stroke="#F5F5F5"
-                  stroke-width="1.2"
-                />
-              </g>
-              <path
-                d="M15 10C15 9.20435 14.6839 8.44129 14.1213 7.87868C13.5587 7.31607 12.7956 7 12 7C11.2044 7 10.4413 7.31607 9.87868 7.87868C9.31607 8.44129 9 9.20435 9 10C9 13.5 7.5 14.5 7.5 14.5H16.5C16.5 14.5 15 13.5 15 10Z"
-                fill="#808080"
-              />
-              <path
-                d="M12.8648 16.5C12.7769 16.6515 12.6507 16.7773 12.4989 16.8648C12.3471 16.9522 12.175 16.9982 11.9998 16.9982C11.8246 16.9982 11.6525 16.9522 11.5007 16.8648C11.3488 16.7773 11.2227 16.6515 11.1348 16.5"
-                fill="#808080"
-              />
-              <defs>
-                <filter
-                  color-interpolation-filters="sRGB"
-                  filterUnits="userSpaceOnUse"
-                  height="24"
-                  id="filter0_i_1_1143"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <feflood
-                    flood-opacity="0"
-                    result="BackgroundImageFix"
-                  />
-                  <feblend
-                    in="SourceGraphic"
-                    in2="BackgroundImageFix"
-                    mode="normal"
-                    result="shape"
-                  />
-                  <fecolormatrix
-                    in="SourceAlpha"
-                    result="hardAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  />
-                  <feoffset />
-                  <fegaussianblur
-                    stdDeviation="1"
-                  />
-                  <fecomposite
-                    in2="hardAlpha"
-                    k2="-1"
-                    k3="1"
-                    operator="arithmetic"
-                  />
-                  <fecolormatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
-                  />
-                  <feblend
-                    in2="shape"
-                    mode="normal"
-                    result="effect1_innerShadow_1_1143"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </button>
-          <span
-            aria-expanded="false"
-            aria-haspopup="true"
-            class="flex relative justify-center items-center box-border overflow-hidden align-middle outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased text-primary-200 bg-background-500 border-1 data-[focus=true]:border-primary data-[focus=true]:border-1 cursor-pointer h-6 w-6 rounded-full"
-            data-slot="trigger"
-            id="react-aria-:r3:"
-            type="button"
-          >
-            <span
-              aria-label="avatar"
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
-              role="img"
+            <button
+              aria-label="search icon"
+              class="cursor-not-allowed"
+              disabled=""
             >
               <svg
-                aria-hidden="true"
                 fill="none"
-                height="80%"
-                role="presentation"
+                height="24"
                 viewBox="0 0 24 24"
-                width="80%"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
               >
+                <g
+                  filter="url(#filter0_i_1_958)"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="11.4"
+                    stroke="#F5F5F5"
+                    stroke-width="1.2"
+                  />
+                </g>
                 <path
-                  d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                  fill="currentColor"
+                  d="M16.8552 16.145L15.0002 14.305C15.7202 13.4072 16.0689 12.2676 15.9746 11.1206C15.8803 9.9736 15.35 8.90634 14.493 8.13827C13.6359 7.37021 12.5171 6.95971 11.3667 6.99119C10.2162 7.02267 9.12156 7.49373 8.30777 8.30752C7.49398 9.12131 7.02291 10.216 6.99143 11.3664C6.95995 12.5169 7.37045 13.6356 8.13852 14.4927C8.90659 15.3498 9.97385 15.88 11.1208 15.9744C12.2678 16.0687 13.4074 15.72 14.3052 15L16.1452 16.84C16.1917 16.8868 16.247 16.924 16.3079 16.9494C16.3688 16.9748 16.4342 16.9879 16.5002 16.9879C16.5662 16.9879 16.6316 16.9748 16.6925 16.9494C16.7534 16.924 16.8087 16.8868 16.8552 16.84C16.9453 16.7467 16.9957 16.6221 16.9957 16.4925C16.9957 16.3628 16.9453 16.2382 16.8552 16.145ZM11.5002 15C10.808 15 10.1313 14.7947 9.5557 14.4101C8.98013 14.0255 8.53152 13.4789 8.26662 12.8393C8.00171 12.1998 7.9324 11.4961 8.06745 10.8171C8.2025 10.1382 8.53584 9.51456 9.02532 9.02508C9.51481 8.53559 10.1384 8.20225 10.8174 8.0672C11.4963 7.93216 12.2 8.00147 12.8396 8.26637C13.4791 8.53128 14.0258 8.97988 14.4103 9.55546C14.7949 10.131 15.0002 10.8077 15.0002 11.5C15.0002 12.4282 14.6314 13.3184 13.9751 13.9748C13.3187 14.6312 12.4285 15 11.5002 15Z"
+                  fill="#808080"
                 />
-                <path
-                  d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
-                  fill="currentColor"
-                />
+                <defs>
+                  <filter
+                    color-interpolation-filters="sRGB"
+                    filterUnits="userSpaceOnUse"
+                    height="24"
+                    id="filter0_i_1_958"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <feflood
+                      flood-opacity="0"
+                      result="BackgroundImageFix"
+                    />
+                    <feblend
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      mode="normal"
+                      result="shape"
+                    />
+                    <fecolormatrix
+                      in="SourceAlpha"
+                      result="hardAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    />
+                    <feoffset />
+                    <fegaussianblur
+                      stdDeviation="1"
+                    />
+                    <fecomposite
+                      in2="hardAlpha"
+                      k2="-1"
+                      k3="1"
+                      operator="arithmetic"
+                    />
+                    <fecolormatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
+                    />
+                    <feblend
+                      in2="shape"
+                      mode="normal"
+                      result="effect1_innerShadow_1_958"
+                    />
+                  </filter>
+                </defs>
               </svg>
+            </button>
+            <button
+              aria-label="notification icon"
+              class="cursor-not-allowed"
+              disabled=""
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  filter="url(#filter0_i_1_1143)"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="11.4"
+                    stroke="#F5F5F5"
+                    stroke-width="1.2"
+                  />
+                </g>
+                <path
+                  d="M15 10C15 9.20435 14.6839 8.44129 14.1213 7.87868C13.5587 7.31607 12.7956 7 12 7C11.2044 7 10.4413 7.31607 9.87868 7.87868C9.31607 8.44129 9 9.20435 9 10C9 13.5 7.5 14.5 7.5 14.5H16.5C16.5 14.5 15 13.5 15 10Z"
+                  fill="#808080"
+                />
+                <path
+                  d="M12.8648 16.5C12.7769 16.6515 12.6507 16.7773 12.4989 16.8648C12.3471 16.9522 12.175 16.9982 11.9998 16.9982C11.8246 16.9982 11.6525 16.9522 11.5007 16.8648C11.3488 16.7773 11.2227 16.6515 11.1348 16.5"
+                  fill="#808080"
+                />
+                <defs>
+                  <filter
+                    color-interpolation-filters="sRGB"
+                    filterUnits="userSpaceOnUse"
+                    height="24"
+                    id="filter0_i_1_1143"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <feflood
+                      flood-opacity="0"
+                      result="BackgroundImageFix"
+                    />
+                    <feblend
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      mode="normal"
+                      result="shape"
+                    />
+                    <fecolormatrix
+                      in="SourceAlpha"
+                      result="hardAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    />
+                    <feoffset />
+                    <fegaussianblur
+                      stdDeviation="1"
+                    />
+                    <fecomposite
+                      in2="hardAlpha"
+                      k2="-1"
+                      k3="1"
+                      operator="arithmetic"
+                    />
+                    <fecolormatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
+                    />
+                    <feblend
+                      in2="shape"
+                      mode="normal"
+                      result="effect1_innerShadow_1_1143"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </button>
+            <span
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="flex relative justify-center items-center box-border overflow-hidden align-middle outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased text-primary-200 bg-background-500 border-1 data-[focus=true]:border-primary data-[focus=true]:border-1 cursor-pointer h-6 w-6 rounded-full"
+              data-slot="trigger"
+              id="react-aria-:r3:"
+              role="button"
+              type="button"
+            >
+              <span
+                aria-label="avatar"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-inherit w-full h-full"
+                role="img"
+              >
+                <svg
+                  aria-hidden="true"
+                  fill="none"
+                  height="80%"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                  width="80%"
+                >
+                  <path
+                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M17.0809 14.1489C14.2909 12.2889 9.74094 12.2889 6.93094 14.1489C5.66094 14.9989 4.96094 16.1489 4.96094 17.3789C4.96094 18.6089 5.66094 19.7489 6.92094 20.5889C8.32094 21.5289 10.1609 21.9989 12.0009 21.9989C13.8409 21.9989 15.6809 21.5289 17.0809 20.5889C18.3409 19.7389 19.0409 18.5989 19.0409 17.3589C19.0309 16.1289 18.3409 14.9889 17.0809 14.1489Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </span>
-          </span>
+          </li>
         </ul>
       </header>
     </nav>
