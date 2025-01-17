@@ -43,10 +43,12 @@ export const Toast = () => {
 
               return (
                 <Card
+                  isPressable={true}
                   role='alert'
                   key={id}
+                  aria-label={`toast-${type}-${id}`}
                   className={`w-64 cursor-pointer flex-row items-center gap-4 rounded-md px-4 py-3 shadow-md ${TOAST_BACKGROUNDS[type ?? 'success']}`}
-                  onClick={handleRemoveToast}
+                  onPress={handleRemoveToast}
                 >
                   <Text className='text-sm !text-foreground-200'>
                     {message}

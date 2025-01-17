@@ -4,10 +4,10 @@
 import { createContext, useState, ReactNode, useContext } from 'react';
 
 // Interfaces
-import { ToastType, Toast, ToastPosition } from '@/interfaces';
+import { ToastType, IToast, ToastPosition } from '@/interfaces';
 
 type ToastContextType = {
-  toasts: Toast[];
+  toasts: IToast[];
   showToast: (
     message: string,
     type?: ToastType,
@@ -20,7 +20,7 @@ type ToastContextType = {
 const ToastContext = createContext<ToastContextType | undefined>(undefined);
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [toasts, setToasts] = useState<IToast[]>([]);
 
   const removeToast = (id: number) => {
     setToasts(toasts.filter((toast) => toast.id !== id));
