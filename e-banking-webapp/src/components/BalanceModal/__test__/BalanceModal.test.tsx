@@ -1,3 +1,14 @@
+import { fireEvent, render, waitFor } from '@testing-library/react';
+
+// Services
+import * as services from '@/services';
+
+// Mocks
+import { MOCK_DATA_USER, MOCK_LIST_CARD, MOCK_SESSION_DATA } from '@/mocks';
+
+// Component
+import BalanceModal from '..';
+
 jest.mock('react-apexcharts', () => {
   return {
     __esModule: true,
@@ -5,20 +16,77 @@ jest.mock('react-apexcharts', () => {
   };
 });
 
-jest.mock('@/constants/rules', () => ({
-  createStepSchema: jest.fn(),
+jest.mock('@/services', () => ({
+  getAccountsByUserId: jest.fn(),
+  getListCardByAccountId: jest.fn(),
 }));
 
 describe('BalanceModal component', () => {
+  beforeEach(() => {
+    (services.getAccountsByUserId as jest.Mock).mockResolvedValue(
+      MOCK_DATA_USER.accounts,
+    );
+
+    jest
+      .spyOn(services, 'getListCardByAccountId')
+      .mockResolvedValue(MOCK_LIST_CARD[0]);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should render snapshot correctly', () => {
-    // expect(
-    //   render(
-    //     <BalanceModal
-    //       user={MOCK_DATA_USER}
-    //       onClose={jest.fn()}
-    //       isOpen={true}
-    //     />,
-    //   ),
-    // ).toMatchSnapshot();
+    expect(
+      render(
+        <BalanceModal
+          session={MOCK_SESSION_DATA}
+          onClose={jest.fn()}
+          isOpen={true}
+        />,
+      ),
+    ).toMatchSnapshot();
+  });
+
+  it('Should render snapshot when is open false', () => {
+    const { asFragment } = render(
+      <BalanceModal session={MOCK_SESSION_DATA} onClose={jest.fn()} />,
+    );
+
+    expect(asFragment).toMatchSnapshot();
+  });
+
+  it('Should handle select card.', async () => {
+    const { getByLabelText } = render(
+      <BalanceModal
+        session={MOCK_SESSION_DATA}
+        onClose={jest.fn()}
+        isOpen={true}
+      />,
+    );
+
+    await waitFor(async () => {
+      fireEvent.click(getByLabelText('card-item-1'));
+    });
+
+    expect(getByLabelText('card-item-1')).toBeInTheDocument();
+  });
+
+  it('Should handle close modal.', async () => {
+    const mockOnClose = jest.fn();
+
+    const { getByLabelText } = render(
+      <BalanceModal
+        session={MOCK_SESSION_DATA}
+        onClose={mockOnClose}
+        isOpen={true}
+      />,
+    );
+
+    await waitFor(async () => {
+      fireEvent.click(getByLabelText('Close'));
+    });
+
+    expect(mockOnClose).toHaveBeenCalled();
   });
 });
