@@ -20,6 +20,10 @@ describe('TasksWithCalendar component', () => {
     jest.spyOn(global.Date, 'now').mockImplementation(() => mockDate.getTime());
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   test('should match snapshot for TasksWithCalendar', () => {
     const { container } = render(<TasksWithCalendar />);
     expect(container).toMatchSnapshot();
