@@ -97,6 +97,7 @@ export const MyTarget = () => {
               showValueLabel={true}
               strokeWidth={3}
               value={percentage}
+              aria-label={'progressbar'}
             />
           </div>
         </div>

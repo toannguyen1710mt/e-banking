@@ -28,7 +28,7 @@ export const MainContent = () => (
   <div className='space-y-4'>
     {/* Header */}
     <div className='flex items-center justify-between'>
-      <Text variant={TEXT_VARIANT.DEFAULT} className='font-semibold'>
+      <Text as='h1' variant={TEXT_VARIANT.DEFAULT} className='font-semibold'>
         My Wallet
       </Text>
       <MenuDropdown

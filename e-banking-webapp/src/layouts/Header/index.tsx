@@ -151,27 +151,33 @@ export const Header = ({ session }: IHeaderProps) => {
         </NavbarContent>
       </div>
       <NavbarContent data-justify='end'>
-        <button
-          aria-label='search icon'
-          disabled={true}
-          className='cursor-not-allowed'
-        >
-          <SearchIcon />
-        </button>
-        <button
-          aria-label='notification icon'
-          disabled={true}
-          className='cursor-not-allowed'
-        >
-          <NotificationIcon />
-        </button>
-        <MenuDropdown
-          customTriggerElement={
-            <Avatar src={avatar} className='h-6 w-6 rounded-full' />
-          }
-          options={dropDownMenuOptions}
-          isDivided={true}
-        />
+        <li className='flex justify-end gap-4'>
+          <button
+            aria-label='search icon'
+            disabled={true}
+            className='cursor-not-allowed'
+          >
+            <SearchIcon />
+          </button>
+          <button
+            aria-label='notification icon'
+            disabled={true}
+            className='cursor-not-allowed'
+          >
+            <NotificationIcon />
+          </button>
+          <MenuDropdown
+            customTriggerElement={
+              <Avatar
+                role={'button'}
+                src={avatar}
+                className='h-6 w-6 rounded-full'
+              />
+            }
+            options={dropDownMenuOptions}
+            isDivided={true}
+          />
+        </li>
       </NavbarContent>
     </NavbarNextUI>
   );
