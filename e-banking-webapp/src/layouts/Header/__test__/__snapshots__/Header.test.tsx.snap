@@ -43,7 +43,6 @@ exports[`Header component matches the snapshot 1`] = `
                 data-nimg="1"
                 decoding="async"
                 height="36"
-                loading="lazy"
                 src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
                 srcset="/_next/image?url=%2Fimg.jpg&w=128&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
                 style="color: transparent;"
