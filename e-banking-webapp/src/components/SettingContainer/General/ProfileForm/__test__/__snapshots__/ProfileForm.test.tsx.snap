@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProfileForm renders matching snapshot 1`] = `
+exports[`ProfileForm component renders matching snapshot 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -21,6 +21,7 @@ exports[`ProfileForm renders matching snapshot 1`] = `
           >
             <div>
               <input
+                aria-label="Upload profile avatar"
                 data-testid="upload-image"
                 type="file"
               />
@@ -356,6 +357,7 @@ exports[`ProfileForm renders matching snapshot 1`] = `
         >
           <div>
             <input
+              aria-label="Upload profile avatar"
               data-testid="upload-image"
               type="file"
             />
