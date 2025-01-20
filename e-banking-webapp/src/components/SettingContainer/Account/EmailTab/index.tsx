@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';
 import { Checkbox } from '@nextui-org/react';
 
@@ -8,7 +8,7 @@ import { Checkbox } from '@nextui-org/react';
 import { Preferences, TEXT_VARIANT } from '@/interfaces';
 
 // Constants
-import { PREFERENCES } from '@/constants';
+import { MESSAGE, PREFERENCES } from '@/constants';
 
 // Components
 import { Button, Text } from '@/components/common';
@@ -22,26 +22,28 @@ interface EmailTabProps {
   promotions?: boolean;
   eventsNearMe?: boolean;
   onSubmit: (data: Preferences) => void;
+  onUnsavedChanges: (hasUnsavedChanges: boolean) => void;
 }
 
 export const EmailTab = ({
-  announcements,
-  updates,
-  feedbacksAndSurvey,
-  events,
-  generalNotification,
-  promotions,
-  eventsNearMe,
+  announcements = false,
+  updates = false,
+  feedbacksAndSurvey = false,
+  events = false,
+  generalNotification = false,
+  promotions = false,
+  eventsNearMe = false,
   onSubmit,
+  onUnsavedChanges,
 }: EmailTabProps) => {
   const defaultValues = {
-    announcements: announcements || false,
-    updates: updates || false,
-    feedbacksAndSurvey: feedbacksAndSurvey || false,
-    events: events || false,
-    generalNotification: generalNotification || false,
-    promotions: promotions || false,
-    eventsNearMe: eventsNearMe || false,
+    announcements,
+    updates,
+    feedbacksAndSurvey,
+    events,
+    generalNotification,
+    promotions,
+    eventsNearMe,
   };
 
   const {
@@ -66,6 +68,41 @@ export const EmailTab = ({
       ),
     [defaultValues, watchedValues],
   );
+
+  useEffect(() => {
+    onUnsavedChanges?.(hasChanges);
+  }, [hasChanges, onUnsavedChanges]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      if (hasChanges) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+        event.returnValue = confirmationMessage;
+        return confirmationMessage;
+      }
+    };
+
+    const handleLinkClick = (event: MouseEvent) => {
+      if (hasChanges) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+        if (!window.confirm(confirmationMessage)) {
+          event.preventDefault();
+        }
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', handleLinkClick);
+    });
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      document.querySelectorAll('a').forEach((link) => {
+        link.removeEventListener('click', handleLinkClick);
+      });
+    };
+  }, [hasChanges]);
 
   const isDisabled = !hasChanges || isSubmitting;
 

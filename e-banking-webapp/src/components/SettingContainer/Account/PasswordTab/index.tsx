@@ -58,36 +58,27 @@ export const PasswordTab = ({
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       if (isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-
         event.returnValue = confirmationMessage;
-
         return confirmationMessage;
       }
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [isDirty]);
-
-  useEffect(() => {
     const handleLinkClick = (event: MouseEvent) => {
       if (isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-
         if (!window.confirm(confirmationMessage)) {
           event.preventDefault();
         }
       }
     };
 
+    window.addEventListener('beforeunload', handleBeforeUnload);
     document.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', handleLinkClick);
     });
 
     return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
       document.querySelectorAll('a').forEach((link) => {
         link.removeEventListener('click', handleLinkClick);
       });
