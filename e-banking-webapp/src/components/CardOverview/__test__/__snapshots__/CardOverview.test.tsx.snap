@@ -10,10 +10,10 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
       class="relative w-full flex-auto place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased flex flex-col justify-between gap-6 p-0 sm:flex-row"
     >
       <div
-        class="flex w-full flex-col gap-4 px-4 py-2"
+        class="flex w-full max-w-full flex-col gap-4 px-4 py-2 md:max-w-[325px]"
       >
         <div
-          class="flex max-w-[290px] items-center justify-between"
+          class="flex items-center justify-between"
         >
           <span
             class="text-primary-200 text-sm font-semibold text-navyBlue"
