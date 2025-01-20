@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { Controller, useForm, useWatch } from 'react-hook-form';
 import { Checkbox } from '@nextui-org/react';
 
@@ -8,7 +8,7 @@ import { Checkbox } from '@nextui-org/react';
 import { Preferences, TEXT_VARIANT } from '@/interfaces';
 
 // Constants
-import { PREFERENCES } from '@/constants';
+import { MESSAGE, PREFERENCES } from '@/constants';
 
 // Components
 import { Button, Text } from '@/components/common';
@@ -22,6 +22,7 @@ interface EmailTabProps {
   promotions?: boolean;
   eventsNearMe?: boolean;
   onSubmit: (data: Preferences) => void;
+  onUnsavedChanges: (hasUnsavedChanges: boolean) => void;
 }
 
 export const EmailTab = ({
@@ -33,6 +34,7 @@ export const EmailTab = ({
   promotions,
   eventsNearMe,
   onSubmit,
+  onUnsavedChanges,
 }: EmailTabProps) => {
   const defaultValues = {
     announcements: announcements || false,
@@ -66,6 +68,50 @@ export const EmailTab = ({
       ),
     [defaultValues, watchedValues],
   );
+
+  useEffect(() => {
+    onUnsavedChanges?.(hasChanges);
+  }, [hasChanges, onUnsavedChanges]);
+
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      if (hasChanges) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
+        event.returnValue = confirmationMessage;
+
+        return confirmationMessage;
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [hasChanges]);
+
+  useEffect(() => {
+    const handleLinkClick = (event: MouseEvent) => {
+      if (hasChanges) {
+        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
+        if (!window.confirm(confirmationMessage)) {
+          event.preventDefault();
+        }
+      }
+    };
+
+    document.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', handleLinkClick);
+    });
+
+    return () => {
+      document.querySelectorAll('a').forEach((link) => {
+        link.removeEventListener('click', handleLinkClick);
+      });
+    };
+  }, [hasChanges]);
 
   const isDisabled = !hasChanges || isSubmitting;
 

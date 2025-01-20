@@ -129,7 +129,11 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
       key: 'email',
       title: 'Email Settings',
       content: (
-        <EmailTab {...preferences} onSubmit={handleUpdateEmailSettings} />
+        <EmailTab
+          {...preferences}
+          onSubmit={handleUpdateEmailSettings}
+          onUnsavedChanges={(hasChanges) => setUnsavedChanges(hasChanges)}
+        />
       ),
     },
     {
