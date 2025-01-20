@@ -140,6 +140,7 @@ export const Header = ({ session }: IHeaderProps) => {
               alt='Logo EBanking'
               width={104}
               height={36}
+              priority
             />
           </Link>
         </NavbarBrand>
