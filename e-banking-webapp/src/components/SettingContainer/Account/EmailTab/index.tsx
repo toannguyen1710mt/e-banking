@@ -71,47 +71,36 @@ export const EmailTab = ({
 
   useEffect(() => {
     onUnsavedChanges?.(hasChanges);
-  }, [hasChanges, onUnsavedChanges]);
 
-  useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       if (hasChanges) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-
         event.returnValue = confirmationMessage;
-
         return confirmationMessage;
       }
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [hasChanges]);
-
-  useEffect(() => {
     const handleLinkClick = (event: MouseEvent) => {
       if (hasChanges) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-
         if (!window.confirm(confirmationMessage)) {
           event.preventDefault();
         }
       }
     };
 
+    window.addEventListener('beforeunload', handleBeforeUnload);
     document.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', handleLinkClick);
     });
 
     return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
       document.querySelectorAll('a').forEach((link) => {
         link.removeEventListener('click', handleLinkClick);
       });
     };
-  }, [hasChanges]);
+  }, [hasChanges, onUnsavedChanges]);
 
   const isDisabled = !hasChanges || isSubmitting;
 
