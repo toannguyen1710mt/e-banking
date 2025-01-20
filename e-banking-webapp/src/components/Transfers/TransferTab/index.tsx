@@ -19,7 +19,7 @@ interface ITransferTab extends TabsProps {
 }
 
 export const TransferTab = ({ TransferTabs, ...tabProps }: ITransferTab) => (
-  <div className='flex h-full w-full flex-col rounded-xl bg-lightGraySolid'>
+  <div className='flex h-full w-full flex-col rounded-xl bg-lightGraySolid [&>div]:flex-col [&>div]:lg:flex-row'>
     <TabsCustom
       aria-label='Options'
       placement='start'
@@ -37,7 +37,7 @@ export const TransferTab = ({ TransferTabs, ...tabProps }: ITransferTab) => (
               value={keyTab}
               className='h-full w-full'
               title={
-                <div className='flex items-center gap-4 px-8 py-2'>
+                <div className='flex items-center gap-4 py-2 lg:px-8'>
                   {icon}
                   <div className='flex flex-col text-left'>
                     <span className='text-sm font-medium'>{title}</span>

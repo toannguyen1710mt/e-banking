@@ -31,7 +31,7 @@ export const MyCards = ({
   };
 
   return (
-    <div className='flex gap-[9px]'>
+    <div className='flex flex-wrap gap-4'>
       {accounts?.map(({ type = '', accountNumber = '' }, index) => {
         const textOpacity =
           selectedIndex === index ? 'opacity-100' : 'opacity-50';

@@ -42,9 +42,11 @@ const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      size='4xl'
       placement='center'
-      classNames={{ base: 'p-0 rounded-xl', closeButton: 'z-50' }}
+      classNames={{
+        base: 'max-w-xs lg:max-w-4xl p-0 rounded-xl',
+        closeButton: 'z-50',
+      }}
     >
       <div className='absolute left-4 top-4 flex flex-col gap-4'>
         <Text as='h4' className='text-base font-medium text-primary-200'>
@@ -61,10 +63,10 @@ const TransferModal = ({ isOpen, onClose, session }: ITransferModalProps) => {
       <TransferTab
         TransferTabs={TRANSFER_TABS}
         classNames={{
-          base: 'px-4 py-24 bg-lightGraySolid flex-1 rounded-xl min-w-[460px]',
+          base: 'px-4 py-24 pb-4 justify-center lg:justify-start lg:pb-24 bg-lightGraySolid flex-1 rounded-xl lg:min-w-[460px]',
           tabList: 'p-0',
           panel:
-            'relative py-8 pl-6 pr-8 min-h-[560px] bg-background-500 rounded-xl flex',
+            'relative py-8 pl-6 pr-8 min-h-[460px] lg:min-h-[560px] bg-background-500 rounded-xl flex',
         }}
       />
     </Modal>

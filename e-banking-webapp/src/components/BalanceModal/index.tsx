@@ -84,9 +84,11 @@ const BalanceModal = ({
     <Modal
       isOpen={isOpen}
       onClose={onClose}
-      size='4xl'
       placement='center'
-      classNames={{ base: 'p-0 rounded-xl' }}
+      classNames={{
+        base: 'max-w-xs lg:max-w-4xl p-0 rounded-xl',
+        closeButton: 'z-50',
+      }}
     >
       <div className='absolute left-4 top-4'>
         <Text as='h4' className='text-base font-medium text-primary-200'>
@@ -100,9 +102,9 @@ const BalanceModal = ({
           </Text>
         </Text>
       </div>
-      <div className='flex rounded-xl bg-lightGraySolid'>
+      <div className='flex flex-col rounded-xl bg-lightGraySolid lg:flex-row'>
         <div className='flex flex-1 flex-col rounded-xl bg-white pb-[48px] pl-3 pr-[23px] pt-[56px]'>
-          <div className='flex items-center justify-between'>
+          <div className='flex flex-col items-start justify-between gap-2'>
             <div className='flex flex-col gap-2'>
               <Text
                 as='h5'
@@ -145,10 +147,10 @@ const BalanceModal = ({
             </div>
           </div>
 
-          <div className='relative mx-auto mt-9 flex h-[200px] w-[200px] items-center justify-center'>
+          <div className='relative mx-auto mt-9 flex h-[100px] w-[100px] items-center justify-center'>
             <CircularProgress
               classNames={{
-                svg: 'w-[200px] h-[200px] drop-shadow-md',
+                svg: 'w-full h-full drop-shadow-md',
                 indicator: 'stroke-[#2A9D8F]',
                 track: 'stroke-[#2A9D8F]/10',
                 value: 'text-medium font-extrabold text-black',
@@ -176,7 +178,7 @@ const BalanceModal = ({
         </div>
 
         {/* My Cards and Expense Analysis */}
-        <div className='flex flex-1 flex-col pb-[28px] pl-4 pr-3 pt-[56px]'>
+        <div className='flex flex-1 flex-col py-8 pl-4 pr-3'>
           <Text as='h4' variant={TEXT_VARIANT.DEFAULT}>
             My Cards
           </Text>
