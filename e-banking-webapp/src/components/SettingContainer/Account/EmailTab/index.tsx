@@ -26,24 +26,24 @@ interface EmailTabProps {
 }
 
 export const EmailTab = ({
-  announcements,
-  updates,
-  feedbacksAndSurvey,
-  events,
-  generalNotification,
-  promotions,
-  eventsNearMe,
+  announcements = false,
+  updates = false,
+  feedbacksAndSurvey = false,
+  events = false,
+  generalNotification = false,
+  promotions = false,
+  eventsNearMe = false,
   onSubmit,
   onUnsavedChanges,
 }: EmailTabProps) => {
   const defaultValues = {
-    announcements: announcements || false,
-    updates: updates || false,
-    feedbacksAndSurvey: feedbacksAndSurvey || false,
-    events: events || false,
-    generalNotification: generalNotification || false,
-    promotions: promotions || false,
-    eventsNearMe: eventsNearMe || false,
+    announcements,
+    updates,
+    feedbacksAndSurvey,
+    events,
+    generalNotification,
+    promotions,
+    eventsNearMe,
   };
 
   const {
