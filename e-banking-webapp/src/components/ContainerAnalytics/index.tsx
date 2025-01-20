@@ -10,7 +10,7 @@ import { ERROR_MESSAGES } from '@/constants';
 import { IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Services
-import { getAccountsByUserId, getTotalTransactions } from '@/services';
+import { getAccountsByUserId, getTransactionsByUserId } from '@/services';
 
 // Utils
 import { getGreeting } from '@/utils';
@@ -34,7 +34,11 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const total = await getTotalTransactions();
+        const {
+          meta: {
+            pagination: { total },
+          },
+        } = await getTransactionsByUserId(session.user.id);
         const result = await getAccountsByUserId(session.user.id);
 
         setTotalTransfer(total);
