@@ -52,7 +52,9 @@ export const PasswordTab = ({
 
   useEffect(() => {
     onUnsavedChanges?.(isDirty);
+  }, [isDirty, onUnsavedChanges]);
 
+  useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       if (isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
@@ -81,7 +83,7 @@ export const PasswordTab = ({
         link.removeEventListener('click', handleLinkClick);
       });
     };
-  }, [isDirty, onUnsavedChanges]);
+  }, [isDirty]);
 
   const {
     isOpen: isOpenPassword,

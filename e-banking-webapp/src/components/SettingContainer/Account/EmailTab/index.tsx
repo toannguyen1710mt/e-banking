@@ -71,7 +71,9 @@ export const EmailTab = ({
 
   useEffect(() => {
     onUnsavedChanges?.(hasChanges);
+  }, [hasChanges, onUnsavedChanges]);
 
+  useEffect(() => {
     const handleBeforeUnload = (event: BeforeUnloadEvent) => {
       if (hasChanges) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
@@ -100,7 +102,7 @@ export const EmailTab = ({
         link.removeEventListener('click', handleLinkClick);
       });
     };
-  }, [hasChanges, onUnsavedChanges]);
+  }, [hasChanges]);
 
   const isDisabled = !hasChanges || isSubmitting;
 

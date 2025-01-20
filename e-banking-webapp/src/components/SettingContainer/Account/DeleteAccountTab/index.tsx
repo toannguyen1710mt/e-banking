@@ -40,6 +40,7 @@ export const DeleteAccountTab = () => (
           input: 'm-0 text-sm',
           label: 'font-normal text-xs !text-black opacity-100',
         }}
+        isDisabled
       />
 
       <Button variant='solid' color='danger' size='base' radius='xs' isDisabled>
