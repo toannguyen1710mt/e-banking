@@ -1,0 +1,728 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileForm renders matching snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col pr-8 lg:pr-[87px]"
+      >
+        <div
+          class="mb-10"
+        >
+          <p
+            class="text-foreground-100 text-sm font-medium mb-[11px]"
+          >
+            Profile Picture
+          </p>
+          <div
+            class="flex flex-col"
+          >
+            <div>
+              <input
+                data-testid="upload-image"
+                type="file"
+              />
+              <button
+                data-testid="remove-avatar-btn"
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-14 grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 lg:gap-x-[108px]"
+        >
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:r0:"
+                  id="react-aria-:r1:"
+                >
+                  Username
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Username"
+                    aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:r0:"
+                    placeholder=" "
+                    readonly=""
+                    type="text"
+                    value="testuser"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:r5:"
+                  id="react-aria-:r6:"
+                >
+                  Phone Number
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Phone Number"
+                    aria-labelledby="react-aria-:r5: react-aria-:r6:"
+                    class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:r5:"
+                    placeholder=" "
+                    readonly=""
+                    type="text"
+                    value="1234567890"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:ra:"
+                  id="react-aria-:rb:"
+                >
+                  Email
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Email"
+                    aria-labelledby="react-aria-:ra: react-aria-:rb:"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:ra:"
+                    placeholder=" "
+                    readonly=""
+                    type="text"
+                    value="test@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:rf:"
+                  id="react-aria-:rg:"
+                >
+                  Address
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="address"
+                    aria-labelledby="react-aria-:rf: react-aria-:rg:"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:rf:"
+                    placeholder="Address"
+                    readonly=""
+                    type="text"
+                    value="Test Country"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mb-5 flex flex-col gap-2.5"
+        >
+          <p
+            class="text-foreground-100 text-sm font-medium"
+          >
+            Socials
+          </p>
+          <p
+            class="text-foreground-300 text-xs font-normal"
+          >
+            Note: This username or email will be public
+          </p>
+        </div>
+        <div
+          class="grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 max-[700px]:pb-5 lg:gap-x-[108px]"
+        >
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:rk:"
+                  id="react-aria-:rl:"
+                >
+                  Paypal
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Paypal"
+                    aria-labelledby="react-aria-:rk: react-aria-:rl:"
+                    class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:rk:"
+                    placeholder=" "
+                    readonly=""
+                    type="text"
+                    value="test@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-has-value="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:rp:"
+                  id="react-aria-:rq:"
+                >
+                  Google Pay
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <input
+                    aria-label="Google Pay"
+                    aria-labelledby="react-aria-:rp: react-aria-:rq:"
+                    class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                    data-filled="true"
+                    data-filled-within="true"
+                    data-slot="input"
+                    id="react-aria-:rp:"
+                    placeholder=" "
+                    readonly=""
+                    type="text"
+                    value="test@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col pr-8 lg:pr-[87px]"
+    >
+      <div
+        class="mb-10"
+      >
+        <p
+          class="text-foreground-100 text-sm font-medium mb-[11px]"
+        >
+          Profile Picture
+        </p>
+        <div
+          class="flex flex-col"
+        >
+          <div>
+            <input
+              data-testid="upload-image"
+              type="file"
+            />
+            <button
+              data-testid="remove-avatar-btn"
+            >
+              Remove
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-14 grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 lg:gap-x-[108px]"
+      >
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:r0:"
+                id="react-aria-:r1:"
+              >
+                Username
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="Username"
+                  aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:r0:"
+                  placeholder=" "
+                  readonly=""
+                  type="text"
+                  value="testuser"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:r5:"
+                id="react-aria-:r6:"
+              >
+                Phone Number
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="Phone Number"
+                  aria-labelledby="react-aria-:r5: react-aria-:r6:"
+                  class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:r5:"
+                  placeholder=" "
+                  readonly=""
+                  type="text"
+                  value="1234567890"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:ra:"
+                id="react-aria-:rb:"
+              >
+                Email
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="Email"
+                  aria-labelledby="react-aria-:ra: react-aria-:rb:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:ra:"
+                  placeholder=" "
+                  readonly=""
+                  type="text"
+                  value="test@example.com"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:rf:"
+                id="react-aria-:rg:"
+              >
+                Address
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="address"
+                  aria-labelledby="react-aria-:rf: react-aria-:rg:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:rf:"
+                  placeholder="Address"
+                  readonly=""
+                  type="text"
+                  value="Test Country"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mb-5 flex flex-col gap-2.5"
+      >
+        <p
+          class="text-foreground-100 text-sm font-medium"
+        >
+          Socials
+        </p>
+        <p
+          class="text-foreground-300 text-xs font-normal"
+        >
+          Note: This username or email will be public
+        </p>
+      </div>
+      <div
+        class="grid max-w-[1024px] grid-cols-2 gap-x-8 gap-y-8 max-[700px]:grid-cols-1 max-[700px]:pb-5 lg:gap-x-[108px]"
+      >
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:rk:"
+                id="react-aria-:rl:"
+              >
+                Paypal
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="Paypal"
+                  aria-labelledby="react-aria-:rk: react-aria-:rl:"
+                  class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:rk:"
+                  placeholder=" "
+                  readonly=""
+                  type="text"
+                  value="test@example.com"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning px-2.5 py-2 rounded-sm border-default is-filled"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:rp:"
+                id="react-aria-:rq:"
+              >
+                Google Pay
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <input
+                  aria-label="Google Pay"
+                  aria-labelledby="react-aria-:rp: react-aria-:rq:"
+                  class="bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 w-full h-10 py-2.5 m-0 text-sm font-normal is-filled"
+                  data-filled="true"
+                  data-filled-within="true"
+                  data-slot="input"
+                  id="react-aria-:rp:"
+                  placeholder=" "
+                  readonly=""
+                  type="text"
+                  value="test@example.com"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
