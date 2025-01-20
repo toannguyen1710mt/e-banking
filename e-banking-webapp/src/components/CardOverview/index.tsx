@@ -60,8 +60,8 @@ export const CardOverview = ({ session }: ICardOverviewProps) => {
     <>
       <Card className='col-span-3'>
         <CardBody className='flex flex-col justify-between gap-6 p-0 sm:flex-row'>
-          <div className='flex w-full flex-col gap-4 px-4 py-2'>
-            <div className='flex max-w-[290px] items-center justify-between'>
+          <div className='flex w-full max-w-full flex-col gap-4 px-4 py-2 md:max-w-[325px]'>
+            <div className='flex items-center justify-between'>
               <Text as='span' className='text-sm font-semibold text-navyBlue'>
                 My Cards
               </Text>
