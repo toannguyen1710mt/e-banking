@@ -32,7 +32,7 @@ export const Calendar = ({ classNames, ...rest }: CalendarProps) => {
       {...rest}
       topContent={
         <div className='bg-background-300 px-4 pt-2'>
-          <Text as='h3' className='text-2xs font-normal !text-foreground-200'>
+          <Text as='span' className='text-2xs font-normal !text-foreground-200'>
             Select date
           </Text>
         </div>
