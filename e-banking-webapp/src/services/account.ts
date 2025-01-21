@@ -2,13 +2,7 @@
 import { API_ENDPOINTS } from '@/constants';
 
 // Interfaces
-import {
-  AccountType,
-  GlobalAccount,
-  IAccount,
-  IUser,
-  SuccessResponse,
-} from '@/interfaces';
+import { GlobalAccount, IAccount, IUser, SuccessResponse } from '@/interfaces';
 
 // Services
 import { httpClient } from '@/services';
@@ -25,31 +19,6 @@ export const getAccountsByUserId = async (
   }
 
   return [];
-};
-
-export const getAccountInfoByAccountType = async (
-  userId: number,
-  accountType: AccountType,
-  fieldName: keyof IAccount,
-): Promise<string | number | boolean | null> => {
-  const accounts = await getAccountsByUserId(userId);
-
-  const accountFound = accounts.find((account) => account.type === accountType);
-
-  if (!accountFound || !(fieldName in accountFound)) {
-    return null;
-  }
-
-  const fieldValue = accountFound[fieldName];
-  if (
-    typeof fieldValue === 'string' ||
-    typeof fieldValue === 'number' ||
-    typeof fieldValue === 'boolean'
-  ) {
-    return fieldValue;
-  }
-
-  return null;
 };
 
 export const getGlobalAccounts = async (): Promise<
