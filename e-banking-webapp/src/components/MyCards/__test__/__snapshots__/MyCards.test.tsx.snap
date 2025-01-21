@@ -6,7 +6,7 @@ exports[`MyCards component Should render snapshot correctly. 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex gap-[9px]"
+        class="flex flex-wrap gap-4"
       >
         <div
           aria-label="card-item-0"
@@ -202,7 +202,7 @@ exports[`MyCards component Should render snapshot correctly. 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex gap-[9px]"
+      class="flex flex-wrap gap-4"
     >
       <div
         aria-label="card-item-0"
@@ -455,13 +455,13 @@ exports[`MyCards component Should render snapshot with accounts is empty. 1`] = 
   "baseElement": <body>
     <div>
       <div
-        class="flex gap-[9px]"
+        class="flex flex-wrap gap-4"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="flex gap-[9px]"
+      class="flex flex-wrap gap-4"
     />
   </div>,
   "debug": [Function],
@@ -521,7 +521,7 @@ exports[`MyCards component Should render snapshot with accounts is empty. 1`] = 
 exports[`MyCards component Should renders cards correctly with empty type and accountNumber 1`] = `
 <DocumentFragment>
   <div
-    class="flex gap-[9px]"
+    class="flex flex-wrap gap-4"
   >
     <div
       aria-label="card-item-0"

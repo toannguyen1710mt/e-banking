@@ -3,7 +3,7 @@
 exports[`TransferTab Component renders correctly and matches snapshot 1`] = `
 <div>
   <div
-    class="flex h-full w-full flex-col rounded-xl bg-lightGraySolid"
+    class="flex h-full w-full flex-col rounded-xl bg-lightGraySolid [&>div]:flex-col [&>div]:lg:flex-row"
   >
     <div
       class="flex"
@@ -46,7 +46,7 @@ exports[`TransferTab Component renders correctly and matches snapshot 1`] = `
               data-slot="tabContent"
             >
               <div
-                class="flex items-center gap-4 px-8 py-2"
+                class="flex items-center gap-4 py-2 lg:px-8"
               >
                 <svg
                   fill="none"
@@ -95,7 +95,7 @@ exports[`TransferTab Component renders correctly and matches snapshot 1`] = `
               data-slot="tabContent"
             >
               <div
-                class="flex items-center gap-4 px-8 py-2"
+                class="flex items-center gap-4 py-2 lg:px-8"
               >
                 <svg
                   fill="none"
