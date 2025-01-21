@@ -63,11 +63,7 @@ export const signInSchema = z.object({
   identifier: z
     .string()
     .trim()
-    .min(3, ERROR_MESSAGES.IDENTIFIER_INVALID)
+    .min(1, ERROR_MESSAGES.FIELD_REQUIRED)
     .transform((value) => value.trim()), // Trim spaces before validation
-  password: z
-    .string()
-    .trim()
-    .min(8, ERROR_MESSAGES.PASSWORD_INVALID)
-    .regex(REGEX.PASSWORD, ERROR_MESSAGES.PASSWORD_PATTERN),
+  password: z.string().trim().min(1, ERROR_MESSAGES.FIELD_REQUIRED),
 });
