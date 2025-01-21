@@ -35,7 +35,7 @@ export const LoginForm = () => {
       identifier: '',
       password: '',
     },
-    mode: 'onBlur',
+    mode: 'all',
   });
 
   const {
