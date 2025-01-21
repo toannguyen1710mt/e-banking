@@ -19,7 +19,7 @@ import {
 import { AccountType, GlobalAccount, GlobalType } from '@/interfaces';
 
 // API
-import { getAccountInfoByAccountType, getGlobalAccounts } from '@/services';
+import { getAccountsByUserId, getGlobalAccounts } from '@/services';
 
 // Helpers / Utils
 import {
@@ -106,29 +106,14 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
       startTransition(async () => {
         try {
-          const balance = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'balance',
+          const accounts = await getAccountsByUserId(session.user.id);
+
+          const account = accounts.find(
+            ({ type }) => type === fromAccountTypeValue,
           );
 
-          const accountId = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'documentId',
-          );
-
-          const fromCardName = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'name',
-          );
-
-          const fromAccountNumber = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'accountNumber',
-          );
+          if (!account) return;
+          const { balance, name, accountNumber, documentId } = account;
 
           startTransition(() => {
             setBalanceSend(Number(balance));
@@ -136,9 +121,9 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               ...prev,
               [fromAccountTypeValue]: Number(balance),
             }));
-            setValue('fromAccountId', String(accountId));
-            setValue('fromCardName', String(fromCardName));
-            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountId', String(documentId));
+            setValue('fromCardName', String(name));
+            setValue('fromAccountNumber', String(accountNumber));
             setValue('fromAccountBalance', Number(balance));
           });
         } catch (error) {

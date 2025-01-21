@@ -20,7 +20,7 @@ import { InternalTransferFormSchema } from '@/schemas';
 import { useWizardFormContext, useFetchedBalances } from '@/context';
 
 // Services
-import { getAccountInfoByAccountType } from '@/services';
+import { getAccountsByUserId } from '@/services';
 
 // Utils
 import { formatNumberWithCommas, isValidNumber, sanitizeNumber } from '@/utils';
@@ -87,29 +87,14 @@ export const InternalTransferForm = ({
 
       startTransitionFrom(async () => {
         try {
-          const balance = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'balance',
+          const accounts = await getAccountsByUserId(session.user.id);
+
+          const account = accounts.find(
+            ({ type }) => type === fromAccountTypeValue,
           );
 
-          const accountId = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'documentId',
-          );
-
-          const fromCardName = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'name',
-          );
-
-          const fromAccountNumber = await getAccountInfoByAccountType(
-            session.user.id,
-            fromAccountTypeValue,
-            'accountNumber',
-          );
+          if (!account) return;
+          const { balance, name, accountNumber, documentId } = account;
 
           startTransitionFrom(() => {
             setBalanceSend(Number(balance));
@@ -117,9 +102,9 @@ export const InternalTransferForm = ({
               ...prev,
               [fromAccountTypeValue]: Number(balance),
             }));
-            setValue('fromAccountId', String(accountId));
-            setValue('fromCardName', String(fromCardName));
-            setValue('fromAccountNumber', String(fromAccountNumber));
+            setValue('fromAccountId', String(documentId));
+            setValue('fromCardName', String(name));
+            setValue('fromAccountNumber', String(accountNumber));
             setValue('fromAccountBalance', Number(balance));
           });
         } catch (error) {
@@ -143,29 +128,14 @@ export const InternalTransferForm = ({
 
       startTransitionTo(async () => {
         try {
-          const balance = await getAccountInfoByAccountType(
-            session.user.id,
-            toAccountTypeValue,
-            'balance',
+          const accounts = await getAccountsByUserId(session.user.id);
+
+          const account = accounts.find(
+            ({ type }) => type === fromAccountTypeValue,
           );
 
-          const documentId = await getAccountInfoByAccountType(
-            session.user.id,
-            toAccountTypeValue,
-            'documentId',
-          );
-
-          const toCardName = await getAccountInfoByAccountType(
-            session.user.id,
-            toAccountTypeValue,
-            'name',
-          );
-
-          const toAccountNumber = await getAccountInfoByAccountType(
-            session.user.id,
-            toAccountTypeValue,
-            'accountNumber',
-          );
+          if (!account) return;
+          const { balance, name, accountNumber, documentId } = account;
 
           startTransitionTo(() => {
             setBalanceReceive(Number(balance));
@@ -174,8 +144,8 @@ export const InternalTransferForm = ({
               [toAccountTypeValue]: Number(balance),
             }));
             setValue('toAccountId', String(documentId));
-            setValue('toCardName', String(toCardName));
-            setValue('toAccountNumber', String(toAccountNumber));
+            setValue('toCardName', String(name));
+            setValue('toAccountNumber', String(accountNumber));
             setValue('toAccountBalance', Number(balance));
           });
         } catch (error) {
