@@ -21,12 +21,11 @@ exports[`ProfileForm component renders matching snapshot 1`] = `
           >
             <div>
               <input
-                aria-label="Upload profile avatar"
-                data-testid="upload-image"
+                aria-label="upload-image"
                 type="file"
               />
               <button
-                data-testid="remove-avatar-btn"
+                aria-label="remove-avatar-btn"
               >
                 Remove
               </button>
@@ -357,12 +356,11 @@ exports[`ProfileForm component renders matching snapshot 1`] = `
         >
           <div>
             <input
-              aria-label="Upload profile avatar"
-              data-testid="upload-image"
+              aria-label="upload-image"
               type="file"
             />
             <button
-              data-testid="remove-avatar-btn"
+              aria-label="remove-avatar-btn"
             >
               Remove
             </button>

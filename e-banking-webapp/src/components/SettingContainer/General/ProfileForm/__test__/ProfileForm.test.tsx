@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
 // Actions
 import { updateUser } from '@/actions';
@@ -24,8 +24,7 @@ jest.mock('@/components/SettingContainer/General/UploadImage', () => ({
     <div>
       <input
         type='file'
-        data-testid='upload-image'
-        aria-label='Upload profile avatar'
+        aria-label='upload-image'
         onChange={(e) => {
           if (e.target.files?.[0]) {
             onChange('https://example.com/new-avatar.jpg');
@@ -33,7 +32,7 @@ jest.mock('@/components/SettingContainer/General/UploadImage', () => ({
         }}
       />
       {src && (
-        <button data-testid='remove-avatar-btn' onClick={onRemove}>
+        <button aria-label='remove-avatar-btn' onClick={onRemove}>
           Remove
         </button>
       )}
@@ -70,8 +69,11 @@ describe('ProfileForm component', () => {
   let container: ReturnType<typeof render>;
 
   beforeEach(() => {
-    jest.clearAllMocks();
     container = render(<ProfileForm userProfile={mockUserProfile} />);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
   });
 
   it('renders matching snapshot', () => {
@@ -82,26 +84,31 @@ describe('ProfileForm component', () => {
     const newAvatarUrl = 'https://example.com/new-avatar.jpg';
     (updateUser as jest.Mock).mockResolvedValue({ avatar: newAvatarUrl });
 
-    const uploadImage = screen.getByTestId('upload-image');
+    const uploadImage = screen.getByLabelText('upload-image');
 
-    await fireEvent.change(uploadImage, {
+    fireEvent.change(uploadImage, {
       target: {
         files: [new File(['test'], 'test.png', { type: 'image/png' })],
       },
     });
 
     expect(updateUser).toHaveBeenCalledWith(1, { avatar: newAvatarUrl });
-    expect(mockUpdateSession).toHaveBeenCalledWith(newAvatarUrl);
+
+    waitFor(() => {
+      expect(mockUpdateSession).toHaveBeenCalledWith(newAvatarUrl);
+    });
   });
 
   it('handles avatar removal correctly', async () => {
     (updateUser as jest.Mock).mockResolvedValue({ avatar: '' });
 
-    const removeButton = screen.getByTestId('remove-avatar-btn');
-    await fireEvent.click(removeButton);
+    const removeButton = screen.getByLabelText('remove-avatar-btn');
+    fireEvent.click(removeButton);
 
     expect(updateUser).toHaveBeenCalledWith(1, { avatar: '' });
 
-    expect(mockUpdateSession).toHaveBeenCalledWith('');
+    waitFor(() => {
+      expect(mockUpdateSession).toHaveBeenCalledWith('');
+    });
   });
 });
