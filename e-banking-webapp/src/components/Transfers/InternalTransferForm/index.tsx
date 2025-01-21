@@ -258,6 +258,7 @@ export const InternalTransferForm = ({
             <>
               <Select
                 label='To'
+                aria-label='to account'
                 labelPlacement='outside'
                 options={filteredOptions}
                 classNames={{ label: 'text-sm' }}
@@ -311,6 +312,7 @@ export const InternalTransferForm = ({
             <>
               <Select
                 label='From'
+                aria-label='from account'
                 labelPlacement='outside'
                 options={filteredOptions}
                 classNames={{ label: 'text-sm' }}
@@ -358,6 +360,7 @@ export const InternalTransferForm = ({
           <Input
             inputMode='decimal'
             label='Amount'
+            aria-label='amount'
             labelPlacement='outside'
             placeholder=' '
             classNames={{
@@ -389,6 +392,7 @@ export const InternalTransferForm = ({
 
       <Button
         type='button'
+        aria-label='transfer funds'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         isDisabled={!validateStep() || !!amountError}
