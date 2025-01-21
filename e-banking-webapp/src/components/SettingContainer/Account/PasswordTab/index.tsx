@@ -11,7 +11,7 @@ import { useEffect, useTransition } from 'react';
 import { TChangePasswordFormData } from '@/interfaces';
 
 // Constants
-import { ERROR_MESSAGES, MESSAGE, PASSWORD_DEFAULT_VALUES } from '@/constants';
+import { ERROR_MESSAGES, PASSWORD_DEFAULT_VALUES } from '@/constants';
 
 // Schemas
 import { UpdatePasswordSchema } from '@/schemas';
@@ -22,6 +22,9 @@ import { EyeIcon, EyeSlashIcon } from '@/components/icons';
 
 // Actions
 import { changePassword } from '@/actions';
+
+// Hooks
+import { useConfirmationOnLeave } from '@/hooks';
 
 // Context
 import { useToastContext } from '@/context';
@@ -54,36 +57,7 @@ export const PasswordTab = ({
     onUnsavedChanges?.(isDirty);
   }, [isDirty, onUnsavedChanges]);
 
-  useEffect(() => {
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      if (isDirty) {
-        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-        event.returnValue = confirmationMessage;
-        return confirmationMessage;
-      }
-    };
-
-    const handleLinkClick = (event: MouseEvent) => {
-      if (isDirty) {
-        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-        if (!window.confirm(confirmationMessage)) {
-          event.preventDefault();
-        }
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    document.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', handleLinkClick);
-    });
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      document.querySelectorAll('a').forEach((link) => {
-        link.removeEventListener('click', handleLinkClick);
-      });
-    };
-  }, [isDirty]);
+  useConfirmationOnLeave(isDirty);
 
   const {
     isOpen: isOpenPassword,
