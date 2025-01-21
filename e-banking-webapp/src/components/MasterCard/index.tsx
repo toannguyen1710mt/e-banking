@@ -29,10 +29,13 @@ export const MasterCard = ({ totalBalance, series }: ExpenseAnalysisProps) => (
       </Text>
     </CardHeader>
     <CardBody className='gap-2 px-0 pb-0 pt-3'>
-      <Text as='span' className='text-xs font-normal text-white'>
+      <Text
+        as='span'
+        className='text-xs font-normal text-white max-[680px]:text-sm'
+      >
         Available Wallets
       </Text>
-      <ol className='flex gap-6 text-[10px] font-normal text-white'>
+      <ol className='flex gap-6 text-[10px] font-normal text-white max-[680px]:text-xs'>
         {Object.values(CardStatistics)
           .filter((wallet) => AVAILABLE_WALLETS.includes(wallet))
           .map((wallet, index) => (
@@ -58,7 +61,10 @@ export const MasterCard = ({ totalBalance, series }: ExpenseAnalysisProps) => (
           {CARD_STATISTICS.map(({ label, color }, index) => (
             <div key={index} className='flex items-center gap-1'>
               <div className={cn('h-[14px] w-[14px]', color)}></div>
-              <Text as='span' className='text-[10px] font-normal text-white'>
+              <Text
+                as='span'
+                className='text-[10px] font-normal text-white max-[680px]:text-xs'
+              >
                 {label}
               </Text>
             </div>
