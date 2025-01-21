@@ -57,13 +57,21 @@ export const ConfirmInternalTransfer = <T extends z.ZodType>({
         undone once approved...
       </Text>
       <div className='mt-8 flex gap-8'>
-        <Button color='tertiary' radius='xs' size='md' onClick={onPrevStep}>
+        <Button
+          color='tertiary'
+          radius='xs'
+          size='md'
+          isDisabled={isPending}
+          onClick={onPrevStep}
+        >
           Cancel
         </Button>
         <Button
+          aria-label='proceed'
           color='primary'
           radius='xs'
           size='md'
+          isDisabled={isPending}
           isLoading={isPending}
           onClick={onSubmit}
         >

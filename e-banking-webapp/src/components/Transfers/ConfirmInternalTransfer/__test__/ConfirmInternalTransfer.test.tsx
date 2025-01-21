@@ -1,53 +1,90 @@
+// Libs
+import { fireEvent, render, screen } from '@testing-library/react';
+
+// Interfaces
+import { AccountType } from '@/interfaces';
+
+// Components
+import { ConfirmInternalTransfer } from '@/components/Transfers/ConfirmInternalTransfer';
+
+// Contexts
+import { useWizardFormContext } from '@/context';
+
+// Schemas
+import { InternalTransferFormSchema } from '@/schemas';
+
 jest.mock('@/context', () => ({
   useWizardFormContext: jest.fn(),
 }));
 
 describe('ConfirmInternalTransfer component', () => {
-  // const mockGetValues = jest.fn();
-  // const mockPrevStep = jest.fn();
-  // const mockOnNextStep = jest.fn();
-  // const mockSubmitHandler = jest.fn();
+  const mockFormValues = {
+    internalTransfer: {
+      fromAccountType: AccountType.MAIN,
+      toAccountType: AccountType.SAVINGS,
+      amount: '1500',
+    },
+    fromAccountId: 'acc-123',
+    toAccountId: 'acc-456',
+    fromCardName: 'Main Account',
+    toCardName: 'Savings Account',
+    fromAccountNumber: '123456789',
+    toAccountNumber: '987654321',
+    fromAccountBalance: 2000,
+    toAccountBalance: 1000,
+  };
 
-  // const mockContextValue = {
-  //   form: { getValues: mockGetValues },
-  //   prevStep: mockPrevStep,
-  //   onNextStep: mockOnNextStep,
-  // };
+  const mockGetValues = jest.fn().mockReturnValue(mockFormValues);
+  const mockOnPrevStep = jest.fn();
+  const mockOnNextStep = jest.fn();
+  const mockSubmitHandler = jest.fn();
 
-  // beforeEach(() => {
-  //   jest.clearAllMocks();
-
-  //   const mockUseWizardFormContext = useWizardFormContext as jest.Mock;
-  //   mockUseWizardFormContext.mockReturnValue(mockContextValue);
-  // });
-
-  // const mockProps = {
-  //   amount: 15000,
-  //   currencyUnit: '$' as CurrencyUnit,
-  //   fromAccountType: AccountType.MAIN,
-  //   toAccountType: AccountType.SAVINGS,
-  //   submitHandler: mockSubmitHandler,
-  // };
-
-  it('should match snapshot', () => {
-    // const { container } = render(<ConfirmInternalTransfer {...mockProps} />);
-    // expect(container).toMatchSnapshot();
+  beforeEach(() => {
+    (useWizardFormContext as jest.Mock).mockReturnValue({
+      form: { getValues: mockGetValues },
+      onPrevStep: mockOnPrevStep,
+      onNextStep: mockOnNextStep,
+    });
   });
 
-  it('should call prevStep when clicking Cancel button', () => {
-    // render(<ConfirmInternalTransfer {...mockProps} />);
-    // const cancelButton = screen.getByText('Cancel');
-    // fireEvent.click(cancelButton);
-    // expect(mockPrevStep).toHaveBeenCalled();
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should match snapshot', () => {
+    const { container } = render(
+      <ConfirmInternalTransfer<typeof InternalTransferFormSchema>
+        submitHandler={mockSubmitHandler}
+      />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should call onPrevStep when clicking Cancel button', () => {
+    render(
+      <ConfirmInternalTransfer<typeof InternalTransferFormSchema>
+        submitHandler={mockSubmitHandler}
+      />,
+    );
+
+    fireEvent.click(screen.getByText('Cancel'));
+    expect(mockOnPrevStep).toHaveBeenCalledTimes(1);
   });
 
   it('should call submitHandler and onNextStep when Proceed button is clicked', () => {
-    // mockGetValues.mockReturnValue({ someField: 'someValue' });
-    // render(<ConfirmInternalTransfer {...mockProps} />);
-    // const proceedButton = screen.getByText('Proceed');
-    // fireEvent.click(proceedButton);
-    // expect(mockGetValues).toHaveBeenCalled();
-    // expect(mockSubmitHandler).toHaveBeenCalledWith({ someField: 'someValue' });
-    // expect(mockOnNextStep).toHaveBeenCalled();
+    render(
+      <ConfirmInternalTransfer<typeof InternalTransferFormSchema>
+        submitHandler={mockSubmitHandler}
+      />,
+    );
+
+    const proceedButton = screen.getByText('Proceed');
+    fireEvent.click(proceedButton);
+
+    // Verify form submission behavior
+    expect(mockGetValues).toHaveBeenCalled();
+    expect(mockSubmitHandler).toHaveBeenCalledWith(mockFormValues);
+    expect(mockOnNextStep).toHaveBeenCalled();
   });
 });
