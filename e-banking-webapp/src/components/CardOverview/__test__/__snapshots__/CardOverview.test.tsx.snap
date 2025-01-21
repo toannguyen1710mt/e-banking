@@ -387,12 +387,12 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
           class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased gap-2 px-0 pb-0 pt-3"
         >
           <span
-            class="text-primary-200 text-xs font-normal text-white"
+            class="text-primary-200 text-xs font-normal text-white max-[680px]:text-sm"
           >
             Available Wallets
           </span>
           <ol
-            class="flex gap-6 text-[10px] font-normal text-white"
+            class="flex gap-6 text-[10px] font-normal text-white max-[680px]:text-xs"
           >
             <li>
               1
@@ -430,7 +430,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
                   class="h-[14px] w-[14px] bg-java"
                 />
                 <span
-                  class="text-primary-200 text-[10px] font-normal text-white"
+                  class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                 >
                   Balance
                 </span>
@@ -442,7 +442,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
                   class="h-[14px] w-[14px] bg-pastelYellow"
                 />
                 <span
-                  class="text-primary-200 text-[10px] font-normal text-white"
+                  class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                 >
                   Savings
                 </span>
@@ -454,7 +454,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
                   class="h-[14px] w-[14px] bg-softGreen"
                 />
                 <span
-                  class="text-primary-200 text-[10px] font-normal text-white"
+                  class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                 >
                   Checkings
                 </span>
