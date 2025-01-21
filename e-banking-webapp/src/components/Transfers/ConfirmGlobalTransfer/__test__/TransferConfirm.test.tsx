@@ -32,7 +32,7 @@ describe('ConfirmGlobalTransfer Component', () => {
     (useWizardFormContext as jest.Mock).mockReturnValue(mockWizardContext);
   });
 
-  it('renders the component with correct recipient and amount', () => {
+  test('renders the component with correct recipient and amount', () => {
     render(
       <ConfirmGlobalTransfer submitHandler={jest.fn()} amountInUSD='500.00' />,
     );
@@ -48,19 +48,21 @@ describe('ConfirmGlobalTransfer Component', () => {
     ).toBeInTheDocument();
   });
 
-  it('calls onPrevStep when the "Cancel" button is clicked', () => {
+  test('calls onPrevStep when the "Cancel" button is clicked', () => {
     render(
       <ConfirmGlobalTransfer submitHandler={jest.fn()} amountInUSD='500.00' />,
     );
 
     const cancelButton = screen.getByText('Cancel');
+
     fireEvent.click(cancelButton);
 
     expect(mockWizardContext.onPrevStep).toHaveBeenCalled();
   });
 
-  it('calls submitHandler and onNextStep when "Proceed" is clicked', () => {
+  test('calls submitHandler and onNextStep when "Proceed" is clicked', () => {
     const mockSubmitHandler = jest.fn();
+
     render(
       <ConfirmGlobalTransfer
         submitHandler={mockSubmitHandler}
@@ -69,6 +71,7 @@ describe('ConfirmGlobalTransfer Component', () => {
     );
 
     const proceedButton = screen.getByText('Proceed');
+
     fireEvent.click(proceedButton);
 
     expect(mockWizardContext.form.getValues).toHaveBeenCalled();
@@ -79,7 +82,7 @@ describe('ConfirmGlobalTransfer Component', () => {
     expect(mockWizardContext.onNextStep).toHaveBeenCalled();
   });
 
-  it('disables buttons when isPending is true', () => {
+  test('disables buttons when isPending is true', () => {
     jest.spyOn(React, 'useTransition').mockReturnValue([true, jest.fn()]);
 
     render(
