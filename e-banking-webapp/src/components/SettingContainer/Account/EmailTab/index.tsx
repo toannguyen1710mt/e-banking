@@ -8,7 +8,10 @@ import { Checkbox } from '@nextui-org/react';
 import { Preferences, TEXT_VARIANT } from '@/interfaces';
 
 // Constants
-import { MESSAGE, PREFERENCES } from '@/constants';
+import { PREFERENCES } from '@/constants';
+
+// Hooks
+import { useConfirmationOnLeave } from '@/hooks';
 
 // Components
 import { Button, Text } from '@/components/common';
@@ -73,36 +76,7 @@ export const EmailTab = ({
     onUnsavedChanges?.(hasChanges);
   }, [hasChanges, onUnsavedChanges]);
 
-  useEffect(() => {
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-      if (hasChanges) {
-        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-        event.returnValue = confirmationMessage;
-        return confirmationMessage;
-      }
-    };
-
-    const handleLinkClick = (event: MouseEvent) => {
-      if (hasChanges) {
-        const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
-        if (!window.confirm(confirmationMessage)) {
-          event.preventDefault();
-        }
-      }
-    };
-
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    document.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', handleLinkClick);
-    });
-
-    return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-      document.querySelectorAll('a').forEach((link) => {
-        link.removeEventListener('click', handleLinkClick);
-      });
-    };
-  }, [hasChanges]);
+  useConfirmationOnLeave(hasChanges);
 
   const isDisabled = !hasChanges || isSubmitting;
 
@@ -169,6 +143,7 @@ export const EmailTab = ({
           isDisabled={isDisabled}
           className='[&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
           isLoading={isSubmitting}
+          data-testId='update-email-preferences'
         >
           Update Email Preferences
         </Button>
