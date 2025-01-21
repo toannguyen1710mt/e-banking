@@ -102,6 +102,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
                 </Text>
                 <div className='flex gap-1'>
                   <Button
+                    aria-label='Previous card'
                     variant='outline'
                     color='outline'
                     className='w-5 min-w-0 border-none p-0'
@@ -111,6 +112,7 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
                     <ChevronRightIcon customClass='rotate-180' />
                   </Button>
                   <Button
+                    aria-label='Next card'
                     variant='outline'
                     color='outline'
                     className='w-5 min-w-0 border-none p-0'

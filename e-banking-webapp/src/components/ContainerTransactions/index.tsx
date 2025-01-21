@@ -75,7 +75,7 @@ export const ContainerTransactions = async ({
     <div className='flex w-full flex-col gap-8 px-0 pt-1 lg:px-[22px] xl:flex-row'>
       <div className='flex w-full flex-col xl:w-[55%]'>
         <Text
-          as='h4'
+          as='h1'
           variant={TEXT_VARIANT.DEFAULT}
           size={TEXT_SIZE['2XL']}
           className='mb-[18px] font-medium'

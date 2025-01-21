@@ -146,7 +146,7 @@ export const TransferManager = ({
       </div>
 
       <div className='mb-4 flex flex-col gap-2'>
-        <Text as='h4' size={TEXT_SIZE.SM}>
+        <Text as='span' size={TEXT_SIZE.SM}>
           Transfer Request{' '}
           {selectedTransferType === TransferType.RECEIVED ? 'Received' : 'Sent'}
         </Text>
