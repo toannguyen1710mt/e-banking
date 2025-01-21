@@ -40,7 +40,9 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Providers avatar={avatar || ''}>
           <main className='mx-auto'>
-            <div className='h-screen'>{children}</div>
+            <div className='h-screen' id='root'>
+              {children}
+            </div>
           </main>
         </Providers>
       </body>
