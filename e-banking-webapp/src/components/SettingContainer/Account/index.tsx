@@ -16,7 +16,7 @@ export const Account = async ({ session }: IAccountProps) => (
   <>
     <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:pt-6'>
       <Text
-        as='h4'
+        as='h1'
         variant={TEXT_VARIANT.DEFAULT}
         size={TEXT_SIZE.BASE}
         className='font-semibold'
