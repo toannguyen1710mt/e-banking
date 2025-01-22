@@ -158,8 +158,12 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
       selectedKey={activeTab}
       onSelectionChange={handleTabChange}
     >
-      {ACCOUNT_TABS.map(({ key, title, content }) => (
-        <Tab key={key} title={<span>{title}</span>}>
+      {ACCOUNT_TABS.map(({ key, title, content }, index) => (
+        <Tab
+          key={key}
+          aria-label={`label-account-tabs-${index}`}
+          title={<span>{title}</span>}
+        >
           <div className='pl-[105px] pr-6 pt-16 max-[800px]:pl-0'>
             {content}
           </div>

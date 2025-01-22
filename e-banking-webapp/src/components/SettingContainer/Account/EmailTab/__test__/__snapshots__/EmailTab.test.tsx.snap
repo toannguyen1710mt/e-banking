@@ -27,6 +27,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         >
           <li>
             <label
+              aria-label="check-references-0"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="announcements"
             >
@@ -34,7 +35,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Announcements"
+                  aria-label="check-references-0"
                   aria-labelledby=":r0:"
                   type="checkbox"
                   value=""
@@ -72,6 +73,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-1"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="updates"
             >
@@ -79,7 +81,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Updates"
+                  aria-label="check-references-1"
                   aria-labelledby=":r1:"
                   type="checkbox"
                   value=""
@@ -117,6 +119,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-2"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="feedbacksAndSurvey"
             >
@@ -124,7 +127,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Feedbacks & Survey"
+                  aria-label="check-references-2"
                   aria-labelledby=":r2:"
                   type="checkbox"
                   value=""
@@ -162,6 +165,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-3"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="events"
             >
@@ -169,7 +173,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Events"
+                  aria-label="check-references-3"
                   aria-labelledby=":r3:"
                   type="checkbox"
                   value=""
@@ -207,6 +211,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-4"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="generalNotification"
             >
@@ -214,7 +219,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="General Notification"
+                  aria-label="check-references-4"
                   aria-labelledby=":r4:"
                   type="checkbox"
                   value=""
@@ -252,6 +257,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-5"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="promotions"
             >
@@ -259,7 +265,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Promotions"
+                  aria-label="check-references-5"
                   aria-labelledby=":r5:"
                   type="checkbox"
                   value=""
@@ -297,6 +303,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
           </li>
           <li>
             <label
+              aria-label="check-references-6"
               class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
               id="eventsNearMe"
             >
@@ -304,7 +311,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
-                  aria-label="Events Near Me"
+                  aria-label="check-references-6"
                   aria-labelledby=":r6:"
                   type="checkbox"
                   value=""
@@ -386,6 +393,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
       >
         <li>
           <label
+            aria-label="check-references-0"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="announcements"
           >
@@ -393,7 +401,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Announcements"
+                aria-label="check-references-0"
                 aria-labelledby=":r0:"
                 type="checkbox"
                 value=""
@@ -431,6 +439,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-1"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="updates"
           >
@@ -438,7 +447,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Updates"
+                aria-label="check-references-1"
                 aria-labelledby=":r1:"
                 type="checkbox"
                 value=""
@@ -476,6 +485,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-2"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="feedbacksAndSurvey"
           >
@@ -483,7 +493,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Feedbacks & Survey"
+                aria-label="check-references-2"
                 aria-labelledby=":r2:"
                 type="checkbox"
                 value=""
@@ -521,6 +531,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-3"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="events"
           >
@@ -528,7 +539,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Events"
+                aria-label="check-references-3"
                 aria-labelledby=":r3:"
                 type="checkbox"
                 value=""
@@ -566,6 +577,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-4"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="generalNotification"
           >
@@ -573,7 +585,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="General Notification"
+                aria-label="check-references-4"
                 aria-labelledby=":r4:"
                 type="checkbox"
                 value=""
@@ -611,6 +623,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-5"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="promotions"
           >
@@ -618,7 +631,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Promotions"
+                aria-label="check-references-5"
                 aria-labelledby=":r5:"
                 type="checkbox"
                 value=""
@@ -656,6 +669,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         </li>
         <li>
           <label
+            aria-label="check-references-6"
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
             id="eventsNearMe"
           >
@@ -663,7 +677,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
-                aria-label="Events Near Me"
+                aria-label="check-references-6"
                 aria-labelledby=":r6:"
                 type="checkbox"
                 value=""

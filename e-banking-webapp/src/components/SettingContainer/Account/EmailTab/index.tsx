@@ -113,7 +113,7 @@ export const EmailTab = ({
       </div>
 
       <ul className='flex flex-col gap-4 pb-[58px]'>
-        {PREFERENCES.map(({ label, key }) => (
+        {PREFERENCES.map(({ label, key }, index) => (
           <Controller
             key={key}
             name={key as keyof Preferences}
@@ -124,6 +124,7 @@ export const EmailTab = ({
                   id={key}
                   isSelected={field.value}
                   onChange={(isChecked) => field.onChange(isChecked)}
+                  aria-label={`check-references-${index}`}
                   classNames={{
                     label: 'text-xs text-foreground-100',
                     wrapper: 'after:bg-primary-200',
