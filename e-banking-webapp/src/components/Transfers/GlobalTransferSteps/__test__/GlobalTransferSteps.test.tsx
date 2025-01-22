@@ -19,6 +19,7 @@ jest.mock('@/actions', () => ({
 
 const selectDropdownOption = (labelText: string, optionName: string): void => {
   const dropdown = screen.getByLabelText(labelText);
+
   fireEvent.click(dropdown);
 
   const option = screen.getByRole('option', {
@@ -29,6 +30,7 @@ const selectDropdownOption = (labelText: string, optionName: string): void => {
 
 const fillInput = (labelText: string, value: string): void => {
   const input = screen.getByLabelText(labelText);
+
   fireEvent.change(input, { target: { value } });
 };
 
