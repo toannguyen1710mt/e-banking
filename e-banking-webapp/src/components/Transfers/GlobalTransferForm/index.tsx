@@ -277,6 +277,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           return (
             <Select
               label='Country'
+              aria-label='country'
               labelPlacement='outside'
               options={filteredToAccountOptions()}
               classNames={{ label: 'text-sm' }}
@@ -302,6 +303,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
           return (
             <Select
               label='Account'
+              aria-label='account'
               labelPlacement='outside'
               options={filteredFromAccountOptions()}
               classNames={{ label: 'text-sm' }}
@@ -328,6 +330,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
             return (
               <Input
                 label='Recipient Account'
+                aria-label='recipient account'
                 labelPlacement='outside'
                 placeholder=' '
                 classNames={{
@@ -386,6 +389,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
               <Input
                 inputMode='decimal'
                 label='Amount'
+                aria-label='amount'
                 labelPlacement='outside'
                 placeholder=' '
                 classNames={{
@@ -427,6 +431,7 @@ export const GlobalTransferForm = ({ session }: { session: Session }) => {
 
       <Button
         type='submit'
+        aria-label='transfer funds'
         startContent={<SendIcon />}
         className='bg-primary-200 font-semibold text-foreground-200'
         onClick={onNextStep}
