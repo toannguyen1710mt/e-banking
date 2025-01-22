@@ -63,7 +63,9 @@ describe('InternalTransferSteps component', () => {
     const transferButton = screen.getByLabelText('transfer funds');
     fireEvent.click(transferButton);
 
-    const proceedButton = screen.getByLabelText('proceed');
+    const proceedButton = screen.getByRole('button', {
+      name: /Proceed/i,
+    });
     fireEvent.click(proceedButton);
 
     await waitFor(() => {
@@ -84,7 +86,9 @@ describe('InternalTransferSteps component', () => {
     const transferButton = screen.getByLabelText('transfer funds');
     fireEvent.click(transferButton);
 
-    const proceedButton = screen.getByLabelText('proceed');
+    const proceedButton = screen.getByRole('button', {
+      name: /Proceed/i,
+    });
     fireEvent.click(proceedButton);
 
     await waitFor(() => {
