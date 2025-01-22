@@ -119,17 +119,19 @@ export const EmailTab = ({
             name={key as keyof Preferences}
             control={control}
             render={({ field }) => (
-              <Checkbox
-                id={key}
-                isSelected={field.value}
-                onChange={(isChecked) => field.onChange(isChecked)}
-                classNames={{
-                  label: 'text-xs text-foreground-100',
-                  wrapper: 'after:bg-primary-200',
-                }}
-              >
-                {label}
-              </Checkbox>
+              <li key={key}>
+                <Checkbox
+                  id={key}
+                  isSelected={field.value}
+                  onChange={(isChecked) => field.onChange(isChecked)}
+                  classNames={{
+                    label: 'text-xs text-foreground-100',
+                    wrapper: 'after:bg-primary-200',
+                  }}
+                >
+                  {label}
+                </Checkbox>
+              </li>
             )}
           />
         ))}

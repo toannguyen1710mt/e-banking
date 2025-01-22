@@ -43,6 +43,7 @@ export const TransactionTable = ({ transactions }: ITransactionTableProps) => {
             className='h-full !max-h-none min-w-0 !bg-transparent'
             isIconOnly
             isDisabled
+            aria-label='More'
           >
             <MoreVerticalIcon />
           </Button>
