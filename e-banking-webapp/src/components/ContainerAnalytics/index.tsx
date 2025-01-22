@@ -42,7 +42,7 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
         const result = await getAccountsByUserId(session.user.id);
 
         setTotalTransfer(total);
-        setAccounts(result || []);
+        setAccounts(result);
       } catch (error) {
         if (error instanceof AuthError) {
           throw ERROR_MESSAGES.GET_ERROR;

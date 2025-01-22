@@ -1,5 +1,5 @@
 // Interfaces
-import { CurrencyUnit, AccountType } from '@/interfaces';
+import { CurrencyUnit, AccountType, IAccount } from '@/interfaces';
 
 export interface ITransaction {
   id: string;
@@ -30,4 +30,8 @@ export type InternalTransferForm = Pick<
 export enum TransferType {
   RECEIVED = 'received',
   SENT = 'sent',
+}
+
+export interface ITransactionResponse extends ITransaction {
+  account?: IAccount;
 }
