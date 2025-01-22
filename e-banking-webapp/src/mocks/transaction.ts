@@ -9,6 +9,48 @@ import {
 // Utils
 import { formatDate } from '@/utils';
 
+export const MOCK_TRANSACTION_WIHOUT_CURRENCY: ITransaction[] = [
+  {
+    id: 'TX12345',
+    documentId: 'DOC1001',
+    fromAccountId: 'CARD001',
+    toAccountId: 'CARD002',
+    amount: 120000,
+    statusTransaction: true,
+    createdAt: formatDate('2024-12-01'),
+    updatedAt: formatDate('2024-12-01'),
+    publishedAt: formatDate('2024-12-01'),
+    fromAccountType: AccountType.MAIN,
+    toAccountType: AccountType.CHECKINGS,
+  },
+  {
+    id: 'TX12346',
+    documentId: 'DOC1002',
+    fromAccountId: 'CARD003',
+    toAccountId: 'CARD004',
+    amount: 75,
+    statusTransaction: false,
+    createdAt: formatDate('2024-12-02'),
+    updatedAt: formatDate('2024-12-02'),
+    publishedAt: formatDate('2024-12-02'),
+    fromAccountType: AccountType.MAIN,
+    toAccountType: AccountType.SAVINGS,
+  },
+  {
+    id: 'TX12347',
+    documentId: 'DOC1003',
+    fromAccountId: 'CARD005',
+    toAccountId: 'CARD006',
+    amount: 50,
+    statusTransaction: false,
+    createdAt: formatDate('2024-12-03'),
+    updatedAt: formatDate('2024-12-03'),
+    publishedAt: formatDate('2024-12-03'),
+    fromAccountType: AccountType.SAVINGS,
+    toAccountType: AccountType.CHECKINGS,
+  },
+];
+
 export const MOCK_TRANSACTIONS: ITransaction[] = [
   {
     id: 'TX12345',

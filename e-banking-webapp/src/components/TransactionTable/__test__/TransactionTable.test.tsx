@@ -2,10 +2,10 @@
 import { render } from '@testing-library/react';
 
 // Mocks
-import { MOCK_TRANSACTIONS } from '@/mocks';
+import { MOCK_TRANSACTION_WIHOUT_CURRENCY, MOCK_TRANSACTIONS } from '@/mocks';
 
 // Components
-import { TransactionHistory } from '@/components';
+import { TransactionTable } from '@/components';
 
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/mock-path'),
@@ -24,10 +24,24 @@ const mockProps = {
   transactions: MOCK_TRANSACTIONS,
 };
 
-describe('TransactionHistory component', () => {
-  test('should match snapshot', () => {
-    const container = render(<TransactionHistory {...mockProps} />);
+describe('TransactionTable component', () => {
+  it('should match snapshot', () => {
+    const container = render(<TransactionTable {...mockProps} />);
 
     expect(container).toMatchSnapshot();
+  });
+
+  it('should render the default currencyUnit', () => {
+    const { getByText } = render(
+      <TransactionTable
+        {...mockProps}
+        transactions={MOCK_TRANSACTION_WIHOUT_CURRENCY}
+      />,
+    );
+
+    // Check specific currency units
+    expect(getByText('$120,000')).toBeInTheDocument(); // First transaction
+    expect(getByText('$75')).toBeInTheDocument(); // Second transaction
+    expect(getByText('$50')).toBeInTheDocument(); // Third transaction
   });
 });
