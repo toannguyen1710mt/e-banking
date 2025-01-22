@@ -25,307 +25,321 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
         <ul
           class="flex flex-col gap-4 pb-[58px]"
         >
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="announcements"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="announcements"
             >
-              <input
-                aria-label="Announcements"
-                aria-labelledby=":r0:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
-                aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <input
+                  aria-label="Announcements"
+                  aria-labelledby=":r0:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r0:"
-            >
-              Announcements
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="updates"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="Updates"
-                aria-labelledby=":r1:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r0:"
+              >
+                Announcements
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="updates"
+            >
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="Updates"
+                  aria-labelledby=":r1:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r1:"
-            >
-              Updates
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="feedbacksAndSurvey"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="Feedbacks & Survey"
-                aria-labelledby=":r2:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r1:"
+              >
+                Updates
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="feedbacksAndSurvey"
+            >
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="Feedbacks & Survey"
+                  aria-labelledby=":r2:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r2:"
-            >
-              Feedbacks & Survey
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="events"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="Events"
-                aria-labelledby=":r3:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r2:"
+              >
+                Feedbacks & Survey
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="events"
+            >
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="Events"
+                  aria-labelledby=":r3:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r3:"
-            >
-              Events
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="generalNotification"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="General Notification"
-                aria-labelledby=":r4:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r3:"
+              >
+                Events
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="generalNotification"
+            >
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="General Notification"
+                  aria-labelledby=":r4:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r4:"
-            >
-              General Notification
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="promotions"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="Promotions"
-                aria-labelledby=":r5:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r4:"
+              >
+                General Notification
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="promotions"
+            >
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="Promotions"
+                  aria-labelledby=":r5:"
+                  type="checkbox"
+                  value=""
                 />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r5:"
-            >
-              Promotions
-            </span>
-          </label>
-          <label
-            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-            id="eventsNearMe"
-          >
-            <span
-              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-            >
-              <input
-                aria-label="Events Near Me"
-                aria-labelledby=":r6:"
-                type="checkbox"
-                value=""
-              />
-            </span>
-            <span
-              aria-hidden="true"
-              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-            >
-              <svg
+              </span>
+              <span
                 aria-hidden="true"
-                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-                role="presentation"
-                viewBox="0 0 17 18"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
               >
-                <polyline
-                  fill="none"
-                  points="1 9 7 14 15 4"
-                  stroke="currentColor"
-                  stroke-dasharray="22"
-                  stroke-dashoffset="66"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </span>
-            <span
-              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-              id=":r6:"
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r5:"
+              >
+                Promotions
+              </span>
+            </label>
+          </li>
+          <li>
+            <label
+              class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+              id="eventsNearMe"
             >
-              Events Near Me
-            </span>
-          </label>
+              <span
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label="Events Near Me"
+                  aria-labelledby=":r6:"
+                  type="checkbox"
+                  value=""
+                />
+              </span>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+                id=":r6:"
+              >
+                Events Near Me
+              </span>
+            </label>
+          </li>
         </ul>
         <div
           class="flex w-full max-w-[680px] flex-col items-start gap-4"
@@ -370,307 +384,321 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
       <ul
         class="flex flex-col gap-4 pb-[58px]"
       >
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="announcements"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="announcements"
           >
-            <input
-              aria-label="Announcements"
-              aria-labelledby=":r0:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
-              aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <input
+                aria-label="Announcements"
+                aria-labelledby=":r0:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r0:"
-          >
-            Announcements
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="updates"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="Updates"
-              aria-labelledby=":r1:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r0:"
+            >
+              Announcements
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="updates"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Updates"
+                aria-labelledby=":r1:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r1:"
-          >
-            Updates
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="feedbacksAndSurvey"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="Feedbacks & Survey"
-              aria-labelledby=":r2:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r1:"
+            >
+              Updates
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="feedbacksAndSurvey"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Feedbacks & Survey"
+                aria-labelledby=":r2:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r2:"
-          >
-            Feedbacks & Survey
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="events"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="Events"
-              aria-labelledby=":r3:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r2:"
+            >
+              Feedbacks & Survey
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="events"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Events"
+                aria-labelledby=":r3:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r3:"
-          >
-            Events
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="generalNotification"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="General Notification"
-              aria-labelledby=":r4:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r3:"
+            >
+              Events
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="generalNotification"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="General Notification"
+                aria-labelledby=":r4:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r4:"
-          >
-            General Notification
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="promotions"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="Promotions"
-              aria-labelledby=":r5:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r4:"
+            >
+              General Notification
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="promotions"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Promotions"
+                aria-labelledby=":r5:"
+                type="checkbox"
+                value=""
               />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r5:"
-          >
-            Promotions
-          </span>
-        </label>
-        <label
-          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
-          id="eventsNearMe"
-        >
-          <span
-            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
-          >
-            <input
-              aria-label="Events Near Me"
-              aria-labelledby=":r6:"
-              type="checkbox"
-              value=""
-            />
-          </span>
-          <span
-            aria-hidden="true"
-            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
-          >
-            <svg
+            </span>
+            <span
               aria-hidden="true"
-              class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
-              role="presentation"
-              viewBox="0 0 17 18"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
             >
-              <polyline
-                fill="none"
-                points="1 9 7 14 15 4"
-                stroke="currentColor"
-                stroke-dasharray="22"
-                stroke-dashoffset="66"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-              />
-            </svg>
-          </span>
-          <span
-            class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
-            id=":r6:"
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r5:"
+            >
+              Promotions
+            </span>
+          </label>
+        </li>
+        <li>
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 select-none"
+            id="eventsNearMe"
           >
-            Events Near Me
-          </span>
-        </label>
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-label="Events Near Me"
+                aria-labelledby=":r6:"
+                type="checkbox"
+                value=""
+              />
+            </span>
+            <span
+              aria-hidden="true"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:text-primary-foreground text-primary-foreground w-5 h-5 mr-2 rtl:ml-2 rtl:mr-[unset] rounded-[calc(theme(borderRadius.medium)*0.6)] before:rounded-[calc(theme(borderRadius.medium)*0.6)] after:rounded-[calc(theme(borderRadius.medium)*0.6)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none after:bg-primary-200"
+            >
+              <svg
+                aria-hidden="true"
+                class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-4 h-3 transition-opacity motion-reduce:transition-none"
+                role="presentation"
+                viewBox="0 0 17 18"
+              >
+                <polyline
+                  fill="none"
+                  points="1 9 7 14 15 4"
+                  stroke="currentColor"
+                  stroke-dasharray="22"
+                  stroke-dashoffset="66"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span
+              class="relative select-none transition-colors-opacity before:transition-width motion-reduce:transition-none text-xs text-foreground-100"
+              id=":r6:"
+            >
+              Events Near Me
+            </span>
+          </label>
+        </li>
       </ul>
       <div
         class="flex w-full max-w-[680px] flex-col items-start gap-4"
