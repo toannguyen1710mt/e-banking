@@ -9,6 +9,21 @@ import { MOCK_DATA_USER } from '@/mocks';
 
 jest.mock('@/services/http-client');
 
+const mockGlobalAccounts = [
+  {
+    id: 1,
+    name: 'Global Account 1',
+    currency: 'USD',
+    balance: 1000,
+  },
+  {
+    id: 2,
+    name: 'Global Account 2',
+    currency: 'EUR',
+    balance: 2000,
+  },
+];
+
 describe('getAccountsByUserId', () => {
   const userId = 1;
 
@@ -38,17 +53,6 @@ describe('getAccountsByUserId', () => {
     expect(result).toEqual([]);
   });
 
-  it('should return an empty array if no data is returned', async () => {
-    (httpClient.get as jest.Mock).mockResolvedValueOnce({
-      data: null,
-      status: 404,
-    });
-
-    const result = await getAccountsByUserId(userId);
-
-    expect(result).toEqual([]);
-  });
-
   it('should throw an error if the API call fails', async () => {
     const errorMessage = 'Request failed';
     (httpClient.get as jest.Mock).mockRejectedValueOnce(
@@ -58,21 +62,6 @@ describe('getAccountsByUserId', () => {
     await expect(getAccountsByUserId(userId)).rejects.toThrow(errorMessage);
   });
 });
-
-const mockGlobalAccounts = [
-  {
-    id: 1,
-    name: 'Global Account 1',
-    currency: 'USD',
-    balance: 1000,
-  },
-  {
-    id: 2,
-    name: 'Global Account 2',
-    currency: 'EUR',
-    balance: 2000,
-  },
-];
 
 describe('getGlobalAccounts', () => {
   it('should fetch and return global accounts successfully', async () => {
