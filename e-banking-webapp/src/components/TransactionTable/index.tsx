@@ -84,7 +84,7 @@ export const TransactionTable = ({
               'border-separate border-spacing-0 rounded-lg border-[0.2px] border-semiTransparentNavyBlue',
             thead: '[&>tr:last-child]:hidden',
             th: 'text-primary-200 font-semibold border-semiTransparentNavyBlue first:rounded-bl-none last:rounded-br-none',
-            td: 'font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue',
+            td: 'font-light text-2xs border-t-[0.2px] border-semiTransparentNavyBlue max-[680px]:text-xs',
           }}
           columns={columns}
           data={transactions}

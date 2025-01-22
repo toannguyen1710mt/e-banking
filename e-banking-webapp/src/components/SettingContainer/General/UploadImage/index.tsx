@@ -87,6 +87,7 @@ export const UploadImage = ({
     <div className='flex items-center'>
       {!previewImage || uploading ? (
         <button
+          aria-label='upload-image'
           type='button'
           onClick={handleButtonClick}
           className='mr-[27px] flex h-[112px] w-[112px] items-center justify-center rounded-full border-2 border-dashed border-primary-200 hover:border-primary-100 focus:outline-none'

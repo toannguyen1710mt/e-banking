@@ -25,11 +25,11 @@ exports[`TasksWithCalendar component should match snapshot for TasksWithCalendar
         <div
           class="bg-background-300 px-4 pt-2"
         >
-          <h3
+          <span
             class="text-primary-200 text-2xs font-normal !text-foreground-200"
           >
             Select date
-          </h3>
+          </span>
         </div>
         <div
           style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"

@@ -53,7 +53,7 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
     <section className='mx-auto flex h-full w-full flex-col gap-6 lg:flex-row'>
       <div className='lg:w-3/4'>
         <Text
-          as='h2'
+          as='h1'
           className='text-2xl font-semibold leading-[29px] !text-black'
         >
           {getGreeting()},
