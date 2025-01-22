@@ -24,6 +24,7 @@ export const StepProgress: React.FC<StepProgressProps> = ({
       return (
         <div
           key={index}
+          role='button'
           className={cn(
             'h-2 w-1/4 rounded-full bg-secondary-300 transition-all',
             { 'opacity-10': index !== activeStep },
