@@ -1,6 +1,9 @@
 // Libs
 import { render } from '@testing-library/react';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
 // Mocks
 import { MOCK_TRANSACTION_WIHOUT_CURRENCY, MOCK_TRANSACTIONS } from '@/mocks';
 
@@ -43,5 +46,13 @@ describe('TransactionTable component', () => {
     expect(getByText('$120,000')).toBeInTheDocument(); // First transaction
     expect(getByText('$75')).toBeInTheDocument(); // Second transaction
     expect(getByText('$50')).toBeInTheDocument(); // Third transaction
+  });
+
+  it('should render empty message when transaction is empty', () => {
+    const { getByText } = render(
+      <TransactionTable {...mockProps} transactions={[]} />,
+    );
+
+    expect(getByText(ERROR_MESSAGES.EMPTY_DATA)).toBeInTheDocument();
   });
 });
