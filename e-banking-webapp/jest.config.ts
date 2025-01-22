@@ -15,6 +15,7 @@ const customJestConfig = {
     'next-auth': '<rootDir>/authConfig/mocks/next-auth.ts',
   },
   collectCoverageFrom: [
+    'src/app/**',
     'src/components/**',
     'src/hooks/**',
     'src/services/**',
@@ -24,6 +25,11 @@ const customJestConfig = {
     '!src/layouts/**/*.snap',
     '!src/**/*.stories.ts',
     '!src/**/*.stories.tsx',
+    '!src/app/**/route.ts',
+    '!src/app/**/robots.ts',
+    '!src/app/**/sitemap.ts',
+    '!src/app/**/layout.tsx',
+    '!src/app/**/loading.tsx',
   ],
   maxWorkers: 7, // Increase the number of workers, or set to "50%" if your machine can handle more parallel tests
   testRetries: 6, // Increase the number of retries for failed tests
