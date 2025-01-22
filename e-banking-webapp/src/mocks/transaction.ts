@@ -1,5 +1,10 @@
 // Interfaces
-import { AccountType, ITransaction } from '@/interfaces';
+import {
+  AccountType,
+  ITransaction,
+  ITransactionResponse,
+  SuccessResponse,
+} from '@/interfaces';
 
 // Utils
 import { formatDate } from '@/utils';
@@ -202,3 +207,34 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     toAccountType: AccountType.SAVINGS,
   },
 ];
+
+export const MOCK_TRANSACTIONS_HISTORY_HOME: SuccessResponse<
+  ITransactionResponse[]
+> = {
+  data: [
+    {
+      createdAt: '2025-01-15T09:45:00.209Z',
+      id: '363',
+      documentId: 'vb5vliuymy4tzjjw39259lpd',
+      fromAccountType: AccountType.SAVINGS,
+      amount: 3000,
+      statusTransaction: true,
+      fromAccountId: 'nios4sn0bgw5u28nelo8fmao',
+      toAccountId: 'e5bavd05yrng3g850yazqj0q',
+      toAccountType: AccountType.MAIN,
+      updatedAt: '2025-01-15T09:45:00.209Z',
+      publishedAt: '2025-01-15T09:45:00.165Z',
+      recipientName: '',
+      account: {
+        accountNumber: '106868929357',
+        balance: 9235800,
+        currency: '$',
+        documentId: 'nios4sn0bgw5u28nelo8fmao',
+        id: 116,
+        name: 'VID',
+        type: 'Savings',
+      },
+    },
+  ],
+  meta: { pagination: { page: 1, pageSize: 10, pageCount: 1, total: 1 } },
+};
