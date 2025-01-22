@@ -131,7 +131,7 @@ export const InternalTransferForm = ({
           const accounts = await getAccountsByUserId(session.user.id);
 
           const account = accounts.find(
-            ({ type }) => type === fromAccountTypeValue,
+            ({ type }) => type === toAccountTypeValue,
           );
 
           if (!account) return;
