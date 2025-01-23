@@ -5,7 +5,7 @@ import { cn } from '@nextui-org/react';
 interface StepProgressProps {
   steps: number;
   activeStep: number;
-  onPrevStep: (e: React.FormEvent) => void;
+  onPrevStep: () => void;
 }
 
 export const StepProgress: React.FC<StepProgressProps> = ({
@@ -16,8 +16,10 @@ export const StepProgress: React.FC<StepProgressProps> = ({
   <div className='absolute -left-10 bottom-0 flex w-full items-center justify-between gap-2'>
     {Array.from({ length: steps }).map((_, index) => {
       const handleClick = (e: React.FormEvent) => {
+        e.preventDefault();
+
         if (index < activeStep && activeStep !== steps - 1) {
-          onPrevStep(e);
+          onPrevStep();
         }
       };
 

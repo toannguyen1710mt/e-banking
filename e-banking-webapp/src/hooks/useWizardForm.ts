@@ -35,59 +35,45 @@ export function useWizardForm<Schema extends z.ZodType>(
     }
   }, [schema, form, stepNames, currentStepIndex]);
 
-  const onNextStep = useCallback(
-    <Ev extends React.SyntheticEvent>(e: Ev) => {
-      // prevent form submission when the user presses Enter
-      // or if the user forgets [type="button"] on the button
-      e.preventDefault();
+  const onNextStep = useCallback(() => {
+    const isValid = validateStep();
 
-      const isValid = validateStep();
+    if (!isValid) {
+      const currentStepName = stepNames[currentStepIndex] as Path<
+        z.TypeOf<Schema>
+      >;
 
-      if (!isValid) {
-        const currentStepName = stepNames[currentStepIndex] as Path<
-          z.TypeOf<Schema>
-        >;
+      if (schema instanceof z.ZodObject) {
+        const currentStepSchema = schema.shape[currentStepName] as z.ZodType;
 
-        if (schema instanceof z.ZodObject) {
-          const currentStepSchema = schema.shape[currentStepName] as z.ZodType;
+        if (currentStepSchema) {
+          const fields = Object.keys(
+            (currentStepSchema as z.ZodObject<never>).shape,
+          );
+          const keys = fields.map((field) => `${currentStepName}.${field}`);
 
-          if (currentStepSchema) {
-            const fields = Object.keys(
-              (currentStepSchema as z.ZodObject<never>).shape,
-            );
-            const keys = fields.map((field) => `${currentStepName}.${field}`);
-
-            // trigger validation for all fields in the current step
-            for (const key of keys) {
-              void form.trigger(key as Path<z.TypeOf<Schema>>);
-            }
-
-            return;
+          // trigger validation for all fields in the current step
+          for (const key of keys) {
+            void form.trigger(key as Path<z.TypeOf<Schema>>);
           }
+
+          return;
         }
       }
+    }
 
-      if (isValid && currentStepIndex < stepNames.length - 1) {
-        setDirection('forward');
-        setCurrentStepIndex((prev) => prev + 1);
-      }
-    },
-    [validateStep, currentStepIndex, stepNames, schema, form],
-  );
+    if (isValid && currentStepIndex < stepNames.length - 1) {
+      setDirection('forward');
+      setCurrentStepIndex((prev) => prev + 1);
+    }
+  }, [validateStep, currentStepIndex, stepNames, schema, form]);
 
-  const onPrevStep = useCallback(
-    <Ev extends React.SyntheticEvent>(e: Ev) => {
-      // prevent form submission when the user presses Enter
-      // or if the user forgets [type="button"] on the button
-      e.preventDefault();
-
-      if (currentStepIndex > 0) {
-        setDirection('backward');
-        setCurrentStepIndex((prev) => prev - 1);
-      }
-    },
-    [currentStepIndex],
-  );
+  const onPrevStep = useCallback(() => {
+    if (currentStepIndex > 0) {
+      setDirection('backward');
+      setCurrentStepIndex((prev) => prev - 1);
+    }
+  }, [currentStepIndex]);
 
   const goToStep = useCallback(
     (index: number) => {

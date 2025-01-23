@@ -43,7 +43,7 @@ export const ConfirmGlobalTransfer = <T extends z.ZodType>({
     startTransition(() => {
       const data = getValues();
       submitHandler(data);
-      onNextStep(e);
+      onNextStep();
     });
   };
 
