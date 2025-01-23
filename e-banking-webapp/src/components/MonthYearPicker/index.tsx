@@ -142,6 +142,7 @@ export const MonthYearPicker = ({
               {MONTHS.map((monthName, index) => (
                 <button
                   key={monthName}
+                  aria-label={`month-click-${index}`}
                   onClick={() => handleMonthClick(index + 1)}
                   className={`rounded-md px-1 py-2 text-sm font-medium ${
                     index === (month ?? 1) - 1

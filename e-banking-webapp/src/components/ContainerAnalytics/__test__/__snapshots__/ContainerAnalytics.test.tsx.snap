@@ -11,7 +11,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
         <div
           class="lg:w-3/4"
         >
-          <h2
+          <h1
             class="text-primary-200 text-2xl font-semibold leading-[29px] !text-black"
           >
             Good Afternoon
@@ -21,7 +21,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
             >
               phong
             </span>
-          </h2>
+          </h1>
           <div
             class="mt-6 flex flex-col gap-6"
           >
@@ -705,12 +705,12 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                       class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased gap-2 px-0 pb-0 pt-3"
                     >
                       <span
-                        class="text-primary-200 text-xs font-normal text-white"
+                        class="text-primary-200 text-xs font-normal text-white max-[680px]:text-sm"
                       >
                         Available Wallets
                       </span>
                       <ol
-                        class="flex gap-6 text-[10px] font-normal text-white"
+                        class="flex gap-6 text-[10px] font-normal text-white max-[680px]:text-xs"
                       >
                         <li>
                           1
@@ -745,7 +745,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                               class="h-[14px] w-[14px] bg-java"
                             />
                             <span
-                              class="text-primary-200 text-[10px] font-normal text-white"
+                              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                             >
                               Balance
                             </span>
@@ -757,7 +757,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                               class="h-[14px] w-[14px] bg-pastelYellow"
                             />
                             <span
-                              class="text-primary-200 text-[10px] font-normal text-white"
+                              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                             >
                               Savings
                             </span>
@@ -769,7 +769,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                               class="h-[14px] w-[14px] bg-softGreen"
                             />
                             <span
-                              class="text-primary-200 text-[10px] font-normal text-white"
+                              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                             >
                               Checkings
                             </span>
@@ -1105,11 +1105,11 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                 <div
                   class="bg-background-300 px-4 pt-2"
                 >
-                  <h3
+                  <span
                     class="text-primary-200 text-2xs font-normal !text-foreground-200"
                   >
                     Select date
-                  </h3>
+                  </span>
                 </div>
                 <div
                   style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
@@ -2048,7 +2048,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
       <div
         class="lg:w-3/4"
       >
-        <h2
+        <h1
           class="text-primary-200 text-2xl font-semibold leading-[29px] !text-black"
         >
           Good Afternoon
@@ -2058,7 +2058,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
           >
             phong
           </span>
-        </h2>
+        </h1>
         <div
           class="mt-6 flex flex-col gap-6"
         >
@@ -2742,12 +2742,12 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                     class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased gap-2 px-0 pb-0 pt-3"
                   >
                     <span
-                      class="text-primary-200 text-xs font-normal text-white"
+                      class="text-primary-200 text-xs font-normal text-white max-[680px]:text-sm"
                     >
                       Available Wallets
                     </span>
                     <ol
-                      class="flex gap-6 text-[10px] font-normal text-white"
+                      class="flex gap-6 text-[10px] font-normal text-white max-[680px]:text-xs"
                     >
                       <li>
                         1
@@ -2782,7 +2782,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                             class="h-[14px] w-[14px] bg-java"
                           />
                           <span
-                            class="text-primary-200 text-[10px] font-normal text-white"
+                            class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                           >
                             Balance
                           </span>
@@ -2794,7 +2794,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                             class="h-[14px] w-[14px] bg-pastelYellow"
                           />
                           <span
-                            class="text-primary-200 text-[10px] font-normal text-white"
+                            class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                           >
                             Savings
                           </span>
@@ -2806,7 +2806,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
                             class="h-[14px] w-[14px] bg-softGreen"
                           />
                           <span
-                            class="text-primary-200 text-[10px] font-normal text-white"
+                            class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                           >
                             Checkings
                           </span>
@@ -3142,11 +3142,11 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
               <div
                 class="bg-background-300 px-4 pt-2"
               >
-                <h3
+                <span
                   class="text-primary-200 text-2xs font-normal !text-foreground-200"
                 >
                   Select date
-                </h3>
+                </span>
               </div>
               <div
                 style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
