@@ -15,6 +15,9 @@ import { getAccountsByUserId, getTransactionsByUserId } from '@/services';
 // Utils
 import { getGreeting } from '@/utils';
 
+// Context
+import { useToastContext } from '@/context';
+
 // Components
 import { CardOverview } from '../CardOverview';
 import { Text } from '../common';
@@ -30,6 +33,7 @@ interface IContainerAnalyticsProps {
 export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
   const [accounts, setAccounts] = useState<IAccount[]>([]);
   const [totalTransfer, setTotalTransfer] = useState<number>(0);
+  const { showToast } = useToastContext();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,7 +49,7 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
         setAccounts(result);
       } catch (error) {
         if (error instanceof AuthError) {
-          throw ERROR_MESSAGES.GET_ERROR;
+          showToast(ERROR_MESSAGES.GET_ERROR, 'error', 'top-center');
         }
       }
     };
