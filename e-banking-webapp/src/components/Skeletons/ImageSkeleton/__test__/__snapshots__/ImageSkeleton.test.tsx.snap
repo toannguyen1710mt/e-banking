@@ -13,8 +13,8 @@ exports[`ImageSkeleton component should match snapshot 1`] = `
           class="flex h-64 w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700 sm:w-96"
         >
           <svg
+            aria-label="image-icon"
             class="w-16 h-16"
-            data-testid="image-icon"
             fill="none"
             height="56"
             viewBox="0 0 56 56"
@@ -46,8 +46,8 @@ exports[`ImageSkeleton component should match snapshot 1`] = `
         class="flex h-64 w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700 sm:w-96"
       >
         <svg
+          aria-label="image-icon"
           class="w-16 h-16"
-          data-testid="image-icon"
           fill="none"
           height="56"
           viewBox="0 0 56 56"
