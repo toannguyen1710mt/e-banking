@@ -106,6 +106,7 @@ export const UploadImage = ({
         <input
           name='upload'
           type='file'
+          data-testid='upload'
           hidden
           style={{ display: 'none' }}
           accept='image/png, image/webp, image/jpeg'
@@ -125,7 +126,11 @@ export const UploadImage = ({
       </label>
 
       {previewImage && (
-        <button className='text-primary-200' onClick={handleRemoveImage}>
+        <button
+          aria-label='delete-icon'
+          className='text-primary-200'
+          onClick={handleRemoveImage}
+        >
           <TrashIcon />
         </button>
       )}

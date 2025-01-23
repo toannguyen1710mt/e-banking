@@ -14,6 +14,7 @@ exports[`ImageSkeleton component should match snapshot 1`] = `
         >
           <svg
             class="w-16 h-16"
+            data-testid="image-icon"
             fill="none"
             height="56"
             viewBox="0 0 56 56"
@@ -46,6 +47,7 @@ exports[`ImageSkeleton component should match snapshot 1`] = `
       >
         <svg
           class="w-16 h-16"
+          data-testid="image-icon"
           fill="none"
           height="56"
           viewBox="0 0 56 56"
