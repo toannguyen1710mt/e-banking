@@ -1,7 +1,6 @@
 'use client';
 
 import React, { HTMLProps, useMemo } from 'react';
-import { Slot, Slottable } from '@radix-ui/react-slot';
 import { UseFormReturn } from 'react-hook-form';
 import { z } from 'zod';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -25,7 +24,6 @@ interface WizardFormProps<T extends z.ZodType> {
 type StepProps = React.PropsWithChildren<
   {
     name: string;
-    asChild?: boolean;
   } & React.HTMLProps<HTMLDivElement>
 >;
 
@@ -63,6 +61,7 @@ function WizardFormRoot<T extends z.ZodType>({
   return (
     <WizardFormContext.Provider value={wizardFormStep}>
       <form
+        role='form'
         onSubmit={onSubmit ? form.handleSubmit(onSubmit!) : undefined}
         className={className}
       >
@@ -96,18 +95,12 @@ WizardFormRoot.displayName = 'WizardForm.Root';
 
 const WizardFormStep = React.forwardRef<
   HTMLDivElement,
-  React.PropsWithChildren<
-    {
-      asChild?: boolean;
-    } & HTMLProps<HTMLDivElement>
-  >
->(function WizardFormStep({ children, asChild, ...props }, ref) {
-  const ElementType = asChild ? Slot : 'div';
-
+  React.PropsWithChildren<HTMLProps<HTMLDivElement>>
+>(function WizardFormStep({ children, ...props }, ref) {
   return (
-    <ElementType ref={ref} {...props}>
-      <Slottable>{children}</Slottable>
-    </ElementType>
+    <div ref={ref} {...props}>
+      <div>{children}</div>
+    </div>
   );
 });
 
@@ -115,18 +108,12 @@ WizardFormStep.displayName = 'WizardForm.Step';
 
 const WizardFormHeader = React.forwardRef<
   HTMLDivElement,
-  React.PropsWithChildren<
-    {
-      asChild?: boolean;
-    } & HTMLProps<HTMLDivElement>
-  >
->(function WizardFormHeader({ children, asChild, ...props }, ref) {
-  const ElementType = asChild ? Slot : 'div';
-
+  React.PropsWithChildren<HTMLProps<HTMLDivElement>>
+>(function WizardFormHeader({ children, ...props }, ref) {
   return (
-    <ElementType ref={ref} {...props}>
-      <Slottable>{children}</Slottable>
-    </ElementType>
+    <div ref={ref} {...props}>
+      <div>{children}</div>
+    </div>
   );
 });
 
@@ -134,18 +121,12 @@ WizardFormHeader.displayName = 'WizardForm.Header';
 
 const WizardFormFooter = React.forwardRef<
   HTMLDivElement,
-  React.PropsWithChildren<
-    {
-      asChild?: boolean;
-    } & HTMLProps<HTMLDivElement>
-  >
->(function WizardFormFooter({ children, asChild, ...props }, ref) {
-  const ElementType = asChild ? Slot : 'div';
-
+  React.PropsWithChildren<HTMLProps<HTMLDivElement>>
+>(function WizardFormFooter({ children, ...props }, ref) {
   return (
-    <ElementType ref={ref} {...props}>
-      <Slottable>{children}</Slottable>
-    </ElementType>
+    <div ref={ref} {...props}>
+      <div>{children}</div>
+    </div>
   );
 });
 WizardFormFooter.displayName = 'WizardForm.Footer';
