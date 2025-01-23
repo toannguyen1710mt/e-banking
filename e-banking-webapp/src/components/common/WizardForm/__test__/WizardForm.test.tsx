@@ -51,7 +51,7 @@ describe('WizardForm component', () => {
         </WizardForm.Step>
         <WizardForm.Footer>
           <button type='button'>Previous</button>
-          <button data-testId='next-button' type='submit'>
+          <button aria-label='next-button' type='submit'>
             Next
           </button>
         </WizardForm.Footer>
@@ -101,7 +101,7 @@ describe('WizardForm component', () => {
     });
 
     await act(async () => {
-      fireEvent.submit(screen.getByTestId('next-button'));
+      fireEvent.submit(screen.getByLabelText('next-button'));
     });
 
     expect(onSubmitMock).toHaveBeenCalledTimes(1);
