@@ -1,12 +1,11 @@
 // Libs
 import type { Meta, StoryObj } from '@storybook/react';
-import { useForm } from 'react-hook-form';
-
-// Interfaces
-import { AccountType } from '@/interfaces';
 
 // Utils
 import { InternalTransferFormSchema } from '@/schemas';
+
+// Mocks
+import { useMockFormInternal } from '@/mocks';
 
 // Components
 import { ConfirmInternalTransfer } from '@/components';
@@ -25,31 +24,11 @@ export default meta;
 
 type Story = StoryObj<typeof ConfirmInternalTransfer>;
 
-const useMockForm = () => {
-  return useForm({
-    defaultValues: {
-      fromAccountId: '',
-      fromCardName: '',
-      fromAccountNumber: '',
-      fromAccountBalance: 0,
-      toAccountId: '',
-      internalTransfer: {
-        amount: '500',
-        fromAccountType: '' as AccountType,
-        toAccountType: '' as AccountType,
-      },
-      toCardName: '',
-      toAccountNumber: '',
-      toAccountBalance: 0,
-    },
-  });
-};
-
 export const Default: Story = {
   render: (args) => (
     <WizardForm.Root
       schema={InternalTransferFormSchema}
-      form={useMockForm()}
+      form={useMockFormInternal()}
       className='flex grow flex-col'
     >
       <WizardForm.Step

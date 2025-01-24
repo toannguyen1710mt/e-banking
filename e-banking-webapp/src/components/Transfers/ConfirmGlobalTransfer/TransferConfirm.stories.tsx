@@ -5,6 +5,9 @@ import { z } from 'zod';
 // Utils
 import { GlobalTransferFormSchema } from '@/schemas';
 
+// Mocks
+import { useMockFormGlobal } from '@/mocks';
+
 // Components
 import { ConfirmGlobalTransfer } from '@/components';
 import * as WizardForm from '@/components/common/WizardForm';
@@ -22,27 +25,6 @@ export default meta;
 
 type Story = StoryObj<typeof ConfirmGlobalTransfer>;
 
-import { useForm } from 'react-hook-form';
-import { AccountType, GlobalType } from '@/interfaces';
-
-const useMockForm = () => {
-  return useForm({
-    defaultValues: {
-      globalTransfer: {
-        fromAccountType: '' as AccountType,
-        fromCountryType: '' as GlobalType,
-        recipientAccount: '',
-        amount: '',
-      },
-      fromAccountId: '',
-      fromCardName: '',
-      fromAccountNumber: '',
-      fromAccountBalance: 0,
-      recipientName: '',
-    },
-  });
-};
-
 export const Default: Story = {
   args: {
     submitHandler: (data: z.infer<typeof GlobalTransferFormSchema>) => {
@@ -53,7 +35,7 @@ export const Default: Story = {
   render: (args) => (
     <WizardForm.Root
       schema={GlobalTransferFormSchema}
-      form={useMockForm()}
+      form={useMockFormGlobal()}
       className='flex grow flex-col'
     >
       <WizardForm.Step
