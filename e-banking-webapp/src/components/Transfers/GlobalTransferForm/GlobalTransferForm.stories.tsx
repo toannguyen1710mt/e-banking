@@ -1,11 +1,18 @@
 // Libs
 import { Meta, StoryObj } from '@storybook/react';
 
-// Components
-import { GlobalTransferForm } from '@/components';
+// Constants
+import { MOCK_SESSION_DATA, useMockFormGlobal } from '@/mocks';
 
-// Mocks
-import { MOCK_SESSION_DATA } from '@/mocks';
+// Context
+import { FetchedBalancesProvider } from '@/context';
+
+// Utils
+import { GlobalTransferFormSchema } from '@/schemas';
+
+// Components
+import * as WizardForm from '@/components/common/WizardForm';
+import { GlobalTransferForm } from '@/components';
 
 const meta = {
   title: 'Components/Transfers/GlobalTransferForm',
@@ -28,7 +35,17 @@ export default meta;
 type Story = StoryObj<typeof GlobalTransferForm>;
 
 export const InternalTransferFormDefault: Story = {
-  args: {
-    session: MOCK_SESSION_DATA,
-  },
+  render: () => (
+    <FetchedBalancesProvider>
+      <WizardForm.Root
+        schema={GlobalTransferFormSchema}
+        form={useMockFormGlobal()}
+        className='flex grow flex-col'
+      >
+        <WizardForm.Step name='transfer' key='transfer'>
+          <GlobalTransferForm session={MOCK_SESSION_DATA} />
+        </WizardForm.Step>
+      </WizardForm.Root>
+    </FetchedBalancesProvider>
+  ),
 };

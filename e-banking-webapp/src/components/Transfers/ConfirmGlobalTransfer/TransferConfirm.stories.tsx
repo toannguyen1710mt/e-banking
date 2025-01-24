@@ -5,11 +5,15 @@ import { z } from 'zod';
 // Utils
 import { GlobalTransferFormSchema } from '@/schemas';
 
+// Mocks
+import { useMockFormGlobal } from '@/mocks';
+
 // Components
 import { ConfirmGlobalTransfer } from '@/components';
+import * as WizardForm from '@/components/common/WizardForm';
 
 const meta = {
-  title: 'Components/ConfirmGlobalTransfer',
+  title: 'Components/Transfers/ConfirmGlobalTransfer',
   component: ConfirmGlobalTransfer,
   tags: ['autodocs'],
   parameters: {
@@ -28,5 +32,19 @@ export const Default: Story = {
     },
     amountInUSD: '500',
   },
-  render: (args) => <ConfirmGlobalTransfer {...args} />,
+  render: (args) => (
+    <WizardForm.Root
+      schema={GlobalTransferFormSchema}
+      form={useMockFormGlobal()}
+      className='flex grow flex-col'
+    >
+      <WizardForm.Step
+        name='confirm'
+        key='confirm'
+        className='flex grow flex-col items-center justify-center'
+      >
+        <ConfirmGlobalTransfer {...args} />
+      </WizardForm.Step>
+    </WizardForm.Root>
+  ),
 };
