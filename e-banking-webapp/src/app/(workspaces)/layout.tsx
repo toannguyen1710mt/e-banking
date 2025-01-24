@@ -4,7 +4,7 @@ import { SessionProvider } from 'next-auth/react';
 import { auth } from '@/config/auth';
 
 // Layouts
-import { HeaderAuth, WrapperWorkspaces } from '@/layouts';
+import { Header, WrapperWorkspaces } from '@/layouts';
 
 export default async function MainLayout({
   children,
@@ -13,10 +13,18 @@ export default async function MainLayout({
 }>) {
   const session = await auth();
 
+  if (!session) {
+    return null;
+  }
+
+  const {
+    user: { username, email },
+  } = session;
+
   return (
     <SessionProvider session={session}>
       <div className='flex h-full w-full flex-col'>
-        <HeaderAuth />
+        {session && <Header username={username} email={email} />}
         <WrapperWorkspaces>{children}</WrapperWorkspaces>
       </div>
     </SessionProvider>
