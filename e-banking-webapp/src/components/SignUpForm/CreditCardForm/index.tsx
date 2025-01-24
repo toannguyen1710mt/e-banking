@@ -53,7 +53,7 @@ export const CreditCardForm = <T extends z.ZodType>({
       const handler = handleSubmit(submitHandler);
       try {
         await handler(e);
-        onNextStep(e);
+        onNextStep();
       } catch (error) {
         setError('user.email', {
           type: 'validate',
