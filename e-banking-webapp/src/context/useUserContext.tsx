@@ -1,4 +1,10 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  ReactNode,
+  useEffect,
+} from 'react';
 
 // Constants
 import { ERROR_MESSAGES } from '@/constants';
@@ -17,9 +23,13 @@ interface UserProviderProps {
 
 export const UserProvider: React.FC<UserProviderProps> = ({
   children,
-  avatar: a1,
+  avatar: initialAvatar,
 }) => {
-  const [avatar, setAvatar] = useState<string>(a1);
+  const [avatar, setAvatar] = useState<string>(initialAvatar);
+
+  useEffect(() => {
+    setAvatar(initialAvatar);
+  }, [initialAvatar]);
 
   const updateSession = (url: string) => {
     setAvatar(url || '');
