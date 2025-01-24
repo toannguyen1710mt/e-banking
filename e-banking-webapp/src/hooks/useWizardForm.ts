@@ -28,7 +28,7 @@ export function useWizardForm<Schema extends z.ZodType>(
 
       if (!currentStepSchema) return true;
 
-      const currentStepData = form.watch(currentStepName) ?? {};
+      const currentStepData = form.watch(currentStepName);
       const result = currentStepSchema.safeParse(currentStepData);
 
       return result.success;
