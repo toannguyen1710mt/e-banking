@@ -82,6 +82,10 @@ describe('AccountForm Component', () => {
     });
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Should renders snapshot correctly', () => {
     expect(render(<AccountForm />)).toMatchSnapshot();
   });
