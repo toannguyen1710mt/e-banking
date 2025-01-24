@@ -12,7 +12,6 @@ import {
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Session } from 'next-auth';
 import { redirect, usePathname } from 'next/navigation';
 
 // Constants
@@ -36,10 +35,11 @@ import { signOut } from '@/actions';
 import { useToastContext, useUserContext } from '@/context';
 
 interface IHeaderProps {
-  session: Session;
+  username: string;
+  email: string;
 }
 
-export const Header = ({ session }: IHeaderProps) => {
+export const Header = ({ username, email }: IHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
   const { showToast } = useToastContext();
@@ -48,10 +48,6 @@ export const Header = ({ session }: IHeaderProps) => {
   const { avatar } = useUserContext();
 
   const isSettingsUrl = REGEX.SETTINGS.test(pathname);
-
-  const {
-    user: { username, email },
-  } = session;
 
   const mobileMenuOptions = [
     ...NavbarList.map((item) => ({
