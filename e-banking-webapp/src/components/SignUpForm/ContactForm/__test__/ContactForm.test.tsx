@@ -90,4 +90,13 @@ describe('AccountForm Component', () => {
       expect(usernameInput.value).toHaveBeenCalledWith('123456789123');
     });
   });
+
+  it('Should call onNextStep when the button is clicked', () => {
+    render(<ContactForm />);
+
+    const continueButton = screen.getByRole('button', { name: /continue/i });
+    fireEvent.click(continueButton);
+
+    expect(mockOnNextStep).toHaveBeenCalled();
+  });
 });
