@@ -25,14 +25,15 @@ describe('MonthYearPicker component', () => {
   const onChangeMock = jest.fn();
   const fixedDate = new Date(2025, 0, 1);
 
-  beforeAll(() => {
+  beforeEach(() => {
     jest
       .spyOn(global, 'Date')
       .mockImplementation(() => fixedDate as unknown as Date);
   });
 
-  afterAll(() => {
+  afterEach(() => {
     jest.restoreAllMocks();
+    jest.clearAllMocks();
   });
 
   test('should match snapshot', () => {
