@@ -1,0 +1,630 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditCardForm component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="mb-10 flex w-full flex-col gap-4 bg-white"
+      >
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:r0:"
+                id="react-aria-:r1:"
+              >
+                Holders Name
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.65063 8.78268L6.18627 8.56808L5.73278 8.21128C5.13365 7.73991 4.69634 7.09351 4.48169 6.36202C4.26703 5.63054 4.28571 4.85033 4.53513 4.12996C4.78454 3.40958 5.25229 2.78485 5.87329 2.34269C6.49429 1.90053 7.23767 1.66292 8 1.66292C8.76233 1.66292 9.50571 1.90053 10.1267 2.34269C10.7477 2.78485 11.2155 3.40958 11.4649 4.12996C11.7143 4.85033 11.733 5.63054 11.5183 6.36202C11.3037 7.09351 10.8663 7.73991 10.2672 8.21128L10.4733 8.47325L10.3504 8.78308C11.4187 9.20708 12.3516 9.91385 13.0489 10.8276C13.7461 11.7412 14.1815 12.8272 14.3086 13.9693C14.3178 14.0566 14.2923 14.144 14.2374 14.2125C14.1858 14.2771 14.1121 14.32 14.0309 14.3333L13.98 14.3332L13.978 14.3333C13.8956 14.3338 13.8159 14.3037 13.7543 14.2489C13.6928 14.1941 13.6537 14.1185 13.6446 14.0366L13.6446 14.036C13.489 12.6514 12.8288 11.3726 11.79 10.4439C10.7512 9.5153 9.4067 9.00194 8.01333 9.00194C6.61997 9.00194 5.27545 9.5153 4.23665 10.4439C3.19786 11.3726 2.53762 12.6514 2.38208 14.036L2.382 14.0368C2.37221 14.1257 2.3275 14.2071 2.2577 14.2631C2.18789 14.3191 2.09871 14.345 2.00978 14.3353C1.92084 14.3255 1.83944 14.2808 1.78347 14.211C1.75575 14.1764 1.73512 14.1367 1.72274 14.0942C1.71037 14.0517 1.70649 14.0071 1.71132 13.9631C1.83775 12.824 2.27089 11.7406 2.9646 10.8283C3.65835 9.91593 4.58668 9.20894 5.65063 8.78268ZM6.33329 7.82766C6.82663 8.15731 7.40665 8.33325 8 8.33325C8.79565 8.33325 9.55871 8.01718 10.1213 7.45457C10.6839 6.89197 11 6.1289 11 5.33325C11 4.73991 10.8241 4.15989 10.4944 3.66654C10.1648 3.1732 9.69623 2.78868 9.14805 2.56162C8.59987 2.33455 7.99667 2.27514 7.41473 2.3909C6.83278 2.50665 6.29823 2.79238 5.87868 3.21193C5.45912 3.63149 5.1734 4.16604 5.05764 4.74798C4.94189 5.32993 5.0013 5.93313 5.22836 6.4813C5.45542 7.02948 5.83994 7.49802 6.33329 7.82766Z"
+                    fill="black"
+                    stroke="currentColor"
+                    stroke-width="0.666667"
+                  />
+                </svg>
+                <input
+                  aria-label="holderName"
+                  aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                  data-has-start-content="true"
+                  data-slot="input"
+                  id="react-aria-:r0:"
+                  placeholder="Holders Name"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:r5:"
+                id="react-aria-:r6:"
+              >
+                Card Number
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 2.66675H1.99996C1.26358 2.66675 0.666626 3.2637 0.666626 4.00008V12.0001C0.666626 12.7365 1.26358 13.3334 1.99996 13.3334H14C14.7363 13.3334 15.3333 12.7365 15.3333 12.0001V4.00008C15.3333 3.2637 14.7363 2.66675 14 2.66675Z"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.33333"
+                  />
+                  <path
+                    d="M0.666626 6.66675H15.3333"
+                    stroke="black"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.33333"
+                  />
+                </svg>
+                <input
+                  aria-label="cardNumber"
+                  aria-labelledby="react-aria-:r5: react-aria-:r6:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                  data-has-start-content="true"
+                  data-slot="input"
+                  id="react-aria-:r5:"
+                  maxlength="14"
+                  placeholder="Card Number"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex gap-5"
+        >
+          <div
+            class="relative w-[50%]"
+          >
+            <p
+              class="text-primary-200 text-sm font-medium mb-2 leading-4 text-primary-200 opacity-50"
+            >
+              Expire Date
+            </p>
+            <div
+              class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+              data-filled="true"
+              data-filled-within="true"
+              data-slot="base"
+            >
+              <div
+                class="h-full flex flex-col"
+                data-slot="main-wrapper"
+              >
+                <div
+                  class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+                  data-slot="input-wrapper"
+                  style="cursor: text;"
+                >
+                  <div
+                    class="inline-flex w-full items-center h-full box-border"
+                    data-slot="inner-wrapper"
+                  >
+                    <button
+                      aria-label="Toggle Date Month Picker"
+                      class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm leading-[20px] inline-block w-4 min-w-4 border-none p-0 text-current"
+                      type="button"
+                    >
+                      <svg
+                        fill="none"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.6667 2.66675H3.33333C2.59695 2.66675 2 3.2637 2 4.00008V13.3334C2 14.0698 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0698 14 13.3334V4.00008C14 3.2637 13.403 2.66675 12.6667 2.66675Z"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.33333"
+                        />
+                        <path
+                          d="M2 6.66675H14"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.33333"
+                        />
+                        <path
+                          d="M10.6666 1.33325V3.99992"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.33333"
+                        />
+                        <path
+                          d="M5.33337 1.33325V3.99992"
+                          stroke="black"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.33333"
+                        />
+                      </svg>
+                    </button>
+                    <input
+                      aria-label="MM/YY"
+                      class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                      data-has-start-content="true"
+                      data-slot="input"
+                      id="react-aria-:ra:"
+                      placeholder="MM/YY"
+                      readonly=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] w-[50%]"
+            data-filled="true"
+            data-filled-within="true"
+            data-has-elements="true"
+            data-has-label="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <label
+                  class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                  data-slot="label"
+                  for="react-aria-:rf:"
+                  id="react-aria-:rg:"
+                >
+                  CCV
+                </label>
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <svg
+                    fill="none"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.66671 6.99992H2.33337V7.33325V11.3333C2.33337 11.5985 2.43873 11.8528 2.62627 12.0404C2.8138 12.2279 3.06816 12.3333 3.33337 12.3333H12.6667C12.9319 12.3333 13.1863 12.2279 13.3738 12.0404C13.5614 11.8528 13.6667 11.5985 13.6667 11.3333V7.33325V6.99992H13.3334H2.66671ZM13.3334 6.33325H13.6667V5.99992V5.33325C13.6667 5.06804 13.5614 4.81368 13.3738 4.62615C13.1863 4.43861 12.9319 4.33325 12.6667 4.33325H3.33337C3.06816 4.33325 2.8138 4.43861 2.62627 4.62615C2.43873 4.81368 2.33337 5.06804 2.33337 5.33325V5.99992V6.33325H2.66671H13.3334ZM6.66671 9.66659H4.66671C4.5783 9.66659 4.49352 9.63147 4.43101 9.56895C4.36849 9.50644 4.33337 9.42166 4.33337 9.33325C4.33337 9.24485 4.36849 9.16006 4.43101 9.09755C4.49352 9.03504 4.5783 8.99992 4.66671 8.99992H6.66671C6.75511 8.99992 6.8399 9.03504 6.90241 9.09755C6.96492 9.16006 7.00004 9.24485 7.00004 9.33325C7.00004 9.42166 6.96492 9.50644 6.90241 9.56895C6.8399 9.63147 6.75511 9.66659 6.66671 9.66659ZM3.33337 3.66659H12.6667C13.1087 3.66659 13.5327 3.84218 13.8452 4.15474C14.1578 4.4673 14.3334 4.89122 14.3334 5.33325V11.3333C14.3334 11.7753 14.1578 12.1992 13.8452 12.5118C13.5327 12.8243 13.1087 12.9999 12.6667 12.9999H3.33337C2.89135 12.9999 2.46742 12.8243 2.15486 12.5118C1.8423 12.1992 1.66671 11.7753 1.66671 11.3333V5.33325C1.66671 4.89122 1.8423 4.4673 2.15486 4.15474C2.46742 3.84218 2.89135 3.66659 3.33337 3.66659Z"
+                      fill="black"
+                      stroke="currentColor"
+                      stroke-width="0.666667"
+                    />
+                  </svg>
+                  <input
+                    aria-label="ccv"
+                    aria-labelledby="react-aria-:rf: react-aria-:rg:"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                    data-has-start-content="true"
+                    data-slot="input"
+                    id="react-aria-:rf:"
+                    maxlength="3"
+                    placeholder="000"
+                    type="string"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] [&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6"
+        type="button"
+      >
+        Continue
+      </button>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="mb-10 flex w-full flex-col gap-4 bg-white"
+    >
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+              data-slot="label"
+              for="react-aria-:r0:"
+              id="react-aria-:r1:"
+            >
+              Holders Name
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.65063 8.78268L6.18627 8.56808L5.73278 8.21128C5.13365 7.73991 4.69634 7.09351 4.48169 6.36202C4.26703 5.63054 4.28571 4.85033 4.53513 4.12996C4.78454 3.40958 5.25229 2.78485 5.87329 2.34269C6.49429 1.90053 7.23767 1.66292 8 1.66292C8.76233 1.66292 9.50571 1.90053 10.1267 2.34269C10.7477 2.78485 11.2155 3.40958 11.4649 4.12996C11.7143 4.85033 11.733 5.63054 11.5183 6.36202C11.3037 7.09351 10.8663 7.73991 10.2672 8.21128L10.4733 8.47325L10.3504 8.78308C11.4187 9.20708 12.3516 9.91385 13.0489 10.8276C13.7461 11.7412 14.1815 12.8272 14.3086 13.9693C14.3178 14.0566 14.2923 14.144 14.2374 14.2125C14.1858 14.2771 14.1121 14.32 14.0309 14.3333L13.98 14.3332L13.978 14.3333C13.8956 14.3338 13.8159 14.3037 13.7543 14.2489C13.6928 14.1941 13.6537 14.1185 13.6446 14.0366L13.6446 14.036C13.489 12.6514 12.8288 11.3726 11.79 10.4439C10.7512 9.5153 9.4067 9.00194 8.01333 9.00194C6.61997 9.00194 5.27545 9.5153 4.23665 10.4439C3.19786 11.3726 2.53762 12.6514 2.38208 14.036L2.382 14.0368C2.37221 14.1257 2.3275 14.2071 2.2577 14.2631C2.18789 14.3191 2.09871 14.345 2.00978 14.3353C1.92084 14.3255 1.83944 14.2808 1.78347 14.211C1.75575 14.1764 1.73512 14.1367 1.72274 14.0942C1.71037 14.0517 1.70649 14.0071 1.71132 13.9631C1.83775 12.824 2.27089 11.7406 2.9646 10.8283C3.65835 9.91593 4.58668 9.20894 5.65063 8.78268ZM6.33329 7.82766C6.82663 8.15731 7.40665 8.33325 8 8.33325C8.79565 8.33325 9.55871 8.01718 10.1213 7.45457C10.6839 6.89197 11 6.1289 11 5.33325C11 4.73991 10.8241 4.15989 10.4944 3.66654C10.1648 3.1732 9.69623 2.78868 9.14805 2.56162C8.59987 2.33455 7.99667 2.27514 7.41473 2.3909C6.83278 2.50665 6.29823 2.79238 5.87868 3.21193C5.45912 3.63149 5.1734 4.16604 5.05764 4.74798C4.94189 5.32993 5.0013 5.93313 5.22836 6.4813C5.45542 7.02948 5.83994 7.49802 6.33329 7.82766Z"
+                  fill="black"
+                  stroke="currentColor"
+                  stroke-width="0.666667"
+                />
+              </svg>
+              <input
+                aria-label="holderName"
+                aria-labelledby="react-aria-:r0: react-aria-:r1:"
+                class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                data-has-start-content="true"
+                data-slot="input"
+                id="react-aria-:r0:"
+                placeholder="Holders Name"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-slot="base"
+      >
+        <div
+          class="h-full flex flex-col"
+          data-slot="main-wrapper"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+              data-slot="label"
+              for="react-aria-:r5:"
+              id="react-aria-:r6:"
+            >
+              Card Number
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border"
+              data-slot="inner-wrapper"
+            >
+              <svg
+                fill="none"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 2.66675H1.99996C1.26358 2.66675 0.666626 3.2637 0.666626 4.00008V12.0001C0.666626 12.7365 1.26358 13.3334 1.99996 13.3334H14C14.7363 13.3334 15.3333 12.7365 15.3333 12.0001V4.00008C15.3333 3.2637 14.7363 2.66675 14 2.66675Z"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.33333"
+                />
+                <path
+                  d="M0.666626 6.66675H15.3333"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.33333"
+                />
+              </svg>
+              <input
+                aria-label="cardNumber"
+                aria-labelledby="react-aria-:r5: react-aria-:r6:"
+                class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                data-has-start-content="true"
+                data-slot="input"
+                id="react-aria-:r5:"
+                maxlength="14"
+                placeholder="Card Number"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex gap-5"
+      >
+        <div
+          class="relative w-[50%]"
+        >
+          <p
+            class="text-primary-200 text-sm font-medium mb-2 leading-4 text-primary-200 opacity-50"
+          >
+            Expire Date
+          </p>
+          <div
+            class="group flex flex-col data-[hidden=true]:hidden w-full relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)]"
+            data-filled="true"
+            data-filled-within="true"
+            data-slot="base"
+          >
+            <div
+              class="h-full flex flex-col"
+              data-slot="main-wrapper"
+            >
+              <div
+                class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+                data-slot="input-wrapper"
+                style="cursor: text;"
+              >
+                <div
+                  class="inline-flex w-full items-center h-full box-border"
+                  data-slot="inner-wrapper"
+                >
+                  <button
+                    aria-label="Toggle Date Month Picker"
+                    class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-none rounded-3xl max-h-10 text-sm leading-[20px] inline-block w-4 min-w-4 border-none p-0 text-current"
+                    type="button"
+                  >
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.6667 2.66675H3.33333C2.59695 2.66675 2 3.2637 2 4.00008V13.3334C2 14.0698 2.59695 14.6667 3.33333 14.6667H12.6667C13.403 14.6667 14 14.0698 14 13.3334V4.00008C14 3.2637 13.403 2.66675 12.6667 2.66675Z"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.33333"
+                      />
+                      <path
+                        d="M2 6.66675H14"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.33333"
+                      />
+                      <path
+                        d="M10.6666 1.33325V3.99992"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.33333"
+                      />
+                      <path
+                        d="M5.33337 1.33325V3.99992"
+                        stroke="black"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.33333"
+                      />
+                    </svg>
+                  </button>
+                  <input
+                    aria-label="MM/YY"
+                    class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                    data-has-start-content="true"
+                    data-slot="input"
+                    id="react-aria-:ra:"
+                    placeholder="MM/YY"
+                    readonly=""
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="group flex flex-col data-[hidden=true]:hidden relative justify-end data-[has-label=true]:mt-[calc(theme(fontSize.small)_+_10px)] w-[50%]"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-slot="base"
+        >
+          <div
+            class="h-full flex flex-col"
+            data-slot="main-wrapper"
+          >
+            <div
+              class="relative w-full inline-flex tap-highlight-transparent flex-row items-center shadow-sm px-3 gap-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 h-10 min-h-10 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background !bg-inherit border border-primary-200 group-data-[focus=true]:border-primary-200 data-[hover=true]:border-secondary-200 data-[hover=true]:!bg-inherit group-data-[invalid=true]:!border-warning rounded-md"
+              data-slot="input-wrapper"
+              style="cursor: text;"
+            >
+              <label
+                class="absolute pointer-events-none origin-top-left rtl:origin-top-right subpixel-antialiased block text-foreground-500 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-foreground group-data-[filled-within=true]:pointer-events-auto pb-0 z-20 top-1/2 -translate-y-1/2 group-data-[filled-within=true]:start-0 start-3 end-auto group-data-[filled-within=true]:-translate-y-[calc(100%_+_theme(fontSize.small)/2_+_20px)] pe-2 max-w-full text-ellipsis overflow-hidden !text-primary-200 text-sm font-medium opacity-50 group-data-[invalid=true]:!text-primary-200"
+                data-slot="label"
+                for="react-aria-:rf:"
+                id="react-aria-:rg:"
+              >
+                CCV
+              </label>
+              <div
+                class="inline-flex w-full items-center h-full box-border"
+                data-slot="inner-wrapper"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2.66671 6.99992H2.33337V7.33325V11.3333C2.33337 11.5985 2.43873 11.8528 2.62627 12.0404C2.8138 12.2279 3.06816 12.3333 3.33337 12.3333H12.6667C12.9319 12.3333 13.1863 12.2279 13.3738 12.0404C13.5614 11.8528 13.6667 11.5985 13.6667 11.3333V7.33325V6.99992H13.3334H2.66671ZM13.3334 6.33325H13.6667V5.99992V5.33325C13.6667 5.06804 13.5614 4.81368 13.3738 4.62615C13.1863 4.43861 12.9319 4.33325 12.6667 4.33325H3.33337C3.06816 4.33325 2.8138 4.43861 2.62627 4.62615C2.43873 4.81368 2.33337 5.06804 2.33337 5.33325V5.99992V6.33325H2.66671H13.3334ZM6.66671 9.66659H4.66671C4.5783 9.66659 4.49352 9.63147 4.43101 9.56895C4.36849 9.50644 4.33337 9.42166 4.33337 9.33325C4.33337 9.24485 4.36849 9.16006 4.43101 9.09755C4.49352 9.03504 4.5783 8.99992 4.66671 8.99992H6.66671C6.75511 8.99992 6.8399 9.03504 6.90241 9.09755C6.96492 9.16006 7.00004 9.24485 7.00004 9.33325C7.00004 9.42166 6.96492 9.50644 6.90241 9.56895C6.8399 9.63147 6.75511 9.66659 6.66671 9.66659ZM3.33337 3.66659H12.6667C13.1087 3.66659 13.5327 3.84218 13.8452 4.15474C14.1578 4.4673 14.3334 4.89122 14.3334 5.33325V11.3333C14.3334 11.7753 14.1578 12.1992 13.8452 12.5118C13.5327 12.8243 13.1087 12.9999 12.6667 12.9999H3.33337C2.89135 12.9999 2.46742 12.8243 2.15486 12.5118C1.8423 12.1992 1.66671 11.7753 1.66671 11.3333V5.33325C1.66671 4.89122 1.8423 4.4673 2.15486 4.15474C2.46742 3.84218 2.89135 3.66659 3.33337 3.66659Z"
+                    fill="black"
+                    stroke="currentColor"
+                    stroke-width="0.666667"
+                  />
+                </svg>
+                <input
+                  aria-label="ccv"
+                  aria-labelledby="react-aria-:rf: react-aria-:rg:"
+                  class="font-normal bg-transparent !outline-none focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 file:cursor-pointer file:bg-transparent file:border-0 autofill:bg-transparent bg-clip-text group-data-[has-value=true]:text-default-foreground !text-foreground-100 placeholder:text-foreground-100 text-sm leading-[20px] w-full h-10 py-2.5 mx-2"
+                  data-has-start-content="true"
+                  data-slot="input"
+                  id="react-aria-:rf:"
+                  maxlength="3"
+                  placeholder="000"
+                  type="string"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 gap-3 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-300 text-foreground-200 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] [&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6"
+      type="button"
+    >
+      Continue
+    </button>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
