@@ -16,6 +16,7 @@ const customJestConfig = {
   },
   collectCoverageFrom: [
     'src/app/**',
+    'src/actions/**',
     'src/components/**',
     'src/hooks/**',
     'src/services/**',
