@@ -134,3 +134,31 @@ export const MOCK_SESSION_DATA: Session = {
   },
   expires: '2025-01-17T04:24:13.935Z',
 };
+
+export const MOCK_SESSION_DATA_IS_EMPTY: Session = {
+  user: {
+    email: '',
+    id: 82,
+    documentId: '',
+    username: '',
+    provider: '',
+    confirmed: false,
+    blocked: false,
+    postal: '',
+    phone: '',
+    country: '',
+    avatar: '',
+    announcements: false,
+    updates: false,
+    feedbacksAndSurvey: false,
+    events: false,
+    generalNotification: false,
+    promotions: false,
+    eventsNearMe: false,
+    createdAt: '',
+    updatedAt: '',
+    publishedAt: '',
+    token: '',
+  },
+  expires: '',
+};
