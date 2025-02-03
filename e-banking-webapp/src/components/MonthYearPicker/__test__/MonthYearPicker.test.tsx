@@ -23,9 +23,22 @@ jest.mock('@/utils', () => ({
 
 describe('MonthYearPicker component', () => {
   const onChangeMock = jest.fn();
+  const fixedDate = new Date(2025, 0, 1);
+
+  beforeEach(() => {
+    jest
+      .spyOn(global, 'Date')
+      .mockImplementation(() => fixedDate as unknown as Date);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+    jest.clearAllMocks();
+  });
 
   test('should match snapshot', () => {
     const container = render(<MonthYearPicker onChange={onChangeMock} />);
+
     expect(container).toMatchSnapshot();
   });
 
@@ -33,10 +46,10 @@ describe('MonthYearPicker component', () => {
     render(
       <MonthYearPicker label='Select Month/Year' onChange={onChangeMock} />,
     );
-
     expect(screen.getByText('Select Month/Year')).toBeInTheDocument();
 
     const input = screen.getByPlaceholderText('MM/YY');
+
     expect(input).toBeInTheDocument();
     expect(input).toHaveValue('MM/YY');
   });
@@ -49,36 +62,43 @@ describe('MonthYearPicker component', () => {
     expect(screen.queryByText(MONTHS[0])).toBeNull();
 
     const input = screen.getByPlaceholderText('MM/YY');
-    fireEvent.click(input);
 
+    fireEvent.click(input);
     expect(screen.getByText(MONTHS[0])).toBeInTheDocument();
 
     fireEvent.click(input);
-
     expect(screen.queryByText(MONTHS[0])).toBeNull();
   });
 
   test('handles month selection correctly', () => {
     render(<MonthYearPicker onChange={onChangeMock} />);
-
     fireEvent.click(screen.getByPlaceholderText('MM/YY'));
 
-    const monthButton = screen.getByText(MONTHS[2]); // Select "March"
-    fireEvent.click(monthButton);
+    const monthButton = screen.getByText(MONTHS[0]);
 
-    expect(onChangeMock).toHaveBeenCalledWith('03/25');
-    expect(screen.getByPlaceholderText('MM/YY')).toHaveValue('03/25');
+    fireEvent.click(monthButton);
+    expect(onChangeMock).toHaveBeenCalledWith('01/25');
+    expect(screen.getByPlaceholderText('MM/YY')).toHaveValue('01/25');
   });
 
   test('handles year change correctly', () => {
     render(<MonthYearPicker onChange={onChangeMock} />);
-
     fireEvent.click(screen.getByPlaceholderText('MM/YY'));
 
     const yearSelect = screen.getByLabelText('Year:');
-    fireEvent.change(yearSelect, { target: { value: '2025' } });
 
+    fireEvent.change(yearSelect, { target: { value: '2025' } });
     expect(onChangeMock).toHaveBeenCalledWith('01/25');
     expect(screen.getByPlaceholderText('MM/YY')).toHaveValue('01/25');
+  });
+
+  test('closes the dropdown when clicking outside', () => {
+    render(<MonthYearPicker onChange={onChangeMock} />);
+
+    fireEvent.click(screen.getByPlaceholderText('MM/YY'));
+    expect(screen.getByText(MONTHS[0])).toBeInTheDocument();
+
+    fireEvent.mouseDown(document.body);
+    expect(screen.queryByText(MONTHS[0])).toBeNull();
   });
 });
