@@ -90,4 +90,14 @@ describe('MonthYearPicker component', () => {
     expect(onChangeMock).toHaveBeenCalledWith('01/25');
     expect(screen.getByPlaceholderText('MM/YY')).toHaveValue('01/25');
   });
+
+  test('closes the dropdown when clicking outside', () => {
+    render(<MonthYearPicker onChange={onChangeMock} />);
+
+    fireEvent.click(screen.getByPlaceholderText('MM/YY'));
+    expect(screen.getByText(MONTHS[0])).toBeInTheDocument();
+
+    fireEvent.mouseDown(document.body);
+    expect(screen.queryByText(MONTHS[0])).toBeNull();
+  });
 });
