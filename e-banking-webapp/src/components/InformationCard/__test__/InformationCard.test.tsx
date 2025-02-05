@@ -1,7 +1,14 @@
+// Libs
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
+// APIs
 import { getAccountsByUserId, getTotalCardsByUser } from '@/services';
+
+// Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
-import { InformationCard } from '..';
+
+// Components
+import { InformationCard } from '@/components';
 
 jest.mock('@/services', () => ({
   getAccountsByUserId: jest.fn(),
@@ -125,6 +132,40 @@ describe('InformationCard Component', () => {
 
     await waitFor(() => {
       expect(screen.getByText('1234')).toBeInTheDocument();
+    });
+  });
+
+  test('displays error message when getAccountsByUserId throws AuthError', async () => {
+    (
+      getAccountsByUserId as jest.MockedFunction<typeof getAccountsByUserId>
+    ).mockRejectedValue(new Error('An error occurred'));
+
+    render(<InformationCard session={MOCK_SESSION_DATA} />);
+  });
+
+  test('displays error message when getTotalCardsByUser throws AuthError', async () => {
+    (
+      getAccountsByUserId as jest.MockedFunction<typeof getAccountsByUserId>
+    ).mockResolvedValue([
+      {
+        id: 1,
+        balance: 1000,
+        documentId: 'doc123',
+        accountNumber: 'acc123',
+        type: 'savings',
+        currency: 'EUR',
+        name: 'John Doe',
+      },
+    ]);
+
+    (
+      getTotalCardsByUser as jest.MockedFunction<typeof getTotalCardsByUser>
+    ).mockRejectedValue(new Error('An error occurred'));
+
+    render(<InformationCard session={MOCK_SESSION_DATA} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('--/--')).toBeInTheDocument();
     });
   });
 });

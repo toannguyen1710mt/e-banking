@@ -3,10 +3,10 @@
 // Libs
 import { Suspense, useEffect, useState } from 'react';
 import { Card, CardBody } from '@nextui-org/react';
-import { AuthError, Session } from 'next-auth';
+import { Session } from 'next-auth';
 
 // Constants
-import { createExpenseAnalysisOptions, ERROR_MESSAGES } from '@/constants';
+import { createExpenseAnalysisOptions } from '@/constants';
 
 // Mocks
 import { MASTERCARD_CHART_MOCK } from '@/mocks';
@@ -67,8 +67,8 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
           }
         }
       } catch (error) {
-        if (error instanceof AuthError) {
-          throw ERROR_MESSAGES.GET_ERROR;
+        if (error) {
+          return error;
         }
       }
     };
