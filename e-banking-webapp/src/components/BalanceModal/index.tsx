@@ -104,7 +104,7 @@ const BalanceModal = ({
       </div>
       <div className='flex flex-col rounded-xl bg-lightGraySolid lg:flex-row'>
         <div className='flex flex-1 flex-col rounded-xl bg-white pb-[48px] pl-3 pr-[23px] pt-[56px]'>
-          <div className='flex flex-col items-start justify-between gap-2'>
+          <div className='flex flex-col items-start justify-between gap-2 md:flex-row'>
             <div className='flex flex-col gap-2'>
               <Text
                 as='h5'
