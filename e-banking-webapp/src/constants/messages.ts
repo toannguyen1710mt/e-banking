@@ -32,6 +32,7 @@ export const ERROR_MESSAGES = {
   AMOUNT_EXCEEDED_BALANCE: 'Amount cannot exceed available balance of',
   CARD_HOLDER_NAME_REQUIRED: 'Holders Name is required',
   CARD_NUMBER_INVALID: 'Card number must be exactly 12 digits',
+  CARD_NUMBER_PATTERN: 'Card number must only contain digits',
   CCV_INVALID: 'CCV must be exactly 3 digits',
   EXPIRE_DATE_INVALID: 'Expire date must be in the future.',
   RECIPIENT_ACCOUNT_EXACT_12_DIGITS:
