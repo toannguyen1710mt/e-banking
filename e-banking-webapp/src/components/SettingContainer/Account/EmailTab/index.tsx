@@ -146,7 +146,7 @@ export const EmailTab = ({
           isDisabled={isDisabled}
           className='[&[data-loading=true]_.flex]:h-6 [&[data-loading=true]_.flex]:w-6'
           isLoading={isSubmitting}
-          data-testId='update-email-preferences'
+          data-testid='update-email-preferences'
         >
           Update Email Preferences
         </Button>
