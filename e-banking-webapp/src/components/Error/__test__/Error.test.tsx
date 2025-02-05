@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 // Constants
 import { ROUTES } from '@/constants';
@@ -12,25 +12,26 @@ describe('Error component', () => {
   beforeEach(() => {
     container = render(<Error />);
   });
-  it('renders error message', () => {
-    const message = 'Test error message';
 
-    const { getByText } = render(<Error message={message} />);
-
-    expect(getByText(/Test error message/i)).toBeInTheDocument();
+  it('Should renders the error image', () => {
+    const errorImage = screen.getByAltText('Server Error');
+    expect(errorImage).toBeInTheDocument();
   });
 
-  it('renders default error message when no message is provided', () => {
+  it('Should renders default error message when no message is provided', () => {
+    expect(screen.getByText('Oops! Something went wrong.')).toBeInTheDocument();
     expect(
-      container.getByText(/We apologize for the inconvenience/i),
+      screen.getByText(
+        'We encountered an issue while processing your request. Please try again later.',
+      ),
     ).toBeInTheDocument();
   });
 
-  it('renders link to home page when no onReset prop is provided', () => {
+  it('Should renders link to home page when no onReset prop is provided', () => {
     expect(container.getByText('Go to Home Page')).toBeInTheDocument();
   });
 
-  it('renders link to home page with correct href', () => {
+  it('Should renders link to home page with correct href', () => {
     const link = container.getByText('Go to Home Page');
     expect(link).toHaveAttribute('href', ROUTES.HOME);
   });
