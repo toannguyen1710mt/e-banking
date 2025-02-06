@@ -6,7 +6,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24]"
+        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24] shadow-none"
         tabindex="-1"
       >
         <div
@@ -355,7 +355,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24]"
+      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24] shadow-none"
       tabindex="-1"
     >
       <div

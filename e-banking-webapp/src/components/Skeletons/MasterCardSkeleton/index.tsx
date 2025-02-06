@@ -8,7 +8,7 @@ import {
 } from '@nextui-org/react';
 
 export const MasterCardSkeleton = () => (
-  <Card className='w-full min-w-[100px] bg-background-700 px-4 pb-5 pt-[14px] md:min-w-[294px]'>
+  <Card className='w-full min-w-[100px] px-4 pb-5 pt-[14px] md:min-w-[294px]'>
     <CardHeader className='p-0'>
       <Skeleton className='h-5 w-44 rounded-lg' />
     </CardHeader>

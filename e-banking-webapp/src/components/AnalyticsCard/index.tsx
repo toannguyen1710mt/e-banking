@@ -27,7 +27,7 @@ export const AnalyticsCard = ({
   const ArrowComponent = isPositive ? <ArrowUpIcon /> : <ArrowDownIcon />;
 
   return (
-    <Card key={title} className='w-full gap-4 rounded-md p-0'>
+    <Card key={title} className='w-full gap-4 rounded-md p-0 shadow-none'>
       <CardHeader className='p-4 text-xs font-medium'>
         <Text>{title}</Text>
       </CardHeader>

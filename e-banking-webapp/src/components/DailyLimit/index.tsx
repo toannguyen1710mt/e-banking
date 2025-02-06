@@ -6,12 +6,11 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Chip,
   Progress,
 } from '@nextui-org/react';
 
 // Components
-import { ArrowUpIcon } from '@/components';
+import { ArrowUpIcon, Chip } from '@/components';
 
 interface IDailyLimit {
   expenses: string;
@@ -19,14 +18,14 @@ interface IDailyLimit {
 }
 
 export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
-  <Card className='w-full basis-1/2 gap-4 rounded-md px-2 py-3'>
+  <Card className='w-full basis-1/2 gap-4 rounded-md px-2 py-3 shadow-none'>
     <CardHeader className='flex justify-between p-0 text-xs font-semibold'>
       <span className='text-xs lg:text-xl xl:text-xs'>Daily Limit</span>
       <Chip
         startContent={<ArrowUpIcon />}
         classNames={{
-          base: `bg-lightAqua text-black py-1 px-[6px] gap-1`,
-          content: 'font-extrabold text-[7px] p-0',
+          base: `bg-lightAqua h-5`,
+          content: 'font-extrabold text-4xs p-0',
         }}
       >
         8%

@@ -6,7 +6,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 sm:flex-row xl:flex-col"
+        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 shadow-none sm:flex-row xl:flex-col"
         tabindex="-1"
       >
         <div
@@ -307,7 +307,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 sm:flex-row xl:flex-col"
+      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 shadow-none sm:flex-row xl:flex-col"
       tabindex="-1"
     >
       <div

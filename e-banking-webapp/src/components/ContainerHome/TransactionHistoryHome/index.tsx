@@ -28,7 +28,7 @@ export const TransactionHistoryHome = async () => {
   });
 
   return (
-    <Card className='rounded-md'>
+    <Card className='rounded-md shadow-none'>
       <CardHeader className='flex justify-between'>
         <Text size={TEXT_SIZE.XS} variant={TEXT_VARIANT.DEFAULT}>
           Transactions History

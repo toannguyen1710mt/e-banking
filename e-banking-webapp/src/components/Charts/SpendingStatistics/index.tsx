@@ -86,7 +86,12 @@ export const SpendingStatistics = ({
   const options = { ...defaultOptions, ...customOptions };
 
   return (
-    <Card className={cn('w-full rounded-md bg-background-500 p-4', className)}>
+    <Card
+      className={cn(
+        'w-full rounded-md bg-background-500 p-4 shadow-none',
+        className,
+      )}
+    >
       <Chart options={options} series={series} type='line' />
     </Card>
   );
