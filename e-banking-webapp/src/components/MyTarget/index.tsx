@@ -30,7 +30,7 @@ export const MyTarget = () => {
   );
 
   return (
-    <Card className='gap-4 rounded-md px-2 py-3 sm:flex-row xl:flex-col'>
+    <Card className='gap-4 rounded-md px-2 py-3 shadow-none sm:flex-row xl:flex-col'>
       <div className='sm:basis-1/2'>
         <div className='flex justify-between'>
           <Text

@@ -58,7 +58,7 @@ export const CreditCard = ({
 
   return (
     <Card
-      className={`w-full self-center rounded-[6px] bg-cover bg-no-repeat ${cardMaxWidth} ${VARIANT_BACKGROUND[variant]}`}
+      className={`w-full self-center rounded-[6px] bg-cover bg-no-repeat ${cardMaxWidth} ${VARIANT_BACKGROUND[variant]} shadow-none`}
     >
       <CardHeader className={`flex justify-between pb-0 ${cardHeaderGap}`}>
         <div className={`flex items-center ${headerContentGap}`}>

@@ -76,7 +76,7 @@ export const QuickAction = ({ session }: QuickActionProps) => {
 
   return (
     <>
-      <Card className='flex basis-1/2 flex-col justify-between gap-2 rounded-md bg-background-500 px-2 py-3'>
+      <Card className='flex basis-1/2 flex-col justify-between gap-2 rounded-md bg-background-500 px-2 py-3 shadow-none'>
         <Text as='h3' className='text-xs font-semibold lg:text-xl xl:text-xs'>
           Quick Action
         </Text>

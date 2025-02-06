@@ -110,7 +110,7 @@ export const BalanceStatistics = ({
   return (
     <Card
       className={cn(
-        'h-auto min-h-[200px] w-full rounded-md bg-background-500 p-4',
+        'h-auto min-h-[200px] w-full rounded-md bg-background-500 p-4 shadow-none',
         className,
       )}
     >
