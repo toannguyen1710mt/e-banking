@@ -5,36 +5,33 @@ exports[`Header component matches the snapshot 1`] = `
   <div>
     <nav
       class="flex z-40 w-full h-auto items-center justify-center data-[menu-open=true]:border-none sticky top-0 inset-x-0 backdrop-blur-lg data-[menu-open=true]:backdrop-blur-xl backdrop-saturate-150 bg-background/70"
+      data-testid="header-wrapper"
       style="--navbar-height: 4rem;"
     >
       <header
         class="z-40 flex gap-4 w-full flex-row relative flex-nowrap items-center h-[var(--navbar-height)] max-w-full justify-start border-b border-foreground-100 border-opacity-25 px-3 bg-background-900"
       >
+        <button
+          aria-label="Open menu"
+          aria-pressed="false"
+          class="group flex items-center justify-center w-6 h-full rounded-small tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 md:hidden"
+          type="button"
+        >
+          <span
+            class="sr-only"
+          >
+            open navigation menu
+          </span>
+          <span
+            class="w-full h-full pointer-events-none flex flex-col items-center justify-center text-inherit group-data-[pressed=true]:opacity-70 transition-opacity before:content-[''] before:block before:h-px before:w-6 before:bg-current before:transition-transform before:duration-150 before:-translate-y-1 before:rotate-0 group-data-[open=true]:before:translate-y-px group-data-[open=true]:before:rotate-45 after:content-[''] after:block after:h-px after:w-6 after:bg-current after:transition-transform after:duration-150 after:translate-y-1 after:rotate-0 group-data-[open=true]:after:translate-y-0 group-data-[open=true]:after:-rotate-45"
+          />
+        </button>
         <div
-          class="flex items-center gap-[88px]"
+          class="flex items-center gap-24"
         >
           <div
             class="flex basis-0 flex-row flex-grow flex-nowrap justify-start bg-transparent items-center no-underline text-medium whitespace-nowrap box-border gap-5"
           >
-            <button
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Open menu"
-              aria-pressed="false"
-              class="group items-center justify-center w-6 h-full tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased text-primary-200 rounded-lg bg-background-500 border-1 data-[focus=true]:border-primary data-[focus=true]:border-1 cursor-pointer hidden max-[700px]:flex"
-              data-slot="trigger"
-              id="react-aria-:r0:"
-              type="button"
-            >
-              <span
-                class="sr-only"
-              >
-                open navigation menu
-              </span>
-              <span
-                class="w-full h-full pointer-events-none flex flex-col items-center justify-center text-inherit group-data-[pressed=true]:opacity-70 transition-opacity before:content-[''] before:block before:h-px before:w-6 before:bg-current before:transition-transform before:duration-150 before:-translate-y-1 before:rotate-0 group-data-[open=true]:before:translate-y-px group-data-[open=true]:before:rotate-45 after:content-[''] after:block after:h-px after:w-6 after:bg-current after:transition-transform after:duration-150 after:translate-y-1 after:rotate-0 group-data-[open=true]:after:translate-y-0 group-data-[open=true]:after:-rotate-45"
-              />
-            </button>
             <a
               href="/"
             >
@@ -51,7 +48,7 @@ exports[`Header component matches the snapshot 1`] = `
             </a>
           </div>
           <ul
-            class="h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0 flex gap-[59px] font-normal text-transparentBlack max-[700px]:hidden"
+            class="h-full flex-row flex-nowrap items-center data-[justify=start]:justify-start data-[justify=start]:flex-grow data-[justify=start]:basis-0 data-[justify=center]:justify-center data-[justify=end]:justify-end data-[justify=end]:flex-grow data-[justify=end]:basis-0 hidden gap-14 font-normal text-transparentBlack md:flex"
             data-justify="center"
           >
             <li
@@ -254,7 +251,7 @@ exports[`Header component matches the snapshot 1`] = `
               aria-haspopup="true"
               class="flex relative justify-center items-center box-border overflow-hidden align-middle outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-tiny z-10 aria-expanded:scale-[0.97] aria-expanded:opacity-70 subpixel-antialiased text-primary-200 bg-background-500 border-1 data-[focus=true]:border-primary data-[focus=true]:border-1 cursor-pointer h-6 w-6 rounded-full"
               data-slot="trigger"
-              id="react-aria-:r3:"
+              id="react-aria-:r0:"
               role="button"
               type="button"
             >
