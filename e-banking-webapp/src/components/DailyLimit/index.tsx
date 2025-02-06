@@ -6,12 +6,11 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Chip,
   Progress,
 } from '@nextui-org/react';
 
 // Components
-import { ArrowUpIcon } from '@/components';
+import { ArrowUpIcon, Chip } from '@/components';
 
 interface IDailyLimit {
   expenses: string;
@@ -25,8 +24,8 @@ export const DailyLimit = ({ expenses, limit }: IDailyLimit) => (
       <Chip
         startContent={<ArrowUpIcon />}
         classNames={{
-          base: `bg-lightAqua text-black py-1 px-[6px] gap-1`,
-          content: 'font-extrabold text-[7px] p-0',
+          base: `bg-lightAqua h-5`,
+          content: 'font-extrabold text-4xs p-0',
         }}
       >
         8%
