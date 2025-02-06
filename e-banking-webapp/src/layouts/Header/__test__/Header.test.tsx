@@ -4,9 +4,6 @@ import { redirect, usePathname } from 'next/navigation';
 // Context
 import { ToastProvider, UserProvider } from '@/context';
 
-// Mocks
-import { MOCK_SESSION_DATA } from '@/mocks';
-
 // Actions
 import { signOut } from '@/actions';
 
@@ -37,6 +34,11 @@ jest.mock('@/context', () => ({
   }),
 }));
 
+const mockProps = {
+  username: 'testebanking',
+  email: 'testebanking@example.com',
+};
+
 describe('Header component', () => {
   const renderWithProviders = (ui: React.ReactNode) => {
     return render(
@@ -52,14 +54,12 @@ describe('Header component', () => {
   });
 
   test('matches the snapshot', () => {
-    const { container } = renderWithProviders(
-      <Header session={MOCK_SESSION_DATA} />,
-    );
+    const { container } = renderWithProviders(<Header {...mockProps} />);
     expect(container).toMatchSnapshot();
   });
 
   test('toggles the mobile menu on click', () => {
-    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
+    renderWithProviders(<Header {...mockProps} />);
     // Find menu toggle button
     const menuToggle = screen.getByLabelText('Open menu');
     // Click to open menu
@@ -75,7 +75,7 @@ describe('Header component', () => {
   test('should call signOut and redirect on successful sign out', async () => {
     (signOut as jest.Mock).mockResolvedValueOnce(undefined);
 
-    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
+    renderWithProviders(<Header {...mockProps} />);
 
     // Step 1: Open the dropdown menu by clicking the avatar
     const avatarButton = screen.getByRole('img', {
@@ -108,7 +108,7 @@ describe('Header component', () => {
   test('should handle sign out failure', async () => {
     (signOut as jest.Mock).mockRejectedValueOnce(new Error('Sign out failed'));
 
-    renderWithProviders(<Header session={MOCK_SESSION_DATA} />);
+    renderWithProviders(<Header {...mockProps} />);
 
     // Step 1: Open the dropdown menu by clicking the avatar
     const avatarButton = screen.getByRole('img', {
@@ -131,5 +131,36 @@ describe('Header component', () => {
         'top-center',
       );
     });
+  });
+
+  test('should apply correct background on Settings page', () => {
+    (usePathname as jest.Mock).mockReturnValue('/settings');
+
+    renderWithProviders(<Header {...mockProps} />);
+
+    const header = screen.getByTestId('header-wrapper').querySelector('header');
+
+    expect(header).toHaveClass('bg-background-500');
+  });
+
+  test('should close menu when a menu item is clicked', () => {
+    renderWithProviders(<Header {...mockProps} />);
+
+    // Open the menu
+    const menuToggle = screen.getByRole('button', { name: /open menu/i });
+    fireEvent.click(menuToggle);
+
+    expect(
+      screen.getByRole('button', { name: /close menu/i }),
+    ).toBeInTheDocument();
+
+    // Click on a menu link to trigger onPress
+    const menuLink = screen.getAllByLabelText('Home')[0];
+    fireEvent.click(menuLink);
+
+    // Verify the menu has closed
+    expect(
+      screen.getByRole('button', { name: /open menu/i }),
+    ).toBeInTheDocument();
   });
 });
