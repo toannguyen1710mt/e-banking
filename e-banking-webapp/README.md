@@ -61,6 +61,8 @@ This is E-Banking web application provides a modern online banking platform, con
 
 - ngan.do <[ngan.do@asnet.com.vn](ngan.do@asnet.com.vn)>
 - hoang.nguyenvan <[hoang.nguyenvan@asnet.com.vn](hoang.nguyenvan@asnet.com.vn)>
+- hoa.nguyen <[hoa.nguyen@asnet.com.vn](hoa.nguyen@asnet.com.vn)>
+- hoang.tranle <[hoang.tranle@asnet.com.vn](hoang.tranle@asnet.com.vn)>
 
 ### Project structure
 

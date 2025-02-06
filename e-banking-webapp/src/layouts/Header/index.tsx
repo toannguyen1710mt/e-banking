@@ -5,11 +5,13 @@ import {
   Avatar,
   NavbarBrand,
   NavbarContent,
+  NavbarMenu,
+  NavbarMenuItem,
   NavbarMenuToggle,
   Navbar as NavbarNextUI,
   Spinner,
 } from '@nextui-org/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { redirect, usePathname } from 'next/navigation';
@@ -48,13 +50,6 @@ export const Header = ({ username, email }: IHeaderProps) => {
   const { avatar } = useUserContext();
 
   const isSettingsUrl = REGEX.SETTINGS.test(pathname);
-
-  const mobileMenuOptions = [
-    ...NavbarList.map((item) => ({
-      key: item.path,
-      label: item.text,
-    })),
-  ];
 
   const handleSignOut = async () => {
     setIsSigningOut(true);
@@ -111,25 +106,52 @@ export const Header = ({ username, email }: IHeaderProps) => {
     },
   ];
 
+  // Close menu when page change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
     <NavbarNextUI
       classNames={{
         wrapper: `max-w-full justify-start border-b border-foreground-100 border-opacity-25 px-3 ${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'}`,
       }}
+      data-testid='header-wrapper'
+      isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <div className='flex items-center gap-[88px]'>
+      <NavbarMenuToggle
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        className='md:hidden'
+      />
+
+      <NavbarMenu
+        className={`bottom-[unset] !h-auto gap-3 bg-background-900 py-3 shadow-lg ${isSettingsUrl ? 'bg-background-500' : 'bg-background-900'}`}
+        data-testid='menu-toggle'
+      >
+        {NavbarList.map((item, index) => {
+          const { text, path } = item;
+
+          return (
+            <NavbarMenuItem
+              key={`${item}-${index}`}
+              isActive={pathname === path}
+            >
+              <Link
+                className='w-full text-md'
+                aria-label={text}
+                href={path}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {text}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
+      </NavbarMenu>
+
+      <div className='flex items-center gap-24'>
         <NavbarBrand className='gap-5'>
-          <MenuDropdown
-            options={mobileMenuOptions}
-            customTriggerElement={
-              <NavbarMenuToggle
-                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                className='hidden max-[700px]:flex'
-              />
-            }
-            isDivided={true}
-          />
           <Link href={ROUTES.HOME}>
             <Image
               src={IMAGES.LOGO}
@@ -140,13 +162,15 @@ export const Header = ({ username, email }: IHeaderProps) => {
             />
           </Link>
         </NavbarBrand>
+
         <NavbarContent
-          className='flex gap-[59px] font-normal text-transparentBlack max-[700px]:hidden'
+          className='hidden gap-14 font-normal text-transparentBlack md:flex'
           data-justify='center'
         >
           <Navbar navbarItem={NavbarList} />
         </NavbarContent>
       </div>
+
       <NavbarContent data-justify='end'>
         <li className='flex justify-end gap-4'>
           <button
