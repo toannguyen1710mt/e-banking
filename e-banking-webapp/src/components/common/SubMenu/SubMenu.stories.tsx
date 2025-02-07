@@ -11,7 +11,22 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  decorators: [],
+  decorators: [
+    (Story) => (
+      <div className='w-full max-w-[1200px]'>
+        <style>
+          {`
+            @media (min-width: 800px) {
+              .hidden {
+                display: block !important;
+              }
+            }
+          `}
+        </style>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof SubMenu>;
 
 export default meta;
