@@ -108,7 +108,7 @@ export const AccountForm = () => {
           name='user.confirmPassword'
           render={({ field, fieldState: { error } }) => (
             <Input
-              aria-label='password'
+              aria-label='confirm password'
               placeholder='Confirm Password'
               type={confirmPasswordIsOpen ? 'text' : 'password'}
               startContent={<LockIcon />}
