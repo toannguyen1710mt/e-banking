@@ -1,5 +1,6 @@
 'use client';
 
+// Libs
 import { Key, useEffect, useState } from 'react';
 import { Session } from 'next-auth';
 import { Tab, Tabs } from '@nextui-org/react';
@@ -10,14 +11,14 @@ import { ERROR_MESSAGES } from '@/constants';
 // Actions
 import { updateEmailSettings } from '@/actions';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Interfaces
 import { Preferences } from '@/interfaces';
 
 // Services
 import { getUserById } from '@/services';
+
+// Utils
+import { toastStore } from '@/utils';
 
 // Components
 import { EmailTab } from '../EmailTab';
@@ -35,7 +36,6 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
   const [preferences, setPreferences] = useState<Preferences>(
     {} as Preferences,
   );
-  const { showToast } = useToastContext();
   const { id } = session.user;
 
   useEffect(() => {
@@ -77,7 +77,7 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     try {
       await updateEmailSettings(id, data);
 
-      showToast(
+      toastStore.showToast(
         ERROR_MESSAGES.UPDATE_EMAIL_SETTINGS_SUCCESS,
         'success',
         'top-center',

@@ -26,8 +26,8 @@ import { changePassword } from '@/actions';
 // Hooks
 import { useConfirmationOnLeave } from '@/hooks';
 
-// Context
-import { useToastContext } from '@/context';
+// Utils
+import { toastStore } from '@/utils';
 
 type FormValues = z.infer<typeof UpdatePasswordSchema>;
 
@@ -81,8 +81,6 @@ export const PasswordTab = ({
 
   const isButtonDisabled = !isDirty || !isValid || isChangingPassword;
 
-  const { showToast } = useToastContext();
-
   const onSubmit = handleSubmit(async (data) => {
     const { currentPassword, newPassword, confirmPassword } = data;
 
@@ -104,7 +102,7 @@ export const PasswordTab = ({
         }
 
         startTransition(() => {
-          showToast(
+          toastStore.showToast(
             ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
             'success',
             'top-center',
@@ -126,7 +124,7 @@ export const PasswordTab = ({
             });
           }
 
-          showToast(
+          toastStore.showToast(
             ERROR_MESSAGES.CHANGE_PASSWORD_FAILED,
             'error',
             'top-center',

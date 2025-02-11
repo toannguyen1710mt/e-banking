@@ -34,7 +34,10 @@ import {
 import { signOut } from '@/actions';
 
 // Contexts
-import { useToastContext, useUserContext } from '@/context';
+import { useUserContext } from '@/context';
+
+// utils
+import { toastStore } from '@/utils';
 
 interface IHeaderProps {
   username: string;
@@ -44,7 +47,6 @@ interface IHeaderProps {
 export const Header = ({ username, email }: IHeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSigningOut, setIsSigningOut] = useState(false);
-  const { showToast } = useToastContext();
   const pathname = usePathname();
 
   const { avatar } = useUserContext();
@@ -57,11 +59,19 @@ export const Header = ({ username, email }: IHeaderProps) => {
     try {
       await signOut();
 
-      showToast(ERROR_MESSAGES.SIGN_OUT_SUCCESS, 'success', 'top-center');
+      toastStore.showToast(
+        ERROR_MESSAGES.SIGN_OUT_SUCCESS,
+        'success',
+        'top-center',
+      );
     } catch (error) {
       console.error(error);
 
-      showToast(ERROR_MESSAGES.SIGN_OUT_FAILED, 'error', 'top-center');
+      toastStore.showToast(
+        ERROR_MESSAGES.SIGN_OUT_FAILED,
+        'error',
+        'top-center',
+      );
     } finally {
       setIsSigningOut(false);
 

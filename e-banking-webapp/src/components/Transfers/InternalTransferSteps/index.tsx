@@ -28,7 +28,9 @@ import { createTransaction, updateAccountInfo } from '@/actions';
 
 // Context
 import { FetchedBalancesProvider } from '@/context/FetchedBalancesContext';
-import { useToastContext } from '@/context';
+
+// Utils
+import { toastStore } from '@/utils';
 
 type FormValues = z.infer<typeof InternalTransferFormSchema>;
 
@@ -52,8 +54,6 @@ export const InternalTransferSteps = ({
     },
     resolver: zodResolver(InternalTransferFormSchema),
   });
-
-  const { showToast } = useToastContext();
 
   const submitHandler = async (data: FormValues) => {
     const {
@@ -99,7 +99,7 @@ export const InternalTransferSteps = ({
       await updateAccountInfo(toAccountId, accountReceiveData);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      showToast(ERROR_MESSAGES.TRANSFER_FAILED);
+      toastStore.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
     }
   };
 

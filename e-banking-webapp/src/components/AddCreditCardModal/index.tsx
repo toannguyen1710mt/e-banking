@@ -22,14 +22,12 @@ import { CreditCardSchema } from '@/schemas';
 // Services
 import { getAccountsByUserId } from '@/services';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import { Modal } from '../common';
 import { AddCreditCard } from './AddCreditCard';
 import { ConfirmAddCard } from './ConfirmAddCard';
+import { toastStore } from '@/utils';
 
 interface IAddCreditCardModalProps {
   session: Session;
@@ -45,8 +43,6 @@ export const AddCreditCardModal = ({
   onClose,
 }: IAddCreditCardModalProps) => {
   const [accounts, setAccounts] = useState<IAccount[]>([]);
-  const { showToast } = useToastContext();
-
   const [isPending, startTransition] = useTransition();
 
   const form = useForm<FormValues>({
@@ -96,12 +92,20 @@ export const AddCreditCardModal = ({
       });
 
       startTransition(() => {
-        showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
+        toastStore.showToast(
+          ERROR_MESSAGES.ADD_CARD_SUCCESS,
+          'success',
+          'top-center',
+        );
 
         return onClose();
       });
     } catch (error) {
-      showToast(ERROR_MESSAGES.ADD_CARD_FAILED, 'error', 'top-center');
+      toastStore.showToast(
+        ERROR_MESSAGES.ADD_CARD_FAILED,
+        'error',
+        'top-center',
+      );
 
       if (error instanceof AuthError) {
         throw ERROR_MESSAGES.ADD_CARD_FAILED;

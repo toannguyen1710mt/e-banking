@@ -5,9 +5,15 @@ import { Card } from '@nextui-org/react';
 
 // Components
 import { Text } from '@/components';
+import { useEffect, useState } from 'react';
+import { toastStore } from '@/utils';
 
-// Hooks
-import { useToastContext } from '@/context';
+interface IToast {
+  id: number;
+  message: string;
+  type: 'success' | 'error' | 'info';
+  position: keyof typeof TOAST_POSITIONS;
+}
 
 const TOAST_BACKGROUNDS = {
   success: 'bg-success',
@@ -25,7 +31,25 @@ const TOAST_POSITIONS = {
 };
 
 export const Toast = () => {
-  const { toasts, removeToast } = useToastContext();
+  const [toasts, setToasts] = useState<IToast[]>([]);
+
+  useEffect(() => {
+    const handleShowToast = (toast: IToast) => {
+      setToasts((prev) => [...prev, toast]);
+    };
+
+    const handleRemoveToast = (id: number) => {
+      setToasts((prev) => prev.filter((t) => t.id !== id));
+    };
+
+    toastStore.on('show', handleShowToast);
+    toastStore.on('remove', handleRemoveToast);
+
+    return () => {
+      toastStore.off('show', handleShowToast);
+      toastStore.off('remove', handleRemoveToast);
+    };
+  }, []);
 
   return (
     <>
@@ -37,21 +61,16 @@ export const Toast = () => {
           {toasts
             .filter((toast) => toast.position === position)
             .map((toast) => {
-              const { id, type, message } = toast;
-
-              const handleRemoveToast = () => removeToast(id);
-
               return (
                 <Card
                   isPressable={true}
                   role='alert'
-                  key={id}
-                  aria-label={`toast-${type}-${id}`}
-                  className={`w-64 cursor-pointer flex-row items-center gap-4 rounded-md px-4 py-3 shadow-md ${TOAST_BACKGROUNDS[type ?? 'success']}`}
-                  onPress={handleRemoveToast}
+                  key={toast.id}
+                  className={`w-64 cursor-pointer flex-row items-center gap-4 rounded-md px-4 py-3 shadow-md ${TOAST_BACKGROUNDS[toast.type ?? 'success']}`}
+                  onPress={() => toastStore.emit('remove', toast.id)}
                 >
                   <Text className='text-sm !text-foreground-200'>
-                    {message}
+                    {toast.message}
                   </Text>
                 </Card>
               );

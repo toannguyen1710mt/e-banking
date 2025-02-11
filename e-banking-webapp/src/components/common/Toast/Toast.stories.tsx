@@ -6,11 +6,11 @@ import { RadioGroup, Radio } from '@nextui-org/react';
 // Components
 import { Button, Text, Toast } from '@/components';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Types
 import { ToastType, ToastPosition } from '@/interfaces';
+
+// Utils
+import { toastStore } from '@/utils';
 
 const meta = {
   title: 'Components/Common/Toast',
@@ -31,8 +31,6 @@ type Story = StoryObj<typeof meta>;
 
 export const CustomizableToast: Story = {
   render: () => {
-    const { showToast } = useToastContext();
-
     const [selectedType, setSelectedType] = useState<ToastType>('success');
     const [selectedPosition, setSelectedPosition] =
       useState<ToastPosition>('top-right');
@@ -46,7 +44,7 @@ export const CustomizableToast: Story = {
     };
 
     const handleButtonClick = () => {
-      showToast('Custom message', selectedType, selectedPosition);
+      toastStore.showToast('Custom message', selectedType, selectedPosition);
     };
 
     return (
