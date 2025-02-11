@@ -11,6 +11,7 @@ export const useConfirmationOnLeave = (
     (event: BeforeUnloadEvent) => {
       if (hasChanges || isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
         event.returnValue = confirmationMessage;
         return confirmationMessage;
       }
@@ -22,6 +23,7 @@ export const useConfirmationOnLeave = (
     (event: MouseEvent) => {
       if (hasChanges || isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
+
         if (!window.confirm(confirmationMessage)) {
           event.preventDefault();
         }
