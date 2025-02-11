@@ -10,7 +10,7 @@ export const EXPENSE_COLOR_CLASSES = [
 ];
 export const AVAILABLE_WALLETS = [
   CardStatistics.Savings,
-  CardStatistics.Checkings,
+  CardStatistics.Checking,
 ];
 export const CARD_STATISTICS = [
   {
@@ -22,7 +22,7 @@ export const CARD_STATISTICS = [
     color: 'bg-pastelYellow',
   },
   {
-    label: CardStatistics.Checkings,
+    label: CardStatistics.Checking,
     color: 'bg-softGreen',
   },
 ];

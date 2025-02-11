@@ -15,7 +15,7 @@ import { formatCardNumber } from '@/utils';
 import { ChipIcon, MastercardIcon, PayPassIcon } from '../icons';
 import { Text } from '../common';
 
-export type VariantsCard = 'main' | 'savings' | 'checkings';
+export type VariantsCard = 'main' | 'savings' | 'checking';
 
 interface CreditCardProps {
   variant?: VariantsCard;
@@ -29,7 +29,7 @@ interface CreditCardProps {
 const VARIANT_BACKGROUND: Record<VariantsCard, string> = {
   main: 'bg-gradient-to-r from-black to-[#101e24]',
   savings: 'bg-gradient-to-t from-[#885DF5] to-[#29ABE2]',
-  checkings: 'bg-gradient-to-t from-[#02CAFD] to-[#83F8A6]',
+  checking: 'bg-gradient-to-t from-[#02CAFD] to-[#83F8A6]',
 };
 
 export const CreditCard = ({

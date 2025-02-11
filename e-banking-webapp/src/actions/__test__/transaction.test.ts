@@ -33,7 +33,7 @@ describe('createTransaction', () => {
       amount: 100,
       statusTransaction: true,
       currencyUnit: '$' as CurrencyUnit,
-      fromAccountType: 'Checkings' as AccountType,
+      fromAccountType: 'Checking' as AccountType,
       toAccountType: 'Savings' as AccountType,
       recipientName: 'John Doe',
     };

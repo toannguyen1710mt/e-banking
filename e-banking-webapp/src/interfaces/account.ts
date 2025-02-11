@@ -4,7 +4,7 @@ import { CurrencyUnit, ICard, ITransaction } from '@/interfaces';
 export enum AccountType {
   MAIN = 'Main',
   SAVINGS = 'Savings',
-  CHECKINGS = 'Checkings',
+  CHECKING = 'Checking',
 }
 
 export interface IAccount {
@@ -12,7 +12,7 @@ export interface IAccount {
   documentId: string;
   accountNumber: string;
   balance: number;
-  type: string;
+  type: AccountType;
   currency: CurrencyUnit;
   transactions?: ITransaction[];
   cards?: ICard[];

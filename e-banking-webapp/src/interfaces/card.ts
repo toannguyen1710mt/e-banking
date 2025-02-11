@@ -1,3 +1,5 @@
+import { AccountType } from './account';
+
 export interface ICard {
   id: number;
   cardNumber: string;
@@ -9,7 +11,7 @@ export interface ICard {
 }
 
 export interface ICardsPayloadByAccount extends Omit<ICard, 'account'> {
-  accountType?: string;
+  accountType?: AccountType;
 }
 
 export interface ICardPayloadData extends Omit<ICard, 'id'> {}

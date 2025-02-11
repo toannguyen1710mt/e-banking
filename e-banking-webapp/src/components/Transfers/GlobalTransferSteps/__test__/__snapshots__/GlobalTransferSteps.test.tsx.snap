@@ -163,9 +163,9 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                             Savings
                           </option>
                           <option
-                            value="Checkings"
+                            value="Checking"
                           >
-                            Checkings
+                            Checking
                           </option>
                         </select>
                       </label>
@@ -689,9 +689,9 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                           Savings
                         </option>
                         <option
-                          value="Checkings"
+                          value="Checking"
                         >
-                          Checkings
+                          Checking
                         </option>
                       </select>
                     </label>

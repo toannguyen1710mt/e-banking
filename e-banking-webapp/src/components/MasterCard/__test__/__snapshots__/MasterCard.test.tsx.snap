@@ -34,7 +34,7 @@ exports[`MasterCard component should match snapshot for MasterCard 1`] = `
         <li>
           2
           . 
-          Checkings
+          Checking
         </li>
       </ol>
     </div>
@@ -88,7 +88,7 @@ exports[`MasterCard component should match snapshot for MasterCard 1`] = `
             <span
               class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
             >
-              Checkings
+              Checking
             </span>
           </div>
         </div>

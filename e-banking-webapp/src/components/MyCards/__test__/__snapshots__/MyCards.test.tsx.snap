@@ -88,7 +88,7 @@ exports[`MyCards component Should render snapshot correctly. 1`] = `
                 <p
                   class="text-foreground-100 font-medium text-xs"
                 >
-                  Checkings
+                  Checking
                 </p>
                 <svg
                   class="w-[25px] h-[15px]"
@@ -284,7 +284,7 @@ exports[`MyCards component Should render snapshot correctly. 1`] = `
               <p
                 class="text-foreground-100 font-medium text-xs"
               >
-                Checkings
+                Checking
               </p>
               <svg
                 class="w-[25px] h-[15px]"
@@ -539,7 +539,9 @@ exports[`MyCards component Should renders cards correctly with empty type and ac
           >
             <p
               class="text-foreground-200 font-medium text-xs"
-            />
+            >
+              Main
+            </p>
             <svg
               class="w-[25px] h-[15px]"
               fill="none"
@@ -599,7 +601,9 @@ exports[`MyCards component Should renders cards correctly with empty type and ac
           >
             <p
               class="text-foreground-100 font-medium text-xs"
-            />
+            >
+              Savings
+            </p>
             <svg
               class="w-[25px] h-[15px]"
               fill="none"
@@ -659,7 +663,9 @@ exports[`MyCards component Should renders cards correctly with empty type and ac
           >
             <p
               class="text-foreground-100 font-medium text-xs"
-            />
+            >
+              Checking
+            </p>
             <svg
               class="w-[25px] h-[15px]"
               fill="none"
