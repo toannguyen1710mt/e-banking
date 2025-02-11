@@ -78,7 +78,7 @@ describe('ConfirmAddCard Component', () => {
       <ConfirmAddCard isPending={false} accounts={MOCK_DATA_USER.accounts} />,
     );
 
-    const radioButton = getByRole('radio', { name: /checkings/i });
+    const radioButton = getByRole('radio', { name: /checking/i });
 
     fireEvent.click(radioButton);
 
@@ -90,7 +90,7 @@ describe('ConfirmAddCard Component', () => {
       <ConfirmAddCard isPending={false} accounts={MOCK_DATA_USER.accounts} />,
     );
 
-    const radioButton = getByRole('radio', { name: /checkings/i });
+    const radioButton = getByRole('radio', { name: /checking/i });
     fireEvent.click(radioButton);
 
     const confirmButton = getByRole('button', { name: /confirm/i });

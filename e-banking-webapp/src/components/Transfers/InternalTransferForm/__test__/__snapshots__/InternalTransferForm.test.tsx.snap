@@ -47,9 +47,9 @@ exports[`InternalTransferForm component should match snapshot for InternalTransf
               Savings
             </option>
             <option
-              value="Checkings"
+              value="Checking"
             >
-              Checkings
+              Checking
             </option>
           </select>
         </label>
@@ -152,9 +152,9 @@ exports[`InternalTransferForm component should match snapshot for InternalTransf
               Savings
             </option>
             <option
-              value="Checkings"
+              value="Checking"
             >
-              Checkings
+              Checking
             </option>
           </select>
         </label>
