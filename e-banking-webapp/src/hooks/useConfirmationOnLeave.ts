@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 
 // Constants
 import { MESSAGE } from '@/constants';
@@ -7,24 +7,30 @@ export const useConfirmationOnLeave = (
   hasChanges?: boolean,
   isDirty?: boolean,
 ) => {
-  useEffect(() => {
-    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+  const handleBeforeUnload = useCallback(
+    (event: BeforeUnloadEvent) => {
       if (hasChanges || isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
         event.returnValue = confirmationMessage;
         return confirmationMessage;
       }
-    };
+    },
+    [hasChanges, isDirty],
+  );
 
-    const handleLinkClick = (event: MouseEvent) => {
+  const handleLinkClick = useCallback(
+    (event: MouseEvent) => {
       if (hasChanges || isDirty) {
         const confirmationMessage = MESSAGE.CONFIRM_LEAVING;
         if (!window.confirm(confirmationMessage)) {
           event.preventDefault();
         }
       }
-    };
+    },
+    [hasChanges, isDirty],
+  );
 
+  useEffect(() => {
     window.addEventListener('beforeunload', handleBeforeUnload);
     document.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', handleLinkClick);
@@ -36,5 +42,5 @@ export const useConfirmationOnLeave = (
         link.removeEventListener('click', handleLinkClick);
       });
     };
-  }, [hasChanges, isDirty]);
+  }, [handleBeforeUnload, handleLinkClick]);
 };
