@@ -6,7 +6,6 @@ import { CreditCardForm } from '@/components/SignUpForm/CreditCardForm';
 
 // Contexts
 import { useWizardFormContext } from '@/context/WizardContext';
-import { ToastProvider } from '@/context/ToastContext';
 
 // Schemas
 import { CreditCardSchema } from '@/schemas';
@@ -84,12 +83,10 @@ describe('CreditCardForm component', () => {
     });
 
     container = render(
-      <ToastProvider>
-        <CreditCardForm<typeof CreditCardSchema>
-          schema={CreditCardSchema}
-          submitHandler={mockSubmitHandler}
-        />
-      </ToastProvider>,
+      <CreditCardForm<typeof CreditCardSchema>
+        schema={CreditCardSchema}
+        submitHandler={mockSubmitHandler}
+      />,
     );
   });
 

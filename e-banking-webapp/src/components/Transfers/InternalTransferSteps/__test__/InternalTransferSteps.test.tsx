@@ -7,9 +7,6 @@ import { InternalTransferSteps } from '@/components';
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
 
-// Contexts
-import { ToastProvider } from '@/context/ToastContext';
-
 // Actions
 import { createTransaction, updateAccountInfo } from '@/actions';
 
@@ -38,12 +35,7 @@ describe('InternalTransferSteps component', () => {
 
   beforeEach(() => {
     container = render(
-      <ToastProvider>
-        <InternalTransferSteps
-          session={MOCK_SESSION_DATA}
-          onClose={jest.fn()}
-        />
-      </ToastProvider>,
+      <InternalTransferSteps session={MOCK_SESSION_DATA} onClose={jest.fn()} />,
     );
   });
 

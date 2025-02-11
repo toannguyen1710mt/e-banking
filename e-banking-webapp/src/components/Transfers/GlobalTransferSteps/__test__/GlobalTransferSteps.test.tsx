@@ -6,8 +6,6 @@ import { GlobalTransferSteps } from '@/components';
 
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
-// Contexts
-import { ToastProvider } from '@/context';
 
 // Actions
 import { createTransaction, updateAccountInfo } from '@/actions';
@@ -39,9 +37,7 @@ describe('GlobalTransferSteps component', () => {
 
   beforeEach(() => {
     container = render(
-      <ToastProvider>
-        <GlobalTransferSteps session={MOCK_SESSION_DATA} onClose={jest.fn()} />
-      </ToastProvider>,
+      <GlobalTransferSteps session={MOCK_SESSION_DATA} onClose={jest.fn()} />,
     );
   });
 

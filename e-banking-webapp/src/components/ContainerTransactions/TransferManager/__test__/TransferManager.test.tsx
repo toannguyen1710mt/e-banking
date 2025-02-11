@@ -2,9 +2,6 @@
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 
-// Context
-import { ToastProvider } from '@/context';
-
 // API
 import { getTransactionsByUserId } from '@/services';
 
@@ -48,13 +45,11 @@ describe('TransferManager component', () => {
 
   test('should match snapshot', async () => {
     const { container } = render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -64,13 +59,11 @@ describe('TransferManager component', () => {
 
   test('should call getTransactionsByUserId with correct parameters', async () => {
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -83,13 +76,11 @@ describe('TransferManager component', () => {
 
   test('should display transactions received and sent', async () => {
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -99,13 +90,11 @@ describe('TransferManager component', () => {
 
   test('should fetch more transactions when scrolled to bottom', async () => {
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -123,13 +112,11 @@ describe('TransferManager component', () => {
 
   test('should switch transfer type and fetch transactions', async () => {
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -168,13 +155,11 @@ describe('TransferManager component', () => {
       });
 
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -206,13 +191,11 @@ describe('TransferManager component', () => {
     });
 
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {
@@ -233,13 +216,11 @@ describe('TransferManager component', () => {
 
   test('should handle transfer type selection correctly', async () => {
     render(
-      <ToastProvider>
-        <TransferManager
-          session={MOCK_SESSION_DATA}
-          totalTransferReceived={5}
-          totalTransferSent={5}
-        />
-      </ToastProvider>,
+      <TransferManager
+        session={MOCK_SESSION_DATA}
+        totalTransferReceived={5}
+        totalTransferSent={5}
+      />,
     );
 
     await waitFor(() => {

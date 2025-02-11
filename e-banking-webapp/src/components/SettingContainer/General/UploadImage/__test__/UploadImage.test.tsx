@@ -1,27 +1,26 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { UploadImage, IUploadImageProps } from '..';
-import { useToastContext } from '@/context';
 import { useUploadImage } from '@/hooks';
 import { ERROR_MESSAGES } from '@/constants';
-
-jest.mock('@/context', () => ({
-  useToastContext: jest.fn(),
-}));
+import { toastStore } from '@/utils';
 
 jest.mock('@/hooks', () => ({
   useUploadImage: jest.fn(),
 }));
 
+jest.mock('@/utils', () => ({
+  ...jest.requireActual('@/utils'),
+  toastStore: {
+    showToast: jest.fn(),
+  },
+}));
+
 describe('UploadImage Component', () => {
-  const mockShowToast = jest.fn();
   const mockHandleUploadImage = jest.fn();
 
   let container: ReturnType<typeof render>;
 
   beforeEach(() => {
-    (useToastContext as jest.Mock).mockReturnValue({
-      showToast: mockShowToast,
-    });
     (useUploadImage as jest.Mock).mockReturnValue({
       uploading: false,
       handleUploadImage: mockHandleUploadImage,
@@ -52,7 +51,7 @@ describe('UploadImage Component', () => {
     fireEvent.change(input, { target: { files: [file] } });
 
     await waitFor(() => {
-      expect(mockShowToast).toHaveBeenCalledWith(
+      expect(toastStore.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
         'error',
         'top-center',
@@ -73,7 +72,7 @@ describe('UploadImage Component', () => {
     fireEvent.change(input, { target: { files: [largeFile] } });
 
     await waitFor(() => {
-      expect(mockShowToast).toHaveBeenCalledWith(
+      expect(toastStore.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
         'error',
         'top-center',
