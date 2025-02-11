@@ -29,7 +29,7 @@ describe('updateAccountInfo', () => {
     const accountData: IAccountPayloadData = {
       accountNumber: '0123456789',
       balance: 100000,
-      type: 'Checkings' as AccountType,
+      type: 'Checking' as AccountType,
       currency: '$' as CurrencyUnit,
       name: 'John Doe',
     };

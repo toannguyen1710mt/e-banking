@@ -1,7 +1,7 @@
 'use client';
 
 // Interfaces
-import { CardStatistics, IAccount } from '@/interfaces';
+import { AccountType, IAccount } from '@/interfaces';
 
 // Components
 import { BalanceCard } from '@/components/BalanceCard';
@@ -16,11 +16,11 @@ export const BalanceCardList = ({ accounts }: IBalanceCardListProps) => {
   );
 
   const savingsAccount = accounts?.find(
-    (account) => account.type === CardStatistics.Savings,
+    (account) => account.type === AccountType.SAVINGS,
   );
 
   const checkingAccount = accounts?.find(
-    (account) => account.type === CardStatistics.Checkings,
+    (account) => account.type === AccountType.CHECKING,
   );
 
   const BALANCE_CARD = [

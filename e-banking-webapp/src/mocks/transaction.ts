@@ -21,7 +21,7 @@ export const MOCK_TRANSACTION_WIHOUT_CURRENCY: ITransaction[] = [
     updatedAt: formatDate('2024-12-01'),
     publishedAt: formatDate('2024-12-01'),
     fromAccountType: AccountType.MAIN,
-    toAccountType: AccountType.CHECKINGS,
+    toAccountType: AccountType.CHECKING,
   },
   {
     id: 'TX12346',
@@ -47,7 +47,7 @@ export const MOCK_TRANSACTION_WIHOUT_CURRENCY: ITransaction[] = [
     updatedAt: formatDate('2024-12-03'),
     publishedAt: formatDate('2024-12-03'),
     fromAccountType: AccountType.SAVINGS,
-    toAccountType: AccountType.CHECKINGS,
+    toAccountType: AccountType.CHECKING,
   },
 ];
 
@@ -64,7 +64,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     updatedAt: formatDate('2024-12-01'),
     publishedAt: formatDate('2024-12-01'),
     fromAccountType: AccountType.MAIN,
-    toAccountType: AccountType.CHECKINGS,
+    toAccountType: AccountType.CHECKING,
   },
   {
     id: 'TX12346',
@@ -92,7 +92,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     updatedAt: formatDate('2024-12-03'),
     publishedAt: formatDate('2024-12-03'),
     fromAccountType: AccountType.SAVINGS,
-    toAccountType: AccountType.CHECKINGS,
+    toAccountType: AccountType.CHECKING,
   },
   {
     id: 'TX12348',
@@ -105,7 +105,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -119,7 +119,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -133,7 +133,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -147,7 +147,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -161,7 +161,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -175,7 +175,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -189,7 +189,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -203,7 +203,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -217,7 +217,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -231,7 +231,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
   {
@@ -245,7 +245,7 @@ export const MOCK_TRANSACTIONS: ITransaction[] = [
     createdAt: formatDate('2024-12-04'),
     updatedAt: formatDate('2024-12-04'),
     publishedAt: formatDate('2024-12-04'),
-    fromAccountType: AccountType.CHECKINGS,
+    fromAccountType: AccountType.CHECKING,
     toAccountType: AccountType.SAVINGS,
   },
 ];
@@ -274,7 +274,7 @@ export const MOCK_TRANSACTIONS_HISTORY_HOME: SuccessResponse<
         documentId: 'nios4sn0bgw5u28nelo8fmao',
         id: 116,
         name: 'VID',
-        type: 'Savings',
+        type: AccountType.SAVINGS,
       },
     },
   ],

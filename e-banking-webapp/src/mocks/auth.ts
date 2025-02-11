@@ -2,7 +2,7 @@
 import { Session } from 'next-auth';
 
 // Interfaces
-import { IUser } from '@/interfaces';
+import { AccountType, IUser } from '@/interfaces';
 
 export const MOCK_DATA_USER: IUser = {
   accounts: [
@@ -12,7 +12,7 @@ export const MOCK_DATA_USER: IUser = {
       name: 'OCB',
       accountNumber: '123456789208',
       balance: 3441800,
-      type: 'Main',
+      type: AccountType.MAIN,
       currency: '$',
     },
     {
@@ -21,7 +21,7 @@ export const MOCK_DATA_USER: IUser = {
       name: 'ACB',
       accountNumber: '999332289888',
       balance: 84438800,
-      type: 'Checkings',
+      type: AccountType.CHECKING,
       currency: '$',
     },
     {
@@ -30,7 +30,7 @@ export const MOCK_DATA_USER: IUser = {
       name: 'VID',
       accountNumber: '106868929357',
       balance: 9235800,
-      type: 'Savings',
+      type: AccountType.SAVINGS,
       currency: '$',
     },
   ],
@@ -68,7 +68,7 @@ export const MOCK_DATA_USER_EMPTY_PROPS: IUser = {
       currency: '$',
       id: 36,
       name: '',
-      type: '',
+      type: AccountType.MAIN,
     },
     {
       documentId: '12',
@@ -77,7 +77,7 @@ export const MOCK_DATA_USER_EMPTY_PROPS: IUser = {
       currency: '$',
       id: 37,
       name: '',
-      type: '',
+      type: AccountType.SAVINGS,
     },
     {
       documentId: '12',
@@ -86,7 +86,7 @@ export const MOCK_DATA_USER_EMPTY_PROPS: IUser = {
       currency: '$',
       id: 38,
       name: '',
-      type: '',
+      type: AccountType.CHECKING,
     },
   ],
   avatar: 'https://i.ibb.co/SKHPQYq/avatar-default.webp',

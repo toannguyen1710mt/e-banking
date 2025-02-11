@@ -402,7 +402,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
             <li>
               2
               . 
-              Checkings
+              Checking
             </li>
           </ol>
         </div>
@@ -456,7 +456,7 @@ exports[`CardOverview component should match snapshot for CardOverview 1`] = `
                 <span
                   class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
                 >
-                  Checkings
+                  Checking
                 </span>
               </div>
             </div>

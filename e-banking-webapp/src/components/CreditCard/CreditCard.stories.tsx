@@ -49,7 +49,7 @@ export const Saving: Story = {
 export const Checking: Story = {
   args: {
     ...Main.args,
-    variant: 'checkings',
+    variant: 'checking',
   },
   render: (args) => <CreditCard {...args} />,
 };
