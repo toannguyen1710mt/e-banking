@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     description: 'Showcase of E-Banking application',
     images: [],
   },
+  alternates: {
+    canonical: 'https://e-banking-webapp.vercel.app',
+  },
 };
 
 export default async function RootLayout({
