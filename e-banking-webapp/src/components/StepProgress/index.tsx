@@ -25,6 +25,8 @@ export const StepProgress: React.FC<StepProgressProps> = ({
 
       return (
         <div
+          aria-labelledby='Step Progress'
+          aria-label='Step Progress'
           key={index}
           role='button'
           className={cn(
