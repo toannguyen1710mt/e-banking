@@ -165,7 +165,7 @@ export const TransferManager = ({
           className='mt-8 flex items-center justify-center text-center'
           ref={observerRef}
         >
-          <Spinner color='success' size='sm' />
+          <Spinner role='status' color='success' size='sm' />
         </div>
       )}
     </>
