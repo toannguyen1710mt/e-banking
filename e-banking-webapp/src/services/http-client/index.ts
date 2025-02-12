@@ -16,8 +16,8 @@ class ApiService {
   private async request<T>(
     method: string,
     url: string,
-    body?: unknown,
     options?: RequestInit,
+    body?: object,
   ) {
     const response = await fetch(`${this._apiName}${url}`, {
       method: method,
@@ -48,20 +48,19 @@ class ApiService {
     return {
       data: data as T,
       pagination: (data?.meta?.pagination as Pagination) ?? null,
-      error: undefined,
     };
   }
 
   async get<T>(url: string, options?: RequestInit) {
-    return await this.request<T>('GET', url, null, options);
+    return await this.request<T>('GET', url, options);
   }
 
-  async post<T>(url: string, body: unknown, options?: RequestInit) {
-    return await this.request<T>('POST', url, body, options);
+  async post<T>(url: string, body: {}, options?: RequestInit) {
+    return await this.request<T>('POST', url, options, body);
   }
 
-  async put<T>(url: string, body: unknown, options?: RequestInit) {
-    return await this.request<T>('PUT', url, body, options);
+  async put<T>(url: string, body: {}, options?: RequestInit) {
+    return await this.request<T>('PUT', url, options, body);
   }
 
   async delete<T>(url: string) {
