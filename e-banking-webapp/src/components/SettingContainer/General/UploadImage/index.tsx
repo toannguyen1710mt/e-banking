@@ -2,6 +2,7 @@
 
 import { Avatar } from '@nextui-org/react';
 import { ChangeEvent, useRef, useState } from 'react';
+import { Session } from 'next-auth';
 
 // Hooks
 import { useUploadImage } from '@/hooks';
@@ -21,6 +22,7 @@ export interface IUploadImageProps {
   name?: string;
   onChange: (url: string) => void;
   onRemove?: () => void;
+  session: Session;
 }
 
 export const UploadImage = ({
@@ -28,9 +30,11 @@ export const UploadImage = ({
   src,
   onChange,
   onRemove,
+  session,
 }: IUploadImageProps) => {
   const [previewImage, setPreviewImage] = useState(src);
-  const { uploading, handleUploadImage } = useUploadImage();
+
+  const { uploading, handleUploadImage } = useUploadImage(session.user.token);
 
   const inputRef = useRef<HTMLInputElement>(null);
 

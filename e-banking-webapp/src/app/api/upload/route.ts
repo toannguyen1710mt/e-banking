@@ -4,7 +4,16 @@ import { NextResponse } from 'next/server';
 // Constants
 import { ERROR_MESSAGES } from '@/constants';
 
+// Utils
+import { isTokenExpired } from '@/utils';
+
 export async function POST(request: Request): Promise<NextResponse> {
+  const token = request.headers.get('Authorization')?.split(' ')[1];
+
+  if (isTokenExpired(token!)) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
   try {
     const formData = await request.formData();
     const file = formData.get('file') as File;

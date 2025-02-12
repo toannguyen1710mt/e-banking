@@ -1,3 +1,5 @@
+import { Session } from 'next-auth';
+
 // Interfaces
 import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
@@ -7,9 +9,10 @@ import { ProfileForm } from './ProfileForm';
 
 interface GeneralProps {
   user: IUser;
+  session: Session;
 }
 
-export const General = ({ user }: GeneralProps) => (
+export const General = ({ user, session }: GeneralProps) => (
   <>
     <div className='border-b border-primary-200 border-opacity-50 pb-4 pl-8 max-[800px]:pt-6'>
       <Text
@@ -30,7 +33,7 @@ export const General = ({ user }: GeneralProps) => (
     </div>
 
     <div className='mt-5 pl-8'>
-      <ProfileForm userProfile={user} />
+      <ProfileForm userProfile={user} session={session} />
     </div>
   </>
 );
