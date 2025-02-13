@@ -17,3 +17,4 @@ export * from './tables';
 export * from './cards';
 export * from './date';
 export * from './sidebar-list';
+export * from './metadata';
