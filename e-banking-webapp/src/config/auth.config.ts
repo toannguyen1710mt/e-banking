@@ -24,7 +24,9 @@ export const authConfig = {
       const isLoggedIn = !!auth?.user;
       const isPublicPage =
         nextUrl.pathname === ROUTES.SIGN_IN ||
-        nextUrl.pathname === ROUTES.SIGN_UP;
+        nextUrl.pathname === ROUTES.SIGN_UP ||
+        nextUrl.pathname === '/sitemap.xml' ||
+        nextUrl.pathname === '/robots.txt';
 
       if (!isLoggedIn && !isPublicPage) {
         return Response.redirect(new URL(ROUTES.SIGN_IN, nextUrl));

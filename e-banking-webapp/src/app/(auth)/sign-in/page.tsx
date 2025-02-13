@@ -1,5 +1,29 @@
+import { Metadata } from 'next';
+
+// Constants
+import {
+  DESCRIPTION_SIGN_IN,
+  METADATA_ICONS,
+  TITLE_SIGN_IN,
+  URL_SIGN_IN,
+} from '@/constants';
+
 // Components
 import { AuthContentWrapper, HandIcon, LoginForm } from '@/components';
+
+export const metadata: Metadata = {
+  title: TITLE_SIGN_IN,
+  description: DESCRIPTION_SIGN_IN,
+  icons: METADATA_ICONS,
+  openGraph: {
+    title: TITLE_SIGN_IN,
+    description: DESCRIPTION_SIGN_IN,
+    url: URL_SIGN_IN,
+  },
+  alternates: {
+    canonical: URL_SIGN_IN,
+  },
+};
 
 const SignInPage = () => {
   const headingContent = (

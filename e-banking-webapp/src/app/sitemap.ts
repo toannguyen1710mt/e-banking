@@ -2,14 +2,16 @@ import { MetadataRoute } from 'next';
 import { ROUTES } from '@/constants';
 
 export const sitemap = (): MetadataRoute.Sitemap => {
-  const paths = Object.values(ROUTES);
-
-  return paths.map((path) => ({
-    url: `${process.env.NEXT_PUBLIC_URL}${path}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily',
-    priority: 1,
-  }));
+  return [
+    {
+      url: `${process.env.NEXT_PUBLIC_URL}${ROUTES.SIGN_IN}`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${process.env.NEXT_PUBLIC_URL}${ROUTES.SIGN_UP}`,
+      lastModified: new Date(),
+    },
+  ];
 };
 
 export default sitemap;
