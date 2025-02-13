@@ -17,7 +17,12 @@ import { createTransaction, updateAccountInfo } from '@/actions';
 
 // Helpers / Utils
 import { GlobalTransferFormSchema } from '@/schemas';
-import { convertToUSD, formatNumberWithCommas, sanitizeAmount } from '@/utils';
+import {
+  convertToUSD,
+  formatNumberWithCommas,
+  sanitizeAmount,
+  toastManager,
+} from '@/utils';
 
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
@@ -26,10 +31,9 @@ import {
   ConfirmGlobalTransfer,
   GlobalTransferSuccess,
 } from '@/components';
-import { FetchedBalancesProvider } from '@/context';
 
-// Contexts
-import { useToastContext } from '@/context';
+// Context
+import { FetchedBalancesProvider } from '@/context';
 
 type FormValues = z.infer<typeof GlobalTransferFormSchema>;
 
@@ -62,8 +66,6 @@ export const GlobalTransferSteps = ({
       Number(allFieldValues.globalTransfer.amount),
     ),
   );
-
-  const { showToast } = useToastContext();
 
   const sanitizedAmountInUSD = sanitizeAmount(amountInUSD);
 
@@ -106,7 +108,7 @@ export const GlobalTransferSteps = ({
       await updateAccountInfo(fromAccountId, payload);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      showToast(ERROR_MESSAGES.TRANSFER_FAILED);
+      toastManager.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
     }
   };
 

@@ -10,9 +10,6 @@ import * as services from '@/services';
 // Utils
 import * as utils from '@/utils';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Mocks
 import { MOCK_DATA_USER, MOCK_SESSION_DATA } from '@/mocks';
 
@@ -42,9 +39,14 @@ jest.mock('react-apexcharts', () => {
   };
 });
 
-describe('ContainerAnalytics component', () => {
-  const mockShowToast = jest.fn();
+jest.mock('@/utils', () => ({
+  ...jest.requireActual('@/utils'),
+  toastManager: {
+    showToast: jest.fn(),
+  },
+}));
 
+describe('ContainerAnalytics component', () => {
   beforeAll(() => {
     global.ResizeObserver = class {
       observe() {}
@@ -57,10 +59,6 @@ describe('ContainerAnalytics component', () => {
     (services.getAccountsByUserId as jest.Mock).mockResolvedValue(
       MOCK_DATA_USER.accounts,
     );
-
-    (useToastContext as jest.Mock).mockReturnValue({
-      showToast: mockShowToast,
-    });
 
     jest.spyOn(services, 'getTransactionsByUserId').mockResolvedValue({
       data: [],
@@ -111,7 +109,7 @@ describe('ContainerAnalytics component', () => {
     render(<ContainerAnalytics session={mockSession} />);
 
     await waitFor(() => {
-      expect(mockShowToast).toHaveBeenCalledWith(
+      expect(utils.toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.GET_ERROR,
         'error',
         'top-center',

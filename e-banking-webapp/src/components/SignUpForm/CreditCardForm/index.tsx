@@ -9,13 +9,13 @@ import { ERROR_MESSAGES } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
 
 // Helpers
-import { formatCardNumber } from '@/utils';
+import { formatCardNumber, toastManager } from '@/utils';
 
 // Styles
 import '@/styles/input.css';
 
 // Context
-import { useToastContext, useWizardFormContext } from '@/context';
+import { useWizardFormContext } from '@/context';
 
 // Components
 import {
@@ -42,8 +42,6 @@ export const CreditCardForm = <T extends z.ZodType>({
     goToStep,
   } = useWizardFormContext<typeof SignUpSchema>();
 
-  const { showToast } = useToastContext();
-
   const [isPending, startTransition] = useTransition();
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -60,7 +58,11 @@ export const CreditCardForm = <T extends z.ZodType>({
           message: String(error),
         });
 
-        showToast(ERROR_MESSAGES.SIGN_UP_FAILED, 'error', 'top-center');
+        toastManager.showToast(
+          ERROR_MESSAGES.SIGN_UP_FAILED,
+          'error',
+          'top-center',
+        );
 
         goToStep(0);
       }

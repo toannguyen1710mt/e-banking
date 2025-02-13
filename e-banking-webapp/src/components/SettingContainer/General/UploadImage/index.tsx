@@ -3,11 +3,11 @@
 import { Avatar } from '@nextui-org/react';
 import { ChangeEvent, useRef, useState } from 'react';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Hooks
 import { useUploadImage } from '@/hooks';
+
+// Utils
+import { toastManager } from '@/utils';
 
 // Components
 import { Button, CameraIcon, ImageIcon, TrashIcon } from '@/components';
@@ -30,9 +30,6 @@ export const UploadImage = ({
   onRemove,
 }: IUploadImageProps) => {
   const [previewImage, setPreviewImage] = useState(src);
-
-  const { showToast } = useToastContext();
-
   const { uploading, handleUploadImage } = useUploadImage();
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -49,7 +46,7 @@ export const UploadImage = ({
       file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
 
     if (!isValidImage) {
-      showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
         'error',
         'top-center',
@@ -59,7 +56,11 @@ export const UploadImage = ({
     const isLessThan2MB = file!.size / 1024 / 1024 < 1;
 
     if (!isLessThan2MB) {
-      showToast(ERROR_MESSAGES.UPLOAD_IMAGE_SIZE, 'error', 'top-center');
+      toastManager.showToast(
+        ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
+        'error',
+        'top-center',
+      );
     }
 
     if (file && isValidImage && isLessThan2MB) {

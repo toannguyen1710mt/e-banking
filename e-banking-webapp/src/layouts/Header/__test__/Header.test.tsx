@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { redirect, usePathname } from 'next/navigation';
 
 // Context
-import { ToastProvider, UserProvider } from '@/context';
+import { UserProvider } from '@/context';
 
 // Actions
 import { signOut } from '@/actions';
@@ -12,6 +12,7 @@ import { ERROR_MESSAGES } from '@/constants';
 
 // Components
 import { Header } from '..';
+import { toastManager } from '@/utils';
 
 jest.mock('@/actions', () => ({
   signOut: jest.fn(),
@@ -22,16 +23,11 @@ jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/sign-in'),
 }));
 
-const mockShowToast = jest.fn();
-
-jest.mock('@/context', () => ({
-  ...jest.requireActual('@/context'),
-  ToastProvider: ({ children }: { children: React.ReactNode }) => {
-    return <div>{children}</div>;
+jest.mock('@/utils', () => ({
+  ...jest.requireActual('@/utils'),
+  toastManager: {
+    showToast: jest.fn(),
   },
-  useToastContext: () => ({
-    showToast: mockShowToast,
-  }),
 }));
 
 const mockProps = {
@@ -41,11 +37,7 @@ const mockProps = {
 
 describe('Header component', () => {
   const renderWithProviders = (ui: React.ReactNode) => {
-    return render(
-      <UserProvider avatar={''}>
-        <ToastProvider>{ui}</ToastProvider>
-      </UserProvider>,
-    );
+    return render(<UserProvider avatar={''}>{ui}</UserProvider>);
   };
 
   beforeEach(() => {
@@ -96,7 +88,7 @@ describe('Header component', () => {
 
     await waitFor(() => {
       expect(signOut).toHaveBeenCalled();
-      expect(mockShowToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.SIGN_OUT_SUCCESS,
         'success',
         'top-center',
@@ -125,7 +117,7 @@ describe('Header component', () => {
 
     await waitFor(() => {
       expect(signOut).toHaveBeenCalled();
-      expect(mockShowToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.SIGN_OUT_FAILED,
         'error',
         'top-center',

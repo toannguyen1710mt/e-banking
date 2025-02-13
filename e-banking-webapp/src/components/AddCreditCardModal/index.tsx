@@ -1,5 +1,6 @@
 'use client';
 
+// Libs
 import { useEffect, useState, useTransition } from 'react';
 import Image from 'next/image';
 import { z } from 'zod';
@@ -22,8 +23,8 @@ import { CreditCardSchema } from '@/schemas';
 // Services
 import { getAccountsByUserId } from '@/services';
 
-// Context
-import { useToastContext } from '@/context';
+// Utils
+import { toastManager } from '@/utils';
 
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
@@ -45,8 +46,6 @@ export const AddCreditCardModal = ({
   onClose,
 }: IAddCreditCardModalProps) => {
   const [accounts, setAccounts] = useState<IAccount[]>([]);
-  const { showToast } = useToastContext();
-
   const [isPending, startTransition] = useTransition();
 
   const form = useForm<FormValues>({
@@ -96,12 +95,20 @@ export const AddCreditCardModal = ({
       });
 
       startTransition(() => {
-        showToast(ERROR_MESSAGES.ADD_CARD_SUCCESS, 'success', 'top-center');
+        toastManager.showToast(
+          ERROR_MESSAGES.ADD_CARD_SUCCESS,
+          'success',
+          'top-center',
+        );
 
         return onClose();
       });
     } catch (error) {
-      showToast(ERROR_MESSAGES.ADD_CARD_FAILED, 'error', 'top-center');
+      toastManager.showToast(
+        ERROR_MESSAGES.ADD_CARD_FAILED,
+        'error',
+        'top-center',
+      );
 
       if (error instanceof AuthError) {
         throw ERROR_MESSAGES.ADD_CARD_FAILED;

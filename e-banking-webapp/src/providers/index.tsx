@@ -10,7 +10,6 @@ import { THEMES } from '@/constants';
 import { Toast } from '@/components';
 
 // Contexts
-import { ToastProvider } from '@/context';
 import { UserProvider } from '@/context/useUserContext';
 
 interface IProvidersProps {
@@ -28,10 +27,8 @@ const Providers = ({ children, avatar }: IProvidersProps) => {
         themes={[THEMES.LIGHT, THEMES.DARK]}
       >
         <UserProvider avatar={avatar}>
-          <ToastProvider>
-            {children}
-            <Toast />
-          </ToastProvider>
+          {children}
+          <Toast />
         </UserProvider>
       </ThemeProvider>
     </NextUIProvider>

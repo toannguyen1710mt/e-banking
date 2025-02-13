@@ -1,75 +1,72 @@
 // Libs
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 // Components
 import { Toast } from '@/components';
-
-// Hooks
-import { useToastContext } from '@/context';
+import { toastManager } from '@/utils';
 
 jest.mock('@/context', () => ({
   useToastContext: jest.fn(),
 }));
 
 describe('Toast Component', () => {
-  const mockUseToast = useToastContext as jest.MockedFunction<
-    typeof useToastContext
-  >;
-
-  let container: ReturnType<typeof render>;
-
   beforeEach(() => {
-    (useToastContext as jest.Mock).mockReturnValue({
-      toasts: [
-        {
-          id: 1,
-          message: 'Success Message',
-          type: 'success',
-          position: 'top-right',
-        },
-        {
-          id: 2,
-          message: 'Error Message',
-          type: 'error',
-          position: 'top-center',
-        },
-        {
-          id: 3,
-          message: 'No Type Message',
-          position: 'bottom-left',
-        },
-      ],
-      removeToast: jest.fn(),
-      showToast: jest.fn(),
-    });
-
-    container = render(<Toast />);
-  });
-
-  afterEach(() => {
     jest.clearAllMocks();
   });
 
   it('should match snapshot', () => {
+    const { container } = render(<Toast />);
+
     expect(container).toMatchSnapshot();
   });
 
-  it('should use default success background when toast type is undefined', () => {
-    const undefinedTypeToast = container.getByLabelText('toast-undefined-3');
+  it('should render toast when show event is emitted', async () => {
+    render(<Toast />);
+    const toastData = {
+      id: 1,
+      message: 'Success Message',
+      type: 'success',
+      position: 'top-right',
+    };
 
-    expect(undefinedTypeToast).toHaveClass('bg-success');
+    toastManager.emit('show', toastData);
+
+    expect(await screen.findByText('Success Message')).toBeInTheDocument();
   });
 
-  it('should remove toast on click', () => {
-    const { removeToast } = mockUseToast();
+  it('should remove toast when remove event is emitted', async () => {
+    render(<Toast />);
+    const toastData = {
+      id: 1,
+      message: 'Dismiss Me',
+      type: 'info',
+      position: 'bottom-left',
+    };
 
-    const successToast = container.getByLabelText('toast-success-1');
-    const errorToast = container.getByLabelText('toast-error-2');
+    toastManager.emit('show', toastData);
+    expect(await screen.findByText('Dismiss Me')).toBeInTheDocument();
 
-    fireEvent.click(successToast);
-    expect(removeToast).toHaveBeenCalledWith(1);
+    toastManager.emit('remove', 1);
+    await waitFor(() => {
+      expect(screen.queryByText('Dismiss Me')).not.toBeInTheDocument();
+    });
+  });
 
-    fireEvent.click(errorToast);
-    expect(removeToast).toHaveBeenCalledWith(2);
+  it('should remove toast when clicked', async () => {
+    render(<Toast />);
+    const toastData = {
+      id: 2,
+      message: 'Click to Remove',
+      type: 'error',
+      position: 'top-center',
+    };
+
+    toastManager.emit('show', toastData);
+    expect(await screen.findByText('Click to Remove')).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText('Click to Remove'));
+    await waitFor(() => {
+      expect(screen.queryByText('Click to Remove')).not.toBeInTheDocument();
+    });
   });
 });
