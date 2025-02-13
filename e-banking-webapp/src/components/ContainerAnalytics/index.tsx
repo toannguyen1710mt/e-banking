@@ -13,7 +13,7 @@ import { IAccount, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { getAccountsByUserId, getTransactionsByUserId } from '@/services';
 
 // Utils
-import { getGreeting, toastStore } from '@/utils';
+import { getGreeting, toastManager } from '@/utils';
 
 // Components
 import { CardOverview } from '../CardOverview';
@@ -45,7 +45,11 @@ export const ContainerAnalytics = ({ session }: IContainerAnalyticsProps) => {
         setAccounts(result);
       } catch (error) {
         if (error instanceof AuthError) {
-          toastStore.showToast(ERROR_MESSAGES.GET_ERROR, 'error', 'top-center');
+          toastManager.showToast(
+            ERROR_MESSAGES.GET_ERROR,
+            'error',
+            'top-center',
+          );
         }
       }
     };

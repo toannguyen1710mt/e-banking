@@ -41,7 +41,7 @@ jest.mock('react-apexcharts', () => {
 
 jest.mock('@/utils', () => ({
   ...jest.requireActual('@/utils'),
-  toastStore: {
+  toastManager: {
     showToast: jest.fn(),
   },
 }));
@@ -109,7 +109,7 @@ describe('ContainerAnalytics component', () => {
     render(<ContainerAnalytics session={mockSession} />);
 
     await waitFor(() => {
-      expect(utils.toastStore.showToast).toHaveBeenCalledWith(
+      expect(utils.toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.GET_ERROR,
         'error',
         'top-center',

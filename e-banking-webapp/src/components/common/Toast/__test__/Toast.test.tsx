@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 
 // Components
 import { Toast } from '@/components';
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 jest.mock('@/context', () => ({
   useToastContext: jest.fn(),
@@ -29,7 +29,7 @@ describe('Toast Component', () => {
       position: 'top-right',
     };
 
-    toastStore.emit('show', toastData);
+    toastManager.emit('show', toastData);
 
     expect(await screen.findByText('Success Message')).toBeInTheDocument();
   });
@@ -43,10 +43,10 @@ describe('Toast Component', () => {
       position: 'bottom-left',
     };
 
-    toastStore.emit('show', toastData);
+    toastManager.emit('show', toastData);
     expect(await screen.findByText('Dismiss Me')).toBeInTheDocument();
 
-    toastStore.emit('remove', 1);
+    toastManager.emit('remove', 1);
     await waitFor(() => {
       expect(screen.queryByText('Dismiss Me')).not.toBeInTheDocument();
     });
@@ -61,7 +61,7 @@ describe('Toast Component', () => {
       position: 'top-center',
     };
 
-    toastStore.emit('show', toastData);
+    toastManager.emit('show', toastData);
     expect(await screen.findByText('Click to Remove')).toBeInTheDocument();
 
     fireEvent.click(screen.getByText('Click to Remove'));

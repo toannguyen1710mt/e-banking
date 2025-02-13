@@ -12,7 +12,7 @@ import { ERROR_MESSAGES } from '@/constants';
 
 // Components
 import { Header } from '..';
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 jest.mock('@/actions', () => ({
   signOut: jest.fn(),
@@ -25,7 +25,7 @@ jest.mock('next/navigation', () => ({
 
 jest.mock('@/utils', () => ({
   ...jest.requireActual('@/utils'),
-  toastStore: {
+  toastManager: {
     showToast: jest.fn(),
   },
 }));
@@ -88,7 +88,7 @@ describe('Header component', () => {
 
     await waitFor(() => {
       expect(signOut).toHaveBeenCalled();
-      expect(toastStore.showToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.SIGN_OUT_SUCCESS,
         'success',
         'top-center',
@@ -117,7 +117,7 @@ describe('Header component', () => {
 
     await waitFor(() => {
       expect(signOut).toHaveBeenCalled();
-      expect(toastStore.showToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.SIGN_OUT_FAILED,
         'error',
         'top-center',

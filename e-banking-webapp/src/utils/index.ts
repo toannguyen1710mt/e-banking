@@ -8,4 +8,4 @@ export * from './futureMonth';
 export * from './validation';
 export * from './search-params';
 export * from './sanitizeAmount';
-export * from './toastStore';
+export * from './toastManager';

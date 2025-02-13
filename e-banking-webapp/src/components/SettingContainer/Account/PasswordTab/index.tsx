@@ -27,7 +27,7 @@ import { changePassword } from '@/actions';
 import { useConfirmationOnLeave } from '@/hooks';
 
 // Utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 type FormValues = z.infer<typeof UpdatePasswordSchema>;
 
@@ -102,7 +102,7 @@ export const PasswordTab = ({
         }
 
         startTransition(() => {
-          toastStore.showToast(
+          toastManager.showToast(
             ERROR_MESSAGES.CHANGE_PASSWORD_SUCCESS,
             'success',
             'top-center',
@@ -124,7 +124,7 @@ export const PasswordTab = ({
             });
           }
 
-          toastStore.showToast(
+          toastManager.showToast(
             ERROR_MESSAGES.CHANGE_PASSWORD_FAILED,
             'error',
             'top-center',

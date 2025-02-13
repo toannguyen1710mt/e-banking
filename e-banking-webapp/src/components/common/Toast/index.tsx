@@ -6,7 +6,7 @@ import { Card } from '@nextui-org/react';
 // Components
 import { Text } from '@/components';
 import { useEffect, useState } from 'react';
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 interface IToast {
   id: number;
@@ -42,12 +42,12 @@ export const Toast = () => {
       setToasts((prev) => prev.filter((t) => t.id !== id));
     };
 
-    toastStore.on('show', handleShowToast);
-    toastStore.on('remove', handleRemoveToast);
+    toastManager.on('show', handleShowToast);
+    toastManager.on('remove', handleRemoveToast);
 
     return () => {
-      toastStore.off('show', handleShowToast);
-      toastStore.off('remove', handleRemoveToast);
+      toastManager.off('show', handleShowToast);
+      toastManager.off('remove', handleRemoveToast);
     };
   }, []);
 
@@ -67,7 +67,7 @@ export const Toast = () => {
                   role='alert'
                   key={toast.id}
                   className={`w-64 cursor-pointer flex-row items-center gap-4 rounded-md px-4 py-3 shadow-md ${TOAST_BACKGROUNDS[toast.type ?? 'success']}`}
-                  onPress={() => toastStore.emit('remove', toast.id)}
+                  onPress={() => toastManager.emit('remove', toast.id)}
                 >
                   <Text className='text-sm !text-foreground-200'>
                     {toast.message}

@@ -18,7 +18,7 @@ import { Preferences } from '@/interfaces';
 import { getUserById } from '@/services';
 
 // Utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 // Components
 import { EmailTab } from '../EmailTab';
@@ -77,7 +77,7 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
     try {
       await updateEmailSettings(id, data);
 
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.UPDATE_EMAIL_SETTINGS_SUCCESS,
         'success',
         'top-center',

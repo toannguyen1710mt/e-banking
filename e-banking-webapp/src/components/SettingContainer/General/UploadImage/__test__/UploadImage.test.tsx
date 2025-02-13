@@ -2,7 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { UploadImage, IUploadImageProps } from '..';
 import { useUploadImage } from '@/hooks';
 import { ERROR_MESSAGES } from '@/constants';
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 jest.mock('@/hooks', () => ({
   useUploadImage: jest.fn(),
@@ -10,7 +10,7 @@ jest.mock('@/hooks', () => ({
 
 jest.mock('@/utils', () => ({
   ...jest.requireActual('@/utils'),
-  toastStore: {
+  toastManager: {
     showToast: jest.fn(),
   },
 }));
@@ -51,7 +51,7 @@ describe('UploadImage Component', () => {
     fireEvent.change(input, { target: { files: [file] } });
 
     await waitFor(() => {
-      expect(toastStore.showToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
         'error',
         'top-center',
@@ -72,7 +72,7 @@ describe('UploadImage Component', () => {
     fireEvent.change(input, { target: { files: [largeFile] } });
 
     await waitFor(() => {
-      expect(toastStore.showToast).toHaveBeenCalledWith(
+      expect(toastManager.showToast).toHaveBeenCalledWith(
         ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
         'error',
         'top-center',

@@ -10,7 +10,7 @@ import { Button, Text, Toast } from '@/components';
 import { ToastType, ToastPosition } from '@/interfaces';
 
 // Utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 const meta = {
   title: 'Components/Common/Toast',
@@ -44,7 +44,7 @@ export const CustomizableToast: Story = {
     };
 
     const handleButtonClick = () => {
-      toastStore.showToast('Custom message', selectedType, selectedPosition);
+      toastManager.showToast('Custom message', selectedType, selectedPosition);
     };
 
     return (

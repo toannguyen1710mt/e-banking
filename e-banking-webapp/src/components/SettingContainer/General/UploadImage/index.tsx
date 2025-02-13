@@ -7,7 +7,7 @@ import { ChangeEvent, useRef, useState } from 'react';
 import { useUploadImage } from '@/hooks';
 
 // Utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 // Components
 import { Button, CameraIcon, ImageIcon, TrashIcon } from '@/components';
@@ -46,7 +46,7 @@ export const UploadImage = ({
       file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
 
     if (!isValidImage) {
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
         'error',
         'top-center',
@@ -56,7 +56,7 @@ export const UploadImage = ({
     const isLessThan2MB = file!.size / 1024 / 1024 < 1;
 
     if (!isLessThan2MB) {
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
         'error',
         'top-center',

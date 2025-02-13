@@ -37,7 +37,7 @@ import { signOut } from '@/actions';
 import { useUserContext } from '@/context';
 
 // utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 interface IHeaderProps {
   username: string;
@@ -59,7 +59,7 @@ export const Header = ({ username, email }: IHeaderProps) => {
     try {
       await signOut();
 
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.SIGN_OUT_SUCCESS,
         'success',
         'top-center',
@@ -67,7 +67,7 @@ export const Header = ({ username, email }: IHeaderProps) => {
     } catch (error) {
       console.error(error);
 
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.SIGN_OUT_FAILED,
         'error',
         'top-center',

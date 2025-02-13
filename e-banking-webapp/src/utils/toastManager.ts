@@ -1,7 +1,7 @@
 import { ToastPosition, ToastType } from '@/interfaces';
 import EventEmitter from 'events';
 
-class ToastStore extends EventEmitter {
+class ToastManager extends EventEmitter {
   showToast(
     message: string,
     type: ToastType = 'success',
@@ -17,4 +17,4 @@ class ToastStore extends EventEmitter {
   }
 }
 
-export const toastStore = new ToastStore();
+export const toastManager = new ToastManager();

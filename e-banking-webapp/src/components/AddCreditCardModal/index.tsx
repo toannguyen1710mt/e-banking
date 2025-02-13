@@ -1,5 +1,6 @@
 'use client';
 
+// Libs
 import { useEffect, useState, useTransition } from 'react';
 import Image from 'next/image';
 import { z } from 'zod';
@@ -22,12 +23,14 @@ import { CreditCardSchema } from '@/schemas';
 // Services
 import { getAccountsByUserId } from '@/services';
 
+// Utils
+import { toastManager } from '@/utils';
+
 // Components
 import * as WizardForm from '@/components/common/WizardForm';
 import { Modal } from '../common';
 import { AddCreditCard } from './AddCreditCard';
 import { ConfirmAddCard } from './ConfirmAddCard';
-import { toastStore } from '@/utils';
 
 interface IAddCreditCardModalProps {
   session: Session;
@@ -92,7 +95,7 @@ export const AddCreditCardModal = ({
       });
 
       startTransition(() => {
-        toastStore.showToast(
+        toastManager.showToast(
           ERROR_MESSAGES.ADD_CARD_SUCCESS,
           'success',
           'top-center',
@@ -101,7 +104,7 @@ export const AddCreditCardModal = ({
         return onClose();
       });
     } catch (error) {
-      toastStore.showToast(
+      toastManager.showToast(
         ERROR_MESSAGES.ADD_CARD_FAILED,
         'error',
         'top-center',

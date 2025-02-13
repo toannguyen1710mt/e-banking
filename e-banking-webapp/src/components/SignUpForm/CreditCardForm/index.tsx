@@ -9,7 +9,7 @@ import { ERROR_MESSAGES } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
 
 // Helpers
-import { formatCardNumber, toastStore } from '@/utils';
+import { formatCardNumber, toastManager } from '@/utils';
 
 // Styles
 import '@/styles/input.css';
@@ -58,7 +58,7 @@ export const CreditCardForm = <T extends z.ZodType>({
           message: String(error),
         });
 
-        toastStore.showToast(
+        toastManager.showToast(
           ERROR_MESSAGES.SIGN_UP_FAILED,
           'error',
           'top-center',

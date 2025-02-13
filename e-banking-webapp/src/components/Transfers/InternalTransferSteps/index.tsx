@@ -30,7 +30,7 @@ import { createTransaction, updateAccountInfo } from '@/actions';
 import { FetchedBalancesProvider } from '@/context/FetchedBalancesContext';
 
 // Utils
-import { toastStore } from '@/utils';
+import { toastManager } from '@/utils';
 
 type FormValues = z.infer<typeof InternalTransferFormSchema>;
 
@@ -99,7 +99,7 @@ export const InternalTransferSteps = ({
       await updateAccountInfo(toAccountId, accountReceiveData);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      toastStore.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
+      toastManager.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
     }
   };
 

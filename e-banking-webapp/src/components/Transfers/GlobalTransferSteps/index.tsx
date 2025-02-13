@@ -21,7 +21,7 @@ import {
   convertToUSD,
   formatNumberWithCommas,
   sanitizeAmount,
-  toastStore,
+  toastManager,
 } from '@/utils';
 
 // Components
@@ -108,7 +108,7 @@ export const GlobalTransferSteps = ({
       await updateAccountInfo(fromAccountId, payload);
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      toastStore.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
+      toastManager.showToast(ERROR_MESSAGES.TRANSFER_FAILED);
     }
   };
 
