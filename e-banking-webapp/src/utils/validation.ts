@@ -27,7 +27,7 @@ export const isValidNumber = (value: string): boolean => {
  * @param {string} jwt - The JWT to check.
  * @returns {boolean} True if the token is expired, false otherwise.
  */
-export const isTokenExpired = (jwt: string) => {
+export const isInValidToken = (jwt: string) => {
   if (!jwt) return true;
 
   try {

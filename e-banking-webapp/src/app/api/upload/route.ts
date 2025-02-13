@@ -5,12 +5,12 @@ import { NextResponse } from 'next/server';
 import { ERROR_MESSAGES } from '@/constants';
 
 // Utils
-import { isTokenExpired } from '@/utils';
+import { isInValidToken } from '@/utils';
 
 export async function POST(request: Request): Promise<NextResponse> {
   const token = request.headers.get('Authorization')?.split(' ')[1];
 
-  if (isTokenExpired(token!)) {
+  if (isInValidToken(token!)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
