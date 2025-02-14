@@ -4,7 +4,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { useFormContext } from 'react-hook-form';
 
 // Context
-import { useToastContext, useWizardFormContext } from '@/context';
+import { useWizardFormContext } from '@/context';
 
 // Actions
 import { addAccount, addCard, signUp, updateUser } from '@/actions/auth';
@@ -50,7 +50,6 @@ jest.mock('react-hook-form', () => ({
 }));
 
 jest.mock('@/context', () => ({
-  useToastContext: jest.fn(),
   useWizardFormContext: jest.fn(),
   WizardFormContextProvider: ({ children }: { children: React.ReactNode }) => {
     const contextValue = {
@@ -96,7 +95,6 @@ const fillInput = (labelText: string, value: string): void => {
 };
 
 describe('SignUpForm component', () => {
-  const mockShowToast = jest.fn();
   const mockFormData = {
     user: {
       username: 'testuser',
@@ -121,10 +119,6 @@ describe('SignUpForm component', () => {
   beforeEach(() => {
     mockHandleSubmit = jest.fn((callback) => async () => {
       await callback(mockFormData);
-    });
-
-    (useToastContext as jest.Mock).mockReturnValue({
-      showToast: mockShowToast,
     });
 
     (useFormContext as jest.Mock).mockReturnValue({
