@@ -32,7 +32,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="announcements"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-0"
@@ -57,9 +57,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -78,7 +78,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="updates"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-1"
@@ -103,9 +103,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -124,7 +124,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="feedbacksAndSurvey"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-2"
@@ -149,9 +149,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -170,7 +170,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="events"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-3"
@@ -195,9 +195,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -216,7 +216,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="generalNotification"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-4"
@@ -241,9 +241,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -262,7 +262,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="promotions"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-5"
@@ -287,9 +287,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -308,7 +308,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
               id="eventsNearMe"
             >
               <span
-                style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
               >
                 <input
                   aria-label="check-references-6"
@@ -333,9 +333,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                     stroke="currentColor"
                     stroke-dasharray="22"
                     stroke-dashoffset="66"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </span>
@@ -398,7 +398,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="announcements"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-0"
@@ -423,9 +423,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -444,7 +444,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="updates"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-1"
@@ -469,9 +469,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -490,7 +490,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="feedbacksAndSurvey"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-2"
@@ -515,9 +515,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -536,7 +536,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="events"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-3"
@@ -561,9 +561,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -582,7 +582,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="generalNotification"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-4"
@@ -607,9 +607,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -628,7 +628,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="promotions"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-5"
@@ -653,9 +653,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>
@@ -674,7 +674,7 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
             id="eventsNearMe"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-label="check-references-6"
@@ -699,9 +699,9 @@ exports[`EmailTab Component should render snapshot correctly 1`] = `
                   stroke="currentColor"
                   stroke-dasharray="22"
                   stroke-dashoffset="66"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </span>

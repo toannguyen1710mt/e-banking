@@ -233,16 +233,16 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                   <path
                     d="M9.75 12.75L13.5 9L9.75 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                   <path
                     d="M4.5 12.75L8.25 9L4.5 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </button>
@@ -266,7 +266,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                   <svg
                     class="z-0 relative overflow-hidden text-primary w-[200px] h-[200px] drop-shadow-md"
                     fill="none"
-                    strokeWidth="3"
+                    stroke-width="3"
                     viewBox="0 0 32 32"
                   >
                     <circle
@@ -277,7 +277,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                       role="presentation"
                       stroke-dasharray="81.68140899333463 81.68140899333463"
                       stroke-dashoffset="0"
-                      strokeLinecap="round"
+                      stroke-linecap="round"
                       transform="rotate(-90 16 16)"
                     />
                     <circle
@@ -288,7 +288,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                       role="presentation"
                       stroke-dasharray="81.68140899333463 81.68140899333463"
                       stroke-dashoffset="81.68140899333463"
-                      strokeLinecap="round"
+                      stroke-linecap="round"
                       transform="rotate(-90 16 16)"
                     />
                   </svg>
@@ -534,16 +534,16 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                 <path
                   d="M9.75 12.75L13.5 9L9.75 5.25"
                   stroke="currentColor"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
                 <path
                   d="M4.5 12.75L8.25 9L4.5 5.25"
                   stroke="currentColor"
-                  strokeLinecap="round"
-                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
                 />
               </svg>
             </button>
@@ -567,7 +567,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                 <svg
                   class="z-0 relative overflow-hidden text-primary w-[200px] h-[200px] drop-shadow-md"
                   fill="none"
-                  strokeWidth="3"
+                  stroke-width="3"
                   viewBox="0 0 32 32"
                 >
                   <circle
@@ -578,7 +578,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                     role="presentation"
                     stroke-dasharray="81.68140899333463 81.68140899333463"
                     stroke-dashoffset="0"
-                    strokeLinecap="round"
+                    stroke-linecap="round"
                     transform="rotate(-90 16 16)"
                   />
                   <circle
@@ -589,7 +589,7 @@ exports[`MyTarget Component should render match the snapshot 1`] = `
                     role="presentation"
                     stroke-dasharray="81.68140899333463 81.68140899333463"
                     stroke-dashoffset="81.68140899333463"
-                    strokeLinecap="round"
+                    stroke-linecap="round"
                     transform="rotate(-90 16 16)"
                   />
                 </svg>

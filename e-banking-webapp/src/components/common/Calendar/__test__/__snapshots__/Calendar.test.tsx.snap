@@ -20,7 +20,7 @@ exports[`Calendar component should match snapshot 1`] = `
       </span>
     </div>
     <div
-      style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <h2>
         January 2024
@@ -54,9 +54,9 @@ exports[`Calendar component should match snapshot 1`] = `
               <path
                 d="M10 3.33334L6 8.00001L10 12.6667"
                 stroke="currentColor"
-                strokeLinecap="round"
-                 strokeLinejoin="round"
-                strokeWidth="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
               />
             </svg>
           </button>
@@ -92,9 +92,9 @@ exports[`Calendar component should match snapshot 1`] = `
               <path
                 d="M6 3.33334L10 8.00001L6 12.6667"
                 stroke="currentColor"
-                strokeLinecap="round"
-                 strokeLinejoin="round"
-                strokeWidth="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
               />
             </svg>
           </button>
@@ -786,7 +786,7 @@ exports[`Calendar component should match snapshot 1`] = `
       </div>
     </div>
     <div
-      style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
     >
       <button
         aria-label="Next"

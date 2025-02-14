@@ -21,7 +21,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
             class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
           >
             <span
-              style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
             >
               <input
                 aria-describedby=":r7: react-aria-:r3:"
@@ -72,7 +72,7 @@ exports[`RadioButton component Should render correctly snapshot 1`] = `
           class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
         >
           <span
-            style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
           >
             <input
               aria-describedby=":r7: react-aria-:r3:"

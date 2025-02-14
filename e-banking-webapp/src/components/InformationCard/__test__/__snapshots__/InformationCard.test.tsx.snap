@@ -134,16 +134,16 @@ exports[`InformationCard Component should match snapshot 1`] = `
                   <path
                     d="M9.75 12.75L13.5 9L9.75 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                   <path
                     d="M4.5 12.75L8.25 9L4.5 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </button>
@@ -162,16 +162,16 @@ exports[`InformationCard Component should match snapshot 1`] = `
                   <path
                     d="M9.75 12.75L13.5 9L9.75 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                   <path
                     d="M4.5 12.75L8.25 9L4.5 5.25"
                     stroke="currentColor"
-                    strokeLinecap="round"
-                     strokeLinejoin="round"
-                    strokeWidth="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                   />
                 </svg>
               </button>
@@ -219,7 +219,7 @@ exports[`InformationCard Component should match snapshot 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clipPath="url(#clip0_1_972)"
+                clip-path="url(#clip0_1_972)"
               >
                 <path
                   clip-rule="evenodd"
