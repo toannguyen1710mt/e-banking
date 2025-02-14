@@ -28,10 +28,6 @@ jest.mock('@/utils', () => ({
   formatCardNumber: jest.fn(),
 }));
 
-jest.mock('@/context', () => ({
-  useToastContext: jest.fn(),
-}));
-
 jest.mock('react-apexcharts', () => {
   return {
     __esModule: true,

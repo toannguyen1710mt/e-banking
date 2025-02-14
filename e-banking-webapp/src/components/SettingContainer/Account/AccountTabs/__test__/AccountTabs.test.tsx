@@ -1,8 +1,5 @@
 import { act, fireEvent, render, waitFor } from '@testing-library/react';
 
-// Context
-import { useToastContext } from '@/context';
-
 // Services
 import { getUserById } from '@/services';
 
@@ -15,10 +12,6 @@ import { MOCK_SESSION_DATA } from '@/mocks';
 // Components
 import { AccountTabs } from '..';
 
-jest.mock('@/context', () => ({
-  useToastContext: jest.fn(),
-}));
-
 jest.mock('@/services', () => ({
   getUserById: jest.fn(),
 }));
@@ -28,33 +21,7 @@ jest.mock('@/actions', () => ({
 }));
 
 describe('AccountTabs component', () => {
-  const mockShowToast = jest.fn();
-
   beforeEach(() => {
-    (useToastContext as jest.Mock).mockReturnValue({
-      toasts: [
-        {
-          id: 1,
-          message: 'Success Message',
-          type: 'success',
-          position: 'top-right',
-        },
-        {
-          id: 2,
-          message: 'Error Message',
-          type: 'error',
-          position: 'top-center',
-        },
-        {
-          id: 3,
-          message: 'No Type Message',
-          position: 'bottom-left',
-        },
-      ],
-      removeToast: jest.fn(),
-      showToast: mockShowToast,
-    });
-
     global.confirm = jest.fn();
 
     (getUserById as jest.Mock).mockResolvedValue({

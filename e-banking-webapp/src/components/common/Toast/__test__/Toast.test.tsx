@@ -5,10 +5,6 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { Toast } from '@/components';
 import { toastManager } from '@/utils';
 
-jest.mock('@/context', () => ({
-  useToastContext: jest.fn(),
-}));
-
 describe('Toast Component', () => {
   beforeEach(() => {
     jest.clearAllMocks();
