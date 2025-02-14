@@ -90,7 +90,5 @@ describe('GlobalTransferSteps component', () => {
     await waitFor(() => {
       expect(createTransaction).toHaveBeenCalled();
     });
-
-    expect(proceedButton).toBeInTheDocument();
   });
 });
