@@ -41,7 +41,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <g
-              clip-path="url(#clip0_1_972)"
+              clipPath="url(#clip0_1_972)"
             >
               <path
                 clip-rule="evenodd"
@@ -390,7 +390,7 @@ exports[`CreditCard component Should render snapshot correctly 1`] = `
           xmlns="http://www.w3.org/2000/svg"
         >
           <g
-            clip-path="url(#clip0_1_972)"
+            clipPath="url(#clip0_1_972)"
           >
             <path
               clip-rule="evenodd"

@@ -372,9 +372,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     <path
                       d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -735,9 +735,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     <path
                       d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -1054,9 +1054,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                     <path
                       d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3.33333"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="3.33333"
                     />
                   </svg>
                 </button>
@@ -1463,9 +1463,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   <path
                     d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeLinecap="round"
+                     strokeLinejoin="round"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>
@@ -1826,9 +1826,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   <path
                     d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeLinecap="round"
+                     strokeLinejoin="round"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>
@@ -2145,9 +2145,9 @@ exports[`Slideshow component Should render snapshot correctly 1`] = `
                   <path
                     d="M13.667 2L23.667 12L13.667 22M22.2781 12L2.00033 12"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="3.33333"
+                    strokeLinecap="round"
+                     strokeLinejoin="round"
+                    strokeWidth="3.33333"
                   />
                 </svg>
               </button>

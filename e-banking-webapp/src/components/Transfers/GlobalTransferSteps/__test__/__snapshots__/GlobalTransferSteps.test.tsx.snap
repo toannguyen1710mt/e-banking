@@ -38,7 +38,7 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                       aria-hidden="true"
                       data-a11y-ignore="aria-hidden-focus"
                       data-testid="hidden-select-container"
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
                       <input
                         style="font-size: 16px;"
@@ -136,7 +136,7 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                       aria-hidden="true"
                       data-a11y-ignore="aria-hidden-focus"
                       data-testid="hidden-select-container"
-                      style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                      style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                     >
                       <input
                         style="font-size: 16px;"
@@ -491,21 +491,21 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <g
-                        clip-path="url(#clip0_1057_534)"
+                        clipPath="url(#clip0_1057_534)"
                       >
                         <path
                           d="M18.3337 1.66666L9.16699 10.8333"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                           strokeLinejoin="round"
+                          strokeWidth="2"
                         />
                         <path
                           d="M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                           strokeLinejoin="round"
+                          strokeWidth="2"
                         />
                       </g>
                       <defs>
@@ -564,7 +564,7 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                     aria-hidden="true"
                     data-a11y-ignore="aria-hidden-focus"
                     data-testid="hidden-select-container"
-                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                   >
                     <input
                       style="font-size: 16px;"
@@ -662,7 +662,7 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                     aria-hidden="true"
                     data-a11y-ignore="aria-hidden-focus"
                     data-testid="hidden-select-container"
-                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                    style="border: 0px; clipPath: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
                   >
                     <input
                       style="font-size: 16px;"
@@ -1017,21 +1017,21 @@ exports[`GlobalTransferSteps component should match snapshot 1`] = `
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g
-                      clip-path="url(#clip0_1057_534)"
+                      clipPath="url(#clip0_1057_534)"
                     >
                       <path
                         d="M18.3337 1.66666L9.16699 10.8333"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         strokeLinejoin="round"
+                        strokeWidth="2"
                       />
                       <path
                         d="M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                         strokeLinejoin="round"
+                        strokeWidth="2"
                       />
                     </g>
                     <defs>

@@ -1355,9 +1355,9 @@ exports[`TransactionTable component should match snapshot 1`] = `
                     <path
                       d="M15.5 19l-7-7 7-7"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="1.5"
                     />
                   </svg>
                 </li>
@@ -1401,9 +1401,9 @@ exports[`TransactionTable component should match snapshot 1`] = `
                     <path
                       d="M15.5 19l-7-7 7-7"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="1.5"
                     />
                   </svg>
                 </li>
@@ -2765,9 +2765,9 @@ exports[`TransactionTable component should match snapshot 1`] = `
                   <path
                     d="M15.5 19l-7-7 7-7"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                     strokeLinejoin="round"
+                    strokeWidth="1.5"
                   />
                 </svg>
               </li>
@@ -2811,9 +2811,9 @@ exports[`TransactionTable component should match snapshot 1`] = `
                   <path
                     d="M15.5 19l-7-7 7-7"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
+                    strokeLinecap="round"
+                     strokeLinejoin="round"
+                    strokeWidth="1.5"
                   />
                 </svg>
               </li>

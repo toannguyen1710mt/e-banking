@@ -52,7 +52,7 @@ exports[`ConfirmAddCard Component Should renders snapshot correctly 1`] = `
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <g
-                  clip-path="url(#clip0_1_972)"
+                  clipPath="url(#clip0_1_972)"
                 >
                   <path
                     clip-rule="evenodd"
@@ -464,16 +464,16 @@ exports[`ConfirmAddCard Component Should renders snapshot correctly 1`] = `
                       <path
                         d="M14 2.66675H1.99996C1.26358 2.66675 0.666626 3.2637 0.666626 4.00008V12.0001C0.666626 12.7365 1.26358 13.3334 1.99996 13.3334H14C14.7363 13.3334 15.3333 12.7365 15.3333 12.0001V4.00008C15.3333 3.2637 14.7363 2.66675 14 2.66675Z"
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.33333"
+                        strokeLinecap="round"
+                         strokeLinejoin="round"
+                        strokeWidth="1.33333"
                       />
                       <path
                         d="M0.666626 6.66675H15.3333"
                         stroke="black"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.33333"
+                        strokeLinecap="round"
+                         strokeLinejoin="round"
+                        strokeWidth="1.33333"
                       />
                     </svg>
                   </div>
@@ -566,7 +566,7 @@ exports[`ConfirmAddCard Component Should renders snapshot correctly 1`] = `
               xmlns="http://www.w3.org/2000/svg"
             >
               <g
-                clip-path="url(#clip0_1_972)"
+                clipPath="url(#clip0_1_972)"
               >
                 <path
                   clip-rule="evenodd"
@@ -978,16 +978,16 @@ exports[`ConfirmAddCard Component Should renders snapshot correctly 1`] = `
                     <path
                       d="M14 2.66675H1.99996C1.26358 2.66675 0.666626 3.2637 0.666626 4.00008V12.0001C0.666626 12.7365 1.26358 13.3334 1.99996 13.3334H14C14.7363 13.3334 15.3333 12.7365 15.3333 12.0001V4.00008C15.3333 3.2637 14.7363 2.66675 14 2.66675Z"
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.33333"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="1.33333"
                     />
                     <path
                       d="M0.666626 6.66675H15.3333"
                       stroke="black"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.33333"
+                      strokeLinecap="round"
+                       strokeLinejoin="round"
+                      strokeWidth="1.33333"
                     />
                   </svg>
                 </div>

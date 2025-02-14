@@ -47,9 +47,9 @@ exports[`Pagination component should match snapshot 1`] = `
           <path
             d="M15.5 19l-7-7 7-7"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
+            strokeLinecap="round"
+             strokeLinejoin="round"
+            strokeWidth="1.5"
           />
         </svg>
       </li>
@@ -113,9 +113,9 @@ exports[`Pagination component should match snapshot 1`] = `
           fill="none"
           height="1em"
           shape-rendering="geometricPrecision"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+           strokeLinejoin="round"
+          strokeWidth="1.5"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -147,9 +147,9 @@ exports[`Pagination component should match snapshot 1`] = `
           role="presentation"
           shape-rendering="geometricPrecision"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="1.5"
+          strokeLinecap="round"
+           strokeLinejoin="round"
+          strokeWidth="1.5"
           viewBox="0 0 24 24"
           width="1em"
         >
@@ -190,9 +190,9 @@ exports[`Pagination component should match snapshot 1`] = `
           <path
             d="M15.5 19l-7-7 7-7"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
+            strokeLinecap="round"
+             strokeLinejoin="round"
+            strokeWidth="1.5"
           />
         </svg>
       </li>
