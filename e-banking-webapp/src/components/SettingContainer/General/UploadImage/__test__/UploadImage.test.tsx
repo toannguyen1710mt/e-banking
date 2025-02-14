@@ -4,6 +4,8 @@ import { useUploadImage } from '@/hooks';
 import { ERROR_MESSAGES } from '@/constants';
 import { toastManager } from '@/utils';
 
+import { MOCK_SESSION_DATA } from '@/mocks';
+
 jest.mock('@/hooks', () => ({
   useUploadImage: jest.fn(),
 }));
@@ -38,6 +40,7 @@ describe('UploadImage Component', () => {
     src: '',
     onChange: jest.fn(),
     onRemove: jest.fn(),
+    session: MOCK_SESSION_DATA,
   };
 
   it('renders upload button when no image is present', () => {

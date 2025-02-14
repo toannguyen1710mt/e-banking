@@ -1,5 +1,7 @@
 'use client';
 
+import { Session } from 'next-auth';
+
 // Interfaces
 import { IUser, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
@@ -15,9 +17,10 @@ import { UploadImage } from '@/components/SettingContainer/General/UploadImage';
 
 interface ProfileFormProps {
   userProfile: IUser;
+  session: Session;
 }
 
-export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
+export const ProfileForm = ({ userProfile, session }: ProfileFormProps) => {
   const { username, email, phone, country, avatar } = userProfile;
 
   const { updateSession } = useUserContext();
@@ -51,6 +54,7 @@ export const ProfileForm = ({ userProfile }: ProfileFormProps) => {
             alt='Avatar'
             onChange={handleChangeImage}
             onRemove={handleRemoveImage}
+            session={session}
           />
         </div>
       </div>

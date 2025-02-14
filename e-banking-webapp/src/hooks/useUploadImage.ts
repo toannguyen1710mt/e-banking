@@ -5,7 +5,7 @@ import { useState } from 'react';
 // Constants
 import { BASE_URL, END_POINT } from '@/constants';
 
-export const useUploadImage = () => {
+export const useUploadImage = (jwt: string) => {
   const [uploading, setUploading] = useState(false);
 
   const handleUploadImage = async (selectedFile: File | null) => {
@@ -20,6 +20,9 @@ export const useUploadImage = () => {
         uploadResponse = await fetch(`${BASE_URL}${END_POINT.UPLOAD}`, {
           method: 'POST',
           body: formData,
+          headers: {
+            Authorization: `Bearer ${jwt}`,
+          },
         });
 
         result = await uploadResponse.json();
