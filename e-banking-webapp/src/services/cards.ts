@@ -1,5 +1,5 @@
 // Constants
-import { API_ENDPOINTS, TAGS } from '@/constants';
+import { API_ENDPOINTS, ERROR_MESSAGES, TAGS } from '@/constants';
 
 // Interfaces
 import {
@@ -14,17 +14,30 @@ import {
 import { httpClient } from './http-client';
 import { getAccountsByUserId } from './account';
 
-export const getListCardByAccountId = async (accountId: string) => {
-  const { data: cardResult, ...rest } = await httpClient.get<
-    SuccessResponse<ICard[]>
-  >(`${API_ENDPOINTS.ACCOUNTS}/${accountId}?populate=cards`, {
-    next: { tags: [TAGS.CARD] },
-  });
+// Utils
+import { toastManager } from '@/utils';
 
-  return {
-    cards: cardResult?.data.cards || [],
-    ...rest,
-  };
+export const getListCardByAccountId = async (accountId: string) => {
+  try {
+    const { data: cardResult, ...rest } = await httpClient.get<
+      SuccessResponse<ICard[]>
+    >(`${API_ENDPOINTS.ACCOUNTS}/${accountId}?populate=cards`, {
+      next: { tags: [TAGS.CARD] },
+    });
+
+    return {
+      cards: cardResult?.data.cards || [],
+      ...rest,
+    };
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_GET_LIST_CARD_BY_ACCOUNT_ID} ${error}`,
+      'error',
+      'top-center',
+    );
+
+    return { cards: [], error: 'Failed to fetch cards' };
+  }
 };
 
 /**
@@ -35,37 +48,50 @@ export const getListCardByAccountId = async (accountId: string) => {
 export const getTotalCardsByUser = async (
   jwt: string,
 ): Promise<ResponseData<ICardsPayloadByAccount[]>> => {
-  const requestEndpoint = `${API_ENDPOINTS.USERS}/me?populate[accounts][populate]=cards`;
+  try {
+    const requestEndpoint = `${API_ENDPOINTS.USERS}/me?populate[accounts][populate]=cards`;
 
-  const { data } = await httpClient.get<ResponseData<IUser>>(requestEndpoint, {
-    headers: {
-      Authorization: `Bearer ${jwt}`,
-    },
-  });
+    const { data } = await httpClient.get<ResponseData<IUser>>(
+      requestEndpoint,
+      {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+      },
+    );
 
-  if (!data) {
+    if (!data) {
+      return [];
+    }
+
+    const accounts = data?.accounts || [];
+
+    if (accounts.length) {
+      const sortedCards = accounts
+        .flatMap((account: { cards: ICard[]; type: string }) =>
+          account.cards.map((card) => ({
+            ...card,
+            accountType: account.type,
+          })),
+        )
+        .sort(
+          (a: { createdAt: string }, b: { createdAt: string }) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        );
+
+      return sortedCards;
+    }
+
     return [];
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_GET_TOTAL_CARD_BY_USER} ${error}`,
+      'error',
+      'top-center',
+    );
+
+    throw new Error('Failed to fetch total cards');
   }
-
-  const accounts = data?.accounts || [];
-
-  if (accounts.length) {
-    const sortedCards = accounts
-      .flatMap((account: { cards: ICard[]; type: string }) =>
-        account.cards.map((card) => ({
-          ...card,
-          accountType: account.type,
-        })),
-      )
-      .sort(
-        (a: { createdAt: string }, b: { createdAt: string }) =>
-          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-      );
-
-    return sortedCards;
-  }
-
-  return [];
 };
 
 /**
@@ -74,29 +100,37 @@ export const getTotalCardsByUser = async (
  * @returns A Main card.
  */
 export const getMainCardByUserId = async (userId: number) => {
-  const accounts = await getAccountsByUserId(userId);
+  try {
+    const accounts = await getAccountsByUserId(userId);
 
-  const mainAccount = accounts.find((account) => account.type === 'Main');
+    const mainAccount = accounts.find((account) => account.type === 'Main');
 
-  const requestEndpoint = `${API_ENDPOINTS.ACCOUNTS}/${mainAccount?.documentId}?populate=cards`;
+    const requestEndpoint = `${API_ENDPOINTS.ACCOUNTS}/${mainAccount?.documentId}?populate=cards`;
 
-  const { data } = await httpClient.get<SuccessResponse<ICard>>(
-    requestEndpoint,
-    {
-      next: {
-        tags: [API_ENDPOINTS.CARDS],
+    const { data } = await httpClient.get<SuccessResponse<ICard>>(
+      requestEndpoint,
+      {
+        next: {
+          tags: [API_ENDPOINTS.CARDS],
+        },
       },
-    },
-  );
-
-  if (data?.data?.cards) {
-    const result = data.data.cards.sort(
-      (a: { createdAt: string }, b: { createdAt: string }) =>
-        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
     );
 
-    return result[0];
-  }
+    if (data?.data?.cards) {
+      const result = data.data.cards.sort(
+        (a: { createdAt: string }, b: { createdAt: string }) =>
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime(),
+      );
 
-  return {};
+      return result[0];
+    }
+
+    return {};
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_GET_MAIN_CARD_BY_USER_ID} ${error}`,
+      'error',
+      'top-center',
+    );
+  }
 };

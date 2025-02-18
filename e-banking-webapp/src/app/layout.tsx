@@ -3,8 +3,14 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+// Constants
+import { ERROR_MESSAGES } from '@/constants';
+
 // Providers
 import Providers from '@/providers';
+
+// Utils
+import { toastManager } from '@/utils';
 
 // Configs
 import { auth } from '@/config/auth';
@@ -35,13 +41,22 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const session = await auth();
-  const avatar = session?.user.avatar;
+  let avatar = '';
+  try {
+    const session = await auth();
+    avatar = session?.user.avatar || '';
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_GETTING_SESSION} ${error}`,
+      'error',
+      'top-center',
+    );
+  }
 
   return (
     <html lang='en' suppressHydrationWarning={true}>
       <body className={inter.className}>
-        <Providers avatar={avatar || ''}>
+        <Providers avatar={avatar}>
           <main className='mx-auto'>
             <div className='h-screen' id='root'>
               {children}

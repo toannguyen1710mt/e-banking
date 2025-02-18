@@ -5,13 +5,13 @@ import { CircularProgress } from '@nextui-org/react';
 import { Session } from 'next-auth';
 
 // Constants
-import { createExpenseAnalysisOptions } from '@/constants';
+import { createExpenseAnalysisOptions, ERROR_MESSAGES } from '@/constants';
 
 // Interfaces
 import { IAccount, ICard, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
 // Utils
-import { formatNumberWithCommas } from '@/utils';
+import { formatNumberWithCommas, toastManager } from '@/utils';
 
 // Services
 import { getAccountsByUserId, getListCardByAccountId } from '@/services';
@@ -64,7 +64,11 @@ const BalanceModal = ({
           }
         }
       } catch (error) {
-        console.error('Error fetching data:', error);
+        toastManager.showToast(
+          `${ERROR_MESSAGES.ERROR_FETCHING_DATA} ${error}`,
+          'error',
+          'top-center',
+        );
       }
     };
 

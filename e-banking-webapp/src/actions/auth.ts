@@ -42,12 +42,16 @@ export const authenticateUser = async (formData: TSignInFormData) => {
 };
 
 export const signUp = async (signUpData: TSignUpPayload) => {
-  const response = await httpClient.post<AuthResponse>(
-    API_ENDPOINTS.SIGN_UP,
-    signUpData,
-  );
+  try {
+    const response = await httpClient.post<AuthResponse>(
+      API_ENDPOINTS.SIGN_UP,
+      signUpData,
+    );
 
-  return response;
+    return response;
+  } catch (error) {
+    throw new Error(ERROR_MESSAGES.ERROR_SIGN_UP + error);
+  }
 };
 
 export const signOut = async () => await nextAuthSignOut({ redirect: false });
@@ -56,17 +60,21 @@ export const changePassword = async (
   payload: TChangePasswordFormData,
   jwt: string,
 ) => {
-  const response = await httpClient.post<TChangePasswordSuccessResponse>(
-    API_ENDPOINTS.CHANGE_PASSWORD,
-    payload,
-    {
-      headers: {
-        Authorization: `Bearer ${jwt}`,
+  try {
+    const response = await httpClient.post<TChangePasswordSuccessResponse>(
+      API_ENDPOINTS.CHANGE_PASSWORD,
+      payload,
+      {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
       },
-    },
-  );
+    );
 
-  return response;
+    return response;
+  } catch (error) {
+    throw new Error(ERROR_MESSAGES.ERROR_CHANGE_PASSWORD + error);
+  }
 };
 
 export const updateUser = async (id: number, payload: TUpdateInfo) => {
@@ -117,9 +125,13 @@ export const updateEmailSettings = async (
   userId: number,
   payload: Partial<IUser>,
 ) => {
-  await httpClient.put(`${API_ENDPOINTS.USERS}/${userId}`, payload);
+  try {
+    await httpClient.put(`${API_ENDPOINTS.USERS}/${userId}`, payload);
 
-  return revalidateTag(TAGS.USERS);
+    return revalidateTag(TAGS.USERS);
+  } catch (error) {
+    throw new Error(ERROR_MESSAGES.ERROR_UPDATE_EMAIL_SETTINGS + error);
+  }
 };
 
 export const getUser = async (id: number): Promise<IUser | undefined> => {

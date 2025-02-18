@@ -4,6 +4,9 @@ import { Session } from 'next-auth';
 // Interfaces
 import { QueryParams, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 
+// Utils
+import { toastManager } from '@/utils';
+
 // Components
 import {
   ActionCenterSkeleton,
@@ -16,6 +19,7 @@ import { ActionCenter } from './ActionCenter';
 
 // Services
 import { getTransactionsByUserId } from '@/services';
+import { ERROR_MESSAGES } from '@/constants';
 
 interface IContainerTransactionsProps {
   session: Session;
@@ -35,41 +39,56 @@ export const ContainerTransactions = async ({
     },
   };
 
-  // Get transfers received
-  const {
-    meta: {
-      pagination: { total: totalTransferReceived },
-    },
-  } = await getTransactionsByUserId(session.user.id, {
-    ...defaultQueryParams,
-    pagination: {
-      page: currentPage,
-      pageSize: 10,
-    },
-    filters: {
-      toAccountType: {
-        $notNull: undefined,
-      },
-    },
-  });
+  let totalTransferReceived = 0;
+  let totalTransferSent = 0;
 
-  // Get transfers sent
-  const {
-    meta: {
-      pagination: { total: totalTransferSent },
-    },
-  } = await getTransactionsByUserId(session.user.id, {
-    ...defaultQueryParams,
-    pagination: {
-      page: currentPage,
-      pageSize: 10,
-    },
-    filters: {
-      toAccountType: {
-        $null: undefined,
+  try {
+    // Get transfers received
+    const receivedResponse = await getTransactionsByUserId(session.user.id, {
+      ...defaultQueryParams,
+      pagination: {
+        page: currentPage,
+        pageSize: 10,
       },
-    },
-  });
+      filters: {
+        toAccountType: {
+          $notNull: undefined,
+        },
+      },
+    });
+
+    totalTransferReceived = receivedResponse.meta.pagination.total;
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_TRANSFER_RECEIVED} ${error}`,
+      'error',
+      'top-center',
+    );
+  }
+
+  try {
+    // Get transfers sent
+    const sentResponse = await getTransactionsByUserId(session.user.id, {
+      ...defaultQueryParams,
+      pagination: {
+        page: currentPage,
+        pageSize: 10,
+      },
+      filters: {
+        toAccountType: {
+          $null: undefined,
+        },
+      },
+    });
+
+    totalTransferSent = sentResponse.meta.pagination.total;
+  } catch (error) {
+    toastManager.showToast(
+      `${ERROR_MESSAGES.ERROR_TOTAL_TRANSFER_SENT} ${error}`,
+      'error',
+      'top-center',
+    );
+  }
 
   return (
     <div className='flex w-full flex-col gap-8 px-0 pt-1 lg:px-[22px] xl:flex-row'>

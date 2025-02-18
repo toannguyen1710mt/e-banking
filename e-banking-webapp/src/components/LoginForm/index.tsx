@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 // Constants
-import { ROUTES } from '@/constants';
+import { ERROR_MESSAGES, ROUTES } from '@/constants';
 import { signInSchema } from '@/constants/rules';
 
 // Interfaces
@@ -16,6 +16,9 @@ import { TEXT_SIZE, TSignInFormData } from '@/interfaces';
 
 // Actions
 import { authenticateUser } from '@/actions/auth';
+
+// Utils
+import { toastManager } from '@/utils';
 
 // Components
 import { EyeIcon, EyeSlashIcon, LockIcon, UserIcon } from '@/components/icons';
@@ -45,15 +48,23 @@ export const LoginForm = () => {
   } = useDisclosure();
 
   const onSubmit = handleSubmit(async (data) => {
-    const errorMessage = await authenticateUser(data);
+    try {
+      const errorMessage = await authenticateUser(data);
 
-    if (errorMessage) {
-      setErrorMessage(errorMessage);
+      if (errorMessage) {
+        setErrorMessage(errorMessage);
+        return;
+      }
+
+      router.push(ROUTES.HOME);
       return;
+    } catch (error) {
+      toastManager.showToast(
+        `${ERROR_MESSAGES.ERROR_LOGIN_FORM} ${error}`,
+        'error',
+        'top-center',
+      );
     }
-
-    router.push(ROUTES.HOME);
-    return;
   });
 
   return (
