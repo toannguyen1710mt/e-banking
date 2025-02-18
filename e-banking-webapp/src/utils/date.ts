@@ -32,3 +32,17 @@ export const getGreeting = () => {
       ? 'Good Afternoon'
       : 'Good Evening';
 };
+
+/**
+ * Formats the last modified date.
+ * @param updatedAt
+ * @param createdAt
+ * @returns 'YYYY-MM-DD' format.
+ */
+export const formatLastModified = (
+  updatedAt?: string,
+  createdAt?: string,
+): string => {
+  const date = updatedAt || createdAt || '2024-12-18T02:37:12.625Z';
+  return date.split('T')[0];
+};
