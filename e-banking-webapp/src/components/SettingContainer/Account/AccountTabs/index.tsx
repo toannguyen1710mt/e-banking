@@ -66,7 +66,11 @@ export const AccountTabs = ({ session }: IAccountTabsProps) => {
           setPreferences(newPreferences);
         }
       } catch (error) {
-        console.error('Error fetching data:', error);
+        toastManager.showToast(
+          `${ERROR_MESSAGES.ERROR_FETCHING_DATA} ${error}`,
+          'error',
+          'top-center',
+        );
       }
     };
 

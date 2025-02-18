@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import {
   SIGNUP_FORM_DEFAULT_VALUES,
   ACCOUNT_DEFAULT_VALUES,
+  ERROR_MESSAGES,
 } from '@/constants';
 import { SignUpSchema } from '@/constants/rules';
 
@@ -16,6 +17,9 @@ import { WizardFormContextProvider } from '@/context';
 
 // Actions
 import { addAccount, addCard, signUp, updateUser } from '@/actions/auth';
+
+// Utils
+import { toastManager } from '@/utils';
 
 // Interfaces
 import { IAccountPayload, ICardPayload } from '@/interfaces';
@@ -39,45 +43,53 @@ export const SignUpForm = () => {
   });
 
   const submitHandler = async (data: FormValues) => {
-    const { email, password, username } = data.user;
+    try {
+      const { email, password, username } = data.user;
 
-    const { phone, country, postal } = data.contact;
+      const { phone, country, postal } = data.contact;
 
-    const response = await signUp({
-      email,
-      password,
-      username,
-    });
+      const response = await signUp({
+        email,
+        password,
+        username,
+      });
 
-    if (response.status === 400) {
-      throw response.message;
-    }
-
-    if (response?.data?.user) {
-      await updateUser(response.data.user.id, { phone, country, postal });
-
-      const accountPayloads: IAccountPayload[] = ACCOUNT_DEFAULT_VALUES.map(
-        (account) => ({
-          data: {
-            ...account,
-            user: response.data.user.id,
-          },
-        }),
-      );
-
-      const responseAccounts = await Promise.all(
-        accountPayloads.map((payload) => addAccount(payload)),
-      );
-
-      if (responseAccounts) {
-        const payloadCard: ICardPayload = {
-          data: {
-            ...data.card,
-            account: responseAccounts[0].data.id,
-          },
-        };
-        await addCard(payloadCard);
+      if (response.status === 400) {
+        throw response.message;
       }
+
+      if (response?.data?.user) {
+        await updateUser(response.data.user.id, { phone, country, postal });
+
+        const accountPayloads: IAccountPayload[] = ACCOUNT_DEFAULT_VALUES.map(
+          (account) => ({
+            data: {
+              ...account,
+              user: response.data.user.id,
+            },
+          }),
+        );
+
+        const responseAccounts = await Promise.all(
+          accountPayloads.map((payload) => addAccount(payload)),
+        );
+
+        if (responseAccounts) {
+          const payloadCard: ICardPayload = {
+            data: {
+              ...data.card,
+              account: responseAccounts[0].data.id,
+            },
+          };
+          await addCard(payloadCard);
+        }
+      }
+    } catch (error) {
+      toastManager.showToast(
+        `${ERROR_MESSAGES.ERROR_SIGN_UP_FORM} ${error}`,
+        'error',
+        'top-center',
+      );
     }
   };
 

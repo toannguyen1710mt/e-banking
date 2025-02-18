@@ -44,43 +44,60 @@ export const UploadImage = ({
   };
 
   const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
+    try {
+      const file = e.target.files?.[0];
 
-    const isValidImage =
-      file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
+      const isValidImage =
+        file?.type === IMAGE_TYPES.JPEG || file?.type === IMAGE_TYPES.PNG;
 
-    if (!isValidImage) {
+      if (!isValidImage) {
+        toastManager.showToast(
+          ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
+          'error',
+          'top-center',
+        );
+      }
+
+      const isLessThan2MB = file!.size / 1024 / 1024 < 1;
+
+      if (!isLessThan2MB) {
+        toastManager.showToast(
+          ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
+          'error',
+          'top-center',
+        );
+      }
+
+      if (file && isValidImage && isLessThan2MB) {
+        const { url } = await handleUploadImage(file);
+
+        return url;
+      }
+      return null;
+    } catch (error) {
       toastManager.showToast(
-        ERROR_MESSAGES.UPLOAD_IMAGE_ONLY_JPG_PNG,
+        `${ERROR_MESSAGES.ERROR_UPLOAD_IMAGE} ${error}`,
         'error',
         'top-center',
       );
+      return null;
     }
-
-    const isLessThan2MB = file!.size / 1024 / 1024 < 1;
-
-    if (!isLessThan2MB) {
-      toastManager.showToast(
-        ERROR_MESSAGES.UPLOAD_IMAGE_SIZE,
-        'error',
-        'top-center',
-      );
-    }
-
-    if (file && isValidImage && isLessThan2MB) {
-      const { url } = await handleUploadImage(file);
-
-      return url;
-    }
-    return null;
   };
 
   const handleUploadFile = async (e: ChangeEvent<HTMLInputElement>) => {
-    const url = await handleChange(e);
+    try {
+      const url = await handleChange(e);
 
-    if (url) {
-      onChange(url);
-      setPreviewImage(url);
+      if (url) {
+        onChange(url);
+        setPreviewImage(url);
+      }
+    } catch (error) {
+      toastManager.showToast(
+        `${ERROR_MESSAGES.ERROR_UPLOAD_FILE} ${error}`,
+        'error',
+        'top-center',
+      );
     }
   };
 

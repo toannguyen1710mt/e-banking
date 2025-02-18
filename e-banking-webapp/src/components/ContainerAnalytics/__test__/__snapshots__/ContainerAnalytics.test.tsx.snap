@@ -14,7 +14,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
           <h1
             class="text-primary-200 text-2xl font-semibold leading-[29px] !text-black"
           >
-            Good Morning
+            Good Afternoon
             ,
             <span
               class="text-foreground-100 text-2xl ml-1 font-medium leading-[29px]"
@@ -2060,7 +2060,7 @@ exports[`ContainerAnalytics component Should render snapshot correctly. 1`] = `
         <h1
           class="text-primary-200 text-2xl font-semibold leading-[29px] !text-black"
         >
-          Good Morning
+          Good Afternoon
           ,
           <span
             class="text-foreground-100 text-2xl ml-1 font-medium leading-[29px]"

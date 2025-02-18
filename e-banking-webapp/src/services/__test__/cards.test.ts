@@ -172,7 +172,7 @@ describe('Cards Services', () => {
       const jwtToken = 'mock-jwt-token';
 
       await expect(getTotalCardsByUser(jwtToken)).rejects.toThrow(
-        'Network Error',
+        'Failed to fetch total cards',
       );
     });
   });

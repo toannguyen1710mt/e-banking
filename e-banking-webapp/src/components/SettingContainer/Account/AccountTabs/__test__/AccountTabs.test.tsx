@@ -9,8 +9,12 @@ import { updateEmailSettings } from '@/actions';
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
 
+// Utils
+import { toastManager } from '@/utils';
+
 // Components
 import { AccountTabs } from '..';
+import { ERROR_MESSAGES } from '@/constants';
 
 jest.mock('@/services', () => ({
   getUserById: jest.fn(),
@@ -18,6 +22,13 @@ jest.mock('@/services', () => ({
 
 jest.mock('@/actions', () => ({
   updateEmailSettings: jest.fn(),
+}));
+
+jest.mock('@/utils', () => ({
+  ...jest.requireActual('@/utils'),
+  toastManager: {
+    showToast: jest.fn(),
+  },
 }));
 
 describe('AccountTabs component', () => {
@@ -49,20 +60,17 @@ describe('AccountTabs component', () => {
   });
 
   it('Should log an error when fetching user data fails', async () => {
-    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation();
-
     (getUserById as jest.Mock).mockRejectedValue(new Error('Fetch error'));
 
     render(<AccountTabs session={MOCK_SESSION_DATA} />);
 
     await waitFor(() => {
-      expect(consoleErrorSpy).toHaveBeenCalledWith(
-        'Error fetching data:',
-        expect.any(Error),
+      expect(toastManager.showToast).toHaveBeenCalledWith(
+        expect.stringContaining(ERROR_MESSAGES.ERROR_FETCHING_DATA),
+        'error',
+        'top-center',
       );
     });
-
-    consoleErrorSpy.mockRestore();
   });
 
   it('Should update email settings successfully', async () => {

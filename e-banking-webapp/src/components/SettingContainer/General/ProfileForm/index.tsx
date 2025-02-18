@@ -11,9 +11,13 @@ import { updateUser } from '@/actions';
 // Context
 import { useUserContext } from '@/context';
 
+// Utils
+import { toastManager } from '@/utils';
+
 // Components
 import { Input, Text } from '@/components';
 import { UploadImage } from '@/components/SettingContainer/General/UploadImage';
+import { ERROR_MESSAGES } from '@/constants';
 
 interface ProfileFormProps {
   userProfile: IUser;
@@ -26,15 +30,31 @@ export const ProfileForm = ({ userProfile, session }: ProfileFormProps) => {
   const { updateSession } = useUserContext();
 
   const handleChangeImage = async (url: string) => {
-    const { avatar } = await updateUser(userProfile.id, { avatar: url });
+    try {
+      const { avatar } = await updateUser(userProfile.id, { avatar: url });
 
-    updateSession(avatar);
+      updateSession(avatar);
+    } catch (error) {
+      toastManager.showToast(
+        `${ERROR_MESSAGES.ERROR_UPDATE_AVATAR} ${error}`,
+        'error',
+        'top-center',
+      );
+    }
   };
 
   const handleRemoveImage = async () => {
-    await updateUser(userProfile.id, { avatar: '' });
+    try {
+      await updateUser(userProfile.id, { avatar: '' });
 
-    updateSession('');
+      updateSession('');
+    } catch (error) {
+      toastManager.showToast(
+        `${ERROR_MESSAGES.ERROR_REMOVE_AVATAR} ${error}`,
+        'error',
+        'top-center',
+      );
+    }
   };
 
   return (
