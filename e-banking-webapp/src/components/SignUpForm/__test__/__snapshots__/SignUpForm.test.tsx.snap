@@ -13,7 +13,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9 "
+          class="pb-[14px] lg:pb-9"
           data-nimg="1"
           decoding="async"
           height="36"
@@ -24,21 +24,21 @@ exports[`SignUpForm component should match snapshot 1`] = `
           width="104"
         />
         <div
-          class="mb-4 max-w-[406px]"
+          class="max-w-[406px] text-center md:text-left"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold mb-7"
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
           >
             Control Your Finances, Join Us Today!
           </h1>
           <p
-            class="text-foreground-300 text-base font-normal leading-[22px]"
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
           >
             Fill the form below to create an account
           </p>
         </div>
         <div
-          class="mb-[17px] max-w-[325px]"
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
         >
           <div
             class="mb-10 flex w-full flex-col gap-4 bg-white"
@@ -286,7 +286,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
           </button>
         </div>
         <p
-          class="text-foreground-100 text-sm font-medium leading-[20px]"
+          class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
         >
           Already have an account?
            
@@ -307,7 +307,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9 "
+          class="pb-[14px] lg:pb-9"
           data-nimg="1"
           decoding="async"
           height="36"
@@ -318,21 +318,21 @@ exports[`SignUpForm component should match snapshot 1`] = `
           width="104"
         />
         <div
-          class="mb-4 max-w-[406px]"
+          class="max-w-[406px] text-center md:text-left"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold mb-7"
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
           >
             Control Your Finances, Join Us Today!
           </h1>
           <p
-            class="text-foreground-300 text-base font-normal leading-[22px]"
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
           >
             Please provide your phone and contact info
           </p>
         </div>
         <div
-          class="mb-[17px] max-w-[325px]"
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
         >
           <div
             class="mb-10 flex w-full flex-col gap-4 bg-white"
@@ -520,7 +520,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
           </button>
         </div>
         <p
-          class="text-foreground-100 text-sm font-medium leading-[20px]"
+          class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
         >
           Already have an account?
            
@@ -541,7 +541,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9 "
+          class="pb-[14px] lg:pb-9"
           data-nimg="1"
           decoding="async"
           height="36"
@@ -552,21 +552,21 @@ exports[`SignUpForm component should match snapshot 1`] = `
           width="104"
         />
         <div
-          class="mb-4 max-w-[406px]"
+          class="max-w-[406px] text-center md:text-left"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold mb-7"
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
           >
             Control Your Finances, Join Us Today!
           </h1>
           <p
-            class="text-foreground-300 text-base font-normal leading-[22px]"
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
           >
             Please provide your Credit Card  information
           </p>
         </div>
         <div
-          class="mb-[17px] max-w-[325px]"
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
         >
           <div
             class="mb-10 flex w-full flex-col gap-4 bg-white"
@@ -853,7 +853,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
           </button>
         </div>
         <p
-          class="text-foreground-100 text-sm font-medium leading-[20px]"
+          class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
         >
           Already have an account?
            
@@ -874,7 +874,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9 "
+          class="pb-[14px] lg:pb-9"
           data-nimg="1"
           decoding="async"
           height="36"
@@ -885,22 +885,22 @@ exports[`SignUpForm component should match snapshot 1`] = `
           width="104"
         />
         <div
-          class="mb-4 max-w-[406px]"
+          class="max-w-[406px] text-center md:text-left"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold mb-7"
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
           >
             Your Account Has Been Successfully Created
           </h1>
           <p
-            class="text-foreground-300 text-base font-normal leading-[22px]"
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
           />
         </div>
         <div
-          class="mb-[17px] max-w-[325px]"
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
         >
           <div
-            class="flex w-full flex-col items-center gap-4 bg-white"
+            class="flex w-full flex-col items-center gap-0 bg-white"
           >
             <img
               alt="Illustration of a successful sign-up"
@@ -914,7 +914,7 @@ exports[`SignUpForm component should match snapshot 1`] = `
               width="40"
             />
             <p
-              class="text-foreground-300 text-base mb-10 font-normal leading-[22px]"
+              class="text-foreground-300 text-base mb-6 font-normal leading-[22px]"
             >
               Head back to login page to access your account
             </p>
