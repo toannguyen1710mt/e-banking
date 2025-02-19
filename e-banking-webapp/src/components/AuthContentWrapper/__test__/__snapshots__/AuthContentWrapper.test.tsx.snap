@@ -10,7 +10,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
       >
         <img
           alt="Logo EBanking"
-          class="pb-9 "
+          class="pb-[14px] lg:pb-9"
           data-nimg="1"
           decoding="async"
           height="36"
@@ -21,24 +21,24 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
           width="104"
         />
         <div
-          class="mb-4 max-w-[406px]"
+          class="max-w-[406px] text-center md:text-left"
         >
           <h1
-            class="text-foreground-100 text-4xl font-semibold mb-7"
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
           >
             Good To See You Again!
           </h1>
           <p
-            class="text-foreground-300 text-base font-normal leading-[22px]"
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
           />
         </div>
         <div
-          class="mb-[17px] max-w-[325px]"
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
         >
           Form
         </div>
         <p
-          class="text-foreground-100 text-sm font-medium leading-[20px]"
+          class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
         >
           Don’t have an account?
            
@@ -58,7 +58,7 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
     >
       <img
         alt="Logo EBanking"
-        class="pb-9 "
+        class="pb-[14px] lg:pb-9"
         data-nimg="1"
         decoding="async"
         height="36"
@@ -69,24 +69,24 @@ exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
         width="104"
       />
       <div
-        class="mb-4 max-w-[406px]"
+        class="max-w-[406px] text-center md:text-left"
       >
         <h1
-          class="text-foreground-100 text-4xl font-semibold mb-7"
+          class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
         >
           Good To See You Again!
         </h1>
         <p
-          class="text-foreground-300 text-base font-normal leading-[22px]"
+          class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
         />
       </div>
       <div
-        class="mb-[17px] max-w-[325px]"
+        class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
       >
         Form
       </div>
       <p
-        class="text-foreground-100 text-sm font-medium leading-[20px]"
+        class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
       >
         Don’t have an account?
          

@@ -11,7 +11,7 @@ import { IMAGES, ROUTES } from '@/constants';
 import { Text } from '@/components';
 
 export const SuccessNotify = () => (
-  <div className='flex w-full flex-col items-center gap-4 bg-white'>
+  <div className='flex w-full flex-col items-center gap-0 bg-white'>
     <Image
       src={IMAGES.SUCCESS_IMAGE}
       alt='Illustration of a successful sign-up'
@@ -19,7 +19,7 @@ export const SuccessNotify = () => (
     <Text
       size={TEXT_SIZE.BASE}
       variant={TEXT_VARIANT.INFO}
-      className='mb-10 font-normal leading-[22px]'
+      className='mb-6 font-normal leading-[22px]'
     >
       Head back to login page to access your account
     </Text>

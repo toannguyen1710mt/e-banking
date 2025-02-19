@@ -36,45 +36,50 @@ export const AuthContentWrapper = ({
     href: isOnSignIn ? ROUTES.SIGN_UP : ROUTES.SIGN_IN,
   };
 
-  const classLogo = isOnSignIn ? 'mt-0 md:mt-[108px]' : '';
+  const classLogo = isOnSignIn
+    ? 'mt-0 md:mt-[108px] pb-[56px] md:pb-9'
+    : 'pb-[14px] lg:pb-9';
+  const classTextHeading = isOnSignIn ? 'mb-7' : 'mb-0 md:mb-7';
 
   return (
     <div className='mx-auto flex flex-1 flex-col'>
       {/* Logo */}
       <Image
-        className={`pb-9 ${classLogo}`}
+        className={`${classLogo}`}
         src={IMAGES.LOGO}
         width={104}
         height={36}
         alt='Logo EBanking'
       />
 
-      <div className='mb-4 max-w-[406px]'>
+      <div className='max-w-[406px] text-center md:text-left'>
         <Text
           as='h1'
           size={TEXT_SIZE['4XL']}
           variant={TEXT_VARIANT.DEFAULT}
-          className='mb-7'
+          className={`${classTextHeading}`}
         >
           {textHeading}
         </Text>
         <Text
           size={TEXT_SIZE.BASE}
           variant={TEXT_VARIANT.INFO}
-          className='font-normal leading-[22px]'
+          className='mb-4 font-normal leading-[22px]'
         >
           {subheading}
         </Text>
       </div>
 
       {/* Form */}
-      <div className='mb-[17px] max-w-[325px]'>{formContent}</div>
+      <div className='mx-auto mb-[17px] max-w-[325px] md:mx-0'>
+        {formContent}
+      </div>
 
       {textFooter && (
         <Text
           size={TEXT_SIZE.SM}
           variant={TEXT_VARIANT.DEFAULT}
-          className='leading-[20px]'
+          className='text-center leading-[20px] md:text-left'
         >
           {textFooter}&nbsp;
           <Link
