@@ -4,7 +4,7 @@ import { fireEvent, render, waitFor } from '@testing-library/react';
 import * as services from '@/services';
 
 // Mocks
-import { MOCK_DATA_USER, MOCK_LIST_CARD, MOCK_SESSION_DATA } from '@/mocks';
+import { MOCK_DATA_USER, MOCK_SESSION_DATA } from '@/mocks';
 
 // Component
 import BalanceModal from '..';
@@ -18,7 +18,6 @@ jest.mock('react-apexcharts', () => {
 
 jest.mock('@/services', () => ({
   getAccountsByUserId: jest.fn(),
-  getListCardByAccountId: jest.fn(),
 }));
 
 describe('BalanceModal component', () => {
@@ -26,10 +25,6 @@ describe('BalanceModal component', () => {
     (services.getAccountsByUserId as jest.Mock).mockResolvedValue(
       MOCK_DATA_USER.accounts,
     );
-
-    jest
-      .spyOn(services, 'getListCardByAccountId')
-      .mockResolvedValue(MOCK_LIST_CARD[0]);
   });
 
   afterEach(() => {
