@@ -15,7 +15,7 @@ import { MASTERCARD_CHART_MOCK } from '@/mocks';
 import { IAccount, ICardsPayloadByAccount } from '@/interfaces';
 
 // Services
-import { getAccountsByUserId, getTotalCardsByUser } from '@/services';
+import { getAccountsByUserId } from '@/services';
 
 // Utils
 import { formatNumberWithCommas } from '@/utils';
@@ -59,7 +59,13 @@ export const InformationCard = ({ session }: IInformationCardProps) => {
           setAccounts(result);
 
           try {
-            const totalCard = await getTotalCardsByUser(session.user.token);
+            const response = await fetch('/api/cards', {
+              method: 'GET',
+              headers: {
+                Authorization: `Bearer ${session.user.token}`,
+              },
+            });
+            const totalCard = await response.json();
 
             setCards(totalCard);
           } catch (_error) {

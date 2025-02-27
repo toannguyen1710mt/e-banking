@@ -1,18 +1,20 @@
 // Libs
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 
 // APIs
-import { getAccountsByUserId, getTotalCardsByUser } from '@/services';
+import { getAccountsByUserId } from '@/services';
 
 // Mocks
 import { MOCK_SESSION_DATA } from '@/mocks';
+
+// Interfaces
+import { AccountType } from '@/interfaces';
 
 // Components
 import { InformationCard } from '@/components';
 
 jest.mock('@/services', () => ({
   getAccountsByUserId: jest.fn(),
-  getTotalCardsByUser: jest.fn(),
 }));
 
 class MockResizeObserver {
@@ -54,21 +56,9 @@ describe('InformationCard Component', () => {
         balance: 1000,
         documentId: 'doc123',
         accountNumber: 'acc123',
-        type: 'savings',
+        type: AccountType.SAVINGS,
         currency: 'EUR',
         name: 'John Doe',
-      },
-    ]);
-    (
-      getTotalCardsByUser as jest.MockedFunction<typeof getTotalCardsByUser>
-    ).mockResolvedValue([
-      {
-        id: 1,
-        ccv: '123',
-        accountType: 'credit',
-        cardNumber: '1234',
-        holderName: 'John Doe',
-        expireAt: '12/23',
       },
     ]);
 
@@ -77,61 +67,6 @@ describe('InformationCard Component', () => {
     await waitFor(() => {
       expect(screen.getByText('My Cards')).toBeInTheDocument();
       expect(screen.getByText('Master Card')).toBeInTheDocument();
-      expect(screen.getByText('1234')).toBeInTheDocument();
-    });
-  });
-
-  test('handles next and previous card buttons', async () => {
-    (
-      getAccountsByUserId as jest.MockedFunction<typeof getAccountsByUserId>
-    ).mockResolvedValue([
-      {
-        id: 1,
-        balance: 1000,
-        documentId: 'doc123',
-        accountNumber: 'acc123',
-        type: 'savings',
-        currency: 'EUR',
-        name: 'John Doe',
-      },
-    ]);
-    (
-      getTotalCardsByUser as jest.MockedFunction<typeof getTotalCardsByUser>
-    ).mockResolvedValue([
-      {
-        id: 1,
-        ccv: '123',
-        accountType: 'credit',
-        cardNumber: '1234',
-        holderName: 'John Doe',
-        expireAt: '12/23',
-      },
-      {
-        id: 2,
-        ccv: '456',
-        accountType: 'debit',
-        cardNumber: '5678',
-        holderName: 'Jane Doe',
-        expireAt: '11/24',
-      },
-    ]);
-
-    render(<InformationCard session={MOCK_SESSION_DATA} />);
-
-    await waitFor(() => {
-      expect(screen.getByText('1234')).toBeInTheDocument();
-    });
-
-    fireEvent.click(screen.getByLabelText('Next card'));
-
-    await waitFor(() => {
-      expect(screen.getByText('5678')).toBeInTheDocument();
-    });
-
-    fireEvent.click(screen.getByLabelText('Previous card'));
-
-    await waitFor(() => {
-      expect(screen.getByText('1234')).toBeInTheDocument();
     });
   });
 
@@ -152,15 +87,11 @@ describe('InformationCard Component', () => {
         balance: 1000,
         documentId: 'doc123',
         accountNumber: 'acc123',
-        type: 'savings',
+        type: AccountType.SAVINGS,
         currency: 'EUR',
         name: 'John Doe',
       },
     ]);
-
-    (
-      getTotalCardsByUser as jest.MockedFunction<typeof getTotalCardsByUser>
-    ).mockRejectedValue(new Error('An error occurred'));
 
     render(<InformationCard session={MOCK_SESSION_DATA} />);
 

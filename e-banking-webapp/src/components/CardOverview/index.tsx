@@ -11,9 +11,6 @@ import { createExpenseAnalysisOptions, ERROR_MESSAGES } from '@/constants';
 // Interface
 import { ICard } from '@/interfaces';
 
-// Services
-import { getMainCardByUserId } from '@/services';
-
 // Mocks
 import { MASTERCARD_CHART_MOCK } from '@/mocks';
 
@@ -41,7 +38,13 @@ export const CardOverview = ({ session }: ICardOverviewProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const card = await getMainCardByUserId(Number(session?.user.id));
+        const response = await fetch('/api/cards/type/main', {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${session.user.token}`,
+          },
+        });
+        const card = await response.json();
 
         setCard(card);
       } catch (error) {

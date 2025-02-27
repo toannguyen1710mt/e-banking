@@ -14,7 +14,7 @@ import { IAccount, ICard, TEXT_SIZE, TEXT_VARIANT } from '@/interfaces';
 import { formatNumberWithCommas, toastManager } from '@/utils';
 
 // Services
-import { getAccountsByUserId, getListCardByAccountId } from '@/services';
+import { getAccountsByUserId } from '@/services';
 
 // Mocks
 import { MOCK_SERIES_EXPENSE_ANALYSIS } from '@/mocks';
@@ -56,11 +56,13 @@ const BalanceModal = ({
           const documentId = result[0]?.documentId;
 
           if (documentId) {
-            const { cards } = await getListCardByAccountId(
-              documentId as string,
+            const response = await fetch(
+              `/api/cards/account-id/${documentId}`,
+              { method: 'GET' },
             );
+            const card = await response.json();
 
-            setCardData(cards[0] || {});
+            setCardData(card);
           }
         }
       } catch (error) {
