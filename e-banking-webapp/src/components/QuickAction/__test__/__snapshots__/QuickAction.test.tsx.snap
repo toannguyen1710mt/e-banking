@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickAction component should match snapshot for QuickAction 1`] = `
+<div>
+  <div
+    class="relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none flex basis-1/2 flex-col justify-between gap-2 rounded-md bg-background-500 px-2 py-3 shadow-none"
+    tabindex="-1"
+  >
+    <h3
+      class="text-primary-200 text-xs font-semibold lg:text-xl xl:text-xs"
+    >
+      Quick Action
+    </h3>
+    <ul
+      class="grid grid-cols-4 gap-1 rounded-md bg-softWhite md:grid-cols-2 md:py-2 lg:grid-cols-4"
+    >
+      <li>
+        <button
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100 md:py-0"
+          data-disabled="true"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="21"
+            viewBox="0 0 21 21"
+            width="21"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.1665 17.2439H4.6665C4.44549 17.2439 4.23353 17.1561 4.07725 16.9998C3.92097 16.8435 3.83317 16.6316 3.83317 16.4106V13.9106C3.83317 13.6896 3.74537 13.4776 3.58909 13.3213C3.43281 13.165 3.22085 13.0772 2.99984 13.0772C2.77882 13.0772 2.56686 13.165 2.41058 13.3213C2.2543 13.4776 2.1665 13.6896 2.1665 13.9106V16.4106C2.1665 17.0736 2.4299 17.7095 2.89874 18.1783C3.36758 18.6472 4.00346 18.9106 4.6665 18.9106H7.1665C7.38752 18.9106 7.59948 18.8228 7.75576 18.6665C7.91204 18.5102 7.99984 18.2982 7.99984 18.0772C7.99984 17.8562 7.91204 17.6443 7.75576 17.488C7.59948 17.3317 7.38752 17.2439 7.1665 17.2439ZM2.99984 8.07723C3.22085 8.07723 3.43281 7.98943 3.58909 7.83315C3.74537 7.67687 3.83317 7.46491 3.83317 7.2439V4.7439C3.83317 4.52288 3.92097 4.31092 4.07725 4.15464C4.23353 3.99836 4.44549 3.91056 4.6665 3.91056H7.1665C7.38752 3.91056 7.59948 3.82277 7.75576 3.66649C7.91204 3.51021 7.99984 3.29824 7.99984 3.07723C7.99984 2.85622 7.91204 2.64425 7.75576 2.48797C7.59948 2.33169 7.38752 2.2439 7.1665 2.2439H4.6665C4.00346 2.2439 3.36758 2.50729 2.89874 2.97613C2.4299 3.44497 2.1665 4.08086 2.1665 4.7439V7.2439C2.1665 7.46491 2.2543 7.67687 2.41058 7.83315C2.56686 7.98943 2.77882 8.07723 2.99984 8.07723ZM16.3332 2.2439H13.8332C13.6122 2.2439 13.4002 2.33169 13.2439 2.48797C13.0876 2.64425 12.9998 2.85622 12.9998 3.07723C12.9998 3.29824 13.0876 3.51021 13.2439 3.66649C13.4002 3.82277 13.6122 3.91056 13.8332 3.91056H16.3332C16.5542 3.91056 16.7661 3.99836 16.9224 4.15464C17.0787 4.31092 17.1665 4.52288 17.1665 4.7439V7.2439C17.1665 7.46491 17.2543 7.67687 17.4106 7.83315C17.5669 7.98943 17.7788 8.07723 17.9998 8.07723C18.2209 8.07723 18.4328 7.98943 18.5891 7.83315C18.7454 7.67687 18.8332 7.46491 18.8332 7.2439V4.7439C18.8332 4.08086 18.5698 3.44497 18.1009 2.97613C17.6321 2.50729 16.9962 2.2439 16.3332 2.2439ZM13.8332 10.5772C13.8332 10.3562 13.7454 10.1443 13.5891 9.98797C13.4328 9.83169 13.2209 9.7439 12.9998 9.7439H11.3332V8.07723C11.3332 7.85622 11.2454 7.64425 11.0891 7.48797C10.9328 7.33169 10.7209 7.2439 10.4998 7.2439C10.2788 7.2439 10.0669 7.33169 9.91058 7.48797C9.7543 7.64425 9.6665 7.85622 9.6665 8.07723V9.7439H7.99984C7.77882 9.7439 7.56686 9.83169 7.41058 9.98797C7.2543 10.1443 7.1665 10.3562 7.1665 10.5772C7.1665 10.7982 7.2543 11.0102 7.41058 11.1665C7.56686 11.3228 7.77882 11.4106 7.99984 11.4106H9.6665V13.0772C9.6665 13.2982 9.7543 13.5102 9.91058 13.6665C10.0669 13.8228 10.2788 13.9106 10.4998 13.9106C10.7209 13.9106 10.9328 13.8228 11.0891 13.6665C11.2454 13.5102 11.3332 13.2982 11.3332 13.0772V11.4106H12.9998C13.2209 11.4106 13.4328 11.3228 13.5891 11.1665C13.7454 11.0102 13.8332 10.7982 13.8332 10.5772ZM17.9998 13.0772C17.7788 13.0772 17.5669 13.165 17.4106 13.3213C17.2543 13.4776 17.1665 13.6896 17.1665 13.9106V16.4106C17.1665 16.6316 17.0787 16.8435 16.9224 16.9998C16.7661 17.1561 16.5542 17.2439 16.3332 17.2439H13.8332C13.6122 17.2439 13.4002 17.3317 13.2439 17.488C13.0876 17.6443 12.9998 17.8562 12.9998 18.0772C12.9998 18.2982 13.0876 18.5102 13.2439 18.6665C13.4002 18.8228 13.6122 18.9106 13.8332 18.9106H16.3332C16.9962 18.9106 17.6321 18.6472 18.1009 18.1783C18.5698 17.7095 18.8332 17.0736 18.8332 16.4106V13.9106C18.8332 13.6896 18.7454 13.4776 18.5891 13.3213C18.4328 13.165 18.2209 13.0772 17.9998 13.0772Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="text-primary-200 font-medium text-2xs"
+          >
+            Top Up
+          </span>
+        </button>
+      </li>
+      <li>
+        <button
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100 md:py-0"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="20"
+            viewBox="0 0 20 20"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#clip0_1057_534)"
+            >
+              <path
+                d="M18.3337 1.66666L9.16699 10.8333"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M18.3337 1.66666L12.5003 18.3333L9.16699 10.8333L1.66699 7.5L18.3337 1.66666Z"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_1057_534"
+              >
+                <rect
+                  fill="none"
+                  height="20"
+                  width="20"
+                />
+              </clippath>
+            </defs>
+          </svg>
+          <span
+            class="text-primary-200 font-medium text-2xs"
+          >
+            Transfer
+          </span>
+        </button>
+      </li>
+      <li>
+        <button
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100 md:py-0"
+          data-disabled="true"
+          disabled=""
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="21"
+            viewBox="0 0 21 21"
+            width="21"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#clip0_534_238)"
+            >
+              <path
+                d="M19.6665 17.2439V12.2439H14.6665"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M1.3335 3.91064V8.91064H6.3335"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+              <path
+                d="M17.5752 8.07725C17.1525 6.88291 16.4342 5.81509 15.4873 4.97343C14.5403 4.13178 13.3956 3.54372 12.1599 3.26413C10.9242 2.98454 9.63787 3.02254 8.42084 3.37456C7.20381 3.72659 6.09579 4.38118 5.20016 5.27725L1.3335 8.91059M19.6668 12.2439L15.8002 15.8773C14.9045 16.7733 13.7965 17.4279 12.5795 17.7799C11.3625 18.132 10.0761 18.17 8.8404 17.8904C7.60472 17.6108 6.46 17.0227 5.51305 16.1811C4.56611 15.3394 3.8478 14.2716 3.42516 13.0773"
+                stroke="black"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_534_238"
+              >
+                <rect
+                  fill="white"
+                  height="20"
+                  transform="translate(0.5 0.577271)"
+                  width="20"
+                />
+              </clippath>
+            </defs>
+          </svg>
+          <span
+            class="text-primary-200 font-medium text-2xs"
+          >
+            Request
+          </span>
+        </button>
+      </li>
+      <li>
+        <button
+          class="z-0 group relative items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 rounded-3xl w-full max-h-10 py-2.5 text-sm leading-[20px] flex h-full !max-h-none min-w-0 flex-col gap-2 !bg-transparent px-0 text-foreground-100 md:py-0"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="21"
+            viewBox="0 0 20 21"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.6668 2.2439H8.3335C7.67045 2.2439 7.03457 2.50729 6.56573 2.97613C6.09689 3.44497 5.8335 4.08086 5.8335 4.7439V10.5772C5.8335 11.2403 6.09689 11.8762 6.56573 12.345C7.03457 12.8138 7.67045 13.0772 8.3335 13.0772H16.6668C17.3299 13.0772 17.9658 12.8138 18.4346 12.345C18.9034 11.8762 19.1668 11.2403 19.1668 10.5772V4.7439C19.1668 4.08086 18.9034 3.44497 18.4346 2.97613C17.9658 2.50729 17.3299 2.2439 16.6668 2.2439ZM17.5002 10.5772C17.5002 10.7982 17.4124 11.0102 17.2561 11.1665C17.0998 11.3228 16.8878 11.4106 16.6668 11.4106H8.3335C8.11248 11.4106 7.90052 11.3228 7.74424 11.1665C7.58796 11.0102 7.50016 10.7982 7.50016 10.5772V4.7439C7.50016 4.52288 7.58796 4.31092 7.74424 4.15464C7.90052 3.99836 8.11248 3.91056 8.3335 3.91056H16.6668C16.8878 3.91056 17.0998 3.99836 17.2561 4.15464C17.4124 4.31092 17.5002 4.52288 17.5002 4.7439V10.5772ZM14.5835 7.2439C14.275 7.24494 13.9779 7.3608 13.7502 7.5689C13.571 7.40602 13.3483 7.2987 13.1093 7.25998C12.8702 7.22126 12.6251 7.2528 12.4037 7.35078C12.1822 7.44875 11.994 7.60894 11.8619 7.81187C11.7297 8.0148 11.6594 8.25174 11.6594 8.4939C11.6594 8.73605 11.7297 8.97299 11.8619 9.17592C11.994 9.37886 12.1822 9.53904 12.4037 9.63702C12.6251 9.73499 12.8702 9.76653 13.1093 9.72781C13.3483 9.68909 13.571 9.58177 13.7502 9.4189C13.9006 9.55567 14.0822 9.65367 14.2792 9.70438C14.4761 9.75509 14.6824 9.757 14.8803 9.70992C15.0781 9.66285 15.2614 9.56822 15.4144 9.43425C15.5674 9.30027 15.6854 9.13099 15.7582 8.9411C15.8309 8.75121 15.8562 8.54643 15.8319 8.34453C15.8076 8.14263 15.7345 7.94971 15.6187 7.7825C15.503 7.61528 15.3482 7.47883 15.1678 7.38498C14.9874 7.29112 14.7868 7.24269 14.5835 7.2439ZM13.3335 14.7439C13.1125 14.7439 12.9005 14.8317 12.7442 14.988C12.588 15.1443 12.5002 15.3562 12.5002 15.5772V16.4106C12.5002 16.6316 12.4124 16.8435 12.2561 16.9998C12.0998 17.1561 11.8878 17.2439 11.6668 17.2439H3.3335C3.11248 17.2439 2.90052 17.1561 2.74424 16.9998C2.58796 16.8435 2.50016 16.6316 2.50016 16.4106V13.0772H3.3335C3.55451 13.0772 3.76647 12.9894 3.92275 12.8332C4.07903 12.6769 4.16683 12.4649 4.16683 12.2439C4.16683 12.0229 4.07903 11.8109 3.92275 11.6546C3.76647 11.4984 3.55451 11.4106 3.3335 11.4106H2.50016V10.5772C2.50016 10.3562 2.58796 10.1443 2.74424 9.98797C2.90052 9.83169 3.11248 9.7439 3.3335 9.7439C3.55451 9.7439 3.76647 9.6561 3.92275 9.49982C4.07903 9.34354 4.16683 9.13158 4.16683 8.91056C4.16683 8.68955 4.07903 8.47759 3.92275 8.32131C3.76647 8.16503 3.55451 8.07723 3.3335 8.07723C2.67045 8.07723 2.03457 8.34062 1.56573 8.80946C1.09689 9.2783 0.833496 9.91419 0.833496 10.5772V16.4106C0.833496 17.0736 1.09689 17.7095 1.56573 18.1783C2.03457 18.6472 2.67045 18.9106 3.3335 18.9106H11.6668C12.3299 18.9106 12.9658 18.6472 13.4346 18.1783C13.9034 17.7095 14.1668 17.0736 14.1668 16.4106V15.5772C14.1668 15.3562 14.079 15.1443 13.9228 14.988C13.7665 14.8317 13.5545 14.7439 13.3335 14.7439ZM5.00016 15.5772H5.8335C6.05451 15.5772 6.26647 15.4894 6.42275 15.3332C6.57903 15.1769 6.66683 14.9649 6.66683 14.7439C6.66683 14.5229 6.57903 14.3109 6.42275 14.1546C6.26647 13.9984 6.05451 13.9106 5.8335 13.9106H5.00016C4.77915 13.9106 4.56719 13.9984 4.41091 14.1546C4.25463 14.3109 4.16683 14.5229 4.16683 14.7439C4.16683 14.9649 4.25463 15.1769 4.41091 15.3332C4.56719 15.4894 4.77915 15.5772 5.00016 15.5772Z"
+              fill="currentColor"
+            />
+          </svg>
+          <span
+            class="text-primary-200 font-medium text-2xs"
+          >
+            Balance
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+input[type='month']::-webkit-inner-spin-button,
+input[type='month']::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+}
+
+input[type='password']::-ms-reveal {
+  display: none;
+}

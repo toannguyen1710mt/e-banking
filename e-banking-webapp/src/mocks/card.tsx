@@ -1,0 +1,67 @@
+export const ANALYTICS_CARD = [
+  {
+    title: 'Total Income',
+    isPositive: true,
+    subtitle: 'Last 30 days income',
+  },
+  {
+    title: 'Total Expense',
+    isPositive: true,
+    subtitle: 'Last 30 days expenditure',
+  },
+  {
+    title: 'Total Investment',
+    subtitle: 'Last 30 days investment',
+  },
+];
+
+export const MOCK_LIST_CARD = [
+  {
+    id: 1,
+    documentId: 'zj103n8cbv857otlqpt3ks2h',
+    holderName: 'donal trump',
+    cardNumber: '123412341234',
+    expireAt: '2026-05',
+    ccv: '336',
+    fullName: null,
+    createdAt: '2024-12-18T02:37:12.625Z',
+    updatedAt: '2024-12-18T02:37:12.625Z',
+    publishedAt: '2024-12-18T02:37:12.623Z',
+  },
+  {
+    id: 2,
+    documentId: 'ny4mxu6br8v900c3an9p5u0f',
+    holderName: 'Beck Kham',
+    cardNumber: '106868929357',
+    expireAt: '2028-03',
+    ccv: '339',
+    fullName: null,
+    createdAt: '2024-12-18T04:27:04.764Z',
+    updatedAt: '2024-12-18T04:27:04.764Z',
+    publishedAt: '2024-12-18T04:27:04.762Z',
+  },
+  {
+    id: 3,
+    documentId: 'ljq5kv0f327w5sor2czgs07t',
+    holderName: 'Hoang Tran',
+    cardNumber: '123412341234',
+    expireAt: '2025-07',
+    ccv: '333',
+    fullName: null,
+    createdAt: '2024-12-18T18:24:58.801Z',
+    updatedAt: '2024-12-18T18:24:58.801Z',
+    publishedAt: '2024-12-18T18:24:58.799Z',
+  },
+  {
+    id: 4,
+    documentId: 's0bz93jb4tc5w7wc820o33c2',
+    holderName: 'Test Holder Name',
+    cardNumber: '123456789876',
+    expireAt: '2026-02',
+    ccv: '123',
+    fullName: null,
+    createdAt: '2024-12-19T01:39:29.501Z',
+    updatedAt: '2024-12-19T01:39:29.501Z',
+    publishedAt: '2024-12-19T01:39:29.498Z',
+  },
+];

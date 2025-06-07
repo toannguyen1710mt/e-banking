@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MasterCard component should match snapshot for MasterCard 1`] = `
+<div>
+  <div
+    class="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none w-full min-w-[100px] bg-navyBlue px-4 pb-5 pt-[14px] md:min-w-[294px]"
+    tabindex="-1"
+  >
+    <div
+      class="flex z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large p-0"
+    >
+      <span
+        class="text-primary-200 text-base font-semibold text-white"
+      >
+        Monobank MasterCard
+      </span>
+    </div>
+    <div
+      class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased gap-2 px-0 pb-0 pt-3"
+    >
+      <span
+        class="text-primary-200 text-xs font-normal text-white max-[680px]:text-sm"
+      >
+        Available Wallets
+      </span>
+      <ol
+        class="flex gap-6 text-[10px] font-normal text-white max-[680px]:text-xs"
+      >
+        <li>
+          1
+          . 
+          Savings
+        </li>
+        <li>
+          2
+          . 
+          Checking
+        </li>
+      </ol>
+    </div>
+    <div
+      class="p-3 h-auto flex w-full overflow-hidden color-inherit subpixel-antialiased rounded-b-large flex-col items-start px-0 pb-0 pt-4"
+    >
+      <span
+        class="text-primary-200 text-xs font-normal text-white underline"
+      >
+        Card Statistics
+      </span>
+      <div
+        class="md:max-0 mx-auto mt-2 flex max-w-[220px] flex-row items-center gap-9 md:max-w-full"
+      >
+        <div>
+          Mock ApexCharts
+        </div>
+        <div
+          class="flex flex-col gap-3"
+        >
+          <div
+            class="flex items-center gap-1"
+          >
+            <div
+              class="h-[14px] w-[14px] bg-java"
+            />
+            <span
+              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
+            >
+              Balance
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-1"
+          >
+            <div
+              class="h-[14px] w-[14px] bg-pastelYellow"
+            />
+            <span
+              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
+            >
+              Savings
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-1"
+          >
+            <div
+              class="h-[14px] w-[14px] bg-softGreen"
+            />
+            <span
+              class="text-primary-200 text-[10px] font-normal text-white max-[680px]:text-xs"
+            >
+              Checking
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

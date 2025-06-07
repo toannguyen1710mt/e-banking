@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConnectedAccountsTab component should match snapshot for ConnectedAccountsTab 1`] = `
+<div>
+  <div
+    class="flex flex-col"
+  >
+    <span
+      class="text-primary-200 mb-[5px] text-sm font-semibold text-navyBlue"
+    >
+      Connected Apps & Accounts
+    </span>
+    <span
+      class="text-primary-200 mb-3 text-[13px] font-normal"
+    >
+      Your connected App, socials and Accounts will appear here.
+    </span>
+    <div
+      class="mb-[57px] flex items-center gap-[10px]"
+    >
+      <svg
+        fill="none"
+        height="14"
+        viewBox="0 0 14 14"
+        width="14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          clip-path="url(#clip0_1_18315)"
+        >
+          <path
+            d="M4.58484 1.16675H9.41484L12.8332 4.58508V9.41508L9.41484 12.8334H4.58484L1.1665 9.41508V4.58508L4.58484 1.16675Z"
+            stroke="#808080"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+          <path
+            d="M7 9.33325H7.00583"
+            stroke="#808080"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+          <path
+            d="M7 4.66675V7.00008"
+            stroke="#808080"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </g>
+        <defs>
+          <clippath
+            id="clip0_1_18315"
+          >
+            <rect
+              fill="white"
+              height="14"
+              width="14"
+            />
+          </clippath>
+        </defs>
+      </svg>
+      <span
+        class="text-primary-200 text-xs font-normal text-neutralGray"
+      >
+        We won't post anything on your socials
+      </span>
+    </div>
+    <div
+      class="grid max-w-[680px] grid-cols-2 gap-[54px] px-3 max-[950px]:grid-cols-1 max-[800px]:grid-cols-2 max-[650px]:grid-cols-1 max-[650px]:justify-items-center max-[650px]:gap-6"
+    >
+      <div
+        class="flex flex-col gap-6"
+      >
+        <label
+          class="text-primary-200 text-sm font-medium"
+        >
+          PayPal
+        </label>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-400 text-foreground-200 rounded w-[271px] h-14 py-4 font-medium"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="22"
+            viewBox="0 0 20 22"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.4369 6.10449C18.2642 5.91091 18.0723 5.7354 17.8641 5.58069C17.9495 4.91079 17.8905 4.23035 17.6908 3.58522C17.4911 2.9401 17.1554 2.34527 16.7064 1.84082C15.6224 0.61914 13.7748 0 11.2142 0H5.00035C4.55143 0.00119633 4.11755 0.161949 3.77623 0.453542C3.43491 0.745136 3.20836 1.14858 3.13707 1.5918L0.547216 17.9981C0.510576 18.218 0.522333 18.4432 0.58167 18.6581C0.641007 18.873 0.746494 19.0724 0.890781 19.2423C1.03507 19.4123 1.21468 19.5487 1.4171 19.6421C1.61952 19.7355 1.83988 19.7837 2.06282 19.7832H4.72691L4.64491 20.3037C4.61175 20.5131 4.62436 20.7272 4.68189 20.9312C4.73941 21.1352 4.84047 21.3244 4.97811 21.4856C5.11576 21.6468 5.28671 21.7763 5.4792 21.8651C5.67168 21.9539 5.88113 21.9999 6.09312 22H9.3275C9.74648 22.0033 10.1529 21.8572 10.4739 21.5878C10.7948 21.3185 11.0092 20.9435 11.0785 20.5303L11.7191 16.499L11.7299 16.4443H12.0287C16.0609 16.4443 18.5795 14.4512 19.3139 10.6816C19.5379 9.90348 19.5752 9.08346 19.4229 8.28817C19.2705 7.49287 18.9327 6.74472 18.4369 6.10449ZM5.84215 12.7041L5.12767 17.2394L5.04136 17.7832H2.60582L5.09703 2H11.2142C13.1498 2 14.5316 2.4043 15.2064 3.16406C15.5249 3.53441 15.7471 3.97767 15.8531 4.4545C15.9592 4.93133 15.9458 5.42696 15.8143 5.8974L15.7957 6.00964C15.7835 6.08612 15.7725 6.16083 15.7523 6.25586C15.5594 7.68478 14.8453 8.99202 13.7472 9.92639C12.5143 10.7837 11.0285 11.2005 9.52965 11.1094H7.7064C7.25618 11.1079 6.82037 11.268 6.47825 11.5607C6.13612 11.8533 5.9104 12.2591 5.84215 12.7041ZM17.3509 10.2988C16.8001 13.127 15.1087 14.4443 12.0287 14.4443H11.5453C11.1259 14.4411 10.719 14.5876 10.398 14.8576C10.0771 15.1276 9.86295 15.5032 9.79427 15.917L9.14486 19.9912L6.71715 20L7.1953 16.9661L7.80644 13.1133H9.52574C9.68254 13.1133 9.82115 13.0897 9.97386 13.0843C10.3327 13.072 10.6905 13.0582 11.0265 13.0165C11.2318 12.9909 11.4201 12.9443 11.6169 12.9078C11.8894 12.8574 12.1621 12.8076 12.4179 12.7365C12.6083 12.6835 12.7859 12.6153 12.967 12.5509C13.2063 12.466 13.4418 12.3769 13.6646 12.2722C13.8326 12.1931 13.9927 12.1052 14.1512 12.0149C14.3622 11.8954 14.5666 11.7647 14.7635 11.6232C14.9058 11.5206 15.0454 11.4153 15.1785 11.3022C15.3672 11.1396 15.5465 10.9663 15.7155 10.7833C15.8285 10.6628 15.9442 10.5458 16.0488 10.4161C16.2224 10.1949 16.3826 9.96362 16.5288 9.72343C16.6052 9.60124 16.69 9.4882 16.7604 9.3596C16.963 8.98894 17.137 8.6034 17.2811 8.20634C17.2898 8.18248 17.3022 8.16234 17.3107 8.13834C17.3147 8.12711 17.3206 8.11777 17.3245 8.10648C17.5227 8.8227 17.5318 9.57805 17.3509 10.2988Z"
+              fill="currentColor"
+            />
+          </svg>
+          Connected To PayPal
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-6"
+      >
+        <label
+          class="text-primary-200 text-sm font-medium"
+        >
+          Google Pay
+        </label>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-400 text-foreground-200 rounded w-[271px] h-14 py-4 font-medium"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.6023 10.004C22.5606 9.77333 22.4393 9.56467 22.2594 9.41438C22.0796 9.2641 21.8527 9.18174 21.6184 9.18168H12.2C12.0686 9.18165 11.9386 9.20749 11.8172 9.25774C11.6959 9.30798 11.5857 9.38164 11.4928 9.4745C11.3999 9.56737 11.3263 9.67762 11.276 9.79896C11.2258 9.9203 11.1999 10.0504 11.2 10.1817V14.0498C11.1999 14.1812 11.2258 14.3112 11.276 14.4326C11.3263 14.5539 11.3999 14.6642 11.4928 14.757C11.5857 14.8499 11.6959 14.9236 11.8172 14.9738C11.9386 15.024 12.0686 15.0499 12.2 15.0498H16.1624C15.88 15.5264 15.493 15.9325 15.0305 16.2373C14.1854 16.7732 13.2004 17.0464 12.2 17.0225C11.1624 17.0106 10.1551 16.6721 9.32096 16.0549C8.48686 15.4378 7.86849 14.5734 7.55373 13.5847L7.55344 13.583C7.20317 12.5564 7.20317 11.4427 7.55344 10.416L7.55368 10.4144C7.86866 9.4259 8.48712 8.56179 9.3212 7.94483C10.1553 7.32787 11.1626 6.98943 12.2 6.97758C12.7764 6.96435 13.3497 7.06512 13.8871 7.2741C14.4245 7.48309 14.9152 7.79616 15.3313 8.19535C15.5202 8.37591 15.7723 8.47537 16.0337 8.47245C16.295 8.46953 16.5448 8.36447 16.7297 8.17974L19.5979 5.31156C19.6929 5.21667 19.7678 5.10359 19.8182 4.97908C19.8685 4.85458 19.8932 4.72121 19.8908 4.58693C19.8885 4.45266 19.8591 4.32024 19.8044 4.19759C19.7497 4.07494 19.6708 3.96458 19.5725 3.87309C17.5766 2.0018 14.9357 0.972656 12.2 1.00004C10.1599 0.994009 8.15873 1.55806 6.4221 2.62858C4.68547 3.69911 3.28247 5.23353 2.37131 7.05883L2.36984 7.0606C1.59737 8.59235 1.19659 10.2845 1.19997 12C1.20241 13.7149 1.60289 15.4057 2.36989 16.9395L2.37136 16.9413C3.28252 18.7665 4.68551 20.301 6.42213 21.3715C8.15875 22.442 10.1599 23.0061 12.2 23C14.8853 23.068 17.4951 22.1067 19.4947 20.313L19.4954 20.3126L19.4962 20.3117L19.4964 20.3116L19.4964 20.3115C20.5803 19.2688 21.434 18.011 22.003 16.6188C22.5719 15.2267 22.8434 13.7309 22.8001 12.2276C22.8005 11.482 22.7343 10.7378 22.6023 10.004ZM12.2 3.00004C14.071 2.98183 15.8979 3.56859 17.4085 4.67289L15.9548 6.12604C14.8526 5.3631 13.5404 4.96175 12.2 4.97758C10.9762 4.98388 9.7762 5.31617 8.7235 5.94027C7.6708 6.56437 6.80343 7.45771 6.21066 8.52837L5.14145 7.69963L4.55645 7.24595C5.36122 5.9438 6.48644 4.86975 7.82461 4.1264C9.16278 3.38306 10.6692 2.99526 12.2 3.00004ZM3.67941 14.9034C3.04009 13.0206 3.04009 10.9795 3.67941 9.09672L5.46164 10.4786C5.23377 11.4798 5.23377 12.5194 5.46164 13.5206L3.67941 14.9034ZM12.2 21C10.6692 21.0048 9.16274 20.617 7.82455 19.8736C6.48637 19.1302 5.36114 18.0561 4.55637 16.754L4.93478 16.4604L6.21066 15.4707C6.80317 16.5417 7.67046 17.4353 8.7232 18.0596C9.77593 18.6839 10.9761 19.0163 12.2 19.0225C13.3456 19.036 14.4783 18.7787 15.5057 18.2717L17.1974 19.585C15.7096 20.5437 13.9695 21.0364 12.2 21ZM18.7259 18.2393L18.5429 18.0973L17.1655 17.028C17.8877 16.2478 18.3731 15.2782 18.5652 14.2325C18.592 14.0882 18.5867 13.9397 18.5497 13.7976C18.5127 13.6555 18.4448 13.5233 18.351 13.4105C18.2571 13.2976 18.1395 13.2067 18.0066 13.1444C17.8736 13.0821 17.7286 13.0498 17.5818 13.0499H13.2V11.1817H20.7488C20.783 11.5274 20.8001 11.877 20.8001 12.2276C20.8585 14.4164 20.1216 16.5522 18.7258 18.2393H18.7259Z"
+              fill="white"
+            />
+          </svg>
+          Connected To Google Pay
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-6"
+      >
+        <label
+          class="text-primary-200 text-sm font-medium"
+        >
+          Apple Pay
+        </label>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-400 text-foreground-200 rounded w-[271px] h-14 py-4 font-medium"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.9402 5.19C15.3182 4.75428 15.6065 4.24817 15.7884 3.70074C15.9703 3.1533 16.0422 2.57533 16.0002 2C14.8395 2.09369 13.7622 2.63956 13.0002 3.52C12.6353 3.94198 12.3587 4.43288 12.187 4.96364C12.0152 5.49441 11.9517 6.05424 12.0002 6.61C12.5663 6.61472 13.1259 6.4891 13.6358 6.24286C14.1456 5.99662 14.5919 5.63637 14.9402 5.19ZM17.4602 12.63C17.4669 11.8637 17.6687 11.1118 18.0466 10.4452C18.4245 9.77859 18.9661 9.21926 19.6202 8.82C19.2074 8.22524 18.6617 7.73483 18.0264 7.38767C17.3911 7.04052 16.6836 6.84615 15.9602 6.82C14.4002 6.66 12.9602 7.73 12.1302 7.73C11.3002 7.73 10.1302 6.84 8.83016 6.86C7.98028 6.888 7.15218 7.13578 6.4266 7.57919C5.70103 8.02259 5.10276 8.64648 4.69016 9.39C2.93016 12.45 4.24016 17 6.00016 19.47C6.80016 20.68 7.80016 22.05 9.12016 22C10.4402 21.95 10.8702 21.18 12.4002 21.18C13.9302 21.18 14.4002 22 15.7002 21.97C17.0002 21.94 17.9202 20.73 18.7602 19.52C19.3552 18.6415 19.82 17.6816 20.1402 16.67C19.3476 16.332 18.6715 15.7693 18.1952 15.0513C17.7189 14.3333 17.4634 13.4916 17.4602 12.63Z"
+              fill="white"
+            />
+          </svg>
+          Connect to Apple Pay
+        </button>
+      </div>
+      <div
+        class="flex flex-col gap-6"
+      >
+        <label
+          class="text-primary-200 text-sm font-medium"
+        >
+          Mpesa
+        </label>
+        <button
+          class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 text-small gap-2 [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-background-400 text-foreground-200 rounded w-[271px] h-14 py-4 font-medium"
+          type="button"
+        >
+          <svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.71 16.29L12.56 16.17C12.5043 16.1322 12.4437 16.1019 12.38 16.08L12.2 16C12.0378 15.9661 11.8698 15.973 11.7109 16.0201C11.5521 16.0673 11.4074 16.1531 11.29 16.27C11.2017 16.3672 11.1306 16.4788 11.08 16.6C11.0043 16.7822 10.9842 16.9827 11.0223 17.1763C11.0603 17.3699 11.1547 17.5479 11.2937 17.688C11.4327 17.828 11.61 17.9238 11.8033 17.9633C11.9966 18.0028 12.1972 17.9843 12.38 17.91C12.4995 17.852 12.6105 17.778 12.71 17.69C12.8488 17.5494 12.9428 17.3708 12.9801 17.1768C13.0175 16.9828 12.9966 16.7821 12.92 16.6C12.8701 16.4844 12.7989 16.3792 12.71 16.29ZM16 2H8C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5V19C5 19.7956 5.31607 20.5587 5.87868 21.1213C6.44129 21.6839 7.20435 22 8 22H16C16.7956 22 17.5587 21.6839 18.1213 21.1213C18.6839 20.5587 19 19.7956 19 19V5C19 4.20435 18.6839 3.44129 18.1213 2.87868C17.5587 2.31607 16.7956 2 16 2ZM17 19C17 19.2652 16.8946 19.5196 16.7071 19.7071C16.5196 19.8946 16.2652 20 16 20H8C7.73478 20 7.48043 19.8946 7.29289 19.7071C7.10536 19.5196 7 19.2652 7 19V5C7 4.73478 7.10536 4.48043 7.29289 4.29289C7.48043 4.10536 7.73478 4 8 4H16C16.2652 4 16.5196 4.10536 16.7071 4.29289C16.8946 4.48043 17 4.73478 17 5V19Z"
+              fill="white"
+            />
+          </svg>
+          Connect to Mobile Pay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

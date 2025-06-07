@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageSkeleton component should match snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="animate-pulse space-y-8 md:flex md:items-center md:space-x-8 md:space-y-0 rtl:space-x-reverse"
+        role="status"
+      >
+        <div
+          class="flex h-64 w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700 sm:w-96"
+        >
+          <svg
+            aria-label="image-icon"
+            class="w-16 h-16"
+            fill="none"
+            height="56"
+            viewBox="0 0 56 56"
+            width="56"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M38.1099 51.3333H17.8877C9.97941 51.3333 4.66666 45.7867 4.66666 37.53V18.4723C4.66666 10.2156 9.97941 4.66666 17.8877 4.66666H38.1122C46.0206 4.66666 51.3333 10.2156 51.3333 18.4723V37.53C51.3333 45.7867 46.0206 51.3333 38.1099 51.3333Z"
+              fill="#5570F1"
+              opacity="0.4"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M26.2383 20.2416C26.2383 23.4383 23.6367 26.04 20.44 26.04C17.241 26.04 14.6417 23.4383 14.6417 20.2416C14.6417 17.045 17.241 14.441 20.44 14.441C23.6367 14.441 26.2383 17.045 26.2383 20.2416ZM45.2676 32.871C45.8113 33.3984 46.2009 34.0004 46.4576 34.642C47.2346 36.5834 46.8309 38.9167 46.0003 40.8394C45.0156 43.1284 43.1303 44.8574 40.7549 45.6134C39.7003 45.9517 38.5943 46.0964 37.4906 46.0964H17.9349C15.9889 46.0964 14.2669 45.6437 12.8553 44.7944C11.9709 44.2624 11.8146 43.0374 12.4703 42.2394C13.5669 40.9094 14.6496 39.5747 15.7416 38.2284C17.8229 35.6524 19.2253 34.9057 20.7839 35.5614C21.4163 35.832 22.0509 36.2404 22.7043 36.6697C24.4449 37.8224 26.8646 39.4044 30.0519 37.687C32.2306 36.4957 33.4953 34.4572 34.5961 32.6828L34.6183 32.647C34.6923 32.5283 34.7658 32.4096 34.839 32.2913C35.2133 31.6865 35.582 31.0908 35.9996 30.5424C36.5176 29.8634 38.4403 27.74 40.9253 29.252C42.5096 30.204 43.8419 31.492 45.2676 32.871Z"
+              fill="#5570F1"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="animate-pulse space-y-8 md:flex md:items-center md:space-x-8 md:space-y-0 rtl:space-x-reverse"
+      role="status"
+    >
+      <div
+        class="flex h-64 w-full items-center justify-center rounded bg-gray-300 dark:bg-gray-700 sm:w-96"
+      >
+        <svg
+          aria-label="image-icon"
+          class="w-16 h-16"
+          fill="none"
+          height="56"
+          viewBox="0 0 56 56"
+          width="56"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M38.1099 51.3333H17.8877C9.97941 51.3333 4.66666 45.7867 4.66666 37.53V18.4723C4.66666 10.2156 9.97941 4.66666 17.8877 4.66666H38.1122C46.0206 4.66666 51.3333 10.2156 51.3333 18.4723V37.53C51.3333 45.7867 46.0206 51.3333 38.1099 51.3333Z"
+            fill="#5570F1"
+            opacity="0.4"
+          />
+          <path
+            clip-rule="evenodd"
+            d="M26.2383 20.2416C26.2383 23.4383 23.6367 26.04 20.44 26.04C17.241 26.04 14.6417 23.4383 14.6417 20.2416C14.6417 17.045 17.241 14.441 20.44 14.441C23.6367 14.441 26.2383 17.045 26.2383 20.2416ZM45.2676 32.871C45.8113 33.3984 46.2009 34.0004 46.4576 34.642C47.2346 36.5834 46.8309 38.9167 46.0003 40.8394C45.0156 43.1284 43.1303 44.8574 40.7549 45.6134C39.7003 45.9517 38.5943 46.0964 37.4906 46.0964H17.9349C15.9889 46.0964 14.2669 45.6437 12.8553 44.7944C11.9709 44.2624 11.8146 43.0374 12.4703 42.2394C13.5669 40.9094 14.6496 39.5747 15.7416 38.2284C17.8229 35.6524 19.2253 34.9057 20.7839 35.5614C21.4163 35.832 22.0509 36.2404 22.7043 36.6697C24.4449 37.8224 26.8646 39.4044 30.0519 37.687C32.2306 36.4957 33.4953 34.4572 34.5961 32.6828L34.6183 32.647C34.6923 32.5283 34.7658 32.4096 34.839 32.2913C35.2133 31.6865 35.582 31.0908 35.9996 30.5424C36.5176 29.8634 38.4403 27.74 40.9253 29.252C42.5096 30.204 43.8419 31.492 45.2676 32.871Z"
+            fill="#5570F1"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

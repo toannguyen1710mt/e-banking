@@ -1,0 +1,756 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreditCard component Should render snapshot correctly 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24] shadow-none"
+        tabindex="-1"
+      >
+        <div
+          class="p-3 z-10 w-full items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large flex justify-between pb-0 gap-2"
+        >
+          <div
+            class="flex items-center gap-3"
+          >
+            <p
+              class="text-primary-200 text-base font-extrabold text-white"
+            >
+              E-Banking
+            </p>
+            <div
+              aria-orientation="vertical"
+              class="shrink-0 border-none h-[20px] w-[1px] bg-secondary-400"
+              data-orientation="vertical"
+              role="separator"
+            />
+            <p
+              class="text-primary-200 text-base font-normal text-secondary-400"
+            >
+              Universal Bank
+            </p>
+          </div>
+          <svg
+            class="unset"
+            fill="none"
+            height="24"
+            viewBox="0 0 20 24"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              clip-path="url(#clip0_1_972)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M14.3932 0.907577C14.9637 0.599353 15.6849 0.796006 16.0042 1.34681C17.9219 4.65561 18.9301 8.40634 18.9301 12.2224C18.9301 16.0384 17.9219 19.7891 16.0042 23.0979C15.6849 23.6487 14.9637 23.8454 14.3932 23.5372C13.8227 23.2289 13.6191 22.5325 13.9383 21.9817C15.6567 19.0167 16.5627 15.6507 16.5627 12.2224C16.5627 8.79402 15.6567 5.428 13.9383 2.46299C13.6191 1.91218 13.8227 1.2158 14.3932 0.907577ZM9.83607 3.17742C10.4066 2.86919 11.1278 3.06585 11.447 3.61666C12.9647 6.23533 13.7624 9.20322 13.7624 12.2224C13.7624 15.2415 12.9647 18.2094 11.447 20.8281C11.1278 21.3789 10.4066 21.5755 9.83607 21.2673C9.26559 20.9591 9.06192 20.2627 9.38115 19.7119C10.6996 17.437 11.3951 14.8538 11.3951 12.2224C11.3951 9.5909 10.6996 7.00773 9.38115 4.73283C9.06192 4.18203 9.26559 3.48564 9.83607 3.17742ZM5.49072 5.25905C6.06263 4.9533 6.78296 5.15308 7.09963 5.70527C8.22321 7.66454 8.81297 9.88357 8.81297 12.1398C8.81297 14.3961 8.22321 16.6151 7.09963 18.5744C6.78296 19.1266 6.06263 19.3263 5.49072 19.0206C4.91881 18.7149 4.7119 18.0194 5.02856 17.4672C5.95575 15.8504 6.44563 14.0129 6.44563 12.1398C6.44563 10.2668 5.95575 8.42928 5.02856 6.81247C4.7119 6.26028 4.91881 5.56479 5.49072 5.25905ZM1.07574 7.54566C1.62625 7.20527 2.35832 7.36021 2.71088 7.89173C3.57093 9.18839 4.02853 10.6889 4.02853 12.2224C4.02853 13.7558 3.57093 15.2563 2.71088 16.553C2.35832 17.0845 1.62625 17.2395 1.07574 16.8991C0.525226 16.5587 0.364752 15.8518 0.717307 15.3203C1.33522 14.3887 1.66118 13.3154 1.66118 12.2224C1.66118 11.1293 1.33522 10.056 0.717307 9.12442C0.364752 8.5929 0.525226 7.88606 1.07574 7.54566Z"
+                fill="#475569"
+                fill-rule="evenodd"
+              />
+            </g>
+            <defs>
+              <clippath
+                id="clip0_1_972"
+              >
+                <rect
+                  fill="white"
+                  height="23.1111"
+                  transform="translate(0.333008 0.666748)"
+                  width="19.3333"
+                />
+              </clippath>
+            </defs>
+          </svg>
+        </div>
+        <div
+          class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased py-0 mb-[18px] mt-[14px]"
+        >
+          <div
+            class="flex items-end justify-between"
+          >
+            <svg
+              class="mb-[4px] unset"
+              fill="none"
+              height="27"
+              viewBox="0 0 39 27"
+              width="39"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                filter="url(#filter0_ii_1_983)"
+              >
+                <path
+                  d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                  fill="#CDC9C1"
+                />
+                <path
+                  d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                  fill="url(#paint0_radial_1_983)"
+                  fill-opacity="0.1"
+                />
+                <path
+                  d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                  fill="url(#paint1_radial_1_983)"
+                  fill-opacity="0.1"
+                />
+                <path
+                  d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                  fill="url(#paint2_radial_1_983)"
+                  fill-opacity="0.1"
+                />
+              </g>
+              <mask
+                height="27"
+                id="mask0_1_983"
+                maskUnits="userSpaceOnUse"
+                style="mask-type: alpha;"
+                width="39"
+                x="0"
+                y="0"
+              >
+                <path
+                  d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                  fill="#D9D9D9"
+                />
+              </mask>
+              <g
+                mask="url(#mask0_1_983)"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M0.103516 3.32388C0.103516 2.71023 0.618743 2.21277 1.25431 2.21277H10.3406C10.9761 2.21277 11.4914 2.71023 11.4914 3.32388V8.85045C11.4914 9.4641 10.9761 9.96156 10.3406 9.96156H1.25431C0.618743 9.96156 0.103516 9.4641 0.103516 8.85045V3.32388ZM1.25431 2.65721C0.87297 2.65721 0.563833 2.95569 0.563833 3.32388V8.85045C0.563833 9.21864 0.87297 9.51712 1.25431 9.51712H10.3406C10.7219 9.51712 11.0311 9.21864 11.0311 8.85045V3.32388C11.0311 2.95569 10.7219 2.65721 10.3406 2.65721H1.25431Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M0.103516 10.6278C0.103516 10.0142 0.618743 9.51672 1.25431 9.51672H10.3406C10.9761 9.51672 11.4914 10.0142 11.4914 10.6278V16.1544C11.4914 16.7681 10.9761 17.2655 10.3406 17.2655H1.25431C0.618743 17.2655 0.103516 16.7681 0.103516 16.1544V10.6278ZM1.25431 9.96117C0.87297 9.96117 0.563833 10.2596 0.563833 10.6278V16.1544C0.563833 16.5226 0.87297 16.8211 1.25431 16.8211H10.3406C10.7219 16.8211 11.0311 16.5226 11.0311 16.1544V10.6278C11.0311 10.2596 10.7219 9.96117 10.3406 9.96117H1.25431Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M13.553 9.81643C13.553 9.20278 14.0682 8.70532 14.7038 8.70532H27.1524C27.7879 8.70532 28.3032 9.20278 28.3032 9.81643V10.0676C28.3032 10.6813 27.7879 11.1788 27.1524 11.1788H26.4719C26.0906 11.1788 25.7814 11.4772 25.7814 11.8454V17.7778C25.7814 18.3914 25.2662 18.8889 24.6306 18.8889H12.182C11.5465 18.8889 11.0312 18.3914 11.0312 17.7778V17.1208C11.0312 16.5071 11.5465 16.0097 12.182 16.0097H12.8625C13.2439 16.0097 13.553 15.7112 13.553 15.343V9.81643ZM14.7038 9.14977C14.3224 9.14977 14.0133 9.44824 14.0133 9.81643V15.343C14.0133 15.9567 13.4981 16.4541 12.8625 16.4541H12.182C11.8007 16.4541 11.4916 16.7526 11.4916 17.1208V17.7778C11.4916 18.146 11.8007 18.4445 12.182 18.4445H24.6306C25.012 18.4445 25.3211 18.146 25.3211 17.7778V11.8454C25.3211 11.2318 25.8363 10.7343 26.4719 10.7343H27.1524C27.5337 10.7343 27.8428 10.4358 27.8428 10.0676V9.81643C27.8428 9.44824 27.5337 9.14977 27.1524 9.14977H14.7038Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M0.103516 17.9325C0.103516 17.3189 0.618743 16.8214 1.25431 16.8214H10.3406C10.9761 16.8214 11.4914 17.3189 11.4914 17.9325V23.4591C11.4914 24.0727 10.9761 24.5702 10.3406 24.5702H1.25431C0.618743 24.5702 0.103516 24.0727 0.103516 23.4591V17.9325ZM1.25431 17.2659C0.87297 17.2659 0.563833 17.5643 0.563833 17.9325V23.4591C0.563833 23.8273 0.87297 24.1258 1.25431 24.1258H10.3406C10.7219 24.1258 11.0311 23.8273 11.0311 23.4591V17.9325C11.0311 17.5643 10.7219 17.2659 10.3406 17.2659H1.25431Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M27.8428 3.32351C27.8428 2.70986 28.358 2.2124 28.9936 2.2124H38.0798C38.7154 2.2124 39.2306 2.70986 39.2306 3.32351V8.85008C39.2306 9.46373 38.7154 9.96119 38.0798 9.96119H28.9936C28.358 9.96119 27.8428 9.46373 27.8428 8.85008V3.32351ZM28.9936 2.65685C28.6122 2.65685 28.3031 2.95532 28.3031 3.32351V8.85008C28.3031 9.21827 28.6122 9.51675 28.9936 9.51675H38.0798C38.4612 9.51675 38.7703 9.21827 38.7703 8.85008V3.32351C38.7703 2.95532 38.4612 2.65685 38.0798 2.65685H28.9936Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M27.8428 10.6278C27.8428 10.0142 28.358 9.51672 28.9936 9.51672H38.0798C38.7154 9.51672 39.2306 10.0142 39.2306 10.6278V16.1544C39.2306 16.7681 38.7154 17.2655 38.0798 17.2655H28.9936C28.358 17.2655 27.8428 16.7681 27.8428 16.1544V10.6278ZM28.9936 9.96117C28.6122 9.96117 28.3031 10.2596 28.3031 10.6278V16.1544C28.3031 16.5226 28.6122 16.8211 28.9936 16.8211H38.0798C38.4612 16.8211 38.7703 16.5226 38.7703 16.1544V10.6278C38.7703 10.2596 38.4612 9.96117 38.0798 9.96117H28.9936Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+                <path
+                  clip-rule="evenodd"
+                  d="M27.8428 17.9325C27.8428 17.3189 28.358 16.8214 28.9936 16.8214H38.0798C38.7154 16.8214 39.2306 17.3189 39.2306 17.9325V23.4591C39.2306 24.0727 38.7154 24.5702 38.0798 24.5702H28.9936C28.358 24.5702 27.8428 24.0727 27.8428 23.4591V17.9325ZM28.9936 17.2659C28.6122 17.2659 28.3031 17.5643 28.3031 17.9325V23.4591C28.3031 23.8273 28.6122 24.1258 28.9936 24.1258H38.0798C38.4612 24.1258 38.7703 23.8273 38.7703 23.4591V17.9325C38.7703 17.5643 38.4612 17.2659 38.0798 17.2659H28.9936Z"
+                  fill="#10141E"
+                  fill-rule="evenodd"
+                />
+              </g>
+              <defs>
+                <filter
+                  color-interpolation-filters="sRGB"
+                  filterUnits="userSpaceOnUse"
+                  height="26.7826"
+                  id="filter0_ii_1_983"
+                  width="38.6665"
+                  x="0.333496"
+                  y="0"
+                >
+                  <feflood
+                    flood-opacity="0"
+                    result="BackgroundImageFix"
+                  />
+                  <feblend
+                    in="SourceGraphic"
+                    in2="BackgroundImageFix"
+                    mode="normal"
+                    result="shape"
+                  />
+                  <fecolormatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  />
+                  <feoffset
+                    dx="-0.451713"
+                    dy="-0.451713"
+                  />
+                  <fecomposite
+                    in2="hardAlpha"
+                    k2="-1"
+                    k3="1"
+                    operator="arithmetic"
+                  />
+                  <fecolormatrix
+                    type="matrix"
+                    values="0 0 0 0 0.184314 0 0 0 0 0.152941 0 0 0 0 0.0941176 0 0 0 0.2 0"
+                  />
+                  <feblend
+                    in2="shape"
+                    mode="normal"
+                    result="effect1_innerShadow_1_983"
+                  />
+                  <fecolormatrix
+                    in="SourceAlpha"
+                    result="hardAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  />
+                  <feoffset
+                    dx="0.451713"
+                    dy="0.451713"
+                  />
+                  <fecomposite
+                    in2="hardAlpha"
+                    k2="-1"
+                    k3="1"
+                    operator="arithmetic"
+                  />
+                  <fecolormatrix
+                    type="matrix"
+                    values="0 0 0 0 0.184314 0 0 0 0 0.152941 0 0 0 0 0.0941176 0 0 0 0.2 0"
+                  />
+                  <feblend
+                    in2="effect1_innerShadow_1_983"
+                    mode="normal"
+                    result="effect2_innerShadow_1_983"
+                  />
+                </filter>
+                <radialgradient
+                  cx="0"
+                  cy="0"
+                  gradientTransform="translate(10.0002) rotate(70.1539) scale(28.4737 40.787)"
+                  gradientUnits="userSpaceOnUse"
+                  id="paint0_radial_1_983"
+                  r="1"
+                >
+                  <stop
+                    stop-color="#C29632"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#C29632"
+                    stop-opacity="0"
+                  />
+                </radialgradient>
+                <radialgradient
+                  cx="0"
+                  cy="0"
+                  gradientTransform="translate(39.0002 13.7971) rotate(146.112) scale(23.2895 32.0532)"
+                  gradientUnits="userSpaceOnUse"
+                  id="paint1_radial_1_983"
+                  r="1"
+                >
+                  <stop
+                    stop-color="#664700"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#664700"
+                  />
+                </radialgradient>
+                <radialgradient
+                  cx="0"
+                  cy="0"
+                  gradientTransform="translate(5.37697 26.7826) rotate(-21.1169) scale(36.0436 48.9679)"
+                  gradientUnits="userSpaceOnUse"
+                  id="paint2_radial_1_983"
+                  r="1"
+                >
+                  <stop
+                    stop-color="#402200"
+                  />
+                  <stop
+                    offset="1"
+                    stop-color="#402200"
+                    stop-opacity="0"
+                  />
+                </radialgradient>
+              </defs>
+            </svg>
+            <span
+              class="text-primary-200 font-medium mr-[14px] text-right text-secondary-400 text-2xs"
+            >
+              world
+            </span>
+          </div>
+          <p
+            class="text-primary-200 font-extrabold tracking-[3px] text-secondary-400 ml-4 mt-1 text-sm"
+          >
+            5375 4411 4540
+          </p>
+          <div
+            class="flex justify-between mt-2 gap-5"
+          >
+            <div
+              class="flex-1"
+            >
+              <div
+                class="flex items-center justify-end gap-1"
+              >
+                <span
+                  class="text-primary-200 font-medium max-w-[20px] text-5xs leading-[8px] text-secondary-400"
+                >
+                  VALID THRU
+                </span>
+                <span
+                  class="text-primary-200 text-right font-extrabold text-secondary-400 text-2xs"
+                >
+                  06/28
+                </span>
+              </div>
+              <p
+                class="text-primary-200 font-medium mt-[2px] overflow-hidden text-ellipsis whitespace-nowrap text-left uppercase tracking-[1px] text-secondary-400 max-w-[185px] text-xs"
+              >
+                DONALD FLINCH CORTEZ
+              </p>
+            </div>
+            <svg
+              class="unset"
+              fill="none"
+              height="35"
+              viewBox="0 0 59 35"
+              width="59"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+                fill="#ED0006"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+                fill="#F9A000"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+                fill="#FF5E00"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none w-full self-center rounded-[6px] bg-cover bg-no-repeat max-w-[290px] bg-gradient-to-r from-black to-[#101e24] shadow-none"
+      tabindex="-1"
+    >
+      <div
+        class="p-3 z-10 w-full items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large flex justify-between pb-0 gap-2"
+      >
+        <div
+          class="flex items-center gap-3"
+        >
+          <p
+            class="text-primary-200 text-base font-extrabold text-white"
+          >
+            E-Banking
+          </p>
+          <div
+            aria-orientation="vertical"
+            class="shrink-0 border-none h-[20px] w-[1px] bg-secondary-400"
+            data-orientation="vertical"
+            role="separator"
+          />
+          <p
+            class="text-primary-200 text-base font-normal text-secondary-400"
+          >
+            Universal Bank
+          </p>
+        </div>
+        <svg
+          class="unset"
+          fill="none"
+          height="24"
+          viewBox="0 0 20 24"
+          width="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g
+            clip-path="url(#clip0_1_972)"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M14.3932 0.907577C14.9637 0.599353 15.6849 0.796006 16.0042 1.34681C17.9219 4.65561 18.9301 8.40634 18.9301 12.2224C18.9301 16.0384 17.9219 19.7891 16.0042 23.0979C15.6849 23.6487 14.9637 23.8454 14.3932 23.5372C13.8227 23.2289 13.6191 22.5325 13.9383 21.9817C15.6567 19.0167 16.5627 15.6507 16.5627 12.2224C16.5627 8.79402 15.6567 5.428 13.9383 2.46299C13.6191 1.91218 13.8227 1.2158 14.3932 0.907577ZM9.83607 3.17742C10.4066 2.86919 11.1278 3.06585 11.447 3.61666C12.9647 6.23533 13.7624 9.20322 13.7624 12.2224C13.7624 15.2415 12.9647 18.2094 11.447 20.8281C11.1278 21.3789 10.4066 21.5755 9.83607 21.2673C9.26559 20.9591 9.06192 20.2627 9.38115 19.7119C10.6996 17.437 11.3951 14.8538 11.3951 12.2224C11.3951 9.5909 10.6996 7.00773 9.38115 4.73283C9.06192 4.18203 9.26559 3.48564 9.83607 3.17742ZM5.49072 5.25905C6.06263 4.9533 6.78296 5.15308 7.09963 5.70527C8.22321 7.66454 8.81297 9.88357 8.81297 12.1398C8.81297 14.3961 8.22321 16.6151 7.09963 18.5744C6.78296 19.1266 6.06263 19.3263 5.49072 19.0206C4.91881 18.7149 4.7119 18.0194 5.02856 17.4672C5.95575 15.8504 6.44563 14.0129 6.44563 12.1398C6.44563 10.2668 5.95575 8.42928 5.02856 6.81247C4.7119 6.26028 4.91881 5.56479 5.49072 5.25905ZM1.07574 7.54566C1.62625 7.20527 2.35832 7.36021 2.71088 7.89173C3.57093 9.18839 4.02853 10.6889 4.02853 12.2224C4.02853 13.7558 3.57093 15.2563 2.71088 16.553C2.35832 17.0845 1.62625 17.2395 1.07574 16.8991C0.525226 16.5587 0.364752 15.8518 0.717307 15.3203C1.33522 14.3887 1.66118 13.3154 1.66118 12.2224C1.66118 11.1293 1.33522 10.056 0.717307 9.12442C0.364752 8.5929 0.525226 7.88606 1.07574 7.54566Z"
+              fill="#475569"
+              fill-rule="evenodd"
+            />
+          </g>
+          <defs>
+            <clippath
+              id="clip0_1_972"
+            >
+              <rect
+                fill="white"
+                height="23.1111"
+                transform="translate(0.333008 0.666748)"
+                width="19.3333"
+              />
+            </clippath>
+          </defs>
+        </svg>
+      </div>
+      <div
+        class="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased py-0 mb-[18px] mt-[14px]"
+      >
+        <div
+          class="flex items-end justify-between"
+        >
+          <svg
+            class="mb-[4px] unset"
+            fill="none"
+            height="27"
+            viewBox="0 0 39 27"
+            width="39"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              filter="url(#filter0_ii_1_983)"
+            >
+              <path
+                d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                fill="#CDC9C1"
+              />
+              <path
+                d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                fill="url(#paint0_radial_1_983)"
+                fill-opacity="0.1"
+              />
+              <path
+                d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                fill="url(#paint1_radial_1_983)"
+                fill-opacity="0.1"
+              />
+              <path
+                d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                fill="url(#paint2_radial_1_983)"
+                fill-opacity="0.1"
+              />
+            </g>
+            <mask
+              height="27"
+              id="mask0_1_983"
+              maskUnits="userSpaceOnUse"
+              style="mask-type: alpha;"
+              width="39"
+              x="0"
+              y="0"
+            >
+              <path
+                d="M0.333496 3.55555C0.333496 1.59188 1.98223 0 4.01604 0H35.3176C37.3514 0 39.0002 1.59188 39.0002 3.55555V23.227C39.0002 25.1907 37.3514 26.7826 35.3176 26.7826H4.01604C1.98223 26.7826 0.333496 25.1907 0.333496 23.227V3.55555Z"
+                fill="#D9D9D9"
+              />
+            </mask>
+            <g
+              mask="url(#mask0_1_983)"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M0.103516 3.32388C0.103516 2.71023 0.618743 2.21277 1.25431 2.21277H10.3406C10.9761 2.21277 11.4914 2.71023 11.4914 3.32388V8.85045C11.4914 9.4641 10.9761 9.96156 10.3406 9.96156H1.25431C0.618743 9.96156 0.103516 9.4641 0.103516 8.85045V3.32388ZM1.25431 2.65721C0.87297 2.65721 0.563833 2.95569 0.563833 3.32388V8.85045C0.563833 9.21864 0.87297 9.51712 1.25431 9.51712H10.3406C10.7219 9.51712 11.0311 9.21864 11.0311 8.85045V3.32388C11.0311 2.95569 10.7219 2.65721 10.3406 2.65721H1.25431Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M0.103516 10.6278C0.103516 10.0142 0.618743 9.51672 1.25431 9.51672H10.3406C10.9761 9.51672 11.4914 10.0142 11.4914 10.6278V16.1544C11.4914 16.7681 10.9761 17.2655 10.3406 17.2655H1.25431C0.618743 17.2655 0.103516 16.7681 0.103516 16.1544V10.6278ZM1.25431 9.96117C0.87297 9.96117 0.563833 10.2596 0.563833 10.6278V16.1544C0.563833 16.5226 0.87297 16.8211 1.25431 16.8211H10.3406C10.7219 16.8211 11.0311 16.5226 11.0311 16.1544V10.6278C11.0311 10.2596 10.7219 9.96117 10.3406 9.96117H1.25431Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M13.553 9.81643C13.553 9.20278 14.0682 8.70532 14.7038 8.70532H27.1524C27.7879 8.70532 28.3032 9.20278 28.3032 9.81643V10.0676C28.3032 10.6813 27.7879 11.1788 27.1524 11.1788H26.4719C26.0906 11.1788 25.7814 11.4772 25.7814 11.8454V17.7778C25.7814 18.3914 25.2662 18.8889 24.6306 18.8889H12.182C11.5465 18.8889 11.0312 18.3914 11.0312 17.7778V17.1208C11.0312 16.5071 11.5465 16.0097 12.182 16.0097H12.8625C13.2439 16.0097 13.553 15.7112 13.553 15.343V9.81643ZM14.7038 9.14977C14.3224 9.14977 14.0133 9.44824 14.0133 9.81643V15.343C14.0133 15.9567 13.4981 16.4541 12.8625 16.4541H12.182C11.8007 16.4541 11.4916 16.7526 11.4916 17.1208V17.7778C11.4916 18.146 11.8007 18.4445 12.182 18.4445H24.6306C25.012 18.4445 25.3211 18.146 25.3211 17.7778V11.8454C25.3211 11.2318 25.8363 10.7343 26.4719 10.7343H27.1524C27.5337 10.7343 27.8428 10.4358 27.8428 10.0676V9.81643C27.8428 9.44824 27.5337 9.14977 27.1524 9.14977H14.7038Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M0.103516 17.9325C0.103516 17.3189 0.618743 16.8214 1.25431 16.8214H10.3406C10.9761 16.8214 11.4914 17.3189 11.4914 17.9325V23.4591C11.4914 24.0727 10.9761 24.5702 10.3406 24.5702H1.25431C0.618743 24.5702 0.103516 24.0727 0.103516 23.4591V17.9325ZM1.25431 17.2659C0.87297 17.2659 0.563833 17.5643 0.563833 17.9325V23.4591C0.563833 23.8273 0.87297 24.1258 1.25431 24.1258H10.3406C10.7219 24.1258 11.0311 23.8273 11.0311 23.4591V17.9325C11.0311 17.5643 10.7219 17.2659 10.3406 17.2659H1.25431Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M27.8428 3.32351C27.8428 2.70986 28.358 2.2124 28.9936 2.2124H38.0798C38.7154 2.2124 39.2306 2.70986 39.2306 3.32351V8.85008C39.2306 9.46373 38.7154 9.96119 38.0798 9.96119H28.9936C28.358 9.96119 27.8428 9.46373 27.8428 8.85008V3.32351ZM28.9936 2.65685C28.6122 2.65685 28.3031 2.95532 28.3031 3.32351V8.85008C28.3031 9.21827 28.6122 9.51675 28.9936 9.51675H38.0798C38.4612 9.51675 38.7703 9.21827 38.7703 8.85008V3.32351C38.7703 2.95532 38.4612 2.65685 38.0798 2.65685H28.9936Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M27.8428 10.6278C27.8428 10.0142 28.358 9.51672 28.9936 9.51672H38.0798C38.7154 9.51672 39.2306 10.0142 39.2306 10.6278V16.1544C39.2306 16.7681 38.7154 17.2655 38.0798 17.2655H28.9936C28.358 17.2655 27.8428 16.7681 27.8428 16.1544V10.6278ZM28.9936 9.96117C28.6122 9.96117 28.3031 10.2596 28.3031 10.6278V16.1544C28.3031 16.5226 28.6122 16.8211 28.9936 16.8211H38.0798C38.4612 16.8211 38.7703 16.5226 38.7703 16.1544V10.6278C38.7703 10.2596 38.4612 9.96117 38.0798 9.96117H28.9936Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+              <path
+                clip-rule="evenodd"
+                d="M27.8428 17.9325C27.8428 17.3189 28.358 16.8214 28.9936 16.8214H38.0798C38.7154 16.8214 39.2306 17.3189 39.2306 17.9325V23.4591C39.2306 24.0727 38.7154 24.5702 38.0798 24.5702H28.9936C28.358 24.5702 27.8428 24.0727 27.8428 23.4591V17.9325ZM28.9936 17.2659C28.6122 17.2659 28.3031 17.5643 28.3031 17.9325V23.4591C28.3031 23.8273 28.6122 24.1258 28.9936 24.1258H38.0798C38.4612 24.1258 38.7703 23.8273 38.7703 23.4591V17.9325C38.7703 17.5643 38.4612 17.2659 38.0798 17.2659H28.9936Z"
+                fill="#10141E"
+                fill-rule="evenodd"
+              />
+            </g>
+            <defs>
+              <filter
+                color-interpolation-filters="sRGB"
+                filterUnits="userSpaceOnUse"
+                height="26.7826"
+                id="filter0_ii_1_983"
+                width="38.6665"
+                x="0.333496"
+                y="0"
+              >
+                <feflood
+                  flood-opacity="0"
+                  result="BackgroundImageFix"
+                />
+                <feblend
+                  in="SourceGraphic"
+                  in2="BackgroundImageFix"
+                  mode="normal"
+                  result="shape"
+                />
+                <fecolormatrix
+                  in="SourceAlpha"
+                  result="hardAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feoffset
+                  dx="-0.451713"
+                  dy="-0.451713"
+                />
+                <fecomposite
+                  in2="hardAlpha"
+                  k2="-1"
+                  k3="1"
+                  operator="arithmetic"
+                />
+                <fecolormatrix
+                  type="matrix"
+                  values="0 0 0 0 0.184314 0 0 0 0 0.152941 0 0 0 0 0.0941176 0 0 0 0.2 0"
+                />
+                <feblend
+                  in2="shape"
+                  mode="normal"
+                  result="effect1_innerShadow_1_983"
+                />
+                <fecolormatrix
+                  in="SourceAlpha"
+                  result="hardAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                />
+                <feoffset
+                  dx="0.451713"
+                  dy="0.451713"
+                />
+                <fecomposite
+                  in2="hardAlpha"
+                  k2="-1"
+                  k3="1"
+                  operator="arithmetic"
+                />
+                <fecolormatrix
+                  type="matrix"
+                  values="0 0 0 0 0.184314 0 0 0 0 0.152941 0 0 0 0 0.0941176 0 0 0 0.2 0"
+                />
+                <feblend
+                  in2="effect1_innerShadow_1_983"
+                  mode="normal"
+                  result="effect2_innerShadow_1_983"
+                />
+              </filter>
+              <radialgradient
+                cx="0"
+                cy="0"
+                gradientTransform="translate(10.0002) rotate(70.1539) scale(28.4737 40.787)"
+                gradientUnits="userSpaceOnUse"
+                id="paint0_radial_1_983"
+                r="1"
+              >
+                <stop
+                  stop-color="#C29632"
+                />
+                <stop
+                  offset="1"
+                  stop-color="#C29632"
+                  stop-opacity="0"
+                />
+              </radialgradient>
+              <radialgradient
+                cx="0"
+                cy="0"
+                gradientTransform="translate(39.0002 13.7971) rotate(146.112) scale(23.2895 32.0532)"
+                gradientUnits="userSpaceOnUse"
+                id="paint1_radial_1_983"
+                r="1"
+              >
+                <stop
+                  stop-color="#664700"
+                />
+                <stop
+                  offset="1"
+                  stop-color="#664700"
+                />
+              </radialgradient>
+              <radialgradient
+                cx="0"
+                cy="0"
+                gradientTransform="translate(5.37697 26.7826) rotate(-21.1169) scale(36.0436 48.9679)"
+                gradientUnits="userSpaceOnUse"
+                id="paint2_radial_1_983"
+                r="1"
+              >
+                <stop
+                  stop-color="#402200"
+                />
+                <stop
+                  offset="1"
+                  stop-color="#402200"
+                  stop-opacity="0"
+                />
+              </radialgradient>
+            </defs>
+          </svg>
+          <span
+            class="text-primary-200 font-medium mr-[14px] text-right text-secondary-400 text-2xs"
+          >
+            world
+          </span>
+        </div>
+        <p
+          class="text-primary-200 font-extrabold tracking-[3px] text-secondary-400 ml-4 mt-1 text-sm"
+        >
+          5375 4411 4540
+        </p>
+        <div
+          class="flex justify-between mt-2 gap-5"
+        >
+          <div
+            class="flex-1"
+          >
+            <div
+              class="flex items-center justify-end gap-1"
+            >
+              <span
+                class="text-primary-200 font-medium max-w-[20px] text-5xs leading-[8px] text-secondary-400"
+              >
+                VALID THRU
+              </span>
+              <span
+                class="text-primary-200 text-right font-extrabold text-secondary-400 text-2xs"
+              >
+                06/28
+              </span>
+            </div>
+            <p
+              class="text-primary-200 font-medium mt-[2px] overflow-hidden text-ellipsis whitespace-nowrap text-left uppercase tracking-[1px] text-secondary-400 max-w-[185px] text-xs"
+            >
+              DONALD FLINCH CORTEZ
+            </p>
+          </div>
+          <svg
+            class="unset"
+            fill="none"
+            height="35"
+            viewBox="0 0 59 35"
+            width="59"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M41.0762 34.2205C50.791 34.2205 58.6663 26.723 58.6663 17.4744C58.6663 8.22576 50.791 0.728271 41.0762 0.728271C36.7224 0.728271 32.738 2.23419 29.6664 4.72876C26.5948 2.23426 22.6104 0.72838 18.2566 0.72838C8.54186 0.72838 0.666504 8.22586 0.666504 17.4745C0.666504 26.7231 8.54186 34.2206 18.2566 34.2206C22.6105 34.2206 26.5949 32.7147 29.6665 30.2201C32.7381 32.7146 36.7224 34.2205 41.0762 34.2205Z"
+              fill="#ED0006"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M29.6665 30.2197C33.4484 27.1482 35.8465 22.5778 35.8465 17.4742C35.8465 12.3707 33.4484 7.80033 29.6665 4.72879C32.7381 2.23413 36.7226 0.728149 41.0766 0.728149C50.7913 0.728149 58.6667 8.22563 58.6667 17.4742C58.6667 26.7229 50.7913 34.2203 41.0766 34.2203C36.7226 34.2203 32.7381 32.7144 29.6665 30.2197Z"
+              fill="#F9A000"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M29.6668 30.2192C33.4488 27.1476 35.8469 22.5773 35.8469 17.4737C35.8469 12.3702 33.4488 7.79981 29.6668 4.72827C25.8849 7.79981 23.4868 12.3702 23.4868 17.4737C23.4868 22.5773 25.8849 27.1476 29.6668 30.2192Z"
+              fill="#FF5E00"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

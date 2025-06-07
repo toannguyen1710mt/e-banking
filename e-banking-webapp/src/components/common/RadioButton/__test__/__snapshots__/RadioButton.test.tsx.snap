@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton component Should render correctly snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        aria-label=" "
+        aria-orientation="vertical"
+        class="relative flex flex-col gap-2"
+        id="react-aria-:r0:"
+        role="radiogroup"
+      >
+        <div
+          class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row"
+          data-orientation="vertical"
+          role="presentation"
+        >
+          <label
+            class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
+          >
+            <span
+              style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+            >
+              <input
+                aria-describedby=":r7: react-aria-:r3:"
+                aria-labelledby=":r6:"
+                name="react-aria-:r5:"
+                tabindex="0"
+                type="radio"
+                value="Main Wallet"
+              />
+            </span>
+            <span
+              aria-hidden="true"
+              class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[selected=true]:border-primary-200 w-[14px] h-[14px]"
+            >
+              <span
+                class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground transition-transform-opacity motion-reduce:transition-none bg-primary-200 w-[7px] h-[7px]"
+              />
+            </span>
+            <div
+              class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+            >
+              <span
+                class="relative select-none transition-colors motion-reduce:transition-none text-xs text-black"
+                id=":r6:"
+              >
+                Main Wallet
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      aria-label=" "
+      aria-orientation="vertical"
+      class="relative flex flex-col gap-2"
+      id="react-aria-:r0:"
+      role="radiogroup"
+    >
+      <div
+        class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row"
+        data-orientation="vertical"
+        role="presentation"
+      >
+        <label
+          class="group relative max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent select-none gap-[5px] m-0 p-0 leading-[26px]"
+        >
+          <span
+            style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+          >
+            <input
+              aria-describedby=":r7: react-aria-:r3:"
+              aria-labelledby=":r6:"
+              name="react-aria-:r5:"
+              tabindex="0"
+              type="radio"
+              value="Main Wallet"
+            />
+          </span>
+          <span
+            aria-hidden="true"
+            class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none group-data-[selected=true]:border-primary-200 w-[14px] h-[14px]"
+          >
+            <span
+              class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 text-primary-foreground transition-transform-opacity motion-reduce:transition-none bg-primary-200 w-[7px] h-[7px]"
+            />
+          </span>
+          <div
+            class="flex flex-col ml-2 rtl:mr-2 rtl:ml-[unset]"
+          >
+            <span
+              class="relative select-none transition-colors motion-reduce:transition-none text-xs text-black"
+              id=":r6:"
+            >
+              Main Wallet
+            </span>
+          </div>
+        </label>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

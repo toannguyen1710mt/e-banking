@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsCustom Component renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="inline-flex"
+    data-slot="base"
+  >
+    <div
+      aria-orientation="horizontal"
+      class="flex p-1 h-fit gap-2 items-center flex-nowrap overflow-x-scroll scrollbar-hide rounded-medium bg-lightGraySolid"
+      data-slot="tabList"
+      id="react-aria-:r0:"
+      role="tablist"
+    />
+  </div>
+</div>
+`;

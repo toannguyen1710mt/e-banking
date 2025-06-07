@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyTarget Component should render match the snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 shadow-none sm:flex-row xl:flex-col"
+        tabindex="-1"
+      >
+        <div
+          class="sm:basis-1/2"
+        >
+          <div
+            class="flex justify-between"
+          >
+            <span
+              class="text-foreground-100 text-xs font-semibold"
+            >
+              My Targets
+            </span>
+            <button
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 text-foreground-200 rounded w-[50px] h-[19px] px-0 py-[3px] font-medium !text-xxs min-w-0 text-3xs"
+              data-disabled="true"
+              disabled=""
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="13"
+                viewBox="0 0 14 13"
+                width="14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.7915 5.95829H7.5415V2.70829C7.5415 2.56463 7.48444 2.42686 7.38285 2.32528C7.28127 2.22369 7.1435 2.16663 6.99984 2.16663C6.85618 2.16663 6.7184 2.22369 6.61682 2.32528C6.51524 2.42686 6.45817 2.56463 6.45817 2.70829V5.95829H3.20817C3.06451 5.95829 2.92674 6.01536 2.82515 6.11694C2.72357 6.21852 2.6665 6.3563 2.6665 6.49996C2.6665 6.64362 2.72357 6.78139 2.82515 6.88298C2.92674 6.98456 3.06451 7.04163 3.20817 7.04163H6.45817V10.2916C6.45817 10.4353 6.51524 10.5731 6.61682 10.6746C6.7184 10.7762 6.85618 10.8333 6.99984 10.8333C7.1435 10.8333 7.28127 10.7762 7.38285 10.6746C7.48444 10.5731 7.5415 10.4353 7.5415 10.2916V7.04163H10.7915C10.9352 7.04163 11.0729 6.98456 11.1745 6.88298C11.2761 6.78139 11.3332 6.64362 11.3332 6.49996C11.3332 6.3563 11.2761 6.21852 11.1745 6.11694C11.0729 6.01536 10.9352 5.95829 10.7915 5.95829Z"
+                  fill="currentColor"
+                />
+              </svg>
+              New
+            </button>
+          </div>
+          <div
+            class="flex items-center justify-between border-b border-dimGray p-4"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 7.00004H17.65C17.8782 6.5328 17.9979 6.02002 18 5.50004C18.003 4.80336 17.7975 4.12173 17.4098 3.54287C17.0221 2.96401 16.4701 2.51442 15.8247 2.25198C15.1794 1.98953 14.4703 1.92624 13.7886 2.07025C13.107 2.21426 12.4841 2.55898 12 3.06004C11.5159 2.55898 10.893 2.21426 10.2114 2.07025C9.52975 1.92624 8.82061 1.98953 8.17525 2.25198C7.5299 2.51442 6.97786 2.96401 6.59019 3.54287C6.20252 4.12173 5.99697 4.80336 6 5.50004C6.00213 6.02002 6.12178 6.5328 6.35 7.00004H6C5.20435 7.00004 4.44129 7.31611 3.87868 7.87872C3.31607 8.44133 3 9.20439 3 10V12C3 12.2653 3.10536 12.5196 3.29289 12.7071C3.48043 12.8947 3.73478 13 4 13H5V19C5 19.7957 5.31607 20.5588 5.87868 21.1214C6.44129 21.684 7.20435 22 8 22H16C16.7956 22 17.5587 21.684 18.1213 21.1214C18.6839 20.5588 19 19.7957 19 19V13H20C20.2652 13 20.5196 12.8947 20.7071 12.7071C20.8946 12.5196 21 12.2653 21 12V10C21 9.20439 20.6839 8.44133 20.1213 7.87872C19.5587 7.31611 18.7956 7.00004 18 7.00004ZM11 20H8C7.73478 20 7.48043 19.8947 7.29289 19.7071C7.10536 19.5196 7 19.2653 7 19V13H11V20ZM11 11H5V10C5 9.73482 5.10536 9.48047 5.29289 9.29293C5.48043 9.10539 5.73478 9.00004 6 9.00004H11V11ZM11 7.00004H9.5C9.20333 7.00004 8.91332 6.91206 8.66665 6.74724C8.41997 6.58242 8.22771 6.34815 8.11418 6.07406C8.00065 5.79997 7.97094 5.49837 8.02882 5.2074C8.0867 4.91643 8.22956 4.64916 8.43934 4.43938C8.64912 4.2296 8.91639 4.08674 9.20736 4.02886C9.49834 3.97098 9.79994 4.00069 10.074 4.11422C10.3481 4.22775 10.5824 4.42001 10.7472 4.66668C10.912 4.91336 11 5.20337 11 5.50004V7.00004ZM13 5.50004C13 5.20337 13.088 4.91336 13.2528 4.66668C13.4176 4.42001 13.6519 4.22775 13.926 4.11422C14.2001 4.00069 14.5017 3.97098 14.7926 4.02886C15.0836 4.08674 15.3509 4.2296 15.5607 4.43938C15.7704 4.64916 15.9133 4.91643 15.9712 5.2074C16.0291 5.49837 15.9994 5.79997 15.8858 6.07406C15.7723 6.34815 15.58 6.58242 15.3334 6.74724C15.0867 6.91206 14.7967 7.00004 14.5 7.00004H13V5.50004ZM17 19C17 19.2653 16.8946 19.5196 16.7071 19.7071C16.5196 19.8947 16.2652 20 16 20H13V13H17V19ZM19 11H13V9.00004H18C18.2652 9.00004 18.5196 9.10539 18.7071 9.29293C18.8946 9.48047 19 9.73482 19 10V11Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-primary-200 text-xs font-medium text-foreground-100"
+                >
+                  Self Reward
+                </p>
+                <div
+                  class="flex"
+                >
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-success"
+                  >
+                    $
+                     
+                    45000
+                  </span>
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                  >
+                    /
+                    $
+                     
+                    100000
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-primary-200 text-xs font-bold text-foreground-100"
+            >
+              45
+              %
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between border-b border-dimGray p-4"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.9998 5.07996C22.0007 4.47018 21.8205 3.87387 21.4821 3.36659C21.1437 2.85931 20.6624 2.46388 20.0991 2.23042C19.5357 1.99695 18.9158 1.93595 18.3178 2.05514C17.7198 2.17433 17.1706 2.46836 16.7398 2.89996L13.9298 5.70996L7.43982 3.54996C7.26702 3.49565 7.08273 3.48929 6.9066 3.53156C6.73048 3.57383 6.56914 3.66314 6.43982 3.78996L4.05982 6.14996C3.94705 6.26403 3.86337 6.40357 3.81586 6.55678C3.76835 6.70999 3.75839 6.87238 3.78683 7.03025C3.81526 7.18811 3.88126 7.33682 3.97924 7.46383C4.07723 7.59083 4.20433 7.6924 4.34982 7.75996L9.52982 10.11L6.92982 12.71L5.21982 11.85C5.03519 11.75 4.8238 11.7107 4.6156 11.7377C4.4074 11.7646 4.21295 11.8564 4.05982 12L2.28982 13.81C2.10357 13.9973 1.99902 14.2508 1.99902 14.515C1.99902 14.7791 2.10357 15.0326 2.28982 15.22L8.77982 21.71C8.96718 21.8962 9.22063 22.0007 9.48482 22.0007C9.749 22.0007 10.0025 21.8962 10.1898 21.71L11.9998 19.94C12.1499 19.7914 12.2491 19.5992 12.2832 19.3908C12.3174 19.1824 12.2847 18.9686 12.1898 18.78L11.3298 17.07L13.9298 14.47L16.2798 19.65C16.3474 19.7954 16.4489 19.9225 16.5759 20.0205C16.7029 20.1185 16.8517 20.1845 17.0095 20.2129C17.1674 20.2414 17.3298 20.2314 17.483 20.1839C17.6362 20.1364 17.7757 20.0527 17.8898 19.94L20.2498 17.58C20.3766 17.4506 20.4659 17.2893 20.5082 17.1132C20.5505 16.937 20.5441 16.7527 20.4898 16.58L18.3298 10.09L21.0998 7.25996C21.387 6.97452 21.6145 6.63475 21.7691 6.26047C21.9236 5.88618 22.002 5.48488 21.9998 5.07996ZM19.6798 5.84996L16.4398 9.08996C16.313 9.21928 16.2237 9.38062 16.1814 9.55674C16.1391 9.73287 16.1455 9.91716 16.1998 10.09L18.3598 16.57L17.4598 17.47L15.1098 12.3C15.0431 12.1531 14.9419 12.0246 14.8148 11.9253C14.6877 11.8261 14.5384 11.7591 14.3798 11.73C14.2199 11.7008 14.0552 11.711 13.9002 11.7598C13.7451 11.8086 13.6042 11.8945 13.4898 12.01L9.36982 16.17C9.2219 16.3177 9.12402 16.5081 9.08994 16.7144C9.05586 16.9207 9.08729 17.1325 9.17982 17.32L9.99982 19L9.43982 19.56L4.40982 14.52L4.99982 14L6.70982 14.86C6.89731 14.9525 7.10908 14.9839 7.31536 14.9498C7.52164 14.9157 7.71205 14.8179 7.85982 14.67L11.9998 10.51C12.1147 10.396 12.2002 10.2558 12.249 10.1014C12.2978 9.94708 12.3084 9.7832 12.2798 9.62387C12.2513 9.46454 12.1845 9.31451 12.0853 9.18668C11.986 9.05884 11.8571 8.95702 11.7098 8.88996L6.49982 6.53996L7.39982 5.63996L13.8798 7.79996C14.0526 7.85427 14.2369 7.86062 14.413 7.81835C14.5892 7.77608 14.7505 7.68677 14.8798 7.55996L18.1198 4.31996C18.2195 4.21806 18.3385 4.13709 18.4698 4.08182C18.6012 4.02654 18.7423 3.99807 18.8848 3.99807C19.0273 3.99807 19.1684 4.02654 19.2998 4.08182C19.4312 4.13709 19.5502 4.21806 19.6498 4.31996C19.7541 4.4166 19.8366 4.53438 19.8918 4.66544C19.947 4.79649 19.9736 4.93781 19.9698 5.07996C19.9752 5.22115 19.9524 5.36201 19.9026 5.49424C19.8528 5.62648 19.777 5.74742 19.6798 5.84996Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-primary-200 text-xs font-medium text-foreground-100"
+                >
+                  Holiday
+                </p>
+                <div
+                  class="flex"
+                >
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-success"
+                  >
+                    $
+                     
+                    30000
+                  </span>
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                  >
+                    /
+                    $
+                     
+                    200000
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-primary-200 text-xs font-bold text-foreground-100"
+            >
+              15
+              %
+            </p>
+          </div>
+          <div
+            class="flex items-center justify-between border-b border-dimGray p-4"
+          >
+            <div
+              class="flex items-center gap-4"
+            >
+              <svg
+                fill="none"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18 7.00004H17.65C17.8782 6.5328 17.9979 6.02002 18 5.50004C18.003 4.80336 17.7975 4.12173 17.4098 3.54287C17.0221 2.96401 16.4701 2.51442 15.8247 2.25198C15.1794 1.98953 14.4703 1.92624 13.7886 2.07025C13.107 2.21426 12.4841 2.55898 12 3.06004C11.5159 2.55898 10.893 2.21426 10.2114 2.07025C9.52975 1.92624 8.82061 1.98953 8.17525 2.25198C7.5299 2.51442 6.97786 2.96401 6.59019 3.54287C6.20252 4.12173 5.99697 4.80336 6 5.50004C6.00213 6.02002 6.12178 6.5328 6.35 7.00004H6C5.20435 7.00004 4.44129 7.31611 3.87868 7.87872C3.31607 8.44133 3 9.20439 3 10V12C3 12.2653 3.10536 12.5196 3.29289 12.7071C3.48043 12.8947 3.73478 13 4 13H5V19C5 19.7957 5.31607 20.5588 5.87868 21.1214C6.44129 21.684 7.20435 22 8 22H16C16.7956 22 17.5587 21.684 18.1213 21.1214C18.6839 20.5588 19 19.7957 19 19V13H20C20.2652 13 20.5196 12.8947 20.7071 12.7071C20.8946 12.5196 21 12.2653 21 12V10C21 9.20439 20.6839 8.44133 20.1213 7.87872C19.5587 7.31611 18.7956 7.00004 18 7.00004ZM11 20H8C7.73478 20 7.48043 19.8947 7.29289 19.7071C7.10536 19.5196 7 19.2653 7 19V13H11V20ZM11 11H5V10C5 9.73482 5.10536 9.48047 5.29289 9.29293C5.48043 9.10539 5.73478 9.00004 6 9.00004H11V11ZM11 7.00004H9.5C9.20333 7.00004 8.91332 6.91206 8.66665 6.74724C8.41997 6.58242 8.22771 6.34815 8.11418 6.07406C8.00065 5.79997 7.97094 5.49837 8.02882 5.2074C8.0867 4.91643 8.22956 4.64916 8.43934 4.43938C8.64912 4.2296 8.91639 4.08674 9.20736 4.02886C9.49834 3.97098 9.79994 4.00069 10.074 4.11422C10.3481 4.22775 10.5824 4.42001 10.7472 4.66668C10.912 4.91336 11 5.20337 11 5.50004V7.00004ZM13 5.50004C13 5.20337 13.088 4.91336 13.2528 4.66668C13.4176 4.42001 13.6519 4.22775 13.926 4.11422C14.2001 4.00069 14.5017 3.97098 14.7926 4.02886C15.0836 4.08674 15.3509 4.2296 15.5607 4.43938C15.7704 4.64916 15.9133 4.91643 15.9712 5.2074C16.0291 5.49837 15.9994 5.79997 15.8858 6.07406C15.7723 6.34815 15.58 6.58242 15.3334 6.74724C15.0867 6.91206 14.7967 7.00004 14.5 7.00004H13V5.50004ZM17 19C17 19.2653 16.8946 19.5196 16.7071 19.7071C16.5196 19.8947 16.2652 20 16 20H13V13H17V19ZM19 11H13V9.00004H18C18.2652 9.00004 18.5196 9.10539 18.7071 9.29293C18.8946 9.48047 19 9.73482 19 10V11Z"
+                  fill="currentColor"
+                />
+              </svg>
+              <div
+                class="flex flex-col"
+              >
+                <p
+                  class="text-primary-200 text-xs font-medium text-foreground-100"
+                >
+                  Christmas
+                </p>
+                <div
+                  class="flex"
+                >
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-success"
+                  >
+                    $
+                     
+                    35000
+                  </span>
+                  <span
+                    class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                  >
+                    /
+                    $
+                     
+                    50000
+                  </span>
+                </div>
+              </div>
+            </div>
+            <p
+              class="text-primary-200 text-xs font-bold text-foreground-100"
+            >
+              70
+              %
+            </p>
+          </div>
+        </div>
+        <div
+          class="sm:basis-1/2"
+        >
+          <div
+            class="flex w-full flex-col gap-5"
+          >
+            <div
+              class="flex justify-between text-secondary-300"
+            >
+              <span
+                aria-label="current-target-title"
+                class="text-primary-200 text-2xs font-extrabold text-secondary-300"
+              >
+                Self Reward
+              </span>
+              <button
+                aria-label="chevron-right-button"
+                type="button"
+              >
+                <svg
+                  fill="none"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.75 12.75L13.5 9L9.75 5.25"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M4.5 12.75L8.25 9L4.5 5.25"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div
+              class="flex justify-center"
+            >
+              <div
+                aria-label="progressbar"
+                aria-valuemax="100"
+                aria-valuemin="0"
+                aria-valuenow="45"
+                aria-valuetext="45%"
+                class="flex-col gap-1 max-w-fit w-full flex items-center justify-center"
+                id="react-aria-:r0:"
+                role="progressbar"
+              >
+                <div
+                  class="relative block"
+                >
+                  <svg
+                    class="z-0 relative overflow-hidden text-primary w-[200px] h-[200px] drop-shadow-md"
+                    fill="none"
+                    stroke-width="3"
+                    viewBox="0 0 32 32"
+                  >
+                    <circle
+                      class="h-full stroke-[#2A9D8F]/10"
+                      cx="16"
+                      cy="16"
+                      r="13"
+                      role="presentation"
+                      stroke-dasharray="81.68140899333463 81.68140899333463"
+                      stroke-dashoffset="0"
+                      stroke-linecap="round"
+                      transform="rotate(-90 16 16)"
+                    />
+                    <circle
+                      class="h-full transition-all !duration-500 stroke-[#2A9D8F]"
+                      cx="16"
+                      cy="16"
+                      r="13"
+                      role="presentation"
+                      stroke-dasharray="81.68140899333463 81.68140899333463"
+                      stroke-dashoffset="81.68140899333463"
+                      stroke-linecap="round"
+                      transform="rotate(-90 16 16)"
+                    />
+                  </svg>
+                  <span
+                    class="absolute inset-0 flex items-center justify-center text-medium font-extrabold text-black"
+                  >
+                    45%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex flex-col relative overflow-hidden h-auto text-foreground box-border bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 transition-transform-background motion-reduce:transition-none gap-4 rounded-md px-2 py-3 shadow-none sm:flex-row xl:flex-col"
+      tabindex="-1"
+    >
+      <div
+        class="sm:basis-1/2"
+      >
+        <div
+          class="flex justify-between"
+        >
+          <span
+            class="text-foreground-100 text-xs font-semibold"
+          >
+            My Targets
+          </span>
+          <button
+            class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover border-transparent bg-primary-100 text-foreground-200 rounded w-[50px] h-[19px] px-0 py-[3px] font-medium !text-xxs min-w-0 text-3xs"
+            data-disabled="true"
+            disabled=""
+            type="button"
+          >
+            <svg
+              fill="none"
+              height="13"
+              viewBox="0 0 14 13"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.7915 5.95829H7.5415V2.70829C7.5415 2.56463 7.48444 2.42686 7.38285 2.32528C7.28127 2.22369 7.1435 2.16663 6.99984 2.16663C6.85618 2.16663 6.7184 2.22369 6.61682 2.32528C6.51524 2.42686 6.45817 2.56463 6.45817 2.70829V5.95829H3.20817C3.06451 5.95829 2.92674 6.01536 2.82515 6.11694C2.72357 6.21852 2.6665 6.3563 2.6665 6.49996C2.6665 6.64362 2.72357 6.78139 2.82515 6.88298C2.92674 6.98456 3.06451 7.04163 3.20817 7.04163H6.45817V10.2916C6.45817 10.4353 6.51524 10.5731 6.61682 10.6746C6.7184 10.7762 6.85618 10.8333 6.99984 10.8333C7.1435 10.8333 7.28127 10.7762 7.38285 10.6746C7.48444 10.5731 7.5415 10.4353 7.5415 10.2916V7.04163H10.7915C10.9352 7.04163 11.0729 6.98456 11.1745 6.88298C11.2761 6.78139 11.3332 6.64362 11.3332 6.49996C11.3332 6.3563 11.2761 6.21852 11.1745 6.11694C11.0729 6.01536 10.9352 5.95829 10.7915 5.95829Z"
+                fill="currentColor"
+              />
+            </svg>
+            New
+          </button>
+        </div>
+        <div
+          class="flex items-center justify-between border-b border-dimGray p-4"
+        >
+          <div
+            class="flex items-center gap-4"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 7.00004H17.65C17.8782 6.5328 17.9979 6.02002 18 5.50004C18.003 4.80336 17.7975 4.12173 17.4098 3.54287C17.0221 2.96401 16.4701 2.51442 15.8247 2.25198C15.1794 1.98953 14.4703 1.92624 13.7886 2.07025C13.107 2.21426 12.4841 2.55898 12 3.06004C11.5159 2.55898 10.893 2.21426 10.2114 2.07025C9.52975 1.92624 8.82061 1.98953 8.17525 2.25198C7.5299 2.51442 6.97786 2.96401 6.59019 3.54287C6.20252 4.12173 5.99697 4.80336 6 5.50004C6.00213 6.02002 6.12178 6.5328 6.35 7.00004H6C5.20435 7.00004 4.44129 7.31611 3.87868 7.87872C3.31607 8.44133 3 9.20439 3 10V12C3 12.2653 3.10536 12.5196 3.29289 12.7071C3.48043 12.8947 3.73478 13 4 13H5V19C5 19.7957 5.31607 20.5588 5.87868 21.1214C6.44129 21.684 7.20435 22 8 22H16C16.7956 22 17.5587 21.684 18.1213 21.1214C18.6839 20.5588 19 19.7957 19 19V13H20C20.2652 13 20.5196 12.8947 20.7071 12.7071C20.8946 12.5196 21 12.2653 21 12V10C21 9.20439 20.6839 8.44133 20.1213 7.87872C19.5587 7.31611 18.7956 7.00004 18 7.00004ZM11 20H8C7.73478 20 7.48043 19.8947 7.29289 19.7071C7.10536 19.5196 7 19.2653 7 19V13H11V20ZM11 11H5V10C5 9.73482 5.10536 9.48047 5.29289 9.29293C5.48043 9.10539 5.73478 9.00004 6 9.00004H11V11ZM11 7.00004H9.5C9.20333 7.00004 8.91332 6.91206 8.66665 6.74724C8.41997 6.58242 8.22771 6.34815 8.11418 6.07406C8.00065 5.79997 7.97094 5.49837 8.02882 5.2074C8.0867 4.91643 8.22956 4.64916 8.43934 4.43938C8.64912 4.2296 8.91639 4.08674 9.20736 4.02886C9.49834 3.97098 9.79994 4.00069 10.074 4.11422C10.3481 4.22775 10.5824 4.42001 10.7472 4.66668C10.912 4.91336 11 5.20337 11 5.50004V7.00004ZM13 5.50004C13 5.20337 13.088 4.91336 13.2528 4.66668C13.4176 4.42001 13.6519 4.22775 13.926 4.11422C14.2001 4.00069 14.5017 3.97098 14.7926 4.02886C15.0836 4.08674 15.3509 4.2296 15.5607 4.43938C15.7704 4.64916 15.9133 4.91643 15.9712 5.2074C16.0291 5.49837 15.9994 5.79997 15.8858 6.07406C15.7723 6.34815 15.58 6.58242 15.3334 6.74724C15.0867 6.91206 14.7967 7.00004 14.5 7.00004H13V5.50004ZM17 19C17 19.2653 16.8946 19.5196 16.7071 19.7071C16.5196 19.8947 16.2652 20 16 20H13V13H17V19ZM19 11H13V9.00004H18C18.2652 9.00004 18.5196 9.10539 18.7071 9.29293C18.8946 9.48047 19 9.73482 19 10V11Z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="flex flex-col"
+            >
+              <p
+                class="text-primary-200 text-xs font-medium text-foreground-100"
+              >
+                Self Reward
+              </p>
+              <div
+                class="flex"
+              >
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-success"
+                >
+                  $
+                   
+                  45000
+                </span>
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                >
+                  /
+                  $
+                   
+                  100000
+                </span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="text-primary-200 text-xs font-bold text-foreground-100"
+          >
+            45
+            %
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-between border-b border-dimGray p-4"
+        >
+          <div
+            class="flex items-center gap-4"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21.9998 5.07996C22.0007 4.47018 21.8205 3.87387 21.4821 3.36659C21.1437 2.85931 20.6624 2.46388 20.0991 2.23042C19.5357 1.99695 18.9158 1.93595 18.3178 2.05514C17.7198 2.17433 17.1706 2.46836 16.7398 2.89996L13.9298 5.70996L7.43982 3.54996C7.26702 3.49565 7.08273 3.48929 6.9066 3.53156C6.73048 3.57383 6.56914 3.66314 6.43982 3.78996L4.05982 6.14996C3.94705 6.26403 3.86337 6.40357 3.81586 6.55678C3.76835 6.70999 3.75839 6.87238 3.78683 7.03025C3.81526 7.18811 3.88126 7.33682 3.97924 7.46383C4.07723 7.59083 4.20433 7.6924 4.34982 7.75996L9.52982 10.11L6.92982 12.71L5.21982 11.85C5.03519 11.75 4.8238 11.7107 4.6156 11.7377C4.4074 11.7646 4.21295 11.8564 4.05982 12L2.28982 13.81C2.10357 13.9973 1.99902 14.2508 1.99902 14.515C1.99902 14.7791 2.10357 15.0326 2.28982 15.22L8.77982 21.71C8.96718 21.8962 9.22063 22.0007 9.48482 22.0007C9.749 22.0007 10.0025 21.8962 10.1898 21.71L11.9998 19.94C12.1499 19.7914 12.2491 19.5992 12.2832 19.3908C12.3174 19.1824 12.2847 18.9686 12.1898 18.78L11.3298 17.07L13.9298 14.47L16.2798 19.65C16.3474 19.7954 16.4489 19.9225 16.5759 20.0205C16.7029 20.1185 16.8517 20.1845 17.0095 20.2129C17.1674 20.2414 17.3298 20.2314 17.483 20.1839C17.6362 20.1364 17.7757 20.0527 17.8898 19.94L20.2498 17.58C20.3766 17.4506 20.4659 17.2893 20.5082 17.1132C20.5505 16.937 20.5441 16.7527 20.4898 16.58L18.3298 10.09L21.0998 7.25996C21.387 6.97452 21.6145 6.63475 21.7691 6.26047C21.9236 5.88618 22.002 5.48488 21.9998 5.07996ZM19.6798 5.84996L16.4398 9.08996C16.313 9.21928 16.2237 9.38062 16.1814 9.55674C16.1391 9.73287 16.1455 9.91716 16.1998 10.09L18.3598 16.57L17.4598 17.47L15.1098 12.3C15.0431 12.1531 14.9419 12.0246 14.8148 11.9253C14.6877 11.8261 14.5384 11.7591 14.3798 11.73C14.2199 11.7008 14.0552 11.711 13.9002 11.7598C13.7451 11.8086 13.6042 11.8945 13.4898 12.01L9.36982 16.17C9.2219 16.3177 9.12402 16.5081 9.08994 16.7144C9.05586 16.9207 9.08729 17.1325 9.17982 17.32L9.99982 19L9.43982 19.56L4.40982 14.52L4.99982 14L6.70982 14.86C6.89731 14.9525 7.10908 14.9839 7.31536 14.9498C7.52164 14.9157 7.71205 14.8179 7.85982 14.67L11.9998 10.51C12.1147 10.396 12.2002 10.2558 12.249 10.1014C12.2978 9.94708 12.3084 9.7832 12.2798 9.62387C12.2513 9.46454 12.1845 9.31451 12.0853 9.18668C11.986 9.05884 11.8571 8.95702 11.7098 8.88996L6.49982 6.53996L7.39982 5.63996L13.8798 7.79996C14.0526 7.85427 14.2369 7.86062 14.413 7.81835C14.5892 7.77608 14.7505 7.68677 14.8798 7.55996L18.1198 4.31996C18.2195 4.21806 18.3385 4.13709 18.4698 4.08182C18.6012 4.02654 18.7423 3.99807 18.8848 3.99807C19.0273 3.99807 19.1684 4.02654 19.2998 4.08182C19.4312 4.13709 19.5502 4.21806 19.6498 4.31996C19.7541 4.4166 19.8366 4.53438 19.8918 4.66544C19.947 4.79649 19.9736 4.93781 19.9698 5.07996C19.9752 5.22115 19.9524 5.36201 19.9026 5.49424C19.8528 5.62648 19.777 5.74742 19.6798 5.84996Z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="flex flex-col"
+            >
+              <p
+                class="text-primary-200 text-xs font-medium text-foreground-100"
+              >
+                Holiday
+              </p>
+              <div
+                class="flex"
+              >
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-success"
+                >
+                  $
+                   
+                  30000
+                </span>
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                >
+                  /
+                  $
+                   
+                  200000
+                </span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="text-primary-200 text-xs font-bold text-foreground-100"
+          >
+            15
+            %
+          </p>
+        </div>
+        <div
+          class="flex items-center justify-between border-b border-dimGray p-4"
+        >
+          <div
+            class="flex items-center gap-4"
+          >
+            <svg
+              fill="none"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 7.00004H17.65C17.8782 6.5328 17.9979 6.02002 18 5.50004C18.003 4.80336 17.7975 4.12173 17.4098 3.54287C17.0221 2.96401 16.4701 2.51442 15.8247 2.25198C15.1794 1.98953 14.4703 1.92624 13.7886 2.07025C13.107 2.21426 12.4841 2.55898 12 3.06004C11.5159 2.55898 10.893 2.21426 10.2114 2.07025C9.52975 1.92624 8.82061 1.98953 8.17525 2.25198C7.5299 2.51442 6.97786 2.96401 6.59019 3.54287C6.20252 4.12173 5.99697 4.80336 6 5.50004C6.00213 6.02002 6.12178 6.5328 6.35 7.00004H6C5.20435 7.00004 4.44129 7.31611 3.87868 7.87872C3.31607 8.44133 3 9.20439 3 10V12C3 12.2653 3.10536 12.5196 3.29289 12.7071C3.48043 12.8947 3.73478 13 4 13H5V19C5 19.7957 5.31607 20.5588 5.87868 21.1214C6.44129 21.684 7.20435 22 8 22H16C16.7956 22 17.5587 21.684 18.1213 21.1214C18.6839 20.5588 19 19.7957 19 19V13H20C20.2652 13 20.5196 12.8947 20.7071 12.7071C20.8946 12.5196 21 12.2653 21 12V10C21 9.20439 20.6839 8.44133 20.1213 7.87872C19.5587 7.31611 18.7956 7.00004 18 7.00004ZM11 20H8C7.73478 20 7.48043 19.8947 7.29289 19.7071C7.10536 19.5196 7 19.2653 7 19V13H11V20ZM11 11H5V10C5 9.73482 5.10536 9.48047 5.29289 9.29293C5.48043 9.10539 5.73478 9.00004 6 9.00004H11V11ZM11 7.00004H9.5C9.20333 7.00004 8.91332 6.91206 8.66665 6.74724C8.41997 6.58242 8.22771 6.34815 8.11418 6.07406C8.00065 5.79997 7.97094 5.49837 8.02882 5.2074C8.0867 4.91643 8.22956 4.64916 8.43934 4.43938C8.64912 4.2296 8.91639 4.08674 9.20736 4.02886C9.49834 3.97098 9.79994 4.00069 10.074 4.11422C10.3481 4.22775 10.5824 4.42001 10.7472 4.66668C10.912 4.91336 11 5.20337 11 5.50004V7.00004ZM13 5.50004C13 5.20337 13.088 4.91336 13.2528 4.66668C13.4176 4.42001 13.6519 4.22775 13.926 4.11422C14.2001 4.00069 14.5017 3.97098 14.7926 4.02886C15.0836 4.08674 15.3509 4.2296 15.5607 4.43938C15.7704 4.64916 15.9133 4.91643 15.9712 5.2074C16.0291 5.49837 15.9994 5.79997 15.8858 6.07406C15.7723 6.34815 15.58 6.58242 15.3334 6.74724C15.0867 6.91206 14.7967 7.00004 14.5 7.00004H13V5.50004ZM17 19C17 19.2653 16.8946 19.5196 16.7071 19.7071C16.5196 19.8947 16.2652 20 16 20H13V13H17V19ZM19 11H13V9.00004H18C18.2652 9.00004 18.5196 9.10539 18.7071 9.29293C18.8946 9.48047 19 9.73482 19 10V11Z"
+                fill="currentColor"
+              />
+            </svg>
+            <div
+              class="flex flex-col"
+            >
+              <p
+                class="text-primary-200 text-xs font-medium text-foreground-100"
+              >
+                Christmas
+              </p>
+              <div
+                class="flex"
+              >
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-success"
+                >
+                  $
+                   
+                  35000
+                </span>
+                <span
+                  class="text-primary-200 text-2xs font-semibold text-foreground-100 opacity-30"
+                >
+                  /
+                  $
+                   
+                  50000
+                </span>
+              </div>
+            </div>
+          </div>
+          <p
+            class="text-primary-200 text-xs font-bold text-foreground-100"
+          >
+            70
+            %
+          </p>
+        </div>
+      </div>
+      <div
+        class="sm:basis-1/2"
+      >
+        <div
+          class="flex w-full flex-col gap-5"
+        >
+          <div
+            class="flex justify-between text-secondary-300"
+          >
+            <span
+              aria-label="current-target-title"
+              class="text-primary-200 text-2xs font-extrabold text-secondary-300"
+            >
+              Self Reward
+            </span>
+            <button
+              aria-label="chevron-right-button"
+              type="button"
+            >
+              <svg
+                fill="none"
+                height="18"
+                viewBox="0 0 18 18"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.75 12.75L13.5 9L9.75 5.25"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+                <path
+                  d="M4.5 12.75L8.25 9L4.5 5.25"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="flex justify-center"
+          >
+            <div
+              aria-label="progressbar"
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="45"
+              aria-valuetext="45%"
+              class="flex-col gap-1 max-w-fit w-full flex items-center justify-center"
+              id="react-aria-:r0:"
+              role="progressbar"
+            >
+              <div
+                class="relative block"
+              >
+                <svg
+                  class="z-0 relative overflow-hidden text-primary w-[200px] h-[200px] drop-shadow-md"
+                  fill="none"
+                  stroke-width="3"
+                  viewBox="0 0 32 32"
+                >
+                  <circle
+                    class="h-full stroke-[#2A9D8F]/10"
+                    cx="16"
+                    cy="16"
+                    r="13"
+                    role="presentation"
+                    stroke-dasharray="81.68140899333463 81.68140899333463"
+                    stroke-dashoffset="0"
+                    stroke-linecap="round"
+                    transform="rotate(-90 16 16)"
+                  />
+                  <circle
+                    class="h-full transition-all !duration-500 stroke-[#2A9D8F]"
+                    cx="16"
+                    cy="16"
+                    r="13"
+                    role="presentation"
+                    stroke-dasharray="81.68140899333463 81.68140899333463"
+                    stroke-dashoffset="81.68140899333463"
+                    stroke-linecap="round"
+                    transform="rotate(-90 16 16)"
+                  />
+                </svg>
+                <span
+                  class="absolute inset-0 flex items-center justify-center text-medium font-extrabold text-black"
+                >
+                  45%
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

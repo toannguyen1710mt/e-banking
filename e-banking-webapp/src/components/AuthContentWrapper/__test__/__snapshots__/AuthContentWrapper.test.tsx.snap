@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthContentWrapper component Should render snapshot correctly. 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="mx-auto flex flex-1 flex-col"
+      >
+        <img
+          alt="Logo EBanking"
+          class="pb-[14px] lg:pb-9"
+          data-nimg="1"
+          decoding="async"
+          height="36"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=128&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+          style="color: transparent;"
+          width="104"
+        />
+        <div
+          class="max-w-[406px] text-center md:text-left"
+        >
+          <h1
+            class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
+          >
+            Good To See You Again!
+          </h1>
+          <p
+            class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
+          />
+        </div>
+        <div
+          class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
+        >
+          Form
+        </div>
+        <p
+          class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
+        >
+          Don’t have an account?
+           
+          <a
+            class="leading-[20px] text-primary-200"
+            href="/sign-in"
+          >
+            Sign In
+          </a>
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="mx-auto flex flex-1 flex-col"
+    >
+      <img
+        alt="Logo EBanking"
+        class="pb-[14px] lg:pb-9"
+        data-nimg="1"
+        decoding="async"
+        height="36"
+        loading="lazy"
+        src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+        srcset="/_next/image?url=%2Fimg.jpg&w=128&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+        style="color: transparent;"
+        width="104"
+      />
+      <div
+        class="max-w-[406px] text-center md:text-left"
+      >
+        <h1
+          class="text-foreground-100 text-4xl font-semibold mb-0 md:mb-7"
+        >
+          Good To See You Again!
+        </h1>
+        <p
+          class="text-foreground-300 text-base mb-4 font-normal leading-[22px]"
+        />
+      </div>
+      <div
+        class="mx-auto mb-[17px] max-w-[325px] md:mx-0"
+      >
+        Form
+      </div>
+      <p
+        class="text-foreground-100 text-sm font-medium text-center leading-[20px] md:text-left"
+      >
+        Don’t have an account?
+         
+        <a
+          class="leading-[20px] text-primary-200"
+          href="/sign-in"
+        >
+          Sign In
+        </a>
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
